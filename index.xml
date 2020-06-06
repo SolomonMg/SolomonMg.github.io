@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sol Messing</title>
+    <link>https://solmg.netlify.app/</link>
+      <atom:link href="https://solmg.netlify.app/index.xml" rel="self" type="application/rss+xml" />
+    <description>Sol Messing</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>©2020</copyright><lastBuildDate>Sun, 04 Mar 2012 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://solmg.netlify.app/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <title>Sol Messing</title>
+      <link>https://solmg.netlify.app/</link>
+    </image>
+    
+    <item>
+      <title>Insight From Cleveland And Tufte On Plotting Numeric Data By Groups</title>
+      <link>https://solmg.netlify.app/post/visualization-series-insight-from-cleveland-and-tufte-on-plotting-numeric-data-by-groups/</link>
+      <pubDate>Sun, 04 Mar 2012 00:00:00 +0000</pubDate>
+      <guid>https://solmg.netlify.app/post/visualization-series-insight-from-cleveland-and-tufte-on-plotting-numeric-data-by-groups/</guid>
+      <description>&lt;p&gt;After my post on making 
+&lt;a href=&#34;http://solomonmessing.wordpress.com/2011/11/26/putting-it-all-together-concise-code-to-make-dotplots-with-weighted-bootstrapped-standard-errors/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;dotplots with concise code using plyr and ggplot&lt;/a&gt;, I got an email from my dad who practices immigration law and runs a 
+&lt;a href=&#34;http://www.messinglawoffices.com/default.aspx&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;website with a variety of immigration resources and tools&lt;/a&gt;.  He pointed out that the post was written for folks who already know that they want to make dot plots, and who already know about bootstrapped standard errors.  That&amp;rsquo;s not many people.&lt;/p&gt;
+&lt;p&gt;In an attempt to appeal to a broader audience, I&amp;rsquo;m starting a series in which I&amp;rsquo;ll outline the key principles I use when developing a visualization.  In this post, I&amp;rsquo;ll articulate these principles, which combine some of Tuft&amp;rsquo;s aesthetic guidelines with Cleveland&amp;rsquo;s scientific approach to visualization, which is based on the psychological processes involved in making sense of visualizations, and has been rigorously tested via randomized controlled experiments.  Based on these principles, I&amp;rsquo;ll argue that dotplots and scatterplots are better than other types of plots (especially pie charts) in most situations.  In later posts, I&amp;rsquo;ll demonstrate another innovation whose widespread use I&amp;rsquo;ll credit to Cleveland and Tufte: the use of multiple panels (aka small multiples, trellis graphics, facets, generalized draftsman&amp;rsquo;s displays, multivar charts) to clearly convey the same information embedded in more complex and difficult to read visualizations, including multiple line plots and mosaic plots. In future posts I&amp;rsquo;ll also emphasize why it is important to provide some indication of the noise present in the underlying data using error bars or bands.  Along the way, I&amp;rsquo;ll put you to the test&amp;ndash;I&amp;rsquo;ll present some visualizations of the same data using different visualization techniques and ask you to try to get as much information as you can in 2 seconds from each type of visualization.&lt;/p&gt;
+&lt;p&gt;A good visualization conveys key information to those who may have trouble interpreting numbers and/or statistics, which can make your findings accessible to a wider audience (more on this below).  Visualizations also give your audience a break from lexical processing, which is especially useful when you are presenting your findings&amp;ndash;people can listen to you and process the findings from a well-designed visual at the same time, but most people have trouble listening while reading your PowerPoint bullet points.  Visualizations also convey key information embedded in massive amounts of data, which can aid your own exploratory analysis of data, no matter how massive.&lt;/p&gt;
+&lt;p&gt;Yet most visualizations are flawed, drawn using elements that make it unnecessarily difficult for the human visual system to make sense of things.  I see a lot of these visualizations attending research presentations, screening incoming draft manuscripts as the assistant editor for 
+&lt;a href=&#34;http://www.tandf.co.uk/journals/upcp&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Political Communication&lt;/a&gt;, and as a consumer of media info-graphics (CNN is especially bad, have a look at 
+&lt;a href=&#34;http://tech.fortune.cnn.com/tag/pie-chart/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;this monstrosity&lt;/a&gt;).  Kevin Fox has an 
+&lt;a href=&#34;http://fury.com/2010/03/why-3d-pie-charts-are-bad/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;especially compelling visual speaking to this here&lt;/a&gt;. A big part of the problem is that Microsoft makes it easy to draw flashy but ultimately confusing visualizations in Excel.  If you are too busy to read this post in full, follow this short list of guidelines and you&amp;rsquo;ll be on your way to producing elegant visualizations that impose a minimal cognitive burden on your audience:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Never represent something in 2 or 
+&lt;a href=&#34;http://www.psdgraphics.com/wp-content/uploads/2009/02/3d_pie_chart.jpg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;worse yet 3 dimensions&lt;/a&gt; if it can be represented in one&amp;mdash;NEVER use pie charts, 3-D pie charts, stacked bar charts, or 3-D bar charts.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Remove as much chart junk as possible&amp;ndash;unnecessary gridlines, shading, borders, etc.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Give your audience a sense of the noise present in your data&amp;ndash;draw error bars or confidence bands if you are plotting estimates.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;If you want to plot multiple types of groups on a single outcome (the visual analog of cross-tabulations/marginals), use 
+&lt;a href=&#34;http://solomonmessing.files.wordpress.com/2011/11/trtbypid2.png?w=640&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;multi-paneled plots&lt;/a&gt;. These can also help if 
+&lt;a href=&#34;http://www.bo.astro.it/~eps/buz10503/ff08.jpg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;overploting looks too cluttered&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Avoid mosaic plots. Instead use 
+&lt;a href=&#34;http://wiki.stdout.org/rcookbook/Graphs/Facets%20%28ggplot2%29?action=AttachFile&amp;amp;do=get&amp;amp;target=hp_sex_smoker_free_free.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;paneled histograms&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Ditch the legend if you can (you almost always can).&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The rest of the content in this series emphasizes why it makes sense to follow these guidelines. In this post I&amp;rsquo;ll look at the first point in detail and touch on the sixth. These two guidelines are most relevant when you want to look at a quantitative variable (e.g., earnings, vote-share, temperature, etc.) across different qualitative groupings (e.g., industry segment, candidate, party, racial group, season, etc.).  This is one of the most common visualization tasks in business, media, and social science, and for this task people often use pie charts and/or bar charts, and occasionally dot plots.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;The science of graphical perception&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;When most people think about visualization, they think first of 
+&lt;a href=&#34;http://www.edwardtufte.com/tufte/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Edward Tufte&lt;/a&gt;.  Tufte emphasizes integrity to the data, showing relationships between phenomena, and above all else aesthetic minimalism.  I appreciate his ruthless crusade against 
+&lt;a href=&#34;http://chartjun%20k.karmanaut.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;chart junk&lt;/a&gt; and 
+&lt;a href=&#34;http://jakeporway.com/2011/08/data-without-borders-logo-contest/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;pie charts (nice quote from Data without Borders)&lt;/a&gt;. We share an affinity for multipanel plotting approaches, which he calls &amp;ldquo;small multiples,&amp;rdquo; (thanks to 
+&lt;a href=&#34;http://www.stanford.edu/~rjweiss/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Rebecca Weiss&lt;/a&gt; for pointing this out) though I think people give Tufte too much credit for their invention&amp;mdash;both 
+&lt;a href=&#34;http://www.juiceanalytics.com/writing/better-know-visualization-small-multiples/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;juiceanalytics&lt;/a&gt; and 
+&lt;a href=&#34;http://www.infovis-wiki.net/index.php/Small_Multiples&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;infovis-wiki&lt;/a&gt; write that Cleveland introduced the concept/principle. However, both Cleveland and Tufte published books in 1983 discussing the use of multipanel displays; 
+&lt;a href=&#34;http://blog.revolutionanalytics.com/2011/11/small-multiples-of-the-sky.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;David Smith over at Revolutions&lt;/a&gt; writes that &amp;ldquo;the &amp;ldquo;small-multiples&amp;rdquo; principle of data visualization [was] pioneered by Cleveland and popularized in Tufte&amp;rsquo;s first book&amp;rdquo;; and the earliest reference to a work containing multipanel displays I could find was published *long* before Tufte&amp;rsquo;s 1983 work&amp;ndash;Seder, Leonard (1950), &amp;ldquo;Diagnosis with Diagrams—Part I&amp;rdquo;, Industrial Quality Control (New York, New York: American Society for Quality Control) 7 (1): 11–19.&lt;/p&gt;
+&lt;iframe src=&#34;https://giphy.com/embed/11JbaLzOXsg6Fq&#34; width=&#34;200&#34; frameBorder=&#34;0&#34; class=&#34;giphy-embed&#34; align=&#34;right&#34;&gt;&lt;/iframe&gt;
+I&#39;m less sure about Tufte&#39;s advice to always show axes starting at zero, which can make comparison between two groups difficult, and to &#34;show causality,&#34; which can end up misleading your readers.  Of course, the visualizations on display in the glossy pages of Tufte&#39;s books are beautiful.  But while his books are full of general advice that we should all keep in mind when creating plots, he does not put forth a theory of what works and what doesn&#39;t when trying to visualize data. 
+&lt;p&gt;Cleveland (with Robert McGill) develops such a theory and subjects it to rigorous scientific testing. In my last post I linked to one of Cleveland&amp;rsquo;s studies showing that 
+&lt;a href=&#34;https://www.cs.ubc.ca/~tmm/courses/cpsc533c-04-spr/readings/cleveland.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;dots (or bars) aligned on the same scale are indeed the best visualization to convey a series of numerical estimates&lt;/a&gt;.  In this work, Cleveland examined how accurately our visual system can process visual elements or &amp;ldquo;perceptual units&amp;rdquo; representing underlying data.  These elements include markers aligned on the same scale (e.g., dot plots, scatterplots, ordinary bar charts), the length of lines that are not aligned on the same scale (e.g., stacked bar plots), area (pie charts and mosaic plots), angles (also pie charts), shading/color, volume, curvature, and direction.&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;http://solomonmessing.files.wordpress.com/2012/01/graphicalelementscleveland.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;img src=&#34;https://solmg.netlify.app/assets/img/graphicalelementscleveland.png&#34; alt=&#34;&#34; title=&#34;Graphical Elements (Cleveland)&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;He runs two experiments: the first compares judgements about relative position (grouped bar charts) to judgements based only on length (stacked bar charts); the second compares judgements about relative position (ordinary bar charts) to judgements about angles/area (pie charts).  Here are the materials he uses, courtesy of the 
+&lt;a href=&#34;http://graphics.stanford.edu/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Stanford Computer Graphics Lab&lt;/a&gt;:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://solmg.netlify.app/assets/img/slide012.png&#34; alt=&#34;&#34; title=&#34;Graphical perception experiments&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://solmg.netlify.app/assets/img/slide013.png&#34; alt=&#34;&#34; title=&#34;Graphical perception experiments&#34;&gt;&lt;/p&gt;
+&lt;p&gt;The results are resoundingly clear&amp;mdash;judgements about position relative to a baseline are dramatically more accurate than judgements about angles, area, or length (with no baseline).  Hence, he suggests that we replace pie charts with bar charts or dot plots and that we substitute stacked bar charts for grouped bar charts.&lt;/p&gt;
+&lt;p&gt;A striking and often overlooked finding in this work is the fact that the group of participants without technical training, &amp;ldquo;mostly ordinary housewives&amp;rdquo; as Cleveland describes them, performed &lt;em&gt;just as well&lt;/em&gt; as the group of mostly men with substantial technical training and experience.   This finding provides evidence for something that I&amp;rsquo;ve long suspected: that visualizations make it easier for people lacking quantitative experience to understand your results, serving to level the playing field.  If you want your findings to be broadly accessible, it&amp;rsquo;s probably better to present a visualization rather than a bunch of numbers.  It also suggests that if someone is having trouble interpreting your visualizations, it&amp;rsquo;s probably your fault.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Dotplots versus pie charts and stacked barplots&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Now let&amp;rsquo;s put this to the test.  Take a look at each visualization below for two seconds, looking for the percent of the vote that Mitt Romney, Ron Paul, and Jon Huntsman got.&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://solmg.netlify.app/assets/img/primarydot2.png&#34;&gt;&lt;img src=&#34;https://solmg.netlify.app/assets/img/primarydot2.png&#34; alt=&#34;&#34; title=&#34;primaryDot&#34;&gt;&lt;/a&gt;
+&lt;a href=&#34;https://solmg.netlify.app/assets/img/primarypie1.png&#34;&gt;&lt;img src=&#34;https://solmg.netlify.app/assets/img/primarypie1.png&#34; alt=&#34;&#34; title=&#34;primaryPie&#34;&gt;&lt;/a&gt;
+&lt;a href=&#34;https://solmg.netlify.app/assets/img/primarystacked.png&#34;&gt;&lt;img src=&#34;https://solmg.netlify.app/assets/img/primarystacked.png&#34; alt=&#34;&#34; title=&#34;primaryStacked&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Which is easiest to read? Which conveys information most accurately? Let&amp;rsquo;s first take a look at the most critical information&amp;ndash;the order in which the candidates placed.  In all plots, the candidates are arrayed in order from highest to least vote share, and it&amp;rsquo;s easy to see that Mitt won.  But once we start looking at who came in second, third, and so on, differences emerge.  It&amp;rsquo;s slightly harder to process order in the pie chart because your eye has to go around the plot rather than up and down in a straight line.  In the stacked bar chart, we need to look up which color corresponds to which candidate&amp;rsquo;s in the legend (as Tufte told us not to use), adding a layer of cognitive processing.&lt;/p&gt;
+&lt;p&gt;Second, which conveys estimates most accurately? The dot plot is the clear winner here.  We can quickly see that Romney got about 37%, Paul got about 24%, and Huntsman got about 16%, just by looking at dots relative to the axis.  When we look at the pie chart, it&amp;rsquo;s really tough to estimate the exact percent each candidate got.  Same with the stacked bar chart. We could add numbers to the pie and bar charts, which would even things out to some extent, but then why not just display a table with exact percents?&lt;/p&gt;
+&lt;p&gt;One argument I used to hear all the time when I worked in industry is that pie charts &amp;ldquo;convey a sense of proportion.&amp;rdquo;  Well, sure, I guess I can kind of guestimate that Ron Paul&amp;rsquo;s vote share is about 1/4.  What about Jon Huntsman? Hmm, it looks like about 15 percent, which is 3/20.  But wait, why do I want to convert things into fractions anyway? I don&amp;rsquo;t think in terms of fractions, I think in terms of percents.  And if I really care about proportion, I suppose I could extend the axis from 0 to 100.&lt;/p&gt;
+&lt;p&gt;Suppose I want to plot results for the top 15 candidates, not just the top 6?  Here&amp;rsquo;s what happens:&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://solmg.netlify.app/assets/img/primarydot15.png&#34;&gt;&lt;img src=&#34;https://solmg.netlify.app/assets/img/primarydot15.png&#34; alt=&#34;&#34; title=&#34;primaryDot15&#34;&gt;&lt;/a&gt;
+&lt;a href=&#34;https://solmg.netlify.app/assets/img/primarypie15.png&#34;&gt;&lt;img src=&#34;https://solmg.netlify.app/assets/img/primarypie15.png&#34; alt=&#34;&#34; title=&#34;primaryPie15&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;No contest, the pie chart fails completely.  We&amp;rsquo;d need to add a legend with colors for each candidate, which adds another layer of cognitive processing&amp;ndash;we&amp;rsquo;d need to look up each color in the lengend as we go.  And even after adding the legend, you wouldn&amp;rsquo;t be able to distinguish the lower performing candidates from say write-in votes because the pie slices would be too small.  The stacked bar chart will fail for the same reasons, so I&amp;rsquo;ve excluded it in the interest of brevity.  Note that we don&amp;rsquo;t need to add colors to the dotplot to convey the same information, which saves an extra plotting element that we can use to represent something else (say candidate&amp;rsquo;s campaign funds or total assets).  And, on top of it all, the dot plot takes up less screen/page real estate!&lt;/p&gt;
+&lt;p&gt;Why do I use dot plots instead of ordinary bar charts? A 
+&lt;a href=&#34;http://www.perceptualedge.com/articles/b-eye/encoding_values_in_graph.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;nice visualization guide from perceptualedge.com&lt;/a&gt; points out that often we want to only visualize differences between groups in a narrow range (they use an example wherein monthly expenses vary from $4,250-$5,500). But the length of a bar is supposed to facilitate accurate comparisons between values, so when you use a bar plot starting from $4,250, the length between bars dramatically exaggerates the actual differences. Dot plots do not have this problem because dot encode values using only location, so one must reference the axis to interpret the value.&lt;/p&gt;
+&lt;p&gt;A related points is that bars are often used to convey counts&amp;ndash;we use them in histograms to represent frequency and track say counts of dollars earned/raised in bar charts.  In fact, a team of doctors I work with at the med school recently sent in a manuscript to Radiology containing a bar chart plotting mean values between groups; they got back the following comment from the statistical reviewer: &amp;ldquo;the y-axis is quantitative but the data are represented using bars as if the data were counts.&amp;rdquo;  People often use bar plots to convey estimates of means (and 
+&lt;a href=&#34;http://www.stanford.edu/~messing/APSAPoster.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;I&amp;rsquo;ve certainly done this&lt;/a&gt;), which can serve to exaggerate differences in means and hence effect sizes if you do not plot the bars from zero.&lt;/p&gt;
+&lt;p&gt;In addition, dot plots have aesthetic advantages.  They convey the numerical estimate in question with a single one-dimensional point, rather than a two dimensional bar.  There&amp;rsquo;s simply less that the eye needs to process.  Accordingly, if a pattern across qualitative groupings exists, it&amp;rsquo;s often easier to see with a dot plot.  For example, below I plot the average user ratings for each article to which 
+&lt;a href=&#34;http://www.stanford.edu/~seanjw/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Sean Westwood&lt;/a&gt; and I exposed subjects in a news reading experiment.  The pattern that emerges is an &amp;ldquo;S&amp;rdquo; curve in which one or two stories dominate the ratings, most are sort of average, and a few are uniformly terrible. Note that you&amp;rsquo;d probably want to use something like this more for yourself than to communicate your results to others as it might overload your audience with too much information&amp;ndash;you&amp;rsquo;d do better to select a subset of these articles or remove some of the ones in the middle (thanks to Yph Lelkes for making this point).&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://solmg.netlify.app/assets/img/dotplot-story-rating.png&#34;&gt;&lt;img src=&#34;https://solmg.netlify.app/assets/img/dotplot-story-rating.png&#34; alt=&#34;&#34; title=&#34;dotplot-story-rating&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;One question that remains is if pie charts are so bad, why are they so common? Perhaps we like them because we find them comforting just as we find pies and pizza? Well if so we&amp;rsquo;d expect pie charts to be less common in places like Japan and China where people grow up eating different food.  Consider info-graphics in newspapers: I haven&amp;rsquo;t yet done a systematic content analysis, but I was unable to find a single pie chart in Japan&amp;rsquo;s Yomimuri Shimbun nor the Asahi Shimbun; nor in China&amp;rsquo;s Beijing Daily nor Sing Tao Daily.  I did see plenty of maps, however, which I suppose one could argue are reminiscent of noodles.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Implementation&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The most efficient way to produce solid visualizations with the ability to implement multiple panels, proper standard error estimates, and dot plots is probably in R using the ggplot2 package.  If you do not have time to learn R and remain tied to MS-Excel stick to ordinary barplots to visualize quantitative variables among multiple groups (not recommended).&lt;/p&gt;
+&lt;p&gt;Otherwise, if you don&amp;rsquo;t already use it, 
+&lt;a href=&#34;http://cran.r-project.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;download R&lt;/a&gt; and a decent editor like 
+&lt;a href=&#34;http://rstudio.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Rstudio&lt;/a&gt;.  Then get started with ggplot2 and dot plots by running the following code chunk which will replicate the election figure above:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;pres &amp;lt;- read.csv(&amp;quot;https://SolomonMg.github.io/assets/img/primaryres.csv&amp;quot;, as.is=T)
+
+# sort data in order of percent of vote:
+pres &amp;lt;- pres[order(pres$Percentage, decreasing=T), ]
+
+# only show top 15 candidates:
+pres &amp;lt;- pres[1:15,]
+
+# create a precentage variable
+pres$Percentage &amp;lt;- pres$Percentage*100
+
+# reorder the Candidate factor by percentage for plotting purposes:
+pres$Candidate &amp;lt;- reorder(pres$Candidate, pres$Percentage)
+
+# To install ggplot2, run the following line after deleting the #
+#install.packages(&amp;quot;ggplot2&amp;quot;)
+library(ggplot2)
+ggplot(pres, aes(x = Percentage, y = factor(Candidate) )) +
+geom_point() +
+theme_bw() + xlab(&amp;quot;Percent of Vote&amp;quot;) + ylab(&amp;quot;Candidate&amp;quot;) +
+ggtitle(&amp;quot;New Hampshire Primary 2012&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;After loading our data and running a few preliminary data processing operations, we pass ggplot our data set, &amp;ldquo;pres,&amp;rdquo; then we tell it what aesthetic elements we want to use, in this case that x is going to be our &amp;ldquo;Percentage&amp;rdquo; variable and y is going to be our &amp;ldquo;Candidate&amp;rdquo; variable. We tell ggplot that we want to display points for every xy pair. We also tell it to use the black and white theme, and pass some obscure axis options that ensures the axis plot correctly. Then we tell it what to label the x and y axis, and give it a title.&lt;/p&gt;
+&lt;p&gt;We can also reproduce the article ratings by story plot above using ggplot2 (even though I originally produced the plot using the lattice package).&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# To install ggplot2, run the following line after deleting the #
+#install.packages(&amp;quot;ggplot2&amp;quot;)
+library(ggplot2)
+load(file(&amp;quot;https://SolomonMg.github.io/assets/img/db.Rda&amp;quot;))
+
+# if you haven&#39;t installed dplyr, delete the # and run this line:
+# install.packages(&amp;quot;dplyr&amp;quot;)
+library(dplyr)
+table(db$story)
+
+# first we use plyr to calculate the mean rating and SE for each story
+ratingdat &amp;lt;- db %&amp;gt;% group_by(story) %&amp;gt;%
+summarise(M = mean(rating, na.rm=T),
+SE = sd(rating, na.rm=T)/sqrt(length(na.omit(rating))),
+N = length(na.omit(rating)))
+
+# make story into an ordered factor, ordering by mean rating:
+ratingdat$story &amp;lt;- factor(ratingdat$story)
+ratingdat$story &amp;lt;- reorder(ratingdat$story, ratingdat$M)
+
+# take a look at our handiwork:
+ggplot(ratingdat, aes(x = M, xmin = M-SE, xmax = M+SE, y = story )) +
+geom_point() + geom_segment( aes(x = M-SE, xend = M+SE,
+y = story, yend=story)) +
+theme_bw() + xlab(&amp;quot;Mean rating&amp;quot;) + ylab(&amp;quot;Story&amp;quot;) +
+ggtitle(&amp;quot;Rating article by Story, with SE&amp;quot;)
+
+# Now save
+ggsave(file=&amp;quot;plots/dotplot-story-rating.pdf&amp;quot;, height=14, width=8.5)
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,315 @@
+\documentclass[]{beamer}
+% Class options include: notes, notesonly, handout, trans,
+%                        hidesubsections, shadesubsections,
+%                        inrow, blue, red, grey, brown
+%\usetheme[height=9mm]{Rochester}
+\usetheme{Frankfurt}
+\usepackage{booktabs}
+\renewcommand{\arraystretch}{1.2}
+
+\usepackage{url}
+\renewcommand\UrlFont{\ttfamily\color{blue}}%
+\usepackage{hyperref}
+% \renewcommand\url{%
+
+%  \renewcommand\UrlLeft{\uline\bgroup}%
+%  \renewcommand\UrlRight{\egroup}}
+
+
+% Other themes include: beamerthemebars, beamerthemelined,
+%                       beamerthemetree, beamerthemetreebars
+
+\title{Part I: Acquiring Data from the Web}    % Enter your title between curly braces
+
+\author{Solomon Messing}                 % Enter your name between curly braces
+\author[]{Solomon Messing}
+\institute{Department of Communication, Statistics\\ Stanford Social Science Data and Software (SSDS)}%\\ Facebook Data Science}
+\date{\today}                    % Enter the date or \today between curly braces
+
+\begin{document}
+
+% Creates title page of slide show using above information
+\begin{frame}
+\titlepage
+\end{frame}
+
+%\section[Outline]{Outline}
+%\begin{frame}
+%  \tableofcontents
+%\end{frame}
+
+\section{Motivation}
+\setcounter{subsection}{1}
+
+\begin{frame}
+\frametitle{Overview}   % Insert frame title between curly braces
+\begin{itemize}
+  \item How to get data from the web (cURL, APIs, JSON, XML)
+  \item Extracting useful stuff from the results (Regex)
+  \item Representing text as data
+  \item Getting meaningful features (Regex, R)
+  \item Document-term matrices
+  \item Supervised and unsupervised approaches to analysis
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{What to expect}   % Insert frame title between curly braces
+\begin{itemize}
+  \item Goal: Quantitative insight from haystack of messy data
+  \item Labs: programming, lots of R!
+  \item Working with your neighbors
+  \item Adapting starter code + code found on Google, StackOverflow, etc.
+  \item You learn better, I talk less, you have code to work with.
+\end{itemize}
+\begin{center}
+\begin{tabular}{cc}
+\includegraphics[height=1in]{images/glider.png} &
+\includegraphics[height=1in]{images/hacksaw.jpeg}
+\end{tabular}
+\end{center}
+\end{frame}
+
+\begin{frame}
+\frametitle{Motivation}   % Insert frame title between curly braces
+\begin{itemize}
+  \item Massive growth in availability of text and other data
+  \item 100K Tweets per min, 700K FB shares per min (DOMO), 200M emails---10 min = 1 LOC (Huggins)
+  \item Proliferation of structured/semi-structured data at your fingertips: open-data, APIs, and scrape-able data sources
+  \item Growth of open-source tools to acquire and analyze this data
+\end{itemize}
+\begin{center}
+\includegraphics[height=1in]{images/FB_image.png}
+\end{center}
+\end{frame}
+
+\begin{frame}
+\frametitle{Motivation: what's out there?}   % Insert frame title between curly braces
+\begin{itemize}
+  \item Raw text, html tables, semi-structured HTML/XML.
+  \item Data marketplaces, e.g.: \small\url{http://www.infochimps.com/datasets}
+  \item APIs:
+  \begin{itemize}
+    \begin{small}
+\item \url{https://dev.twitter.com/}
+\item \url{http://developer.nytimes.com/} articles, campaign finance, congress, entities, geography/population
+\item \url{http://developer.washingtonpost.com/} political speeches, campaign finance, White House visitors log
+\item \url{http://developer.yahoo.com/everything.html} - search, finance, geo-coding, on-the-fly entity extraction, content analysis, term extraction.
+\item \url{https://api.facebook.com} - access (a little) Facebook data.\footnote{e.g., \href{https://api.facebook.com/method/fql.query?query=select\%20total_count,like_count,comment_count,share_count,click_count\%20from\%20link_stat\%20where\%20url='http://www.nytimes.com/2012/09/22/opinion/voter-harassment-circa-2012.html'&format=json}{\color{blue} get aggregate likes for NYTimes.com article}}
+\end{small}
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+\section{Get data}
+\setcounter{subsection}{1}
+\begin{frame}
+\frametitle{Data from the Web}   % Insert frame title between curly braces
+\begin{enumerate}
+  \item Hit a server
+  \item Parse it's response
+  \item Clean and transform into something useful
+  \item Often by merging it with something else.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Hit a server}   % Insert frame title between curly braces
+\includegraphics[height=1.5in]{images/complex_url.png}
+~\\ \small{from: http://doepud.co.uk/blog/anatomy-of-a-url.php}
+\end{frame}
+
+\begin{frame}
+\frametitle{Hit a server, in *.NIX}   % Insert frame title between curly braces
+\includegraphics[height=1.5in]{images/unix.jpg}
+\includegraphics[height=1.5in]{images/unix2.jpg}
+~\\ \small{Unix/Linux was made for this.  Windows was not.}
+\end{frame}
+
+\begin{frame}
+\frametitle{Hit a server with cURL}   % Insert frame title between curly braces
+\begin{itemize}
+  \item Use cURL (RCurl) to send GET or POST request to server for a URL/URI
+  \item \verb~curl http://thecaucus.blogs.nytimes.com~
+  \item \verb~curl -L http://t.co/KtxsapBV~
+  \item \verb~curl http://search.twitter.com/search.json?q=\%40obama~
+  \item The latter is a query string, can used to return custom results from MANY websites (Twitter, nytimes.com, Library of Congress, etc.).
+  ~\\~\\ \tiny{Query string trivia: the following string has brought down many a web server:\\
+  \texttt{system\%28\%27rm+-rf+\%2F\%27\%29}}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Hit a server (or an entire site!)}   % Insert frame title between curly braces
+\begin{itemize}
+  \item Use wget or a crawler
+  \item \verb~wget http://thecaucus.blogs.nytimes.com~
+  \item See also module 3 \url{http://www.stanford.edu/~seanjw/module3/\#8}
+  \item Heritrix \url{http://crawler.archive.org/}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Hit a server (on schedule!)}   % Insert frame title between curly braces
+\begin{itemize}
+  \item Use \verb~cron~
+  \item \verb~crontab -e~
+  \item in VIM type \verb~ * * * * * /4 /path/to/R CMD myfile.R~ to run every Wed
+  \item or perhaps \verb~ * * * * * /4 /path/wget http://thecaucus.blogs.nytimes.com~
+  \item Save and you'll see: \verb~crontab: installing new crontab~
+  \item Type \verb~crontab -l~ to see your crontabls
+  \item See \url{http://benr75.com/pages/using_crontab_mac_os_x_unix_linux} for more.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Parse the server's reply: JSON}   % Insert frame title between curly braces
+\begin{itemize}
+  \item What the **** is JSON?
+  \item JSON: Java script object notation
+  \item for serializing objects, for the purposes of data interchange
+  \item semi-structured, tree-like, and pretty simple
+  \item Nice JSON viewer for \href{https://chrome.google.com/webstore/detail/chklaanhfefbnpoihckbnefhakgolnmc}{\color{blue} Chrome} and \href{https://addons.mozilla.org/en-US/firefox/addon/jsonview/}{\color{blue} Firefox}---Use this in the R code.
+  \item Sean's overview from module 3 \url{http://www.stanford.edu/~seanjw/module3/\#42}
+  \item Widom's overview of JSON here: \url{http://www.db-class.org/course/video/preview_list}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Record and parse it: JSON}   % Insert frame title between curly braces
+\begin{columns}[onlytextwidth]
+\begin{column}{.5\textwidth}
+\centering
+\includegraphics[height=2.3in]{images/JSON.png}
+\end{column}
+\begin{column}{.4\textwidth}
+\begin{itemize}
+  \item Base values\\
+  \item Objects \{\}  - label-value pairs\\
+  \item Arrays [] - list of values\\
+  \item nested sets of arrays - not a table\\
+  \item NO SCHEMA\\
+  \item NO SQL (hard to query)\\
+\end{itemize}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}
+\frametitle{Record and parse it: XML}   % Insert frame title between curly braces
+\begin{itemize}
+  \item What the **** is XML?
+  \item XML: eXtensible Markup Language
+  \item Like HTML, but tags describe data, not formatting
+  \item Semi-structured, tree-like, much richer, more complicated than JSON
+  \item Nice XML viewer for \href{https://chrome.google.com/webstore/detail/eeocglpgjdpaefaedpblffpeebgmgddk}{\color{blue} Chrome}.
+  \item Sean's overview in module 3 \url{http://www.stanford.edu/~seanjw/module3/\#21}
+  \item Widom's course: \url{http://www.db-class.org/course/video/preview_list}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Record and parse it: XML}   % Insert frame title between curly braces
+\begin{columns}[onlytextwidth]
+\begin{column}{.5\textwidth}
+\centering
+\includegraphics[height=1.2in]{images/XMLtree.jpg}\\ \tiny Looks like:\\~\\
+\includegraphics[height=1.2in]{images/XML.png}
+\end{column}
+\begin{column}{.4\textwidth}
+\begin{itemize}
+  \item Tagged elements
+  \item Attributes
+  \item Text
+  \item Nested structure - not a table\\
+  \item XML SCHEMA/DTD\\
+  \item NO SQL (use XPATH/jQuery)\\
+\end{itemize}
+\end{column}
+\end{columns}
+~\\\tiny Example from \url{http://www.w3schools.com/xml/xml_tree.asp}.
+\end{frame}
+
+%\begin{frame}
+%\frametitle{Lab 1}   % Insert frame title between curly braces
+%\center \url{https://dl.dropbox.com/u/25710348/CSSscraping/scripts/CurlJSONXML.R}
+%\end{frame}
+
+\begin{frame}
+  \frametitle{Lab 1}   % Insert frame title between curly braces
+	\href{https://dl.dropbox.com/u/25710348/CSSscraping/scripts/CurlJSONXML.R}{\color{blue} Lab 1: Getting useful data with Curl and JSON in R}.
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%% REGEX %%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Extract/clean}
+\setcounter{subsection}{1}
+\begin{frame}
+\frametitle{Clean things up: Regular Expressions}   % Insert frame title between curly braces
+\center
+\includegraphics[height=2.5in]{images/regular_expressions.png}
+~\\ \small{from: https://xkcd.com/208/}
+\end{frame}
+
+\begin{frame}
+\frametitle{Regex in action..}   % Insert frame title between curly braces
+\begin{itemize}
+  \item To clean up data after scraping \url{http://www.r-bloggers.com/scrape-web-data-using-r/}.
+  \item To extract useful information (state, latitude, longitude), when scraping a web page \url{http://solomonmessing.wordpress.com/2011/09/18/map-of-participants/}
+  \item \texttt{grep} to create custom indicator variable features for analysis, \texttt{agrep} for approximate version of 		\
+texttt{grep}. More on this later.
+\item For nice reference materials, look to \url{http://www.regular-expressions.info/reference.html}.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{RegEx bare essentials}   % Insert frame title between curly braces
+\begin{tabular}{lp{1.5in}p{2in}}
+RegEx & Description & Example \\ \hline
+bil & Match string `bil' & this is a 2 dollar \underline{bil}l. \\
+dollar$|$bill & Match dollar or bill & this is a 2 \underline{dollar} \underline{bill}. \\
+\textbackslash d & Match any digit & this is a \underline{2} dollar bill. \\
+\textbackslash w & Match any word (single letter) & \underline{this} \underline{is} \underline{a} 2 \underline{dollar} \underline{bill}. \\
+\textbackslash w+ & Match at least 2 letters & \underline{this} \underline{is} a 2 \underline{dollar} \underline{bill}. \\
+\textbackslash s & Match any whitespace & this\underline{ }is\underline{ }a\underline{ }2\underline{ }dollar\underline{ }bill. \\
+\textbackslash S & Match NOT whitespace & \underline{this} \underline{is} \underline{a} \underline{2} \underline{dollar} \underline{bill}.\\
+colo?ur & Optionally match character preceding `?' & Yanks \underline{color}, Brits \underline{colour}. \\
+col.*r & match any character between l and r 0 or more times & Yanks \underline{color}, Brits \underline{colour}. \\
+\end{tabular}
+\end{frame}
+
+\begin{frame}
+\frametitle{Regex in R for Cleaning and Feature Extraction}   % Insert frame title between curly braces
+\footnotesize
+\begin{tabular}{p{2.5in}p{1.5in}}
+Command & What it does \\ \hline
+\texttt{grep("dollar$\backslash\backslash|$bill", moneyStuff)} & return index of \texttt{moneyStuff} with item.\\
+\texttt{gregexpr("$\backslash\backslash$d", "4a53f45e")} & return index of string in each match (why might this be a bad idea?)\\
+\texttt{str\_extract(moneyStuff, "$\backslash\backslash$d+")} & extracts groups of digits \\
+\texttt{str\_replace(moneyStuff, "($\backslash\backslash$d+)", "$\backslash$\$ $\backslash\backslash$1)")} & inserts dollar sign in front of numbers \\
+\texttt{agrep("dollar$\backslash\backslash|$bill", moneyStuff, max.distance = .2)} & return index of anything with edit distance $\leq$ .2 from dollar or bill in \texttt{moneyStuff} with item.  VERY useful to handle misspellings, plagiarism, etc.\\~\\
+\small Read up on edit distance here: \url{http://www.stanford.edu/class/cs124/lec/med.pdf}
+\end{tabular}
+\end{frame}
+
+\begin{frame}
+\frametitle{Regex == AWK}   % Insert frame title between curly braces
+Need to quickly extract/transform a 2 TB text file? \\
+\begin{itemize}
+  \item \verb~awk '/pattern/'~ return every line in a file matching pattern\\
+  \item \verb~cat bigfile.csv | awk '($2>5 \&\& $3<2) \{print $1,$3\}' > smallerfile.csv~\\
+  Reads in all lines from bigfile.csv where 2nd column value $>5$  and third column $<2$ and prints to smallerfile.csv
+\end{itemize}
+\begin{center} \includegraphics[height=.8in]{images/awk.png} \end{center}
+\end{frame}
+
+\begin{frame}
+\frametitle{Lab 2}   % Insert frame title between curly braces
+\center \href{https://dl.dropbox.com/u/25710348/CSSscraping/scripts/RegexCurl.R}{\color{blue} Lab 2: Scraping and Regex}
+\end{frame}
+
+
+\end{document}
