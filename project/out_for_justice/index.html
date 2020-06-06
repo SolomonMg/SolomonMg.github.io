@@ -1,0 +1,1179 @@
+<!DOCTYPE html><html lang="en-us" >
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.8.0">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Sol Messing">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="ML &amp; decision support to optimize patrols">
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://solomonmg.github.io/project/out_for_justice/">
+
+  
+
+
+  
+  
+  
+  <meta name="theme-color" content="#2962ff">
+  
+
+  
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-1/css/all.min.css" integrity="sha256-4w9DunooKSr3MFXHXWyFER38WmPdm361bQS/2KUWZbU=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.css" integrity="sha256-SHMGCYmST46SoyGgo4YR/9AlK1vf3ff84Aq9yK4hdqM=" crossorigin="anonymous">
+    
+
+    
+
+    
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+        
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap">
+  
+
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.css">
+
+  
+
+
+
+
+  
+
+
+  
+  
+
+  
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/images/icon_huedd5de82286bc1d0a1509b535f624c76_25974_32x32_fill_lanczos_center_2.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_huedd5de82286bc1d0a1509b535f624c76_25974_192x192_fill_lanczos_center_2.png">
+
+  <link rel="canonical" href="https://solomonmg.github.io/project/out_for_justice/">
+
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="twitter:site" content="@SolomonMg">
+  <meta property="twitter:creator" content="@SolomonMg">
+  
+  <meta property="og:site_name" content="Sol Messing">
+  <meta property="og:url" content="https://solomonmg.github.io/project/out_for_justice/">
+  <meta property="og:title" content="Out for Justice | Sol Messing">
+  <meta property="og:description" content="ML &amp; decision support to optimize patrols"><meta property="og:image" content="https://solomonmg.github.io/project/out_for_justice/featured.jpg">
+  <meta property="twitter:image" content="https://solomonmg.github.io/project/out_for_justice/featured.jpg"><meta property="og:locale" content="en-us">
+  
+    
+      <meta property="article:published_time" content="2020-05-17T00:00:00&#43;00:00">
+    
+    <meta property="article:modified_time" content="2020-05-17T00:00:00&#43;00:00">
+  
+
+  
+
+
+    
+
+
+
+
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://solomonmg.github.io/project/out_for_justice/"
+  },
+  "headline": "Out for Justice",
+  
+  "image": [
+    "https://solomonmg.github.io/project/out_for_justice/featured.jpg"
+  ],
+  
+  "datePublished": "2020-05-17T00:00:00Z",
+  "dateModified": "2020-05-17T00:00:00Z",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Sol Messing"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Sol Messing",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://solomonmg.github.io/images/icon_huedd5de82286bc1d0a1509b535f624c76_25974_192x192_fill_lanczos_center_2.png"
+    }
+  },
+  "description": "ML \u0026 decision support to optimize patrols"
+}
+</script>
+
+  
+
+  
+
+
+  
+
+
+  
+
+
+
+
+
+  <title>Out for Justice | Sol Messing</title>
+
+</head>
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" >
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">Sol Messing</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">Sol Messing</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#about"><span>Home</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#posts"><span>Posts</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#projects"><span>Projects</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#featured"><span>Publications</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#contact"><span>Contact</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+      <li class="nav-item dropdown theme-dropdown">
+        <a href="#" class="nav-link js-theme-selector" data-toggle="dropdown" aria-haspopup="true">
+          <i class="fas fa-palette" aria-hidden="true"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a href="#" class="dropdown-item js-set-theme-light">
+            <span>Light</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-dark">
+            <span>Dark</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-auto">
+            <span>Automatic</span>
+          </a>
+        </div>
+      </li>
+      
+
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+  <article class="article article-project">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+<div class="article-container pt-3">
+  <h1>Out for Justice</h1>
+
+  
+
+  
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    May 17, 2020
+  </span>
+  
+
+  
+
+  
+
+  
+  
+  
+
+  
+  
+
+</div>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="btn-links mb-3">
+  
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+<a class="btn btn-outline-primary my-1 mr-1" href="https://player.vimeo.com/video/111994655" target="_blank" rel="noopener">
+  Video
+</a>
+
+
+
+
+  
+  
+  
+    
+  
+  
+  
+  
+  
+    
+  
+  <a class="btn btn-outline-primary my-1 mr-1" href="https://twitter.com/SolomonMg" target="_blank" rel="noopener">
+    <i class="fab fa-twitter mr-1"></i>
+    Follow
+  </a>
+
+
+</div>
+
+
+</div>
+
+
+<div class="article-header article-container featured-image-wrapper mt-4 mb-4" style="max-width: 720px; max-height: 493px;">
+  <div style="position: relative">
+    <img src="/project/out_for_justice/featured_hua0d4d4b24f4da3a102e4452ac738b95f_467744_720x0_resize_q90_lanczos.jpg" alt="" class="featured-image">
+    
+  </div>
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <!-- <iframe src="https://player.vimeo.com/video/111994655" width="640" height="330" frameborder="0" allowfullscreen></iframe> -->
+<p>(forked from the team&rsquo;s original writeup 
+<a href="http://seanjtaylor.github.io/out-for-justice/" target="_blank" rel="noopener">here</a>)</p>
+<p>We build Out for Justice in 24 hours at the 
+<a href="http://www.bayesimpact.org/" target="_blank" rel="noopener">Bayes Impact</a> Hackathon, using data from the San Francisco Police Department. Out For Justice is an an interpretable, customizable and interactive decision support system to help SFPD optimize police patrols. Out for Justice allows the user to set their own objectives and isn&rsquo;t simply a black box algorithm that outputs a solution.</p>
+<p>The idea is simple: minimize response time to crime&ndash;or 911 at least calls. But different kinds of crime happen in different places in San Francisco. And police cars/patrols are a limited resource.</p>
+<p>Out for Justice allows the user to evaluate potential positions for patrol cars&ndash;if someone calls in a violent crime and my cars were set up like this, how long would it take to respond? It allows you to prioritize your response to different types of crimes using custom weights. Responding a minute later to investigate a broken window may be much less costly than arriving late on the scene of a crime in progress.</p>
+<p>Finally, Out for Justice allows users to set car positions. Based on the custom weights and number of patrol cars, Out for Justice optimizes patrol car placement using an algorithm we call MetroPolice-Hastings.</p>
+<p><strong>HOW DOES IT WORK?</strong></p>
+<p>Out for Justice is made of three components. First, we science some data. We take two years of SFPD 911 call data and use it to predict where future 911 calls are likely to come from. Second, real map data from Open Street Maps is used to simulate travel times from SF patrol cars to a call. Second, we optimize stuff. We take map data from Open Street Maps and use it to simulate travel times from SF patrol cars to a call. Finally, a simple interface makes interacting and drawing insights from Out for Justice easy.</p>
+<p><strong>BOOSTING FOR JUSTICE</strong></p>
+<p>The beating heart of Out for Justice is some machine learning. We took a data set of two years of 911 calls in San Francisco that had attached latitude/longitude coordinates, discretized the city into a grid and trained boosted Poisson regression trees to predict the probability of a 911 call at each position. This makes some strong assumptions about the underlying process that are wrong, but hey, it&rsquo;s still useful and we only had 24 hours! After we trained the trees they could, in principle, predict at any latitude/longitude location in SF so we predicted Poisson arrival rates for every node in street graph that we built using Open Street Maps.</p>
+<p>We tried several other approaches including 2d kernel density smoothing but found that the boosted trees were by far the best performing. We used the R package gbm to do the training.</p>
+<p>For the initial project we focused on predicting three broad categories of crime: violent crimes (assaults, arson and forcible sex offenses), property crimes (burglary, vandalism, larceny and vehicle theft) and substance-based crimes (drunkeness or drug/narcotic). Our exploratory analyses also told us that it was a good idea to split the data by time into 3 epochs: nighttime (2AM-10AM), day time (10AM-6PM) and evening time aka party time (6PM-2AM).</p>
+<p>Our analyses find some interesting patterns in the data. All the plots are done using the excellent R package ggmaps. There are definitely weekend/weekday patterns as well as daily cycles in the day (see below). The models and data are up in the GitHub directory above if you want to play with them!</p>
+<p><img src="/img/predcrimes.jpg" alt=""></p>
+<p><strong>COMPUTING THE COSTS</strong></p>
+<p>So now we have probabilities of calls occuring at each node of the graph that is San Francisco. We can now take a set of patrol cars located at various points in the graph and calculate a score for that position, the score we use in the current version is an expected travel time given the way that calls are expected to come in both spatially (where does the call come from?) and temporally (how likely is a particular type of call?). The key innovation is the ability for the user to specify in the UI which types of calls are really important to respond to quickly and which ones are the kind where a minute&rsquo;s delay may not hurt things very much.</p>
+<p>The current beta version only allows for random initial placements of a user-specified number of patrol cars, the easiest next feature to add is the ability to place the cars manually.</p>
+<p><strong>METROPOLICE-HASTINGS OPTIMIZATION</strong></p>
+<img style="float: right;" src="/img/napkin.jpg" width="250">
+The final core component of Out For Justice is an optimization algorithm. Given an existing car placement, it is natural to ask "can we do better?" We use a version of the Metropolis-Hastings algorithm to compute the answer to this question: first, we choose a random car to move a random distance on the graph. 
+<p>To add stochasticity to this algorithm with a small probability we keep this move no matter what. With the complementary probability we do something smarter: we ask whether this move improves the weighted response time. If this move improves the response time by a meaningful amount, we keep it. If it doesn&rsquo;t, we revert it and try something else. This algorithm has a few parameters to tune, namely the probability of keeping any move and the threshold of improvement that we require to count the move as a success. The current version makes no pretense of having these parameters set optimally, though we did play with them somewhat.</p>
+<p><strong>THE OUT FOR JUSTICE TEAM</strong></p>
+<p>Ta Virot Chiraphadhanakul 
+<a href="https://twitter.com/tvirot" target="_blank" rel="noopener">@tvirot</a></p>
+<p>Sean J. Taylor 
+<a href="https://twitter.com/seanjtaylor" target="_blank" rel="noopener">@seanjtaylor</a></p>
+<p>Alex Peysakhovich 
+<a href="https://twitter.com/alex_peys" target="_blank" rel="noopener">@alex_peys</a></p>
+<p>Solomon Messing 
+<a href="https://twitter.com/SolomonMg" target="_blank" rel="noopener">@SolomonMg</a></p>
+<p><img src="/img/Hackathon_team.jpg" alt="half"></p>
+<p>UPDATE: Nice coverage on 
+<a href="https://mashable.com/2014/11/17/data-hackathon/#EHDv8ugj7aqN" target="_blank" rel="noopener">Mashable</a> of the entire hackathon! Check out the winning hackathon project.</p>
+
+    </div>
+
+    
+
+
+
+
+
+
+
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=https://solomonmg.github.io/project/out_for_justice/&amp;text=Out%20for%20Justice" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https://solomonmg.github.io/project/out_for_justice/&amp;t=Out%20for%20Justice" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=Out%20for%20Justice&amp;body=https://solomonmg.github.io/project/out_for_justice/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=https://solomonmg.github.io/project/out_for_justice/&amp;title=Out%20for%20Justice" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://web.whatsapp.com/send?text=Out%20for%20Justice%20https://solomonmg.github.io/project/out_for_justice/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=https://solomonmg.github.io/project/out_for_justice/&amp;title=Out%20for%20Justice" target="_blank" rel="noopener" class="share-btn-weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+  
+    
+    
+    
+      
+    
+    
+    
+    <div class="media author-card content-widget-hr">
+      
+        
+        <img class="avatar mr-3 avatar-circle" src="/author/sol-messing/avatar_hu8943a841c8f8b51c025fbd70149bf17e_24642_270x270_fill_q90_lanczos_center.jpg" alt="Sol Messing">
+      
+
+      <div class="media-body">
+        <h5 class="card-title"><a href="https://solomonmg.github.io/">Sol Messing</a></h5>
+        <h6 class="card-subtitle">Chief Scientist</h6>
+        <p class="card-text">Sol Messing is Chief Scientist at Another Acronym</p>
+        <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="/#contact" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://twitter.com/SolomonMg" target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://scholar.google.com/citations?user=to63kiAAAAAJ&amp;hl=en" target="_blank" rel="noopener">
+        <i class="ai ai-google-scholar"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="http://github.com/solomonmg" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="/pdf/CV.pdf" >
+        <i class="ai ai-cv"></i>
+      </a>
+    </li>
+  
+</ul>
+
+      </div>
+    </div>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+    <div class="project-related-pages content-widget-hr">
+      
+      
+
+      
+      
+      
+
+      
+      
+      
+
+      
+      
+      
+    </div>
+  </div>
+</article>
+
+      
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js" integrity="sha256-eOgo0OtLL4cdq7RdwRUiGKLX9XsIJ7nGhWEKbohmVAQ=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/r.min.js"></script>
+        
+      
+
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.js" integrity="sha256-EErZamuLefUnbMBQbsEqu1USa+btR2oIlCpBJbyD4/g=" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script>const code_highlighting = true;</script>
+    
+
+    
+    
+    <script>const isSiteThemeDark = false;</script>
+    
+
+    
+    
+    
+    
+    
+    
+    <script>
+      const search_config = {"indexURI":"/index.json","minLength":1,"threshold":0.3};
+      const i18n = {"no_results":"No results found","placeholder":"Search...","results":"results found"};
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.37431be2d92d7fb0160054761ab79602.js"></script>
+
+    
+
+
+
+
+
+
+  
+  
+  <div class="container">
+    <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    ©2020 &middot; 
+
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+    <span class="float-right" aria-hidden="true">
+      <a href="#" class="back-to-top">
+        <span class="button_icon">
+          <i class="fas fa-chevron-up fa-2x"></i>
+        </span>
+      </a>
+    </span>
+    
+  </p>
+</footer>
+
+  </div>
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

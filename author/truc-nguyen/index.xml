@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Truc Nguyen | Sol Messing</title>
+    <link>https://solomonmg.github.io/author/truc-nguyen/</link>
+      <atom:link href="https://solomonmg.github.io/author/truc-nguyen/index.xml" rel="self" type="application/rss+xml" />
+    <description>Truc Nguyen</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>©2020</copyright><lastBuildDate>Sat, 01 Jan 2011 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://solomonmg.github.io/images/icon_huedd5de82286bc1d0a1509b535f624c76_25974_512x512_fill_lanczos_center_2.png</url>
+      <title>Truc Nguyen</title>
+      <link>https://solomonmg.github.io/author/truc-nguyen/</link>
+    </image>
+    
+    <item>
+      <title>Of course I wouldn&#39;t do that in real life: advancing the arguments for increasing realism in HCI experiments</title>
+      <link>https://solomonmg.github.io/publication/lew-2011-course/</link>
+      <pubDate>Sat, 01 Jan 2011 00:00:00 +0000</pubDate>
+      <guid>https://solomonmg.github.io/publication/lew-2011-course/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

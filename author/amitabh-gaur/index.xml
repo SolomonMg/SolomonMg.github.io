@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Amitabh Gaur | Sol Messing</title>
+    <link>https://solomonmg.github.io/author/amitabh-gaur/</link>
+      <atom:link href="https://solomonmg.github.io/author/amitabh-gaur/index.xml" rel="self" type="application/rss+xml" />
+    <description>Amitabh Gaur</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>©2020</copyright><lastBuildDate>Tue, 01 Jan 2019 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://solomonmg.github.io/images/icon_huedd5de82286bc1d0a1509b535f624c76_25974_512x512_fill_lanczos_center_2.png</url>
+      <title>Amitabh Gaur</title>
+      <link>https://solomonmg.github.io/author/amitabh-gaur/</link>
+    </image>
+    
+    <item>
+      <title>Tumor formation of adult stem cell transplants in rodent arthritic joints</title>
+      <link>https://solomonmg.github.io/publication/chapelin-2019-tumor/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
+      <guid>https://solomonmg.github.io/publication/chapelin-2019-tumor/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Iron administration before stem cell harvest enables MR imaging tracking after transplantation</title>
+      <link>https://solomonmg.github.io/publication/khurana-2013-iron/</link>
+      <pubDate>Tue, 01 Jan 2013 00:00:00 +0000</pubDate>
+      <guid>https://solomonmg.github.io/publication/khurana-2013-iron/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

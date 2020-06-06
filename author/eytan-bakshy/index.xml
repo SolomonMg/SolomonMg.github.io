@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Eytan Bakshy | Sol Messing</title>
+    <link>https://solomonmg.github.io/author/eytan-bakshy/</link>
+      <atom:link href="https://solomonmg.github.io/author/eytan-bakshy/index.xml" rel="self" type="application/rss+xml" />
+    <description>Eytan Bakshy</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>©2020</copyright><lastBuildDate>Thu, 01 Jan 2015 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://solomonmg.github.io/images/icon_huedd5de82286bc1d0a1509b535f624c76_25974_512x512_fill_lanczos_center_2.png</url>
+      <title>Eytan Bakshy</title>
+      <link>https://solomonmg.github.io/author/eytan-bakshy/</link>
+    </image>
+    
+    <item>
+      <title>Exposure to ideologically diverse news and opinion on Facebook</title>
+      <link>https://solomonmg.github.io/publication/bakshy-2015-exposure/</link>
+      <pubDate>Thu, 01 Jan 2015 00:00:00 +0000</pubDate>
+      <guid>https://solomonmg.github.io/publication/bakshy-2015-exposure/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;
+&lt;a href=&#34;http://science.sciencemag.org/content/348/6239/1090&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Review by David Lazer&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;http://science.sciencemag.org/highwire/filestream/630053/field_highwire_adjunct_files/1/Bakshy-SM.revision.1.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Supplementary materials&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;http://dx.doi.org/10.7910/DVN/LDJ7MS&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Replication materials&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Media: 
+&lt;a href=&#34;http://www.nytimes.com/2015/05/08/technology/facebook-study-disputes-theory-of-political-polarization-among-users.html?_r=0&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;New York Times&lt;/a&gt;,
+the 
+&lt;a href=&#34;http://www.washingtonpost.com/news/energy-environment/wp/2015/05/07/facebook-study-says-its-mainly-your-fault-not-theirs-that-you-read-things-you-already-agree-with/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Washington Post&lt;/a&gt;, the 
+&lt;a href=&#34;http://www.bbc.com/news/science-environment-32606724&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;BBC&lt;/a&gt;, 
+&lt;a href=&#34;http://www.cbsnews.com/news/facebooks-news-feed-limits-your-world-view/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CBS&lt;/a&gt;, 
+&lt;a href=&#34;http://www.huffingtonpost.com/2015/05/12/facebook-study-polarization_n_7245192.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Huffington Post&lt;/a&gt;, 
+&lt;a href=&#34;http://arstechnica.com/science/2015/05/dont-just-blame-facebook-we-build-our-own-bubbles/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Ars Technica&lt;/a&gt;, 
+&lt;a href=&#34;http://www.wired.co.uk/news/archive/2015-05/08/facebook-echo-chamber-study&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Wired
+UK&lt;/a&gt;,
+
+&lt;a href=&#34;http://www.theverge.com/2015/5/7/8564795/facebook-online-opinion-filter-bubble-news-feed-study&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;The Verge&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Ideologically diverse news, an agenda for future research</title>
+      <link>https://solomonmg.github.io/post/exposure-to-ideologically-diverse-response/</link>
+      <pubDate>Sat, 11 Oct 2014 00:00:00 +0000</pubDate>
+      <guid>https://solomonmg.github.io/post/exposure-to-ideologically-diverse-response/</guid>
+      <description>&lt;p&gt;Earlier this month, we published an early access version of our paper in ScienceExpress (
+&lt;a href=&#34;https://dl.dropboxusercontent.com/u/25710348/Science-2015-Bakshy-1130-2.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Bakshy et al. 2015&lt;/a&gt;), &amp;ldquo;Exposure to ideologically diverse news and opinion on Facebook.&amp;rdquo; The paper constitutes the first attempt to quantify the extent to which ideologically cross-cutting hard news and opinion is shared by friends, appears in algorithmically ranked News Feeds, and is actually consumed (i.e., click through to read).&lt;/p&gt;
+&lt;p&gt;We are grateful for the widespread interest this paper, which grew out of two threads of related research that we began nearly five years ago: Eytan and Lada&#39;s work on the role of social networks in information diffusion (
+&lt;a href=&#34;http://arxiv.org/pdf/1201.4145v2.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Bakshy et al. 2012&lt;/a&gt;) and Sean and Solomon&#39;s work on selective exposure in social media (
+&lt;a href=&#34;http://crx.sagepub.com/content/41/8/1042&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Messing and Westwood 2012&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;While &lt;em&gt;Science&lt;/em&gt; papers are explicitly prohibited from suggesting future directions for research, we would like to shed additional light on our study and raise a few questions that we would be excited to see addressed in future work.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Tradeoffs when Selecting a Population&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;There were tradeoffs when deciding on who to include in this study. While we could have examined all U.S. adults on Facebook, we focused on people who identify as liberals or conservatives and encounter hard news, opinion, and other political content in social media regularly. We did so because many important questions around &amp;ldquo;echo chambers&amp;rdquo; and &amp;ldquo;filter bubbles&amp;quot;on Facebook relate to this subpopulation, and we used self-reported ideological preferences to define it.&lt;/p&gt;
+&lt;p&gt;Using self-reported ideological preferences in online profiles is not the only a way to measure ideology or define the population of interest. Yet, people who publicly identify as liberals or conservatives in their Facebook profiles are an interesting and important subpopulation worthy of study for many reasons. As 
+&lt;a href=&#34;http://gking.harvard.edu/files/gking/files/words.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Hopkins and King 2010&lt;/a&gt; have pointed out, studying the expression and behavior of those who are politically engaged online is of interest to political scientists studying activists (
+&lt;a href=&#34;http://www.hup.harvard.edu/catalog.php?isbn=9780674942936&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Verba, Schlozman, and Brady 1995&lt;/a&gt;), the media (
+&lt;a href=&#34;http://195.130.87.21:8080/dspace/handle/123456789/979&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Drezner and Farrell 2004&lt;/a&gt;), public opinion (
+&lt;a href=&#34;https://scholar.google.com/scholar?cluster=15572370959137190849&amp;amp;hl=en&amp;amp;as_sdt=2005&amp;amp;sciodt=0,5&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Gamson 1992&lt;/a&gt;), social networks (
+&lt;a href=&#34;http://dl.acm.org/citation.cfm?id=1134277&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Adamic and Glance 2005&lt;/a&gt;; 
+&lt;a href=&#34;http://www.langtoninfo.co.uk/web_content/9780521542234_frontmatter.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Huckfeldt and Sprague 1995&lt;/a&gt;), and elite influence (
+&lt;a href=&#34;http://press.princeton.edu/titles/8425.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Grindle 2005&lt;/a&gt;; 
+&lt;a href=&#34;http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.160.8347&amp;amp;rep=rep1&amp;amp;type=pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Hindman, Tsioutsiouliklis, and Johnson 2003;&lt;/a&gt; 
+&lt;a href=&#34;https://books.google.com/books?hl=en&amp;amp;lr=&amp;amp;id=83yNzu6toisC&amp;amp;oi=fnd&amp;amp;pg=PR8&amp;amp;dq=The&amp;#43;Nature&amp;#43;and&amp;#43;Origins&amp;#43;of&amp;#43;Mass&amp;#43;Opinion&amp;amp;ots=6oEwiBZtSM&amp;amp;sig=ySnwRZUuVtOyTkC-3raaL88pYns#v=onepage&amp;amp;q=The%20Nature%20and%20Origins%20of%20Mass%20Opinion&amp;amp;f=false&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Zaller 1992&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;This subpopulation has limitations and is not the only population of interest. The data are not appropriate for those who seek estimates of the entire U.S. public, people without strong opinions, or people not on Facebook (at least not without additional extrapolation, re-weighting, additional evidence, etc.). While our data &lt;em&gt;could plausibly&lt;/em&gt; also provide good estimates of the population of people who are ideologically active and have clear preferences, we are not claiming that&#39;s necessarily the case---that remains to be determined in future work.&lt;/p&gt;
+&lt;p&gt;We&#39;d like to help other researchers looking to study other populations understand more about the population we&#39;ve defined. An important question in this regard is what proportion of active U.S. adults actually report an identifiable left/right/center ideology in their profile. That number is 25%, or 10.1 million people.&lt;/p&gt;
+&lt;p&gt;It&#39;s also informative to examine the proportion of those users who provide identifiable profile affiliations conditional on demographics and Facebook usage:&lt;/p&gt;
+&lt;table style=&#34;border-collapse:collapse;width:473px;height:512px;&#34; border=&#34;0&#34; width=&#34;174&#34; cellspacing=&#34;0&#34; cellpadding=&#34;0&#34;&gt;&lt;colgroup&gt; &lt;col style=&#34;width:65pt;&#34; span=&#34;2&#34; width=&#34;87&#34; /&gt; &lt;/colgroup&gt;
+&lt;tbody&gt;
+&lt;tr style=&#34;height:18pt;&#34;&gt;
+&lt;td class=&#34;xl63&#34; style=&#34;height:18pt;width:65pt;&#34; width=&#34;87&#34; height=&#34;24&#34;&gt;&lt;strong&gt;Age&lt;/strong&gt;&lt;/td&gt;
+&lt;td class=&#34;xl63&#34; style=&#34;width:65pt;&#34; width=&#34;87&#34;&gt;&lt;strong&gt;Percent reporting ideological affiliation&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style=&#34;height:18pt;&#34;&gt;
+&lt;td class=&#34;xl63&#34; style=&#34;height:18pt;&#34; height=&#34;24&#34;&gt;18-24&lt;/td&gt;
+&lt;td class=&#34;xl64&#34;&gt;21.60%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style=&#34;height:18pt;&#34;&gt;
+&lt;td class=&#34;xl63&#34; style=&#34;height:18pt;&#34; height=&#34;24&#34;&gt;25-44&lt;/td&gt;
+&lt;td class=&#34;xl64&#34;&gt;28.50%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style=&#34;height:18pt;&#34;&gt;
+&lt;td class=&#34;xl63&#34; style=&#34;height:18pt;&#34; height=&#34;24&#34;&gt;45-64&lt;/td&gt;
+&lt;td class=&#34;xl64&#34;&gt;24.30%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style=&#34;height:18pt;&#34;&gt;
+&lt;td class=&#34;xl63&#34; style=&#34;height:18pt;&#34; height=&#34;24&#34;&gt;65+&lt;/td&gt;
+&lt;td class=&#34;xl64&#34;&gt;21.40%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style=&#34;height:18pt;&#34;&gt;
+&lt;td class=&#34;xl63&#34; style=&#34;height:18pt;&#34; height=&#34;24&#34;&gt;&lt;/td&gt;
+&lt;td class=&#34;xl63&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style=&#34;height:18pt;&#34;&gt;
+&lt;td class=&#34;xl63&#34; style=&#34;height:18pt;&#34; height=&#34;24&#34;&gt;&lt;strong&gt;Gender&lt;/strong&gt;&lt;/td&gt;
+&lt;td class=&#34;xl63&#34;&gt;&lt;strong&gt;Percent reporting ideological affiliation&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style=&#34;height:18pt;&#34;&gt;
+&lt;td class=&#34;xl63&#34; style=&#34;height:18pt;&#34; height=&#34;24&#34;&gt;Female&lt;/td&gt;
+&lt;td class=&#34;xl64&#34;&gt;21.90%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style=&#34;height:18pt;&#34;&gt;
+&lt;td class=&#34;xl63&#34; style=&#34;height:18pt;&#34; height=&#34;24&#34;&gt;Male&lt;/td&gt;
+&lt;td class=&#34;xl64&#34;&gt;30.60%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style=&#34;height:18pt;&#34;&gt;
+&lt;td class=&#34;xl63&#34; style=&#34;height:18pt;&#34; height=&#34;24&#34;&gt;&lt;/td&gt;
+&lt;td class=&#34;xl63&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style=&#34;height:18pt;&#34;&gt;
+&lt;td class=&#34;xl63&#34; style=&#34;height:18pt;&#34; height=&#34;24&#34;&gt;&lt;strong&gt;Login Days&lt;/strong&gt;&lt;/td&gt;
+&lt;td class=&#34;xl63&#34;&gt;&lt;strong&gt;Percent reporting ideological affiliation&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style=&#34;height:18pt;&#34;&gt;
+&lt;td class=&#34;xl63&#34; style=&#34;height:18pt;&#34; height=&#34;24&#34;&gt;105-140&lt;/td&gt;
+&lt;td class=&#34;xl64&#34;&gt;18.90%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style=&#34;height:18pt;&#34;&gt;
+&lt;td class=&#34;xl63&#34; style=&#34;height:18pt;&#34; height=&#34;24&#34;&gt;140-185&lt;/td&gt;
+&lt;td class=&#34;xl64&#34;&gt;26.70%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Clearly those who report an ideology in their profile tend to be more active on Facebook. They are also more likely to be men, which is consistent with the well-documented gender gap in American politics (
+&lt;a href=&#34;http://journals.cambridge.org/action/displayAbstract?fromPage=online&amp;amp;aid=245226&amp;amp;fileId=S0003055404001315&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Box-Steffensmeier 2004&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;It&#39;s possible that these individuals differ from other Facebook users in other ways. It seems plausible to expect these people to have higher levels of political interest, a stronger sense of political ideology and political identity, and to be more likely to be active in politics than most others on Facebook. It&#39;s also possible that these individuals are more extroverted than the average user, especially in the somewhat taboo domain of politics. These possibilities also strike us as interesting questions for study in future work.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;How to Measure Ideology&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;We hope others will replicate this work using other populations and ways of measuring ideology, which will provide a broader view of exposure to political media. Data on ideology could be collected by, for example, surveying users, imputing ideology based on user behavior, or joining data to the voter file. Each of these methods have advantages and potential challenges.&lt;/p&gt;
+&lt;p&gt;Using surveys in future work would allow researchers to collect data on ideology in a way that can facilitate comparisons with much of the extant literature in political science, and allow researchers to sample from a less politically engaged population. Of course, this could be tricky because survey response rates might be affected by the phenomenon under study. In other words, the salience of political discussion from the right or left, and/or prior choices to consume content could make people more/less likely to respond to a survey asking about ideology, or affect the way they report the strength of their ideological preferences. This could confound measurement in a way that would be difficult to detect and correct. Yet it would be fascinating to see how survey results compare to the results in this study.&lt;/p&gt;
+&lt;p&gt;We would also encourage the application of large-scale methods that impute individuals&amp;rsquo; ideological leanings using social networks or revealed preferences. This would have the advantage of allowing researchers to estimate ideological preferences for a broader population, and could be applied to empirical contexts for which self-reported ideological affiliations are not present.&lt;/p&gt;
+&lt;p&gt;However, these approaches present challenges. Imputing ideology based on social networks would make it difficult to estimate what proportion of people&amp;rsquo;s networks contain individuals from the other side. 
+&lt;a href=&#34;http://journals.cambridge.org/action/displayAbstract?fromPage=online&amp;amp;aid=9586211&amp;amp;fileId=S0003055414000525&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Bond and Messing, 2015&lt;/a&gt; and 
+&lt;a href=&#34;http://pan.oxfordjournals.org/content/23/1/76.full.pdf?keytype=ref&amp;amp;ijkey=uMFPw4dsMHM7608&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Barberá 2014&lt;/a&gt; discuss some of the challenges related to estimating ideology based on revealed preferences. Another challenge specific to the quantities estimated in our paper is that because behavior may be caused by the composition of individuals&amp;rsquo; social networks, what their friends share, and how they engage with Facebook, using revealed preferences to select the population could introduce endogenous selection bias (
+&lt;a href=&#34;http://www.annualreviews.org/doi/abs/10.1146/annurev-soc-071913-043455&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Elwert and Winship 2014&lt;/a&gt;). A study that negotiates these issues would be a tremendously valuable contribution. Similar methods could also be used to obtain measures of ideological alignment of content.&lt;/p&gt;
+&lt;p&gt;Lastly, researchers could use party registration from the voter file. This approach would yield millions of records, but have different selection problems&amp;mdash;match rates may differ by region, state, age, gender, etc. Again, the advantage of approaches like this are that these studies compliment each other and provide a fuller picture of how exposure to viewpoints from the other side occur in social media.&lt;/p&gt;
+&lt;p&gt;Future work should also examine how exposure varies in different subpopulations. For example, one hypothesis to test is whether those with weaker or less consistent ideological preferences have more cross cutting content shared by friends, rendered in social media streams, and selected for reading. Some preliminary analysis suggests that indeed, among the individuals in our study, those with a weaker stated ideological affiliation have on average more cross-cutting content at each stage in the exposure process.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://solomonmg.github.io/img/5a469dbbfb5b2916a87554ca4a247579da11e2b2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Other Data Sources&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;There are many other important questions related to this paper that necessitate new data sources: Does encountering cross-cutting content increase or decrease attitude polarization? What about attitudes toward members of the other side? Does it change specific policy preferences? Are liberals and conservatives more or less likely to see content in News Feed &lt;em&gt;because&lt;/em&gt; it was cross-cutting? Do they actively avoid cross-cutting political content &lt;em&gt;because&lt;/em&gt; of expressions in the title or because of the fact that the media source is suggestive of a cross-cutting article? How do changes to ranking algorithms and user interfaces affect selective exposure? And how can we better understand actual discourse about politics in social media, rather than merely shared media content?&lt;/p&gt;
+&lt;p&gt;Answering these questions necessitates collecting innovative data sets via online experimentation (
+&lt;a href=&#34;http://pan.oxfordjournals.org/content/20/3/351.short&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Berinsky et al. 2012&lt;/a&gt;), social media (
+&lt;a href=&#34;http://scholar.harvard.edu/dtingley/files/fall2012.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Ryan and Broockman 2012&lt;/a&gt;), crowdsourcing (
+&lt;a href=&#34;http://papers.ssrn.com/sol3/papers.cfm?abstract_id=2526461&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Budak et al. 2014&lt;/a&gt;), large scale field experimentation (
+&lt;a href=&#34;http://gking.harvard.edu/publications/randomized-Experimental-Study-Censorship-China&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;King et al. 2014&lt;/a&gt;), observational social media data, clever ways to collect data about individual differences in ranking (
+&lt;a href=&#34;http://www.lazerlab.net/sites/default/files/publications/Measuring%20Personalization%20of%20Web%20Search.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Hannak et al. 2013&lt;/a&gt;), smart ways to combine behavioral and survey data (
+&lt;a href=&#34;http://arxiv.org/pdf/1304.1837v3.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Chen et al. 2014&lt;/a&gt;), and panel data (
+&lt;a href=&#34;http://faculty-gsb.stanford.edu/athey/documents/localnews.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Athey and Mobius 2012&lt;/a&gt;, 
+&lt;a href=&#34;https://5harad.com/papers/bubbles.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Flaxman et al. 2014&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;Many of these are causal questions necessitating experimental and/or quasi experimental designs. For example, the extent to which people select content because it is cross-cutting could be investigated using experiments like this one (e.g., 
+&lt;a href=&#34;http://crx.sagepub.com/content/41/8/1042&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Messing and Westwood 2012&lt;/a&gt;) or through identifying sources of natural exogenous variation. And while Diana Mutz and others have done ground-breaking research on the effects of encountering cross-cutting arguments on political attitudes (
+&lt;a href=&#34;http://journals.cambridge.org/action/displayAbstract?fromPage=online&amp;amp;aid=208463&amp;amp;fileId=S0003055402004264&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Mutz 2002&lt;/a&gt;b) and behavior (
+&lt;a href=&#34;http://www.jstor.org/stable/3088437&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Mutz 2002&lt;/a&gt;a), more research into how these effects play out in the long term (using approaches like 
+&lt;a href=&#34;http://faculty.wcas.northwestern.edu/~jnd260/pub/Druckman%20Fein%20Leeper%20APSR.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Druckman et al 2012&lt;/a&gt;) would be of tremendous benefit to the literature. It is difficult to expose people to any sort of argument for a long period of time (say over the course of a U.S. national political campaign cycle), in a way that is not confounded with people&#39;s existing preferences and the social environment, though creative quasi-experimental work (
+&lt;a href=&#34;http://web.stanford.edu/~ayurukog/cable_news.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Martin and Yurukoglu 2014&lt;/a&gt;) is emerging in this area.&lt;/p&gt;
+&lt;p&gt;Many of these questions necessitate that researchers identify the effects of cross-cutting arguments both on and off Facebook. To get a full picture of how cross-cutting arguments affect politics requires understanding the myriad of ways individuals get information, both on the Internet (
+&lt;a href=&#34;https://5harad.com/papers/bubbles.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Flaxman et al. 2014&lt;/a&gt;) and offline (
+&lt;a href=&#34;http://journals.cambridge.org/action/displayAbstract?fromPage=online&amp;amp;aid=208463&amp;amp;fileId=S0003055402004264&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Mutz 2002&lt;/a&gt;a), what kinds of information people discuss in offline contexts (
+&lt;a href=&#34;http://dx.doi.org/10.1017/S0003055402004264&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Mutz 2002&lt;/a&gt;b), and the relative influence of all of these factors on opinions.&lt;/p&gt;
+&lt;p&gt;Finally, if individuals&#39; online networks and choices do substantially impact the diversity of news in individuals&#39; overall &amp;ldquo;information diets,&amp;rdquo; future research could examine the effects of connecting those with more disparate views (
+&lt;a href=&#34;http://ajps.org/2015/03/11/partisanship-in-social-settings-when-democrats-and-republicans-meet/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Klar 2014&lt;/a&gt;), encouraging consumption of cross-cutting content (
+&lt;a href=&#34;http://www.smunson.com/portfolio/projects/socnews_icwsm15.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Agapie and Munson 2015&lt;/a&gt;), or simply encouraging individuals to read more diverse news by making individuals more aware of the balance of news they consume (
+&lt;a href=&#34;http://www.smunson.com/portfolio/projects/aggdiversity/balancer-icwsm.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Munson et al. 2013&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;These questions are especially important in light of the fact that there are substantial opportunities for people to read more news on Facebook. The plots below illustrate the average proportion of stories shared by friends, those that are seen in News Feed, and those clicked on for liberals and conservatives in the study. Clearly there is an opportunity to read more news from either side.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://solomonmg.github.io/img/ddb611f4a223213b3a653208e5bdd048d6b9cd94.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Dataverse&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Finally, we believe that reproducing, replicating, and conducting additional analyses on extant data sets is extremely important and helps generate ideas for future work (
+&lt;a href=&#34;http://gking.harvard.edu/files/abs/replication-Abs.shtml&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;King 1995&lt;/a&gt;, 
+&lt;a href=&#34;http://thomasleeper.com/2015/05/open-science-language/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Leeper 2015&lt;/a&gt;). In that spirit, we have created a 
+&lt;a href=&#34;http://dataverse.harvard.edu/dataverse/facebook&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Facebook Dataverse repository&lt;/a&gt; in the 
+&lt;a href=&#34;http://dataverse.org/about/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Harvard Dataverse&lt;/a&gt;. The repository includes replication data, scripts, as well as some additional supplementary data and code for extending our work.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;References&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;E. Bakshy, S. Messing, L.A. Adamic. 2015. Exposure to ideologically diverse news and opinion on Facebook. &lt;em&gt;Science&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;E. Bakshy, I. Rosenn, C.A. Marlow, L.A. Adamic. 2012. The Role of Social Networks in Information Diffusion. &lt;em&gt;ACM WWW 2012.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;S. Messing and S.J. Westwood. 2012. Selective Exposure in the Age of Social Media: Endorsements Trump Partisan Source Affiliation When Selecting News Online. &lt;em&gt;Communication Research&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;P. Barberá (2015). Birds of the same feather tweet together: Bayesian ideal point estimation using Twitter data. &lt;em&gt;Political Analysis&lt;/em&gt;, &lt;em&gt;23&lt;/em&gt;(1), 76-91.&lt;/p&gt;
+&lt;p&gt;R. Bond, S. Messing, Quantifying Social Media&amp;rsquo;s Political Space: Estimating Ideology from Publicly Revealed Preferences on Facebook. &lt;em&gt;American Political Science Review&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;F. Elwert and C. Winship. 2014. Endogenous Selection Bias: The Problem of Conditioning on a Collider Variable. &lt;em&gt;Annual Review of Sociology.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;G. King, J. Pan, and M. E. Roberts. 2014. Reverse-Engineering Censorship in China: Randomized Experimentation and Participant Observation. &lt;em&gt;Science&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;C. Budak, S. Goel, &amp;amp; J. M. Rao. (2014). Fair and Balanced? Quantifying Media Bias Through Crowdsourced Content Analysis. &lt;em&gt;Quantifying Media Bias Through Crowdsourced Content Analysis (November 17, 2014)&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;S. Athey, M. Mobius. The Impact of News Aggregators on Internet News Consumption: The Case of Localization. Working paper. &lt;a href=&#34;http://faculty-gsb.stanford.edu/athey/documents/localnews.pdf&#34;&gt;http://faculty-gsb.stanford.edu/athey/documents/localnews.pdf&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;A. Hannak, P. Sapiezynski, A. Molavi Kakhki, B. Krishnamurthy, D. Lazer, A. Mislove, C. Wilson. 2013. Measuring personalization of web search. &lt;em&gt;ACM WWW 2013&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;A. Chen and A. Owen and M. Shi. Data Enriched Linear Regression. Working paper. &lt;a href=&#34;http://arxiv.org/pdf/1304.1837v3.pdf&#34;&gt;http://arxiv.org/pdf/1304.1837v3.pdf&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;G.J. Martin, A. Yurukoglu. Working paper. Bias in Cable News: Real Effects and Polarization. Working paper. &lt;a href=&#34;http://web.stanford.edu/~ayurukog/cable_news.pdf&#34;&gt;http://web.stanford.edu/~ayurukog/cable_news.pdf&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;S.R. Flaxman, S. Goel, J.M. Rao. Filter Bubbles, Echo Chambers, and Online News Consumption. Working paper. &lt;a href=&#34;https://5harad.com/papers/bubbles.pdf&#34;&gt;https://5harad.com/papers/bubbles.pdf&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;D.C. Mutz. 2002. The Consequences of Cross-Cutting Networks for Political Participation. &lt;em&gt;American Journal of Political Science&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;D.C. Mutz. 2002. Cross-cutting Social Networks: Testing Democratic Theory in Practice. &lt;em&gt;American Political Science Review&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;J. N. Druckman, J. Fein, &amp;amp; T. Leeper. 2012. A source of bias in public opinion stability. &lt;em&gt;American Political Science Review&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;E. Agapie, S.A. Munson. 2015. &amp;ldquo;
+&lt;a href=&#34;http://smunson.com/portfolio/projects/socnews_icwsm15.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Social Cues and Interest in Reading Political News Stories&lt;/a&gt;.&amp;rdquo; &lt;em&gt;AAAI ICWSM 2015&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;S. Klar. 2014. Partisanship in a Social Setting. &lt;em&gt;American Journal of Political Science&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;S.A. Munson, S.Y. Lee, P. Resnick. 2013. Encouraging Reading of Diverse Political Viewpoints with a Browser Widget. &lt;em&gt;AAAI ICWSM 2013&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;G. King. 1995. &amp;ldquo;Replication, Replication.&amp;rdquo; &lt;em&gt;Political Science and Politics&lt;/em&gt;. &lt;a href=&#34;http://j.mp/1wP9Vqn&#34;&gt;http://j.mp/1wP9Vqn&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;T. Leeper. 2015. What&#39;s in a Name? The Concepts and Language of Replication and Reproducibility. Blog post. &lt;a href=&#34;http://thomasleeper.com/2015/05/open-science-language/&#34;&gt;http://thomasleeper.com/2015/05/open-science-language/&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>The 2012 Election Day Through the Facebook Lens</title>
+      <link>https://solomonmg.github.io/publication/messing-2012-ts/</link>
+      <pubDate>Sun, 01 Jan 2012 00:00:00 +0000</pubDate>
+      <guid>https://solomonmg.github.io/publication/messing-2012-ts/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title> others | Sol Messing</title>
+    <link>https://solomonmg.github.io/author/others/</link>
+      <atom:link href="https://solomonmg.github.io/author/others/index.xml" rel="self" type="application/rss+xml" />
+    <description> others</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>©2020</copyright><lastBuildDate>Tue, 01 Jan 2019 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://solomonmg.github.io/images/icon_huedd5de82286bc1d0a1509b535f624c76_25974_512x512_fill_lanczos_center_2.png</url>
+      <title> others</title>
+      <link>https://solomonmg.github.io/author/others/</link>
+    </image>
+    
+    <item>
+      <title>Tumor formation of adult stem cell transplants in rodent arthritic joints</title>
+      <link>https://solomonmg.github.io/publication/chapelin-2019-tumor/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
+      <guid>https://solomonmg.github.io/publication/chapelin-2019-tumor/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ferumoxytol: a new, clinically applicable label for stem-cell tracking in arthritic joints with MRI</title>
+      <link>https://solomonmg.github.io/publication/khurana-2013-ferumoxytol/</link>
+      <pubDate>Tue, 01 Jan 2013 00:00:00 +0000</pubDate>
+      <guid>https://solomonmg.github.io/publication/khurana-2013-ferumoxytol/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Iron administration before stem cell harvest enables MR imaging tracking after transplantation</title>
+      <link>https://solomonmg.github.io/publication/khurana-2013-iron/</link>
+      <pubDate>Tue, 01 Jan 2013 00:00:00 +0000</pubDate>
+      <guid>https://solomonmg.github.io/publication/khurana-2013-iron/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Intravenous ferumoxytol allows noninvasive MR imaging monitoring of macrophage migration into stem cell transplants</title>
+      <link>https://solomonmg.github.io/publication/khurana-2012-intravenous/</link>
+      <pubDate>Sun, 01 Jan 2012 00:00:00 +0000</pubDate>
+      <guid>https://solomonmg.github.io/publication/khurana-2012-intravenous/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

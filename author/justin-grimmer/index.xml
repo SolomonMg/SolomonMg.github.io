@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Justin Grimmer | Sol Messing</title>
+    <link>https://solomonmg.github.io/author/justin-grimmer/</link>
+      <atom:link href="https://solomonmg.github.io/author/justin-grimmer/index.xml" rel="self" type="application/rss+xml" />
+    <description>Justin Grimmer</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>©2020</copyright><lastBuildDate>Sun, 01 Jan 2017 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://solomonmg.github.io/images/icon_huedd5de82286bc1d0a1509b535f624c76_25974_512x512_fill_lanczos_center_2.png</url>
+      <title>Justin Grimmer</title>
+      <link>https://solomonmg.github.io/author/justin-grimmer/</link>
+    </image>
+    
+    <item>
+      <title>Estimating heterogeneous treatment effects and the effects of heterogeneous treatments with ensemble methods</title>
+      <link>https://solomonmg.github.io/publication/grimmer-2017-estimating/</link>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
+      <guid>https://solomonmg.github.io/publication/grimmer-2017-estimating/</guid>
+      <description>&lt;pre&gt;&lt;code&gt;- [Replication materials](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/BQMLQW).
+- [Software implementation](https://github.com/SolomonMg/HetSL) (under development)
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>The Impression of Influence: Legislator Communication, Representation, and Democratic Accountability</title>
+      <link>https://solomonmg.github.io/publication/gri-mes-wes-14/</link>
+      <pubDate>Wed, 01 Jan 2014 00:00:00 +0000</pubDate>
+      <guid>https://solomonmg.github.io/publication/gri-mes-wes-14/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;Media: 
+&lt;a href=&#34;http://www.mischiefsoffaction.com/2015/01/its-frequency-not-size-compromise.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Mischiefs of Faction&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>How Words and Money Cultivate a Personal Vote: The Effect of Legislator Credit Claiming on Constituent Credit Allocation</title>
+      <link>https://solomonmg.github.io/publication/grimmer-how-2012/</link>
+      <pubDate>Sun, 01 Jan 2012 00:00:00 +0000</pubDate>
+      <guid>https://solomonmg.github.io/publication/grimmer-how-2012/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://solomonmg.github.io/pdf/ccsup.pdf&#34;&gt;Supplementary Information&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

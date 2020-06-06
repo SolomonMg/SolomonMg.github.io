@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Brian D Lee | Sol Messing</title>
+    <link>https://solomonmg.github.io/author/brian-d-lee/</link>
+      <atom:link href="https://solomonmg.github.io/author/brian-d-lee/index.xml" rel="self" type="application/rss+xml" />
+    <description>Brian D Lee</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>©2020</copyright><lastBuildDate>Tue, 01 Jan 2013 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://solomonmg.github.io/images/icon_huedd5de82286bc1d0a1509b535f624c76_25974_512x512_fill_lanczos_center_2.png</url>
+      <title>Brian D Lee</title>
+      <link>https://solomonmg.github.io/author/brian-d-lee/</link>
+    </image>
+    
+    <item>
+      <title>Evaluation of the novel USPIO GEH121333 for MR imaging of cancer immune responses</title>
+      <link>https://solomonmg.github.io/publication/shi-2013-evaluation/</link>
+      <pubDate>Tue, 01 Jan 2013 00:00:00 +0000</pubDate>
+      <guid>https://solomonmg.github.io/publication/shi-2013-evaluation/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

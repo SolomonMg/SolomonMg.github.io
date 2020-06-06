@@ -1,0 +1,1393 @@
+<!DOCTYPE html><html lang="en-us" >
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.8.0">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Sol Messing">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Data can often be usefully conceptualized in terms affiliations between people (or other key data entities). It might be useful analyze common group membership, common purchasing decisions, or common patterns of behavior.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://solomonmg.github.io/post/working-with-bipartite-affiliation-network-data-in-r/">
+
+  
+
+
+  
+  
+  
+  <meta name="theme-color" content="#2962ff">
+  
+
+  
+  
+  
+  <script src="/js/mathjax-config.js"></script>
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-1/css/all.min.css" integrity="sha256-4w9DunooKSr3MFXHXWyFER38WmPdm361bQS/2KUWZbU=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.css" integrity="sha256-SHMGCYmST46SoyGgo4YR/9AlK1vf3ff84Aq9yK4hdqM=" crossorigin="anonymous">
+    
+
+    
+
+    
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap">
+  
+
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.css">
+
+  
+
+
+
+
+  
+
+
+  
+  
+
+  
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/images/icon_huedd5de82286bc1d0a1509b535f624c76_25974_32x32_fill_lanczos_center_2.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_huedd5de82286bc1d0a1509b535f624c76_25974_192x192_fill_lanczos_center_2.png">
+
+  <link rel="canonical" href="https://solomonmg.github.io/post/working-with-bipartite-affiliation-network-data-in-r/">
+
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="twitter:site" content="@SolomonMg">
+  <meta property="twitter:creator" content="@SolomonMg">
+  
+  <meta property="og:site_name" content="Sol Messing">
+  <meta property="og:url" content="https://solomonmg.github.io/post/working-with-bipartite-affiliation-network-data-in-r/">
+  <meta property="og:title" content="Working with Bipartite/Affiliation Network Data in R | Sol Messing">
+  <meta property="og:description" content="Data can often be usefully conceptualized in terms affiliations between people (or other key data entities). It might be useful analyze common group membership, common purchasing decisions, or common patterns of behavior."><meta property="og:image" content="https://solomonmg.github.io/post/working-with-bipartite-affiliation-network-data-in-r/featured.jpg">
+  <meta property="twitter:image" content="https://solomonmg.github.io/post/working-with-bipartite-affiliation-network-data-in-r/featured.jpg"><meta property="og:locale" content="en-us">
+  
+    
+      <meta property="article:published_time" content="2012-03-04T00:00:00&#43;00:00">
+    
+    <meta property="article:modified_time" content="2020-05-12T00:00:00&#43;00:00">
+  
+
+  
+
+
+    
+
+
+
+
+
+
+  
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://solomonmg.github.io/post/working-with-bipartite-affiliation-network-data-in-r/"
+  },
+  "headline": "Working with Bipartite/Affiliation Network Data in R",
+  
+  "image": [
+    "https://solomonmg.github.io/post/working-with-bipartite-affiliation-network-data-in-r/featured.jpg"
+  ],
+  
+  "datePublished": "2012-03-04T00:00:00Z",
+  "dateModified": "2020-05-12T00:00:00Z",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Sol Messing"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Sol Messing",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://solomonmg.github.io/images/icon_huedd5de82286bc1d0a1509b535f624c76_25974_192x192_fill_lanczos_center_2.png"
+    }
+  },
+  "description": "Data can often be usefully conceptualized in terms affiliations between people (or other key data entities). It might be useful analyze common group membership, common purchasing decisions, or common patterns of behavior."
+}
+</script>
+
+  
+
+  
+
+
+  
+
+
+  
+
+
+
+
+
+  <title>Working with Bipartite/Affiliation Network Data in R | Sol Messing</title>
+
+</head>
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" >
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">Sol Messing</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">Sol Messing</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#about"><span>Home</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#posts"><span>Posts</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#projects"><span>Projects</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#featured"><span>Publications</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#contact"><span>Contact</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+      <li class="nav-item dropdown theme-dropdown">
+        <a href="#" class="nav-link js-theme-selector" data-toggle="dropdown" aria-haspopup="true">
+          <i class="fas fa-palette" aria-hidden="true"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a href="#" class="dropdown-item js-set-theme-light">
+            <span>Light</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-dark">
+            <span>Dark</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-auto">
+            <span>Automatic</span>
+          </a>
+        </div>
+      </li>
+      
+
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+  <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+<div class="article-container pt-3">
+  <h1>Working with Bipartite/Affiliation Network Data in R</h1>
+
+  
+
+  
+
+
+<div class="article-metadata">
+
+  
+  
+  
+  
+  <div>
+    
+
+  
+  <span>Sol Messing</span>
+  </div>
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+          Last updated on
+      
+    
+    May 12, 2020
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    17 min read
+  </span>
+  
+
+  
+  
+  
+
+  
+  
+
+</div>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="btn-links mb-3">
+  
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+  
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+</div>
+
+
+<div class="article-header article-container featured-image-wrapper mt-4 mb-4" style="max-width: 672px; max-height: 672px;">
+  <div style="position: relative">
+    <img src="/post/working-with-bipartite-affiliation-network-data-in-r/featured.jpg" alt="" class="featured-image">
+    <span class="article-header-caption">Network diagram of bipartite graph</span>
+  </div>
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <p>Data can often be usefully conceptualized in terms affiliations between people (or other key data entities). It might be useful analyze common group membership, common purchasing decisions, or common patterns of behavior. This post introduces bipartite/affiliation network data and provides R code to help you process and visualize this kind of data. I recently updated this for use with larger data sets, though I put it together a while back.</p>
+<h2 id="preliminaries">Preliminaries</h2>
+<p>Much of the material here is covered in the more comprehensive 
+<a href="http://sna.stanford.edu/rlabs.php" target="_blank" rel="noopener">&ldquo;Social Network Analysis Labs in R and SoNIA,&quot;</a> on which I collaborated with Dan McFarland, Sean Westwood and Mike Nowak.
+For a great online introduction to social network analysis see the online book 
+<a href="http://www.faculty.ucr.edu/~hanneman/nettext/" target="_blank" rel="noopener">Introduction to Social Network Methods</a> by Robert Hanneman and Mark Riddle.</p>
+<h2 id="bipartiteaffiliation-network-data">Bipartite/Affiliation Network Data</h2>
+<p>A network can consist of different &lsquo;classes&rsquo; of nodes. For example, a two-mode network might consist of people (the first mode) and groups in which they are members (the second mode). Another very common example of two-mode network data consists of users on a particular website who communicate in the same forum thread.
+Here&rsquo;s a short example of this kind of data. Run this in R for yourself - just copy an paste into the command line or into a script and it will generate a dataframe that we can use for illustrative purposes:</p>
+<pre><code class="language-r">df &lt;- data.frame( 
+    person = c('Sam','Sam','Sam','Greg','Tom','Tom','Tom','Mary','Mary'), 
+    group = c('a','b','c','a','b','c','d','b','d'), 
+    stringsAsFactors = F)
+
+df
+
+person group
+1    Sam     a
+2    Sam     b
+3    Sam     c
+4   Greg     a
+5    Tom     b
+6    Tom     c
+7    Tom     d
+8   Mary     b
+9   Mary     d
+</code></pre>
+<h2 id="c1">Fast, efficient two-mode to one-mode conversion in R</h2>
+<p>Suppose we wish to analyze or visualize how the people are connected directly - that is, what if we want the network of people where a tie between two people is present if they are both members of the same group? We need to perform a two-mode to one-mode conversion.</p>
+<p>To convert a two-mode incidence matrix to a one-mode adjacency matrix, one can simply multiply an incidence matrix by its transpose, which sum the common 1&rsquo;s between rows. Recall that matrix multiplication entails multiplying the k-th entry of a row in the first matrix by the k-th entry of a column in the second matrix, then summing, such that the ij-th row-column entry in resulting matrix represents the dot-product of the i-th row of the first matrix and the j-th column of the second. In mathematical notation:</p>
+<p>$$
+AB = \left [
+\begin{array}{cc}
+a &amp; b  \\\<br>
+c &amp; d
+\end{array} \right ]
+\left [ \begin{array}{cc}
+e &amp; f  \\\<br>
+g &amp; h
+\end{array} \right ] =
+\left [
+\begin{array}{cc}
+ae+bg &amp; af+bh \\\<br>
+ce+dg &amp; cf+dh
+\end{array}
+\right ]
+$$</p>
+<p>Notice further that multiplying a matrix by its transpose yields the following:</p>
+<p>$$
+\begin{align}
+AA&rsquo; =
+\left[
+\begin{array}{cc}
+a &amp; b  \\\<br>
+c &amp; d
+\end{array}
+\right]
+\left[
+\begin{array}{cc}
+a &amp; c  \\\<br>
+b &amp; d
+\end{array}
+\right] =
+\left[
+\begin{array}{cc}
+aa+bb &amp; ac+bd \\\<br>
+ca+db &amp; cc+dd
+\end{array}
+\right]
+\end{align}
+$$</p>
+<p>Because our incidence matrix consists of 0&rsquo;s and 1&rsquo;s, the off-diagonal entries represent the total number of common columns, which is exactly what we wanted. We&rsquo;ll use the <code>%*%</code> operator to tell R to do exactly this. Let&rsquo;s take a look at a small example using toy data of people and groups to which they belong. We&rsquo;ll coerce the data to an incidence matrix, then multiply the incidence matrix by its transpose to get the number of common groups between people.</p>
+<p>This is easy to do using the matrix algebra functions included in R. But first, you need to restructure your (edgelist) network data as an incidence matrix. An incidence will record a 1 for row-column combinations where a tie is present and 0 otherwise. One easy way to do this in R is to use the table function and then coerce the table object to a matrix object:</p>
+<pre><code class="language-r">m &lt;- table( df )
+M &lt;- as.matrix( m )
+</code></pre>
+<p>If you are using the network or sna packages, a network object be coerced via <code>as.matrix(your-network)</code>; with the igraph package use <code>get.adjacency(your-network)</code>.</p>
+<p>This is great, but what about if we are working with a really large data set? Network data is almost always sparse&mdash;there are far more pairwise combinations of potential connections than actual observed connections. Hence, we&rsquo;d actually prefer to keep the underlying data structured in edgelist format, but we&rsquo;d also like access to R&rsquo;s matrix algebra functionality.</p>
+<p>We can get the best of both worlds using the Matrix library to construct a sparse triplet representation of a matrix. But we&rsquo;d also like to avoid building the entire incidence matrix and just feed Matrix our edgelist directly, a point that came up in a recent conversation I had with 
+<a href="http://seanjtaylor.com/" target="_blank" rel="noopener">Sean Taylor</a>. We feed <code>Matrix</code> our &lsquo;person&rsquo; column to index &lsquo;i&rsquo; (rows in the new incidence matrix), our &lsquo;group&rsquo; column to index j (columns in the new incidence matrix), and we repeat &lsquo;1&rsquo; for the length of the edgelist to denote an incidence.</p>
+<pre><code class="language-r">library('Matrix')
+A &lt;- spMatrix(nrow=length(unique(df$person)),
+ncol=length(unique(df$group)),
+i = as.numeric(factor(df$person)),
+j = as.numeric(factor(df$group)),
+x = rep(1, length(as.numeric(df$person))) )
+row.names(A) &lt;- levels(factor(df$person))
+colnames(A) &lt;- levels(factor(df$group))
+A
+</code></pre>
+<p>We will either convert to the &lsquo;mode&rsquo; represented by the columns or by the rows.
+To get the one-mode representation of ties between rows (people in our example), multiply the matrix by its transpose. Note that you must use the matrix-multiplication operator <code>%*%</code> rather than a simple astrisk. The R code is:</p>
+<pre><code class="language-r">Arow &lt;- A %*% t(A)
+</code></pre>
+<p>But we can still do better! The function tcrossprod is faster and more efficient for this:</p>
+<pre><code class="language-r">Arow &lt;- tcrossprod(A)
+</code></pre>
+<p>Arow will now represent the one-mode matrix formed by the row entities&mdash;people will have ties to each other if they are in the same group, in our example. Here&rsquo;s what it looks like:</p>
+<pre><code>Arow
+4 x 4 sparse Matrix of class &quot;dgCMatrix&quot;
+     Greg Mary Sam Tom
+Greg    1    .   1   .
+Mary    .    2   1   2
+Sam     1    1   3   2
+Tom     .    2   2   3
+</code></pre>
+<p>To get the one-mode matrix formed by the column entities (i.e. the number of people) enter the following command:</p>
+<pre><code class="language-r">Acol &lt;- t(A) %*% A
+</code></pre>
+<p>Again, we can use tcrossprod to make this even more efficient:</p>
+<pre><code class="language-r">Acol &lt;- tcrossprod(t(A))
+</code></pre>
+<p>And the resulting co-membership matrix is as follows:</p>
+<pre><code>Mcol
+group
+group a b c d
+a 2 1 1 0
+b 1 3 2 2
+c 1 2 2 1
+d 0 2 1 2
+</code></pre>
+<p>Although we&rsquo;ve used a very small network for our example, this code is highly extensible to the analysis of larger networks with R.</p>
+<h2 id="c1">Analysis of Two Mode Data and Mobility</h2>
+<p>Let&rsquo;s work with some actual affiliation data, collected by Dan McFarland on student extracurricular affiliations. It&rsquo;s a longitudinal data set, with 3 waves - 1996, 1997, 1998.  It consists of students (anonymized) and the student organizations in which they are members (e.g. National Honor Society, wrestling team, cheerleading squad, etc.).
+What we&rsquo;ll do is to read in the data, explore it, make a few two-to-one mode conversions, and visualize it.</p>
+<pre><code class="language-r"># Load the 'igraph' library
+library('igraph')
+# (1) Read in the data files, NA data objects coded as 'na'
+magact96 = read.delim('https://solomonmg.github.io/assets/img/mag_act96.txt',
+na.strings = 'na')
+magact97 = read.delim('https://solomonmg.github.io/assets/img/mag_act97.txt',
+na.strings = 'na')
+magact98 = read.delim('https://solomonmg.github.io/assets/img/mag_act98.txt',
+na.strings = 'na')
+</code></pre>
+<p>Missing data is coded as &ldquo;na&rdquo; in this data, which is why we gave R the command na.strings = &ldquo;na&rdquo;.</p>
+<p>These files consist of four columns of individual-level attributes (ID, gender, grade, race), then a bunch of group membership dummy variables (coded &ldquo;1&rdquo; for membership, &ldquo;0&rdquo; for no membership).  We need to set aside the first four columns (which do not change from year to year).</p>
+<pre><code class="language-r">magattrib = magact96[,1:4]
+g96 &lt;- as.matrix(magact96[,-(1:4)]); row.names(g96) = magact96$ID.
+g97 &lt;- as.matrix(magact97[,-(1:4)]); row.names(g97) = magact97$ID.
+g98 &lt;- as.matrix(magact98[,-(1:4)]); row.names(g98) = magact98$ID.
+</code></pre>
+<p>By using the <code>[,-(1:4)]</code> index, we drop those columns so that we have a square incidence matrix for each year, and then tell R to set the row names of the matrix to the student&rsquo;s ID. Note that we need to keep the &ldquo;.&rdquo; after ID in this dataset (because it&rsquo;s in the name of the variable).
+Now we load these two-mode matrices into igraph:</p>
+<pre><code class="language-r">i96 &lt;- graph.incidence(g96, mode=c('all') )
+i97 &lt;- graph.incidence(g97, mode=c('all') )
+i98 &lt;- graph.incidence(g98, mode=c('all') )
+</code></pre>
+<h3 id="plotting-two-mode-networks">Plotting two-mode networks</h3>
+<p>Now, let&rsquo;s plot these graphs. The igraph package has excellent plotting functionality that allows you to assign visual attributes to igraph objects before you plot. The alternative is to pass 20 or so arguments to the <code>plot.igraph()</code> function, which gets really messy.</p>
+<p>Let&rsquo;s assign some attributes to our graph. First we set vertex attributes, making sure to make them slightly transparent by altering the gamma, using the <code>rgb(r,g,b,gamma)</code> function to set the color. This makes it much easier to look at a really crowded graph, which might look like a giant hairball otherwise.
+You can read up on the RGB color model 
+<a href="http://en.wikipedia.org/wiki/RGB_color_model" target="_blank" rel="noopener">here</a>.</p>
+<p>Each node (or &ldquo;vertex&rdquo;) object is accessible by calling <code>V(g)</code>, and you can call (or create) a node attribute by using the <code>$</code> operator so that you call <code>V(g)$attribute</code>. Here&rsquo;s how to set the color attribute for a set of nodes in a graph object:</p>
+<pre><code class="language-r">V(i96)$color[1:1295] &lt;- rgb(1,0,0,.5)
+V(i96)$color[1296:1386] &lt;- rgb(0,1,0,.5)
+</code></pre>
+<p>Notice that we index the <code>V(g)$color</code> object by a seemingly arbitrary value, 1295.  This marks the end of the student nodes, and 1296 is the first group node. You can view which nodes are which by typing V(i96). R prints out a list of all the nodes in the graph, and those with a number are obviously different from those that consist of a group name.</p>
+<p>Now we&rsquo;ll set some other graph attributes:</p>
+<pre><code class="language-r">V(i96)$label &lt;- V(i96)$name
+V(i96)$label.color &lt;- rgb(0,0,.2,.5)
+V(i96)$label.cex &lt;- .4
+V(i96)$size &lt;- 6
+V(i96)$frame.color &lt;- NA
+</code></pre>
+<p>You can also set edge attributes. Here we&rsquo;ll make the edges nearly transparent and slightly yellow because there will be so many edges in this graph:</p>
+<pre><code class="language-r">E(i96)$color &lt;- rgb(.5,.5,0,.2)
+</code></pre>
+<p>Now, we&rsquo;ll open a pdf &ldquo;device&rdquo; on which to plot. This is just a connection to a pdf file. Note that the code below will take a minute or two to execute (or longer if you have a pre- Intel dual-core processor).</p>
+<pre><code class="language-r">pdf('i96.pdf')
+plot(i96, layout=layout.fruchterman.reingold)
+dev.off()
+</code></pre>
+<p>Note that we&rsquo;ve used the Fruchterman-Reingold force-directed layout algorithm here.  Generally speaking, the when you have a ton of edges, the Kamada-Kawai layout algorithm works well but, it can get really slow for networks with a lot of nodes. Also, for larger networks, layout.fruchterman.reingold.grid is faster, but can fail to produce a plot with any meaninful pattern if you have too many isolates, as is the case here. Experiment for yourself.
+Here&rsquo;s what we get:</p>
+<p><img src="/img/i96.jpg" alt=""></p>
+<p>It&rsquo;s oddly reminiscent of a cresent and star, but impossible to read. Now, if you open the 
+<a href="/img/i96.pdf">pdf output</a>, you&rsquo;ll notice that you can zoom in on any part of the graph ad infinitum without losing any resolution. How is that possible in such a small file? It&rsquo;s possible because the pdf device output consists of data based on vectors: lines, polygons, circles, elipses, etc., each specified by a mathematical formula that your pdf program renders when you view it. Regular bitmap or jpeg picture output, on the other hand, consists of a pixel-coordinate mapping of the image in question, which is why you lose resolution when you zoom in on a digital photograph or a plot produced with most other programs.</p>
+<p>Let&rsquo;s remove all of the isolates (the cresent), change a few aesthetic features, and replot. First, we&rsquo;ll remove isloates, by deleting all nodes with a degree of 0, meaning that they have zero edges. Then, we&rsquo;ll suppress labels for students and make their nodes smaller and more transparent. Then we&rsquo;ll make the edges more narrow more transparent. Then, we&rsquo;ll replot using various layout algorithms:</p>
+<pre><code class="language-r">i96 &lt;- delete.vertices(i96, V(i96)[ degree(i96)==0 ])
+V(i96)$label[1:857] &lt;- NA
+V(i96)$color[1:857] &lt;-  rgb(1,0,0,.1)
+V(i96)$size[1:857] &lt;- 2
+E(i96)$width &lt;- .3
+E(i96)$color &lt;- rgb(.5,.5,0,.1)
+pdf('i96.2.pdf')
+plot(i96, layout=layout.kamada.kawai)
+dev.off()
+pdf('i96.3.pdf')
+plot(i96, layout=layout.fruchterman.reingold.grid)
+dev.off()
+pdf('i96.4.pdf')
+plot(i96, layout=layout.fruchterman.reingold)
+dev.off()
+</code></pre>
+<p>I personally prefer the Fruchterman-Reingold layout in this case. The nice thing about this layout is that it really emphasizes centrality&ndash;the nodes that are most central are nearly always placed in the middle of the plot. Here&rsquo;s what it looks like:</p>
+<p><img src="/img/i962.jpg" alt=""></p>
+<p>Very pretty, but you can&rsquo;t see which groups are which at this resolution. Zoom assets/in on the 
+<a href="/img/samplepdf.pdf">pdf output</a>, and you can see things pretty clearly.</p>
+<h3 id="two-mode-to-one-mode-data-transformation">Two mode to one mode data transformation</h3>
+<p>We&rsquo;ve emphasized groups in this visualization so much, that we might want to just create a network consisting of group co-membership. First we need to create a new network object. We&rsquo;ll do that the same way for this network as for our example at the top of this page:</p>
+<pre><code class="language-r">g96e &lt;- t(g96) %*% g96
+g97e &lt;- t(g97) %*% g97
+g98e &lt;- t(g98) %*% g98
+i96e &lt;- graph.adjacency(g96e, mode = 'undirected')
+</code></pre>
+<p>Now we need to tansform the graph so that multiple edges become an attribute ( <code>E(g)$weight</code> ) of each unique edge:</p>
+<pre><code class="language-r">E(i96e)$weight &lt;- count.multiple(i96e)
+i96e &lt;- simplify(i96e)
+</code></pre>
+<p>Now we&rsquo;ll set the other plotting parameters as we did above:</p>
+<pre><code class="language-r"># Set vertex attributes
+V(i96e)$label &lt;- V(i96e)$name
+V(i96e)$label.color &lt;- rgb(0,0,.2,.8)
+V(i96e)$label.cex &lt;- .6
+V(i96e)$size &lt;- 6
+V(i96e)$frame.color &lt;- NA
+V(i96e)$color &lt;- rgb(0,0,1,.5)
+# Set edge gamma according to edge weight
+egam &lt;- (log(E(i96e)$weight)+.3)/max(log(E(i96e)$weight)+.3)
+E(i96e)$color &lt;- rgb(.5,.5,0,egam)
+</code></pre>
+<p>We set edge gamma as a function of how many edges exist between two nodes, or in this case, how many students each group has in common. For illustrative purposes, let&rsquo;s compare how the Kamada-Kawai and Fruchterman-Reingold algorithms render this graph:</p>
+<pre><code class="language-r">pdf('i96e.pdf')
+plot(i96e, main = 'layout.kamada.kawai', layout=layout.kamada.kawai)
+plot(i96e, main = 'layout.fruchterman.reingold', layout=layout.fruchterman.reingold)
+dev.off()
+</code></pre>
+<p>I like the Kamada-Kawai layout for this graph, because the center of the graph is too busy otherwise. And here&rsquo;s what the resulting plot looks like:
+<img src="/img/i96e-kk.jpeg" alt=""></p>
+<p>You can check out the difference between each layout yourself. Here&rsquo;s what the 
+<a href="/img/i96e.pdf">assets/pdf output looks like</a>.  Page 1 shows the Kamada-Kawai layout and page 2 shows the Fruchterman Reingold layout.</p>
+<h3 id="group-overlap-networks-and-plots">Group overlap networks and plots</h3>
+<p>Now we might also be interested in the percent overlap between groups. Note that this will be a directed graph, because the percent overlap will not be symmetric across groups&ndash;for example, it may be that 3/4 of Spanish NHS members are in NHS, but only 1/8 of NHS members are in the Spanish NHS. We&rsquo;ll create this graph for all years in our data (though we could do it for one year only).
+First we&rsquo;ll need to create a percent overlap graph. We start by dividing each row by the diagonal (this is really easy in R):</p>
+<pre><code class="language-r">ol96 &lt;- g96e/diag(g96e)
+ol97 &lt;- g97e/diag(g97e)
+ol98 &lt;- g98e/diag(g98e)
+</code></pre>
+<p>Next, sum the matricies and set any NA cells (caused by dividing by zero in the step above) to zero:</p>
+<pre><code class="language-r">magall &lt;- ol96 + ol97 + ol98
+magall[is.na(magall)] &lt;- 0
+</code></pre>
+<p>Note that magall now consists of a percent overlap matrix, but because we&rsquo;ve summed over 3 years, the maximun is now 3 instead of 1.
+Let&rsquo;s compute average club size, by taking the mean across each value in each diagonal:</p>
+<pre><code class="language-r">magdiag &lt;- apply(cbind(diag(g96e), diag(g97e), diag(g98e)), 1, mean )
+</code></pre>
+<p>Finally, we&rsquo;ll generate centrality measures for magall. When we create the igraph object from our matrix, we need to set weighted=T because otherwise igraph dichotomizes edges at 1. This can distort our centrality measures because now edges represent  more than binary connections&ndash;they represent the percent of membership overlap.</p>
+<pre><code class="language-r">magallg &lt;- graph.adjacency(magall, weighted=T)
+# Degree
+V(magallg)$degree &lt;- degree(magallg)
+# Betweenness centrality
+V(magallg)$btwcnt &lt;- betweenness(magallg)
+</code></pre>
+<p>Before we plot this, we should probably filter some of the edges, otherwise our graph will probably be too busy to make sense of visually.  Take a look at the distribution of connection strength by plotting the density of the magall matrix:</p>
+<pre><code class="language-r">plot(density(magall))
+</code></pre>
+<p><img src="/img/densitymagall.jpeg" alt=""></p>
+<p>Nearly all of the edge weights are below 1&ndash;or in other words, the percent overlap for most clubs is less than 1/3. Let&rsquo;s filter at 1, so that an edge will consists of group overlap of more than 1/3 of the group&rsquo;s members in question.</p>
+<pre><code class="language-r">magallgt1 &lt;- magall
+magallgt1[magallgt1&lt;1] &lt;- 0
+magallggt1 &lt;- graph.adjacency(magallgt1, weighted=T)
+# Removes loops:
+magallggt1 &lt;- simplify(magallggt1, remove.multiple=FALSE, remove.loops=TRUE)
+</code></pre>
+<p>Before we do anything else, we&rsquo;ll create a custom layout based on Fruchterman.-Ringold wherein we adjust the coordates by hand using the tkplot gui tool to make sure all of the labels are visible. This is very useful if you want to create a really sharp-looking network visualization for publication.</p>
+<pre><code class="language-r">magallggt1$layout &lt;- layout.fruchterman.reingold(magallggt1)
+V(magallggt1)$label &lt;- V(magallggt1)$name
+tkplot(magallggt1)
+</code></pre>
+<p>Let the plot load, then maximize the window, and select to View -&gt; Fit to Screen so that you get maximum resolution for this large graph. Now hand-place the nodes, making sure no labels overlap:
+<img src="/img/tkplotscreenshot.png" alt=""></p>
+<p>Pay special attention to whether the labels overlap (or might overlap if the font was bigger) along the vertical. Save the layout coordinates to the graph object:</p>
+<pre><code class="language-r">magallggt1$layout &lt;- tkplot.getcoords(1)
+</code></pre>
+<p>We use &ldquo;1&rdquo; here because only if this was the first tkplot object you called. If you called tkplot a few times, use the last plot object. You can tell which object is visible because at the top of the tkplot interface, you&rsquo;ll see something like &ldquo;Graph plot 1&rdquo; or in the case of my screenshot above &ldquo;Graph plot 7&rdquo; (it was the seventh time I called tkplot).</p>
+<pre><code class="language-r"># Set vertex attributes
+V(magallggt1)$label &lt;- V(magallggt1)$name
+V(magallggt1)$label.color &lt;- rgb(0,0,.2,.6)
+V(magallggt1)$size &lt;- 6
+V(magallggt1)$frame.color &lt;- NA
+V(magallggt1)$color &lt;- rgb(0,0,1,.5)
+# Set edge attributes
+E(magallggt1)$arrow.size &lt;- .3
+# Set edge gamma according to edge weight
+egam &lt;- (E(magallggt1)$weight+.1)/max(E(magallggt1)$weight+.1)
+E(magallggt1)$color &lt;- rgb(.5,.5,0,egam)
+</code></pre>
+<p>One thing that we can do with this graph is to set label size as a function of degree, which adds a &ldquo;tag-cloud&rdquo;-like element to the visualization:</p>
+<pre><code class="language-r">V(magallggt1)$label.cex &lt;- V(magallggt1)$degree/(max(V(magallggt1)$degree)/2)+ .3
+#note, unfortunately one must play with the formula above to get the
+#ratio just right
+</code></pre>
+<p>Let&rsquo;s plot the results:</p>
+<pre><code class="language-r">pdf('magallggt1customlayout.pdf')
+plot(magallggt1)
+dev.off()
+</code></pre>
+<p>Note that we used the custom layout, which because we made part of the igraph object magallggt1, we did not need to specify in plot command.
+assets/Here&rsquo;s the 
+<a href="/img/magallggt1custom.pdf">pdf output</a>, and here&rsquo;s what it looks like:</p>
+<p><img src="/img/magallggt1custom.png" alt=""></p>
+<p>This visualization reveals much more information about our network than our cresent-star visualization.</p>
+<h3 id="mobility-markov-and-transition-probabilities">Mobility, Markov, and Transition Probabilities</h3>
+<p>In order to shed light on how people flow through these groups, we&rsquo;ll compute transition probabilities. These transition probabilities are more generally referred to as Markov chains.</p>
+<p>First we&rsquo;ll create a new matrix that multiplies 1996 magnet with 1997 magnet so you see the number of students moving from 1996 membership to 1997 memberships.</p>
+<p>Before we actually do this, we need to do some data munging to make sure that the rows and columns for g96 and g97 are the same. We&rsquo;ll use the match() function for this.</p>
+<pre><code class="language-r">    
+# First, let's get an idea of how many column-names (activities) and row
+# names (student ids) are in common between the two years:
+  
+(cnames = intersect( colnames(g96), colnames(g97) ) )
+(rnames = intersect( row.names(g96), row.names(g97) ) )
+  
+# Great, there are a lot of names in common. Now we
+# need to make sure we are only using the rows
+# and columns of each matrix that contain entries used in
+# both years. We also need to make sure that the columns and
+# rows are in the same order.
+  
+# In order to accomplish this we are going to exploit R's
+# indexing capabilities. We are going to have R &quot;rebuild&quot;
+# each matrix according to the order of rnames and cnames.
+# We'll use the match() function to accomplish this.
+g96matched = g96[ match(rnames, row.names(g96)), match(cnames, colnames(g96)) ]
+g97matched = g97[ match(rnames, row.names(g97)), match(cnames, colnames(g97)) ]
+  
+# We need to do the same thing for the diagonal of the matrix g96e, which is
+# our co-membership/affiliation matrix computed above:
+mag96diagmatched = diag( g96e[ match(cnames, colnames(g96e)), 
+  match(cnames, colnames(g96e)) ] )
+  
+# Now let's check to make sure things worked correctly:
+which(row.names(g96matched) != row.names(g97matched))
+which(colnames(g96matched) != colnames(g97matched))
+</code></pre>
+<p>Now that these are effectively matricies, we can multiply to get the transition probability matrix:</p>
+<pre><code class="language-r">mag96_97 = t(g96matched) %*% g97matched
+</code></pre>
+<p>Let&rsquo;s munge the 97 and 98 data and repeat:</p>
+<pre><code class="language-r">
+cnames = intersect( colnames(g97), colnames(g98) ) 
+rnames = intersect( row.names(g97), row.names(g98) )
+g97matched = g97[ match(rnames, row.names(g97)), match(cnames, colnames(g97)) ]
+g98matched = g98[ match(rnames, row.names(g98)), match(cnames, colnames(g98)) ]
+</code></pre>
+<p>And again for the 97-98 transition:</p>
+<pre><code class="language-r">mag97_98 = t(g97matched) %*% g98matched
+</code></pre>
+<p>Now we need to get the group-level membership matrix diagonal, ordered by the current set of columns.</p>
+<pre><code class="language-r">mag96diagmatched = diag( g96e[ match(cnames, colnames(g96e)), 
+  match(cnames, colnames(g96e)) ] )
+
+mag97diagmatched = diag( g97e[ match(cnames, colnames(g97e)), 
+  match(cnames, colnames(g97e)) ] )
+  
+mag98diagmatched = diag( g98e[ match(cnames, colnames(g98e)), 
+  match(cnames, colnames(g98e)) ] )
+</code></pre>
+<p>And finally we can create the transition probability matrix! Divide magmob96_97 by mag96diagmatched in to get the transition probability matrix (Markov chain):</p>
+<pre><code class="language-r">magmob96_97 = mag96_97/mag96diagmatched 
+magmob97_98 = mag97_98/mag97diagmatched
+</code></pre>
+<p>Now add the matrices and divide by 2:</p>
+<pre><code class="language-r">mobility_all &lt;- (magmob96_97 + magmob97_98)/2
+
+</code></pre>
+<p>Now plot as with the event-overlap graphs!</p>
+
+    </div>
+
+    
+
+
+
+
+
+
+
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=https://solomonmg.github.io/post/working-with-bipartite-affiliation-network-data-in-r/&amp;text=Working%20with%20Bipartite/Affiliation%20Network%20Data%20in%20R" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https://solomonmg.github.io/post/working-with-bipartite-affiliation-network-data-in-r/&amp;t=Working%20with%20Bipartite/Affiliation%20Network%20Data%20in%20R" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=Working%20with%20Bipartite/Affiliation%20Network%20Data%20in%20R&amp;body=https://solomonmg.github.io/post/working-with-bipartite-affiliation-network-data-in-r/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=https://solomonmg.github.io/post/working-with-bipartite-affiliation-network-data-in-r/&amp;title=Working%20with%20Bipartite/Affiliation%20Network%20Data%20in%20R" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://web.whatsapp.com/send?text=Working%20with%20Bipartite/Affiliation%20Network%20Data%20in%20R%20https://solomonmg.github.io/post/working-with-bipartite-affiliation-network-data-in-r/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=https://solomonmg.github.io/post/working-with-bipartite-affiliation-network-data-in-r/&amp;title=Working%20with%20Bipartite/Affiliation%20Network%20Data%20in%20R" target="_blank" rel="noopener" class="share-btn-weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+    
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  </div>
+</article>
+
+      
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js" integrity="sha256-eOgo0OtLL4cdq7RdwRUiGKLX9XsIJ7nGhWEKbohmVAQ=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/r.min.js"></script>
+        
+      
+
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.js" integrity="sha256-EErZamuLefUnbMBQbsEqu1USa+btR2oIlCpBJbyD4/g=" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script>const code_highlighting = true;</script>
+    
+
+    
+    
+    <script>const isSiteThemeDark = false;</script>
+    
+
+    
+    
+    
+    
+    
+    
+    <script>
+      const search_config = {"indexURI":"/index.json","minLength":1,"threshold":0.3};
+      const i18n = {"no_results":"No results found","placeholder":"Search...","results":"results found"};
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.37431be2d92d7fb0160054761ab79602.js"></script>
+
+    
+
+
+
+
+
+
+  
+  
+  <div class="container">
+    <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    ©2020 &middot; 
+
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+    <span class="float-right" aria-hidden="true">
+      <a href="#" class="back-to-top">
+        <span class="button_icon">
+          <i class="fas fa-chevron-up fa-2x"></i>
+        </span>
+      </a>
+    </span>
+    
+  </p>
+</footer>
+
+  </div>
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

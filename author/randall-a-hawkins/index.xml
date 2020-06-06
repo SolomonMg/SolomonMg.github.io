@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Randall A Hawkins | Sol Messing</title>
+    <link>https://solomonmg.github.io/author/randall-a-hawkins/</link>
+      <atom:link href="https://solomonmg.github.io/author/randall-a-hawkins/index.xml" rel="self" type="application/rss+xml" />
+    <description>Randall A Hawkins</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>©2020</copyright><lastBuildDate>Sun, 01 Jan 2012 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://solomonmg.github.io/images/icon_huedd5de82286bc1d0a1509b535f624c76_25974_512x512_fill_lanczos_center_2.png</url>
+      <title>Randall A Hawkins</title>
+      <link>https://solomonmg.github.io/author/randall-a-hawkins/</link>
+    </image>
+    
+    <item>
+      <title>Differentiation of Normal Thymus from Anterior Mediastinal Lymphoma and Lymphoma Recurrence at Pediatric PET/CT</title>
+      <link>https://solomonmg.github.io/publication/gawande-2012-differentiation/</link>
+      <pubDate>Sun, 01 Jan 2012 00:00:00 +0000</pubDate>
+      <guid>https://solomonmg.github.io/publication/gawande-2012-differentiation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>FDG PET/CT for the Evaluation of Normal Thymus, Lymphoma Recurrence, and Mediastinal Lymphoma in Pediatric Patients Response</title>
+      <link>https://solomonmg.github.io/publication/gawande-2012-fdg/</link>
+      <pubDate>Sun, 01 Jan 2012 00:00:00 +0000</pubDate>
+      <guid>https://solomonmg.github.io/publication/gawande-2012-fdg/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

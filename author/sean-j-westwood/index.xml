@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sean J Westwood | Sol Messing</title>
+    <link>https://solomonmg.github.io/author/sean-j-westwood/</link>
+      <atom:link href="https://solomonmg.github.io/author/sean-j-westwood/index.xml" rel="self" type="application/rss+xml" />
+    <description>Sean J Westwood</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>©2020</copyright><lastBuildDate>Sun, 01 Jan 2017 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://solomonmg.github.io/images/icon_huedd5de82286bc1d0a1509b535f624c76_25974_512x512_fill_lanczos_center_2.png</url>
+      <title>Sean J Westwood</title>
+      <link>https://solomonmg.github.io/author/sean-j-westwood/</link>
+    </image>
+    
+    <item>
+      <title>Estimating heterogeneous treatment effects and the effects of heterogeneous treatments with ensemble methods</title>
+      <link>https://solomonmg.github.io/publication/grimmer-2017-estimating/</link>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
+      <guid>https://solomonmg.github.io/publication/grimmer-2017-estimating/</guid>
+      <description>&lt;pre&gt;&lt;code&gt;- [Replication materials](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/BQMLQW).
+- [Software implementation](https://github.com/SolomonMg/HetSL) (under development)
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Selective exposure in the age of social media: Endorsements trump partisan source affiliation when selecting news online</title>
+      <link>https://solomonmg.github.io/publication/messing-2014-selective/</link>
+      <pubDate>Wed, 01 Jan 2014 00:00:00 +0000</pubDate>
+      <guid>https://solomonmg.github.io/publication/messing-2014-selective/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
