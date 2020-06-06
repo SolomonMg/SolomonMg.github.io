@@ -5,12 +5,1200 @@
     <link>https://solmg.netlify.app/post/</link>
       <atom:link href="https://solmg.netlify.app/post/index.xml" rel="self" type="application/rss+xml" />
     <description>Posts</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>©2020</copyright><lastBuildDate>Sun, 04 Mar 2012 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>©2020</copyright><lastBuildDate>Wed, 20 Nov 2019 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://solmg.netlify.app/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <url>https://solmg.netlify.app/images/icon_huedd5de82286bc1d0a1509b535f624c76_25974_512x512_fill_lanczos_center_2.png</url>
       <title>Posts</title>
       <link>https://solmg.netlify.app/post/</link>
     </image>
+    
+    <item>
+      <title>Why you should care about privacy policy</title>
+      <link>https://solmg.netlify.app/post/why-you-a-scientist-should-care-about-privacy-policy/</link>
+      <pubDate>Wed, 20 Nov 2019 00:00:00 +0000</pubDate>
+      <guid>https://solmg.netlify.app/post/why-you-a-scientist-should-care-about-privacy-policy/</guid>
+      <description>&lt;p&gt;In 2011, Sean Westwood and I ran a (IRB-approved) study using Facebook&amp;rsquo;s graph API to analyze participants&amp;rsquo; entire ego network on the fly, and then randomly assign strong v weak ties to ostensibly endorse media content appearing on their news feed (stimulus). We then re-rendered participants’ News Feeds. Those days are over.&lt;/p&gt;
+&lt;p&gt;The API was meant for developers to build on top of the data underlying Facebook&amp;rsquo;s platform, what it calls &amp;ldquo;the social graph,&amp;rdquo; but approvals were friendly to researchers. The scope of the data was startling and thankfully Sean had the foresight to delete data beyond what was necessary for analysis and publication.&lt;/p&gt;
+&lt;p&gt;Times have changed - OPM, MyLife, Equifax, Cambridge Analytica. Privacy issues are difficult to anticipate and secure, especially for complex and/or relational data. And Cambridge Analytica showed the world that APIs are open to nefarious schemes and basic research alike.&lt;/p&gt;
+&lt;p&gt;Data privacy is in the air in newsrooms and capitals across the world. As privacy advocates devise strategies and work to protect people from identity theft, scams, information &amp;amp; other abuse, often social scientists advocating for research aren&amp;rsquo;t at the table.&lt;/p&gt;
+&lt;p&gt;In the wake of these cross currents, privacy legislation and regulation present challenges for research communities. No company can shrug off a $5 bn fine for being too permissive w data&amp;mdash;data collected via APIs in the name of social science research.&lt;/p&gt;
+&lt;p&gt;What&amp;rsquo;s more, the GDPR is vague on whether meaningful, socially beneficial independent social science research maps to the generally prohibited processing of &amp;ldquo;3rd party sensitive category data collected without consent.&amp;rdquo; &lt;a href=&#34;https://iapp.org/news/a/how-gdpr-changes-the-rules-for-research/&#34;&gt;https://iapp.org/news/a/how-gdpr-changes-the-rules-for-research/&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Some have intupretated the GDPR&amp;rsquo;s research exemption as carving out a protected legal space for this kind of work &lt;em&gt;only&lt;/em&gt; if originally collected for research purposes. Yet the data everyone cares about was collected for business. What&amp;rsquo;s left? Case-by-case opt-in&amp;ndash;severe confounds, overhead, paperwork, etc.&lt;/p&gt;
+&lt;p&gt;Another complication is that certain EU member states have additional requirements such as consent and/or anonymization at the level of differential privacy. See pp. 29-32 of this report &lt;a href=&#34;https://accessnow.org/cms/assets/uploads/2019/06/One-Year-Under-GDPR.pdf&#34;&gt;https://accessnow.org/cms/assets/uploads/2019/06/One-Year-Under-GDPR.pdf&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Lawyers tend to be quite risk averse under this ambiguity and until firm guidelines are developed, it&amp;rsquo;s probably unrealistic to expect Silicon Valley to open up much data to researchers. That&amp;rsquo;s especially true after Facebook&amp;rsquo;s $5bn fine and the unrelenting stream of techlash criticism often related to privacy.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>How to break regression</title>
+      <link>https://solmg.netlify.app/post/how-to-break-regression/</link>
+      <pubDate>Wed, 13 Jun 2018 00:00:00 +0000</pubDate>
+      <guid>https://solmg.netlify.app/post/how-to-break-regression/</guid>
+      <description>&lt;p&gt;Regression models are a cornerstone of modern social science. They’re at the heart of efforts to estimate causal relationships between variables in a multivariate environment and are the basic building blocks of many machine learning models. Yet social scientists can run into a lot of situations where regression models break.&lt;/p&gt;
+&lt;p&gt;Famed social psychologist Richard Nisbett 
+&lt;a href=&#34;https://www.edge.org/conversation/richard_nisbett-the-crusade-against-multiple-regression-analysis&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;recently argued&lt;/a&gt; that regression analysis is so misused and misunderstood that analyses based on multiple regression “are often somewhere between meaningless and quite damaging.” (He was mainly talking about cases in which researchers publish correlational results that are covered in the media as causal statements about the world.)&lt;/p&gt;
+&lt;p&gt;Below, I’ll walk through some of the potential pitfalls you might encounter when you fire up your favorite 
+&lt;a href=&#34;https://seanjtaylor.com/post/39573264781/the-statistics-software-signal&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;statistical software&lt;/a&gt; package and run regressions. Specifically, I’ll be using simulation in R as an educational tool to help you better understand the ways in which regressions can break.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Using simulations to unpack regression&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The idea of using R simulations to help understand regression models was inspired by Ben Ogorek’s 
+&lt;a href=&#34;http://anythingbutrbitrary.blogspot.com/2016/01/how-to-create-confounders-with.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;post&lt;/a&gt; on regression confounders and collider bias.&lt;/p&gt;
+&lt;p&gt;The great thing about using simulation in this way is that you control the world that generates your data. The code I’ll introduce below represents the true &lt;em&gt;data-generating process&lt;/em&gt;,since I’m using R’s random number generators to simulate the data. In real life, of course, we only have the data we observe, and we don’t really know how the data-generating process works unless we have a solid theory (like Newtonian physics or evolution) where the system of relevant variables and causal relationships is well understood and to which there is really no analogous phenomenon in social science.&lt;/p&gt;
+&lt;p&gt;What I’ll do here is create a dataset based on two random standard normal variables by simulating them using the &lt;em&gt;rnorm()&lt;/em&gt; function, which draws random values from a normal distribution with mean 0 and standard deviation 1, unless you specify otherwise. I’ll create a functional relationship between y and x such that a 1 unit increase in x will be associated with a .4 unit increase in y.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-R&#34;&gt;# make the code reproducible by setting a random number seed
+set.seed(100)
+
+# When everything works:
+N &amp;lt;- 1000
+x &amp;lt;- rnorm(N)
+y &amp;lt;- .4 * x + rnorm(N)
+hist(x)
+hist(y)
+
+# Now estimate our model:
+summary(lm(y ~ x))
+
+Call:
+lm(formula = y ~ x)
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-3.0348 -0.7013  0.0085  0.6212  3.1688 
+Coefficients:
+            		Estimate Std. Error t value Pr(&amp;gt;|t|)    
+(Intercept) 	0.003921   0.031039   0.126    0.899    
+x           	0.413415   0.030129  13.722   &amp;lt;2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Residual standard error: 0.9814 on 998 degrees of freedom
+Multiple R-squared:  0.1587,	Adjusted R-squared:  0.1579 
+F-statistic: 188.3 on 1 and 998 DF,  p-value: &amp;lt; 2.2e-16
+
+# Plot it
+library(ggplot2)
+qplot(x, y) +
+  geom_smooth(method=&#39;lm&#39;) +
+  theme_bw() +
+  ggtitle(&amp;quot;The Perfect Regression&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Notice that the model estimates the functional relationship between x and y that I simulated quite well. The plot looks like this:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn-images-1.medium.com/max/1600/1*0zIR7Mtuak5DamPOgEiHog.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;What about omitted variables? Our machinery actually still works if there is another factor causing y, as long as it is &lt;em&gt;uncorrelated&lt;/em&gt; with x.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;The dreaded omitted variable bias&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Omitted variable bias (OVB) is much feared, and judging by the top internet search results, not well understood. Some top sources say it occurs when “
+&lt;a href=&#34;http://carecon.org.uk/UWEcourse/OVbias.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;an important&lt;/a&gt;” variable is missing or when a variable that “
+&lt;a href=&#34;https://en.wikipedia.org/wiki/Omitted-variable_bias&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;is correlated&lt;/a&gt;” with both x and y is missing. I even found a university 
+&lt;a href=&#34;http://www3.wabash.edu/econometrics/EconometricsBook/chap18.htm&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;econometrics&lt;/a&gt; course that defined OVB this way.&lt;/p&gt;
+&lt;p&gt;But neither of those definitions are quite right. OVB occurs when a variable that &lt;em&gt;causes&lt;/em&gt; y is missing from the model (and is correlated with x). Let’s call that variable w. Because w is in play when we consider the causal relationship between x and y, it’s often referred to as “endogenous” or a “confounding variable.”&lt;/p&gt;
+&lt;p&gt;The example below first demonstrates that w, our confounding variable, will bias our results if we fail to include it in our model. The next two examples are essentially a re-telling of the 
+&lt;a href=&#34;http://anythingbutrbitrary.blogspot.com/2016/01/how-to-create-confounders-with.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;post I mentioned above&lt;/a&gt; on collider bias, but emphasizing slightly different points.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-R&#34;&gt;w &amp;lt;- rnorm(N)
+x &amp;lt;- .5 * w + rnorm(N)
+y &amp;lt;- .4 * x + .3 * w + rnorm(N)
+
+m1 &amp;lt;- lm(y ~ x)
+summary (m1) # Omitted variable bias
+
+Call:
+lm(formula = y ~ x)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-3.2190 -0.7025  0.0314  0.7120  3.1158 
+
+Coefficients:
+            Estimate Std. Error t value Pr(&amp;gt;|t|)    
+(Intercept)  0.01126    0.03310    0.34    0.734    
+x            0.50179    0.03049   16.46   &amp;lt;2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 1.046 on 998 degrees of freedom
+Multiple R-squared:  0.2135,	Adjusted R-squared:  0.2127 
+F-statistic: 270.9 on 1 and 998 DF,  p-value: &amp;lt; 2.2e-16
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;There it is: classic omitted variable bias. We only observed x, and the influence of the omitted variable w was attributed to x in our model. If you re-rerun the regression with w in the model, you no longer get biased estimates.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-R&#34;&gt;m2 &amp;lt;- lm(y ~ x + w)
+summary (m2) # No omitted variable bias after conditioning on w
+
+Call:
+lm(formula = y ~ x + w)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-3.2748 -0.6632 -0.0001  0.6933  2.9664 
+
+Coefficients:
+            Estimate Std. Error t value Pr(&amp;gt;|t|)    
+(Intercept)  0.02841    0.03141   0.905    0.366    
+x            0.40627    0.03132  12.973   &amp;lt;2e-16 ***
+w            0.32344    0.03439   9.405   &amp;lt;2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.9927 on 997 degrees of freedom
+Multiple R-squared:  0.3024,	Adjusted R-squared:  0.301 
+F-statistic: 216.1 on 2 and 997 DF,  p-value: &amp;lt; 2.2e-16
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Note that the regression errors, also known as residuals, are correlated with w:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-R&#34;&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now, recall above that I wrote that it’s wrong to say that OVB occurs when our omitted variable is correlated with both x and y. And yet w, x and w and y are all correlated in this first example:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-R&#34;&gt;cor(w,m1$residuals)
+[1] 0.2597859
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;So why can’t we just say that OVB occurs when our omitted variable is correlated with both x and y? As the next example will show, correlation isn’t enough — w needs to &lt;em&gt;cause&lt;/em&gt; both x and y. We can easily imagine a case in which we don’t have causality but we still see this kind of correlation — when x and y both cause w.&lt;/p&gt;
+&lt;p&gt;Let’s make this a little more concrete. Suppose we care about the effect of news media consumption (x) on voter turnout (y). One factor that some researchers think may cause both news media consumption and turnout is political interest (w). If we only measure media consumption and voter turnout, political interest is likely to confound our estimates.&lt;/p&gt;
+&lt;p&gt;But another school of thought from social psychology — along the lines of self-perception theory and 
+&lt;a href=&#34;https://en.wikipedia.org/wiki/Cognitive_dissonance&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;cognitive dissonance&lt;/a&gt; — suggests that the causality could be reversed: Voting behavior might be mostly determined by other factors, and casting a ballot might prompt us to be &lt;em&gt;more&lt;/em&gt; interested in political developments in the future. Similarly, watching the news might prompt us to become &lt;em&gt;more&lt;/em&gt; interested in politics. Let’s suppose that second school of thought is right. If so, our simulated data will look like this:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-R&#34;&gt;media_consumption_x &amp;lt;- rnorm(N)
+voter_turnout_y &amp;lt;- .1 * media_consumption_x + rnorm(N)
+
+# Political interest increases after consuming media and participating, and, 
+# in this hypothetical world, does *not* increase media consuption or participation
+political_interest_w &amp;lt;- 1.2 * media_consumption_x + .6 * voter_turnout_y + rnorm(N)
+
+cormat &amp;lt;- cor(as.matrix(data.frame(media_consumption_x, voter_turnout_y, political_interest_w)))
+round(cormat, 2)
+
+                     media_consumption_x voter_turnout_y political_interest_w
+media_consumption_x                 1.00            0.11                 0.70
+voter_turnout_y                     0.11            1.00                 0.46
+political_interest_w                0.70            0.46                 1.00
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;As you can see, all factors are again correlated with each other. But this time, if we &lt;em&gt;only&lt;/em&gt; include x (media consumption) and y (turnout) in the equation, we get the correct estimate:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-R&#34;&gt;summary(lm(voter_turnout_y ~ media_consumption_x))
+
+Call:
+lm(formula = voter_turnout_y ~ media_consumption_x)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-2.8460 -0.6972 -0.0076  0.6702  3.3925 
+
+Coefficients:
+                    Estimate Std. Error t value Pr(&amp;gt;|t|)    
+(Intercept)         -0.01202    0.03217  -0.374 0.708839    
+media_consumption_x  0.11719    0.03321   3.529 0.000436 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 1.014 on 998 degrees of freedom
+Multiple R-squared:  0.01233,	Adjusted R-squared:  0.01134 
+F-statistic: 12.46 on 1 and 998 DF,  p-value: 0.0004359
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;What makes defining omitted variable bias based on correlation so dangerous is that if we now include w (political interest), we will get a different kind of bias — what’s called 
+&lt;a href=&#34;https://en.wikipedia.org/wiki/Collider_%28epidemiology%29&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;collider bias&lt;/a&gt; or 
+&lt;a href=&#34;https://www.annualreviews.org/doi/10.1146/annurev-soc-071913-043455&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;endogenous selection bias&lt;/a&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-R&#34;&gt;summary(lm(voter_turnout_y ~ media_consumption_x + political_interest_w))
+
+Call:
+lm(formula = voter_turnout_y ~ media_consumption_x + political_interest_w)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-2.1569 -0.5981 -0.0129  0.5701  2.8356 
+
+Coefficients:
+                      Estimate Std. Error t value Pr(&amp;gt;|t|)    
+(Intercept)           0.003155   0.027098   0.116    0.907    
+media_consumption_x  -0.437084   0.039102 -11.178   &amp;lt;2e-16 ***
+political_interest_w  0.444571   0.021928  20.274   &amp;lt;2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.854 on 997 degrees of freedom
+Multiple R-squared:  0.3007,	Adjusted R-squared:  0.2993 
+F-statistic: 214.3 on 2 and 997 DF,  p-value: &amp;lt; 2.2e-16
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Simpson’s paradox&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Simpson’s paradox often occurs in social science (and medicine, too) when you pool data instead of conditioning it on group membership (i.e., adding it as a factor in your regression model).&lt;/p&gt;
+&lt;p&gt;Suppose that, all other things being equal, consuming media causes a slight shift in policy preferences toward the left. But, on average, Republicans consume more news than non-Republicans. And we know that generally Republicans have much more right-leaning preferences.&lt;/p&gt;
+&lt;p&gt;If we just measure media consumption and policy preferences without including Republicans in the model, we’ll actually estimate that the effect goes in the direction &lt;em&gt;opposite&lt;/em&gt; of the true causal effect.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-R&#34;&gt;N &amp;lt;- 1000
+
+# Let&#39;s say that 40% of people in this population are Republicans
+republican &amp;lt;- rbinom(N, 1, .4)
+
+# And they consume more media
+media_consumption &amp;lt;- .75 * republican + rnorm(N)
+
+# Consuming more media causes a slight leftward shift in policy
+# preferences, and Republicans have more right-leaning preferences
+policy_prefs &amp;lt;- -.2 * media_consumption + 2 * republican + rnorm(N)
+
+# for easier plotting later
+df &amp;lt;- data.frame(media_consumption, policy_prefs, republican)
+df$republican = factor(c(&amp;quot;non-republican&amp;quot;, &amp;quot;republican&amp;quot;)[df$republican + 1])
+
+# If we don&#39;t condition on being Republican, we&#39;ll actually estimate
+# that the effect goes in the *opposite* direction
+summary(lm(policy_prefs ~ media_consumption))
+
+
+Call:
+lm(formula = policy_prefs ~ media_consumption)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-3.6108 -0.9559 -0.0198  0.9257  3.9537 
+
+Coefficients:
+                  Estimate Std. Error t value Pr(&amp;gt;|t|)    
+(Intercept)        0.68923    0.04323   15.94  &amp;lt; 2e-16 ***
+media_consumption  0.15269    0.03966    3.85 0.000126 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 1.317 on 998 degrees of freedom
+Multiple R-squared:  0.01463,	Adjusted R-squared:  0.01365 
+F-statistic: 14.82 on 1 and 998 DF,  p-value: 0.0001257
+
+# Naive plot
+qplot(media_consumption, policy_prefs) +
+  geom_smooth(method=&#39;lm&#39;) +
+  theme_bw() +
+  ggtitle(&amp;quot;Naive estimate (Simpson&#39;s Paradox)&amp;quot;) 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The estimate goes in the opposite direction of the true effect! Here’s what the plot looks like:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn-images-1.medium.com/max/1600/1*2gxiWJN7ElkYAO-wuvakzA.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;To resolve this paradox, we need to add a factor in the model that indicates whether or not a respondent is a Republican. Adding that factor lets us estimate &lt;em&gt;separate&lt;/em&gt; slopes for Republicans and non-Republicans. Note that this is &lt;em&gt;not&lt;/em&gt; like estimating an interaction term, where two explanatory variables are multiplied together. It’s not that the slopes are &lt;em&gt;different&lt;/em&gt;, we just need to estimate separate ones for Republicans and non-Republicans.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-R&#34;&gt;# Condition on being a Republican to get the right estimates
+summary(lm(policy_prefs ~ media_consumption + republican))
+
+Call:
+lm(formula = policy_prefs ~ media_consumption + republican)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-3.5518 -0.6678 -0.0186  0.6562  3.3009 
+
+Coefficients:
+                  Estimate Std. Error t value Pr(&amp;gt;|t|)    
+(Intercept)        0.05335    0.03904   1.366    0.172    
+media_consumption -0.13615    0.03111  -4.376 1.34e-05 ***
+republican         1.93049    0.06758  28.565  &amp;lt; 2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.9774 on 997 degrees of freedom
+Multiple R-squared:  0.4581,	Adjusted R-squared:  0.457 
+F-statistic: 421.4 on 2 and 997 DF,  p-value: &amp;lt; 2.2e-16
+
+# Conditioning on being Republican
+qplot(media_consumption, policy_prefs, data=df, colour = republican) +
+  scale_color_manual(values = c(&amp;quot;blue&amp;quot;,&amp;quot;red&amp;quot;)) +
+  geom_smooth(method=&#39;lm&#39;) +
+  theme_bw() +
+  ggtitle(&amp;quot;Conditioning on being a Republican (Simpson&#39;s Paradox)&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Here’s what the plot looks like:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn-images-1.medium.com/max/1600/1*rwNGDFcsSSMiGsJoc6ZxsQ.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Correlated errors&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Another cardinal sin — and one that we should worry a lot about because it often arises from social desirability bias in survey responses — is the phenomenon of correlated errors. This example is inspired by 
+&lt;a href=&#34;https://www.nowpublishers.com/article/Details/QJPS-6005&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Vavreck (2007).&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Here, self-reported turnout and media consumption are caused by a combination of social desirability bias and true turnout and true consumption, respectively:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-R&#34;&gt;N &amp;lt;- 1000
+
+# The &amp;quot;Truth&amp;quot;
+true_media_consumption &amp;lt;- rnorm(N)
+true_vote &amp;lt;- .1 * media_consumption + rnorm(N)
+
+# social desirability bias
+social_desirability &amp;lt;- rnorm(N)
+#what we actually observe from self reports:
+self_report_media_consumption &amp;lt;- true_media_consumption + social_desirability
+self_report_vote &amp;lt;- true_vote + social_desirability
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Let’s compare the estimated effect sizes of the self-reported data and the “true” data:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-R&#34;&gt;# Self reports
+summary(lm(self_report_vote ~ self_report_media_consumption))
+
+Call:
+lm(formula = self_report_vote ~ self_report_media_consumption)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-3.9604 -0.7766  0.0142  0.8465  4.1811 
+
+Coefficients:
+                              Estimate Std. Error t value Pr(&amp;gt;|t|)    
+(Intercept)                    0.02020    0.03951   0.511    0.609    
+self_report_media_consumption  0.54605    0.02716  20.102   &amp;lt;2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 1.248 on 998 degrees of freedom
+Multiple R-squared:  0.2882,	Adjusted R-squared:  0.2875 
+F-statistic: 404.1 on 1 and 998 DF,  p-value: &amp;lt; 2.2e-16
+
+# &amp;quot;Truth&amp;quot;
+summary(lm(true_vote ~ true_media_consumption))
+
+Call:
+lm(formula = true_vote ~ true_media_consumption)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-3.5814 -0.6677 -0.0077  0.6829  3.4799 
+
+Coefficients:
+                       Estimate Std. Error t value Pr(&amp;gt;|t|)
+(Intercept)             0.01372    0.03217   0.426    0.670
+true_media_consumption  0.01313    0.03245   0.404    0.686
+
+Residual standard error: 1.017 on 998 degrees of freedom
+Multiple R-squared:  0.0001639,	Adjusted R-squared:  -0.000838 
+F-statistic: 0.1636 on 1 and 998 DF,  p-value: 0.686
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The self-reported data is biased toward over-estimating the effect size, a very dangerous problem. How could we fix this? Well, one way is to actually measure social desirability and include it in the model:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-R&#34;&gt;summary(lm(self_report_vote ~ self_report_media_consumption + social_desirability))
+
+Call:
+lm(formula = self_report_vote ~ self_report_media_consumption + 
+    social_desirability)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-3.6042 -0.6774 -0.0127  0.6899  3.4470 
+
+Coefficients:
+                              Estimate Std. Error t value Pr(&amp;gt;|t|)    
+(Intercept)                    0.01208    0.03220   0.375    0.708    
+self_report_media_consumption  0.01220    0.03246   0.376    0.707    
+social_desirability            1.02245    0.04547  22.487   &amp;lt;2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 1.017 on 997 degrees of freedom
+Multiple R-squared:  0.5277,	Adjusted R-squared:  0.5268 
+F-statistic:   557 on 2 and 997 DF,  p-value: &amp;lt; 2.2e-16
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Note that this while most people think about social desirability as being a problem related to measurement error, it is essentially the same problem as omitted variable bias, as described above.&lt;/p&gt;
+&lt;p&gt;It’s important to remember that omitted variable bias and correlated errors are just two potential problems with regression analysis. Regression models are also not immune to issues associated with low levels of 
+&lt;a href=&#34;https://en.wikipedia.org/wiki/Power_%28statistics%29&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;statistical power&lt;/a&gt;, the failure to account for the influence of extreme values, and 
+&lt;a href=&#34;https://en.wikipedia.org/wiki/Heteroscedasticity&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;heteroskedasticity&lt;/a&gt;, among others. But by simulating the data-generating process, researchers can get a good sense of some of the more common ways in which statistical models might depart from reality.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Why Election Forecasting Matters</title>
+      <link>https://solmg.netlify.app/post/response-to-fivethirtyeights-podcast-about-our-paper-projecting-confidence/</link>
+      <pubDate>Fri, 16 Feb 2018 00:00:00 +0000</pubDate>
+      <guid>https://solmg.netlify.app/post/response-to-fivethirtyeights-podcast-about-our-paper-projecting-confidence/</guid>
+      <description>&lt;p&gt;Do you remember the night of Nov 8, 2016? I was glued to election coverage and obsessively checking probabilistic forecasts, wondering whether Clinton might do &lt;em&gt;so well&lt;/em&gt; that she’d win in places like my home state of Arizona. Although FiveThirtyEight had Clinton&amp;rsquo;s chances at beating Trump at around 70%, most other forecasters had her at around 90%.&lt;/p&gt;
+&lt;p&gt;When she lost, 
+&lt;a href=&#34;https://www.nytimes.com/2016/11/10/us/politics/donald-trump-election-reaction.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;many on both sides of the aisle&lt;/a&gt; were shocked. My co-authors and I wondered if America&amp;rsquo;s seeming confidence in a Clinton victory wasn’t driven in part by increasing coverage of probabilistic forecasts. And, if a Clinton victory looked inevitable, what did that do to turnout?&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://solmg.netlify.app/img/forecast_google_news.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;We weren&amp;rsquo;t alone. Clinton herself was quoted in 
+&lt;a href=&#34;http://nymag.com/daily/intelligencer/2017/05/hillary-clinton-life-after-election.html?mid=nymag_press&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;New York Magazine&lt;/a&gt; after the election:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;I had people literally seeking absolution&amp;hellip; ‘&lt;em&gt;I’m so sorry I didn’t vote. I didn’t think you needed me.&lt;/em&gt;’ I don’t know how we’ll ever calculate how many people thought it was in the bag, because the percentages kept being thrown at people — ‘&lt;em&gt;Oh, she has an 88 percent chance to win!&lt;/em&gt;’&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Enter our recent 
+&lt;a href=&#34;http://www.pewresearch.org/fact-tank/2018/02/06/use-of-election-forecasts-in-campaign-coverage-can-confuse-voters-and-may-lower-turnout/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;blog post&lt;/a&gt; and 
+&lt;a href=&#34;https://papers.ssrn.com/abstract=3117054&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;paper released on SSRN&lt;/a&gt;, “Projecting confidence: How the probabilistic horse race confuses and de-mobilizes the public,” by Sean Westwood, Solomon Messing, and Yphtach Lelkes. While our work cannot definitively say whether probabilistic forecasts played a decisive role in the 2016 election, it does indeed show that compared to more conventional vote share projections, probabilistic forecasts can confuse people, can give people more confidence that the candidate depicted as being ahead will win, may decrease turnout, and that liberals in the U.S. are more likely to encounter them. We appreciate the media attention to this work, including coverage by the 
+&lt;a href=&#34;https://www.washingtonpost.com/news/politics/wp/2018/02/06/clintons-achilles-heel-in-2016-may-have-been-overconfidence/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Washington Post&lt;/a&gt;, 
+&lt;a href=&#34;http://nymag.com/daily/intelligencer/2018/02/americans-dont-understand-election-probabilities.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;New York Magazine&lt;/a&gt;, and the 
+&lt;a href=&#34;https://politicalwire.com/2018/02/06/election-forecasts-lower-voter-turnout/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Political Wire&lt;/a&gt;. What&amp;rsquo;s more, FiveThirtyEight devoted much of their Feb. 12 
+&lt;a href=&#34;https://fivethirtyeight.com/features/politics-podcast-whats-so-wrong-with-nancy-pelosi/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Politics Podcast&lt;/a&gt; to a spirited, and at points critical discussion of our work. We are open to criticism and will respond to some of the questions raised in this post. Below, we’ll show that the evidence in our study and in other research is &lt;em&gt;not&lt;/em&gt; inconsistent with our headline, as the hosts suggest—we&amp;rsquo;ll detail the evidence that probabilistic forecasts &lt;em&gt;confuse&lt;/em&gt; people, irrespective of their technical accuracy. We’ll also discuss where we agree with the podcast hosts. Furthermore, we&amp;rsquo;ll discuss a few topics which, judging from the hosts discussion, may not have come through clearly enough in our paper. We&amp;rsquo;ll reiterate what this work contributes to social science—how the paper adds to our understanding of how people think about probabilistic forecasts and how they may decrease voting, particularly for the leading candidate&amp;rsquo;s supporters and among liberals in the U.S. We’ll then walk readers through the way we mapped vote share projections to probabilities in the study. Finally we’ll discuss why this work matters, and conclude by pointing out future research we’d like to see in this area.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;What’s new here?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The research contains a number findings that are new to social science:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Presenting forecasted win-probabilities gives potential voters the impression that one candidate will win more decisively, compared with vote share projections (Study 1).&lt;/li&gt;
+&lt;li&gt;Higher win probabilities, but &lt;em&gt;not&lt;/em&gt; vote share estimates, &lt;em&gt;decrease voting&lt;/em&gt; in the face of the trade-offs embedded in our election simulation (Study 2). This helps confirm the findings in Study 1 and adds to the evidence from past research that people vote at lower rates when they perceive an election to be uncompetitive.&lt;/li&gt;
+&lt;li&gt;In 2016, probabilistic forecasts were covered more extensively than in the past and tended to be covered by outlets with more liberal audiences.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Where we agree&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;If what you care about is conveying an accurate sense of whether one candidate will win, probabilistic forecasts do this slightly better than vote share. And, they seem to give people an edge on accuracy when interpreting the vote share if your candidate is behind. Of course, people can be confused and still end up being accurate, as we&amp;rsquo;ll discuss below.&lt;/p&gt;
+&lt;p&gt;We also agree that people often do not accurately judge the likelihood of victory after seeing a vote share projection. That makes sense because, as the study shows, people appear to largely ignore the margin of error, which they’d need to map between vote share estimates and win probabilities.&lt;/p&gt;
+&lt;p&gt;We also agree that a lot of past work shows that people stay home when they think an election isn’t close. What we’re adding to that body of work is evidence that compared with vote share projections, probabilistic forecasts give people the impression that one candidate will win more decisively, and may thus &lt;em&gt;more powerfully&lt;/em&gt; affect turnout.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Does the evidence in our study contradict our headline?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Our headline isn’t about accuracy, it’s about &lt;em&gt;confusion&lt;/em&gt;. And the evidence from this research and past work taken as a whole suggests that probabilistic forecasts confuse people — something that came up at the end of segment — even if the result sometimes is technically higher accuracy.&lt;/p&gt;
+&lt;p&gt;1. People in the study who saw only probabilistic forecasts were more likely to confuse probability and vote share. After seeing probabilistic forecasts, 8.6% of respondents mixed up vote share and probability, while only 0.6% of respondents did so after seeing vote share projections. We’re defining “mixed-up” as reporting the win-probability we provided as the vote share and vice-versa.&lt;/p&gt;
+&lt;p&gt;2. Figure 2B (Study 1) shows that people get their candidate’s likelihood of winning very wrong, even when we explicitly told them the probability a candidate will win. It’s true that they got slightly closer with a probability forecast, but they are still far off.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://solmg.netlify.app/img/likelihood_loess.png&#34; alt=&#34;normal&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Why might this be? A lot of past research and evidence suggests that people have trouble understanding probabilities, as noted at the end of the podcast. People have a tendency to think about 
+&lt;a href=&#34;https://chicagounbound.uchicago.edu/cgi/viewcontent.cgi?article=1384&amp;amp;context=law_and_economics&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;probabilities in subjective terms&lt;/a&gt;, so they have trouble understanding 
+&lt;a href=&#34;https://www.ncbi.nlm.nih.gov/pubmed/26161749&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;medical risks&lt;/a&gt; and even 
+&lt;a href=&#34;http://pubman.mpdl.mpg.de/pubman/item/escidoc:2101059/component/escidoc:2101058/GG_30_Chance_2005.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;weather forecasts&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Nate Silver has himself 
+&lt;a href=&#34;https://fivethirtyeight.com/features/the-media-has-a-probability-problem/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;made the argument&lt;/a&gt; that 
+&lt;a href=&#34;https://www.nytimes.com/2016/11/10/technology/the-data-said-clinton-would-win-why-you-shouldnt-have-believed-it.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;the backlash&lt;/a&gt; we saw to data and analytics in the wake of the 2016 election is due in part to the media misunderstanding probabilistic forecasts.&lt;/p&gt;
+&lt;p&gt;As the podcast hosts pointed out, people &lt;em&gt;underestimated&lt;/em&gt; the true likelihood of winning after seeing both probabilistic forecasts and vote share projections. It’s possible that people are skeptical of any probabilistic forecast in light of the 2016 election. It’s possible they interpreted the likelihood not as hard-nosed odds, but in rather subjective terms — &lt;em&gt;what might happen&lt;/em&gt;, 
+&lt;a href=&#34;https://chicagounbound.uchicago.edu/cgi/viewcontent.cgi?article=1384&amp;amp;context=law_and_economics&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;consistent with past research&lt;/a&gt;. Regardless, they do not appear to reason about probability in a way that is consistent with how election forecasters define the probability of winning.&lt;/p&gt;
+&lt;p&gt;3. Looking at how people reason about vote share — the way people have traditionally encountered polling data — it’s clear from our results that when a person’s candidate is ahead and they see a probabilistic forecast, they rather dramatically overestimate the vote share. On the other hand, when they are behind, they get closer to the right answer.&lt;/p&gt;
+&lt;p&gt;But we know from past research that people have a “
+&lt;a href=&#34;http://journals.sagepub.com/doi/abs/10.1177/0956797609356421&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;wishful&lt;/a&gt; 
+&lt;a href=&#34;http://www.tandfonline.com/doi/abs/10.1207/s15324834basp1304_6&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;thinking&lt;/a&gt;” 
+&lt;a href=&#34;https://academic.oup.com/ijpor/article-abstract/9/2/105/713900&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;bias&lt;/a&gt;, meaning they say their candidate is doing better than polling data suggests. That’s why there’s a positive bias when people are evaluating how their candidate will do, according to Figure 2A (Study 1).&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://solmg.netlify.app/img/votea.png&#34; alt=&#34;normal&#34;&gt;&lt;/p&gt;
+&lt;p&gt;The pattern in the data suggest that people are more accurate after seeing a probabilistic forecast for a losing candidate because of this effect, and &lt;em&gt;not&lt;/em&gt; necessarily because they better understand that candidate’s actual chances of victory.&lt;/p&gt;
+&lt;p&gt;4. Perhaps even more importantly, &lt;em&gt;none&lt;/em&gt; of the results here changed when we excluded the margin of error from the projections we presented to people. That suggests that the public may not understand error in the same way that statisticians do, and therefore may not be well-equipped to understand what goes into changes in probabilistic forecast numbers. And of course, very small changes in vote share projection numbers and estimates of error correspond to much larger swings in probabilistic forecasts.&lt;/p&gt;
+&lt;p&gt;5. Finally, as we point out in the paper, if probabilistic forecasters do not account for total error, they can really overestimate a candidate’s probability of winning. Of course, that’s because an estimate of the probability of victory bakes in estimates of error, which recent work has found is 
+&lt;a href=&#34;http://www.stat.columbia.edu/~gelman/research/unpublished/polling-errors.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;often about twice as large as the estimates of sampling error&lt;/a&gt; provided in many polls.&lt;/p&gt;
+&lt;p&gt;As 
+&lt;a href=&#34;https://fivethirtyeight.com/features/the-polls-were-skewed-toward-democrats/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Nate Silver has alluded to&lt;/a&gt;, if the forecaster does not account unobserved error, including error that may be correlated across surveys — he/she will artificially inflate the estimated probability of victory or defeat. Of course, FiveThirtyEight &lt;em&gt;does&lt;/em&gt; attempt to account for this error, and released far more conservative forecasts than others in this space in 2016.&lt;/p&gt;
+&lt;p&gt;Speaking in part to this issue, 
+&lt;a href=&#34;http://www.stat.columbia.edu/~gelman/research/published/what_learned_in_2016_5.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Andrew Gelman and Julia Azari&lt;/a&gt; recently concluded that “polling uncertainty could best be expressed not by speculative win probabilities but rather by using the traditional estimate and margin of error.” They seemed to be speaking about other forecasters, and did not directly reference FiveThirtyEight.&lt;/p&gt;
+&lt;p&gt;At the end of the day, it’s easy to see that a vote share projection of 55% means that “55% of the votes will go to Candidate A, according to our polling data and assumptions.” However, it’s less clear that an 87% win probability means that “if the election were held 1000 times, Candidate A would win 870 times, and lose 130 times, based on our polling data and assumptions.”&lt;/p&gt;
+&lt;p&gt;And most critically, we show that probabilistic forecasts showing more of a blowout could potentially lower voting. In Study 1, we provide limited evidence of this based on self reports. In Study 2, we show that when participants are faced with incentives designed to simulate real world voting, they are less likely to vote when probabilistic forecasts show higher odds of one candidate winning. Yet they are not responsive to changes in vote share.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://solmg.netlify.app/img/FT_18.01.03_prob_vote.png&#34; alt=&#34;normal&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;What’s with our mapping between vote share and probability?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The podcast questions how a 55% vote share with a 2% margin of error is equivalent to an 87% win probability. This illustrates a common problem people have when trying to understand win probabilities — -it’s difficult to reason about the relationship between win-probabilities and vote share without actually running the numbers.&lt;/p&gt;
+&lt;p&gt;You can express a projection as either (1) the average vote share (can be an electoral college vote share or the popular vote share)&lt;/p&gt;
+&lt;p&gt;$$ \hat \mu_v = \frac{1}{N}\sum_{i}^{N}\bar x_i$$&lt;/p&gt;
+&lt;p&gt;and margin of error&lt;/p&gt;
+&lt;p&gt;$$\hat \mu_v \pm T^{0.975}_{df = N} \times \frac{ \hat \sigma_v}{\sqrt N}$$&lt;/p&gt;
+&lt;p&gt;Here the average for each survey is $$\bar x_i$$, and there are $$N = 20$$ surveys.&lt;/p&gt;
+&lt;p&gt;Or (2) the probability of winning — the probability that the vote share is greater than half, based on the observed vote share and standard error:&lt;/p&gt;
+&lt;p&gt;$$1 - \Phi \left (\frac{.5 - \hat \mu_v}{\hat\sigma_v} \right )$$&lt;/p&gt;
+&lt;p&gt;Going back to the example above, here’s the R code to generate those quantities:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-R&#34;&gt;svy_mean = .55 
+svy_SD = 0.04483415 # see appendix 
+N_svy = 20 
+margin_of_error = qt(.975, df = N_svy) * svy_SD/sqrt(N_svy) 
+
+svy_mean 
+[1] 0.55 
+
+margin_of_error 
+[1] 0.02091224 
+
+prob_win = 1-pnorm(q = .50, mean = svy_mean, sd = svy_SD) 
+prob_win 
+[1] 0.8676222 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;More details about this approach are in our appendix. This is similar to how the Princeton Election Consortium generated win probabilities in 2016.&lt;/p&gt;
+&lt;p&gt;Of course, one can also use an approach based on simulation, as FiveThirtyEight does. In the case of the data we generated for our hypothetical election in Study 1, this approach is not necessary. However we recognize that in the case of real-world presidential elections, a simulation approach has clear advantages by virtue of allowing more flexible statistical assumptions and a better accounting of error.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Why does this matter?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;To be clear, we are not analyzing real-world election returns. However, a lot of past 
+&lt;a href=&#34;https://huber.research.yale.edu/materials/67_paper.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;research&lt;/a&gt; 
+&lt;a href=&#34;http://www2.gsu.edu/~polsnn/priorbeliefs.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;shows&lt;/a&gt; that when people 
+&lt;a href=&#34;https://www.jstor.org/stable/1953324?seq=1#page_scan_tab_contents&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;think&lt;/a&gt; an election is 
+&lt;a href=&#34;https://repository.upenn.edu/cgi/viewcontent.cgi?referer=&amp;amp;httpsredir=1&amp;amp;article=1018&amp;amp;context=asc_papers&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;in the bag&lt;/a&gt;, they tend to 
+&lt;a href=&#34;https://www.sciencedirect.com/science/article/pii/S0014292115000483&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;vote in real-world elections&lt;/a&gt; at 
+&lt;a href=&#34;https://www.jstor.org/stable/2748722?seq=1#page_scan_tab_contents&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;lower rates&lt;/a&gt;. Our study provides evidence that probabilistic forecasts give people more confidence that one candidate will win and suggestive evidence that we should expect them to vote at lower rates after seeing probabilistic forecasts.&lt;/p&gt;
+&lt;p&gt;This matters &lt;em&gt;a lot more&lt;/em&gt; if one candidate’s potential voters are differentially affected, and there’s evidence that may be the case.&lt;/p&gt;
+&lt;p&gt;1. Figure 2C in Study 1 suggests that the &lt;em&gt;candidate who is ahead&lt;/em&gt; in the polls will be more affected by the increased certainty that probabilistic forecasts convey.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://solmg.netlify.app/img/certaintyc.png&#34; alt=&#34;normal&#34;&gt;&lt;/p&gt;
+&lt;p&gt;2. When you look at the balance of coverage of probabilistic forecasts on major television broadcasts, there is more coverage on MSNBC, which has a more liberal audience.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://solmg.netlify.app/img/msnbc_mentions.png&#34; alt=&#34;half&#34;&gt;&lt;/p&gt;
+&lt;p&gt;3. Consider who shares this material in social media&amp;ndash;specifically the average self-reported ideology of people who share links to various sites hosting poll-aggregators on Facebook, data that come from 
+&lt;a href=&#34;http://science.sciencemag.org/content/early/2015/05/06/science.aaa1160.full&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;this paper&lt;/a&gt;’s 
+&lt;a href=&#34;http://dx.doi.org/10.7910/DVN/LDJ7MS&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;replication materials&lt;/a&gt;. The websites that present their results in terms of probabilities have left-leaning (negative) social media audiences. Only realclearpolitics.com, which doesn’t emphasize win-probabilities, has a conservative audience:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://solmg.netlify.app/assets/img/bma_science_alignment.png&#34; alt=&#34;half&#34;&gt;&lt;/p&gt;
+&lt;p&gt;4. In 2016, the proportion of American National Election Study (ANES) respondents who thought the leading candidate would “win by quite a bit” was unusually high for Democrats&amp;hellip;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://solmg.netlify.app/assets/img/anes_turnout_closerace_mc_tall.png&#34; alt=&#34;normal&#34;&gt;&lt;/p&gt;
+&lt;p&gt;5. And we know that people who say the leading presidential candidate will “win by quite a bit” in pre-election polling are about three percentage points less likely to report voting shortly after the election than people who say it’s a close race — and that’s after conditioning on election year, prior turnout, and party identification. The data here are from the ANES and go back to 1952.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://solmg.netlify.app/img/closerace_vote_anes.png&#34; alt=&#34;normal&#34;&gt;&lt;/p&gt;
+&lt;p&gt;These data do not conclusively show that probabilistic forecasts affected turnout in the 2016 election, but they do raise questions about the real world consequences of probabilistic forecasts.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;What about media narratives?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;We acknowledge that these effects may change depending on the context in which people encounter them — though people can certainly encounter a lone probability number in media coverage of probabilistic forecasts. We also acknowledge that our work cannot address how these effects compare to and/or interact with media narratives.&lt;/p&gt;
+&lt;p&gt;However, other work that is relevant to this question has found that aggregating all polls 
+&lt;a href=&#34;https://academic.oup.com/poq/article-abstract/80/4/943/2738970?redirectedFrom=fulltext&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;reduces the likelihood that news outlets&lt;/a&gt; focus on unusual polls that are more sensational or support a particular narrative.&lt;/p&gt;
+&lt;p&gt;In some ways, the widespread success and reliance on these forecasts represents a triumph of scientific communication. In addition to greater precision compared with one-off horserace polls, probabilistic forecasts can quantify how likely a given U.S. presidential candidate is to win using polling data and complex simulation, rather than leaving the task of making sense of state and national polls to speculative commentary about “paths to victory,” as we point out in the 
+&lt;a href=&#34;https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3117054&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;paper&lt;/a&gt;. And as one of the hosts noted, we aren’t calling for an end to election projections.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Future work&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;We agree with the hosts that there are open questions about whether the public gives more weight to these probabilistic forecasts than other polling results and speculative commentary. We have also heard questions raised about how much probabilistic forecasts might &lt;em&gt;drive&lt;/em&gt; media narratives. These questions may prove difficult to answer and we encourage research that explores them.&lt;/p&gt;
+&lt;p&gt;We hope this research continues to create a dialogue about how to best communicate polling data to the public. We would love to see more research into how the public consumes and is affected by election projections, including finding the most effective ways to convey uncertainty.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Replication of &#39;Bias in the Flesh&#39;</title>
+      <link>https://solmg.netlify.app/post/replication_of_bias_in_the_flesh/</link>
+      <pubDate>Mon, 16 Oct 2017 00:00:00 +0000</pubDate>
+      <guid>https://solmg.netlify.app/post/replication_of_bias_in_the_flesh/</guid>
+      <description>&lt;p&gt;This post presents a replication of 
+&lt;a href=&#34;https://solmg.netlify.app/pdf/HSVmetricsCampaignsDarknessPOQFINAL.pdf&#34;&gt;Messing et al&lt;/a&gt;. (2016, study 2), which showed that exposure to darker images of Barack Obama increased stereotype activation, as indicated by the tendency to finish incomplete word prompts---such as &amp;ldquo;W E L _ _ _ _&amp;quot;---in stereotype-consistent ways (&amp;ldquo;WELFARE&amp;rdquo;).&lt;/p&gt;
+&lt;p&gt;Overall, the replication shows that darker images of even 
+&lt;a href=&#34;http://www.sciencedirect.com/science/article/pii/S0022103110002635&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;counter-stereotypical exemplars like Barack Obama&lt;/a&gt; can increase stereotype activation, but that the strength of the effect is weaker than conveyed in the original study.  A reanalysis of the original study conducted in the course of this replication effort unearthed a number of problems that, when corrected, yield estimates of the effect that are consistent with those documented in the replication. This reanalysis also follows.&lt;/p&gt;
+&lt;p&gt;I&#39;m posting this to&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;disseminate a 
+&lt;a href=&#34;https://solmg.netlify.app/pdf/HSVmetricsCampaignsDarknessPOQFINAL.pdf&#34;&gt;corrected version of the original study&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;show how I found those problems with the original study in the course of conducting this replication;&lt;/li&gt;
+&lt;li&gt;circulate these generally confirmatory findings, along with a pooled analysis revealing a stronger effect among conservatives; and&lt;/li&gt;
+&lt;li&gt;provide a demonstration of how replication almost always enhances our knowledge about the original research, which I hope may encourage others to invest the time and money in such efforts.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;First some context.&lt;/p&gt;
+&lt;p&gt;The original study that formed the basis of the manuscript shows that more negative campaign ads in 2008 were also more likely to contain darker images of President Obama. In 2009 when I started this work, I was most proud of the method to collect data on skin complexion outlined in study 1.  I included another study, what&#39;s now study 3, which shows that 2012 ANES survey-takers were more likely to respond negatively to Chinese characters after being presented with darker images of Obama (this is called the 
+&lt;a href=&#34;http://onlinelibrary.wiley.com/doi/10.1111/spc3.12148/abstract&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Affect Misattribution Procedure (AMP)&lt;/a&gt;).
+But the AMP was not a true experiment and a reviewer was concerned that Study 3 did not provide sufficiently rigorous, causal evidence that darker images alone can cause negative affect.  So I conducted an experiment that would establish a causal link between darker images of Obama and something I thought was even more important---stereotype activation. There were strong reasons to expect this effect based on past lab studies showing links between 
+&lt;a href=&#34;https://ase.tufts.edu/psychology/tuscLab/documents/pubsCognitive2002.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;darker skin&lt;/a&gt; and 
+&lt;a href=&#34;https://www.ncbi.nlm.nih.gov/pubmed/12088132&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;negative stereotypes about Blacks&lt;/a&gt;, and past observational studies showing far more 
+&lt;a href=&#34;https://wcfia.harvard.edu/files/wcfia/files/2007_27_hochschild.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;negative socioeconomic outcomes across the board among darker versus lighter skinned Black Americans&lt;/a&gt;. We found an effect and published the three studies.&lt;/p&gt;
+&lt;p&gt;This replication effort was prompted by a post-publication reanalysis and 
+&lt;a href=&#34;http://www.ljzigerell.com/?p=3622&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;critique&lt;/a&gt;, which raised questions about potential weaknesses in the original analysis. My aim in replicating the study was to bring new data to the discussion and make sure we hadn&amp;rsquo;t polluted the literature with a false discovery.&lt;/p&gt;
+&lt;p&gt;The main objection was the way we formed our stereotype consistency index. The items assessing stereotype consistency comprised 11 words with missing blank spaces (e.g., L A _ _). Each fragment had as one possible solution a stereotype-related completion. The complete list follows: L A _ _ (LAZY): C R _ _ _ (CRIME); _ _ O R (POOR); R _ _ (RAP); WEL _ _ _ _ (WELFARE); _ _ C E (RACE); D _ _ _ Y (DIRTY); B R _ _ _ _ _ (BROTHER); _ _ A C K (BLACK); M I _ _ _ _ _ _ (MINORITY); D R _ _ (DRUG).&lt;/p&gt;
+&lt;p&gt;The author pointed out that there were many potential ways to analyze the original data---he claimed over 16 thousand. Yet very few of these are consistent with generally accepted research practices. We&#39;ve known, arguably since the 
+&lt;a href=&#34;http://www.jstor.org/stable/2333051?origin=crossref&amp;amp;seq=1#page_scan_tab_contents&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;16th century&lt;/a&gt;, that combining several measures reduces measurement error and hence variance in estimation. This is particularly important in social science, and especially for this particular study---it would be unwise to attempt to use a single word completion or an arbitrary subset thereof to measure a complex, noisy construct like stereotype activation as measured via a word completion game. Rather, taking the 
+&lt;a href=&#34;https://web.stanford.edu/~jrodden/issues_apsr.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;average or constructing an index based on clustering several measures&lt;/a&gt; should be expected to result in far less measurement error, which is what we did.&lt;/p&gt;
+&lt;p&gt;Still, I am sympathetic to concerns about the 
+&lt;a href=&#34;http://www.stat.columbia.edu/~gelman/research/unpublished/p_hacking.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;garden of forking paths&lt;/a&gt;, which is part of the motivation for this replication.&lt;/p&gt;
+&lt;p&gt;In the original study, I formed this index based on what I judged to be the most unambiguously negative word-completions (lazy, dirty, poor), consistent with past work suggesting that darker complexion activates the 
+&lt;a href=&#34;https://ase.tufts.edu/psychology/tuscLab/documents/pubsCognitive2002.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;most &lt;/a&gt;
+&lt;a href=&#34;https://www.ncbi.nlm.nih.gov/pubmed/12088132&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;negative&lt;/a&gt; stereotypes about Blacks. I calculated that these were the three variables that also maximized interclass correlation (ICC). As a robustness check, I also computed a measure that maximized alpha reliability (AR). This measure contained more items, and also seemed to include stereotype-consistent word completions that were on balance negative---lazy, dirty, poor, crime, black, and welfare. I should have but did not report results based on a simple average of these items, which was not conclusive.&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;http://www.ljzigerell.com/?p=3622&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;The critical reanalysis&lt;/a&gt; cited above shows a handful of statistically significant patterns that are inconsistent with the expectations in the original study, which is suggestive evidence that it&#39;s quite possible to find signal in noise if you&#39;re analyzing arbitrary sets of variables with the originally collected data. However, as shown below in the much larger replication sample below, none of these patterns replicate.&lt;/p&gt;
+&lt;p&gt;The critique also noted that we did not include an analysis of several trailing questions we included on the original survey. The concern is the 
+&lt;a href=&#34;http://science.sciencemag.org/content/345/6203/1502&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;file drawer problem&lt;/a&gt; - the incentives against and frequent failure to report null results - which obscures knowledge and is bad for the scientific enterprise.&lt;/p&gt;
+&lt;p&gt;I included those measures based on 
+&lt;a href=&#34;https://papers.ssrn.com/sol3/papers.cfm?abstract_id=1643225&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;past work&lt;/a&gt; using the same images as stimuli, which found that darker images prompted more negative evaluations of Obama among people with more negative associations with Blacks, as measured using the Implicit Associations Test (IAT). But testing a specification that conditioned on our main outcome of interest---stereotype-consistent word completions---would mean conditioning on a post-treatment variable, particularly worrisome since we saw an effect on stereotype activation in the study.&lt;/p&gt;
+&lt;p&gt;Below, I pool the data and report another specification that does not require us to condition on post-treatment variables. It takes advantage of the fact that conservatives had significantly higher levels of stereotype activation (which was documented in the original study), and shows that the effect is in fact stronger among this subgroup, providing preliminary evidence in favor of this hypothesis.&lt;/p&gt;
+&lt;p&gt;The remainder of this post will present my own reanalysis of the original data, the replication, and finally some additional analysis of the data now possible with the larger, pooled data set.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Re-analysis of original data&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;In the process of collecting data for the replication studies, I used the same interface, simply appending the new data as additional respondents completed the survey experiment. When I geo-coded the IP address data in the full data set, I found a discrepancy between the cases I originally geo-coded as U.S. cases, and the cases that now resolved to U.S. locations in the complete data set.  Many of these respondents appeared in sequence, suggesting they may have been skipped, perhaps due to issues related to connectivity to the geo-location server I used.&lt;/p&gt;
+&lt;p&gt;This prompted me to conduct a full re-analysis of the data, which yields smaller estimates of stereotype activation. First, re-estimating the index yielded different items---&#39;black&#39; in place of &#39;dirty&#39; for the ICC measure and &#39;race&#39; in place of &#39;welfare&#39;, &#39;crime&#39;, and &#39;dirty&#39; in the AR measure. This is due in part to the way I computed the original indices and in part due to correcting the geo-coding issue. In the original study, I computed the index of variables that maximized alpha and ICC by hand because the epiCalc::alphaBest function (now epiDisplay::alphaBest) does not return results (nor an error message) for these data. For reanalysis, I wrote a function that computed variables to include in the index via successive removal of items. The overall alpha is actually slightly lower in new AR measure, while the new ICC measure has a slightly higher correlation coefficient.&lt;/p&gt;
+&lt;p&gt;For the sake of transparency, I first report results based on the original items included in the index as reported in Messing et al. 2015 using the updated data, then report the new ICC and AR measures.&lt;/p&gt;
+&lt;p&gt;Using the original indices with the errantly remove cases included, instead of a 36% increase in stereotype-consistent word completions using the ICC measure, this meant a revised estimate of a 20% increase in stereotype activation (M_Light = 0.33, M_Dark = 0.41, T(859.0) = 2.08, P = 0.038, two-sided). For the AR measure, instead of a 13% increase (M_Light = 0.97, M_Dark = 1.11, T(626.72) = 1.77, P = 0.078, two-sided), this meant an 8% increase (M_Light = 0.98, M_Dark = 1.06, T(850.9) = 1.12, P = 0.265, two-sided).&lt;/p&gt;
+&lt;p&gt;Re-estimating the indices when including all U.S. cases translates to less conclusive findings---a revised estimate of an 8% increase in stereotype activation in the original study (M_Light = 0.79, M_Dark = 0.86, T(850.7) = 1.27, P = 0.203, two-sided) using the ICC measure, and an 8% increase (M_Light = 0.87, M_Dark = 0.91, T(839.1) = 0.77, P = 0.439, two-sided) using the AR measure.&lt;/p&gt;
+&lt;p&gt;A slightly smaller effect was also observed when examining differences between conservatives and other participants. Correcting the geo-coding error and updating the indices reduced the estimate of stereotype activation for conservatives. Instead of a 53% increase, the original ICC measure yields a 29% increase (M_Other = 0.35, M_Conservative = 0.49, T(205.9) = 2.49, P = 0.013, two-sided).  The new ICC measure yields an 18% increase (M_Other = 0.80, M_Conservative = 0.98, T(207.9) = 2.41, P = 0.017, two-sided).  For the AR measure, instead of a 29% increase, this meant an 18% increase using either measure (original: M_Other = 0.99, M_Conservative = 1.18, T(210.4) = 2.11, P = 0.036, two-sided) (new: M_Other = 0.86, M_Conservative = 1.05, T(214.3) = 2.47, P = 0.014, two-sided).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;The replication&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;I conducted one exact replication and one very close replication with slightly different images, which I pooled for a total of 3,151 respondents, substantially more than the 630 included in the original writeup.  This gives me more statistical power and more precise estimates of the effect in question. (I provide results for each design separately - one of which appears underpowered - at the end of this post).&lt;/p&gt;
+&lt;p&gt;To be clear, I did not pre-register this replication. However, I&#39;ve tried to err on the side of exhaustive reporting when the original study did not provide exacting specificity in analyzing the new data. Due to the nature of this replication---the presentation of the same analysis conducted in the original study---the p-values provide highly informative, if not conclusive evidence regarding the nature of the effect.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://solmg.netlify.app/img/cb54a931e7c01f3bfd03caa2899518b447ab470e.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;The average reported age was 36; 52% of participants identified as female; 84% identified as White, 8% as Black; 5% as Hispanic; and 3% as Other. 52% identified as liberal, 27% as moderate, 22% as conservative.&lt;/p&gt;
+&lt;p&gt;Recomputing the ICC index yielded the following items: black, poor, drug. Recomputing the AR index yielded: lazy, black, poor, welfare, crime, drug, which is close to the original study.&lt;/p&gt;
+&lt;p&gt;In the replication data, the ICC yields a 5% increase in stereotype activation (M_Light = 0.90, M_Dark = 0.95, T(3142.8) = 1.56, P = 0.119, two-sided). Similarly, the alpha measure yields a 5% increase (M_Light = 1.04, M_Dark = 1.09, T(3145.8) = 1.70, P = 0.089, two-sided).&lt;/p&gt;
+&lt;p&gt;The original study isn&#39;t completely clear on the question of whether a replication should report on the recomputed ICC and AP measures, or the exact same items as in the original study, so it&#39;s worth reporting those as well. The &lt;em&gt;original&lt;/em&gt; ICC measure yields a 3% increase in stereotype activation (M_Light = 0.36, M_Dark = 0.37, T(3148.9) = 0.51, P = 0.611, two-sided). Using the &lt;em&gt;original&lt;/em&gt; AR measure yields a 6% increase (M_Light = 1.01, M_Dark = 1.07, T(3147.9) = 1.91, P = 0.057, two-sided).&lt;/p&gt;
+&lt;p&gt;Finally, it&#39;s worth reporting on an index that simply uses all stereotype-consistent items in the replication reveals a 5% increase in stereotype activation (M_Light = 1.30, M_Dark = 1.37, T(3147.7) = 2.05, P = 0.040, two-sided).&lt;/p&gt;
+&lt;p&gt;A pooled analysis, after normalizing the ICC and AR measures, yields similar results:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://solmg.netlify.app/img/a0415aa41faee2db8452e14712ae9505f7a96f0a.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;=================================================
+                      ICC     Alpha      ALL
+-------------------------------------------------
+  (Intercept)       -0.041   -0.028    1.292***
+                    (0.034)  (0.034)  (0.036)
+  cond: Dark/Light   0.067*   0.058    0.067*
+                    (0.032)  (0.032)  (0.034)
+  study              0.006   -0.001    0.008
+                    (0.023)  (0.023)  (0.025)
+-------------------------------------------------
+  R-squared             0.0      0.0       0.0
+  N                  4012     4012      4012
+=================================================
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;I also replicated this study with a different, lesser-known Black politician (Jesse White). However, a manipulation check revealed that only 36% of respondents said the candidate was Black in the &amp;ldquo;light&amp;rdquo; condition, compared to 83% in the darker condition, suggesting that any analysis would be severely confounded by perceived race of the target politician. (I did not ask this question in the Barack Obama studies).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Additional analysis&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The superior power afforded by pooling all three studies may allow the exploration of treatment heterogeneity. 
+&lt;a href=&#34;https://papers.ssrn.com/sol3/papers.cfm?abstract_id=1643225&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Past work&lt;/a&gt; suggests the possibility that darker images might cause people inclined toward more stereotype-consistent responses to evaluate politicians more negatively. However, this analysis would 
+&lt;a href=&#34;http://andrewgelman.com/2017/09/12/conditioning-post-treatment-variables-can-ruin-experiment/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;condition on post-treatment variables&lt;/a&gt;, which in this case is particularly concerning since the treatment affects stereotype activation according to the original study and replication above.  As an alternative, I consider a specification that uses conservative identification instead, which is a strong predictor of stereotype activation (as shown in the original study), but shouldn&amp;rsquo;t be affected by the treatment. It reveals evidence for the predicted interactions, suggesting that when conservatives are exposed to darker rather than lighter images of Obama, they have slightly &amp;ldquo;colder&amp;rdquo; feelings toward the former president (P = 0.039), perceive him to be less competent (P = 0.061), and less trustworthy (P = 0.083).&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;=================================================================
+                             obama_therm  competence    trust
+-----------------------------------------------------------------
+  (Intercept)                 69.446***    4.213***    3.867***
+                              (0.705)     (0.029)     (0.031)
+  cond: Dark/Light             0.451       0.024       0.045
+                              (0.989)     (0.041)     (0.044)
+  iscons                     -40.497***   -1.574***   -1.625***
+                              (1.565)     (0.064)     (0.069)
+  cond: Dark/Light x iscons   -4.462*     -0.167      -0.165
+                              (2.160)     (0.089)     (0.095)
+-----------------------------------------------------------------
+  R-squared                        0.3         0.3         0.2
+  N                             3932        3928        3926
+=================================================================
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;A plot of the model predictions for the thermometer ratings suggests that the effect is concentrated among conservatives.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://solmg.netlify.app/img/f82207e502f7cdd9c8a6b178efa7ca801d1b8e4c.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Conclusion&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The more items one uses to form an index, the less noise we should expect, and the more likely any replication attempt should be expected to succeed.  It should also mean greater statistical precision. This could explain the remaining discrepancy between this study and the original after adjusting for the geo-coding error pointed out above. It&#39;s also possible that something about the timing or the subjects recruited in the replication studies that explain the observed differences.&lt;/p&gt;
+&lt;p&gt;Nonetheless, this replication provides evidence that darker images of Black political figures, or at least of President Barack Obama, do in fact activate stereotypes.  This much larger sample suggests that the true effect is smaller than what I found in the original study, which as noted above, contained some errors.&lt;/p&gt;
+&lt;p&gt;Replication materials available on 
+&lt;a href=&#34;http://dx.doi.org/10.7910/DVN/WY7PR8&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;dataverse&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Appendix&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Below I present alternate specifications estimated without pooling. These specifications suggest first that replication 2 (as well as the original study) was not well-powered. It also suggests that the outcome measures with more items yield more reliable estimates.&lt;/p&gt;
+&lt;p&gt;Outcome measure summing all items:&lt;/p&gt;
+&lt;p&gt;Replication 1: M_Light = 1.29, M_Dark = 1.36, T(2115.4) = -1.59, P = 0.113, two-sided&lt;/p&gt;
+&lt;p&gt;Replication 2: M_Light = 1.30, M_Dark = 1.39, T(982.7) = -1.35, P = 0.177, two-sided&lt;/p&gt;
+&lt;p&gt;Original Alpha outcome measure:&lt;/p&gt;
+&lt;p&gt;Replication 1: M_Light = 0.99, M_Dark = 1.06, T(2114.9) = -1.79, P = 0.073, two-sided&lt;/p&gt;
+&lt;p&gt;Replication 2: M_Light = 1.04, M_Dark = 1.09, T(979.8) = -0.85, P = 0.393, two-sided&lt;/p&gt;
+&lt;p&gt;Newly estimated Alpha outcome measure:&lt;/p&gt;
+&lt;p&gt;Replication 1: M_Light = 1.02, M_Dark = 1.09, T(2109.4) = -1.77, P = 0.077, two-sided&lt;/p&gt;
+&lt;p&gt;Replication 2: M_Light = 1.07, M_Dark = 1.10, T(984.6) = -0.53, P = 0.597, two-sided&lt;/p&gt;
+&lt;p&gt;Original ICC outcome measure:&lt;/p&gt;
+&lt;p&gt;Replication 1: M_Light = 0.89, M_Dark = 0.94, T(2100.6) = -1.49, P = 0.137, two-sided.&lt;/p&gt;
+&lt;p&gt;Replication 2: M_Light = 0.93, M_Dark = 0.96, T(985.9) = -0.67, P = 0.506, two-sided&lt;/p&gt;
+&lt;p&gt;Newly estimated ICC outcome measure&lt;/p&gt;
+&lt;p&gt;Replication 1: M_Light = 0.35, M_Dark = 0.36, T(2122.5) = -0.22, P = 0.826, two-sided&lt;/p&gt;
+&lt;p&gt;Replication 2: M_Light = 0.38, M_Dark = 0.40, T(978.7) = -0.72, P = 0.472, two-sided
+ 
+A replication of prior 
+&lt;a href=&#34;http://www.ljzigerell.com/?p=3622&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;critique and reanalysis&lt;/a&gt;.  The patterns that run contrary to our original findings are not significant in the replication data.&lt;/p&gt;
+&lt;table style=&#34;height:1612px;&#34; width=&#34;584&#34;&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Variable&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;effect size&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;p-value&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;feeling therm&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;-0.028&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;0.439&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;race minority welfare crime rap&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;0.022&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;0.538&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;race minority welfare rap&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;0.017&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;0.629&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;race minority rap&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;0.011&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;0.752&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;race&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;0.006&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;0.861&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;minority&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;-0.013&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;0.713&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;rap&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;0.024&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;0.502&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;welfare&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;0.014&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;0.695&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;comp&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;-0.013&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;0.72&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;crime&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;0.016&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;0.659&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;trust&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;0.002&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;0.946&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;brother&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;0.042&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;0.236&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;drug&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;0.008&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;0.822&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;lazy&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;0.026&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;0.474&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;black&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;0.084&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;0.019&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;dirty&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;0.028&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;0.438&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;poor&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;-0.002&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;0.957&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;allwcs&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;0.073&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;0.04&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;original&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;0.018&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;0.611&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;alpha&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;0.068&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;0.057&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;</description>
+    </item>
+    
+    <item>
+      <title>Ideologically diverse news, an agenda for future research</title>
+      <link>https://solmg.netlify.app/post/exposure-to-ideologically-diverse-response/</link>
+      <pubDate>Sat, 11 Oct 2014 00:00:00 +0000</pubDate>
+      <guid>https://solmg.netlify.app/post/exposure-to-ideologically-diverse-response/</guid>
+      <description>&lt;p&gt;Earlier this month, we published an early access version of our paper in ScienceExpress (
+&lt;a href=&#34;https://dl.dropboxusercontent.com/u/25710348/Science-2015-Bakshy-1130-2.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Bakshy et al. 2015&lt;/a&gt;), &amp;ldquo;Exposure to ideologically diverse news and opinion on Facebook.&amp;rdquo; The paper constitutes the first attempt to quantify the extent to which ideologically cross-cutting hard news and opinion is shared by friends, appears in algorithmically ranked News Feeds, and is actually consumed (i.e., click through to read).&lt;/p&gt;
+&lt;p&gt;We are grateful for the widespread interest this paper, which grew out of two threads of related research that we began nearly five years ago: Eytan and Lada&#39;s work on the role of social networks in information diffusion (
+&lt;a href=&#34;http://arxiv.org/pdf/1201.4145v2.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Bakshy et al. 2012&lt;/a&gt;) and Sean and Solomon&#39;s work on selective exposure in social media (
+&lt;a href=&#34;http://crx.sagepub.com/content/41/8/1042&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Messing and Westwood 2012&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;While &lt;em&gt;Science&lt;/em&gt; papers are explicitly prohibited from suggesting future directions for research, we would like to shed additional light on our study and raise a few questions that we would be excited to see addressed in future work.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Tradeoffs when Selecting a Population&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;There were tradeoffs when deciding on who to include in this study. While we could have examined all U.S. adults on Facebook, we focused on people who identify as liberals or conservatives and encounter hard news, opinion, and other political content in social media regularly. We did so because many important questions around &amp;ldquo;echo chambers&amp;rdquo; and &amp;ldquo;filter bubbles&amp;quot;on Facebook relate to this subpopulation, and we used self-reported ideological preferences to define it.&lt;/p&gt;
+&lt;p&gt;Using self-reported ideological preferences in online profiles is not the only a way to measure ideology or define the population of interest. Yet, people who publicly identify as liberals or conservatives in their Facebook profiles are an interesting and important subpopulation worthy of study for many reasons. As 
+&lt;a href=&#34;http://gking.harvard.edu/files/gking/files/words.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Hopkins and King 2010&lt;/a&gt; have pointed out, studying the expression and behavior of those who are politically engaged online is of interest to political scientists studying activists (
+&lt;a href=&#34;http://www.hup.harvard.edu/catalog.php?isbn=9780674942936&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Verba, Schlozman, and Brady 1995&lt;/a&gt;), the media (
+&lt;a href=&#34;http://195.130.87.21:8080/dspace/handle/123456789/979&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Drezner and Farrell 2004&lt;/a&gt;), public opinion (
+&lt;a href=&#34;https://scholar.google.com/scholar?cluster=15572370959137190849&amp;amp;hl=en&amp;amp;as_sdt=2005&amp;amp;sciodt=0,5&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Gamson 1992&lt;/a&gt;), social networks (
+&lt;a href=&#34;http://dl.acm.org/citation.cfm?id=1134277&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Adamic and Glance 2005&lt;/a&gt;; 
+&lt;a href=&#34;http://www.langtoninfo.co.uk/web_content/9780521542234_frontmatter.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Huckfeldt and Sprague 1995&lt;/a&gt;), and elite influence (
+&lt;a href=&#34;http://press.princeton.edu/titles/8425.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Grindle 2005&lt;/a&gt;; 
+&lt;a href=&#34;http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.160.8347&amp;amp;rep=rep1&amp;amp;type=pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Hindman, Tsioutsiouliklis, and Johnson 2003;&lt;/a&gt; 
+&lt;a href=&#34;https://books.google.com/books?hl=en&amp;amp;lr=&amp;amp;id=83yNzu6toisC&amp;amp;oi=fnd&amp;amp;pg=PR8&amp;amp;dq=The&amp;#43;Nature&amp;#43;and&amp;#43;Origins&amp;#43;of&amp;#43;Mass&amp;#43;Opinion&amp;amp;ots=6oEwiBZtSM&amp;amp;sig=ySnwRZUuVtOyTkC-3raaL88pYns#v=onepage&amp;amp;q=The%20Nature%20and%20Origins%20of%20Mass%20Opinion&amp;amp;f=false&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Zaller 1992&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;This subpopulation has limitations and is not the only population of interest. The data are not appropriate for those who seek estimates of the entire U.S. public, people without strong opinions, or people not on Facebook (at least not without additional extrapolation, re-weighting, additional evidence, etc.). While our data &lt;em&gt;could plausibly&lt;/em&gt; also provide good estimates of the population of people who are ideologically active and have clear preferences, we are not claiming that&#39;s necessarily the case---that remains to be determined in future work.&lt;/p&gt;
+&lt;p&gt;We&#39;d like to help other researchers looking to study other populations understand more about the population we&#39;ve defined. An important question in this regard is what proportion of active U.S. adults actually report an identifiable left/right/center ideology in their profile. That number is 25%, or 10.1 million people.&lt;/p&gt;
+&lt;p&gt;It&#39;s also informative to examine the proportion of those users who provide identifiable profile affiliations conditional on demographics and Facebook usage:&lt;/p&gt;
+&lt;table style=&#34;border-collapse:collapse;width:473px;height:512px;&#34; border=&#34;0&#34; width=&#34;174&#34; cellspacing=&#34;0&#34; cellpadding=&#34;0&#34;&gt;&lt;colgroup&gt; &lt;col style=&#34;width:65pt;&#34; span=&#34;2&#34; width=&#34;87&#34; /&gt; &lt;/colgroup&gt;
+&lt;tbody&gt;
+&lt;tr style=&#34;height:18pt;&#34;&gt;
+&lt;td class=&#34;xl63&#34; style=&#34;height:18pt;width:65pt;&#34; width=&#34;87&#34; height=&#34;24&#34;&gt;&lt;strong&gt;Age&lt;/strong&gt;&lt;/td&gt;
+&lt;td class=&#34;xl63&#34; style=&#34;width:65pt;&#34; width=&#34;87&#34;&gt;&lt;strong&gt;Percent reporting ideological affiliation&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style=&#34;height:18pt;&#34;&gt;
+&lt;td class=&#34;xl63&#34; style=&#34;height:18pt;&#34; height=&#34;24&#34;&gt;18-24&lt;/td&gt;
+&lt;td class=&#34;xl64&#34;&gt;21.60%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style=&#34;height:18pt;&#34;&gt;
+&lt;td class=&#34;xl63&#34; style=&#34;height:18pt;&#34; height=&#34;24&#34;&gt;25-44&lt;/td&gt;
+&lt;td class=&#34;xl64&#34;&gt;28.50%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style=&#34;height:18pt;&#34;&gt;
+&lt;td class=&#34;xl63&#34; style=&#34;height:18pt;&#34; height=&#34;24&#34;&gt;45-64&lt;/td&gt;
+&lt;td class=&#34;xl64&#34;&gt;24.30%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style=&#34;height:18pt;&#34;&gt;
+&lt;td class=&#34;xl63&#34; style=&#34;height:18pt;&#34; height=&#34;24&#34;&gt;65+&lt;/td&gt;
+&lt;td class=&#34;xl64&#34;&gt;21.40%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style=&#34;height:18pt;&#34;&gt;
+&lt;td class=&#34;xl63&#34; style=&#34;height:18pt;&#34; height=&#34;24&#34;&gt;&lt;/td&gt;
+&lt;td class=&#34;xl63&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style=&#34;height:18pt;&#34;&gt;
+&lt;td class=&#34;xl63&#34; style=&#34;height:18pt;&#34; height=&#34;24&#34;&gt;&lt;strong&gt;Gender&lt;/strong&gt;&lt;/td&gt;
+&lt;td class=&#34;xl63&#34;&gt;&lt;strong&gt;Percent reporting ideological affiliation&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style=&#34;height:18pt;&#34;&gt;
+&lt;td class=&#34;xl63&#34; style=&#34;height:18pt;&#34; height=&#34;24&#34;&gt;Female&lt;/td&gt;
+&lt;td class=&#34;xl64&#34;&gt;21.90%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style=&#34;height:18pt;&#34;&gt;
+&lt;td class=&#34;xl63&#34; style=&#34;height:18pt;&#34; height=&#34;24&#34;&gt;Male&lt;/td&gt;
+&lt;td class=&#34;xl64&#34;&gt;30.60%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style=&#34;height:18pt;&#34;&gt;
+&lt;td class=&#34;xl63&#34; style=&#34;height:18pt;&#34; height=&#34;24&#34;&gt;&lt;/td&gt;
+&lt;td class=&#34;xl63&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style=&#34;height:18pt;&#34;&gt;
+&lt;td class=&#34;xl63&#34; style=&#34;height:18pt;&#34; height=&#34;24&#34;&gt;&lt;strong&gt;Login Days&lt;/strong&gt;&lt;/td&gt;
+&lt;td class=&#34;xl63&#34;&gt;&lt;strong&gt;Percent reporting ideological affiliation&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style=&#34;height:18pt;&#34;&gt;
+&lt;td class=&#34;xl63&#34; style=&#34;height:18pt;&#34; height=&#34;24&#34;&gt;105-140&lt;/td&gt;
+&lt;td class=&#34;xl64&#34;&gt;18.90%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style=&#34;height:18pt;&#34;&gt;
+&lt;td class=&#34;xl63&#34; style=&#34;height:18pt;&#34; height=&#34;24&#34;&gt;140-185&lt;/td&gt;
+&lt;td class=&#34;xl64&#34;&gt;26.70%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Clearly those who report an ideology in their profile tend to be more active on Facebook. They are also more likely to be men, which is consistent with the well-documented gender gap in American politics (
+&lt;a href=&#34;http://journals.cambridge.org/action/displayAbstract?fromPage=online&amp;amp;aid=245226&amp;amp;fileId=S0003055404001315&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Box-Steffensmeier 2004&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;It&#39;s possible that these individuals differ from other Facebook users in other ways. It seems plausible to expect these people to have higher levels of political interest, a stronger sense of political ideology and political identity, and to be more likely to be active in politics than most others on Facebook. It&#39;s also possible that these individuals are more extroverted than the average user, especially in the somewhat taboo domain of politics. These possibilities also strike us as interesting questions for study in future work.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;How to Measure Ideology&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;We hope others will replicate this work using other populations and ways of measuring ideology, which will provide a broader view of exposure to political media. Data on ideology could be collected by, for example, surveying users, imputing ideology based on user behavior, or joining data to the voter file. Each of these methods have advantages and potential challenges.&lt;/p&gt;
+&lt;p&gt;Using surveys in future work would allow researchers to collect data on ideology in a way that can facilitate comparisons with much of the extant literature in political science, and allow researchers to sample from a less politically engaged population. Of course, this could be tricky because survey response rates might be affected by the phenomenon under study. In other words, the salience of political discussion from the right or left, and/or prior choices to consume content could make people more/less likely to respond to a survey asking about ideology, or affect the way they report the strength of their ideological preferences. This could confound measurement in a way that would be difficult to detect and correct. Yet it would be fascinating to see how survey results compare to the results in this study.&lt;/p&gt;
+&lt;p&gt;We would also encourage the application of large-scale methods that impute individuals&amp;rsquo; ideological leanings using social networks or revealed preferences. This would have the advantage of allowing researchers to estimate ideological preferences for a broader population, and could be applied to empirical contexts for which self-reported ideological affiliations are not present.&lt;/p&gt;
+&lt;p&gt;However, these approaches present challenges. Imputing ideology based on social networks would make it difficult to estimate what proportion of people&amp;rsquo;s networks contain individuals from the other side. 
+&lt;a href=&#34;http://journals.cambridge.org/action/displayAbstract?fromPage=online&amp;amp;aid=9586211&amp;amp;fileId=S0003055414000525&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Bond and Messing, 2015&lt;/a&gt; and 
+&lt;a href=&#34;http://pan.oxfordjournals.org/content/23/1/76.full.pdf?keytype=ref&amp;amp;ijkey=uMFPw4dsMHM7608&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Barberá 2014&lt;/a&gt; discuss some of the challenges related to estimating ideology based on revealed preferences. Another challenge specific to the quantities estimated in our paper is that because behavior may be caused by the composition of individuals&amp;rsquo; social networks, what their friends share, and how they engage with Facebook, using revealed preferences to select the population could introduce endogenous selection bias (
+&lt;a href=&#34;http://www.annualreviews.org/doi/abs/10.1146/annurev-soc-071913-043455&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Elwert and Winship 2014&lt;/a&gt;). A study that negotiates these issues would be a tremendously valuable contribution. Similar methods could also be used to obtain measures of ideological alignment of content.&lt;/p&gt;
+&lt;p&gt;Lastly, researchers could use party registration from the voter file. This approach would yield millions of records, but have different selection problems&amp;mdash;match rates may differ by region, state, age, gender, etc. Again, the advantage of approaches like this are that these studies compliment each other and provide a fuller picture of how exposure to viewpoints from the other side occur in social media.&lt;/p&gt;
+&lt;p&gt;Future work should also examine how exposure varies in different subpopulations. For example, one hypothesis to test is whether those with weaker or less consistent ideological preferences have more cross cutting content shared by friends, rendered in social media streams, and selected for reading. Some preliminary analysis suggests that indeed, among the individuals in our study, those with a weaker stated ideological affiliation have on average more cross-cutting content at each stage in the exposure process.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://solmg.netlify.app/img/5a469dbbfb5b2916a87554ca4a247579da11e2b2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Other Data Sources&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;There are many other important questions related to this paper that necessitate new data sources: Does encountering cross-cutting content increase or decrease attitude polarization? What about attitudes toward members of the other side? Does it change specific policy preferences? Are liberals and conservatives more or less likely to see content in News Feed &lt;em&gt;because&lt;/em&gt; it was cross-cutting? Do they actively avoid cross-cutting political content &lt;em&gt;because&lt;/em&gt; of expressions in the title or because of the fact that the media source is suggestive of a cross-cutting article? How do changes to ranking algorithms and user interfaces affect selective exposure? And how can we better understand actual discourse about politics in social media, rather than merely shared media content?&lt;/p&gt;
+&lt;p&gt;Answering these questions necessitates collecting innovative data sets via online experimentation (
+&lt;a href=&#34;http://pan.oxfordjournals.org/content/20/3/351.short&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Berinsky et al. 2012&lt;/a&gt;), social media (
+&lt;a href=&#34;http://scholar.harvard.edu/dtingley/files/fall2012.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Ryan and Broockman 2012&lt;/a&gt;), crowdsourcing (
+&lt;a href=&#34;http://papers.ssrn.com/sol3/papers.cfm?abstract_id=2526461&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Budak et al. 2014&lt;/a&gt;), large scale field experimentation (
+&lt;a href=&#34;http://gking.harvard.edu/publications/randomized-Experimental-Study-Censorship-China&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;King et al. 2014&lt;/a&gt;), observational social media data, clever ways to collect data about individual differences in ranking (
+&lt;a href=&#34;http://www.lazerlab.net/sites/default/files/publications/Measuring%20Personalization%20of%20Web%20Search.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Hannak et al. 2013&lt;/a&gt;), smart ways to combine behavioral and survey data (
+&lt;a href=&#34;http://arxiv.org/pdf/1304.1837v3.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Chen et al. 2014&lt;/a&gt;), and panel data (
+&lt;a href=&#34;http://faculty-gsb.stanford.edu/athey/documents/localnews.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Athey and Mobius 2012&lt;/a&gt;, 
+&lt;a href=&#34;https://5harad.com/papers/bubbles.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Flaxman et al. 2014&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;Many of these are causal questions necessitating experimental and/or quasi experimental designs. For example, the extent to which people select content because it is cross-cutting could be investigated using experiments like this one (e.g., 
+&lt;a href=&#34;http://crx.sagepub.com/content/41/8/1042&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Messing and Westwood 2012&lt;/a&gt;) or through identifying sources of natural exogenous variation. And while Diana Mutz and others have done ground-breaking research on the effects of encountering cross-cutting arguments on political attitudes (
+&lt;a href=&#34;http://journals.cambridge.org/action/displayAbstract?fromPage=online&amp;amp;aid=208463&amp;amp;fileId=S0003055402004264&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Mutz 2002&lt;/a&gt;b) and behavior (
+&lt;a href=&#34;http://www.jstor.org/stable/3088437&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Mutz 2002&lt;/a&gt;a), more research into how these effects play out in the long term (using approaches like 
+&lt;a href=&#34;http://faculty.wcas.northwestern.edu/~jnd260/pub/Druckman%20Fein%20Leeper%20APSR.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Druckman et al 2012&lt;/a&gt;) would be of tremendous benefit to the literature. It is difficult to expose people to any sort of argument for a long period of time (say over the course of a U.S. national political campaign cycle), in a way that is not confounded with people&#39;s existing preferences and the social environment, though creative quasi-experimental work (
+&lt;a href=&#34;http://web.stanford.edu/~ayurukog/cable_news.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Martin and Yurukoglu 2014&lt;/a&gt;) is emerging in this area.&lt;/p&gt;
+&lt;p&gt;Many of these questions necessitate that researchers identify the effects of cross-cutting arguments both on and off Facebook. To get a full picture of how cross-cutting arguments affect politics requires understanding the myriad of ways individuals get information, both on the Internet (
+&lt;a href=&#34;https://5harad.com/papers/bubbles.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Flaxman et al. 2014&lt;/a&gt;) and offline (
+&lt;a href=&#34;http://journals.cambridge.org/action/displayAbstract?fromPage=online&amp;amp;aid=208463&amp;amp;fileId=S0003055402004264&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Mutz 2002&lt;/a&gt;a), what kinds of information people discuss in offline contexts (
+&lt;a href=&#34;http://dx.doi.org/10.1017/S0003055402004264&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Mutz 2002&lt;/a&gt;b), and the relative influence of all of these factors on opinions.&lt;/p&gt;
+&lt;p&gt;Finally, if individuals&#39; online networks and choices do substantially impact the diversity of news in individuals&#39; overall &amp;ldquo;information diets,&amp;rdquo; future research could examine the effects of connecting those with more disparate views (
+&lt;a href=&#34;http://ajps.org/2015/03/11/partisanship-in-social-settings-when-democrats-and-republicans-meet/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Klar 2014&lt;/a&gt;), encouraging consumption of cross-cutting content (
+&lt;a href=&#34;http://www.smunson.com/portfolio/projects/socnews_icwsm15.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Agapie and Munson 2015&lt;/a&gt;), or simply encouraging individuals to read more diverse news by making individuals more aware of the balance of news they consume (
+&lt;a href=&#34;http://www.smunson.com/portfolio/projects/aggdiversity/balancer-icwsm.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Munson et al. 2013&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;These questions are especially important in light of the fact that there are substantial opportunities for people to read more news on Facebook. The plots below illustrate the average proportion of stories shared by friends, those that are seen in News Feed, and those clicked on for liberals and conservatives in the study. Clearly there is an opportunity to read more news from either side.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://solmg.netlify.app/img/ddb611f4a223213b3a653208e5bdd048d6b9cd94.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Dataverse&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Finally, we believe that reproducing, replicating, and conducting additional analyses on extant data sets is extremely important and helps generate ideas for future work (
+&lt;a href=&#34;http://gking.harvard.edu/files/abs/replication-Abs.shtml&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;King 1995&lt;/a&gt;, 
+&lt;a href=&#34;http://thomasleeper.com/2015/05/open-science-language/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Leeper 2015&lt;/a&gt;). In that spirit, we have created a 
+&lt;a href=&#34;http://dataverse.harvard.edu/dataverse/facebook&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Facebook Dataverse repository&lt;/a&gt; in the 
+&lt;a href=&#34;http://dataverse.org/about/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Harvard Dataverse&lt;/a&gt;. The repository includes replication data, scripts, as well as some additional supplementary data and code for extending our work.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;References&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;E. Bakshy, S. Messing, L.A. Adamic. 2015. Exposure to ideologically diverse news and opinion on Facebook. &lt;em&gt;Science&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;E. Bakshy, I. Rosenn, C.A. Marlow, L.A. Adamic. 2012. The Role of Social Networks in Information Diffusion. &lt;em&gt;ACM WWW 2012.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;S. Messing and S.J. Westwood. 2012. Selective Exposure in the Age of Social Media: Endorsements Trump Partisan Source Affiliation When Selecting News Online. &lt;em&gt;Communication Research&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;P. Barberá (2015). Birds of the same feather tweet together: Bayesian ideal point estimation using Twitter data. &lt;em&gt;Political Analysis&lt;/em&gt;, &lt;em&gt;23&lt;/em&gt;(1), 76-91.&lt;/p&gt;
+&lt;p&gt;R. Bond, S. Messing, Quantifying Social Media&amp;rsquo;s Political Space: Estimating Ideology from Publicly Revealed Preferences on Facebook. &lt;em&gt;American Political Science Review&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;F. Elwert and C. Winship. 2014. Endogenous Selection Bias: The Problem of Conditioning on a Collider Variable. &lt;em&gt;Annual Review of Sociology.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;G. King, J. Pan, and M. E. Roberts. 2014. Reverse-Engineering Censorship in China: Randomized Experimentation and Participant Observation. &lt;em&gt;Science&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;C. Budak, S. Goel, &amp;amp; J. M. Rao. (2014). Fair and Balanced? Quantifying Media Bias Through Crowdsourced Content Analysis. &lt;em&gt;Quantifying Media Bias Through Crowdsourced Content Analysis (November 17, 2014)&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;S. Athey, M. Mobius. The Impact of News Aggregators on Internet News Consumption: The Case of Localization. Working paper. &lt;a href=&#34;http://faculty-gsb.stanford.edu/athey/documents/localnews.pdf&#34;&gt;http://faculty-gsb.stanford.edu/athey/documents/localnews.pdf&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;A. Hannak, P. Sapiezynski, A. Molavi Kakhki, B. Krishnamurthy, D. Lazer, A. Mislove, C. Wilson. 2013. Measuring personalization of web search. &lt;em&gt;ACM WWW 2013&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;A. Chen and A. Owen and M. Shi. Data Enriched Linear Regression. Working paper. &lt;a href=&#34;http://arxiv.org/pdf/1304.1837v3.pdf&#34;&gt;http://arxiv.org/pdf/1304.1837v3.pdf&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;G.J. Martin, A. Yurukoglu. Working paper. Bias in Cable News: Real Effects and Polarization. Working paper. &lt;a href=&#34;http://web.stanford.edu/~ayurukog/cable_news.pdf&#34;&gt;http://web.stanford.edu/~ayurukog/cable_news.pdf&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;S.R. Flaxman, S. Goel, J.M. Rao. Filter Bubbles, Echo Chambers, and Online News Consumption. Working paper. &lt;a href=&#34;https://5harad.com/papers/bubbles.pdf&#34;&gt;https://5harad.com/papers/bubbles.pdf&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;D.C. Mutz. 2002. The Consequences of Cross-Cutting Networks for Political Participation. &lt;em&gt;American Journal of Political Science&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;D.C. Mutz. 2002. Cross-cutting Social Networks: Testing Democratic Theory in Practice. &lt;em&gt;American Political Science Review&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;J. N. Druckman, J. Fein, &amp;amp; T. Leeper. 2012. A source of bias in public opinion stability. &lt;em&gt;American Political Science Review&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;E. Agapie, S.A. Munson. 2015. &amp;ldquo;
+&lt;a href=&#34;http://smunson.com/portfolio/projects/socnews_icwsm15.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Social Cues and Interest in Reading Political News Stories&lt;/a&gt;.&amp;rdquo; &lt;em&gt;AAAI ICWSM 2015&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;S. Klar. 2014. Partisanship in a Social Setting. &lt;em&gt;American Journal of Political Science&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;S.A. Munson, S.Y. Lee, P. Resnick. 2013. Encouraging Reading of Diverse Political Viewpoints with a Browser Widget. &lt;em&gt;AAAI ICWSM 2013&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;G. King. 1995. &amp;ldquo;Replication, Replication.&amp;rdquo; &lt;em&gt;Political Science and Politics&lt;/em&gt;. &lt;a href=&#34;http://j.mp/1wP9Vqn&#34;&gt;http://j.mp/1wP9Vqn&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;T. Leeper. 2015. What&#39;s in a Name? The Concepts and Language of Replication and Reproducibility. Blog post. &lt;a href=&#34;http://thomasleeper.com/2015/05/open-science-language/&#34;&gt;http://thomasleeper.com/2015/05/open-science-language/&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Know your data - Pricing diamonds using scatterplots and predictive models</title>
+      <link>https://solmg.netlify.app/post/visualization-series-scatterplot-understanding-the-diamond-market/</link>
+      <pubDate>Sat, 11 Oct 2014 00:00:00 +0000</pubDate>
+      <guid>https://solmg.netlify.app/post/visualization-series-scatterplot-understanding-the-diamond-market/</guid>
+      <description>&lt;p&gt;This post presents a replication of 
+&lt;a href=&#34;https://solmg.netlify.app/pdf/HSVmetricsCampaignsDarknessPOQFINAL.pdf&#34;&gt;Messing et al&lt;/a&gt;. (2016, study 2), which showed that exposure to darker images of Barack Obama increased stereotype activation, as indicated by the tendency to finish incomplete word prompts---such as &amp;ldquo;W E L _ _ _ _&amp;quot;---in stereotype-consistent ways (&amp;ldquo;WELFARE&amp;rdquo;).&lt;/p&gt;
+&lt;p&gt;Overall, the replication shows that darker images of even 
+&lt;a href=&#34;http://www.sciencedirect.com/science/article/pii/S0022103110002635&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;counter-stereotypical exemplars like Barack Obama&lt;/a&gt; can increase stereotype activation, but that the strength of the effect is weaker than conveyed in the original study.  A reanalysis of the original study conducted in the course of this replication effort unearthed a number of problems that, when corrected, yield estimates of the effect that are consistent with those documented in the replication. This reanalysis also follows.&lt;/p&gt;
+&lt;p&gt;I&#39;m posting this to&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;disseminate a 
+&lt;a href=&#34;https://solmg.netlify.app/pdf/HSVmetricsCampaignsDarknessPOQFINAL.pdf&#34;&gt;corrected version of the original study&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;show how I found those problems with the original study in the course of conducting this replication;&lt;/li&gt;
+&lt;li&gt;circulate these generally confirmatory findings, along with a pooled analysis revealing a stronger effect among conservatives; and&lt;/li&gt;
+&lt;li&gt;provide a demonstration of how replication almost always enhances our knowledge about the original research, which I hope may encourage others to invest the time and money in such efforts.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;First some context.&lt;/p&gt;
+&lt;p&gt;The original study that formed the basis of the manuscript shows that more negative campaign ads in 2008 were also more likely to contain darker images of President Obama. In 2009 when I started this work, I was most proud of the method to collect data on skin complexion outlined in study 1.  I included another study, what&#39;s now study 3, which shows that 2012 ANES survey-takers were more likely to respond negatively to Chinese characters after being presented with darker images of Obama (this is called the 
+&lt;a href=&#34;http://onlinelibrary.wiley.com/doi/10.1111/spc3.12148/abstract&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Affect Misattribution Procedure (AMP)&lt;/a&gt;).
+But the AMP was not a true experiment and a reviewer was concerned that Study 3 did not provide sufficiently rigorous, causal evidence that darker images alone can cause negative affect.  So I conducted an experiment that would establish a causal link between darker images of Obama and something I thought was even more important---stereotype activation. There were strong reasons to expect this effect based on past lab studies showing links between 
+&lt;a href=&#34;https://ase.tufts.edu/psychology/tuscLab/documents/pubsCognitive2002.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;darker skin&lt;/a&gt; and 
+&lt;a href=&#34;https://www.ncbi.nlm.nih.gov/pubmed/12088132&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;negative stereotypes about Blacks&lt;/a&gt;, and past observational studies showing far more 
+&lt;a href=&#34;https://wcfia.harvard.edu/files/wcfia/files/2007_27_hochschild.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;negative socioeconomic outcomes across the board among darker versus lighter skinned Black Americans&lt;/a&gt;. We found an effect and published the three studies.&lt;/p&gt;
+&lt;p&gt;This replication effort was prompted by a post-publication reanalysis and 
+&lt;a href=&#34;http://www.ljzigerell.com/?p=3622&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;critique&lt;/a&gt;, which raised questions about potential weaknesses in the original analysis. My aim in replicating the study was to bring new data to the discussion and make sure we hadn&amp;rsquo;t polluted the literature with a false discovery.&lt;/p&gt;
+&lt;p&gt;The main objection was the way we formed our stereotype consistency index. The items assessing stereotype consistency comprised 11 words with missing blank spaces (e.g., L A _ _). Each fragment had as one possible solution a stereotype-related completion. The complete list follows: L A _ _ (LAZY): C R _ _ _ (CRIME); _ _ O R (POOR); R _ _ (RAP); WEL _ _ _ _ (WELFARE); _ _ C E (RACE); D _ _ _ Y (DIRTY); B R _ _ _ _ _ (BROTHER); _ _ A C K (BLACK); M I _ _ _ _ _ _ (MINORITY); D R _ _ (DRUG).&lt;/p&gt;
+&lt;p&gt;The author pointed out that there were many potential ways to analyze the original data---he claimed over 16 thousand. Yet very few of these are consistent with generally accepted research practices. We&#39;ve known, arguably since the 
+&lt;a href=&#34;http://www.jstor.org/stable/2333051?origin=crossref&amp;amp;seq=1#page_scan_tab_contents&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;16th century&lt;/a&gt;, that combining several measures reduces measurement error and hence variance in estimation. This is particularly important in social science, and especially for this particular study---it would be unwise to attempt to use a single word completion or an arbitrary subset thereof to measure a complex, noisy construct like stereotype activation as measured via a word completion game. Rather, taking the 
+&lt;a href=&#34;https://web.stanford.edu/~jrodden/issues_apsr.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;average or constructing an index based on clustering several measures&lt;/a&gt; should be expected to result in far less measurement error, which is what we did.&lt;/p&gt;
+&lt;p&gt;Still, I am sympathetic to concerns about the 
+&lt;a href=&#34;http://www.stat.columbia.edu/~gelman/research/unpublished/p_hacking.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;garden of forking paths&lt;/a&gt;, which is part of the motivation for this replication.&lt;/p&gt;
+&lt;p&gt;In the original study, I formed this index based on what I judged to be the most unambiguously negative word-completions (lazy, dirty, poor), consistent with past work suggesting that darker complexion activates the 
+&lt;a href=&#34;https://ase.tufts.edu/psychology/tuscLab/documents/pubsCognitive2002.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;most &lt;/a&gt;
+&lt;a href=&#34;https://www.ncbi.nlm.nih.gov/pubmed/12088132&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;negative&lt;/a&gt; stereotypes about Blacks. I calculated that these were the three variables that also maximized interclass correlation (ICC). As a robustness check, I also computed a measure that maximized alpha reliability (AR). This measure contained more items, and also seemed to include stereotype-consistent word completions that were on balance negative---lazy, dirty, poor, crime, black, and welfare. I should have but did not report results based on a simple average of these items, which was not conclusive.&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;http://www.ljzigerell.com/?p=3622&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;The critical reanalysis&lt;/a&gt; cited above shows a handful of statistically significant patterns that are inconsistent with the expectations in the original study, which is suggestive evidence that it&#39;s quite possible to find signal in noise if you&#39;re analyzing arbitrary sets of variables with the originally collected data. However, as shown below in the much larger replication sample below, none of these patterns replicate.&lt;/p&gt;
+&lt;p&gt;The critique also noted that we did not include an analysis of several trailing questions we included on the original survey. The concern is the 
+&lt;a href=&#34;http://science.sciencemag.org/content/345/6203/1502&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;file drawer problem&lt;/a&gt; - the incentives against and frequent failure to report null results - which obscures knowledge and is bad for the scientific enterprise.&lt;/p&gt;
+&lt;p&gt;I included those measures based on 
+&lt;a href=&#34;https://papers.ssrn.com/sol3/papers.cfm?abstract_id=1643225&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;past work&lt;/a&gt; using the same images as stimuli, which found that darker images prompted more negative evaluations of Obama among people with more negative associations with Blacks, as measured using the Implicit Associations Test (IAT). But testing a specification that conditioned on our main outcome of interest---stereotype-consistent word completions---would mean conditioning on a post-treatment variable, particularly worrisome since we saw an effect on stereotype activation in the study.&lt;/p&gt;
+&lt;p&gt;Below, I pool the data and report another specification that does not require us to condition on post-treatment variables. It takes advantage of the fact that conservatives had significantly higher levels of stereotype activation (which was documented in the original study), and shows that the effect is in fact stronger among this subgroup, providing preliminary evidence in favor of this hypothesis.&lt;/p&gt;
+&lt;p&gt;The remainder of this post will present my own reanalysis of the original data, the replication, and finally some additional analysis of the data now possible with the larger, pooled data set.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Re-analysis of original data&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;In the process of collecting data for the replication studies, I used the same interface, simply appending the new data as additional respondents completed the survey experiment. When I geo-coded the IP address data in the full data set, I found a discrepancy between the cases I originally geo-coded as U.S. cases, and the cases that now resolved to U.S. locations in the complete data set.  Many of these respondents appeared in sequence, suggesting they may have been skipped, perhaps due to issues related to connectivity to the geo-location server I used.&lt;/p&gt;
+&lt;p&gt;This prompted me to conduct a full re-analysis of the data, which yields smaller estimates of stereotype activation. First, re-estimating the index yielded different items---&#39;black&#39; in place of &#39;dirty&#39; for the ICC measure and &#39;race&#39; in place of &#39;welfare&#39;, &#39;crime&#39;, and &#39;dirty&#39; in the AR measure. This is due in part to the way I computed the original indices and in part due to correcting the geo-coding issue. In the original study, I computed the index of variables that maximized alpha and ICC by hand because the epiCalc::alphaBest function (now epiDisplay::alphaBest) does not return results (nor an error message) for these data. For reanalysis, I wrote a function that computed variables to include in the index via successive removal of items. The overall alpha is actually slightly lower in new AR measure, while the new ICC measure has a slightly higher correlation coefficient.&lt;/p&gt;
+&lt;p&gt;For the sake of transparency, I first report results based on the original items included in the index as reported in Messing et al. 2015 using the updated data, then report the new ICC and AR measures.&lt;/p&gt;
+&lt;p&gt;Using the original indices with the errantly remove cases included, instead of a 36% increase in stereotype-consistent word completions using the ICC measure, this meant a revised estimate of a 20% increase in stereotype activation (M_Light = 0.33, M_Dark = 0.41, T(859.0) = 2.08, P = 0.038, two-sided). For the AR measure, instead of a 13% increase (M_Light = 0.97, M_Dark = 1.11, T(626.72) = 1.77, P = 0.078, two-sided), this meant an 8% increase (M_Light = 0.98, M_Dark = 1.06, T(850.9) = 1.12, P = 0.265, two-sided).&lt;/p&gt;
+&lt;p&gt;Re-estimating the indices when including all U.S. cases translates to less conclusive findings---a revised estimate of an 8% increase in stereotype activation in the original study (M_Light = 0.79, M_Dark = 0.86, T(850.7) = 1.27, P = 0.203, two-sided) using the ICC measure, and an 8% increase (M_Light = 0.87, M_Dark = 0.91, T(839.1) = 0.77, P = 0.439, two-sided) using the AR measure.&lt;/p&gt;
+&lt;p&gt;A slightly smaller effect was also observed when examining differences between conservatives and other participants. Correcting the geo-coding error and updating the indices reduced the estimate of stereotype activation for conservatives. Instead of a 53% increase, the original ICC measure yields a 29% increase (M_Other = 0.35, M_Conservative = 0.49, T(205.9) = 2.49, P = 0.013, two-sided).  The new ICC measure yields an 18% increase (M_Other = 0.80, M_Conservative = 0.98, T(207.9) = 2.41, P = 0.017, two-sided).  For the AR measure, instead of a 29% increase, this meant an 18% increase using either measure (original: M_Other = 0.99, M_Conservative = 1.18, T(210.4) = 2.11, P = 0.036, two-sided) (new: M_Other = 0.86, M_Conservative = 1.05, T(214.3) = 2.47, P = 0.014, two-sided).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;The replication&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;I conducted one exact replication and one very close replication with slightly different images, which I pooled for a total of 3,151 respondents, substantially more than the 630 included in the original writeup.  This gives me more statistical power and more precise estimates of the effect in question. (I provide results for each design separately - one of which appears underpowered - at the end of this post).&lt;/p&gt;
+&lt;p&gt;To be clear, I did not pre-register this replication. However, I&#39;ve tried to err on the side of exhaustive reporting when the original study did not provide exacting specificity in analyzing the new data. Due to the nature of this replication---the presentation of the same analysis conducted in the original study---the p-values provide highly informative, if not conclusive evidence regarding the nature of the effect.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://solmg.netlify.app/img/cb54a931e7c01f3bfd03caa2899518b447ab470e.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;The average reported age was 36; 52% of participants identified as female; 84% identified as White, 8% as Black; 5% as Hispanic; and 3% as Other. 52% identified as liberal, 27% as moderate, 22% as conservative.&lt;/p&gt;
+&lt;p&gt;Recomputing the ICC index yielded the following items: black, poor, drug. Recomputing the AR index yielded: lazy, black, poor, welfare, crime, drug, which is close to the original study.&lt;/p&gt;
+&lt;p&gt;In the replication data, the ICC yields a 5% increase in stereotype activation (M_Light = 0.90, M_Dark = 0.95, T(3142.8) = 1.56, P = 0.119, two-sided). Similarly, the alpha measure yields a 5% increase (M_Light = 1.04, M_Dark = 1.09, T(3145.8) = 1.70, P = 0.089, two-sided).&lt;/p&gt;
+&lt;p&gt;The original study isn&#39;t completely clear on the question of whether a replication should report on the recomputed ICC and AP measures, or the exact same items as in the original study, so it&#39;s worth reporting those as well. The &lt;em&gt;original&lt;/em&gt; ICC measure yields a 3% increase in stereotype activation (M_Light = 0.36, M_Dark = 0.37, T(3148.9) = 0.51, P = 0.611, two-sided). Using the &lt;em&gt;original&lt;/em&gt; AR measure yields a 6% increase (M_Light = 1.01, M_Dark = 1.07, T(3147.9) = 1.91, P = 0.057, two-sided).&lt;/p&gt;
+&lt;p&gt;Finally, it&#39;s worth reporting on an index that simply uses all stereotype-consistent items in the replication reveals a 5% increase in stereotype activation (M_Light = 1.30, M_Dark = 1.37, T(3147.7) = 2.05, P = 0.040, two-sided).&lt;/p&gt;
+&lt;p&gt;A pooled analysis, after normalizing the ICC and AR measures, yields similar results:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://solmg.netlify.app/img/a0415aa41faee2db8452e14712ae9505f7a96f0a.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;=================================================
+                      ICC     Alpha      ALL
+-------------------------------------------------
+  (Intercept)       -0.041   -0.028    1.292***
+                    (0.034)  (0.034)  (0.036)
+  cond: Dark/Light   0.067*   0.058    0.067*
+                    (0.032)  (0.032)  (0.034)
+  study              0.006   -0.001    0.008
+                    (0.023)  (0.023)  (0.025)
+-------------------------------------------------
+  R-squared             0.0      0.0       0.0
+  N                  4012     4012      4012
+=================================================
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;I also replicated this study with a different, lesser-known Black politician (Jesse White). However, a manipulation check revealed that only 36% of respondents said the candidate was Black in the &amp;ldquo;light&amp;rdquo; condition, compared to 83% in the darker condition, suggesting that any analysis would be severely confounded by perceived race of the target politician. (I did not ask this question in the Barack Obama studies).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Additional analysis&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The superior power afforded by pooling all three studies may allow the exploration of treatment heterogeneity. 
+&lt;a href=&#34;https://papers.ssrn.com/sol3/papers.cfm?abstract_id=1643225&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Past work&lt;/a&gt; suggests the possibility that darker images might cause people inclined toward more stereotype-consistent responses to evaluate politicians more negatively. However, this analysis would 
+&lt;a href=&#34;http://andrewgelman.com/2017/09/12/conditioning-post-treatment-variables-can-ruin-experiment/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;condition on post-treatment variables&lt;/a&gt;, which in this case is particularly concerning since the treatment affects stereotype activation according to the original study and replication above.  As an alternative, I consider a specification that uses conservative identification instead, which is a strong predictor of stereotype activation (as shown in the original study), but shouldn&amp;rsquo;t be affected by the treatment. It reveals evidence for the predicted interactions, suggesting that when conservatives are exposed to darker rather than lighter images of Obama, they have slightly &amp;ldquo;colder&amp;rdquo; feelings toward the former president (P = 0.039), perceive him to be less competent (P = 0.061), and less trustworthy (P = 0.083).&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;=================================================================
+                             obama_therm  competence    trust
+-----------------------------------------------------------------
+  (Intercept)                 69.446***    4.213***    3.867***
+                              (0.705)     (0.029)     (0.031)
+  cond: Dark/Light             0.451       0.024       0.045
+                              (0.989)     (0.041)     (0.044)
+  iscons                     -40.497***   -1.574***   -1.625***
+                              (1.565)     (0.064)     (0.069)
+  cond: Dark/Light x iscons   -4.462*     -0.167      -0.165
+                              (2.160)     (0.089)     (0.095)
+-----------------------------------------------------------------
+  R-squared                        0.3         0.3         0.2
+  N                             3932        3928        3926
+=================================================================
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;A plot of the model predictions for the thermometer ratings suggests that the effect is concentrated among conservatives.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://solmg.netlify.app/img/f82207e502f7cdd9c8a6b178efa7ca801d1b8e4c.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Conclusion&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The more items one uses to form an index, the less noise we should expect, and the more likely any replication attempt should be expected to succeed.  It should also mean greater statistical precision. This could explain the remaining discrepancy between this study and the original after adjusting for the geo-coding error pointed out above. It&#39;s also possible that something about the timing or the subjects recruited in the replication studies that explain the observed differences.&lt;/p&gt;
+&lt;p&gt;Nonetheless, this replication provides evidence that darker images of Black political figures, or at least of President Barack Obama, do in fact activate stereotypes.  This much larger sample suggests that the true effect is smaller than what I found in the original study, which as noted above, contained some errors.&lt;/p&gt;
+&lt;p&gt;Replication materials available on 
+&lt;a href=&#34;http://dx.doi.org/10.7910/DVN/WY7PR8&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;dataverse&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Appendix&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Below I present alternate specifications estimated without pooling. These specifications suggest first that replication 2 (as well as the original study) was not well-powered. It also suggests that the outcome measures with more items yield more reliable estimates.&lt;/p&gt;
+&lt;p&gt;Outcome measure summing all items:&lt;/p&gt;
+&lt;p&gt;Replication 1: M_Light = 1.29, M_Dark = 1.36, T(2115.4) = -1.59, P = 0.113, two-sided&lt;/p&gt;
+&lt;p&gt;Replication 2: M_Light = 1.30, M_Dark = 1.39, T(982.7) = -1.35, P = 0.177, two-sided&lt;/p&gt;
+&lt;p&gt;Original Alpha outcome measure:&lt;/p&gt;
+&lt;p&gt;Replication 1: M_Light = 0.99, M_Dark = 1.06, T(2114.9) = -1.79, P = 0.073, two-sided&lt;/p&gt;
+&lt;p&gt;Replication 2: M_Light = 1.04, M_Dark = 1.09, T(979.8) = -0.85, P = 0.393, two-sided&lt;/p&gt;
+&lt;p&gt;Newly estimated Alpha outcome measure:&lt;/p&gt;
+&lt;p&gt;Replication 1: M_Light = 1.02, M_Dark = 1.09, T(2109.4) = -1.77, P = 0.077, two-sided&lt;/p&gt;
+&lt;p&gt;Replication 2: M_Light = 1.07, M_Dark = 1.10, T(984.6) = -0.53, P = 0.597, two-sided&lt;/p&gt;
+&lt;p&gt;Original ICC outcome measure:&lt;/p&gt;
+&lt;p&gt;Replication 1: M_Light = 0.89, M_Dark = 0.94, T(2100.6) = -1.49, P = 0.137, two-sided.&lt;/p&gt;
+&lt;p&gt;Replication 2: M_Light = 0.93, M_Dark = 0.96, T(985.9) = -0.67, P = 0.506, two-sided&lt;/p&gt;
+&lt;p&gt;Newly estimated ICC outcome measure&lt;/p&gt;
+&lt;p&gt;Replication 1: M_Light = 0.35, M_Dark = 0.36, T(2122.5) = -0.22, P = 0.826, two-sided&lt;/p&gt;
+&lt;p&gt;Replication 2: M_Light = 0.38, M_Dark = 0.40, T(978.7) = -0.72, P = 0.472, two-sided
+ 
+A replication of prior 
+&lt;a href=&#34;http://www.ljzigerell.com/?p=3622&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;critique and reanalysis&lt;/a&gt;.  The patterns that run contrary to our original findings are not significant in the replication data.&lt;/p&gt;
+&lt;table style=&#34;height:1612px;&#34; width=&#34;584&#34;&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Variable&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;effect size&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;p-value&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;feeling therm&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;-0.028&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;0.439&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;race minority welfare crime rap&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;0.022&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;0.538&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;race minority welfare rap&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;0.017&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;0.629&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;race minority rap&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;0.011&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;0.752&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;race&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;0.006&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;0.861&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;minority&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;-0.013&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;0.713&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;rap&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;0.024&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;0.502&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;welfare&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;0.014&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;0.695&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;comp&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;-0.013&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;0.72&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;crime&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;0.016&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;0.659&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;trust&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;0.002&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;0.946&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;brother&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;0.042&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;0.236&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;drug&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;0.008&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;0.822&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;lazy&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;0.026&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;0.474&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;black&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;0.084&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;0.019&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;dirty&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;0.028&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;0.438&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;poor&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;-0.002&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;0.957&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;allwcs&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;0.073&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;0.04&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;original&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;0.018&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;0.611&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;alpha&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;0.068&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span style=&#34;font-weight:400;&#34;&gt;0.057&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;</description>
+    </item>
+    
+    <item>
+      <title>When to Use Stacked Barcharts?</title>
+      <link>https://solmg.netlify.app/post/when-to-use-stacked-barcharts/</link>
+      <pubDate>Sat, 11 Oct 2014 00:00:00 +0000</pubDate>
+      <guid>https://solmg.netlify.app/post/when-to-use-stacked-barcharts/</guid>
+      <description>&lt;p&gt;Yesterday a few of us on Facebook&amp;rsquo;s Data Science Team released a 
+&lt;a href=&#34;https://www.facebook.com/notes/10152581594083859/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;blogpost showing how candidates are campaigning on Facebook in the 2014 U.S. midterm elections&lt;/a&gt;. It was 
+&lt;a href=&#34;http://www.washingtonpost.com/blogs/govbeat/wp/2014/10/10/how-candidates-use-facebook-motivation-more-than-persuasion/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;picked up in the Washington Post&lt;/a&gt;, in which 
+&lt;a href=&#34;http://www.washingtonpost.com/people/reid-wilson&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Reid Wilson&lt;/a&gt; calls us &amp;quot;data wizards.&amp;quot; Outstanding.&lt;/p&gt;
+&lt;p&gt;I used 
+&lt;a href=&#34;http://had.co.nz/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Hadly Wickham&#39;s&lt;/a&gt; ggplot2 for every visualization in the post except a map that 
+&lt;a href=&#34;http://web.stanford.edu/~arjunw/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Arjun Wilkins&lt;/a&gt; produced using D3, and for the first time I used stacked bar charts.  Now as I&#39;ve stated previously, 
+&lt;a href=&#34;https://solmg.netlify.app/post/visualization-series-insight-from-cleveland-and-tufte-on-plotting-numeric-data-by-groups&#34;&gt;one should generally avoid bar charts, and especially stacked bar charts&lt;/a&gt;, except in a few specific circumstances.&lt;/p&gt;
+&lt;p&gt;But let&#39;s talk about when not to use stacked bar charts first---I had the pleasure of chatting with Kaiser Fung of 
+&lt;a href=&#34;http://junkcharts.typepad.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;JunkCharts&lt;/a&gt; fame the other day, and I think what makes his site so compelling is the mix of schadenfreude and 
+&lt;a href=&#34;http://betterthanenglish.com/fremdscham-german/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Fremdscham&lt;/a&gt; that makes taking apart someone else&#39;s mistake such an effective teaching strategy and such a memorable read. I also appreciate the subtle nod to 
+&lt;a href=&#34;https://en.wikipedia.org/wiki/Found_object&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;junk art&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Here&#39;s a typical, terrible stacked bar chart, which I found on &lt;a href=&#34;http://www.storytellingwithdata.com/&#34;&gt;http://www.storytellingwithdata.com/&lt;/a&gt; and originally published on a 
+&lt;a href=&#34;http://blogs.wsj.com/digits/2012/10/22/microsoft-windows-8-forrester/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Wall Street Journal blogpost&lt;/a&gt;. It shows the share of the personal computing device market by operating system, over time. The problem with using a stacked bar chart is that there are only two common baselines for comparison (the top and bottom of the plotting area), but we are interested in the relative share for more than two OS brands. The post is really concerned with Microsoft, so one solution would be to plot Microsoft versus the rest, or perhaps Microsoft on top versus Apple on the bottom with &amp;quot;Other&amp;quot; in the middle. Then we&#39;d be able to compare the over time market share for Apple and Microsoft. As the author points out, an over time trend can also be visualized with line plots.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://solmg.netlify.app/img/b5e194c5114b79478a7ffcf600b18cd205a3a1b7.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;By far the worst offender I found in my 5 minute Google search was 
+&lt;a href=&#34;http://junkcharts.typepad.com/junk_charts/2014/08/one-guaranteed-to-make-stephen-few-cry-.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;from junkcharts&lt;/a&gt; and originally published on 
+&lt;a href=&#34;http://www.vox.com/2014/7/28/5944065/electric-cars-plug-in-vehicles-rising-sales-US&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Vox&lt;/a&gt;. These cumulative sum plots are so bad I was surprised to see them still up. The first problem is that the plots represent an attempt to convey way too much information---either plot total sales or pick a few key brands that are most interesting and plot them on a multi-line chart or set of faceted time series plots. The only brand for which you can quickly get a sense of sales over time is the Chevy Volt because it&#39;s on the baseline. I&#39;m sure the authors wanted to also convey the proportion of sales each year, but if you want to do that just plot the relative sales. Of course, the order in which the bars appear on the plot has no organizing principle, and you need to constantly move your eyes back and forth from the legend to the plot when trying to make sense of this monstrosity.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://solmg.netlify.app/img/a1281b5624937d4bf8069706e74028aeb8f9952d.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;As Kaiser notes in his post, less is often more. Here&#39;s his redux, which uses lines and aggregates by both quarter and brand, resulting in a far superior visualization:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://solmg.netlify.app/img/df59a98319dbf363b90514243d0ded9d9aa191ce.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;So when *should* you use a stacked bar chart? Here are a two scenarios with examples, inspired by work with 
+&lt;a href=&#34;http://eytan.github.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Eytan Bakshy&lt;/a&gt; and conversations with 
+&lt;a href=&#34;http://ta.virot.me/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Ta Chiraphadhanakul&lt;/a&gt; and 
+&lt;a href=&#34;http://www.johnmyleswhite.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;John Myles White&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;1. You care about comparing the proportion of two things, in this case the share of posts by Democrats and Republicans, along a variety of dimensions.  In this case those dimensions consist of keyword (dictionary-based) categories (above) and LDA topics (below).  When these are sorted by relative proportion, the reader gains insight into which campaign strategies and issues are used more by Republican or Democratic candidates.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://solmg.netlify.app/img/b16c48bc6a47363ced0e685cb506df99e15e0a73.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;You care about comparing proportions along an ordinal, additive variable such as 5-point party identification, along a set of dimensions.  I provide an example from a forthcoming paper below (I&#39;ll re-insert the axis labels once it&#39;s published).  Notice that it draws the reader toward two sets of comparisons across dimensions -- one for strong democrats and republicans, the other for the set of *all* Democrats and *all* Republicans.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;https://solmg.netlify.app/img/312fb516b818733414acbe395ded53b8424f37a2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Of course, R code to produce these plots follows:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# Uncomment these lines and install if necessary:
+#install.packages(&#39;ggplot2&#39;)
+#install.packages(&#39;dplyr&#39;)
+#install.packages(&#39;scales&#39;)
+library(ggplot2)
+library(dplyr)
+library(scales)
+# We start with the raw number of posts for each party for
+# each candidate. Then we compute the total by party and
+# category.
+catsByParty %&amp;gt;% group_by(party, all_cats) %&amp;gt;%
+summarise(tot = summ(posts))
+# Next, compute the proportion by party for each category
+# using dplyr::mutate
+catsByParty &amp;lt;- catsByParty %&amp;gt;%
+group_by(all_cats) %&amp;gt;%
+mutate(prop = tot/sum(tot))
+# Now compute the difference by category and order the
+# categories by that difference:
+catsByParty &amp;lt;- catsByParty %&amp;gt;% group_by(all_cats) %&amp;gt;%
+mutate(pdiff = diff(prop))
+catsByParty$all_cats &amp;lt;- reorder(catsByParty$all_cats, -catsByParty$pdiff)
+# And plot:
+ggplot(catsByParty, aes(x=all_cats, y=prop, fill=party)) +
+scale_y_continuous(labels = percent_format()) +
+geom_bar(stat=&#39;identity&#39;) +
+geom_hline(yintercept=.5, linetype = &#39;dashed&#39;) +
+coord_flip() +
+theme_bw() +
+ylab(&#39;Democrat/Republican share of page posts&#39;) +
+xlab(&#39;&#39;) +
+scale_fill_manual(values=c(&#39;blue&#39;, &#39;red&#39;)) +
+theme(legend.position=&#39;none&#39;) +
+ggtitle(&#39;Political Issues Discussed by Party\n&#39;)
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
     
     <item>
       <title>Insight From Cleveland And Tufte On Plotting Numeric Data By Groups</title>
@@ -64,27 +1252,26 @@
 I&#39;m less sure about Tufte&#39;s advice to always show axes starting at zero, which can make comparison between two groups difficult, and to &#34;show causality,&#34; which can end up misleading your readers.  Of course, the visualizations on display in the glossy pages of Tufte&#39;s books are beautiful.  But while his books are full of general advice that we should all keep in mind when creating plots, he does not put forth a theory of what works and what doesn&#39;t when trying to visualize data. 
 &lt;p&gt;Cleveland (with Robert McGill) develops such a theory and subjects it to rigorous scientific testing. In my last post I linked to one of Cleveland&amp;rsquo;s studies showing that 
 &lt;a href=&#34;https://www.cs.ubc.ca/~tmm/courses/cpsc533c-04-spr/readings/cleveland.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;dots (or bars) aligned on the same scale are indeed the best visualization to convey a series of numerical estimates&lt;/a&gt;.  In this work, Cleveland examined how accurately our visual system can process visual elements or &amp;ldquo;perceptual units&amp;rdquo; representing underlying data.  These elements include markers aligned on the same scale (e.g., dot plots, scatterplots, ordinary bar charts), the length of lines that are not aligned on the same scale (e.g., stacked bar plots), area (pie charts and mosaic plots), angles (also pie charts), shading/color, volume, curvature, and direction.&lt;/p&gt;
-&lt;p&gt;
-&lt;a href=&#34;http://solomonmessing.files.wordpress.com/2012/01/graphicalelementscleveland.png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;img src=&#34;https://solmg.netlify.app/assets/img/graphicalelementscleveland.png&#34; alt=&#34;&#34; title=&#34;Graphical Elements (Cleveland)&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://solmg.netlify.app/img/graphicalelementscleveland.png&#34; alt=&#34;&#34; title=&#34;Graphical Elements (Cleveland)&#34;&gt;&lt;/p&gt;
 &lt;p&gt;He runs two experiments: the first compares judgements about relative position (grouped bar charts) to judgements based only on length (stacked bar charts); the second compares judgements about relative position (ordinary bar charts) to judgements about angles/area (pie charts).  Here are the materials he uses, courtesy of the 
 &lt;a href=&#34;http://graphics.stanford.edu/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Stanford Computer Graphics Lab&lt;/a&gt;:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://solmg.netlify.app/assets/img/slide012.png&#34; alt=&#34;&#34; title=&#34;Graphical perception experiments&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://solmg.netlify.app/assets/img/slide013.png&#34; alt=&#34;&#34; title=&#34;Graphical perception experiments&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://solmg.netlify.app/img/slide012.png&#34; alt=&#34;&#34; title=&#34;Graphical perception experiments&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://solmg.netlify.app/img/slide013.png&#34; alt=&#34;&#34; title=&#34;Graphical perception experiments&#34;&gt;&lt;/p&gt;
 &lt;p&gt;The results are resoundingly clear&amp;mdash;judgements about position relative to a baseline are dramatically more accurate than judgements about angles, area, or length (with no baseline).  Hence, he suggests that we replace pie charts with bar charts or dot plots and that we substitute stacked bar charts for grouped bar charts.&lt;/p&gt;
 &lt;p&gt;A striking and often overlooked finding in this work is the fact that the group of participants without technical training, &amp;ldquo;mostly ordinary housewives&amp;rdquo; as Cleveland describes them, performed &lt;em&gt;just as well&lt;/em&gt; as the group of mostly men with substantial technical training and experience.   This finding provides evidence for something that I&amp;rsquo;ve long suspected: that visualizations make it easier for people lacking quantitative experience to understand your results, serving to level the playing field.  If you want your findings to be broadly accessible, it&amp;rsquo;s probably better to present a visualization rather than a bunch of numbers.  It also suggests that if someone is having trouble interpreting your visualizations, it&amp;rsquo;s probably your fault.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Dotplots versus pie charts and stacked barplots&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Now let&amp;rsquo;s put this to the test.  Take a look at each visualization below for two seconds, looking for the percent of the vote that Mitt Romney, Ron Paul, and Jon Huntsman got.&lt;/p&gt;
 &lt;p&gt;
-&lt;a href=&#34;https://solmg.netlify.app/assets/img/primarydot2.png&#34;&gt;&lt;img src=&#34;https://solmg.netlify.app/assets/img/primarydot2.png&#34; alt=&#34;&#34; title=&#34;primaryDot&#34;&gt;&lt;/a&gt;
-&lt;a href=&#34;https://solmg.netlify.app/assets/img/primarypie1.png&#34;&gt;&lt;img src=&#34;https://solmg.netlify.app/assets/img/primarypie1.png&#34; alt=&#34;&#34; title=&#34;primaryPie&#34;&gt;&lt;/a&gt;
-&lt;a href=&#34;https://solmg.netlify.app/assets/img/primarystacked.png&#34;&gt;&lt;img src=&#34;https://solmg.netlify.app/assets/img/primarystacked.png&#34; alt=&#34;&#34; title=&#34;primaryStacked&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;a href=&#34;https://solmg.netlify.app/img/primarydot2.png&#34;&gt;&lt;img src=&#34;https://solmg.netlify.app/img/primarydot2.png&#34; alt=&#34;&#34; title=&#34;primaryDot&#34;&gt;&lt;/a&gt;
+&lt;a href=&#34;https://solmg.netlify.app/img/primarypie1.png&#34;&gt;&lt;img src=&#34;https://solmg.netlify.app/img/primarypie1.png&#34; alt=&#34;&#34; title=&#34;primaryPie&#34;&gt;&lt;/a&gt;
+&lt;a href=&#34;https://solmg.netlify.app/img/primarystacked.png&#34;&gt;&lt;img src=&#34;https://solmg.netlify.app/img/primarystacked.png&#34; alt=&#34;&#34; title=&#34;primaryStacked&#34;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Which is easiest to read? Which conveys information most accurately? Let&amp;rsquo;s first take a look at the most critical information&amp;ndash;the order in which the candidates placed.  In all plots, the candidates are arrayed in order from highest to least vote share, and it&amp;rsquo;s easy to see that Mitt won.  But once we start looking at who came in second, third, and so on, differences emerge.  It&amp;rsquo;s slightly harder to process order in the pie chart because your eye has to go around the plot rather than up and down in a straight line.  In the stacked bar chart, we need to look up which color corresponds to which candidate&amp;rsquo;s in the legend (as Tufte told us not to use), adding a layer of cognitive processing.&lt;/p&gt;
 &lt;p&gt;Second, which conveys estimates most accurately? The dot plot is the clear winner here.  We can quickly see that Romney got about 37%, Paul got about 24%, and Huntsman got about 16%, just by looking at dots relative to the axis.  When we look at the pie chart, it&amp;rsquo;s really tough to estimate the exact percent each candidate got.  Same with the stacked bar chart. We could add numbers to the pie and bar charts, which would even things out to some extent, but then why not just display a table with exact percents?&lt;/p&gt;
 &lt;p&gt;One argument I used to hear all the time when I worked in industry is that pie charts &amp;ldquo;convey a sense of proportion.&amp;rdquo;  Well, sure, I guess I can kind of guestimate that Ron Paul&amp;rsquo;s vote share is about 1/4.  What about Jon Huntsman? Hmm, it looks like about 15 percent, which is 3/20.  But wait, why do I want to convert things into fractions anyway? I don&amp;rsquo;t think in terms of fractions, I think in terms of percents.  And if I really care about proportion, I suppose I could extend the axis from 0 to 100.&lt;/p&gt;
 &lt;p&gt;Suppose I want to plot results for the top 15 candidates, not just the top 6?  Here&amp;rsquo;s what happens:&lt;/p&gt;
 &lt;p&gt;
-&lt;a href=&#34;https://solmg.netlify.app/assets/img/primarydot15.png&#34;&gt;&lt;img src=&#34;https://solmg.netlify.app/assets/img/primarydot15.png&#34; alt=&#34;&#34; title=&#34;primaryDot15&#34;&gt;&lt;/a&gt;
-&lt;a href=&#34;https://solmg.netlify.app/assets/img/primarypie15.png&#34;&gt;&lt;img src=&#34;https://solmg.netlify.app/assets/img/primarypie15.png&#34; alt=&#34;&#34; title=&#34;primaryPie15&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;a href=&#34;https://solmg.netlify.app/img/primarydot15.png&#34;&gt;&lt;img src=&#34;https://solmg.netlify.app/img/primarydot15.png&#34; alt=&#34;&#34; title=&#34;primaryDot15&#34;&gt;&lt;/a&gt;
+&lt;a href=&#34;https://solmg.netlify.app/img/primarypie15.png&#34;&gt;&lt;img src=&#34;https://solmg.netlify.app/img/primarypie15.png&#34; alt=&#34;&#34; title=&#34;primaryPie15&#34;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;No contest, the pie chart fails completely.  We&amp;rsquo;d need to add a legend with colors for each candidate, which adds another layer of cognitive processing&amp;ndash;we&amp;rsquo;d need to look up each color in the lengend as we go.  And even after adding the legend, you wouldn&amp;rsquo;t be able to distinguish the lower performing candidates from say write-in votes because the pie slices would be too small.  The stacked bar chart will fail for the same reasons, so I&amp;rsquo;ve excluded it in the interest of brevity.  Note that we don&amp;rsquo;t need to add colors to the dotplot to convey the same information, which saves an extra plotting element that we can use to represent something else (say candidate&amp;rsquo;s campaign funds or total assets).  And, on top of it all, the dot plot takes up less screen/page real estate!&lt;/p&gt;
 &lt;p&gt;Why do I use dot plots instead of ordinary bar charts? A 
 &lt;a href=&#34;http://www.perceptualedge.com/articles/b-eye/encoding_values_in_graph.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;nice visualization guide from perceptualedge.com&lt;/a&gt; points out that often we want to only visualize differences between groups in a narrow range (they use an example wherein monthly expenses vary from $4,250-$5,500). But the length of a bar is supposed to facilitate accurate comparisons between values, so when you use a bar plot starting from $4,250, the length between bars dramatically exaggerates the actual differences. Dot plots do not have this problem because dot encode values using only location, so one must reference the axis to interpret the value.&lt;/p&gt;
@@ -93,14 +1280,14 @@ I&#39;m less sure about Tufte&#39;s advice to always show axes starting at zero,
 &lt;p&gt;In addition, dot plots have aesthetic advantages.  They convey the numerical estimate in question with a single one-dimensional point, rather than a two dimensional bar.  There&amp;rsquo;s simply less that the eye needs to process.  Accordingly, if a pattern across qualitative groupings exists, it&amp;rsquo;s often easier to see with a dot plot.  For example, below I plot the average user ratings for each article to which 
 &lt;a href=&#34;http://www.stanford.edu/~seanjw/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Sean Westwood&lt;/a&gt; and I exposed subjects in a news reading experiment.  The pattern that emerges is an &amp;ldquo;S&amp;rdquo; curve in which one or two stories dominate the ratings, most are sort of average, and a few are uniformly terrible. Note that you&amp;rsquo;d probably want to use something like this more for yourself than to communicate your results to others as it might overload your audience with too much information&amp;ndash;you&amp;rsquo;d do better to select a subset of these articles or remove some of the ones in the middle (thanks to Yph Lelkes for making this point).&lt;/p&gt;
 &lt;p&gt;
-&lt;a href=&#34;https://solmg.netlify.app/assets/img/dotplot-story-rating.png&#34;&gt;&lt;img src=&#34;https://solmg.netlify.app/assets/img/dotplot-story-rating.png&#34; alt=&#34;&#34; title=&#34;dotplot-story-rating&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;a href=&#34;https://solmg.netlify.app/img/dotplot-story-rating.png&#34;&gt;&lt;img src=&#34;https://solmg.netlify.app/img/dotplot-story-rating.png&#34; alt=&#34;&#34; title=&#34;dotplot-story-rating&#34;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;One question that remains is if pie charts are so bad, why are they so common? Perhaps we like them because we find them comforting just as we find pies and pizza? Well if so we&amp;rsquo;d expect pie charts to be less common in places like Japan and China where people grow up eating different food.  Consider info-graphics in newspapers: I haven&amp;rsquo;t yet done a systematic content analysis, but I was unable to find a single pie chart in Japan&amp;rsquo;s Yomimuri Shimbun nor the Asahi Shimbun; nor in China&amp;rsquo;s Beijing Daily nor Sing Tao Daily.  I did see plenty of maps, however, which I suppose one could argue are reminiscent of noodles.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Implementation&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;The most efficient way to produce solid visualizations with the ability to implement multiple panels, proper standard error estimates, and dot plots is probably in R using the ggplot2 package.  If you do not have time to learn R and remain tied to MS-Excel stick to ordinary barplots to visualize quantitative variables among multiple groups (not recommended).&lt;/p&gt;
 &lt;p&gt;Otherwise, if you don&amp;rsquo;t already use it, 
 &lt;a href=&#34;http://cran.r-project.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;download R&lt;/a&gt; and a decent editor like 
 &lt;a href=&#34;http://rstudio.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Rstudio&lt;/a&gt;.  Then get started with ggplot2 and dot plots by running the following code chunk which will replicate the election figure above:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;pres &amp;lt;- read.csv(&amp;quot;https://SolomonMg.github.io/assets/img/primaryres.csv&amp;quot;, as.is=T)
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;pres &amp;lt;- read.csv(&amp;quot;https://SolomonMg.github.io/img/primaryres.csv&amp;quot;, as.is=T)
 
 # sort data in order of percent of vote:
 pres &amp;lt;- pres[order(pres$Percentage, decreasing=T), ]
@@ -127,7 +1314,7 @@ ggtitle(&amp;quot;New Hampshire Primary 2012&amp;quot;)
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# To install ggplot2, run the following line after deleting the #
 #install.packages(&amp;quot;ggplot2&amp;quot;)
 library(ggplot2)
-load(file(&amp;quot;https://SolomonMg.github.io/assets/img/db.Rda&amp;quot;))
+load(file(&amp;quot;https://SolomonMg.github.io/img/db.Rda&amp;quot;))
 
 # if you haven&#39;t installed dplyr, delete the # and run this line:
 # install.packages(&amp;quot;dplyr&amp;quot;)
@@ -154,6 +1341,382 @@ ggtitle(&amp;quot;Rating article by Story, with SE&amp;quot;)
 # Now save
 ggsave(file=&amp;quot;plots/dotplot-story-rating.pdf&amp;quot;, height=14, width=8.5)
 &lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Working with Bipartite/Affiliation Network Data in R</title>
+      <link>https://solmg.netlify.app/post/working-with-bipartite-affiliation-network-data-in-r/</link>
+      <pubDate>Sun, 04 Mar 2012 00:00:00 +0000</pubDate>
+      <guid>https://solmg.netlify.app/post/working-with-bipartite-affiliation-network-data-in-r/</guid>
+      <description>&lt;p&gt;Data can often be usefully conceptualized in terms affiliations between people (or other key data entities). It might be useful analyze common group membership, common purchasing decisions, or common patterns of behavior. This post introduces bipartite/affiliation network data and provides R code to help you process and visualize this kind of data. I recently updated this for use with larger data sets, though I put it together a while back.&lt;/p&gt;
+&lt;h2 id=&#34;preliminaries&#34;&gt;Preliminaries&lt;/h2&gt;
+&lt;p&gt;Much of the material here is covered in the more comprehensive 
+&lt;a href=&#34;http://sna.stanford.edu/rlabs.php&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&amp;ldquo;Social Network Analysis Labs in R and SoNIA,&amp;quot;&lt;/a&gt; on which I collaborated with Dan McFarland, Sean Westwood and Mike Nowak.
+For a great online introduction to social network analysis see the online book 
+&lt;a href=&#34;http://www.faculty.ucr.edu/~hanneman/nettext/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Introduction to Social Network Methods&lt;/a&gt; by Robert Hanneman and Mark Riddle.&lt;/p&gt;
+&lt;h2 id=&#34;bipartiteaffiliation-network-data&#34;&gt;Bipartite/Affiliation Network Data&lt;/h2&gt;
+&lt;p&gt;A network can consist of different &amp;lsquo;classes&amp;rsquo; of nodes. For example, a two-mode network might consist of people (the first mode) and groups in which they are members (the second mode). Another very common example of two-mode network data consists of users on a particular website who communicate in the same forum thread.
+Here&amp;rsquo;s a short example of this kind of data. Run this in R for yourself - just copy an paste into the command line or into a script and it will generate a dataframe that we can use for illustrative purposes:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;df &amp;lt;- data.frame( 
+    person = c(&#39;Sam&#39;,&#39;Sam&#39;,&#39;Sam&#39;,&#39;Greg&#39;,&#39;Tom&#39;,&#39;Tom&#39;,&#39;Tom&#39;,&#39;Mary&#39;,&#39;Mary&#39;), 
+    group = c(&#39;a&#39;,&#39;b&#39;,&#39;c&#39;,&#39;a&#39;,&#39;b&#39;,&#39;c&#39;,&#39;d&#39;,&#39;b&#39;,&#39;d&#39;), 
+    stringsAsFactors = F)
+
+df
+
+person group
+1    Sam     a
+2    Sam     b
+3    Sam     c
+4   Greg     a
+5    Tom     b
+6    Tom     c
+7    Tom     d
+8   Mary     b
+9   Mary     d
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;c1&#34;&gt;Fast, efficient two-mode to one-mode conversion in R&lt;/h2&gt;
+&lt;p&gt;Suppose we wish to analyze or visualize how the people are connected directly - that is, what if we want the network of people where a tie between two people is present if they are both members of the same group? We need to perform a two-mode to one-mode conversion.&lt;/p&gt;
+&lt;p&gt;To convert a two-mode incidence matrix to a one-mode adjacency matrix, one can simply multiply an incidence matrix by its transpose, which sum the common 1&amp;rsquo;s between rows. Recall that matrix multiplication entails multiplying the k-th entry of a row in the first matrix by the k-th entry of a column in the second matrix, then summing, such that the ij-th row-column entry in resulting matrix represents the dot-product of the i-th row of the first matrix and the j-th column of the second. In mathematical notation:&lt;/p&gt;
+&lt;p&gt;$$
+AB = \left [
+\begin{array}{cc}
+a &amp;amp; b  \\\&lt;br&gt;
+c &amp;amp; d
+\end{array} \right ]
+\left [ \begin{array}{cc}
+e &amp;amp; f  \\\&lt;br&gt;
+g &amp;amp; h
+\end{array} \right ] =
+\left [
+\begin{array}{cc}
+ae+bg &amp;amp; af+bh \\\&lt;br&gt;
+ce+dg &amp;amp; cf+dh
+\end{array}
+\right ]
+$$&lt;/p&gt;
+&lt;p&gt;Notice further that multiplying a matrix by its transpose yields the following:&lt;/p&gt;
+&lt;p&gt;$$
+\begin{align}
+AA&amp;rsquo; =
+\left[
+\begin{array}{cc}
+a &amp;amp; b  \\\&lt;br&gt;
+c &amp;amp; d
+\end{array}
+\right]
+\left[
+\begin{array}{cc}
+a &amp;amp; c  \\\&lt;br&gt;
+b &amp;amp; d
+\end{array}
+\right] =
+\left[
+\begin{array}{cc}
+aa+bb &amp;amp; ac+bd \\\&lt;br&gt;
+ca+db &amp;amp; cc+dd
+\end{array}
+\right]
+\end{align}
+$$&lt;/p&gt;
+&lt;p&gt;Because our incidence matrix consists of 0&amp;rsquo;s and 1&amp;rsquo;s, the off-diagonal entries represent the total number of common columns, which is exactly what we wanted. We&amp;rsquo;ll use the &lt;code&gt;%*%&lt;/code&gt; operator to tell R to do exactly this. Let&amp;rsquo;s take a look at a small example using toy data of people and groups to which they belong. We&amp;rsquo;ll coerce the data to an incidence matrix, then multiply the incidence matrix by its transpose to get the number of common groups between people.&lt;/p&gt;
+&lt;p&gt;This is easy to do using the matrix algebra functions included in R. But first, you need to restructure your (edgelist) network data as an incidence matrix. An incidence will record a 1 for row-column combinations where a tie is present and 0 otherwise. One easy way to do this in R is to use the table function and then coerce the table object to a matrix object:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;m &amp;lt;- table( df )
+M &amp;lt;- as.matrix( m )
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;If you are using the network or sna packages, a network object be coerced via &lt;code&gt;as.matrix(your-network)&lt;/code&gt;; with the igraph package use &lt;code&gt;get.adjacency(your-network)&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;This is great, but what about if we are working with a really large data set? Network data is almost always sparse&amp;mdash;there are far more pairwise combinations of potential connections than actual observed connections. Hence, we&amp;rsquo;d actually prefer to keep the underlying data structured in edgelist format, but we&amp;rsquo;d also like access to R&amp;rsquo;s matrix algebra functionality.&lt;/p&gt;
+&lt;p&gt;We can get the best of both worlds using the Matrix library to construct a sparse triplet representation of a matrix. But we&amp;rsquo;d also like to avoid building the entire incidence matrix and just feed Matrix our edgelist directly, a point that came up in a recent conversation I had with 
+&lt;a href=&#34;http://seanjtaylor.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Sean Taylor&lt;/a&gt;. We feed &lt;code&gt;Matrix&lt;/code&gt; our &amp;lsquo;person&amp;rsquo; column to index &amp;lsquo;i&amp;rsquo; (rows in the new incidence matrix), our &amp;lsquo;group&amp;rsquo; column to index j (columns in the new incidence matrix), and we repeat &amp;lsquo;1&amp;rsquo; for the length of the edgelist to denote an incidence.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;library(&#39;Matrix&#39;)
+A &amp;lt;- spMatrix(nrow=length(unique(df$person)),
+ncol=length(unique(df$group)),
+i = as.numeric(factor(df$person)),
+j = as.numeric(factor(df$group)),
+x = rep(1, length(as.numeric(df$person))) )
+row.names(A) &amp;lt;- levels(factor(df$person))
+colnames(A) &amp;lt;- levels(factor(df$group))
+A
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We will either convert to the &amp;lsquo;mode&amp;rsquo; represented by the columns or by the rows.
+To get the one-mode representation of ties between rows (people in our example), multiply the matrix by its transpose. Note that you must use the matrix-multiplication operator &lt;code&gt;%*%&lt;/code&gt; rather than a simple astrisk. The R code is:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;Arow &amp;lt;- A %*% t(A)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;But we can still do better! The function tcrossprod is faster and more efficient for this:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;Arow &amp;lt;- tcrossprod(A)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Arow will now represent the one-mode matrix formed by the row entities&amp;mdash;people will have ties to each other if they are in the same group, in our example. Here&amp;rsquo;s what it looks like:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Arow
+4 x 4 sparse Matrix of class &amp;quot;dgCMatrix&amp;quot;
+     Greg Mary Sam Tom
+Greg    1    .   1   .
+Mary    .    2   1   2
+Sam     1    1   3   2
+Tom     .    2   2   3
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;To get the one-mode matrix formed by the column entities (i.e. the number of people) enter the following command:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;Acol &amp;lt;- t(A) %*% A
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Again, we can use tcrossprod to make this even more efficient:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;Acol &amp;lt;- tcrossprod(t(A))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;And the resulting co-membership matrix is as follows:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Mcol
+group
+group a b c d
+a 2 1 1 0
+b 1 3 2 2
+c 1 2 2 1
+d 0 2 1 2
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Although we&amp;rsquo;ve used a very small network for our example, this code is highly extensible to the analysis of larger networks with R.&lt;/p&gt;
+&lt;h2 id=&#34;c1&#34;&gt;Analysis of Two Mode Data and Mobility&lt;/h2&gt;
+&lt;p&gt;Let&amp;rsquo;s work with some actual affiliation data, collected by Dan McFarland on student extracurricular affiliations. It&amp;rsquo;s a longitudinal data set, with 3 waves - 1996, 1997, 1998.  It consists of students (anonymized) and the student organizations in which they are members (e.g. National Honor Society, wrestling team, cheerleading squad, etc.).
+What we&amp;rsquo;ll do is to read in the data, explore it, make a few two-to-one mode conversions, and visualize it.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# Load the &#39;igraph&#39; library
+library(&#39;igraph&#39;)
+# (1) Read in the data files, NA data objects coded as &#39;na&#39;
+magact96 = read.delim(&#39;https://solomonmg.github.io/assets/img/mag_act96.txt&#39;,
+na.strings = &#39;na&#39;)
+magact97 = read.delim(&#39;https://solomonmg.github.io/assets/img/mag_act97.txt&#39;,
+na.strings = &#39;na&#39;)
+magact98 = read.delim(&#39;https://solomonmg.github.io/assets/img/mag_act98.txt&#39;,
+na.strings = &#39;na&#39;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Missing data is coded as &amp;ldquo;na&amp;rdquo; in this data, which is why we gave R the command na.strings = &amp;ldquo;na&amp;rdquo;.&lt;/p&gt;
+&lt;p&gt;These files consist of four columns of individual-level attributes (ID, gender, grade, race), then a bunch of group membership dummy variables (coded &amp;ldquo;1&amp;rdquo; for membership, &amp;ldquo;0&amp;rdquo; for no membership).  We need to set aside the first four columns (which do not change from year to year).&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;magattrib = magact96[,1:4]
+g96 &amp;lt;- as.matrix(magact96[,-(1:4)]); row.names(g96) = magact96$ID.
+g97 &amp;lt;- as.matrix(magact97[,-(1:4)]); row.names(g97) = magact97$ID.
+g98 &amp;lt;- as.matrix(magact98[,-(1:4)]); row.names(g98) = magact98$ID.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;By using the &lt;code&gt;[,-(1:4)]&lt;/code&gt; index, we drop those columns so that we have a square incidence matrix for each year, and then tell R to set the row names of the matrix to the student&amp;rsquo;s ID. Note that we need to keep the &amp;ldquo;.&amp;rdquo; after ID in this dataset (because it&amp;rsquo;s in the name of the variable).
+Now we load these two-mode matrices into igraph:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;i96 &amp;lt;- graph.incidence(g96, mode=c(&#39;all&#39;) )
+i97 &amp;lt;- graph.incidence(g97, mode=c(&#39;all&#39;) )
+i98 &amp;lt;- graph.incidence(g98, mode=c(&#39;all&#39;) )
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;plotting-two-mode-networks&#34;&gt;Plotting two-mode networks&lt;/h3&gt;
+&lt;p&gt;Now, let&amp;rsquo;s plot these graphs. The igraph package has excellent plotting functionality that allows you to assign visual attributes to igraph objects before you plot. The alternative is to pass 20 or so arguments to the &lt;code&gt;plot.igraph()&lt;/code&gt; function, which gets really messy.&lt;/p&gt;
+&lt;p&gt;Let&amp;rsquo;s assign some attributes to our graph. First we set vertex attributes, making sure to make them slightly transparent by altering the gamma, using the &lt;code&gt;rgb(r,g,b,gamma)&lt;/code&gt; function to set the color. This makes it much easier to look at a really crowded graph, which might look like a giant hairball otherwise.
+You can read up on the RGB color model 
+&lt;a href=&#34;http://en.wikipedia.org/wiki/RGB_color_model&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Each node (or &amp;ldquo;vertex&amp;rdquo;) object is accessible by calling &lt;code&gt;V(g)&lt;/code&gt;, and you can call (or create) a node attribute by using the &lt;code&gt;$&lt;/code&gt; operator so that you call &lt;code&gt;V(g)$attribute&lt;/code&gt;. Here&amp;rsquo;s how to set the color attribute for a set of nodes in a graph object:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;V(i96)$color[1:1295] &amp;lt;- rgb(1,0,0,.5)
+V(i96)$color[1296:1386] &amp;lt;- rgb(0,1,0,.5)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Notice that we index the &lt;code&gt;V(g)$color&lt;/code&gt; object by a seemingly arbitrary value, 1295.  This marks the end of the student nodes, and 1296 is the first group node. You can view which nodes are which by typing V(i96). R prints out a list of all the nodes in the graph, and those with a number are obviously different from those that consist of a group name.&lt;/p&gt;
+&lt;p&gt;Now we&amp;rsquo;ll set some other graph attributes:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;V(i96)$label &amp;lt;- V(i96)$name
+V(i96)$label.color &amp;lt;- rgb(0,0,.2,.5)
+V(i96)$label.cex &amp;lt;- .4
+V(i96)$size &amp;lt;- 6
+V(i96)$frame.color &amp;lt;- NA
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;You can also set edge attributes. Here we&amp;rsquo;ll make the edges nearly transparent and slightly yellow because there will be so many edges in this graph:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;E(i96)$color &amp;lt;- rgb(.5,.5,0,.2)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now, we&amp;rsquo;ll open a pdf &amp;ldquo;device&amp;rdquo; on which to plot. This is just a connection to a pdf file. Note that the code below will take a minute or two to execute (or longer if you have a pre- Intel dual-core processor).&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;pdf(&#39;i96.pdf&#39;)
+plot(i96, layout=layout.fruchterman.reingold)
+dev.off()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Note that we&amp;rsquo;ve used the Fruchterman-Reingold force-directed layout algorithm here.  Generally speaking, the when you have a ton of edges, the Kamada-Kawai layout algorithm works well but, it can get really slow for networks with a lot of nodes. Also, for larger networks, layout.fruchterman.reingold.grid is faster, but can fail to produce a plot with any meaninful pattern if you have too many isolates, as is the case here. Experiment for yourself.
+Here&amp;rsquo;s what we get:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://solmg.netlify.app/img/i96.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;It&amp;rsquo;s oddly reminiscent of a cresent and star, but impossible to read. Now, if you open the 
+&lt;a href=&#34;https://solmg.netlify.app/img/i96.pdf&#34;&gt;pdf output&lt;/a&gt;, you&amp;rsquo;ll notice that you can zoom in on any part of the graph ad infinitum without losing any resolution. How is that possible in such a small file? It&amp;rsquo;s possible because the pdf device output consists of data based on vectors: lines, polygons, circles, elipses, etc., each specified by a mathematical formula that your pdf program renders when you view it. Regular bitmap or jpeg picture output, on the other hand, consists of a pixel-coordinate mapping of the image in question, which is why you lose resolution when you zoom in on a digital photograph or a plot produced with most other programs.&lt;/p&gt;
+&lt;p&gt;Let&amp;rsquo;s remove all of the isolates (the cresent), change a few aesthetic features, and replot. First, we&amp;rsquo;ll remove isloates, by deleting all nodes with a degree of 0, meaning that they have zero edges. Then, we&amp;rsquo;ll suppress labels for students and make their nodes smaller and more transparent. Then we&amp;rsquo;ll make the edges more narrow more transparent. Then, we&amp;rsquo;ll replot using various layout algorithms:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;i96 &amp;lt;- delete.vertices(i96, V(i96)[ degree(i96)==0 ])
+V(i96)$label[1:857] &amp;lt;- NA
+V(i96)$color[1:857] &amp;lt;-  rgb(1,0,0,.1)
+V(i96)$size[1:857] &amp;lt;- 2
+E(i96)$width &amp;lt;- .3
+E(i96)$color &amp;lt;- rgb(.5,.5,0,.1)
+pdf(&#39;i96.2.pdf&#39;)
+plot(i96, layout=layout.kamada.kawai)
+dev.off()
+pdf(&#39;i96.3.pdf&#39;)
+plot(i96, layout=layout.fruchterman.reingold.grid)
+dev.off()
+pdf(&#39;i96.4.pdf&#39;)
+plot(i96, layout=layout.fruchterman.reingold)
+dev.off()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;I personally prefer the Fruchterman-Reingold layout in this case. The nice thing about this layout is that it really emphasizes centrality&amp;ndash;the nodes that are most central are nearly always placed in the middle of the plot. Here&amp;rsquo;s what it looks like:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://solmg.netlify.app/img/i962.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Very pretty, but you can&amp;rsquo;t see which groups are which at this resolution. Zoom assets/in on the 
+&lt;a href=&#34;https://solmg.netlify.app/img/samplepdf.pdf&#34;&gt;pdf output&lt;/a&gt;, and you can see things pretty clearly.&lt;/p&gt;
+&lt;h3 id=&#34;two-mode-to-one-mode-data-transformation&#34;&gt;Two mode to one mode data transformation&lt;/h3&gt;
+&lt;p&gt;We&amp;rsquo;ve emphasized groups in this visualization so much, that we might want to just create a network consisting of group co-membership. First we need to create a new network object. We&amp;rsquo;ll do that the same way for this network as for our example at the top of this page:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;g96e &amp;lt;- t(g96) %*% g96
+g97e &amp;lt;- t(g97) %*% g97
+g98e &amp;lt;- t(g98) %*% g98
+i96e &amp;lt;- graph.adjacency(g96e, mode = &#39;undirected&#39;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now we need to tansform the graph so that multiple edges become an attribute ( &lt;code&gt;E(g)$weight&lt;/code&gt; ) of each unique edge:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;E(i96e)$weight &amp;lt;- count.multiple(i96e)
+i96e &amp;lt;- simplify(i96e)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now we&amp;rsquo;ll set the other plotting parameters as we did above:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# Set vertex attributes
+V(i96e)$label &amp;lt;- V(i96e)$name
+V(i96e)$label.color &amp;lt;- rgb(0,0,.2,.8)
+V(i96e)$label.cex &amp;lt;- .6
+V(i96e)$size &amp;lt;- 6
+V(i96e)$frame.color &amp;lt;- NA
+V(i96e)$color &amp;lt;- rgb(0,0,1,.5)
+# Set edge gamma according to edge weight
+egam &amp;lt;- (log(E(i96e)$weight)+.3)/max(log(E(i96e)$weight)+.3)
+E(i96e)$color &amp;lt;- rgb(.5,.5,0,egam)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We set edge gamma as a function of how many edges exist between two nodes, or in this case, how many students each group has in common. For illustrative purposes, let&amp;rsquo;s compare how the Kamada-Kawai and Fruchterman-Reingold algorithms render this graph:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;pdf(&#39;i96e.pdf&#39;)
+plot(i96e, main = &#39;layout.kamada.kawai&#39;, layout=layout.kamada.kawai)
+plot(i96e, main = &#39;layout.fruchterman.reingold&#39;, layout=layout.fruchterman.reingold)
+dev.off()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;I like the Kamada-Kawai layout for this graph, because the center of the graph is too busy otherwise. And here&amp;rsquo;s what the resulting plot looks like:
+&lt;img src=&#34;https://solmg.netlify.app/img/i96e-kk.jpeg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;You can check out the difference between each layout yourself. Here&amp;rsquo;s what the 
+&lt;a href=&#34;https://solmg.netlify.app/img/i96e.pdf&#34;&gt;assets/pdf output looks like&lt;/a&gt;.  Page 1 shows the Kamada-Kawai layout and page 2 shows the Fruchterman Reingold layout.&lt;/p&gt;
+&lt;h3 id=&#34;group-overlap-networks-and-plots&#34;&gt;Group overlap networks and plots&lt;/h3&gt;
+&lt;p&gt;Now we might also be interested in the percent overlap between groups. Note that this will be a directed graph, because the percent overlap will not be symmetric across groups&amp;ndash;for example, it may be that 3/4 of Spanish NHS members are in NHS, but only 1/8 of NHS members are in the Spanish NHS. We&amp;rsquo;ll create this graph for all years in our data (though we could do it for one year only).
+First we&amp;rsquo;ll need to create a percent overlap graph. We start by dividing each row by the diagonal (this is really easy in R):&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;ol96 &amp;lt;- g96e/diag(g96e)
+ol97 &amp;lt;- g97e/diag(g97e)
+ol98 &amp;lt;- g98e/diag(g98e)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Next, sum the matricies and set any NA cells (caused by dividing by zero in the step above) to zero:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;magall &amp;lt;- ol96 + ol97 + ol98
+magall[is.na(magall)] &amp;lt;- 0
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Note that magall now consists of a percent overlap matrix, but because we&amp;rsquo;ve summed over 3 years, the maximun is now 3 instead of 1.
+Let&amp;rsquo;s compute average club size, by taking the mean across each value in each diagonal:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;magdiag &amp;lt;- apply(cbind(diag(g96e), diag(g97e), diag(g98e)), 1, mean )
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Finally, we&amp;rsquo;ll generate centrality measures for magall. When we create the igraph object from our matrix, we need to set weighted=T because otherwise igraph dichotomizes edges at 1. This can distort our centrality measures because now edges represent  more than binary connections&amp;ndash;they represent the percent of membership overlap.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;magallg &amp;lt;- graph.adjacency(magall, weighted=T)
+# Degree
+V(magallg)$degree &amp;lt;- degree(magallg)
+# Betweenness centrality
+V(magallg)$btwcnt &amp;lt;- betweenness(magallg)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Before we plot this, we should probably filter some of the edges, otherwise our graph will probably be too busy to make sense of visually.  Take a look at the distribution of connection strength by plotting the density of the magall matrix:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;plot(density(magall))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://solmg.netlify.app/img/densitymagall.jpeg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Nearly all of the edge weights are below 1&amp;ndash;or in other words, the percent overlap for most clubs is less than 1/3. Let&amp;rsquo;s filter at 1, so that an edge will consists of group overlap of more than 1/3 of the group&amp;rsquo;s members in question.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;magallgt1 &amp;lt;- magall
+magallgt1[magallgt1&amp;lt;1] &amp;lt;- 0
+magallggt1 &amp;lt;- graph.adjacency(magallgt1, weighted=T)
+# Removes loops:
+magallggt1 &amp;lt;- simplify(magallggt1, remove.multiple=FALSE, remove.loops=TRUE)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Before we do anything else, we&amp;rsquo;ll create a custom layout based on Fruchterman.-Ringold wherein we adjust the coordates by hand using the tkplot gui tool to make sure all of the labels are visible. This is very useful if you want to create a really sharp-looking network visualization for publication.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;magallggt1$layout &amp;lt;- layout.fruchterman.reingold(magallggt1)
+V(magallggt1)$label &amp;lt;- V(magallggt1)$name
+tkplot(magallggt1)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Let the plot load, then maximize the window, and select to View -&amp;gt; Fit to Screen so that you get maximum resolution for this large graph. Now hand-place the nodes, making sure no labels overlap:
+&lt;img src=&#34;https://solmg.netlify.app/img/tkplotscreenshot.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Pay special attention to whether the labels overlap (or might overlap if the font was bigger) along the vertical. Save the layout coordinates to the graph object:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;magallggt1$layout &amp;lt;- tkplot.getcoords(1)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We use &amp;ldquo;1&amp;rdquo; here because only if this was the first tkplot object you called. If you called tkplot a few times, use the last plot object. You can tell which object is visible because at the top of the tkplot interface, you&amp;rsquo;ll see something like &amp;ldquo;Graph plot 1&amp;rdquo; or in the case of my screenshot above &amp;ldquo;Graph plot 7&amp;rdquo; (it was the seventh time I called tkplot).&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# Set vertex attributes
+V(magallggt1)$label &amp;lt;- V(magallggt1)$name
+V(magallggt1)$label.color &amp;lt;- rgb(0,0,.2,.6)
+V(magallggt1)$size &amp;lt;- 6
+V(magallggt1)$frame.color &amp;lt;- NA
+V(magallggt1)$color &amp;lt;- rgb(0,0,1,.5)
+# Set edge attributes
+E(magallggt1)$arrow.size &amp;lt;- .3
+# Set edge gamma according to edge weight
+egam &amp;lt;- (E(magallggt1)$weight+.1)/max(E(magallggt1)$weight+.1)
+E(magallggt1)$color &amp;lt;- rgb(.5,.5,0,egam)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;One thing that we can do with this graph is to set label size as a function of degree, which adds a &amp;ldquo;tag-cloud&amp;rdquo;-like element to the visualization:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;V(magallggt1)$label.cex &amp;lt;- V(magallggt1)$degree/(max(V(magallggt1)$degree)/2)+ .3
+#note, unfortunately one must play with the formula above to get the
+#ratio just right
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Let&amp;rsquo;s plot the results:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;pdf(&#39;magallggt1customlayout.pdf&#39;)
+plot(magallggt1)
+dev.off()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Note that we used the custom layout, which because we made part of the igraph object magallggt1, we did not need to specify in plot command.
+assets/Here&amp;rsquo;s the 
+&lt;a href=&#34;https://solmg.netlify.app/img/magallggt1custom.pdf&#34;&gt;pdf output&lt;/a&gt;, and here&amp;rsquo;s what it looks like:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://solmg.netlify.app/img/magallggt1custom.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;This visualization reveals much more information about our network than our cresent-star visualization.&lt;/p&gt;
+&lt;h3 id=&#34;mobility-markov-and-transition-probabilities&#34;&gt;Mobility, Markov, and Transition Probabilities&lt;/h3&gt;
+&lt;p&gt;In order to shed light on how people flow through these groups, we&amp;rsquo;ll compute transition probabilities. These transition probabilities are more generally referred to as Markov chains.&lt;/p&gt;
+&lt;p&gt;First we&amp;rsquo;ll create a new matrix that multiplies 1996 magnet with 1997 magnet so you see the number of students moving from 1996 membership to 1997 memberships.&lt;/p&gt;
+&lt;p&gt;Before we actually do this, we need to do some data munging to make sure that the rows and columns for g96 and g97 are the same. We&amp;rsquo;ll use the match() function for this.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;    
+# First, let&#39;s get an idea of how many column-names (activities) and row
+# names (student ids) are in common between the two years:
+  
+(cnames = intersect( colnames(g96), colnames(g97) ) )
+(rnames = intersect( row.names(g96), row.names(g97) ) )
+  
+# Great, there are a lot of names in common. Now we
+# need to make sure we are only using the rows
+# and columns of each matrix that contain entries used in
+# both years. We also need to make sure that the columns and
+# rows are in the same order.
+  
+# In order to accomplish this we are going to exploit R&#39;s
+# indexing capabilities. We are going to have R &amp;quot;rebuild&amp;quot;
+# each matrix according to the order of rnames and cnames.
+# We&#39;ll use the match() function to accomplish this.
+g96matched = g96[ match(rnames, row.names(g96)), match(cnames, colnames(g96)) ]
+g97matched = g97[ match(rnames, row.names(g97)), match(cnames, colnames(g97)) ]
+  
+# We need to do the same thing for the diagonal of the matrix g96e, which is
+# our co-membership/affiliation matrix computed above:
+mag96diagmatched = diag( g96e[ match(cnames, colnames(g96e)), 
+  match(cnames, colnames(g96e)) ] )
+  
+# Now let&#39;s check to make sure things worked correctly:
+which(row.names(g96matched) != row.names(g97matched))
+which(colnames(g96matched) != colnames(g97matched))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now that these are effectively matricies, we can multiply to get the transition probability matrix:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;mag96_97 = t(g96matched) %*% g97matched
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Let&amp;rsquo;s munge the 97 and 98 data and repeat:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;
+cnames = intersect( colnames(g97), colnames(g98) ) 
+rnames = intersect( row.names(g97), row.names(g98) )
+g97matched = g97[ match(rnames, row.names(g97)), match(cnames, colnames(g97)) ]
+g98matched = g98[ match(rnames, row.names(g98)), match(cnames, colnames(g98)) ]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;And again for the 97-98 transition:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;mag97_98 = t(g97matched) %*% g98matched
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now we need to get the group-level membership matrix diagonal, ordered by the current set of columns.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;mag96diagmatched = diag( g96e[ match(cnames, colnames(g96e)), 
+  match(cnames, colnames(g96e)) ] )
+
+mag97diagmatched = diag( g97e[ match(cnames, colnames(g97e)), 
+  match(cnames, colnames(g97e)) ] )
+  
+mag98diagmatched = diag( g98e[ match(cnames, colnames(g98e)), 
+  match(cnames, colnames(g98e)) ] )
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;And finally we can create the transition probability matrix! Divide magmob96_97 by mag96diagmatched in to get the transition probability matrix (Markov chain):&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;magmob96_97 = mag96_97/mag96diagmatched 
+magmob97_98 = mag97_98/mag97diagmatched
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now add the matrices and divide by 2:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;mobility_all &amp;lt;- (magmob96_97 + magmob97_98)/2
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now plot as with the event-overlap graphs!&lt;/p&gt;
 </description>
     </item>
     
