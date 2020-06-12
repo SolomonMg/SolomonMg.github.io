@@ -183,6 +183,130 @@ The final core component of Out For Justice is an optimization algorithm. Given 
     </item>
     
     <item>
+      <title>Why Election Forecasting Matters</title>
+      <link>https://solomonmg.github.io/post/response-to-fivethirtyeights-podcast-about-our-paper-projecting-confidence/</link>
+      <pubDate>Sun, 26 Apr 2020 00:00:00 +0000</pubDate>
+      <guid>https://solomonmg.github.io/post/response-to-fivethirtyeights-podcast-about-our-paper-projecting-confidence/</guid>
+      <description>&lt;p&gt;Do you remember the night of Nov 8, 2016? I was glued to election coverage and obsessively checking probabilistic forecasts, wondering whether Clinton might do &lt;em&gt;so well&lt;/em&gt; that she’d win in places like my home state of Arizona. Although FiveThirtyEight had Clinton&amp;rsquo;s chances at beating Trump at around 70%, most other forecasters had her at around 90%.&lt;/p&gt;
+&lt;p&gt;When she lost, 
+&lt;a href=&#34;https://www.nytimes.com/2016/11/10/us/politics/donald-trump-election-reaction.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;many on both sides of the aisle&lt;/a&gt; were shocked. My co-authors and I wondered if America&amp;rsquo;s seeming confidence in a Clinton victory wasn’t driven in part by increasing coverage of probabilistic forecasts. And, if a Clinton victory looked inevitable, what did that do to turnout?&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://solomonmg.github.io/img/forecast_google_news.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;We weren&amp;rsquo;t alone. Clinton herself was quoted in 
+&lt;a href=&#34;http://nymag.com/daily/intelligencer/2017/05/hillary-clinton-life-after-election.html?mid=nymag_press&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;New York Magazine&lt;/a&gt; after the election:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;I had people literally seeking absolution&amp;hellip; ‘&lt;em&gt;I’m so sorry I didn’t vote. I didn’t think you needed me.&lt;/em&gt;’ I don’t know how we’ll ever calculate how many people thought it was in the bag, because the percentages kept being thrown at people — ‘&lt;em&gt;Oh, she has an 88 percent chance to win!&lt;/em&gt;’&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Enter our recent 
+&lt;a href=&#34;http://www.pewresearch.org/fact-tank/2018/02/06/use-of-election-forecasts-in-campaign-coverage-can-confuse-voters-and-may-lower-turnout/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;blog post&lt;/a&gt; and 
+&lt;a href=&#34;https://papers.ssrn.com/abstract=3117054&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;paper released on SSRN&lt;/a&gt;, “Projecting confidence: How the probabilistic horse race confuses and de-mobilizes the public,” by Sean Westwood, Solomon Messing, and Yphtach Lelkes. While our work cannot definitively say whether probabilistic forecasts played a decisive role in the 2016 election, it does indeed show that compared to more conventional vote share projections, probabilistic forecasts can confuse people, can give people more confidence that the candidate depicted as being ahead will win, may decrease turnout, and that liberals in the U.S. are more likely to encounter them. We appreciate the media attention to this work, including coverage by the 
+&lt;a href=&#34;https://www.washingtonpost.com/news/politics/wp/2018/02/06/clintons-achilles-heel-in-2016-may-have-been-overconfidence/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Washington Post&lt;/a&gt;, 
+&lt;a href=&#34;http://nymag.com/daily/intelligencer/2018/02/americans-dont-understand-election-probabilities.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;New York Magazine&lt;/a&gt;, and the 
+&lt;a href=&#34;https://politicalwire.com/2018/02/06/election-forecasts-lower-voter-turnout/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Political Wire&lt;/a&gt;. What&amp;rsquo;s more, FiveThirtyEight devoted much of their Feb. 12 
+&lt;a href=&#34;https://fivethirtyeight.com/features/politics-podcast-whats-so-wrong-with-nancy-pelosi/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Politics Podcast&lt;/a&gt; to a spirited, and at points critical discussion of our work. We are open to criticism and will respond to some of the questions raised in this post. Below, we’ll show that the evidence in our study and in other research is &lt;em&gt;not&lt;/em&gt; inconsistent with our headline, as the hosts suggest—we&amp;rsquo;ll detail the evidence that probabilistic forecasts &lt;em&gt;confuse&lt;/em&gt; people, irrespective of their technical accuracy. We’ll also discuss where we agree with the podcast hosts. Furthermore, we&amp;rsquo;ll discuss a few topics which, judging from the hosts discussion, may not have come through clearly enough in our paper. We&amp;rsquo;ll reiterate what this work contributes to social science—how the paper adds to our understanding of how people think about probabilistic forecasts and how they may decrease voting, particularly for the leading candidate&amp;rsquo;s supporters and among liberals in the U.S. We’ll then walk readers through the way we mapped vote share projections to probabilities in the study. Finally we’ll discuss why this work matters, and conclude by pointing out future research we’d like to see in this area.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;What’s new here?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The research contains a number findings that are new to social science:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Presenting forecasted win-probabilities gives potential voters the impression that one candidate will win more decisively, compared with vote share projections (Study 1).&lt;/li&gt;
+&lt;li&gt;Higher win probabilities, but &lt;em&gt;not&lt;/em&gt; vote share estimates, &lt;em&gt;decrease voting&lt;/em&gt; in the face of the trade-offs embedded in our election simulation (Study 2). This helps confirm the findings in Study 1 and adds to the evidence from past research that people vote at lower rates when they perceive an election to be uncompetitive.&lt;/li&gt;
+&lt;li&gt;In 2016, probabilistic forecasts were covered more extensively than in the past and tended to be covered by outlets with more liberal audiences.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Where we agree&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;If what you care about is conveying an accurate sense of whether one candidate will win, probabilistic forecasts do this slightly better than vote share. And, they seem to give people an edge on accuracy when interpreting the vote share if your candidate is behind. Of course, people can be confused and still end up being accurate, as we&amp;rsquo;ll discuss below.&lt;/p&gt;
+&lt;p&gt;We also agree that people often do not accurately judge the likelihood of victory after seeing a vote share projection. That makes sense because, as the study shows, people appear to largely ignore the margin of error, which they’d need to map between vote share estimates and win probabilities.&lt;/p&gt;
+&lt;p&gt;We also agree that a lot of past work shows that people stay home when they think an election isn’t close. What we’re adding to that body of work is evidence that compared with vote share projections, probabilistic forecasts give people the impression that one candidate will win more decisively, and may thus &lt;em&gt;more powerfully&lt;/em&gt; affect turnout.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Does the evidence in our study contradict our headline?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Our headline isn’t about accuracy, it’s about &lt;em&gt;confusion&lt;/em&gt;. And the evidence from this research and past work taken as a whole suggests that probabilistic forecasts confuse people — something that came up at the end of segment — even if the result sometimes is technically higher accuracy.&lt;/p&gt;
+&lt;p&gt;1. People in the study who saw only probabilistic forecasts were more likely to confuse probability and vote share. After seeing probabilistic forecasts, 8.6% of respondents mixed up vote share and probability, while only 0.6% of respondents did so after seeing vote share projections. We’re defining “mixed-up” as reporting the win-probability we provided as the vote share and vice-versa.&lt;/p&gt;
+&lt;p&gt;2. Figure 2B (Study 1) shows that people get their candidate’s likelihood of winning very wrong, even when we explicitly told them the probability a candidate will win. It’s true that they got slightly closer with a probability forecast, but they are still far off.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://solomonmg.github.io/img/likelihood_loess.png&#34; alt=&#34;normal&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Why might this be? A lot of past research and evidence suggests that people have trouble understanding probabilities, as noted at the end of the podcast. People have a tendency to think about 
+&lt;a href=&#34;https://chicagounbound.uchicago.edu/cgi/viewcontent.cgi?article=1384&amp;amp;context=law_and_economics&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;probabilities in subjective terms&lt;/a&gt;, so they have trouble understanding 
+&lt;a href=&#34;https://www.ncbi.nlm.nih.gov/pubmed/26161749&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;medical risks&lt;/a&gt; and even 
+&lt;a href=&#34;http://pubman.mpdl.mpg.de/pubman/item/escidoc:2101059/component/escidoc:2101058/GG_30_Chance_2005.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;weather forecasts&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Nate Silver has himself 
+&lt;a href=&#34;https://fivethirtyeight.com/features/the-media-has-a-probability-problem/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;made the argument&lt;/a&gt; that 
+&lt;a href=&#34;https://www.nytimes.com/2016/11/10/technology/the-data-said-clinton-would-win-why-you-shouldnt-have-believed-it.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;the backlash&lt;/a&gt; we saw to data and analytics in the wake of the 2016 election is due in part to the media misunderstanding probabilistic forecasts.&lt;/p&gt;
+&lt;p&gt;As the podcast hosts pointed out, people &lt;em&gt;underestimated&lt;/em&gt; the true likelihood of winning after seeing both probabilistic forecasts and vote share projections. It’s possible that people are skeptical of any probabilistic forecast in light of the 2016 election. It’s possible they interpreted the likelihood not as hard-nosed odds, but in rather subjective terms — &lt;em&gt;what might happen&lt;/em&gt;, 
+&lt;a href=&#34;https://chicagounbound.uchicago.edu/cgi/viewcontent.cgi?article=1384&amp;amp;context=law_and_economics&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;consistent with past research&lt;/a&gt;. Regardless, they do not appear to reason about probability in a way that is consistent with how election forecasters define the probability of winning.&lt;/p&gt;
+&lt;p&gt;3. Looking at how people reason about vote share — the way people have traditionally encountered polling data — it’s clear from our results that when a person’s candidate is ahead and they see a probabilistic forecast, they rather dramatically overestimate the vote share. On the other hand, when they are behind, they get closer to the right answer.&lt;/p&gt;
+&lt;p&gt;But we know from past research that people have a “
+&lt;a href=&#34;http://journals.sagepub.com/doi/abs/10.1177/0956797609356421&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;wishful&lt;/a&gt; 
+&lt;a href=&#34;http://www.tandfonline.com/doi/abs/10.1207/s15324834basp1304_6&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;thinking&lt;/a&gt;” 
+&lt;a href=&#34;https://academic.oup.com/ijpor/article-abstract/9/2/105/713900&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;bias&lt;/a&gt;, meaning they say their candidate is doing better than polling data suggests. That’s why there’s a positive bias when people are evaluating how their candidate will do, according to Figure 2A (Study 1).&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://solomonmg.github.io/img/votea.png&#34; alt=&#34;normal&#34;&gt;&lt;/p&gt;
+&lt;p&gt;The pattern in the data suggest that people are more accurate after seeing a probabilistic forecast for a losing candidate because of this effect, and &lt;em&gt;not&lt;/em&gt; necessarily because they better understand that candidate’s actual chances of victory.&lt;/p&gt;
+&lt;p&gt;4. Perhaps even more importantly, &lt;em&gt;none&lt;/em&gt; of the results here changed when we excluded the margin of error from the projections we presented to people. That suggests that the public may not understand error in the same way that statisticians do, and therefore may not be well-equipped to understand what goes into changes in probabilistic forecast numbers. And of course, very small changes in vote share projection numbers and estimates of error correspond to much larger swings in probabilistic forecasts.&lt;/p&gt;
+&lt;p&gt;5. Finally, as we point out in the paper, if probabilistic forecasters do not account for total error, they can really overestimate a candidate’s probability of winning. Of course, that’s because an estimate of the probability of victory bakes in estimates of error, which recent work has found is 
+&lt;a href=&#34;http://www.stat.columbia.edu/~gelman/research/unpublished/polling-errors.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;often about twice as large as the estimates of sampling error&lt;/a&gt; provided in many polls.&lt;/p&gt;
+&lt;p&gt;As 
+&lt;a href=&#34;https://fivethirtyeight.com/features/the-polls-were-skewed-toward-democrats/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Nate Silver has alluded to&lt;/a&gt;, if the forecaster does not account unobserved error, including error that may be correlated across surveys — he/she will artificially inflate the estimated probability of victory or defeat. Of course, FiveThirtyEight &lt;em&gt;does&lt;/em&gt; attempt to account for this error, and released far more conservative forecasts than others in this space in 2016.&lt;/p&gt;
+&lt;p&gt;Speaking in part to this issue, 
+&lt;a href=&#34;http://www.stat.columbia.edu/~gelman/research/published/what_learned_in_2016_5.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Andrew Gelman and Julia Azari&lt;/a&gt; recently concluded that “polling uncertainty could best be expressed not by speculative win probabilities but rather by using the traditional estimate and margin of error.” They seemed to be speaking about other forecasters, and did not directly reference FiveThirtyEight.&lt;/p&gt;
+&lt;p&gt;At the end of the day, it’s easy to see that a vote share projection of 55% means that “55% of the votes will go to Candidate A, according to our polling data and assumptions.” However, it’s less clear that an 87% win probability means that “if the election were held 1000 times, Candidate A would win 870 times, and lose 130 times, based on our polling data and assumptions.”&lt;/p&gt;
+&lt;p&gt;And most critically, we show that probabilistic forecasts showing more of a blowout could potentially lower voting. In Study 1, we provide limited evidence of this based on self reports. In Study 2, we show that when participants are faced with incentives designed to simulate real world voting, they are less likely to vote when probabilistic forecasts show higher odds of one candidate winning. Yet they are not responsive to changes in vote share.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://solomonmg.github.io/img/FT_18.01.03_prob_vote.png&#34; alt=&#34;normal&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;What’s with our mapping between vote share and probability?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The podcast questions how a 55% vote share with a 2% margin of error is equivalent to an 87% win probability. This illustrates a common problem people have when trying to understand win probabilities — -it’s difficult to reason about the relationship between win-probabilities and vote share without actually running the numbers.&lt;/p&gt;
+&lt;p&gt;You can express a projection as either (1) the average vote share (can be an electoral college vote share or the popular vote share)&lt;/p&gt;
+&lt;p&gt;$$ \hat \mu_v = \frac{1}{N}\sum_{i}^{N}\bar x_i$$&lt;/p&gt;
+&lt;p&gt;and margin of error&lt;/p&gt;
+&lt;p&gt;$$\hat \mu_v \pm T^{0.975}_{df = N} \times \frac{ \hat \sigma_v}{\sqrt N}$$&lt;/p&gt;
+&lt;p&gt;Here the average for each survey is $$\bar x_i$$, and there are $$N = 20$$ surveys.&lt;/p&gt;
+&lt;p&gt;Or (2) the probability of winning — the probability that the vote share is greater than half, based on the observed vote share and standard error:&lt;/p&gt;
+&lt;p&gt;$$1 - \Phi \left (\frac{.5 - \hat \mu_v}{\hat\sigma_v} \right )$$&lt;/p&gt;
+&lt;p&gt;Going back to the example above, here’s the R code to generate those quantities:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-R&#34;&gt;svy_mean = .55 
+svy_SD = 0.04483415 # see appendix 
+N_svy = 20 
+margin_of_error = qt(.975, df = N_svy) * svy_SD/sqrt(N_svy) 
+
+svy_mean 
+[1] 0.55 
+
+margin_of_error 
+[1] 0.02091224 
+
+prob_win = 1-pnorm(q = .50, mean = svy_mean, sd = svy_SD) 
+prob_win 
+[1] 0.8676222 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;More details about this approach are in our appendix. This is similar to how the Princeton Election Consortium generated win probabilities in 2016.&lt;/p&gt;
+&lt;p&gt;Of course, one can also use an approach based on simulation, as FiveThirtyEight does. In the case of the data we generated for our hypothetical election in Study 1, this approach is not necessary. However we recognize that in the case of real-world presidential elections, a simulation approach has clear advantages by virtue of allowing more flexible statistical assumptions and a better accounting of error.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Why does this matter?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;To be clear, we are not analyzing real-world election returns. However, a lot of past 
+&lt;a href=&#34;https://huber.research.yale.edu/materials/67_paper.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;research&lt;/a&gt; 
+&lt;a href=&#34;http://www2.gsu.edu/~polsnn/priorbeliefs.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;shows&lt;/a&gt; that when people 
+&lt;a href=&#34;https://www.jstor.org/stable/1953324?seq=1#page_scan_tab_contents&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;think&lt;/a&gt; an election is 
+&lt;a href=&#34;https://repository.upenn.edu/cgi/viewcontent.cgi?referer=&amp;amp;httpsredir=1&amp;amp;article=1018&amp;amp;context=asc_papers&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;in the bag&lt;/a&gt;, they tend to 
+&lt;a href=&#34;https://www.sciencedirect.com/science/article/pii/S0014292115000483&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;vote in real-world elections&lt;/a&gt; at 
+&lt;a href=&#34;https://www.jstor.org/stable/2748722?seq=1#page_scan_tab_contents&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;lower rates&lt;/a&gt;. Our study provides evidence that probabilistic forecasts give people more confidence that one candidate will win and suggestive evidence that we should expect them to vote at lower rates after seeing probabilistic forecasts.&lt;/p&gt;
+&lt;p&gt;This matters &lt;em&gt;a lot more&lt;/em&gt; if one candidate’s potential voters are differentially affected, and there’s evidence that may be the case.&lt;/p&gt;
+&lt;p&gt;1. Figure 2C in Study 1 suggests that the &lt;em&gt;candidate who is ahead&lt;/em&gt; in the polls will be more affected by the increased certainty that probabilistic forecasts convey.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://solomonmg.github.io/img/certaintyc.png&#34; alt=&#34;normal&#34;&gt;&lt;/p&gt;
+&lt;p&gt;2. When you look at the balance of coverage of probabilistic forecasts on major television broadcasts, there is more coverage on MSNBC, which has a more liberal audience.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://solomonmg.github.io/img/msnbc_mentions.png&#34; alt=&#34;half&#34;&gt;&lt;/p&gt;
+&lt;p&gt;3. Consider who shares this material in social media&amp;ndash;specifically the average self-reported ideology of people who share links to various sites hosting poll-aggregators on Facebook, data that come from 
+&lt;a href=&#34;http://science.sciencemag.org/content/early/2015/05/06/science.aaa1160.full&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;this paper&lt;/a&gt;’s 
+&lt;a href=&#34;http://dx.doi.org/10.7910/DVN/LDJ7MS&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;replication materials&lt;/a&gt;. The websites that present their results in terms of probabilities have left-leaning (negative) social media audiences. Only realclearpolitics.com, which doesn’t emphasize win-probabilities, has a conservative audience:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://solomonmg.github.io/assets/img/bma_science_alignment.png&#34; alt=&#34;half&#34;&gt;&lt;/p&gt;
+&lt;p&gt;4. In 2016, the proportion of American National Election Study (ANES) respondents who thought the leading candidate would “win by quite a bit” was unusually high for Democrats&amp;hellip;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://solomonmg.github.io/assets/img/anes_turnout_closerace_mc_tall.png&#34; alt=&#34;normal&#34;&gt;&lt;/p&gt;
+&lt;p&gt;5. And we know that people who say the leading presidential candidate will “win by quite a bit” in pre-election polling are about three percentage points less likely to report voting shortly after the election than people who say it’s a close race — and that’s after conditioning on election year, prior turnout, and party identification. The data here are from the ANES and go back to 1952.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://solomonmg.github.io/img/closerace_vote_anes.png&#34; alt=&#34;normal&#34;&gt;&lt;/p&gt;
+&lt;p&gt;These data do not conclusively show that probabilistic forecasts affected turnout in the 2016 election, but they do raise questions about the real world consequences of probabilistic forecasts.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;What about media narratives?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;We acknowledge that these effects may change depending on the context in which people encounter them — though people can certainly encounter a lone probability number in media coverage of probabilistic forecasts. We also acknowledge that our work cannot address how these effects compare to and/or interact with media narratives.&lt;/p&gt;
+&lt;p&gt;However, other work that is relevant to this question has found that aggregating all polls 
+&lt;a href=&#34;https://academic.oup.com/poq/article-abstract/80/4/943/2738970?redirectedFrom=fulltext&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;reduces the likelihood that news outlets&lt;/a&gt; focus on unusual polls that are more sensational or support a particular narrative.&lt;/p&gt;
+&lt;p&gt;In some ways, the widespread success and reliance on these forecasts represents a triumph of scientific communication. In addition to greater precision compared with one-off horserace polls, probabilistic forecasts can quantify how likely a given U.S. presidential candidate is to win using polling data and complex simulation, rather than leaving the task of making sense of state and national polls to speculative commentary about “paths to victory,” as we point out in the 
+&lt;a href=&#34;https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3117054&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;paper&lt;/a&gt;. And as one of the hosts noted, we aren’t calling for an end to election projections.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Future work&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;We agree with the hosts that there are open questions about whether the public gives more weight to these probabilistic forecasts than other polling results and speculative commentary. We have also heard questions raised about how much probabilistic forecasts might &lt;em&gt;drive&lt;/em&gt; media narratives. These questions may prove difficult to answer and we encourage research that explores them.&lt;/p&gt;
+&lt;p&gt;We hope this research continues to create a dialogue about how to best communicate polling data to the public. We would love to see more research into how the public consumes and is affected by election projections, including finding the most effective ways to convey uncertainty.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Facebook Privacy-Protected Full URLs Data Set</title>
       <link>https://solomonmg.github.io/publication/messing-2020/</link>
       <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
@@ -609,130 +733,6 @@ F-statistic:   557 on 2 and 997 DF,  p-value: &amp;lt; 2.2e-16
 &lt;p&gt;It’s important to remember that omitted variable bias and correlated errors are just two potential problems with regression analysis. Regression models are also not immune to issues associated with low levels of 
 &lt;a href=&#34;https://en.wikipedia.org/wiki/Power_%28statistics%29&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;statistical power&lt;/a&gt;, the failure to account for the influence of extreme values, and 
 &lt;a href=&#34;https://en.wikipedia.org/wiki/Heteroscedasticity&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;heteroskedasticity&lt;/a&gt;, among others. But by simulating the data-generating process, researchers can get a good sense of some of the more common ways in which statistical models might depart from reality.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Why Election Forecasting Matters</title>
-      <link>https://solomonmg.github.io/post/response-to-fivethirtyeights-podcast-about-our-paper-projecting-confidence/</link>
-      <pubDate>Fri, 16 Feb 2018 00:00:00 +0000</pubDate>
-      <guid>https://solomonmg.github.io/post/response-to-fivethirtyeights-podcast-about-our-paper-projecting-confidence/</guid>
-      <description>&lt;p&gt;Do you remember the night of Nov 8, 2016? I was glued to election coverage and obsessively checking probabilistic forecasts, wondering whether Clinton might do &lt;em&gt;so well&lt;/em&gt; that she’d win in places like my home state of Arizona. Although FiveThirtyEight had Clinton&amp;rsquo;s chances at beating Trump at around 70%, most other forecasters had her at around 90%.&lt;/p&gt;
-&lt;p&gt;When she lost, 
-&lt;a href=&#34;https://www.nytimes.com/2016/11/10/us/politics/donald-trump-election-reaction.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;many on both sides of the aisle&lt;/a&gt; were shocked. My co-authors and I wondered if America&amp;rsquo;s seeming confidence in a Clinton victory wasn’t driven in part by increasing coverage of probabilistic forecasts. And, if a Clinton victory looked inevitable, what did that do to turnout?&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://solomonmg.github.io/img/forecast_google_news.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;We weren&amp;rsquo;t alone. Clinton herself was quoted in 
-&lt;a href=&#34;http://nymag.com/daily/intelligencer/2017/05/hillary-clinton-life-after-election.html?mid=nymag_press&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;New York Magazine&lt;/a&gt; after the election:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;I had people literally seeking absolution&amp;hellip; ‘&lt;em&gt;I’m so sorry I didn’t vote. I didn’t think you needed me.&lt;/em&gt;’ I don’t know how we’ll ever calculate how many people thought it was in the bag, because the percentages kept being thrown at people — ‘&lt;em&gt;Oh, she has an 88 percent chance to win!&lt;/em&gt;’&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Enter our recent 
-&lt;a href=&#34;http://www.pewresearch.org/fact-tank/2018/02/06/use-of-election-forecasts-in-campaign-coverage-can-confuse-voters-and-may-lower-turnout/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;blog post&lt;/a&gt; and 
-&lt;a href=&#34;https://papers.ssrn.com/abstract=3117054&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;paper released on SSRN&lt;/a&gt;, “Projecting confidence: How the probabilistic horse race confuses and de-mobilizes the public,” by Sean Westwood, Solomon Messing, and Yphtach Lelkes. While our work cannot definitively say whether probabilistic forecasts played a decisive role in the 2016 election, it does indeed show that compared to more conventional vote share projections, probabilistic forecasts can confuse people, can give people more confidence that the candidate depicted as being ahead will win, may decrease turnout, and that liberals in the U.S. are more likely to encounter them. We appreciate the media attention to this work, including coverage by the 
-&lt;a href=&#34;https://www.washingtonpost.com/news/politics/wp/2018/02/06/clintons-achilles-heel-in-2016-may-have-been-overconfidence/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Washington Post&lt;/a&gt;, 
-&lt;a href=&#34;http://nymag.com/daily/intelligencer/2018/02/americans-dont-understand-election-probabilities.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;New York Magazine&lt;/a&gt;, and the 
-&lt;a href=&#34;https://politicalwire.com/2018/02/06/election-forecasts-lower-voter-turnout/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Political Wire&lt;/a&gt;. What&amp;rsquo;s more, FiveThirtyEight devoted much of their Feb. 12 
-&lt;a href=&#34;https://fivethirtyeight.com/features/politics-podcast-whats-so-wrong-with-nancy-pelosi/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Politics Podcast&lt;/a&gt; to a spirited, and at points critical discussion of our work. We are open to criticism and will respond to some of the questions raised in this post. Below, we’ll show that the evidence in our study and in other research is &lt;em&gt;not&lt;/em&gt; inconsistent with our headline, as the hosts suggest—we&amp;rsquo;ll detail the evidence that probabilistic forecasts &lt;em&gt;confuse&lt;/em&gt; people, irrespective of their technical accuracy. We’ll also discuss where we agree with the podcast hosts. Furthermore, we&amp;rsquo;ll discuss a few topics which, judging from the hosts discussion, may not have come through clearly enough in our paper. We&amp;rsquo;ll reiterate what this work contributes to social science—how the paper adds to our understanding of how people think about probabilistic forecasts and how they may decrease voting, particularly for the leading candidate&amp;rsquo;s supporters and among liberals in the U.S. We’ll then walk readers through the way we mapped vote share projections to probabilities in the study. Finally we’ll discuss why this work matters, and conclude by pointing out future research we’d like to see in this area.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;What’s new here?&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;The research contains a number findings that are new to social science:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Presenting forecasted win-probabilities gives potential voters the impression that one candidate will win more decisively, compared with vote share projections (Study 1).&lt;/li&gt;
-&lt;li&gt;Higher win probabilities, but &lt;em&gt;not&lt;/em&gt; vote share estimates, &lt;em&gt;decrease voting&lt;/em&gt; in the face of the trade-offs embedded in our election simulation (Study 2). This helps confirm the findings in Study 1 and adds to the evidence from past research that people vote at lower rates when they perceive an election to be uncompetitive.&lt;/li&gt;
-&lt;li&gt;In 2016, probabilistic forecasts were covered more extensively than in the past and tended to be covered by outlets with more liberal audiences.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Where we agree&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;If what you care about is conveying an accurate sense of whether one candidate will win, probabilistic forecasts do this slightly better than vote share. And, they seem to give people an edge on accuracy when interpreting the vote share if your candidate is behind. Of course, people can be confused and still end up being accurate, as we&amp;rsquo;ll discuss below.&lt;/p&gt;
-&lt;p&gt;We also agree that people often do not accurately judge the likelihood of victory after seeing a vote share projection. That makes sense because, as the study shows, people appear to largely ignore the margin of error, which they’d need to map between vote share estimates and win probabilities.&lt;/p&gt;
-&lt;p&gt;We also agree that a lot of past work shows that people stay home when they think an election isn’t close. What we’re adding to that body of work is evidence that compared with vote share projections, probabilistic forecasts give people the impression that one candidate will win more decisively, and may thus &lt;em&gt;more powerfully&lt;/em&gt; affect turnout.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Does the evidence in our study contradict our headline?&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Our headline isn’t about accuracy, it’s about &lt;em&gt;confusion&lt;/em&gt;. And the evidence from this research and past work taken as a whole suggests that probabilistic forecasts confuse people — something that came up at the end of segment — even if the result sometimes is technically higher accuracy.&lt;/p&gt;
-&lt;p&gt;1. People in the study who saw only probabilistic forecasts were more likely to confuse probability and vote share. After seeing probabilistic forecasts, 8.6% of respondents mixed up vote share and probability, while only 0.6% of respondents did so after seeing vote share projections. We’re defining “mixed-up” as reporting the win-probability we provided as the vote share and vice-versa.&lt;/p&gt;
-&lt;p&gt;2. Figure 2B (Study 1) shows that people get their candidate’s likelihood of winning very wrong, even when we explicitly told them the probability a candidate will win. It’s true that they got slightly closer with a probability forecast, but they are still far off.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://solomonmg.github.io/img/likelihood_loess.png&#34; alt=&#34;normal&#34;&gt;&lt;/p&gt;
-&lt;p&gt;Why might this be? A lot of past research and evidence suggests that people have trouble understanding probabilities, as noted at the end of the podcast. People have a tendency to think about 
-&lt;a href=&#34;https://chicagounbound.uchicago.edu/cgi/viewcontent.cgi?article=1384&amp;amp;context=law_and_economics&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;probabilities in subjective terms&lt;/a&gt;, so they have trouble understanding 
-&lt;a href=&#34;https://www.ncbi.nlm.nih.gov/pubmed/26161749&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;medical risks&lt;/a&gt; and even 
-&lt;a href=&#34;http://pubman.mpdl.mpg.de/pubman/item/escidoc:2101059/component/escidoc:2101058/GG_30_Chance_2005.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;weather forecasts&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Nate Silver has himself 
-&lt;a href=&#34;https://fivethirtyeight.com/features/the-media-has-a-probability-problem/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;made the argument&lt;/a&gt; that 
-&lt;a href=&#34;https://www.nytimes.com/2016/11/10/technology/the-data-said-clinton-would-win-why-you-shouldnt-have-believed-it.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;the backlash&lt;/a&gt; we saw to data and analytics in the wake of the 2016 election is due in part to the media misunderstanding probabilistic forecasts.&lt;/p&gt;
-&lt;p&gt;As the podcast hosts pointed out, people &lt;em&gt;underestimated&lt;/em&gt; the true likelihood of winning after seeing both probabilistic forecasts and vote share projections. It’s possible that people are skeptical of any probabilistic forecast in light of the 2016 election. It’s possible they interpreted the likelihood not as hard-nosed odds, but in rather subjective terms — &lt;em&gt;what might happen&lt;/em&gt;, 
-&lt;a href=&#34;https://chicagounbound.uchicago.edu/cgi/viewcontent.cgi?article=1384&amp;amp;context=law_and_economics&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;consistent with past research&lt;/a&gt;. Regardless, they do not appear to reason about probability in a way that is consistent with how election forecasters define the probability of winning.&lt;/p&gt;
-&lt;p&gt;3. Looking at how people reason about vote share — the way people have traditionally encountered polling data — it’s clear from our results that when a person’s candidate is ahead and they see a probabilistic forecast, they rather dramatically overestimate the vote share. On the other hand, when they are behind, they get closer to the right answer.&lt;/p&gt;
-&lt;p&gt;But we know from past research that people have a “
-&lt;a href=&#34;http://journals.sagepub.com/doi/abs/10.1177/0956797609356421&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;wishful&lt;/a&gt; 
-&lt;a href=&#34;http://www.tandfonline.com/doi/abs/10.1207/s15324834basp1304_6&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;thinking&lt;/a&gt;” 
-&lt;a href=&#34;https://academic.oup.com/ijpor/article-abstract/9/2/105/713900&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;bias&lt;/a&gt;, meaning they say their candidate is doing better than polling data suggests. That’s why there’s a positive bias when people are evaluating how their candidate will do, according to Figure 2A (Study 1).&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://solomonmg.github.io/img/votea.png&#34; alt=&#34;normal&#34;&gt;&lt;/p&gt;
-&lt;p&gt;The pattern in the data suggest that people are more accurate after seeing a probabilistic forecast for a losing candidate because of this effect, and &lt;em&gt;not&lt;/em&gt; necessarily because they better understand that candidate’s actual chances of victory.&lt;/p&gt;
-&lt;p&gt;4. Perhaps even more importantly, &lt;em&gt;none&lt;/em&gt; of the results here changed when we excluded the margin of error from the projections we presented to people. That suggests that the public may not understand error in the same way that statisticians do, and therefore may not be well-equipped to understand what goes into changes in probabilistic forecast numbers. And of course, very small changes in vote share projection numbers and estimates of error correspond to much larger swings in probabilistic forecasts.&lt;/p&gt;
-&lt;p&gt;5. Finally, as we point out in the paper, if probabilistic forecasters do not account for total error, they can really overestimate a candidate’s probability of winning. Of course, that’s because an estimate of the probability of victory bakes in estimates of error, which recent work has found is 
-&lt;a href=&#34;http://www.stat.columbia.edu/~gelman/research/unpublished/polling-errors.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;often about twice as large as the estimates of sampling error&lt;/a&gt; provided in many polls.&lt;/p&gt;
-&lt;p&gt;As 
-&lt;a href=&#34;https://fivethirtyeight.com/features/the-polls-were-skewed-toward-democrats/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Nate Silver has alluded to&lt;/a&gt;, if the forecaster does not account unobserved error, including error that may be correlated across surveys — he/she will artificially inflate the estimated probability of victory or defeat. Of course, FiveThirtyEight &lt;em&gt;does&lt;/em&gt; attempt to account for this error, and released far more conservative forecasts than others in this space in 2016.&lt;/p&gt;
-&lt;p&gt;Speaking in part to this issue, 
-&lt;a href=&#34;http://www.stat.columbia.edu/~gelman/research/published/what_learned_in_2016_5.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Andrew Gelman and Julia Azari&lt;/a&gt; recently concluded that “polling uncertainty could best be expressed not by speculative win probabilities but rather by using the traditional estimate and margin of error.” They seemed to be speaking about other forecasters, and did not directly reference FiveThirtyEight.&lt;/p&gt;
-&lt;p&gt;At the end of the day, it’s easy to see that a vote share projection of 55% means that “55% of the votes will go to Candidate A, according to our polling data and assumptions.” However, it’s less clear that an 87% win probability means that “if the election were held 1000 times, Candidate A would win 870 times, and lose 130 times, based on our polling data and assumptions.”&lt;/p&gt;
-&lt;p&gt;And most critically, we show that probabilistic forecasts showing more of a blowout could potentially lower voting. In Study 1, we provide limited evidence of this based on self reports. In Study 2, we show that when participants are faced with incentives designed to simulate real world voting, they are less likely to vote when probabilistic forecasts show higher odds of one candidate winning. Yet they are not responsive to changes in vote share.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://solomonmg.github.io/img/FT_18.01.03_prob_vote.png&#34; alt=&#34;normal&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;What’s with our mapping between vote share and probability?&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;The podcast questions how a 55% vote share with a 2% margin of error is equivalent to an 87% win probability. This illustrates a common problem people have when trying to understand win probabilities — -it’s difficult to reason about the relationship between win-probabilities and vote share without actually running the numbers.&lt;/p&gt;
-&lt;p&gt;You can express a projection as either (1) the average vote share (can be an electoral college vote share or the popular vote share)&lt;/p&gt;
-&lt;p&gt;$$ \hat \mu_v = \frac{1}{N}\sum_{i}^{N}\bar x_i$$&lt;/p&gt;
-&lt;p&gt;and margin of error&lt;/p&gt;
-&lt;p&gt;$$\hat \mu_v \pm T^{0.975}_{df = N} \times \frac{ \hat \sigma_v}{\sqrt N}$$&lt;/p&gt;
-&lt;p&gt;Here the average for each survey is $$\bar x_i$$, and there are $$N = 20$$ surveys.&lt;/p&gt;
-&lt;p&gt;Or (2) the probability of winning — the probability that the vote share is greater than half, based on the observed vote share and standard error:&lt;/p&gt;
-&lt;p&gt;$$1 - \Phi \left (\frac{.5 - \hat \mu_v}{\hat\sigma_v} \right )$$&lt;/p&gt;
-&lt;p&gt;Going back to the example above, here’s the R code to generate those quantities:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-R&#34;&gt;svy_mean = .55 
-svy_SD = 0.04483415 # see appendix 
-N_svy = 20 
-margin_of_error = qt(.975, df = N_svy) * svy_SD/sqrt(N_svy) 
-
-svy_mean 
-[1] 0.55 
-
-margin_of_error 
-[1] 0.02091224 
-
-prob_win = 1-pnorm(q = .50, mean = svy_mean, sd = svy_SD) 
-prob_win 
-[1] 0.8676222 
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;More details about this approach are in our appendix. This is similar to how the Princeton Election Consortium generated win probabilities in 2016.&lt;/p&gt;
-&lt;p&gt;Of course, one can also use an approach based on simulation, as FiveThirtyEight does. In the case of the data we generated for our hypothetical election in Study 1, this approach is not necessary. However we recognize that in the case of real-world presidential elections, a simulation approach has clear advantages by virtue of allowing more flexible statistical assumptions and a better accounting of error.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Why does this matter?&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;To be clear, we are not analyzing real-world election returns. However, a lot of past 
-&lt;a href=&#34;https://huber.research.yale.edu/materials/67_paper.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;research&lt;/a&gt; 
-&lt;a href=&#34;http://www2.gsu.edu/~polsnn/priorbeliefs.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;shows&lt;/a&gt; that when people 
-&lt;a href=&#34;https://www.jstor.org/stable/1953324?seq=1#page_scan_tab_contents&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;think&lt;/a&gt; an election is 
-&lt;a href=&#34;https://repository.upenn.edu/cgi/viewcontent.cgi?referer=&amp;amp;httpsredir=1&amp;amp;article=1018&amp;amp;context=asc_papers&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;in the bag&lt;/a&gt;, they tend to 
-&lt;a href=&#34;https://www.sciencedirect.com/science/article/pii/S0014292115000483&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;vote in real-world elections&lt;/a&gt; at 
-&lt;a href=&#34;https://www.jstor.org/stable/2748722?seq=1#page_scan_tab_contents&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;lower rates&lt;/a&gt;. Our study provides evidence that probabilistic forecasts give people more confidence that one candidate will win and suggestive evidence that we should expect them to vote at lower rates after seeing probabilistic forecasts.&lt;/p&gt;
-&lt;p&gt;This matters &lt;em&gt;a lot more&lt;/em&gt; if one candidate’s potential voters are differentially affected, and there’s evidence that may be the case.&lt;/p&gt;
-&lt;p&gt;1. Figure 2C in Study 1 suggests that the &lt;em&gt;candidate who is ahead&lt;/em&gt; in the polls will be more affected by the increased certainty that probabilistic forecasts convey.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://solomonmg.github.io/img/certaintyc.png&#34; alt=&#34;normal&#34;&gt;&lt;/p&gt;
-&lt;p&gt;2. When you look at the balance of coverage of probabilistic forecasts on major television broadcasts, there is more coverage on MSNBC, which has a more liberal audience.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://solomonmg.github.io/img/msnbc_mentions.png&#34; alt=&#34;half&#34;&gt;&lt;/p&gt;
-&lt;p&gt;3. Consider who shares this material in social media&amp;ndash;specifically the average self-reported ideology of people who share links to various sites hosting poll-aggregators on Facebook, data that come from 
-&lt;a href=&#34;http://science.sciencemag.org/content/early/2015/05/06/science.aaa1160.full&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;this paper&lt;/a&gt;’s 
-&lt;a href=&#34;http://dx.doi.org/10.7910/DVN/LDJ7MS&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;replication materials&lt;/a&gt;. The websites that present their results in terms of probabilities have left-leaning (negative) social media audiences. Only realclearpolitics.com, which doesn’t emphasize win-probabilities, has a conservative audience:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://solomonmg.github.io/assets/img/bma_science_alignment.png&#34; alt=&#34;half&#34;&gt;&lt;/p&gt;
-&lt;p&gt;4. In 2016, the proportion of American National Election Study (ANES) respondents who thought the leading candidate would “win by quite a bit” was unusually high for Democrats&amp;hellip;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://solomonmg.github.io/assets/img/anes_turnout_closerace_mc_tall.png&#34; alt=&#34;normal&#34;&gt;&lt;/p&gt;
-&lt;p&gt;5. And we know that people who say the leading presidential candidate will “win by quite a bit” in pre-election polling are about three percentage points less likely to report voting shortly after the election than people who say it’s a close race — and that’s after conditioning on election year, prior turnout, and party identification. The data here are from the ANES and go back to 1952.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://solomonmg.github.io/img/closerace_vote_anes.png&#34; alt=&#34;normal&#34;&gt;&lt;/p&gt;
-&lt;p&gt;These data do not conclusively show that probabilistic forecasts affected turnout in the 2016 election, but they do raise questions about the real world consequences of probabilistic forecasts.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;What about media narratives?&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;We acknowledge that these effects may change depending on the context in which people encounter them — though people can certainly encounter a lone probability number in media coverage of probabilistic forecasts. We also acknowledge that our work cannot address how these effects compare to and/or interact with media narratives.&lt;/p&gt;
-&lt;p&gt;However, other work that is relevant to this question has found that aggregating all polls 
-&lt;a href=&#34;https://academic.oup.com/poq/article-abstract/80/4/943/2738970?redirectedFrom=fulltext&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;reduces the likelihood that news outlets&lt;/a&gt; focus on unusual polls that are more sensational or support a particular narrative.&lt;/p&gt;
-&lt;p&gt;In some ways, the widespread success and reliance on these forecasts represents a triumph of scientific communication. In addition to greater precision compared with one-off horserace polls, probabilistic forecasts can quantify how likely a given U.S. presidential candidate is to win using polling data and complex simulation, rather than leaving the task of making sense of state and national polls to speculative commentary about “paths to victory,” as we point out in the 
-&lt;a href=&#34;https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3117054&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;paper&lt;/a&gt;. And as one of the hosts noted, we aren’t calling for an end to election projections.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Future work&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;We agree with the hosts that there are open questions about whether the public gives more weight to these probabilistic forecasts than other polling results and speculative commentary. We have also heard questions raised about how much probabilistic forecasts might &lt;em&gt;drive&lt;/em&gt; media narratives. These questions may prove difficult to answer and we encourage research that explores them.&lt;/p&gt;
-&lt;p&gt;We hope this research continues to create a dialogue about how to best communicate polling data to the public. We would love to see more research into how the public consumes and is affected by election projections, including finding the most effective ways to convey uncertainty.&lt;/p&gt;
 </description>
     </item>
     
