@@ -208,6 +208,44 @@
 
 
 
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-27273977-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url, target) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           if (target !== '_blank') {
+             document.location = url;
+           }
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target, event.target.getAttribute('target'));  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'UA-27273977-1', {});
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
+
+
   
 
 
@@ -749,7 +787,7 @@
 <a href="https://statmodeling.stat.columbia.edu/2020/06/12/election-2020-is-coming-our-poll-aggregation-model-with-elliott-morris-of-the-economist/" target="_blank" rel="noopener">win 90 times to Trump’s 10</a>.</p>
 <p>At this point I would like to remind you of that feeling you felt on election night 2016. When a month earlier, 
 <a href="https://www.cnn.com/2016/10/23/politics/hillary-clinton-donald-trump-presidential-polls/index.html" target="_blank" rel="noopener">CNN&rsquo;s &lsquo;Poll of Polls&rsquo; had Clinton up by 9 points</a> and two prominent forecasters put Clinton’s chances at 99%. Remember that?</p>
-<p>I could probably stop there, but I’m not going to because although we&rsquo;ve fixed some of the issues from 2016, we have COVID-19. And COVID will mess with our election in ways very likely to hurt Democrats, and so far I know of no pollster or forecaster factoring this into their method or likely voter model.</p>
+<p>I could probably stop there, but I’m not going to because although we&rsquo;ve fixed some of the issues from 2016, we have COVID-19. And COVID will mess with our election in ways very likely to hurt Democrats, and I know of no pollster factoring this into their method or likely voter model.</p>
 <p>After 2016, Sean Westwood, Yphtach Lelkes and I began a multi-year research project (recently published in the 
 <a href="https://www.journals.uchicago.edu/doi/abs/10.1086/708682?mobileUi=0" target="_blank" rel="noopener">Journal of Politics</a>) and found that when you have high confidence that one candidate will win, 
 <a href="https://solomonmg.github.io/project/projecting_confidence/" target="_blank" rel="noopener">you’re less likely to vote</a>. The fact that everyone thought Clinton would win in 2016 shaped Comey&rsquo;s decision to release his infamous letter that 
