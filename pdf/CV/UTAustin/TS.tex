@@ -1,0 +1,92 @@
+\documentclass[12pt]{article}
+%\usepackage[OT1]{fontenc}
+%\usepackage{babel}
+%\usepackage{hyperref} 
+
+\usepackage{color}
+\usepackage{url}   %this allows us to cite URLs in the text
+\renewcommand\UrlFont{\ttfamily\color{blue}}%
+
+\usepackage{hyperref}
+
+\hypersetup{
+  colorlinks,
+  citecolor=Violet,
+  linkcolor=Red,
+  urlcolor=blue}
+
+
+\usepackage{graphicx}  %allows for graphic to float when doing jou or doc style
+\usepackage{amssymb}  %use formatting tools  for math symbols
+\usepackage{natbib}  %might conflict with apa...
+\usepackage{booktabs}
+%\usepackage{Sweave}
+%\usepackage{tikz}
+%\usepackage{pgf}
+\usepackage{fullpage}
+\usepackage{setspace} 
+%\usepackage{lineno}
+%\linenumbers
+
+\begin{document}  
+\title{Teaching Statement}
+\author{Solomon Messing}
+
+\maketitle 
+
+%\begin{center} 
+%\Large Teaching Statement (Messing)
+%\end{center}
+
+
+%\doublespacing 
+
+%\section*{Teaching Philosophy and Experience}
+
+My goal is to motivate important theories and hypotheses by pointing out surprising and counterintuitive implications, then discussing theoretical complexities in the context of real-world controversies and issues.  I believe the most important part of a course is when students question the various assertions, conceptualizations, and methods presented in the class, and I encourage this through logical examination and evaluating how well theories presented map onto real world outcomes.  I enjoy introducing students to new tools and methodologies, including computational methods, scraping, and basic database management.  When teaching methodological material, I tend to utilize interactive demonstrations using R versus presenting powerpoint slides, and try to include interesting anecdotes and humor whenever possible.  
+
+Presently, I teach statistics modules for Facebook's Data Camp and am co-teaching a course in Udacity's Data Science track, 
+\href{https://www.udacity.com/course/ud651}{Exploratory Data Analysis}.  In the former, I introduce the bootstrap and variations on it to deal with the complexities of large behavioral data sets---skew and violations of independence---in a computationally tractable way.  In addition, I show how Monte Carlo simulation can be fruitfully used to examine the bias and variance for a particular method, and to conduct power analyses for behavioral experiments when the data generating process does not meet the assumptions conventional power tests.  In \emph{Exploratory Data Analysis}, I show how visualization and qualitative insight can be used to help create highly accurate statistical models.  
+
+I designed and taught ``Political Communication and Social Media,'' which examines the role of social technologies in modern politics and electoral campaigns.  The course introduces scraping and basic analyses of text-as-data in the process of studying social media and politics.  The full syllabus is available \href{http://dl.dropboxusercontent.com/u/25710348/PoliticalCommunicationSocialMedia/SYLLABUSPoliticalCommunicationSocialMedia.pdf}{at this URL}. Below are sample evaluations: 
+
+\begin{itemize}
+\item ``I definitely feel as though I am better equipped to comment on social media and politics and I feel 100x more confident about my data analysis skills. With a bit of improvement I feel as though I would be able to use my final project as a writing sample [for a phd program application].''
+\item ``I enjoyed the readings and the topics that Messing decided to cover. And, even though I struggled greatly with the program R, I was still able to complete the assignments and felt really good about myself afterwards. I really did enjoy the course and I am walking away from it with new perspective on Political Communication.''
+\item ``Messing was very good at choosing articles related to Political Communication and Social Media that helped to solidify concepts and challenge his students. I appreciated that he was so approachable and available to meet outside of class.''
+\item ``The course content was very, very interesting. As was the final project.''
+\end{itemize}
+
+When teaching section for \emph{Campaigns, Voting, Media and Elections} with Shanto Iyengar, I led discussions on the major theories in the field of political communication and guided students through, what was for most, their first quantitative research project on media and politics.  Sample evaluations below:
+
+\begin{itemize}
+\item ``Solomon was a great section leader! I was continually impressed by his complex, nuanced knowledge of politics, political theory, and statistical analysis... Solomon was absolutely fantastic at answering questions outside of class and making himself available to discuss course topics, paper ideas, and provide feedback both in and out of office hours...  I appreciate that he invested the time to provide meaningful feedback and really took an interest in helping me.''
+\item ``Always kept students on track, and gave very relevant examples to questions... Always [maintained a] positive attitude and very willing to meet outside of class, and responded promptly to e-mails... Overall, effective and good section leader.''
+\item ``Knew the material very well, and presented it clearly... Did a great job, and was helpful with the paper and the data analysis of the paper.''
+\end{itemize}
+
+While serving as a course assistant for a graduate level methods course in Political Science, \emph{Text as Data} with Justin Grimmer, I provided brief explanations of basic concepts during lectures and helped design problem sets for students, which introduced key concepts with starter code that helped get them started solving problems.  By introducing key text analysis paradigms like regular expressions and the term-document matrix, students gained the introductory tools necessary to the understand complex statistical methods presented later.  In the process, I learned how to create lectures that cover complicated theoretical, mathematical, and statistical concepts with precise language and clear visualizations; and how to best encourage student participation with positive reinforcement and good humored banter.
+
+Outside of the classroom, I try to contribute to teaching challenging methodological materials in a number of ways.  I frequently blog about R (\url{http://solomonmessing.wordpress.com}), and my posts about visualization have garnered over 20 thousand views (and an offer for a book contract from Chapman and Hill).  I also helped compile a series of labs for Dan McFarland's social network analysis course, meant to provide an introduction to social network analysis using the R statistical programming language, available at \url{http://sna.stanford.edu/rlabs.php}.  I've also given a series of talks introducing R to students from the social sciences and the medical school, which involves 45 minute hands-on introductory demonstrations, and then addressing common questions about programming, syntax, and data, with the Social Science and Data and Software (SSDS) center.  
+
+I have also taught workshops on scraping and analyzing text data for the Stanford Summer Computational Social Science Workshop, which focused on acquiring and analyzing text as data.  The workshop introduced advanced social science students to the concepts of scraping raw data and using query strings to attain (semi-)structured data from the web; managing the web's most common tree data structures such as JSON and XML; basic text pre-processing including parsing and regular expression (RegEx) matching; document-term matrices; and finally putting everything together by querying and processing Twitter data.  
+
+
+% Courses to teach
+%\section*{Teaching Interests}
+%The course would discuss how social media and mobile computing platforms keep us persistently connected to our social affiliations and thus affect our identity, change the mix of media content we consume, change the costs of collective action, and ultimately structure the way in which we learn and think about the world.  The course would explore the shift from a mass-media-centric world to the far more complex distribution networks made possible by social and mobile computing, introducing theoretical and methodological perspectives from network analysis, epidemiology, and information theory.  Topics might include gauging the impact of social media modern political campaigns and social movements; modern scandals and ``media storms''; the Internet as a tool for corporate ``guerrilla marketing'' efforts; meme propagation and web entertainment; and the economic and political implications of micro-targeted web and mobile advertising based on predictive analytics.  
+
+I am interested developing additional courses covering on new forms of research that are possible thanks to the web.  Not only would this teach students how to acquire data from the web and analyze it, but it would also introduce techniques to conduct online experiments and crowd-source data collection.  The course would teach students how to use powerful campus linux/unix servers and/or Amazon Web Services server clusters to scrape, maintain, and analyze large text databases using (PHP and MySQL), while providing a gentle introduction to the application of supervised and unsupervised machine learning approaches to identify patterns and generate meaningful data that can be applied in subsequent analyses.  Lastly, it would introduce crowd-sourcing frameworks like Odesk to hire programmers to rapidly prototype online experiments, and Amazon.com's Mechanical Turk and CrowdFlower for crowd-sourcing data collection and/or classification.   
+
+%I would also be interested to teach a course on data-driven journalism, which would acquaint journalists with the process of acquiring, transforming, summarizing and visualizing relevant available data.  The course would emphasize principles outlined in Meyer's ``Precision Journalism: A Reporter's Introduction to Social Science Methods,'' with critical attention to gathering causal evidence as debated in Brady and Collier's ``Rethinking Social Inquiry.''  It would teach the use of tools like Revisit, Google Fusion Tables, IBM's Many Eyes to quickly identify entities and patterns of interest.  It would then dig deeper, exploring the acquisition of journalism-relevant data from the web using APIs and scrapers; transforming, filtering, and processing the data as necessary using open-source GUI tools like DocumentCloud and Data Wrangler and/or scripting tools like Python and/or R; building meaningful summaries and cross-tabulations and constructing informative and elegant visualizations using GUI tools like Tableau and Statwing, or scripting tools like R's \texttt{ggplot2} package and/or D3.  Possible special topics might include digital image manipulation analysis, and detection; media crowd-sourcing/``wiki-fication,'' evaluating media bias, and natural language processing.  
+
+\end{document}
+
+
+
+
+
+
+
+
+

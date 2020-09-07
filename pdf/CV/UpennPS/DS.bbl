@@ -1,0 +1,17 @@
+\begin{thebibliography}{1}
+\providecommand{\natexlab}[1]{#1}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi:\discretionary{}{}{}#1}\else
+  \providecommand{\doi}{doi:\discretionary{}{}{}\begingroup
+  \urlstyle{rm}\Url}\fi
+
+\bibitem[Devine et~al., 2002]{devine_regulation_2002}
+Devine, Patricia~G., Plant, E.~Ashby, Amodio, David~M., Harmon-Jones, Eddie,
+  and Vance, Stephanie~L. (2002).
+\newblock The regulation of explicit and implicit race bias: The role of
+  motivations to respond without prejudice.
+\newblock \emph{Journal of Personality and Social Psychology} 82(5):835--848.
+\newblock ISSN 0022-3514.
+\newblock \doi{10.1037/0022-3514.82.5.835}.
+
+\end{thebibliography}

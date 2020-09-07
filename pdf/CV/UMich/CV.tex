@@ -1,0 +1,284 @@
+% resume.tex
+%
+% (c) 2002 Matthew Boedicker <mboedick@mboedick.org> (original author) http://mboedick.org
+% (c) 2003 David J. Grant <dgrant@ieee.org> http://www.davidgrant.ca
+% (c) 2007 Todd C. Miller <Todd.Miller@courtesan.com> http://www.courtesan.com/todd
+%
+%This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/1.0/ or send a letter to Creative Commons, 559 Nathan Abbott Way, Stanford, California 94305, USA.
+
+\documentclass[letterpaper,11pt]{article}
+
+%-----------------------------------------------------------
+\usepackage[empty]{fullpage}
+\usepackage{color}
+\usepackage{url}
+\renewcommand\UrlFont{\ttfamily\color{blue}}%
+
+\usepackage{hyperref}
+\definecolor{mygrey}{gray}{0.80}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Adjust margins to 0.5in on all sides
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.0in}
+\addtolength{\topmargin}{-0.5in}
+\addtolength{\textheight}{1.0in}
+
+%-----------------------------------------------------------
+%Custom commands
+\newcommand{\resitem}[1]{\item #1 \vspace{-6pt}}
+\newcommand{\resheading}[1]{\vspace{4pt}{\large
+\colorbox{mygrey}{\begin{minipage}{\textwidth}{\textbf{#1
+\vphantom{p\^{E}}}}\end{minipage}}}\vspace{4pt}} 
+\newcommand{\ressubheading}[4]{\vspace{2pt}
+\begin{tabular*}{7.58in}{l@{\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+		\textit{#3} & \textit{#4} \\
+\end{tabular*}\vspace{-7pt}}
+\newcommand{\resoldtitle}[4]{
+\begin{tabular*}{7.58in}{l@{\extracolsep{\fill}}r}
+		\textit{#1} & \textit{#2} \\
+\end{tabular*}\vspace{-6pt}}
+%-----------------------------------------------------------
+
+
+\begin{document} 
+
+\begin{tabular*}{7.5in}{l@{\extracolsep{\fill}}r}
+\textbf{\large Solomon Messing} & \texttt{[lastname]@stanford.edu} (email)\\
+450 Serra Mall, Building 120  &  \url{http://www.stanford.edu/~messing} (website)\\ 
+Stanford, CA 94305-2050 & \url{http://solomonmessing.wordpress.com/} (blog)\\
+\end{tabular*}
+\\
+
+\vspace{0.1in}
+
+\resheading{Summary}
+Research focus on political communication online, including social media, constituent communication, political advertising; utilizing web experiments, observational analyses of large scale text and social media data sets, crowd-computing platforms, and statistical modeling/machine learning.  Accepted publications in the \emph{American Political Science Review}, \emph{Public Opinion Quarterly} and \emph{Communication Research}.  Experience with distributed computing, scraping, machine learning platforms, web applications, working with semi-structured and unstructured data, writing open source packages for R.
+
+\vspace{0.1in}
+
+\resheading{Education}
+	\ressubheading{Stanford University}{Stanford, CA}{Ph.D. Communication (2013), M.S. Statistics (2012)}{2008 - 2013}
+	\begin{itemize} 
+		\resitem{Dissertation: ``How Social Influence Shapes the Diffusion of Elite Discourse, Public Opinion, and Participation'}
+		%\resitem{Research: machine/statistical learning, natural language processing, networks, visualization, analysis of images}
+%		\resitem{CS/NLP/machine-learning: Course Assistant for PS 452: Texts as Data (Python/R); CS 124: From Languages to Information (Java); STATS 315A: Modern Applied Statistics: Learning (R); 
+%		STATS 290: Paradigms for Computing with Data (R/C++/SQL); STATS 202: Data Mining (R); 
+%		PS 354F: Applied Bayesian Analysis (R/BUGS/JAGS); STATS 305: Introduction to Statistical Modeling (R) }
+	\end{itemize}
+\vspace{0.1in}
+	\ressubheading{University of California, San Diego}{La Jolla, CA}{Masters,
+	School of International Relations/Pacific Studies (Int'l MBA-curriculum)}{2003 - 2005}
+%	\begin{itemize}
+%	\resitem{ Economics Coursework: IRCO 401: Managerial Economics, IRCO 421: Finance, IRCO 424: Corporate Finance, IRCO 453: Quantitative Methods: Decision Making and Scenario Analysis, IRCO 454: Quantitative Methods: Decision Making under Uncertainty, IRGN 490: Economics in Southeast Asia, IRGN 463: Political Economy of Southeast Asia, IRGN 490: Risk Analysis in Southeast Asia, IRCO 461: Business and Government in the Global Economy}
+%	\end{itemize}
+\vspace{0.1in}
+	\ressubheading{University of California, Santa Barbara}{Santa Barbara,
+	CA}{Bachelor of Arts with Honors in Political Science and Global Studies, Japanese minor}{1998 - 2002}
+%	\begin{itemize} 
+%		\resitem{ CS coursework: CS 5JA: Introduction to programming in Java, CS 10: Introduction to programming (Java), CS 30: Introduction to Computer Systems (assembly)}
+%%		\resitem{ Econ courses: Econ 1: Microeconomics, Econ 130: International Economics, Econ 176: International Investment, PS 186: Introduction to International Political Economy}
+%	\end{itemize}
+\vspace{0.1in}
+
+\resheading{Books}
+\begin{description}
+\item[] \href{http://stanford.edu/~jgrimmer/BookProsp.pdf}{\emph{The Impression of Influence: Legislator Communication, Representation, and Democratic Accountability}} with Justin Grimmer \& Sean Westwood.  2014. \emph{Princeton University Press.}  
+
+\end{description}
+
+\resheading{Publications}
+\begin{description}
+
+%\item[] \href{https://www.dropbox.com/s/fygyt6twi4h1eb1/POQTieStrengthNOTAnon.pdf}{``Friends that Matter: How Social Influence Drives Attention in Social Media''} with Sean Westwood.
+%\emph{Public Opinion Quarterly}, (R \& R).
+
+\item[] ``Quantifying Social Media's Political Space: Estimating Ideology from Publicly Revealed Preferences on Facebook'' with Robert Bond.  \emph{American Political Science Review}, (Forthcoming).
+
+\item[] \href{https://www.dropbox.com/s/n356r2epbfnnqfu/HSVmetricsCampaignsDarkness.pdf}{``Bias in the Flesh: Skin Complexion and Stereotype Consistency in Political Campaigns''} with Ethan Plaut \& Maria Jabon. \emph{Public Opinion Quarterly}, (Forthcoming).
+
+%\item[] \href{http://www.stanford.edu/~seanjw/papers/deliberationKnowledgePolarizationPersuasion.pdf}{``The Role of Knowledge, Polarization and Persuasion in Deliberative Opinion Change''} with Sean Westwood.  \emph{Political Communication}, (R \& R).
+
+\item[] \href{https://www.dropbox.com/s/sl847m7z7uzonro/CH3.pdf}{``Selective Exposure in the Age of Social Media: Endorsements Trump Partisan Source Affiliation when Selecting News Online''} with Sean Westwood. \emph{Communication Research}, 2013.
+
+\item[] \href{http://stanford.edu/~jgrimmer/cc.pdf}{``How Words and Money Cultivate a Personal Vote: The Effect of Legislator Credit Claiming on Constituent Credit Allocation''} with Justin Grimmer \& Sean Westwood. \emph{American Political Science Review}, 2012.
+
+\item[] \href{http://poq.oxfordjournals.org/content/early/2013/09/14/poq.nft024.full.pdf?keytype=ref&ijkey=ynq4b9uNIrXJy3I}{``Do Attitudes about Immigration Predict Willingness to Admit Individual Immigrants? A Cross-National Test of the Person-Positivity Bias''} with Shanto Iyengar, Simon Jackman, Nicholas Valentino, Toril Aalberg, Raymond Duch, Kyu S. Hahn, Stuart Soroka, Allison Harell, \& Tetsuro Kobayashi.  \emph{Public Opinion Quarterly}, 2012.
+
+\item[] \href{http://onlinelibrary.wiley.com/doi/10.1111/j.1467-9477.2011.00280.x/abstract}{``Who is a `Deserving' Immigrant? An Experimental Study of Norwegian Attitudes''} with Toril Aalberg \& Shanto Iyengar.  \emph{Scandinavian Political Studies}, 2011.
+
+\item[] {``Role of Diffusion Weighted Imaging in the Diagnosis of Pediatric Abdominal Tumors''} with Rakhee Gawande, Gabriel Gonzalez, Aman Khurana, \& Heike Daldrup-Link.  \emph{Pediatric Radiology}, 2013.
+
+\item[] \href{http://radiology.rsna.org/content/264/3/803.full.pdf+html}{``Intravenous Ferumoxytol Allows Noninvasive MR Imaging of Stem Cell Transplants''} with Aman Khurana, Rakhee Gawande, Guiting Lin, Sungmin Lee, Rosalinda Castaneda, Nikita Derugin, Laura Pisani, Tom F. Lue, \& Heike Daldrup-Link.  \emph{Radiology}, 2012.
+
+\item[] \href{http://radiology.rsna.org/content/early/2011/12/11/radiol.11110715.long}{``Differentiation of the Normal Thymus from Anterior Mediastinal Lymphoma on Pediatric PET-CTs''} with Rakhee Gawande, Aman Khurana, Dong Zhang, Rosalinda Castaneda, Robert Goldsby, Randal Hawkins, \& Heike Daldrup-Link.  \emph{Radiology}, 2011.
+
+\end{description}
+
+\resheading{Honors and Awards}
+\begin{description}
+\item[2010] \$60,000 Google Research Award (with Sean Westwood, supervised by Dan McFarland \& Jeremy Bailenson) ``Harnessing the social graph: Social cues and reliability in content selection and evaluation''
+\item[2010] \$1,000 A-REP Research Grant (with Sean Westwood), ``The impact of social news ratings on media consumption heuristics and agenda setting''
+\item[2008] Department of Communication Fellowship
+\item[2007] Annual Achievement Award for Excellence in Science and Technology - Technical Collaboration, Science Applications International
+\item[2007] Selected for Future Leaders program, Science Applications International
+\item[2004--2005] Dean's Fellow, University of California, San Diego IR/PS 
+\item[2001] Phi Beta Kappa, University of California, Santa Barbara
+\item[2000] Golden Key, University of California, Santa Barbara
+\end{description}
+
+
+\resheading{Software}
+ 
+\begin{description}
+\item[\large{\textbf{\texttt{HetEffects}}}] with Justin Grimmer. R package utilizing ensemble machine learning methods to estimate high-dimensional causal effects that vary by treatment-group combination. See \href{http://stanford.edu/~jgrimmer/het.pdf}{Estimating Heterogeneous Treatment Effects and the Effects of Heterogeneous Treatments with Ensemble Methods}.
+
+\item[\large{\textbf{\texttt{ImageMetrics}}}] R package to facilitate the analysis of image data,
+designed to facilitate analysis described in ``Bias in the flesh'' (see above).
+
+\item[\large{\textbf{\texttt{wvioplot}}}] R package to produce density overlay plots and violin plots with weighted
+data, which allows the visualization of the distribution of a quantitative variable along with its quartiles and a
+measure of central tendency. A violin plot is a combination box plot and kernel density plot.
+
+\item[\large{\textbf{\texttt{NetCluster, triads, NetData}}}] with Mike Nowak, Sean Westwood \& Dan McFarland. R packages to determine node-level triad type membership for the 16 types of triads that occur in a directed network, facilitate network clustering and evaluation of cluster configurations, and provide example data.  Examples in \href{http://sna.stanford.edu/rlabs.php}{``Social network analysis labs in R.''} 
+
+%\item[\large{\textbf{\texttt{triads}}}] with Sean Westwood, Mike Nowak \& Dan McFarland. R package to determine
+%node-level triad type membership for the 16 types of triads that occur in a directed network. Based on SAS code
+%developed by James Moody.
+%
+%\item[\large{\textbf{\texttt{NetData}}}] Provides demo data for ``Social network analysis labs in R.''
+
+\item[\large{\textbf{\texttt{Open IAT/bIAT}}}] with Sean Westwood.  Web application that implements the Implicit
+Associations Test and brief Implicit Associations Test, based on JavaScript, PHP, and MySQL.  Builds on the ``Open and
+Online IAT.''  Available here: \url{http://pclresearch.stanford.edu/iat/}
+\end{description}
+
+\resheading{Computing}
+\begin{description}
+\item[R Statistical Programming Language (S/S-PLUS)] 7 years experience using R for visualization, conventional statistical analysis/econometrics, Bayesian statistics, analysis of text, image, GIS, and network data, including authoring multiple software packages.
+\item[SQL] Experience utilizing Hive (HQL) with massive data sets, 2 years experience including database design with MySQL, SQLite.
+\item[Java] Undergraduate \& natural language processing courses taken; some professional coding experience.
+\item[Python] Experience parsing data from the web, data management.
+\item[Web Dev] Working knowledge of JavaScript, PHP, JSON, RegEx, HTTP, Linux shell scripts, C-sharp/.NET. 
+\end{description}
+
+\resheading{Invited Presentations and Workshops}
+\begin{description}
+\item[] Dartmouth Interdisciplinary Networks Research Group, March 20, 2015. 
+\item[] Spatial Computational Social Science at Stanford, Oct 20, 2014.
+\item[] UCLA Institute for Politics in Math, April 22, 2014.
+\item[] Stanford Political Science American Politics Workshop, April 22, 2013.
+\item[] Stanford Computational Social Science, Analyzing large data sets, September 20, 2012.
+\item[] Stanford Political Science Methods Workshop, May 2, 2012.
+\end{description}
+
+\resheading{Conference Presentations}
+\begin{description}
+
+\item[] ``Social News in Black and White: How Ethnic and Socioeconomic Attributes Shape the Way We Consume and Evaluate Social Media.'' Paper presented at the \emph{American Political Science Association} annual conference, Washington, DC, 2014.
+
+\item[] ``Social Influence and Participation: How Socially Shared Content Boosts Civic Participation'' with Eytan Bakshy and Andrew Fiore.  Paper presented at the \emph{Midwest Political Science Association} annual conference, Chicago, IL, 2014.
+
+\item[] ``How Words and Money Cultivate a Personal Vote'' with Justin Grimmer and Sean Westwood.  Paper presented at the \emph{Midwest Political Science Association} annual conference, Chicago, IL, 2012, and the West Coast Experiments conference, Berkeley, CA, 2012. 
+
+\item[] ``How Social Distance Structures Exposure and Evaluation of Content in Social Media'' with Sean Westwood. Paper presented at the \emph{Midwest Political Science Association} annual conference, Chicago, IL, 2012; \emph{International Communication Association} annual conference, 2013.
+
+\item[] ``Economic and Cultural Threat as Antecedents of Opposition to Immigration'' with Shanto Iyengar, Nicholas Valentino, Ray Duch, Kyu Hahn, Tetsuro Kobayashi.  Paper presented at the \emph{Midwest Political Science Association} annual conference, Chicago, IL, 2012
+
+\item[] ``Explicit and Implicit Racial Attitudes: A Test of Convergent and Predictive Validity'' with Shanto Iyengar, Kyu Hahn, Mahzarin Banaji \& Christopher Dial.  Paper presented at the \emph{American Political Science Association} annual conference, Seattle, WA, 2012. 
+
+\item[] ``Selective Exposure in the Age of Social Media'' with Sean Westwood.  Paper presented at the \emph{Midwest Political Science Association} annual conference, Chicago, IL, 2011
+
+\item[] ``Opinion change in deliberation: The role of peer influence and persuasion'' with Sean Westwood. Paper presented at the \emph{Midwest Political Science Association} annual conference in Chicago, IL, 2011.
+
+\item[] ``Does skin complexion influence candidate preference? The case of the 2008 campaign'' with Shanto Iyengar, Kyu
+Hahn, \& Jeremy Bailenson. Paper presented at the \emph{American Political Science Association}
+annual conference, Washington, DC, 2010. 
+
+\item[] ``Bias in the flesh: Attack ads and the effects of visual cues in the 2008 presidential campaign'' with Ethan Plaut \& Maria Jabon. Paper presented at the \emph{International Communication Association} annual conference, Singapore, 2010.
+
+\item[] ``Flesh-tone pixel comparison: A method to test for bias in images of political candidates.'' Paper presented at the \emph{International Association of Media and Communication Research} annual conference, Mexico City, 2009.
+\end{description}
+
+%\resheading{Projects \& Working Papers}
+%\begin{description}
+%
+%\item[News, political knowledge, and cross-cutting exposure in Social Media] Develops political media ideal point estimate (with Will Fithian) that leverages users' news sharing behavior to generate ideological score for users and content.  Combines this data with self-reported political affiliation to investigate the question of the extent to which users maintain relationships and engage with other partisans (homophily) versus maintaining friendships that cut across ideological boundaries.  Examines inter-religious, inter-gender, and inter-racial ties and interaction for comparison.  Analyzes a massive quasi-experiment designed to estimate effect of exposure to news in social media on political knowledge and participation.
+
+%\item[Cross-cutting exposure to News in Social Media] Develops political media ideal point estimate (with Will Fithian) that leverages users' news sharing behavior to generate ideological score for users and content in various social media platforms.  Investigates the question of the extent to which users maintain relationships and engage with other partisans (homophily) versus maintaining friendships that cut across ideological boundaries.  
+%
+%
+%\item[Representation \& constituent communication in social media] with Justin Grimmer.  Examines representative-constituent communication that takes place in social media: position-taking, credit-claiming, negative portrayals of the opposing party.  Also examines how the media shape these issues.  
+%
+%\item[Bias in the flesh: Skin complexion, attack ads, and minority elections]  Presents a method to analyze skin complexion in political advertisements by utilizing hue, saturation, and value (HSV) data encoded in digital images; documents correlations between negative advertisements and irregular skin complexion in presidential campaign advertisements; examines affective responses to such photographic alterations in a national sample of U.S. citizens.  Shows that the measure is strongly correlated with electoral victory among 2010 minority candidates for national and state-level offices; that presenting participants with darker images of a minority candidate decreases feelings of warmth and the probability of voting for the candidate in online experiments (with Shanto Iyengar).
+%
+%\item[``Social network analysis labs in R''] with Sean Westwood, Mike Nowak \& Dan McFarland. Provides a complete
+%introduction to social network analysis using the R statistical programming language, along with demonstration data.
+%Labs available at \url{http://sna.stanford.edu/rlabs.php}.
+%
+%\end{description}
+
+\resheading{Professional Experience}
+
+	\ressubheading{Facebook, Inc.}{Menlo Park, CA}{Research Scientist}{Jun. 2012 - Present}
+	\begin{itemize}
+		\resitem{Research on experimentation and machine learning, social influence, political engagement, voter turnout, political ideology, statistical techniques for estimating heterogenous effects.}
+		\resitem{Taught statistics for large behavioral social datasets at DataCamp.}
+		\resitem{Taught for joint Facebook-Udacity Exploratory Data Analysis course.}
+	\end{itemize}
+
+	\ressubheading{Stanford Social Science Data and Software Consulting}{Stanford, CA}{Consultant}{Jun. 2011 - Present}
+	\begin{itemize}
+		\resitem{Guided Stanford clients re visualization, text analysis, statistical modeling in R.}
+		\resitem{Led workshops introducing R, using R for visualization, analysis of text data.} 
+	\end{itemize}
+
+\ressubheading{Science Applications International}{Washington, DC}{Analyst, Media Analytics Developer, Team Leader}{Oct. 2005 - Aug. 2011}
+\begin{itemize}
+\resitem{Developed multi-language media content analysis framework capturing sentiment, attribution of responsibility, economic framing; GUI; database; visualizations.  Oversaw human-coder training, calibration, report production.}
+\resitem{Developed network visualizations to show spread of distinct themes across media sources, and highlight key originators and distributors of content on the web.  Automated and helped integrate visualizations into web-based analytic system.}
+\resitem{Published more than 50 reports using primary language internet sources, with readership across the U.S. Public Diplomacy community. Citations, follow-up research requests from government officials including Undersecretary Hughes, Congressman Markey, and then-Senator Clinton.}
+\end{itemize} 
+
+\ressubheading{Law-on-line, Inc.}{Tucson, AZ}{Information Technology Associate/Consultant}
+{Jun. 1996 - Oct. 2005 (non-continuously)}
+\begin{itemize}
+\resitem{Developed and helped bring to market multiple security software products for 
+applications related to digital signature technology, utilizing Java \& web scripting.}
+\end{itemize}
+
+\resheading{Journal Service}
+\begin{description}
+\item[] Reviewer, \emph{American Journal of Political Science}
+\item[] Reviewer, \emph{Political Analysis}
+\item[] Reviewer, \emph{Public Opinion Quarterly}
+\item[] Reviewer, \emph{Political Behavior}
+\item[] Assistant Editor, Reviewer, \emph{Political Communication}
+\item[] Founding Editor, Reviewer, \emph{Journal of International Policy Solutions}
+\item[] Guest Editor, Reviewer, \emph{Journal of Public and International Affairs}
+\end{description}
+
+\resheading{Professional Societies}
+\begin{description}
+\item[American Political Science Association (APSA),] member
+\item[Midwest Political Science Association (MPSA),] member
+\item[International Communication Association (ICA),] member
+\item[United States-Indonesia Society (USINDO),] member
+\item[Toastmasters International,] VP of Public Relations
+\end{description}
+
+\resheading{Languages}
+\begin{description}
+\item[Indonesian and Malay (Bahasa)] 2 years professional experience as
+Indonesian analyst/linguist; 2 years intensive Indonesian graduate study; Certified 3/2
+Written/Spoken on the Interagency Language Roundtable (ILR) scale used by the
+U.S. Foreign Service.
+\item[Japanese] 1 year study abroad in Tokyo, Japan; 2 years undergraduate language study (stateside). 
+\item[Arabic] Digital courses taken; introductory-level translation experience.
+\end{description}
+
+\end{document}

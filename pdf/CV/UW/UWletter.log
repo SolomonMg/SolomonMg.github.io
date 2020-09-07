@@ -1,0 +1,513 @@
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.7.3)  15 SEP 2012 00:13
+entering extended mode
+ \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**UWletter.tex
+(./UWletter.tex
+LaTeX2e <2009/09/24>
+Babel <v3.8l> and hyphenation patterns for english, dumylang, nohyphenation, ge
+rman-x-2009-06-19, ngerman-x-2009-06-19, afrikaans, ancientgreek, ibycus, arabi
+c, armenian, basque, bulgarian, catalan, pinyin, coptic, croatian, czech, danis
+h, dutch, ukenglish, usenglishmax, esperanto, estonian, ethiopic, farsi, finnis
+h, french, galician, german, ngerman, swissgerman, monogreek, greek, hungarian,
+ icelandic, assamese, bengali, gujarati, hindi, kannada, malayalam, marathi, or
+iya, panjabi, tamil, telugu, indonesian, interlingua, irish, italian, kurmanji,
+ lao, latin, latvian, lithuanian, mongolian, mongolianlmc, bokmal, nynorsk, pol
+ish, portuguese, romanian, russian, sanskrit, serbian, serbianc, slovak, sloven
+ian, spanish, swedish, turkish, turkmen, ukrainian, uppersorbian, welsh, loaded
+.
+(/usr/local/texlive/2011/texmf-dist/tex/latex/koma-script/scrlttr2.cls
+Document Class: scrlttr2 2011/04/02 v3.09 KOMA-Script document class (letter)
+(/usr/local/texlive/2011/texmf-dist/tex/latex/koma-script/scrkbase.sty
+Package: scrkbase 2011/04/02 v3.09 KOMA-Script package (KOMA-Script-dependent b
+asics and keyval usage)
+
+(/usr/local/texlive/2011/texmf-dist/tex/latex/koma-script/scrbase.sty
+Package: scrbase 2011/04/02 v3.09 KOMA-Script package (KOMA-Script-independent 
+basics and keyval usage)
+
+(/usr/local/texlive/2011/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(/usr/local/texlive/2011/texmf-dist/tex/latex/koma-script/scrlfile.sty
+Package: scrlfile 2011/03/09 v3.09 KOMA-Script package (loading files)
+
+Package scrlfile, 2011/03/09 v3.09 KOMA-Script package (loading files)
+                  Copyright (C) Markus Kohm
+
+)))
+Class scrlttr2 Info: File `scrsize12pt.clo' used to setup font sizes on input l
+ine 1167.
+ (/usr/local/texlive/2011/texmf-dist/tex/latex/koma-script/scrsize12pt.clo
+File: scrsize12pt.clo 2011/04/02 v3.09 KOMA-Script font size class option (12pt
+)
+)
+(/usr/local/texlive/2011/texmf-dist/tex/latex/koma-script/typearea.sty
+Package: typearea 2011/04/02 v3.09 KOMA-Script package (type area)
+
+Package typearea, 2011/04/02 v3.09 KOMA-Script package (type area)
+                  Copyright (C) Frank Neukam, 1992-1994
+                  Copyright (C) Markus Kohm, 1994-
+
+\ta@bcor=\skip41
+\ta@div=\count79
+\ta@hblk=\skip42
+\ta@vblk=\skip43
+\ta@temp=\skip44
+Package typearea Info: These are the values describing the layout:
+(typearea)             DIV  = 12
+(typearea)             BCOR = 0.0pt
+(typearea)             \paperwidth      = 597.50793pt
+(typearea)              \textwidth      = 448.13095pt
+(typearea)              DIV departure   = -6%
+(typearea)              \evensidemargin = 2.4185pt
+(typearea)              \oddsidemargin  = 2.4185pt
+(typearea)             \paperheight     = 845.04694pt
+(typearea)              \textheight     = 635.5pt
+(typearea)              \topmargin      = -41.72441pt
+(typearea)              \headheight     = 18.125pt
+(typearea)              \headsep        = 21.75pt
+(typearea)              \topskip        = 12.0pt
+(typearea)              \footskip       = 50.75pt
+(typearea)              \baselineskip   = 14.5pt
+(typearea)              on input line 1138.
+))
+Class scrlttr2 Info: Letter-Class-Option `DIN' loaded on input line 2.
+ (/usr/local/texlive/2011/texmf-dist/tex/latex/koma-script/DIN.lco
+File: DIN.lco 2011/04/02 v3.09 KOMA-Script letter-class-option
+)
+(/usr/local/texlive/2011/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2011/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2011/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/local/texlive/2011/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+(/usr/local/texlive/2011/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+(/usr/local/texlive/2011/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/message (HO)
+)
+(/usr/local/texlive/2011/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/04/18 v1.20 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count80
+))
+\Gin@req@height=\dimen102
+\Gin@req@width=\dimen103
+)
+(/usr/local/texlive/2011/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip10
+Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
+)
+(/usr/local/texlive/2011/texmf-dist/tex/latex/preprint/fullpage.sty
+Package: fullpage 1999/02/23 1.1 (PWD)
+\FP@margin=\skip45
+)
+(/usr/local/texlive/2011/texmf-dist/tex/latex/pdfpages/pdfpages.sty
+Package: pdfpages 2011/03/10 v0.4n Insert pages of external PDF documents (AM)
+
+(/usr/local/texlive/2011/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+)
+(/usr/local/texlive/2011/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count81
+\calc@Bcount=\count82
+\calc@Adimen=\dimen104
+\calc@Bdimen=\dimen105
+\calc@Askip=\skip46
+\calc@Bskip=\skip47
+LaTeX Info: Redefining \setlength on input line 76.
+LaTeX Info: Redefining \addtolength on input line 77.
+\calc@Ccount=\count83
+\calc@Cskip=\skip48
+)
+(/usr/local/texlive/2011/texmf-dist/tex/latex/eso-pic/eso-pic.sty
+Package: eso-pic 2010/10/06 v2.0c eso-pic (RN)
+
+(/usr/local/texlive/2011/texmf-dist/tex/generic/oberdiek/atbegshi.sty
+Package: atbegshi 2011/01/30 v1.15 At begin shipout hook (HO)
+
+(/usr/local/texlive/2011/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+))
+(/usr/local/texlive/2011/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
+
+(/usr/local/texlive/2011/texmf-dist/tex/latex/latexconfig/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
+Package xcolor Info: Model `RGB' extended on input line 1353.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
+))
+(/usr/local/texlive/2011/texmf-dist/tex/latex/pdfpages/pppdftex.def
+File: pppdftex.def 2011/03/10 v0.4n Pdfpages driver for pdfTeX (AM)
+)
+\AM@pagebox=\box26
+\AM@toc@title=\toks15
+\c@AM@survey=\count84
+\AM@templatesizebox=\box27
+)
+(./UWletter.aux)
+\openout1 = `UWletter.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+Package scrbase Info: No captions found for `USenglish'
+(scrbase)             --> skipped on input line 27.
+Class scrlttr2 Info: no date found for language `USenglish'
+(scrlttr2)           --> skipped on input line 27.
+Package scrbase Info: No captions found for `american'
+(scrbase)             --> skipped on input line 27.
+Class scrlttr2 Info: no date found for language `american'
+(scrlttr2)           --> skipped on input line 27.
+Package scrbase Info: No captions found for `british'
+(scrbase)             --> skipped on input line 27.
+Class scrlttr2 Info: no date found for language `british'
+(scrlttr2)           --> skipped on input line 27.
+Package scrbase Info: No captions found for `UKenglish'
+(scrbase)             --> skipped on input line 27.
+Class scrlttr2 Info: no date found for language `UKenglish'
+(scrlttr2)           --> skipped on input line 27.
+Package scrbase Info: No captions found for `german'
+(scrbase)             --> skipped on input line 27.
+Class scrlttr2 Info: no date found for language `german'
+(scrlttr2)           --> skipped on input line 27.
+Package scrbase Info: No captions found for `ngerman'
+(scrbase)             --> skipped on input line 27.
+Class scrlttr2 Info: no date found for language `ngerman'
+(scrlttr2)           --> skipped on input line 27.
+Package scrbase Info: No captions found for `austrian'
+(scrbase)             --> skipped on input line 27.
+Class scrlttr2 Info: no date found for language `austrian'
+(scrlttr2)           --> skipped on input line 27.
+Package scrbase Info: No captions found for `naustrian'
+(scrbase)             --> skipped on input line 27.
+Class scrlttr2 Info: no date found for language `naustrian'
+(scrlttr2)           --> skipped on input line 27.
+Package scrbase Info: No captions found for `french'
+(scrbase)             --> skipped on input line 27.
+Class scrlttr2 Info: no date found for language `french'
+(scrlttr2)           --> skipped on input line 27.
+Package scrbase Info: No captions found for `italian'
+(scrbase)             --> skipped on input line 27.
+Class scrlttr2 Info: no date found for language `italian'
+(scrlttr2)           --> skipped on input line 27.
+Package scrbase Info: No captions found for `spanish'
+(scrbase)             --> skipped on input line 27.
+Class scrlttr2 Info: no date found for language `spanish'
+(scrlttr2)           --> skipped on input line 27.
+Package scrbase Info: No captions found for `croatian'
+(scrbase)             --> skipped on input line 27.
+Class scrlttr2 Info: no date found for language `croatian'
+(scrlttr2)           --> skipped on input line 27.
+Package scrbase Info: No captions found for `dutch'
+(scrbase)             --> skipped on input line 27.
+Class scrlttr2 Info: no date found for language `dutch'
+(scrlttr2)           --> skipped on input line 27.
+Package scrbase Info: No captions found for `finnish'
+(scrbase)             --> skipped on input line 27.
+Class scrlttr2 Info: no date found for language `finnish'
+(scrlttr2)           --> skipped on input line 27.
+Package scrbase Info: No captions found for `norsk'
+(scrbase)             --> skipped on input line 27.
+Class scrlttr2 Info: no date found for language `norsk'
+(scrlttr2)           --> skipped on input line 27.
+Package scrbase Info: No captions found for `swedish'
+(scrbase)             --> skipped on input line 27.
+Class scrlttr2 Info: no date found for language `swedish'
+(scrlttr2)           --> skipped on input line 27.
+
+
+Class scrlttr2 Warning: \language is 0, \languagename is `welsh'
+(scrlttr2)              but \datewelsh not defined!
+(scrlttr2)              This seems to be a bug at you're `hyphen.cfg'.
+(scrlttr2)              Undefining macro \languagename to avoid errors.
+
+
+Class scrlttr2 Warning: \languagename not defined, using \language.
+(scrlttr2)              This may result in use of wrong language!
+(scrlttr2)              You should use a compatible language package
+(scrlttr2)              (e.g. `Babel', `german', `ngerman', ...).
+
+(/usr/local/texlive/2011/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count85
+\scratchdimen=\dimen106
+\scratchbox=\box28
+\nofMPsegments=\count86
+\nofMParguments=\count87
+\everyMPshowfont=\toks16
+\MPscratchCnt=\count88
+\MPscratchDim=\dimen107
+\MPnumerator=\count89
+\makeMPintoPDFobject=\count90
+\everyMPtoPDFconversion=\toks17
+) (/usr/local/texlive/2011/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2011/04/22 v0.16 Utilities of pdfTeX for LuaTeX (HO)
+
+(/usr/local/texlive/2011/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/local/texlive/2011/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/local/texlive/2011/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Managing graphics extensions (HO)
+
+(/usr/local/texlive/2011/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2011/04/07 v1.3 Defining keys (HO)
+))
+(/usr/local/texlive/2011/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2010/12/23 v3.10 Keyval support for LaTeX options (HO)
+
+(/usr/local/texlive/2011/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2011/04/07 v1.13 Key value parser (HO)
+
+(/usr/local/texlive/2011/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Prefix for e-TeX command names (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/local/texlive/2011/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+\AtBeginShipoutBox=\box29
+
+Foldmarks: yes
+No head at first page
+Foot of first page
+Address (backaddress, addressee)
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 34.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 34.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 34.
+
+Overfull \hbox (216.85796pt too wide) in paragraph at lines 34--34
+$[]$ 
+ []
+
+
+Overfull \hbox (216.85796pt too wide) in paragraph at lines 34--34
+$[]$ 
+ []
+
+
+Class scrlttr2 Warning: backaddress is 11.49988pt too high.
+(scrlttr2)              You have to change `backaddrheight'
+(scrlttr2)              or you have to define a smaller
+(scrlttr2)              backaddress using \setkomavar.
+(scrlttr2)              Because of this too high backaddress
+(scrlttr2)              you've got an overfull \vbox message on input line 34.
+
+
+Overfull \hbox (216.85796pt too wide) in paragraph at lines 34--34
+$[]$ 
+ []
+
+Location field: empty
+Title: no
+Subject: before opening
+
+Underfull \hbox (badness 10000) in paragraph at lines 42--43
+
+ []
+
+./UWletter.tex:50: Undefined control sequence.
+<argument> \strut \ignorespaces \fromname 
+                                          {Solomon Messing\\ Ph.D. Candidate...
+l.50 }
+      
+? s
+OK, entering \scrollmode...
+./UWletter.tex:50: Undefined control sequence.
+<recently read> \fromname 
+                          
+l.50 }
+      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[1
+
+{/usr/local/texlive/2011/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+<RS.pdf, id=13, page=1, 614.295pt x 794.97pt>
+File: RS.pdf Graphic file (type pdf)
+ <use RS.pdf, page 1>
+Package pdftex.def Info: RS.pdf, page1 used on input line 56.
+(pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
+File: RS.pdf Graphic file (type pdf)
+
+<use RS.pdf, page 1>
+Package pdftex.def Info: RS.pdf, page1 used on input line 56.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
+File: RS.pdf Graphic file (type pdf)
+ <use RS.pdf, page 1>
+Package pdftex.def Info: RS.pdf, page1 used on input line 56.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
+File: RS.pdf Graphic file (type pdf)
+ <use RS.pdf, page 1>
+Package pdftex.def Info: RS.pdf, page1 used on input line 56.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
+File: RS.pdf Graphic file (type pdf)
+
+<use RS.pdf, page 1>
+Package pdftex.def Info: RS.pdf, page1 used on input line 56.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
+ [2 <./RS.pdf>]
+<RS.pdf, id=38, page=2, 614.295pt x 794.97pt>
+File: RS.pdf Graphic file (type pdf)
+ <use RS.pdf, page 2>
+Package pdftex.def Info: RS.pdf, page2 used on input line 56.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
+File: RS.pdf Graphic file (type pdf)
+
+<use RS.pdf, page 2>
+Package pdftex.def Info: RS.pdf, page2 used on input line 56.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
+File: RS.pdf Graphic file (type pdf)
+ <use RS.pdf, page 2>
+Package pdftex.def Info: RS.pdf, page2 used on input line 56.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
+ [3 <./RS.pdf>]
+<RS.pdf, id=42, page=3, 614.295pt x 794.97pt>
+File: RS.pdf Graphic file (type pdf)
+ <use RS.pdf, page 3>
+Package pdftex.def Info: RS.pdf, page3 used on input line 56.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
+File: RS.pdf Graphic file (type pdf)
+
+<use RS.pdf, page 3>
+Package pdftex.def Info: RS.pdf, page3 used on input line 56.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
+File: RS.pdf Graphic file (type pdf)
+ <use RS.pdf, page 3>
+Package pdftex.def Info: RS.pdf, page3 used on input line 56.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
+ [4 <./RS.pdf>]
+<TS.pdf, id=48, page=1, 614.295pt x 794.97pt>
+File: TS.pdf Graphic file (type pdf)
+ <use TS.pdf, page 1>
+Package pdftex.def Info: TS.pdf, page1 used on input line 57.
+(pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
+File: TS.pdf Graphic file (type pdf)
+
+<use TS.pdf, page 1>
+Package pdftex.def Info: TS.pdf, page1 used on input line 57.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
+File: TS.pdf Graphic file (type pdf)
+ <use TS.pdf, page 1>
+Package pdftex.def Info: TS.pdf, page1 used on input line 57.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
+File: TS.pdf Graphic file (type pdf)
+ <use TS.pdf, page 1>
+Package pdftex.def Info: TS.pdf, page1 used on input line 57.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
+File: TS.pdf Graphic file (type pdf)
+
+<use TS.pdf, page 1>
+Package pdftex.def Info: TS.pdf, page1 used on input line 57.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
+ [5 <./TS.pdf>]
+<TS.pdf, id=70, page=2, 614.295pt x 794.97pt>
+File: TS.pdf Graphic file (type pdf)
+ <use TS.pdf, page 2>
+Package pdftex.def Info: TS.pdf, page2 used on input line 57.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
+File: TS.pdf Graphic file (type pdf)
+
+<use TS.pdf, page 2>
+Package pdftex.def Info: TS.pdf, page2 used on input line 57.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
+File: TS.pdf Graphic file (type pdf)
+ <use TS.pdf, page 2>
+Package pdftex.def Info: TS.pdf, page2 used on input line 57.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
+ [6 <./TS.pdf>]
+<TS.pdf, id=79, page=3, 614.295pt x 794.97pt>
+File: TS.pdf Graphic file (type pdf)
+ <use TS.pdf, page 3>
+Package pdftex.def Info: TS.pdf, page3 used on input line 57.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
+File: TS.pdf Graphic file (type pdf)
+
+<use TS.pdf, page 3>
+Package pdftex.def Info: TS.pdf, page3 used on input line 57.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
+File: TS.pdf Graphic file (type pdf)
+ <use TS.pdf, page 3>
+Package pdftex.def Info: TS.pdf, page3 used on input line 57.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
+ [7 <./TS.pdf>] (./UWletter.aux) ) 
+Here is how much of TeX's memory you used:
+ 3807 strings out of 493633
+ 58133 string characters out of 3143378
+ 158962 words of memory out of 3000000
+ 7059 multiletter control sequences out of 15000+200000
+ 7499 words of font info for 27 fonts, out of 3000000 for 9000
+ 831 hyphenation exceptions out of 8191
+ 47i,18n,51p,667b,393s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/local/texlive/2011/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2011/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmss8.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmti12.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmtt12.pfb>
+Output written on UWletter.pdf (7 pages, 104797 bytes).
+PDF statistics:
+ 100 PDF objects out of 1000 (max. 8388607)
+ 73 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 51 words of extra memory for PDF output out of 10000 (max. 10000000)
+

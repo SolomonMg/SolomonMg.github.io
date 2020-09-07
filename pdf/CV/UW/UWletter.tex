@@ -1,0 +1,74 @@
+\documentclass[fontsize=12pt, paper=a4]{scrlttr2}
+\usepackage{graphicx} 
+\usepackage{url}
+\usepackage{fullpage}
+\usepackage{pdfpages}
+
+% Dont forget to read the KOMA-Script documentation, scrguien.pdf
+
+\setkomavar{fromname}{Solomon Messing} % your name
+\setkomavar{fromaddress}{Department of Communication/Statistics\\
+Building 120, Room 110\\ 
+450 Serra Mall\\ 
+Stanford, CA 94305-2050}
+
+\setkomavar{signature}{} % printed after the \closing
+\renewcommand{\raggedsignature}{\raggedright} % make the signature ragged right
+
+% Custom options:
+\KOMAoptions{firsthead=false}
+\makeatletter
+\@setplength{backaddrheight}{0pt}
+\@setplength{refvpos}{8cm}
+\makeatother\makeatother
+
+\setkomavar{subject}{Application for ``Big data'' tenure-track Assistant Professor position} % subject of the letter
+
+\begin{document}
+\begin{letter}{Professor Patricia Moy \\
+238 Department of Communication\\
+University of Washington\\
+Box 353740\\
+Seattle, WA 98195-3740}
+
+\opening{Dear Professor Patricia Moy:}  % eg. Hello
+
+I write to this letter to apply for the ``Big data'' tenure-track Assistant Professor position.  I was excited to see this position announced and believe I would be a good fit.   
+
+Enclosed, please find my Research Statement, Teaching Statement, CV, and three writing samples.  They include ``How Words and Money Cultivate a Personal Vote: The Effect of Legislator Credit Claiming on Constituent Credit Allocation'' (with Justin Grimmer and Sean Westwood), forthcoming in the \emph{American Political Science Review};  ``Selective Exposure in the Age of Social Media: Endorsements Trump Partisan Source Affiliation when Selecting News Online'' (with Sean Westwood), forthcoming in \emph{Communication Research}, and ``How Social Media Introduces Biases in Selecting and Processing News Content'' (with Sean Westwood).  
+
+Shanto Iyengar \texttt{siyengar@stanford.edu}, Justin Grimmer \texttt{jgrimmer@stanford.edu}, and Dan McFarland \texttt{dmcfarla@stanford.edu} are preparing letters of recommendation on my behalf for this position.   
+
+Thank you for your consideration.\\
+
+\closing{Sincerely, \\
+%\fromsig{\includegraphics[scale=.5]{SigBlue.jpg}} \\
+\fromname{Solomon Messing\\
+Ph.D. Candidate, Department of Communication\\
+M.S., Department of Statistics\\
+ \url{http://www.stanford.edu/~messing}}
+}
+
+%\includegraphics{SigBlue.jpg}
+%\closing{Sincerely, } %eg. Regards
+\end{letter}
+
+\includepdf[pages={-}]{RS.pdf}
+\includepdf[pages={-}]{TS.pdf}
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
