@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  7 SEP 2020 12:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  7 SEP 2020 12:28
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -489,39 +489,39 @@ Overfull \hbox (6.0pt too wide) in paragraph at lines 219--220
  []
 
 
-Overfull \hbox (6.0pt too wide) in paragraph at lines 233--234
+Overfull \hbox (6.0pt too wide) in paragraph at lines 231--232
 [][][][][][][]  
  []
 
 [3] [4]
-Overfull \hbox (6.0pt too wide) in paragraph at lines 324--325
+Overfull \hbox (6.0pt too wide) in paragraph at lines 322--323
 [][][][][][][]  
  []
 
 
-Overfull \hbox (6.0pt too wide) in paragraph at lines 350--351
+Overfull \hbox (6.0pt too wide) in paragraph at lines 348--349
 [][][][][][][]  
  []
 
 [5]
-Overfull \hbox (6.0pt too wide) in paragraph at lines 411--412
+Overfull \hbox (6.0pt too wide) in paragraph at lines 409--410
 [][][][][][][]  
  []
 
 
-Overfull \hbox (6.0pt too wide) in paragraph at lines 432--433
+Overfull \hbox (6.0pt too wide) in paragraph at lines 430--431
 [][][][][][][]  
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 442.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 440.
 [6]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 442.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 440.
  (./CV.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 442.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 442.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 440.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 440.
 Package rerunfilecheck Info: File `CV.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 442.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 440.
  ) 
 Here is how much of TeX's memory you used:
  7726 strings out of 492616
