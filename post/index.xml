@@ -13,6 +13,47 @@
     </image>
     
     <item>
+      <title>How could the polls get it so wrong?</title>
+      <link>https://solomonmg.github.io/post/what-the-polls-got-wrong-in-2020/</link>
+      <pubDate>Sat, 20 Jun 2020 00:00:00 +0000</pubDate>
+      <guid>https://solomonmg.github.io/post/what-the-polls-got-wrong-in-2020/</guid>
+      <description>&lt;p&gt;It’s becoming clear that the 2020 polls underestimated Trump’s support by anywhere from a 4-7 point margin&amp;ndash;a significantly worse miss than in 2016, when 
+&lt;a href=&#34;https://fivethirtyeight.com/features/the-polls-are-all-right/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;state polls were off but the national polls did relatively well&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The polling from 2018 looked encouraging, convincing many pollsters that the post-2016 reconing had fixed many issues called out in the 
+&lt;a href=&#34;https://www.aapor.org/Education-Resources/Reports/An-Evaluation-of-2016-Election-Polls-in-the-U-S.aspx&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;2016 AAPOR report on election polling&lt;/a&gt;. After 2018, FiveThirtyEight wrote that the 
+&lt;a href=&#34;https://fivethirtyeight.com/features/the-polls-are-all-right/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&amp;ldquo;Polls are Alright&amp;rdquo;&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;But the second Miami-Daude reported results from the 2020 election, we knew something was probably wrong with the 2020 polls.&lt;/p&gt;
+&lt;p&gt;Unlike 2016, both state and national polls appeared to underestimate Trump&amp;rsquo;s support.&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;I&amp;#39;m sure others are looking at this, and we can&amp;#39;t do a full accounting until all the state returns are verified, but so far it looks the weighted averages of state polls were off almost entirely in the same direction. The polling data are simple weighted avgs from 538. &lt;a href=&#34;https://t.co/r070psBKJy&#34;&gt;pic.twitter.com/r070psBKJy&lt;/a&gt;&lt;/p&gt;&amp;mdash; 💀💀 Stefan Wojcik 💀💀 (@stefanjwojcik) &lt;a href=&#34;https://twitter.com/stefanjwojcik/status/1324889531162746884?ref_src=twsrc%5Etfw&#34;&gt;November 7, 2020&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;h2 id=&#34;the-usual-suspects&#34;&gt;The Usual Suspects&lt;/h2&gt;
+&lt;p&gt;The 
+&lt;a href=&#34;https://www.aapor.org/Education-Resources/Reports/An-Evaluation-of-2016-Election-Polls-in-the-U-S.aspx&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;2016 AAPOR report on election polling&lt;/a&gt; provides some guidance for how we might start to examine issues with the 2020 polls.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Undecided voters&lt;/strong&gt;: Undecideds broke toward Trump late in the election in 2016&amp;ndash;polls found as many as 13 percent of voters were 
+&lt;a href=&#34;https://fivethirtyeight.com/features/the-invisible-undecided-voter/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;undecided on election day or planned to vote for a third party&lt;/a&gt;. According to Poynter, there were 
+&lt;a href=&#34;https://www.poynter.org/fact-checking/2020/2020-is-not-like-2016-heres-whats-different/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;half as many of these voters in 2020&lt;/a&gt;, so this is unlikely to be as big a factor as in 2016.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Low education non-response &amp;amp; adjustment&lt;/strong&gt;: In 2016, individuals lower levels of education were much less likely to answer polls but still voted, and broke for Trump. The national polls adjusted for this but state level polls did not, which is partially why forecasting models that rely on state-level polls missed so hard.&lt;/p&gt;
+&lt;p&gt;While many state-level pollsters did this in 2020, Pew Research Center still 
+&lt;a href=&#34;https://www.pewresearch.org/methods/2020/08/18/a-resource-for-state-preelection-polling/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;found problems with state level polling this time around&lt;/a&gt;, for example failing to adjust for race and education simultaneously&amp;ndash;non-college whites are far more likely to support Trump than non-college non-whites.&lt;/p&gt;
+&lt;p&gt;What&amp;rsquo;s more, pollsters adjusted only for college/non-college, which may not have been enough. They might need to use more fine grained adjustment&amp;ndash;accounting for whether respondents have a high school degree and a college degree.  Also error/missing data when people complete education in a survey means trouble if you want to fully fix the issue.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Volunteerism &amp;amp; civic engagement&lt;/strong&gt;: Even if you adjust for low levels of non-response among individuals with lower education, pollsters still may have problems reaching 
+&lt;a href=&#34;https://www.pewresearch.org/fact-tank/2015/07/21/the-challenges-of-polling-when-fewer-people-are-available-to-be-polled/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;low civic engagement voters, a bias that seems to persist even after modeling/weighting adjustments&lt;/a&gt;. In the past this hasn&amp;rsquo;t mattered as much, but these folks may be showing up to the polls for Trump.&lt;/p&gt;
+&lt;h2 id=&#34;other-potential-factors&#34;&gt;Other Potential Factors&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Likely voter models&lt;/strong&gt;: This is difficult to fully unpack since each polling house does this slightly differently and not all publish their methods—some ask a battery of voter questions, some use models, some recruit off the voter file. But there’s only a weak relationship between who votes and who scores high on the likely voter battery. To make matters worse, 2020 was a very high-turnout election, which could have introduced even more instability into likely voter models.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;COVID-19&lt;/strong&gt;: I wrote about 
+&lt;a href=&#34;http://localhost:1313/post/trumps-chances-are-better-than-they-look/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;this back in June&lt;/a&gt;. It&amp;rsquo;s possible that COVID-19 made lines long and kept people home in urban areas and non-white communities. Yes we had record turnout but all it takes is a few percent of people who encounter a bit of voting friction, who fail to register in person, don’t get in person canvassing/gotv contact, don’t vote by mail early, and/or don’t vote in vote in person.&lt;/p&gt;
+&lt;h2 id=&#34;the-role-of-election-forecasts&#34;&gt;The Role of Election Forecasts&lt;/h2&gt;
+&lt;p&gt;If you&amp;rsquo;re a forecaster, very easy to look at all the polling data and come away with overconfident estimates of a candidate’s support. Many forecasters in 2016 did just that, failing to account for the fact that error between states and pollsters were likely correlated, and producing estimates that put Clinton’s chances above 95%.&lt;/p&gt;
+&lt;p&gt;The Huffington Post famously 
+&lt;a href=&#34;https://www.huffpost.com/entry/nate-silver-election-forecast_n_581e1c33e4b0d9ce6fbc6f7f&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;roasted FiveThirtyEight&lt;/a&gt; for trying to adjust for this state-level polling error the day before the 2016 election.&lt;/p&gt;
+&lt;p&gt;But even when forecasters get it right, forecasting can create firm expectations that one candidate will win, which in 2016 was complicated by destiny-narrative driven by media coverage of election forecasting.&lt;/p&gt;
+&lt;p&gt;Sean Westwood, Yph Lelkes and I recently published a 
+&lt;a href=&#34;https://solomonmg.github.io/pdf/aggregator.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;research paper&lt;/a&gt; in the Journal of Politics showing just how much additional confidence forecasts give us, and wrote about the implications for the 2020 election in a recent 
+&lt;a href=&#34;https://www.usatoday.com/story/opinion/2020/10/01/election-forecasts-can-wrong-you-still-need-vote-column/5857993002/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;USA Today op ed&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I believe it was the sharp violation of expectations that was so disappointing to Clinton supporters and so invigorating for the MAGA crowd—the Washington elite had underestimated &amp;ldquo;real Americans&amp;rdquo; yet again.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Trump&#39;s chances are better than they look</title>
       <link>https://solomonmg.github.io/post/trumps-chances-are-better-than-they-look/</link>
       <pubDate>Sat, 20 Jun 2020 00:00:00 +0000</pubDate>
