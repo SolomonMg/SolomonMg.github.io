@@ -47,7 +47,7 @@
 &lt;/style&gt;
 &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 
-&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Here&amp;#39;s another chart of polls vs. returns that splits the data by how much the polls underestimated Trump. One place where the polls most underestimated Trump is Wisconsin (off by -9 points). Note returns are not yet verified and states are still finalizing their counts. &lt;a href=&#34;https://t.co/iM8mjqoAuK&#34;&gt;pic.twitter.com/iM8mjqoAuK&lt;/a&gt;&lt;/p&gt;&amp;mdash; 💀💀 Stefan Wojcik 💀💀 (@stefanjwojcik) &lt;a href=&#34;https://twitter.com/stefanjwojcik/status/1325786708022079488?ref_src=twsrc%5Etfw&#34;&gt;November 9, 2020&lt;/a&gt;&lt;/blockquote&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Here&amp;#39;s another chart of polls vs. returns that splits the data by how much the polls underestimated Trump. One place where the polls most underestimated Trump is Wisconsin (off by -9 points). Note returns are not yet verified and states are still finalizing their counts. &lt;a href=&#34;https://t.co/iM8mjqoAuK&#34;&gt;pic.twitter.com/iM8mjqoAuK&lt;/a&gt;&lt;/p&gt;&amp;mdash; Stefan Wojcik (@stefanjwojcik) &lt;a href=&#34;https://twitter.com/stefanjwojcik/status/1325786708022079488?ref_src=twsrc%5Etfw&#34;&gt;November 9, 2020&lt;/a&gt;&lt;/blockquote&gt;
 
 &lt;p&gt;As Stefan notes (we worked together at Pew Research Center&amp;rsquo;s Data Labs), the error seems slightly lower in key battleground states, though the polls missed big in WI, perhaps in part due to its horrifically bad voter file data.&lt;/p&gt;
 &lt;p&gt;Unlike 2016, both state and national polls appeared to underestimate Trump&amp;rsquo;s support, as this early (Nov 7) analysis from 
@@ -187,6 +187,9 @@
 &lt;a href=&#34;https://abcnews.go.com/Politics/comey-assumption-clinton-win-factor-email-investigation/story?id=54467459&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;certain she would win&lt;/a&gt;. At around the same time, the Obama administration’s confidence in a Clinton victory was reportedly a factor in the muted 
 &lt;a href=&#34;https://www.washingtonpost.com/graphics/2017/world/national-security/obama-putin-election-hacking/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;response to Russian intervention&lt;/a&gt; in the election. Finally, Zeynep Tufecki asks 
 &lt;a href=&#34;https://www.nytimes.com/2020/11/01/opinion/election-forecasts-modeling-flaws.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;New York Times Op-Ed&lt;/a&gt;: &amp;ldquo;&amp;hellip; did Facebook, battered by conservatives before the 2016 election, take a hands-off approach to the proliferation of misinformation on its platform, thinking that Mrs. Clinton’s odds were so favorable that such misinformation made little difference?&amp;rdquo;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;How can we even know if&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 </description>
@@ -1287,48 +1290,12 @@ A replication of prior
     </item>
     
     <item>
-      <title>Exposure to ideologically diverse news and opinion on Facebook</title>
-      <link>https://solomonmg.github.io/publication/bakshy-2015-exposure/</link>
-      <pubDate>Thu, 01 Jan 2015 00:00:00 +0000</pubDate>
-      <guid>https://solomonmg.github.io/publication/bakshy-2015-exposure/</guid>
-      <description>&lt;ul&gt;
-&lt;li&gt;
-&lt;a href=&#34;http://science.sciencemag.org/content/348/6239/1090&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Review by David Lazer&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;a href=&#34;http://science.sciencemag.org/highwire/filestream/630053/field_highwire_adjunct_files/1/Bakshy-SM.revision.1.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Supplementary materials&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;a href=&#34;http://dx.doi.org/10.7910/DVN/LDJ7MS&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Replication materials&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Media: 
-&lt;a href=&#34;http://www.nytimes.com/2015/05/08/technology/facebook-study-disputes-theory-of-political-polarization-among-users.html?_r=0&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;New York Times&lt;/a&gt;,
-the 
-&lt;a href=&#34;http://www.washingtonpost.com/news/energy-environment/wp/2015/05/07/facebook-study-says-its-mainly-your-fault-not-theirs-that-you-read-things-you-already-agree-with/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Washington Post&lt;/a&gt;, the 
-&lt;a href=&#34;http://www.bbc.com/news/science-environment-32606724&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;BBC&lt;/a&gt;, 
-&lt;a href=&#34;http://www.cbsnews.com/news/facebooks-news-feed-limits-your-world-view/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CBS&lt;/a&gt;, 
-&lt;a href=&#34;http://www.huffingtonpost.com/2015/05/12/facebook-study-polarization_n_7245192.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Huffington Post&lt;/a&gt;, 
-&lt;a href=&#34;http://arstechnica.com/science/2015/05/dont-just-blame-facebook-we-build-our-own-bubbles/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Ars Technica&lt;/a&gt;, 
-&lt;a href=&#34;http://www.wired.co.uk/news/archive/2015-05/08/facebook-echo-chamber-study&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Wired
-UK&lt;/a&gt;,
-
-&lt;a href=&#34;http://www.theverge.com/2015/5/7/8564795/facebook-online-opinion-filter-bubble-news-feed-study&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;The Verge&lt;/a&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Quantifying social media&#39;s political space: Estimating ideology from publicly revealed preferences on Facebook</title>
-      <link>https://solomonmg.github.io/publication/bond-2015-quantifying/</link>
-      <pubDate>Thu, 01 Jan 2015 00:00:00 +0000</pubDate>
-      <guid>https://solomonmg.github.io/publication/bond-2015-quantifying/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Ideologically diverse news, an agenda for future research</title>
       <link>https://solomonmg.github.io/post/exposure-to-ideologically-diverse-response/</link>
-      <pubDate>Sat, 11 Oct 2014 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 24 Apr 2015 00:00:00 +0000</pubDate>
       <guid>https://solomonmg.github.io/post/exposure-to-ideologically-diverse-response/</guid>
       <description>&lt;p&gt;Earlier this month, we published an early access version of our paper in ScienceExpress (
-&lt;a href=&#34;https://dl.dropboxusercontent.com/u/25710348/Science-2015-Bakshy-1130-2.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Bakshy et al. 2015&lt;/a&gt;), &amp;ldquo;Exposure to ideologically diverse news and opinion on Facebook.&amp;rdquo; The paper constitutes the first attempt to quantify the extent to which ideologically cross-cutting hard news and opinion is shared by friends, appears in algorithmically ranked News Feeds, and is actually consumed (i.e., click through to read).&lt;/p&gt;
+&lt;a href=&#34;https://solomonmg.github.io/pdf/Science-2015-Bakshy-1130-2.pdf&#34;&gt;Bakshy et al. 2015&lt;/a&gt;), &amp;ldquo;Exposure to ideologically diverse news and opinion on Facebook.&amp;rdquo; The paper constitutes the first attempt to quantify the extent to which ideologically cross-cutting hard news and opinion is shared by friends, appears in algorithmically ranked News Feeds, and is actually consumed (i.e., click through to read).&lt;/p&gt;
 &lt;p&gt;We are grateful for the widespread interest this paper, which grew out of two threads of related research that we began nearly five years ago: Eytan and Lada&#39;s work on the role of social networks in information diffusion (
 &lt;a href=&#34;http://arxiv.org/pdf/1201.4145v2.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Bakshy et al. 2012&lt;/a&gt;) and Sean and Solomon&#39;s work on selective exposure in social media (
 &lt;a href=&#34;http://crx.sagepub.com/content/41/8/1042&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Messing and Westwood 2012&lt;/a&gt;).&lt;/p&gt;
@@ -1449,8 +1416,7 @@ UK&lt;/a&gt;,
 &lt;p&gt;Finally, we believe that reproducing, replicating, and conducting additional analyses on extant data sets is extremely important and helps generate ideas for future work (
 &lt;a href=&#34;http://gking.harvard.edu/files/abs/replication-Abs.shtml&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;King 1995&lt;/a&gt;, 
 &lt;a href=&#34;http://thomasleeper.com/2015/05/open-science-language/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Leeper 2015&lt;/a&gt;). In that spirit, we have created a 
-&lt;a href=&#34;http://dataverse.harvard.edu/dataverse/facebook&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Facebook Dataverse repository&lt;/a&gt; in the 
-&lt;a href=&#34;http://dataverse.org/about/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Harvard Dataverse&lt;/a&gt;. The repository includes replication data, scripts, as well as some additional supplementary data and code for extending our work.&lt;/p&gt;
+&lt;a href=&#34;https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/AAI7VA&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Dataverse archive&lt;/a&gt;. The repository includes replication data, scripts, as well as some additional supplementary data and code for extending our work.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;References&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;E. Bakshy, S. Messing, L.A. Adamic. 2015. Exposure to ideologically diverse news and opinion on Facebook. &lt;em&gt;Science&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;E. Bakshy, I. Rosenn, C.A. Marlow, L.A. Adamic. 2012. The Role of Social Networks in Information Diffusion. &lt;em&gt;ACM WWW 2012.&lt;/em&gt;&lt;/p&gt;
@@ -1475,6 +1441,42 @@ UK&lt;/a&gt;,
 &lt;p&gt;G. King. 1995. &amp;ldquo;Replication, Replication.&amp;rdquo; &lt;em&gt;Political Science and Politics&lt;/em&gt;. &lt;a href=&#34;http://j.mp/1wP9Vqn&#34;&gt;http://j.mp/1wP9Vqn&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;T. Leeper. 2015. What&#39;s in a Name? The Concepts and Language of Replication and Reproducibility. Blog post. &lt;a href=&#34;http://thomasleeper.com/2015/05/open-science-language/&#34;&gt;http://thomasleeper.com/2015/05/open-science-language/&lt;/a&gt;&lt;/p&gt;
 </description>
+    </item>
+    
+    <item>
+      <title>Exposure to ideologically diverse news and opinion on Facebook</title>
+      <link>https://solomonmg.github.io/publication/bakshy-2015-exposure/</link>
+      <pubDate>Thu, 01 Jan 2015 00:00:00 +0000</pubDate>
+      <guid>https://solomonmg.github.io/publication/bakshy-2015-exposure/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;
+&lt;a href=&#34;http://science.sciencemag.org/content/348/6239/1090&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Review by David Lazer&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;http://science.sciencemag.org/highwire/filestream/630053/field_highwire_adjunct_files/1/Bakshy-SM.revision.1.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Supplementary materials&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;http://dx.doi.org/10.7910/DVN/LDJ7MS&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Replication materials&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Media: 
+&lt;a href=&#34;http://www.nytimes.com/2015/05/08/technology/facebook-study-disputes-theory-of-political-polarization-among-users.html?_r=0&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;New York Times&lt;/a&gt;,
+the 
+&lt;a href=&#34;http://www.washingtonpost.com/news/energy-environment/wp/2015/05/07/facebook-study-says-its-mainly-your-fault-not-theirs-that-you-read-things-you-already-agree-with/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Washington Post&lt;/a&gt;, the 
+&lt;a href=&#34;http://www.bbc.com/news/science-environment-32606724&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;BBC&lt;/a&gt;, 
+&lt;a href=&#34;http://www.cbsnews.com/news/facebooks-news-feed-limits-your-world-view/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CBS&lt;/a&gt;, 
+&lt;a href=&#34;http://www.huffingtonpost.com/2015/05/12/facebook-study-polarization_n_7245192.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Huffington Post&lt;/a&gt;, 
+&lt;a href=&#34;http://arstechnica.com/science/2015/05/dont-just-blame-facebook-we-build-our-own-bubbles/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Ars Technica&lt;/a&gt;, 
+&lt;a href=&#34;http://www.wired.co.uk/news/archive/2015-05/08/facebook-echo-chamber-study&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Wired
+UK&lt;/a&gt;,
+
+&lt;a href=&#34;http://www.theverge.com/2015/5/7/8564795/facebook-online-opinion-filter-bubble-news-feed-study&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;The Verge&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Quantifying social media&#39;s political space: Estimating ideology from publicly revealed preferences on Facebook</title>
+      <link>https://solomonmg.github.io/publication/bond-2015-quantifying/</link>
+      <pubDate>Thu, 01 Jan 2015 00:00:00 +0000</pubDate>
+      <guid>https://solomonmg.github.io/publication/bond-2015-quantifying/</guid>
+      <description></description>
     </item>
     
     <item>
