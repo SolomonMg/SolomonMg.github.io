@@ -279,9 +279,9 @@
   <meta property="twitter:image" content="https://solomonmg.github.io/post/visualization-series-scatterplot-understanding-the-diamond-market/featured.png"><meta property="og:locale" content="en-us">
   
     
-      <meta property="article:published_time" content="2014-10-11T00:00:00&#43;00:00">
+      <meta property="article:published_time" content="2020-02-02T00:00:00&#43;00:00">
     
-    <meta property="article:modified_time" content="2022-02-02T00:00:00&#43;00:00">
+    <meta property="article:modified_time" content="2020-02-02T00:00:00&#43;00:00">
   
 
   
@@ -313,8 +313,8 @@
     "https://solomonmg.github.io/post/visualization-series-scatterplot-understanding-the-diamond-market/featured.png"
   ],
   
-  "datePublished": "2014-10-11T00:00:00Z",
-  "dateModified": "2022-02-02T00:00:00Z",
+  "datePublished": "2020-02-02T00:00:00Z",
+  "dateModified": "2020-02-02T00:00:00Z",
   
   "author": {
     "@type": "Person",
@@ -533,7 +533,7 @@
         
 
         <li class="nav-item">
-          <a class="nav-link " href="/#featured"><span>Publications</span></a>
+          <a class="nav-link " href="/#featured_pubs"><span>Publications</span></a>
         </li>
 
         
@@ -765,10 +765,8 @@
     
     
       
-          Last updated on
-      
     
-    Feb 2, 2022
+    Feb 2, 2020
   </span>
   
 
@@ -859,7 +857,7 @@
     <div class="article-style">
       <p><img src="/img/fbfa61f67413c8e2805c507a14b38c24c5373265.png" alt="ggpairs"></p>
 <p>My last post railed against the 
-<a href="https://solomonmg.github.io/blog/2012/visualization-series-insight-from-cleveland-and-tufte-on-plotting-numeric-data-by-groups/" target="_blank" rel="noopener">bad visualizations that people often use to plot quantitive data by groups, and pitted pie charts, bar charts and dot plots against each other for two visualization tasks.  Dot plots came out on top</a>.  I argued that this is because humans are good at the cognitive task of comparing position along a common scale, compared to making judgements about length, area, shading, direction, angle, volume, curvature, etc.&mdash;a finding credited to Cleveland and McGill.  I enjoyed writing it and people seemed to like it, so I&rsquo;m continuing my visualization series with the scatterplot.</p>
+<a href="/post/visualization-series-insight-from-cleveland-and-tufte-on-plotting-numeric-data-by-groups/">bad visualizations that people often use to plot quantitive data by groups, and pitted pie charts, bar charts and dot plots against each other for two visualization tasks.  Dot plots came out on top</a>.  I argued that this is because humans are good at the cognitive task of comparing position along a common scale, compared to making judgements about length, area, shading, direction, angle, volume, curvature, etc.&mdash;a finding credited to Cleveland and McGill.  I enjoyed writing it and people seemed to like it, so I&rsquo;m continuing my visualization series with the scatterplot.</p>
 <h2 id="scatterplots">Scatterplots</h2>
 <p>A scatterplot is a two-dimensional plane on which we record the intersection of two measurements for a set of case items&ndash;usually two quantitative variables.  Just as humans are good at comparing position along a common scale in one dimension, our visual capabilities allow us to make fast, accurate judgements and recognize patterns when presented with a series of dots in two dimensions. This makes the scatterplot a valuable tool for data analysts both when exploring data and when communicating results to others.</p>
 <p>In this post&mdash;part 1&mdash;I&rsquo;ll demonstrate various uses for scatterplots and outline some strategies to help make sure key patterns are not obscured by the scale or qualitative group-level differences in the data (e.g., the relationship between test scores and income differs for men and women). The motivation in this post is to come up with a model of diamond prices that you can use to help make sure you don&rsquo;t get ripped off, specified based on insight from exploratory scatterplots combined with (somewhat) informed speculation. In part 2, I&rsquo;ll discuss the use of panels aka facets aka small multiples to shed additional light on key patterns in the data, and local regression (loess) to examine central tendencies in the data. There are far fewer bad examples of this kind of visualization in the wild than the 3D barplots and pie charts mocked in my last post, though I was still able to find 
