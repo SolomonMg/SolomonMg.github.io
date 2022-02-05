@@ -5,7 +5,7 @@
     <link>https://solomonmg.github.io/project/</link>
       <atom:link href="https://solomonmg.github.io/project/index.xml" rel="self" type="application/rss+xml" />
     <description>Projects</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>©2021</copyright><lastBuildDate>Mon, 18 May 2020 22:48:29 -0500</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>©2022</copyright><lastBuildDate>Mon, 18 May 2020 22:48:29 -0500</lastBuildDate>
     <image>
       <url>https://solomonmg.github.io/images/icon_huedd5de82286bc1d0a1509b535f624c76_25974_512x512_fill_lanczos_center_2.png</url>
       <title>Projects</title>
@@ -143,49 +143,6 @@ Westwood&lt;/p&gt;
 &lt;li&gt;Media: 
 &lt;a href=&#34;http://www.mischiefsoffaction.com/2015/01/its-frequency-not-size-compromise.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Mischiefs of Faction&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Out for Justice</title>
-      <link>https://solomonmg.github.io/project/out_for_justice/</link>
-      <pubDate>Sun, 17 May 2020 00:00:00 +0000</pubDate>
-      <guid>https://solomonmg.github.io/project/out_for_justice/</guid>
-      <description>&lt;!-- &lt;iframe src=&#34;https://player.vimeo.com/video/111994655&#34; width=&#34;640&#34; height=&#34;330&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt; --&gt;
-&lt;p&gt;(forked from the team&amp;rsquo;s original writeup 
-&lt;a href=&#34;http://seanjtaylor.github.io/out-for-justice/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;)&lt;/p&gt;
-&lt;p&gt;We build Out for Justice in 24 hours at the 
-&lt;a href=&#34;http://www.bayesimpact.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Bayes Impact&lt;/a&gt; Hackathon, using data from the San Francisco Police Department. Out For Justice is an an interpretable, customizable and interactive decision support system to help SFPD optimize police patrols. Out for Justice allows the user to set their own objectives and isn&amp;rsquo;t simply a black box algorithm that outputs a solution.&lt;/p&gt;
-&lt;p&gt;The idea is simple: minimize response time to crime&amp;ndash;or 911 at least calls. But different kinds of crime happen in different places in San Francisco. And police cars/patrols are a limited resource.&lt;/p&gt;
-&lt;p&gt;Out for Justice allows the user to evaluate potential positions for patrol cars&amp;ndash;if someone calls in a violent crime and my cars were set up like this, how long would it take to respond? It allows you to prioritize your response to different types of crimes using custom weights. Responding a minute later to investigate a broken window may be much less costly than arriving late on the scene of a crime in progress.&lt;/p&gt;
-&lt;p&gt;Finally, Out for Justice allows users to set car positions. Based on the custom weights and number of patrol cars, Out for Justice optimizes patrol car placement using an algorithm we call MetroPolice-Hastings.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;HOW DOES IT WORK?&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Out for Justice is made of three components. First, we science some data. We take two years of SFPD 911 call data and use it to predict where future 911 calls are likely to come from. Second, real map data from Open Street Maps is used to simulate travel times from SF patrol cars to a call. Second, we optimize stuff. We take map data from Open Street Maps and use it to simulate travel times from SF patrol cars to a call. Finally, a simple interface makes interacting and drawing insights from Out for Justice easy.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;BOOSTING FOR JUSTICE&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;The beating heart of Out for Justice is some machine learning. We took a data set of two years of 911 calls in San Francisco that had attached latitude/longitude coordinates, discretized the city into a grid and trained boosted Poisson regression trees to predict the probability of a 911 call at each position. This makes some strong assumptions about the underlying process that are wrong, but hey, it&amp;rsquo;s still useful and we only had 24 hours! After we trained the trees they could, in principle, predict at any latitude/longitude location in SF so we predicted Poisson arrival rates for every node in street graph that we built using Open Street Maps.&lt;/p&gt;
-&lt;p&gt;We tried several other approaches including 2d kernel density smoothing but found that the boosted trees were by far the best performing. We used the R package gbm to do the training.&lt;/p&gt;
-&lt;p&gt;For the initial project we focused on predicting three broad categories of crime: violent crimes (assaults, arson and forcible sex offenses), property crimes (burglary, vandalism, larceny and vehicle theft) and substance-based crimes (drunkeness or drug/narcotic). Our exploratory analyses also told us that it was a good idea to split the data by time into 3 epochs: nighttime (2AM-10AM), day time (10AM-6PM) and evening time aka party time (6PM-2AM).&lt;/p&gt;
-&lt;p&gt;Our analyses find some interesting patterns in the data. All the plots are done using the excellent R package ggmaps. There are definitely weekend/weekday patterns as well as daily cycles in the day (see below). The models and data are up in the GitHub directory above if you want to play with them!&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://solomonmg.github.io/img/predcrimes.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;COMPUTING THE COSTS&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;So now we have probabilities of calls occuring at each node of the graph that is San Francisco. We can now take a set of patrol cars located at various points in the graph and calculate a score for that position, the score we use in the current version is an expected travel time given the way that calls are expected to come in both spatially (where does the call come from?) and temporally (how likely is a particular type of call?). The key innovation is the ability for the user to specify in the UI which types of calls are really important to respond to quickly and which ones are the kind where a minute&amp;rsquo;s delay may not hurt things very much.&lt;/p&gt;
-&lt;p&gt;The current beta version only allows for random initial placements of a user-specified number of patrol cars, the easiest next feature to add is the ability to place the cars manually.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;METROPOLICE-HASTINGS OPTIMIZATION&lt;/strong&gt;&lt;/p&gt;
-&lt;img style=&#34;float: right;&#34; src=&#34;https://solomonmg.github.io/img/napkin.jpg&#34; width=&#34;250&#34;&gt;
-The final core component of Out For Justice is an optimization algorithm. Given an existing car placement, it is natural to ask &#34;can we do better?&#34; We use a version of the Metropolis-Hastings algorithm to compute the answer to this question: first, we choose a random car to move a random distance on the graph. 
-&lt;p&gt;To add stochasticity to this algorithm with a small probability we keep this move no matter what. With the complementary probability we do something smarter: we ask whether this move improves the weighted response time. If this move improves the response time by a meaningful amount, we keep it. If it doesn&amp;rsquo;t, we revert it and try something else. This algorithm has a few parameters to tune, namely the probability of keeping any move and the threshold of improvement that we require to count the move as a success. The current version makes no pretense of having these parameters set optimally, though we did play with them somewhat.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;THE OUT FOR JUSTICE TEAM&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Ta Virot Chiraphadhanakul 
-&lt;a href=&#34;https://twitter.com/tvirot&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;@tvirot&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Sean J. Taylor 
-&lt;a href=&#34;https://twitter.com/seanjtaylor&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;@seanjtaylor&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Alex Peysakhovich 
-&lt;a href=&#34;https://twitter.com/alex_peys&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;@alex_peys&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Solomon Messing 
-&lt;a href=&#34;https://twitter.com/SolomonMg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;@SolomonMg&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://solomonmg.github.io/img/Hackathon_team.jpg&#34; alt=&#34;half&#34;&gt;&lt;/p&gt;
-&lt;p&gt;UPDATE: Nice coverage on 
-&lt;a href=&#34;https://mashable.com/2014/11/17/data-hackathon/#EHDv8ugj7aqN&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Mashable&lt;/a&gt; of the entire hackathon! Check out the winning hackathon project.&lt;/p&gt;
 </description>
     </item>
     
