@@ -858,17 +858,17 @@
   <div class="article-container">
 
     <div class="article-style">
-      <p>On January 17, my team at Facebook launched one of the largest social science data sets ever constructed. It’s meant to facilitate research on misinformation from across the web, shared and spread on Facebook.</p>
+      <p>On January 17, 2020 my team at Facebook launched one of the largest social science data sets ever constructed. It’s meant to facilitate research on misinformation from across the web, shared and spread on Facebook.</p>
 <p>
 <a href="/pdf/Facebook_DP_URLs_Dataset.pdf">Full details on the release here</a>.</p>
+<p>We also released the 
+<a href="https://github.com/facebookresearch/URL-Sanitization" target="_blank" rel="noopener">URL santization framework</a>, which I implemented (and which my SWE colleagues refactored).</p>
 <p>What makes this data release unprecedented is that it contains <em>exposure data</em> describing external links that billions of users saw and read while using the site.</p>
 <p>The data set goes beyond URL-level data, breaking down exposure and interactions by month, country, age, gender, and in the U.S., political page affinity (see Barbera et al 2015).</p>
 <p>The data contain two tables: (1) a “URL attributes” table describing the 38 million URLs in the data set, including how many times users tagged those posts as containing misinformation, harassment, etc. and (2) a “breakdown” table, which aggregates counts of actions taken on urls, broken out by user demographics and URL attributes.</p>
 <p>The 
 <a href="/pdf/Facebook_DP_URLs_Dataset.pdf">technical documentation</a> reflects more work than most papers I&rsquo;ve written: . This list of authors reflects the scale of this massive team effort, and that&rsquo;s before you include increadibly helpful advice we got from a number of computer scientists in the academy listed in the acknowledgements.</p>
 <p>Perhaps most importantly, this release provides guarantees about anonymity in an incredibly rigorous way&ndash;action-level differential privacy, while preserving more underlying signal in the data.</p>
-<p>UPDATE: Nice coverage on 
-<a href="https://mashable.com/2014/11/17/data-hackathon/#EHDv8ugj7aqN" target="_blank" rel="noopener">Mashable</a> of the entire hackathon! Check out the winning hackathon project.</p>
 
     </div>
 

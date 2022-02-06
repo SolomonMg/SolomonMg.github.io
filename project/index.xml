@@ -116,17 +116,17 @@
       <link>https://solomonmg.github.io/project/condor_data_release/</link>
       <pubDate>Mon, 18 May 2020 00:00:00 +0000</pubDate>
       <guid>https://solomonmg.github.io/project/condor_data_release/</guid>
-      <description>&lt;p&gt;On January 17, my team at Facebook launched one of the largest social science data sets ever constructed. It’s meant to facilitate research on misinformation from across the web, shared and spread on Facebook.&lt;/p&gt;
+      <description>&lt;p&gt;On January 17, 2020 my team at Facebook launched one of the largest social science data sets ever constructed. It’s meant to facilitate research on misinformation from across the web, shared and spread on Facebook.&lt;/p&gt;
 &lt;p&gt;
 &lt;a href=&#34;https://solomonmg.github.io/pdf/Facebook_DP_URLs_Dataset.pdf&#34;&gt;Full details on the release here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;We also released the 
+&lt;a href=&#34;https://github.com/facebookresearch/URL-Sanitization&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;URL santization framework&lt;/a&gt;, which I implemented (and which my SWE colleagues refactored).&lt;/p&gt;
 &lt;p&gt;What makes this data release unprecedented is that it contains &lt;em&gt;exposure data&lt;/em&gt; describing external links that billions of users saw and read while using the site.&lt;/p&gt;
 &lt;p&gt;The data set goes beyond URL-level data, breaking down exposure and interactions by month, country, age, gender, and in the U.S., political page affinity (see Barbera et al 2015).&lt;/p&gt;
 &lt;p&gt;The data contain two tables: (1) a “URL attributes” table describing the 38 million URLs in the data set, including how many times users tagged those posts as containing misinformation, harassment, etc. and (2) a “breakdown” table, which aggregates counts of actions taken on urls, broken out by user demographics and URL attributes.&lt;/p&gt;
 &lt;p&gt;The 
 &lt;a href=&#34;https://solomonmg.github.io/pdf/Facebook_DP_URLs_Dataset.pdf&#34;&gt;technical documentation&lt;/a&gt; reflects more work than most papers I&amp;rsquo;ve written: . This list of authors reflects the scale of this massive team effort, and that&amp;rsquo;s before you include increadibly helpful advice we got from a number of computer scientists in the academy listed in the acknowledgements.&lt;/p&gt;
 &lt;p&gt;Perhaps most importantly, this release provides guarantees about anonymity in an incredibly rigorous way&amp;ndash;action-level differential privacy, while preserving more underlying signal in the data.&lt;/p&gt;
-&lt;p&gt;UPDATE: Nice coverage on 
-&lt;a href=&#34;https://mashable.com/2014/11/17/data-hackathon/#EHDv8ugj7aqN&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Mashable&lt;/a&gt; of the entire hackathon! Check out the winning hackathon project.&lt;/p&gt;
 </description>
     </item>
     
