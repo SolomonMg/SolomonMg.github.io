@@ -1609,11 +1609,11 @@ What we&amp;rsquo;ll do is to read in the data, explore it, make a few two-to-on
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# Load the &#39;igraph&#39; library
 library(&#39;igraph&#39;)
 # (1) Read in the data files, NA data objects coded as &#39;na&#39;
-magact96 = read.delim(&#39;https://solomonmg.github.io/assets/img/mag_act96.txt&#39;,
+magact96 = read.delim(&#39;https://solomonmg.github.io/img/mag_act96.txt&#39;,
 na.strings = &#39;na&#39;)
-magact97 = read.delim(&#39;https://solomonmg.github.io/assets/img/mag_act97.txt&#39;,
+magact97 = read.delim(&#39;https://solomonmg.github.io/img/mag_act97.txt&#39;,
 na.strings = &#39;na&#39;)
-magact98 = read.delim(&#39;https://solomonmg.github.io/assets/img/mag_act98.txt&#39;,
+magact98 = read.delim(&#39;https://solomonmg.github.io/img/mag_act98.txt&#39;,
 na.strings = &#39;na&#39;)
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Missing data is coded as &amp;ldquo;na&amp;rdquo; in this data, which is why we gave R the command na.strings = &amp;ldquo;na&amp;rdquo;.&lt;/p&gt;
