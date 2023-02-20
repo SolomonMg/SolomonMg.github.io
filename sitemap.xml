@@ -1,705 +1,239 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
-    <loc>https://solomonmg.github.io/publication-type/2/</loc>
-    <lastmod>2023-01-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/publication/aggarwal-2023-2-million-experiment/</loc>
-    <lastmod>2023-01-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/author/alexander-coppock/</loc>
-    <lastmod>2023-01-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/author/andrew-beasley/</loc>
-    <lastmod>2023-01-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/authors/</loc>
-    <lastmod>2023-01-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/author/dan-frankowski/</loc>
-    <lastmod>2023-01-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/author/harry-hantman/</loc>
-    <lastmod>2023-01-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/author/james-barnes/</loc>
-    <lastmod>2023-01-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/author/jennifer-allen/</loc>
-    <lastmod>2023-01-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/author/kelly-zhang/</loc>
-    <lastmod>2023-01-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/author/minali-aggarwal/</loc>
-    <lastmod>2023-01-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/publication_types/</loc>
-    <lastmod>2023-01-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/publication/</loc>
-    <lastmod>2023-01-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/</loc>
-    <lastmod>2023-01-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/author/solomon-messing/</loc>
-    <lastmod>2023-01-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/author/sylvan-zheng/</loc>
-    <lastmod>2023-01-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/post/what-the-polls-got-wrong-in-2020/</loc>
+    <loc>https://solmessing.netlify.app/talk/example-talk/</loc>
+    <lastmod>2030-06-01T13:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://solmessing.netlify.app/event/</loc>
+    <lastmod>2030-06-01T13:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://solmessing.netlify.app/</loc>
+    <lastmod>2022-10-24T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://solmessing.netlify.app/post/what-the-polls-got-wrong-in-2020/</loc>
     <lastmod>2020-11-08T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/post/</loc>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://solmessing.netlify.app/post/</loc>
     <lastmod>2020-11-08T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/author/sol-messing/</loc>
-    <lastmod>2020-11-08T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/post/trumps-chances-are-better-than-they-look/</loc>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://solmessing.netlify.app/post/trumps-chances-are-better-than-they-look/</loc>
     <lastmod>2020-06-20T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/project/projecting_confidence/</loc>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://solmessing.netlify.app/project/projecting_confidence/</loc>
     <lastmod>2020-05-18T22:48:29-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/project/</loc>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://solmessing.netlify.app/project/</loc>
     <lastmod>2020-05-18T22:48:29-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/project/condor_data_release/</loc>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://solmessing.netlify.app/project/condor_data_release/</loc>
     <lastmod>2020-05-18T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/project/impression_of_influence/</loc>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://solmessing.netlify.app/project/impression_of_influence/</loc>
     <lastmod>2020-05-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/post/response-to-fivethirtyeights-podcast-about-our-paper-projecting-confidence/</loc>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://solmessing.netlify.app/post/response-to-fivethirtyeights-podcast-about-our-paper-projecting-confidence/</loc>
     <lastmod>2020-04-26T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/post/visualization-series-scatterplot-understanding-the-diamond-market/</loc>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://solmessing.netlify.app/post/visualization-series-scatterplot-understanding-the-diamond-market/</loc>
     <lastmod>2020-02-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/publication-type/4/</loc>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://solmessing.netlify.app/publication-type/2/</loc>
     <lastmod>2020-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/author/aaron-roth/</loc>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://solmessing.netlify.app/publication-type/4/</loc>
     <lastmod>2020-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/author/abhradeep-thakurta/</loc>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://solmessing.netlify.app/publication/messing-2020/</loc>
     <lastmod>2020-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/author/bennett-hillenbrand/</loc>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://solmessing.netlify.app/publication/kifer-2020-guidelines/</loc>
     <lastmod>2020-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/author/chaya-nayak/</loc>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://solmessing.netlify.app/publication_types/</loc>
     <lastmod>2020-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/author/christina-degregorio/</loc>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://solmessing.netlify.app/publication/</loc>
     <lastmod>2020-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/author/danfeng-zhang/</loc>
-    <lastmod>2020-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/author/daniel-kifer/</loc>
-    <lastmod>2020-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/publication/messing-2020/</loc>
-    <lastmod>2020-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/author/gary-king/</loc>
-    <lastmod>2020-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/publication/kifer-2020-guidelines/</loc>
-    <lastmod>2020-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/author/nate-persily/</loc>
-    <lastmod>2020-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/author/saurav-mahanti/</loc>
-    <lastmod>2020-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/author/others/</loc>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://solmessing.netlify.app/post/jupyter/</loc>
+    <lastmod>2019-09-05T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://solmessing.netlify.app/slides/</loc>
+    <lastmod>2019-02-05T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://solmessing.netlify.app/slides/example/</loc>
+    <lastmod>2019-02-05T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://solmessing.netlify.app/publication/wlm-2019-projecting/</loc>
     <lastmod>2019-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/author/aman-khurana/</loc>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://solmessing.netlify.app/publication/chapelin-2019-tumor/</loc>
     <lastmod>2019-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/author/amitabh-gaur/</loc>
-    <lastmod>2019-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/author/chun-fai-ray-chan/</loc>
-    <lastmod>2019-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/author/dita-gratzinger/</loc>
-    <lastmod>2019-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/author/fanny-chapelin/</loc>
-    <lastmod>2019-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/author/florette-k-gray-hazard/</loc>
-    <lastmod>2019-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/author/hossein-nejadnik/</loc>
-    <lastmod>2019-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/author/jason-erdmann/</loc>
-    <lastmod>2019-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/author/mohammad-moneeb/</loc>
-    <lastmod>2019-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/publication/wlm-2019-projecting/</loc>
-    <lastmod>2019-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/author/sean-westwood/</loc>
-    <lastmod>2019-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/publication/chapelin-2019-tumor/</loc>
-    <lastmod>2019-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/author/yphtach-lelkes/</loc>
-    <lastmod>2019-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/post/how-to-break-regression/</loc>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://solmessing.netlify.app/post/how-to-break-regression/</loc>
     <lastmod>2018-07-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/post/replication_of_bias_in_the_flesh/</loc>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://solmessing.netlify.app/post/replication_of_bias_in_the_flesh/</loc>
     <lastmod>2017-10-16T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/publication/grimmer-2017-estimating/</loc>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://solmessing.netlify.app/publication/grimmer-2017-estimating/</loc>
     <lastmod>2017-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/author/justin-grimmer/</loc>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://solmessing.netlify.app/publication/solomon-2017-partisan/</loc>
     <lastmod>2017-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/publication/solomon-2017-partisan/</loc>
-    <lastmod>2017-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/author/patrick-van-kessel-adam-g-hughes-nick-judd-rachel-blum-brian-broderick-solomon-messing/</loc>
-    <lastmod>2017-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/author/sean-j-westwood/</loc>
-    <lastmod>2017-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/publication/messing-2016-bias/</loc>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://solmessing.netlify.app/publication/messing-2016-bias/</loc>
     <lastmod>2016-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/author/ethan-plaut/</loc>
-    <lastmod>2016-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/author/maria-jabon/</loc>
-    <lastmod>2016-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/author/eytan-bakshy/</loc>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://solmessing.netlify.app/post/exposure-to-ideologically-diverse-response/</loc>
     <lastmod>2015-04-24T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/post/exposure-to-ideologically-diverse-response/</loc>
-    <lastmod>2015-04-24T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/publication/bakshy-2015-exposure/</loc>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://solmessing.netlify.app/publication/bakshy-2015-exposure/</loc>
     <lastmod>2015-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/author/lada-a-adamic/</loc>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://solmessing.netlify.app/publication/bond-2015-quantifying/</loc>
     <lastmod>2015-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/publication/bond-2015-quantifying/</loc>
-    <lastmod>2015-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/author/robert-bond/</loc>
-    <lastmod>2015-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/post/when-to-use-stacked-barcharts/</loc>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://solmessing.netlify.app/post/when-to-use-stacked-barcharts/</loc>
     <lastmod>2015-11-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/publication-type/5/</loc>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://solmessing.netlify.app/publication-type/5/</loc>
     <lastmod>2014-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/author/sean-j.-westwood/</loc>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://solmessing.netlify.app/publication/messing-2014-selective/</loc>
     <lastmod>2014-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/publication/messing-2014-selective/</loc>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://solmessing.netlify.app/publication/gri-mes-wes-14/</loc>
     <lastmod>2014-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/publication/gri-mes-wes-14/</loc>
-    <lastmod>2014-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/publication-type/7/</loc>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://solmessing.netlify.app/publication-type/7/</loc>
     <lastmod>2013-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/author/allison-harell/</loc>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://solmessing.netlify.app/publication/iyengar-2013-attitudes/</loc>
     <lastmod>2013-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/author/brian-d-lee/</loc>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://solmessing.netlify.app/publication/shi-2013-evaluation/</loc>
     <lastmod>2013-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/author/celina-ansari/</loc>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://solmessing.netlify.app/publication/khurana-2013-ferumoxytol/</loc>
     <lastmod>2013-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/author/dan-e-meyer/</loc>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://solmessing.netlify.app/publication/messing-2013-friends/</loc>
     <lastmod>2013-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/publication/iyengar-2013-attitudes/</loc>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://solmessing.netlify.app/publication/khurana-2013-iron/</loc>
     <lastmod>2013-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/publication/shi-2013-evaluation/</loc>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://solmessing.netlify.app/publication/gawande-2013-role/</loc>
     <lastmod>2013-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/publication/khurana-2013-ferumoxytol/</loc>
-    <lastmod>2013-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/publication/messing-2013-friends/</loc>
-    <lastmod>2013-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/author/gabriel-gonzalez/</loc>
-    <lastmod>2013-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/author/graham-beck/</loc>
-    <lastmod>2013-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/author/heike-e-daldrup-link/</loc>
-    <lastmod>2013-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/publication/khurana-2013-iron/</loc>
-    <lastmod>2013-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/author/jessica-donig/</loc>
-    <lastmod>2013-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/author/kyu-s-hahn/</loc>
-    <lastmod>2013-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/author/laura-j-pisani/</loc>
-    <lastmod>2013-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/author/lisa-lowery/</loc>
-    <lastmod>2013-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/author/nicholas-valentino/</loc>
-    <lastmod>2013-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/author/nikita-derugin/</loc>
-    <lastmod>2013-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/author/nooshin-aflakian/</loc>
-    <lastmod>2013-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/author/olga-d-lenkov/</loc>
-    <lastmod>2013-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/author/olga-lenkov/</loc>
-    <lastmod>2013-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/author/qiaoyun-shi/</loc>
-    <lastmod>2013-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/author/rakhee-gawande/</loc>
-    <lastmod>2013-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/author/rakhee-s-gawande/</loc>
-    <lastmod>2013-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/author/ray-chun-fai-chan/</loc>
-    <lastmod>2013-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/author/raymond-duch/</loc>
-    <lastmod>2013-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/publication/gawande-2013-role/</loc>
-    <lastmod>2013-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/author/sandeep-n-gupta/</loc>
-    <lastmod>2013-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/author/shanto-iyengar/</loc>
-    <lastmod>2013-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/author/simon-jackman/</loc>
-    <lastmod>2013-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/author/srabani-bhaumik/</loc>
-    <lastmod>2013-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/author/stuart-soroka/</loc>
-    <lastmod>2013-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/author/sungmin-lee/</loc>
-    <lastmod>2013-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/author/tetsuro-kobayashi/</loc>
-    <lastmod>2013-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/author/toril-aalberg/</loc>
-    <lastmod>2013-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/author/yauk-k-lee/</loc>
-    <lastmod>2013-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/post/visualization-series-insight-from-cleveland-and-tufte-on-plotting-numeric-data-by-groups/</loc>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://solmessing.netlify.app/post/visualization-series-insight-from-cleveland-and-tufte-on-plotting-numeric-data-by-groups/</loc>
     <lastmod>2017-03-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/post/working-with-bipartite-affiliation-network-data-in-r/</loc>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://solmessing.netlify.app/post/working-with-bipartite-affiliation-network-data-in-r/</loc>
     <lastmod>2020-05-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/author/cameron-marlow/</loc>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://solmessing.netlify.app/publication/gawande-2012-differentiation/</loc>
     <lastmod>2012-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/publication/gawande-2012-differentiation/</loc>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://solmessing.netlify.app/publication/gawande-2012-fdg/</loc>
     <lastmod>2012-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/author/dong-zhang/</loc>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://solmessing.netlify.app/publication/grimmer-how-2012/</loc>
     <lastmod>2012-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/publication/gawande-2012-fdg/</loc>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://solmessing.netlify.app/publication/khurana-2012-intravenous/</loc>
     <lastmod>2012-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/author/guiting-lin/</loc>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://solmessing.netlify.app/publication/messing-2012-ts/</loc>
     <lastmod>2012-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/publication/grimmer-how-2012/</loc>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://solmessing.netlify.app/publication/aalberg-2012-deserving/</loc>
     <lastmod>2012-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/publication/khurana-2012-intravenous/</loc>
-    <lastmod>2012-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/author/laura-pisani/</loc>
-    <lastmod>2012-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/author/randall-a-hawkins/</loc>
-    <lastmod>2012-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/author/robert-e-goldsby/</loc>
-    <lastmod>2012-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/author/rosalinda-castaneda/</loc>
-    <lastmod>2012-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/author/rosalinda-t-castaneda/</loc>
-    <lastmod>2012-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/author/spencer-behr/</loc>
-    <lastmod>2012-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/publication/messing-2012-ts/</loc>
-    <lastmod>2012-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/author/tom-f-lue/</loc>
-    <lastmod>2012-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/publication/aalberg-2012-deserving/</loc>
-    <lastmod>2012-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/publication-type/6/</loc>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://solmessing.netlify.app/publication-type/6/</loc>
     <lastmod>2011-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/author/letitia-lew/</loc>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://solmessing.netlify.app/publication/messing-2011-measuring/</loc>
     <lastmod>2011-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/publication/messing-2011-measuring/</loc>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://solmessing.netlify.app/publication/lew-2011-course/</loc>
     <lastmod>2011-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/publication/lew-2011-course/</loc>
-    <lastmod>2011-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/author/truc-nguyen/</loc>
-    <lastmod>2011-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/publication/iyengar-2008-explicit/</loc>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://solmessing.netlify.app/publication/iyengar-2008-explicit/</loc>
     <lastmod>2008-01-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://solmessing.netlify.app/admin/</loc>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://solmessing.netlify.app/categories/</loc>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://solmessing.netlify.app/home/</loc>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://solmessing.netlify.app/tags/</loc>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://solmessing.netlify.app/home/techsetup/</loc>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://solmessing.netlify.app/techsetup/</loc>
+    <changefreq>weekly</changefreq>
   </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/author/jeremy-n-bailenson/</loc>
-    <lastmod>2008-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/categories/</loc>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/talk/</loc>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/author/sol-messing/</loc>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/tags/</loc>
-  </url>
-  
-  <url>
-    <loc>https://solomonmg.github.io/techsetup/</loc>
-  </url>
-  
 </urlset>

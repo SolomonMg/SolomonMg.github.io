@@ -2,14 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories | Sol Messing</title>
-    <link>https://solomonmg.github.io/categories/</link>
-      <atom:link href="https://solomonmg.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://solmessing.netlify.app/categories/</link>
+      <atom:link href="https://solmessing.netlify.app/categories/index.xml" rel="self" type="application/rss+xml" />
     <description>Categories</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>©2023</copyright>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language>
     <image>
-      <url>https://solomonmg.github.io/images/icon_huedd5de82286bc1d0a1509b535f624c76_25974_512x512_fill_lanczos_center_2.png</url>
+      <url>https://solmessing.netlify.app/media/icon_huedd5de82286bc1d0a1509b535f624c76_25974_512x512_fill_lanczos_center_3.png</url>
       <title>Categories</title>
-      <link>https://solomonmg.github.io/categories/</link>
+      <link>https://solmessing.netlify.app/categories/</link>
     </image>
     
   </channel>
