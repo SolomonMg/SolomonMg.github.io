@@ -1007,7 +1007,7 @@
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    7 min read
+    8 min read
   </span>
   
 
@@ -1105,13 +1105,6 @@
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 <p>As <a href="https://twitter.com/jonathanstray/status/1642200687101501441" target="_blank" rel="noopener">Jonathan Stray pointed out</a>, if this counts as a paid promotion, the FTC might require Twitter to label your tweets as ads. Now we kind of already knew this from Musks Twitter Blue announcement, but having evidence in the code might cross a different line for the FTC.</p>
-<p><strong>What&rsquo;s missing from the codebase?</strong></p>
-<p>What’s missing is basically the TikTok part of the ranking algorithm. What I mean is the code that takes content from across the platform and says “I’m going to put this into your queue for the heavy ranker to sort out.”</p>
-<p>Now on Twitter often that historically meant tweets posted by or replied to by accounts you follow. But, Twitter realized it could find a lot more content for that heavy ranker magic.</p>
-<p>There’s a complex system that inserts tweets into your queue for ranking. This is called <strong>candidate generation</strong> in the “recommendation system” subfield of applied computing.</p>
-<p>If you follow a lot of people on twitter like me, about <strong>half</strong> of the candidate tweets in twitter’s ranked “for you” timeline at any given time are from people you follow.</p>
-<p>Now, if you don’t follow a ton of people, or if you have a new account, you can run out of these tweets, and then Twitter will try to find additional candidates so that you have ranked content. If so, means that this system is going to govern what in your home timeline feed like TikTok&mdash;gathering content it predicts you’ll like from across the platform.</p>
-<p>BTW, I’d like to give a shout out to <a href="https://twitter.com/vboykis" target="_blank" rel="noopener">Vicki Boykis</a>, and <a href="https://twitter.com/igorbrigadir" target="_blank" rel="noopener">Igor Brigadir</a> who are <a href="https://github.com/igorbrigadir/awesome-twitter-algo" target="_blank" rel="noopener">doing amazing work to map out the codebase</a> and unearth exactly what’s missing and what’s not.</p>
 <p><strong>So what about the ackshual algorithm? What does this say about feed ranking?</strong></p>
 <p>The code itself is there but it’s missing specifics&mdash;key parameters, feature sets, and model weights are absent or abstracted. And obviously the data.</p>
 <p>The most critical thing we learned about Twitter’s ranking algorithm is probably from a readme file that former Facebook Data Scientist <a href="https://twitter.com/jeff4llen" target="_blank" rel="noopener">Jeff Allen</a> found. If we take that at face value, a fav (twitter like) is worth half a retweet. A reply is worth 27 retweets, and a reply with a response from a tweets author is worth a whopping 75 retweets!</p>
@@ -1126,6 +1119,16 @@
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 <p>I should point out however, that some of the ``Earlybird&rsquo;&rsquo; code was at one point used in timeline ranking, and it appears that <a href="https://github.com/twitter/the-algorithm/blob/7f90d0ca342b928b479b512ec51ac2c3821f5922/cr-mixer/server/src/main/scala/com/twitter/cr_mixer/similarity_engine/EarlybirdTensorflowBasedSimilarityEngine.scala" target="_blank" rel="noopener">it may be used in cr-mixer</a>, which is used in candidate generation for <a href="https://github.com/twitter/the-algorithm/blob/7f90d0ca342b928b479b512ec51ac2c3821f5922/cr-mixer/README.md" target="_blank" rel="noopener">out-of-network tweets</a>.</p>
+<p>Interestingly, <a href="https://github.com/twitter/the-algorithm/blob/main/home-mixer/server/src/main/scala/com/twitter/home_mixer/functional_component/filter/OutOfNetworkCompetitorURLFilter.scala" target="_blank" rel="noopener">Twitter appears to remove competitor URLs</a>, perhaps only for tweets that are outside of network (you don&rsquo;t follow the author).</p>
+<p><strong>What else goes into the ``the Algorithm?&rsquo;&rsquo;</strong></p>
+<p>What gets ranked in the first place? The other piece here is the ``TikTok&rsquo;&rsquo; part of the ranking algorithm, which is also incomplete without the models/data/parameters/etc. What I mean is the code that takes content from across the platform and says “I’m going to put this into your queue for the heavy ranker to sort out.”</p>
+<p>Now on Twitter often that historically meant tweets posted by or replied to by accounts you follow. But, Twitter realized it could find a lot more content for that heavy ranker magic.</p>
+<p>There’s a complex system that inserts tweets into your queue for ranking. This is called <strong>candidate generation</strong> in the “recommendation system” subfield of applied computing.</p>
+<p>If you follow a lot of people on twitter like me, about <strong>half</strong> of the candidate tweets in twitter’s ranked “for you” timeline at any given time are from people you follow.</p>
+<p>Now, if you don’t follow a ton of people, or if you have a new account, you can run out of these tweets, and then Twitter will try to find additional candidates so that you have ranked content. If so, means that this system is going to govern what in your home timeline feed like TikTok&mdash;gathering content it predicts you’ll like from across the platform.</p>
+<p>This takes place in <a href="https://github.com/twitter/the-algorithm/blob/7f90d0ca342b928b479b512ec51ac2c3821f5922/cr-mixer/README.md" target="_blank" rel="noopener">cr-mixer</a>, and although some of the <a href="https://github.com/twitter/the-algorithm/blob/7f90d0ca342b928b479b512ec51ac2c3821f5922/cr-mixer/server/src/main/scala/com/twitter/cr_mixer/candidate_generation/CandidateSourcesRouter.scala" target="_blank" rel="noopener">high level function calls are there</a>, much of the code and the models appear to be missing, and many files come with this warning at the top: ``This commit does not belong to any branch on this repository, and may belong to a fork outside of the repository.''</p>
+<p>Twitter seems to have made some of the systems public underlying candidate generation public, including its <a href="https://github.com/twitter/the-algorithm/tree/7f90d0ca342b928b479b512ec51ac2c3821f5922/src/scala/com/twitter/simclusters_v2" target="_blank" rel="noopener">SimCluster model</a>.</p>
+<p>BTW, I’d like to give a shout out to <a href="https://twitter.com/vboykis" target="_blank" rel="noopener">Vicki Boykis</a>, and <a href="https://twitter.com/igorbrigadir" target="_blank" rel="noopener">Igor Brigadir</a> who are <a href="https://github.com/igorbrigadir/awesome-twitter-algo" target="_blank" rel="noopener">doing amazing work to map out the codebase</a> and unearth exactly what’s missing and what’s not.</p>
 
     </div>
 
