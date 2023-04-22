@@ -3813,6 +3813,42 @@ assets/Here&amp;rsquo;s the &lt;a href=&#34;https://solmessing.netlify.app/img/
     </item>
     
     <item>
+      <title>Disclosures</title>
+      <link>https://solmessing.netlify.app/home/disclosures/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://solmessing.netlify.app/home/disclosures/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;SM is currently an employee of New York University.&lt;/li&gt;
+&lt;li&gt;SM was previously an employee of Twitter and held a significant financial interest (SFI, defined as holding more than $5,000 in stock). SM was against the company&amp;rsquo;s acquisition and asked to be included in the first round of layoffs.&lt;/li&gt;
+&lt;li&gt;SM was previously an employee of Facebook and at various points in time held a SFI in the company.&lt;/li&gt;
+&lt;li&gt;SM was previously an employee of Science Applications International Corporation and at various points held a SFI in the company.&lt;/li&gt;
+&lt;li&gt;SM was previously an employee of Pew Research Center.&lt;/li&gt;
+&lt;li&gt;SM was previously a contractor for Morning Consult.&lt;/li&gt;
+&lt;li&gt;SM has or has had SFIs in Amazon, Google, Salesforce, .&lt;/li&gt;
+&lt;li&gt;SM has recieved scholarly funding from Google.&lt;/li&gt;
+&lt;li&gt;SM is an inventor on patents assigned to Twitter and Law-on-line.&lt;/li&gt;
+&lt;li&gt;SM&amp;rsquo;s travel to or lodging at conferences has been supported by universities and funders, including Pew Research Center (2015-2018), Facebook (2012-2020), Twitter (2021-2022).&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Tech Stack</title>
+      <link>https://solmessing.netlify.app/home/techsetup-copy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://solmessing.netlify.app/home/techsetup-copy/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://gist.github.com/kevin-smets/8568070&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Best terminal (iterm 2) setup I&amp;rsquo;ve found yet&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://stackoverflow.com/a/42536153/34935&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Fix annoying error messages in RStudio&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.walware.de/goto/statet&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;StatET&lt;/a&gt;, an R plugin for Eclipse. Why not just RStudio? StatET has the best object browser available if you&amp;rsquo;re doing anything with JSON or lists of lists, and will not crash when R crashes, unlike RStudio. It also plays well with cloud instances. Though, yes, I find myself using RStudio on new machines because setting up StatET can be a challenge.&lt;/li&gt;
+&lt;li&gt;Get started using &lt;a href=&#34;https://sourcethemes.com/academic/docs/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Hugo - Academic&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Quickly snap windows side-by-side with shortcut keys on Mac using &lt;a href=&#34;https://github.com/rxhanson/Rectangle&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Rectangle&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;How to setup &lt;a href=&#34;https://www.techrepublic.com/article/how-to-enable-custom-keyboard-shortcuts-in-gmail/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;shotcut keys&lt;/a&gt; in gmail.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Tech Stack</title>
       <link>https://solmessing.netlify.app/home/techsetup/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

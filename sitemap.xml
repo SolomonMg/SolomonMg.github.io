@@ -232,10 +232,16 @@
     <loc>https://solmessing.netlify.app/categories/</loc>
     <changefreq>weekly</changefreq>
   </url><url>
+    <loc>https://solmessing.netlify.app/home/disclosures/</loc>
+    <changefreq>weekly</changefreq>
+  </url><url>
     <loc>https://solmessing.netlify.app/home/</loc>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://solmessing.netlify.app/tags/</loc>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://solmessing.netlify.app/home/techsetup-copy/</loc>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://solmessing.netlify.app/home/techsetup/</loc>
