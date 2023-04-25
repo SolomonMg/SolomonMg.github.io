@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- This site was created with Wowchemy. https://www.wowchemy.com -->
-<!-- Last Published: April 22, 2023 --><html lang="en-us" >
+<!-- Last Published: April 25, 2023 --><html lang="en-us" >
 
 
 <head>
@@ -835,6 +835,36 @@
               
             
             
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/disclosures/"><span>Disclosures</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
               
               
               
@@ -1133,7 +1163,7 @@
 <p>A lot of the code related to Trust and Safety is missing, presumably to prevent bad actors from learning too much and gaming those systems. However, there do seem to be some specifics about the kinds of things twitter considers borderline or violating that I don’t think were previously public.There are a bunch of safety parameters in the code, some of which are in Twitter’s policy documents, but some are not.</p>
 <p>There are entries like “HighCryptospamScore” that <a href="https://github.com/twitter/the-algorithm/blob/7f90d0ca342b928b479b512ec51ac2c3821f5922/visibilitylib/src/main/scala/com/twitter/visibility/rules/DownrankingRules.scala" target="_blank" rel="noopener">appear in the code</a>, which may give scammers hints about how to craft tweets to get around detection systems.  The same is true for <a href="https://github.com/twitter/the-algorithm/blob/7f90d0ca342b928b479b512ec51ac2c3821f5922/visibilitylib/src/main/scala/com/twitter/visibility/models/TweetSafetyLabel.scala#L115" target="_blank" rel="noopener">code that contains links</a> to “UntrustedUrl,” “TweetContainsHatefulConductSlur” for low, medium and high severity.</p>
 <p>There’s also a reference to a “Do Not Amplify” <a href="https://github.com/twitter/the-algorithm/blob/7f90d0ca342b928b479b512ec51ac2c3821f5922/visibilitylib/src/main/scala/com/twitter/visibility/models/SpaceSafetyLabelType.scala#L26" target="_blank" rel="noopener">parameter in the code</a>, which was discussed in the twitter files but seems not to be publicly documented in it’s policies. There are entries like “AgathaSpam,” which refers to a propriety embedding used across the codebase. Twitter also has a bunch of visibility rules hardcoded in Scala that might be useful to bad actors trying to game the system, outlining what rules are in play for all tweets, new users, user mentions, liked tweets, realtime spam detection, etc. Finally, some of the consequences for those violations are <a href="https://github.com/twitter/the-algorithm/blob/7f90d0ca342b928b479b512ec51ac2c3821f5922/visibilitylib/src/main/scala/com/twitter/visibility/rules/Action.scala" target="_blank" rel="noopener">spelled out in Scala</a> as well.</p>
-<p>Of course, it&rsquo;s really hard to know with certainly that any of this wasn&rsquo;t in public somehow before this release.</p>
+<p>Of course, it&rsquo;s really hard to know with certainty that any of this wasn&rsquo;t in public somehow before this release.</p>
 
     </div>
 
