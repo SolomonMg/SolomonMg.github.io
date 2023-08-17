@@ -1368,15 +1368,21 @@ N                338946      338946     338946       338946
 ===============================================================
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Now those are some very nice R-squared values&amp;mdash;we are accounting for almost all of the variance in price with the 4Cs.  If we want to know what whether the price for a diamond is reasonable, we can now use this model and exponentiate the result (since we took the log of price).  We need to multiply the result by exp(sigma^2/2), because the our error is no longer zero in expectation:&lt;/p&gt;
-&lt;p&gt;$$
+
+
+
+
+$$ 
 \begin{align*}
-E(log(y) \mid \mathbf{X} = \mathbf{x}) &amp;amp;= E(\mathbf{X}\beta + \epsilon)\
-E(y \mid \mathbf{X} = \mathbf{x}) &amp;amp;= E( exp( \mathbf{X}\beta + \epsilon ) )\
-&amp;amp;= E( exp( \mathbf{X}\beta ) \times exp( \epsilon ) ) \
-&amp;amp;= E( exp( \mathbf{X}\beta ) ) \times E( exp( \epsilon ) ) \
-&amp;amp;= exp(\mathbf{X}\hat\beta) \times exp( \frac{\hat\sigma^2}{2} )
+E(log(y) \mid \mathbf{X} = \mathbf{x}) &amp;= E(\mathbf{X}\beta + \epsilon)\\
+  E(y \mid \mathbf{X} = \mathbf{x}) &amp;= E( exp( \mathbf{X}\beta + \epsilon ) )\\
+  &amp;= E( exp( \mathbf{X}\beta ) \times exp( \epsilon ) ) \\
+  &amp;= E( exp( \mathbf{X}\beta ) ) \times E( exp( \epsilon ) ) \\
+  &amp;= exp(\mathbf{X}\hat\beta) \times exp( \frac{\hat\sigma^2}{2} ) 
 \end{align*}
-$$&lt;/p&gt;
+$$
+
+
 &lt;p&gt;To dig further into that last step, have a look at the &lt;a href=&#34;http://en.wikipedia.org/wiki/Log-normal_distribution#Arithmetic_moments&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Wikipedia page on log-normal distributed variables&lt;/a&gt;.
 Thanks to &lt;a href=&#34;https://sites.google.com/site/miguelgodinhomatos/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Miguel&lt;/a&gt; for catching this.
 Let&amp;rsquo;s take a look at an example from Blue Nile. I&amp;rsquo;ll use the full model, m4.&lt;/p&gt;
