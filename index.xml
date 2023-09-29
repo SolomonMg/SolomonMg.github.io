@@ -33,6 +33,471 @@
     </item>
     
     <item>
+      <title>Disaggregating &#39;Ideological Segregation&#39;</title>
+      <link>https://solmessing.netlify.app/post/thoughts-on-election-2020/</link>
+      <pubDate>Wed, 02 Aug 2023 00:00:00 +0000</pubDate>
+      <guid>https://solmessing.netlify.app/post/thoughts-on-election-2020/</guid>
+      <description>&lt;h3 id=&#34;tldr&#34;&gt;TLDR:&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;On September 29, Science will publish a letter I wrote arguing that there is little evidence of algorithmic bias in Facebook’s feed ranking system that would serve to increase ideological segregation, also known as &lt;a href=&#34;https://books.google.com/books/about/The_Filter_Bubble.html?id=Qn2ZnjzCE3gC&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;the &amp;ldquo;Filter Bubble&amp;rdquo; hypothesis&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;This contradicts claims in &lt;a href=&#34;https://www.science.org/doi/full/10.1126/science.ade7138&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;González-Bailón et al 2023&lt;/a&gt; that Newsfeed ranking increases ideological segregation. This claim was the main piece of evidence in the Science &lt;a href=&#34;https://www.science.org/toc/science/381/6656&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Special Issue on Meta&lt;/a&gt; that might support the controversial cover that suggested that Meta’s algorithms are “Wired to Split.”&lt;/li&gt;
+&lt;li&gt;The issue is that while domain-level analysis suggests feed-ranking increases ideological segregation, URL-level analysis shows &lt;em&gt;no difference&lt;/em&gt; in ideological segregation before and after feed-ranking.&lt;/li&gt;
+&lt;li&gt;And we should strongly prefer their URL-level analysis. Domain-level analysis &lt;em&gt;effectively mislabels highly partisan content&lt;/em&gt; as &amp;ldquo;moderate/mixed,&amp;rdquo; especially on websites like YouTube, Reddit, and Twitter (&lt;a href=&#34;https://ori.hhs.gov/education/products/niu_authorship/mistakes/09mistake-a.htm&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;aggregation bias/ecological fallacy&lt;/a&gt;).&lt;/li&gt;
+&lt;li&gt;Interestingly, the authors seem to agree&amp;mdash;the discussion section points out problems with domain-level analysis.&lt;/li&gt;
+&lt;li&gt;Another &lt;em&gt;Science&lt;/em&gt; paper from the same issue, &lt;a href=&#34;https://www.science.org/doi/10.1126/science.abp9364&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Guess et al 2023&lt;/a&gt; shows (in the SM) that Newsfeed ranking actually &lt;em&gt;decreases&lt;/em&gt; exposure to &lt;em&gt;political content&lt;/em&gt; from like-minded sources compared with reverse-chronological feedranking.&lt;/li&gt;
+&lt;li&gt;The evidence in the 4 recent papers is not consistent with a meaningful Filter Bubble effect in 2020; nor does it support the notion that Meta&amp;rsquo;s algorithms are &amp;ldquo;Wired to Split.&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;Furthermore, domain-level aggregation bias is a big issue in a great deal of past research on ideological segregation, because domain-level analysis &lt;em&gt;understates&lt;/em&gt; media polarization. Because &lt;a href=&#34;https://www.science.org/doi/full/10.1126/science.ade7138&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;González-Bailón et al 2023&lt;/a&gt; gives both URL- and domain-level estimates, we can see the magnitude of aggregation bias. It&amp;rsquo;s huge.&lt;/li&gt;
+&lt;li&gt;I make a number of other observations about what we know about whether social media is polarizing and discuss implications for the controversial Science cover and Meta&amp;rsquo;s flawed claims that this research is exculpatory.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;!-- 6. None of this is the last word on social media algorithms---as [González-Bailón et al 2023](https://www.science.org/doi/full/10.1126/science.ade7138) point out, we need additional research on friend/page/group/etc recommender systems, which may polarize the graph itself.  --&gt;
+&lt;h3 id=&#34;introicymi&#34;&gt;Intro/ICYMI&lt;/h3&gt;
+&lt;details&gt;
+  &lt;summary&gt;Click to expand&lt;/summary&gt;
+&lt;p&gt;Last week saw the release of a series of &lt;a href=&#34;https://www.science.org/toc/science/381/6656&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;excellent papers in &lt;em&gt;Science&lt;/em&gt;&lt;/a&gt;. I was particularly interested in &lt;a href=&#34;https://www.science.org/doi/full/10.1126/science.ade7138&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;González-Bailón et al 2023&lt;/a&gt;, which measures &amp;ldquo;ideological segregation.&amp;rdquo; This concept is based on &lt;a href=&#34;https://web.stanford.edu/~gentzkow/research/echo_chambers.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Matt Gentzkow and Jesse Shapiro&amp;rsquo;s 2011 work&lt;/a&gt;. As they note, &amp;ldquo;The index ranges from 0 (all conservative and liberal visits are to the same outlet) to 1 (conservatives only visit 100% conservative outlets and liberals only visit 100% liberal outlets).&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;This paper also replicates and extends my own work with Eytan Bakshy and Lada Adamic, also published in &lt;a href=&#34;https://solomonmg.github.io/pdf/Science-2015-Bakshy-1130-2.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;em&gt;Science&lt;/em&gt; in 2015&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;To be clear &lt;a href=&#34;https://www.science.org/doi/full/10.1126/science.ade7138&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;González-Bailón et al 2023&lt;/a&gt; goes a lot further, examining how these factors vary over-time, investigating clusters of isolated partisan media organizations, and patterns in the consumption of misinformation. They find (1) ideological segregation is high; (2) ideological segregation “increases after algorithmic curation” consistent with the “Filter Bubble” hypothesis; (3) there is a substantial right wing “echo chamber” in which conservatives are essentially siloed from the rest of the site (4) where misinformation thrives.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;ve had many years to think about issues related to these questions, after working with similar data from 2012 in my dissertation, and co-authoring a &lt;a href=&#34;https://solomonmg.github.io/pdf/Science-2015-Bakshy-1130-2.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Science paper&lt;/a&gt; while working at Facebook using 2014 data. I also saw the design (but not results) presented at the &lt;a href=&#34;https://www.ssrc.org/programs/digital-platforms-initiative/2023-ssrc-workshop-on-the-economics-of-social-media/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;2023 SSRC Workshop on the Economics of Social Media&lt;/a&gt;, though I did not notice these issues until I saw the final paper.&lt;/p&gt;
+&lt;p&gt;I put together these thoughts after discussion and feedback from Dean Eckles and Tom Cunningham, former colleagues at Stanford, Facebook, and Twitter.&lt;/p&gt;
+&lt;!-- [Click here to read the backstory on Echo Chambers, Filter Bubbles, and Selective Exposure, including where my own past work fits in](#a-brief-history-of-echo-chambers-filter-bubbles-and-selective-exposure) --&gt;
+&lt;/details&gt;
+&lt;h3 id=&#34;a-brief-history-of-echo-chambers-filter-bubbles-and-selective-exposure&#34;&gt;A Brief History of Echo Chambers, Filter Bubbles, and Selective Exposure&lt;/h3&gt;
+&lt;details&gt;
+  &lt;summary&gt;Click to expand&lt;/summary&gt;
+&lt;!-- 20 years ago I worked as a foreign media analyst and I noticed that a great deal of misinformation circulating in news websites in Indonesia and the Middle East came from Alex Jones&#39; InfoWars (yes he&#39;s been around for a long time). I became fascinated with the question of how people get their media and how technology changes that.  --&gt;
+&lt;p&gt;The conventional academic wisdom when I started my PhD was that we shouldn&amp;rsquo;t expect to see much in the way of media effects (&lt;a href=&#34;https://books.google.com/books/about/The_Effects_of_Mass_Communication.html?id=CzcGAQAAIAAJ&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Klapper 1960&lt;/a&gt;) because people tended to &amp;ldquo;select into&amp;rdquo; content that reinforced their views (&lt;a href=&#34;https://www.jstor.org/stable/2747198&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Sears and Freedman 1967&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;In 2007, Cass Sunstein wrote &lt;a href=&#34;https://www.jstor.org/stable/j.ctt7tbsw&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&amp;ldquo;Republic.com 2.0&amp;rdquo;&lt;/a&gt;, which warned that the internet could allow us to even more easily isolate ourselves into &amp;ldquo;information cocoons&amp;rdquo; and &amp;ldquo;echo chambers.&amp;rdquo; Technology allows us to &amp;ldquo;filter&amp;rdquo; exactly what we want to see, and design our own programming. Cass also suggested this could lead to polarization.&lt;/p&gt;
+&lt;!-- What&#39;s more, new media should be expected to further strengthen this &#34;minimal effects&#34; hypothesis ([Bennett and Iyengar 2008](https://citeseerx.ist.psu.edu/document?repid=rep1&amp;type=pdf&amp;doi=a2fcebd37ba1e919f662a287841b0356603cd0a4)).  --&gt;
+&lt;p&gt;In 2009-2010, Sean Westwood and I ran a series of studies suggesting that &lt;a href=&#34;https://journals.sagepub.com/doi/10.1177/0093650212466406&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;popularity and social cues&lt;/a&gt; in news aggregators and social media websites might be a way out of selective news consumption&amp;mdash;we might be &lt;em&gt;more&lt;/em&gt; exposed to cross-cutting views on platforms that feature a social component, and furthermore, this social component seemed to be more important that media &amp;ldquo;source&amp;rdquo; label. That was great in the abstract, but what happens on actual websites that people use?&lt;/p&gt;
+&lt;p&gt;The extent to which widely used social media platforms might allow us to exit &amp;ldquo;echo chambers&amp;rdquo; depended on the extent of cross-partisan friendships and interactions on platforms like Facebook. I did a PhD internship at Facebook to look into that, and the question of whether encountering &lt;a href=&#34;https://www.dropbox.com/s/nu39148ukbab34r/CH7brief.pdf?raw=true&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;political news on social media was ideologically polarizing&lt;/a&gt; (note that the results are as not well powered as I would like). That work evolved into dissertation chapters and eventually our &lt;a href=&#34;https://solomonmg.github.io/pdf/Science-2015-Bakshy-1130-2.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Science paper&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Now &lt;a href=&#34;https://en.wikipedia.org/wiki/Eli_Pariser&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Eli Parsner&lt;/a&gt; had just published a book on &amp;ldquo;&lt;a href=&#34;https://books.google.com/books/about/The_Filter_Bubble.html?id=Qn2ZnjzCE3gC&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Filter Bubbles&lt;/a&gt;&amp;rdquo; suggesting that media technologies like Google Search and Facebook NewsFeed not only allowed us to ignore the &amp;ldquo;other side,&amp;rdquo; but actively filtering out search results and friends posts with perspectives from the other side.&lt;/p&gt;
+&lt;p&gt;What&amp;rsquo;s more, a lot of people in the Human Computer Interaction (HCI) world were very interested in how one might examine this empirically, and I started collecting data with Eytan Bakshy that would do just that. The paper would allow us to quantify echo chambers created by our network of contacts, filter bubbles, and partisan selective exposure in social media by looking at exposure to &lt;a href=&#34;https://www.jstor.org/stable/3117813&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ideologically &amp;ldquo;cross-cutting&amp;rdquo; content&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;We defined a few key components:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Random&lt;/strong&gt; - The set of content (external URLs) shared on Facebook writ large.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Potential&lt;/strong&gt; - The set of content shared by one&amp;rsquo;s friends&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Exposed&lt;/strong&gt; - The set of content appearing in one&amp;rsquo;s Newsfeed.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Selected&lt;/strong&gt; - The set of content one clicks on.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Endorsed&lt;/strong&gt; - The set of content one &amp;rsquo;likes&#39;.&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-figure-6-from-messing-2013-our-original-analysis-of-the-distribution-of-ideologically-aligned-content-on-facebook-using-data-from-2012&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://solmessing.netlify.app/img/Ch6Fig6.5.jpg&#34; alt=&#34;Figure 6 from Messing 2013: Our original analysis of the distribution of ideologically-aligned content on Facebook using data from 2012.&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      Figure 6 from Messing 2013: Our original analysis of the distribution of ideologically-aligned content on Facebook using data from 2012.
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-figure-3b-from-bakshy-et-al-2015-data-from-2014-quantifying-cross-cutting-content-on-facebook&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://solmessing.netlify.app/img/ScienceBakshyFig3B.jpg&#34; alt=&#34;Figure 3B from Bakshy et al 2015: Data from 2014 quantifying cross-cutting content on Facebook.&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      Figure 3B from Bakshy et al 2015: Data from 2014 quantifying cross-cutting content on Facebook.
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;Unlike when I started to study social media in 2009 and no one was interested, in 2014, people understood that social media was an important force that was reshaping at least media if not society more broadly. And Science was particularly interested in the role of algorithms played in this environment.&lt;/p&gt;
+&lt;p&gt;We published our results in &lt;a href=&#34;https://solomonmg.github.io/pdf/Science-2015-Bakshy-1130-2.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Science&lt;/a&gt;, and the response from many was &amp;ldquo;well this is smaller than expected,&amp;rdquo; including a piece in &lt;em&gt;Wired&lt;/em&gt; from &lt;a href=&#34;https://www.wired.com/2015/05/did-facebooks-big-study-kill-my-filter-bubble-thesis/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Eli Parisner himself&lt;/a&gt;. David Lazer, one of the lead authors of &lt;a href=&#34;https://www.science.org/doi/full/10.1126/science.ade7138&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;González-Bailón et al 2023&lt;/a&gt;, also &lt;a href=&#34;https://education.biu.ac.il/sites/education/files/shared/science-2015-lazer-1090-1.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;wrote a perspective in &lt;em&gt;Science&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;However, the piece immediately drew a great deal of criticism. This is in part because I wrote that exposure was driven more by individual choices than algorithms, which ignored the potential influence of friend recommendation systems and, more broadly, swept aside the extent to which interfaces structure interactions on websites, which my own dissertation work had shown was quite substantial.&lt;/p&gt;
+&lt;p&gt;The study also had important limitations, many of which I addressed in a post suggesting how &lt;a href=&#34;https://solomonmg.github.io/post/exposure-to-ideologically-diverse-response/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;future work could provide a more robust picture&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I was (much later) tech lead for Social Science One (2018-2020), which gave external researchers access to data (the &lt;a href=&#34;https://solmessing.netlify.app/pdf/Facebook_DP_URLs_Dataset.pdf&#34;&gt;&amp;lsquo;Condor&amp;rsquo; URLs data set&lt;/a&gt;) via differential privacy. My goal was to enable the kind of work research done &lt;a href=&#34;https://www.science.org/doi/full/10.1126/science.ade7138&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;González-Bailón et al 2023&lt;/a&gt;. However, it soon became clear that Social Science One&amp;rsquo;s data sharing model and differential privacy in particular was not suitable for ground-breaking research.&lt;/p&gt;
+&lt;p&gt;I personally advocated (with Facebook Researcher and longtime colleague &lt;a href=&#34;https://twitter.com/anniefranco&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Annie Franco&lt;/a&gt;) for the collaboration model used in the Election 2020 project, wherein external researchers would collaborate with Facebook researchers. That model would have to shield the research from any interference from Facebook&amp;rsquo;s Communications and Policy arm, which might attempt to interfere with the inturpretation or publication of any resulting papers, which would create ethical conflicts.&lt;/p&gt;
+&lt;p&gt;I advocated for pre-registration to accomplish this, not merely to ensure scientific rigor but to protect against conflicts of interest and selective reporting of results. However, I left Facebook in January of 2020 and have not been deeply involved in the project since.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.science.org/doi/full/10.1126/science.ade7138&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;González-Bailón et al 2023&lt;/a&gt; does in fact accomplish most if not all of what I recommended future research do and goes much further than our original study, and the authors should be applauded for it. The paper shows that on Facebook (1) ideological segregation is high (in fact it&amp;rsquo;s arguably higher than implied in the paper); (2) there is a substantial right wing &amp;ldquo;echo chamber&amp;rdquo; in which conservatives are siloed from the rest of the site (3) where misinformation thrives. When they start to talk about the filter bubble though, things get more complicated.&lt;/p&gt;
+&lt;/details&gt;
+&lt;h3 id=&#34;is-there-a-filter-bubble-on-facebook&#34;&gt;Is there a Filter Bubble on Facebook&lt;/h3&gt;
+&lt;p&gt;Are Facebook&amp;rsquo;s algorithms &amp;ldquo;Wired to split&amp;rdquo; the public? This question is at the core of the recent &lt;em&gt;Science&lt;/em&gt; issue, it&amp;rsquo;s hotly debated in the field of algorithmic bias. A suspicion that the answer is &amp;ldquo;yes&amp;rdquo; has motivated a number of policy and regulatory actions. Armed with unprecendented data, &lt;a href=&#34;https://www.science.org/doi/full/10.1126/science.ade7138&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;González-Bailón et al 2023&lt;/a&gt; seeks to answer this and other related questions.&lt;/p&gt;
+&lt;p&gt;There are three relevant claims that answer this question in the text: (1) &amp;ldquo;ideological segregation is high and increases as we shift from potential exposure to actual exposure to engagement&amp;rdquo; in the abstract, (2) &amp;ldquo;The algorithmic promotion of compatible content from this inventory is positively associated with an increase in the observed segregation as we move from potential to exposed audiences&amp;rdquo; in the discussion section, and (3) &amp;ldquo;Segregation scores drawn from exposed audiences are higher than those based on potential audiences &amp;hellip; (the difference between potential and engaged audiences is only visible at the domain level),&amp;rdquo; in the caption of Figure 2.&lt;/p&gt;
+&lt;p&gt;These statements are generally confirmatory of algorithmic segregation, aka the &lt;a href=&#34;https://books.google.com/books/about/The_Filter_Bubble.html?id=Qn2ZnjzCE3gC&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Filter Bubble hypothesis&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;But look at Figure 2, on which these claims seem to be based. Figure 2B shows an increase in observed segregation as you move from potential to exposed audiences. BUT Figure 2C&amp;mdash;describing the same phenomena&amp;mdash;does &lt;em&gt;not&lt;/em&gt; (as noted in the caption).&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-when-viewed-at-the-level-of-the-url-2c-the-study-is-consistent-with-a-negligible-filter-bubble-effect&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://solmessing.netlify.app/img/BailonFig2BC.jpeg&#34; alt=&#34;Figure 2 (B &amp;amp;amp; C) from González-Bailón et al 2023: When viewed at the level of the URL (2C), the study is consistent with a &amp;lt;em&amp;gt;negligible&amp;lt;/em&amp;gt; Filter Bubble effect&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      When viewed at the level of the URL (2C), the study is consistent with a negligible Filter Bubble effect
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h3 id=&#34;so-which-is-it&#34;&gt;So which is it?&lt;/h3&gt;
+&lt;p&gt;First, what&amp;rsquo;s the difference between these two figures? 2B aggregates things at the domain level (e.g., &lt;a href=&#34;https://www.yahoo.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;www.yahoo.com&lt;/a&gt;) while 2C aggregates things at the URL level (e.g., &lt;a href=&#34;https://www.yahoo.com/news/pence-trumps-indictment-anyone-puts-002049678.html%29&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.yahoo.com/news/pence-trumps-indictment-anyone-puts-002049678.html)&lt;/a&gt;. That means 2B treats all shares from yahoo.com the same, while 2B looks at each story separately.&lt;/p&gt;
+&lt;p&gt;If you&amp;rsquo;re like me, when you think of political news, you have in mind domains like FoxNews.com or MSNBC.com, where it&amp;rsquo;s likely that the website itself has a distinct partisan flavor.&lt;/p&gt;
+&lt;p&gt;But YouTube.com and Twitter.com both appear in the &amp;ldquo;Top 100 Domains by Views&amp;rdquo; in the study&amp;rsquo;s SM, which obviously host a ton of both far left and far right or &amp;ldquo;mixed&amp;rdquo; content. And indeed, Figure S10 below shows that there are an array of domains that host some far right content and some far left content.&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-some-domains-host-some-far-right-content-urls-and-some-far-left-content&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://solmessing.netlify.app/img/BailonFigS10.jpeg&#34; alt=&#34;Figure S10 from González-Bailón et al 2023: Some domains host some far right content and some far left content.&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      Some domains host some far right content (URLs) and some far left content.
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;!-- There&#39;s also just something about content that makes an argument that we seem to want to share, as suggested by analysis in my [dissertation](https://www.dropbox.com/s/zfw1d9j60hqjil7/sudiss.pdf?raw=true), which shows that NYT editorials are more likely than content from other sections to be shared (via email). Consider two OpEds at the NYT---one by conservative columnist Bret Stevens, the other by well-known liberal Nicholas Kristof. The former is going to be shared more by conservatives, the latter more by liberals.  --&gt;
+&lt;p&gt;But even if we&amp;rsquo;re talking about NYTimes.com it&amp;rsquo;s not hard to see that for example, conservatives might be more likely to share conservative Op Eds from Bret Stevens, while liberals may be more likely to share Op Eds from Nicholas Kristof.&lt;/p&gt;
+&lt;p&gt;If you aggregate your analysis to the domain level, you&amp;rsquo;ll miss this aspect of media polarization.&lt;/p&gt;
+&lt;h3 id=&#34;domains-or-urls&#34;&gt;Domains or URLs&lt;/h3&gt;
+&lt;p&gt;So which is right? &lt;a href=&#34;https://www.science.org/doi/full/10.1126/science.ade7138&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;González-Bailón et al 2023&lt;/a&gt; suggests that we should prefer the URL-level analysis. Here&amp;rsquo;s the passage in the discussion section, which describes why analyzing media polarization at the level of the domain is problematic:&lt;/p&gt;
+&lt;p&gt;&amp;ldquo;As a result of social curation, exposure to URLs is systematically more segregated than exposure to domains&amp;hellip; &lt;em&gt;A focus on domains rather than URLs will likely understate, perhaps substantially, the degree of segregation in news consumption online.&lt;/em&gt;&amp;rdquo; (Emphasis added)&lt;/p&gt;
+&lt;p&gt;What&amp;rsquo;s more, past work (co-authored by one of the lead authors) shows that &lt;a href=&#34;https://osf.io/vbwer&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;domain-level analysis can indeed mask “curation bubbles”&lt;/a&gt; in which &amp;ldquo;specific stories attract different partisan audiences than is typical for the outlets that produced them.&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;You can see this in the data clear as day&amp;mdash;let&amp;rsquo;s go back to Figure 2A, which shows a massive increase in estimated segregation when using URLs rather than domains:&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-figure-2a-shows-much-higher-levels-of-audience-segregation-when-you-look-at-the-url-level-rather-than-the-domain-level&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://solmessing.netlify.app/img/BailonFig2.jpg&#34; alt=&#34;Figure 2 from González-Bailón et al 2023: There are much higher levels of audience segregation when you look at the URL level rather than the domain level&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      Figure 2A shows much higher levels of audience segregation when you look at the URL level rather than the domain level
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;Returning to Figures 2B and 2C, it seems that the potential audience at domain level is &lt;em&gt;artificially less segregated&lt;/em&gt;, due to the aggregation at the level of the domain.&lt;/p&gt;
+&lt;h3 id=&#34;what-explains-the-filter-bubble-discrepency&#34;&gt;What explains the &amp;lsquo;Filter Bubble discrepency&amp;rsquo;?&lt;/h3&gt;
+&lt;p&gt;One possibility is that posts linking to content from &amp;ldquo;mixed&amp;rdquo; domains like YouTube, Reddit, Twitter, Yahoo, etc. do not score as well in feed-ranking. It&amp;rsquo;s possible that partisan content on these domains is more likely to be downranked as misinformation or spam, or maybe Facebook-native videos (which render faster/better) have an edge over YouTube, or perhaps there are domain-level features in feed ranking, or maybe there is some other reason that content from &amp;rsquo;non-mixed&amp;rsquo; domains just performs better in the rather complex recommendation system that powers Newsfeed ranking.&lt;/p&gt;
+&lt;p&gt;Regardless, that would explain the results in Figure 2&amp;mdash;making the potential audience look artificially broader than the actual audience, when you analyze content at the domain level.&lt;/p&gt;
+&lt;h3 id=&#34;what-about-the-reverse-chron-experiment&#34;&gt;What about the Reverse-Chron experiment?!&lt;/h3&gt;
+&lt;p&gt;Surely we can paint a fuller picture of the impact of algorithmic ranking on media polarization with that other excellent recent &lt;em&gt;Science&lt;/em&gt; paper which looked at the &lt;em&gt;causal&lt;/em&gt; effect of turning off Newsfeed ranking. Maybe we can cross-reference that paper and get a clearer picture of what&amp;rsquo;s happening.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.science.org/doi/10.1126/science.abp9364&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Guess et al 2023&lt;/a&gt; shows that Newsfeed induces proportionally &lt;em&gt;more&lt;/em&gt; exposure cross-cutting sources but also more exposure to like-minded sources. It reduces exposure to moderate or mixed sources. Importantly, this is not just news that news sources link to, it&amp;rsquo;s all content that everyone posts, including life updates, pictures, videos, etc.&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://solmessing.netlify.app/img/GuessFig.jpg&#34; alt=&#34;Figure 2 from Guess et al 2023: Compared to a reverse chronologically-ranked feed, FB&amp;amp;rsquo;s ranking system induces a proportionally more exposure to &amp;amp;ldquo;like-minded&amp;amp;rdquo; sources but also more to cross-cutting sources, defined at the level of the entity posting.&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;Ok, but what about political content? In the supplimentary materials, we see that when it comes to &lt;em&gt;political content&lt;/em&gt;, Newsfeed ranking actually &lt;em&gt;decreases&lt;/em&gt; exposure to political content from like-minded sources.&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://solmessing.netlify.app/img/GuessChronScienceTabS20.jpg&#34; alt=&#34;Figure S20 from Guess et al 2023: A reverse chronologically-ranked Newsfeed induces a proportionally less exposure to &amp;amp;ldquo;like-minded&amp;amp;rdquo; sources but also less to cross-cutting sources, defined at the level of the entity posting.&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;What about exposure to political content posted by cross-cutting sources? The SM doesn&amp;rsquo;t provide that, but it does provide a paragraph noting that Newsfeed &lt;em&gt;decreased&lt;/em&gt; exposure to political news from partisan sources relative to reverse-chron!&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://solmessing.netlify.app/img/GuessChronScienceS3.3.jpg&#34; alt=&#34;S3.3 in Guess et al 2023: A reverse chronologically-ranked Newsfeed induces a proportionally less exposure to &amp;amp;ldquo;like-minded&amp;amp;rdquo; sources but also less to cross-cutting sources, defined at the level of the entity posting.&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;Now a big caveat here is that it&amp;rsquo;s clear from the main results that political content is not doing well in Newsfeed ranking. Note that there are &lt;a href=&#34;https://www.wsj.com/articles/facebook-politics-controls-zuckerberg-meta-11672929976&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;reports that the company decided to downrank political and news content in 2021&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Regardless, the results in the SM are not at all suggestive of a filter bubble, at least during the 2020 election&amp;mdash;the experimental results suggest that if anything feedranking is showing us &lt;em&gt;less&lt;/em&gt; polarizing content than we would see with reverse-chron.&lt;/p&gt;
+&lt;h3 id=&#34;how-fb-groups-impact-estimates-of-algorithmic-segregation&#34;&gt;How FB Groups impact estimates of algorithmic segregation&lt;/h3&gt;
+&lt;p&gt;I sent a much earlier draft of this to &lt;a href=&#34;https://www.asc.upenn.edu/people/faculty/sandra-gonzalez-bailon-phd&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Sandra González-Bailón&lt;/a&gt; and &lt;a href=&#34;https://cssh.northeastern.edu/faculty/david-lazer/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;David Lazer&lt;/a&gt;, lead authors for &lt;a href=&#34;https://www.science.org/doi/full/10.1126/science.ade7138&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;González-Bailón et al 2023&lt;/a&gt;. Sandra pointed me to Figure S14, which does show a slight increase in segregation post-ranking for URLs shared by users and pages, but shows the &lt;em&gt;opposite&lt;/em&gt; for content shared in those often-contentious Facebook groups.&lt;/p&gt;
+&lt;!-- People may be especially likely to come across &#34;persons dissimilar to themselves, and with modes of thought and action unlike those with which they are familiar&#34; [(Mill cited in Mutz and Mondak, 2006)](https://www.polisci.upenn.edu/sites/default/files/mutz_mondak_2006.pdf). And it seems likely based on the plot below that group posts are treated differently from page posts and friend posts in Facebook feedranking.  --&gt;
+&lt;p&gt;So it&amp;rsquo;s really &lt;em&gt;not&lt;/em&gt; that there&amp;rsquo;s no difference at all pre- and post- ranking, just that the difference is on average zero once you include groups. Of course, the population of people who see content from groups and/or pages in Newsfeed may be unusual, and future work should dig into this variation.&lt;/p&gt;
+&lt;p&gt;I should also note that this small but real difference seems more or less consistent with what we &lt;a href=&#34;https://www.science.org/doi/10.1126/science.aaa1160&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;found in past work&lt;/a&gt;, which only examined news shared by users (excluding pages and groups).&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://solmessing.netlify.app/img/BailonFigS14.jpg&#34; alt=&#34;Figure S14 from González-Bailón et al 2023: There is a modest filter bubble effect among users and pages, and a &amp;amp;ldquo;reverse filter bubble&amp;amp;rdquo; for content shared in groups.&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h3 id=&#34;the-algorithm-and-the-most-politically-engaged&#34;&gt;The algorithm and the most politically engaged&lt;/h3&gt;
+&lt;p&gt;There is also a hint of an increase in segregation post-ranking among the most politically engaged 10% of Facebook users. However, the paper notes that this trend &amp;ldquo;is only clear for domain-level data,&amp;rdquo; which we&amp;rsquo;ve already established should not be used here. (Note that they define high political interest users as those in the &amp;ldquo;top 10% of engagement&amp;hellip; (comments, likes, reactions, reshares) with content classified as political on Facebook&amp;hellip;)&amp;rdquo;).&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://solmessing.netlify.app/img/BailonFigS19.jpg&#34; alt=&#34;Figure S19 shows a modest filter bubble effect among the most engaged users at the peak of the 2020 election.&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;A similar pattern holds for the top 1% of users (Figure S23 in the SM).&lt;/p&gt;
+&lt;h3 id=&#34;algorithmic-segregation-and-ideology&#34;&gt;Algorithmic segregation and ideology&lt;/h3&gt;
+&lt;p&gt;Feed ranking seems to expose both conservatives and liberals to more liberal content. This is consistent with my priors that conservative content is more likely to violate policy and be taken down or subject to &amp;ldquo;soft actioning&amp;rdquo; (e.g., downranking) for borderline violations.&lt;/p&gt;
+&lt;p&gt;So now things get messy&amp;mdash;should we really say liberals are in a filter bubble (and conservatives aren&amp;rsquo;t) if misinformation is included in that calculation?&lt;/p&gt;
+&lt;!-- exposure to cross cutting content was thought to [reduce political participation](https://www.jstor.org/stable/3088437). --&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-feedranking-exposes-you-to-slightly-more-liberal-content&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://solmessing.netlify.app/img/BailonTabS8.jpeg&#34; alt=&#34;Feedranking exposes you to slightly more liberal content, presumably due to misinformation actioning.&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      Feedranking exposes you to slightly more liberal content.
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;We can see a similar pattern when we look at exposure to cross-cutting content, which is the measure our 2015 Science paper used. Conservatives see more liberal content in feed than their friends share.&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-replication-of-bakshy-et-al-2015&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://solmessing.netlify.app/img/BailonFigS11.jpg&#34; alt=&#34;Replication of Bakshy et al 2015, showing little effect of feed-ranking among content shared by friends. However, when including page and group content, feed-ranking plays a more important role&amp;amp;mdash;exposing liberals to proportionally less cross-cutting content and conservatives to comparatively more.&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      Replication of Bakshy et al 2015
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;We can also see that things have changed a lot since we wrote our original Science piece in 2015. Liberals seem to see &lt;em&gt;far&lt;/em&gt; more cross-cutting content, conservatives less.&lt;/p&gt;
+&lt;!-- What about how this compares to others ways we get media on the internet? The evidence is not great here, but [Flaxman et al 2016](https://academic.oup.com/poq/article/80/S1/298/2223402) show that ideological segregation is higher for search than for social media websites, but lower for news aggregators and direct navigation to news websites.  --&gt;
+&lt;h3 id=&#34;brevity-is-a-double-edged-sword&#34;&gt;Brevity is a double-edged sword&lt;/h3&gt;
+&lt;p&gt;Science gives authors only limited space and it would have been difficult to dig into everything I&amp;rsquo;ve written about in 2 pages. I also know better than almost anyone just how much work went into these papers (I would bet thousands of hours for each of several authors), and how difficult it can be explain everything perfectly when you&amp;rsquo;re pulling off such a big lift. I should also point out that these papers are very nuanced, well-caveated, and careful not to overstate their results regarding the filter bubble or algorithmic polarization.&lt;/p&gt;
+&lt;p&gt;Still, I do wish this work had squarely focused on URL-level analyses.&lt;/p&gt;
+&lt;h3 id=&#34;what-this-means-for-other-studies&#34;&gt;What this means for other studies&lt;/h3&gt;
+&lt;p&gt;This also means that past estimates of ideological segregation based domain-level analysis probably &lt;em&gt;understate&lt;/em&gt; media polarization in a big way. This includes those based on &lt;a href=&#34;https://journalqd.org/article/view/2586/2683&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Facebook data&lt;/a&gt;, &lt;a href=&#34;https://onlinelibrary.wiley.com/doi/epdf/10.1111/ajps.12589&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;browser data&lt;/a&gt;, on data describing various &lt;a href=&#34;https://academic.oup.com/poq/article/80/S1/298/2223402&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;platforms&lt;/a&gt;) or simply websites across the &lt;a href=&#34;https://web.stanford.edu/~gentzkow/research/echo_chambers.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;internet&lt;/a&gt;. I have said this for a long time but I did not think the magnitude was as strong as shown in &lt;a href=&#34;https://www.science.org/doi/full/10.1126/science.ade7138&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;González-Bailón et al 2023&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;so-is-facebook-polarizing&#34;&gt;So, is Facebook polarizing?&lt;/h3&gt;
+&lt;p&gt;It&amp;rsquo;s very hard to give a good answer to this question. In &amp;ldquo;The Paradox of Minimal Effects,&amp;rdquo; Stephen Ansolabehere points out that re-election depends overwhelmingly on whether the country is prosperous and at peace, not what happens with media politics. This is thought to be because people selectively consume media, which serves mainly to reinforce their beliefs; while at the same time, the sum total of people&amp;rsquo;s private lived experiences correponds reasonably well to aggregated economic data.&lt;/p&gt;
+&lt;p&gt;There&amp;rsquo;s an argument that social media exists somewhere in between the conventional media and one&amp;rsquo;s lived experiences. And what about evidence? As Sean Westwood and I have shown, partisan selectivity is far less severe when you &lt;a href=&#34;https://journals.sagepub.com/doi/10.1177/0093650212466406&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;add a social element to news consumption&lt;/a&gt;. What&amp;rsquo;s more, field-experimental work I did shows that &lt;a href=&#34;https://www.dropbox.com/s/nu39148ukbab34r/CH7brief.pdf?raw=true&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;increasing the prominence of political news in Facebook&amp;rsquo;s Newsfeed&lt;/a&gt; shifted issue positions toward the majority of news encountered (left-leaning), particularly among political moderates.&lt;/p&gt;
+&lt;p&gt;Tom Cunningham recently wrote a nice &lt;a href=&#34;https://tecunningham.github.io/posts/2023-07-27-meta-2020-elections-experiments.html#other-evidence-on-media-and-polarization&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;summary of some of the evidence related to the question of whether any kind of media might increase affective polarization&lt;/a&gt;, which we discussed at length.&lt;/p&gt;
+&lt;p&gt;The evidence suggests any effect is likely small. First, we see that while social media is a global phenomenon, affective polarization is not&amp;mdash;the &lt;a href=&#34;https://direct.mit.edu/rest/article-abstract/doi/10.1162/rest_a_01160/109262/Cross-Country-Trends-in-Affective-Polarization?redirectedFrom=fulltext&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;UK, Japan, and Germany have seen affective depolarization&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Second, perhaps the highest quality experimental study on this question I&amp;rsquo;ve seen is &lt;a href=&#34;https://osf.io/jrw26/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Broockman and Kalla (2022)&lt;/a&gt;, which finds that paying heavy Fox News viewers to watch CNN has generally depolarizing effects, though as Tom points out, finds null effects on traditional measures of affective polarization.&lt;/p&gt;
+&lt;p&gt;Third, Tom and I have also discussed an excellent experimental study attempting to shed light on this: &amp;ldquo;&lt;a href=&#34;https://www.aeaweb.org/articles?id=10.1257/aer.20190658&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Welfare Effects of Social Media&lt;/a&gt;,&amp;rdquo; which concludes that Facebook is likely polarizing. They find that &amp;ldquo;deactivating Facebook for the four weeks before the 2018 US midterm election&amp;hellip; makes people less informed, it also makes them less polarized by at least some measures, consistent with the concern that social media have played some role in the recent rise of polarization in the United States.&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;The study defines political polarization in an unusual way&amp;mdash;including congenial media exposure&amp;mdash;how much news you see from your own side&amp;mdash;in its polarization index. Most political scientists would consider congenial media exposure as &lt;em&gt;the thing that might cause polarization&lt;/em&gt;, but not an aspect of polarization in and of itself.&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-allcott-et-al-2020-figure-3-demonstrates-the-biggest-effect-is-on-a-measure-of-media-exposure&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://solmessing.netlify.app/img/AlcottetalFigure3.jpg&#34; alt=&#34;Allcott et al 2020 Figure 3&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      Allcott et al 2020 Figure 3 demonstrates the biggest effect is on a measure of media exposure
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;They do explain that their effects on affective polarization are not significant and they don&amp;rsquo;t try to hide what&amp;rsquo;s going into the measure. But you have to read beyond the abstract and the media headlines to really understand this point.&lt;/p&gt;
+&lt;!-- They make the following claim in a footnote: &#34;Online Appendix Table A16 shows that the effect on the political polarization index is *robust to excluding each of the seven individual component variables in turn*, although the point estimate moves toward zero and the unadjusted p-value rises to 0.09 when omitting congenial news exposure.&#34;  --&gt;
+&lt;p&gt;Notably, in a robustness test in the appendix, the effect on the polarization loses statistical significance when you exclude this variable.&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-allcott-et-al-2020-figure-a16-shows-that-the-effect-on-polarization-is-not-significant-at-p005-if-you-exclude-congenial-media-exposure&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://solmessing.netlify.app/img/AlcottetalFigureA16.jpg&#34; alt=&#34;Allcott et al 2020 Figure A16&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      Allcott et al 2020 Figure A16 shows that the effect on polarization is not significant at P&amp;lt;0.05 if you exclude congenial media exposure.
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;That means the folks who didn&amp;rsquo;t deactivate Facebook had higher levels of political knowledge and higher levels of issue polarization. This makes sense because if a person doesn&amp;rsquo;t know where the parties stand on an issue, she is less likely to be sure about where she ought to stand.&lt;/p&gt;
+&lt;h3 id=&#34;implications-for-how-this-was-publicized&#34;&gt;Implications for how this was publicized&lt;/h3&gt;
+&lt;p&gt;All of this is relevant in light of the controversial Science Cover, which suggests Facebook&amp;rsquo;s &lt;em&gt;algorithms&lt;/em&gt; are &amp;ldquo;Wired to Split&amp;rdquo; us. It may be true, but the evidence across all 4 &lt;em&gt;Science&lt;/em&gt; and &lt;em&gt;Nature&lt;/em&gt; papers is not decisive on this question.&lt;/p&gt;
+&lt;p&gt;None of the experiments published so far show an impact on affective or ideological polarization. What&amp;rsquo;s more, the proper URL-level analyses in &lt;a href=&#34;https://www.science.org/doi/full/10.1126/science.ade7138&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;González-Bailón et al 2023&lt;/a&gt; show only a modest &amp;lsquo;Filter Bubble&amp;rsquo; for certain subsets of the data, and when it comes to political news, and the reverse-chronological feed ranking experiment shows Newsfeed ranking feeds us &lt;em&gt;less&lt;/em&gt; polarized political content than would see in a reverse-chron Newsfeed.&lt;/p&gt;
+&lt;p&gt;Of course, the spin from the Meta Comms team that these &lt;a href=&#34;https://www.wsj.com/articles/does-facebook-polarize-users-meta-disagrees-with-partners-over-research-conclusions-24fde67a&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;results are exculpretory&lt;/a&gt; is also highly problematic. This claim is not only wrong but amatuerish and self-defeating from a strategic perspective, and I was surprised to read about it.&lt;/p&gt;
+&lt;p&gt;For all the amazing work done to produce the experimental results, the data are too noisy to detect small but potentially compounding effects on polarization as suggested in &lt;a href=&#34;https://statmodeling.stat.columbia.edu/author/dean/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;a post-publication review from Dean Eckles&lt;/a&gt; and &lt;a href=&#34;https://tecunningham.github.io/posts/2023-07-27-meta-2020-elections-experiments.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Tom Cunningham&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;What&amp;rsquo;s more, even the excellent work done here in &lt;a href=&#34;https://www.science.org/doi/full/10.1126/science.ade7138&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;González-Bailón et al 2023&lt;/a&gt; does not speak to the question of effects on polarization that other key recommender systems at Facebook may have: the People You May Know (PYMK) algorithm, which facilitates network connections on the website, along with the Pages You Might Like (PYML) and Groups You Might Like (GYML). The authors make a similar point in the Supplementary Materials, S3.2&amp;mdash;pointing out that inventory, or the &amp;ldquo;potential audience,&amp;rdquo; &amp;ldquo;results from another curation process determining the structure and composition of the Facebook graph, which itself results from social and algorithmic dynamics.&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;This means that we should &lt;em&gt;not&lt;/em&gt; necessarily conclude that exposure is all about individual choices and not algorithms based on the sum total of evidence we have (a point I should have better emphasized &lt;a href=&#34;https://solomonmg.github.io/pdf/Science-2015-Bakshy-1130-2.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;in past work&lt;/a&gt;)&amp;mdash;algorithms may play an important role and as usual, more research is needed.&lt;/p&gt;
+&lt;p&gt;It would seem to me that both Science and Meta Comms are both going beyond the data here.&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-wired-to-split&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://solmessing.netlify.app/img/ScienceCoverWiredtoSplit.jpeg&#34; alt=&#34;The Science Cover suggests Facebook&amp;amp;rsquo;s algorithms are &amp;amp;ldquo;Wired to Split&amp;amp;rdquo; us.&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      Wired to Split
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h3 id=&#34;disclosures&#34;&gt;Disclosures&lt;/h3&gt;
+&lt;p&gt;As noted above, from 2018-2020, I was tech lead for Social Science One, which gave external researchers &lt;em&gt;direct&lt;/em&gt; access to data (the &lt;a href=&#34;https://solmessing.netlify.app/pdf/Facebook_DP_URLs_Dataset.pdf&#34;&gt;&amp;lsquo;Condor&amp;rsquo; URLs data set&lt;/a&gt;) via differential privacy. However, that project has not yielded much research output for a number of organizational and operational reasons, including the fact that differential privacy is not yet suitable for such a complex project.&lt;/p&gt;
+&lt;p&gt;While at Facebook, I personally advocated (with Annie Franco) for the collaboration model used in the Election 2020 project, wherein external researchers would collaborate with Facebook researchers. That model would have to shield the research from any interference from Facebook&amp;rsquo;s Communications and Policy arm, which would violate scientific ethics. It would involve pre-registration, not merely to ensure scientific rigor but to protect against conflicts of interest and selective reporting of results. However, I left Facebook in January of 2020 and have not been deeply involved in the project since.&lt;/p&gt;
+&lt;p&gt;I recently left Twitter (requesting to be in the first rounds of layoffs after Elon Musk took over) and started a job at NYU&amp;rsquo;s CSMaP lab when my employment with Twitter ended. There are authors who are affiliated with my lab on the paper, including one of the PIs, Josh Tucker. My graduate school Advisor, Shanto Iyengar is also on the paper, and I consider the majority of the authors to be my colleagues and friends.&lt;/p&gt;
+&lt;p&gt;See also my &lt;a href=&#34;https://solmessing.netlify.app/disclosures/&#34;&gt;disclosures page&lt;/a&gt;.&lt;/p&gt;
+&lt;!-- I do wish the samples and timeframes for the ranking experiments were bigger so we could understand potentially smaller effects, which may be very important.  --&gt;</description>
+    </item>
+    
+    <item>
       <title>On BlueSky</title>
       <link>https://solmessing.netlify.app/post/bluesky-quasi-decentralized-social-network/</link>
       <pubDate>Mon, 03 Apr 2023 00:00:00 +0000</pubDate>
@@ -1236,11 +1701,11 @@ Westwood&lt;/p&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://solmessing.netlify.app/img/635214c79e184de850272a4790deed0dc870a49a.png&#34; alt=&#34;caratprice&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
-&lt;p&gt;A few things pop out right away.  We can see a non-linear relationship, and we can also see that the dispersion (variance) of the relationship also increases as carat size increases. With just a quick look at a scatterplot of the data, we&amp;rsquo;ve learned two important things about the functional relationship between price and carat size. And, we also therefore learned that running a linear model on this data as-is would be a bad idea.&lt;/p&gt;
+&lt;p&gt;A few things pop out right away. We can see a non-linear relationship, and we can also see that the dispersion (variance) of the relationship also increases as carat size increases. With just a quick look at a scatterplot of the data, we&amp;rsquo;ve learned two important things about the functional relationship between price and carat size. And, we also therefore learned that running a linear model on this data as-is would be a bad idea.&lt;/p&gt;
 &lt;h2 id=&#34;diamonds&#34;&gt;Diamonds&lt;/h2&gt;
 &lt;p&gt;&lt;a name=&#34;Diamonds&#34;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;If you&amp;rsquo;ve ever used R, you&amp;rsquo;ve probably seen references to the diamonds data set that ships with Hadley Wickham&amp;rsquo;s ggplot2. It records the carat size and the price of more than 50 thousand diamonds, from &lt;a href=&#34;http://www.diamondse.info/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;http://www.diamondse.info/&lt;/a&gt; collected in &lt;a href=&#34;http://r.789695.n4.nabble.com/Year-of-data-collection-for-diamonds-dataset-in-ggplot2-td4506598.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;in 2008&lt;/a&gt;, and if you&amp;rsquo;re in the market for a diamond, exploring this data set can help you understand what&amp;rsquo;s in store and at what price point. This is particularly useful because each diamond is unique in a way that isn&amp;rsquo;t true of most manufactured products we are used to buying&amp;mdash;you can&amp;rsquo;t just plug a model number and look up the price on Amazon. And even an expert cannot cannot incorporate as much information about price as a picture of the entire market informed by data (though there&amp;rsquo;s no substitute for qualitative expertise to make sure your diamond is what the retailer claims).&lt;/p&gt;
-&lt;p&gt;But even if you&amp;rsquo;re not looking to buy a diamond, the socioeconomic and political history of the diamond industry is fascinating. Diamonds birthed the mining industry in South Africa, which is now by far the largest and most advanced economy in Africa.  I worked a summer in Johannesburg, and can assure you that South Africa&amp;rsquo;s cities look far more like L.A. and San Francisco than Lagos, Cairo, Mogadishu, Nairobi, or Rabat.  Diamonds drove the British and Dutch to colonize southern Africa in the first place, and have stoked conflicts ranging from the Boer Wars to modern day wars in Sierra Leone, Liberia, Côte d&amp;rsquo;Ivoire, Zimbabwe and the DRC, where the 200 carat Millennium Star diamond was sold to DeBeers at the height of the civil war in the 1990s.  Diamonds were one of the few assets that Jews could conceal from the Nazis during &lt;a href=&#34;http://www.archives.gov/research/holocaust/articles-and-papers/turning-history-into-justice.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;the &amp;ldquo;Aryanization of Jewish property&amp;rdquo;&lt;/a&gt; in the 1930s, and the Congressional Research Service reports that &lt;a href=&#34;http://royce.house.gov/uploadedfiles/rl30751.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Al Qaeda has used conflict diamonds to skirt international sanctions and finance operations from the 1998 East Africa Bombings to the September 11th attacks&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;But even if you&amp;rsquo;re not looking to buy a diamond, the socioeconomic and political history of the diamond industry is fascinating. Diamonds birthed the mining industry in South Africa, which is now by far the largest and most advanced economy in Africa. I worked a summer in Johannesburg, and can assure you that South Africa&amp;rsquo;s cities look far more like L.A. and San Francisco than Lagos, Cairo, Mogadishu, Nairobi, or Rabat. Diamonds have stoked conflicts ranging from the Boer Wars to modern day wars in Sierra Leone, Liberia, Côte d&amp;rsquo;Ivoire, Zimbabwe and the DRC, where the 200 carat Millennium Star diamond was sold to DeBeers at the height of the civil war in the 1990s. Diamonds were one of the few assets that Jews could conceal from the Nazis during &lt;a href=&#34;http://www.archives.gov/research/holocaust/articles-and-papers/turning-history-into-justice.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;the &amp;ldquo;Aryanization of Jewish property&amp;rdquo;&lt;/a&gt; in the 1930s, and the Congressional Research Service reports that &lt;a href=&#34;http://royce.house.gov/uploadedfiles/rl30751.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Al Qaeda has used conflict diamonds to skirt international sanctions and finance operations from the 1998 East Africa Bombings to the September 11th attacks&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;
 
 
@@ -1745,7 +2210,7 @@ Let&amp;rsquo;s take a look at an example from Blue Nile. I&amp;rsquo;ll use the
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nf&#34;&gt;exp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;modEst&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;exp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;summary&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;m4&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sigma^2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The results yield an expected value for price given the characteristics of our diamond and the upper and lower bounds of a 95% CI&amp;mdash;note that because this is a linear model, predict() is just multiplying each model coefficient by each value in our data. Turns out that this diamond is a touch pricier than expected value under the full model, though it is by no means outside our 95% CI. BlueNile has by most accounts a better reputation than diamondse.info however, and reputation is worth a lot in a business that relies on easy-to-forge certificates and one in which the non-expert can be easily fooled.&lt;/p&gt;
 &lt;p&gt;This illustrates an important point about generalizing a model from one data set to another. First, there may be important differences between data sets&amp;mdash;as I&amp;rsquo;ve speculated about above&amp;mdash;making the estimates systematically biased. Second, overfitting&amp;mdash;our model may be fitting noise present in data set. Even a model cross-validated against out-of-sample predictions can be over-fit to noise that results in differences between data sets. Of course, while this model may give you a sense of whether your diamond is a rip-off against diamondse.info diamonds, it&amp;rsquo;s not clear that diamondse.info should be regarded as a source of universal truth about whether the price of a diamond is reasonable. Nonetheless, to have the expected price at diamondse.info with a 95% interval is a lot more information than we had about the price we should be willing to pay for a diamond before we started this exercise.&lt;/p&gt;
-&lt;p&gt;An important point&amp;mdash;even though we can predict diamondse.info prices almost perfectly based on a function of the 4c&amp;rsquo;s, one thing that you should NOT conclude from this exercise is that &lt;em&gt;where&lt;/em&gt; you buy your diamond is irrelevant, which apparently used to be conventional wisdom in some circles.  You will almost surely pay more if you &lt;a href=&#34;http://www.businessweek.com/articles/2013-05-06/tiffany-vs-dot-costco-which-diamond-ring-is-better&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;buy the same diamond at Tiffany&amp;rsquo;s versus Costco&lt;/a&gt;.  But &lt;a href=&#34;https://web.archive.org/web/20140217105722/http://www.costco.com:80/2.12-ctw-Round-Brilliant-Cut-Internally-Flawless,-D-Color-Diamond-%22Audrey%22-Platinum-Wedding-Set.product.100006730.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Costco sells some pricy diamonds&lt;/a&gt; as well. Regardless, you can use this kind of model to give you an indication of whether you&amp;rsquo;re overpaying.&lt;/p&gt;
+&lt;p&gt;An important point&amp;mdash;even though we can predict diamondse.info prices almost perfectly based on a function of the 4c&amp;rsquo;s, one thing that you should NOT conclude from this exercise is that &lt;em&gt;where&lt;/em&gt; you buy your diamond is irrelevant, which apparently used to be conventional wisdom in some circles.  You will almost surely pay more if you &lt;a href=&#34;https://web.archive.org/web/20131231035425/http://www.businessweek.com/articles/2013-05-06/tiffany-vs-dot-costco-which-diamond-ring-is-better&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;buy the same diamond at Tiffany&amp;rsquo;s versus Costco&lt;/a&gt;. But &lt;a href=&#34;https://web.archive.org/web/20140217105722/http://www.costco.com:80/2.12-ctw-Round-Brilliant-Cut-Internally-Flawless,-D-Color-Diamond-%22Audrey%22-Platinum-Wedding-Set.product.100006730.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Costco sells some pricy diamonds&lt;/a&gt; as well. Regardless, you can use this kind of model to give you an indication of whether you&amp;rsquo;re overpaying.&lt;/p&gt;
 &lt;p&gt;Of course, the value of a natural diamond is largely socially constructed. Like money, diamonds are only valuable because society says they are&amp;mdash;-there&amp;rsquo;s no obvious economic efficiencies to be gained or return on investment in a diamond, except perhaps in a very subjective sense concerning your relationship with your significant other. To get a sense for just how much value is socially constructed, you can compare the price of a natural diamond to a synthetic diamond, which thanks to recent technological developments are of comparable quality to a &amp;ldquo;natural&amp;rdquo; diamond. Of course, natural diamonds fetch a dramatically higher price.&lt;/p&gt;
 &lt;p&gt;One last thing&amp;mdash;there are few guarantees in life, and I offer none here. Though what we have here seems pretty good, data and models are never infallible, and obviously you can still get taken (or be persuaded to pass on a great deal) based on this model. Always shop with a reputable dealer, and make sure her incentives are aligned against selling you an overpriced diamond or worse one that doesn&amp;rsquo;t match its certificate. There&amp;rsquo;s no substitute for establishing a personal connection and lasting business relationship with an established jeweler you can trust.&lt;/p&gt;
 &lt;h2 id=&#34;one-final-consideration&#34;&gt;One Final Consideration&lt;/h2&gt;
