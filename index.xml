@@ -60,11 +60,11 @@
 
 
 
-&lt;figure  id=&#34;figure-a-simple-forecast-for-2024-battleground-states&#34;&gt;
+&lt;figure  id=&#34;figure-a-simple-forecast-for-2024-battleground-states-hat-tip-to-tom-cunninghamhttpstecunninghamgithubio-who-introduced-me-to-this-plot-design&#34;&gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://solmessing.netlify.app/img/EstStateDemVote.png&#34; alt=&#34;A simple forecast for 2024 battleground states.&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://solmessing.netlify.app/img/EstStateDemVote.png&#34; alt=&#34;A simple forecast for 2024 battleground states. Hat tip to [Tom Cunningham](https://tecunningham.github.io) who introduced me to this plot design.&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;figcaption&gt;
-      A simple forecast for 2024 battleground states.
+      A simple forecast for 2024 battleground states. Hat tip to &lt;a href=&#34;https://tecunningham.github.io&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Tom Cunningham&lt;/a&gt; who introduced me to this plot design.
     &lt;/figcaption&gt;&lt;/figure&gt;
 &lt;/p&gt;
 &lt;p&gt;I should now point to a link to the data and code: &lt;a href=&#34;https://github.com/SolomonMg/election_projection_regularized_swing&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://github.com/SolomonMg/election_projection_regularized_swing&lt;/a&gt;, and thank the &lt;a href=&#34;https://electionlab.mit.edu&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;MIT Election Data + Science Lab&lt;/a&gt; for curating &lt;a href=&#34;https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/42MVDX&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;these&lt;/a&gt; &lt;a href=&#34;https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/IG0UN2&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;data&lt;/a&gt;.&lt;/p&gt;
