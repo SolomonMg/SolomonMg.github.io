@@ -43,7 +43,7 @@
 &lt;p&gt;Because this approach does not use polling data, it&amp;rsquo;s not suspetible to any of the potential problems with polls I talk about in that post: undecided voters breaking late, low education non-response, bad likely voter modeling, partisan non-response, shy Trumpers, etc.&lt;/p&gt;
 &lt;p&gt;The core idea behind this approach is a fact not emphasized enough in most stats/ML courses: if you’re going to try to predict something, it’s very hard to do better than using the same variable at t - 1 if you can. And we can. This approach goes one step further and looks at the direction that variable has been moving and assume that things are likely to keep moving in that same direction.&lt;/p&gt;
 &lt;p&gt;What that means for presidential election forecasts: for each state, estimate the &amp;ldquo;swing&amp;rdquo; from 2016 to 2020 for president and 2018-2022 for the U.S. house; then simply add that to 2020 presidential returns. Then those estimates of state-level swing are regularized&amp;mdash;mathematically ``nudged&amp;rsquo;&amp;rsquo; toward national trends, which you’ll like if you believe “uniform swing” is particularly important. The projected state-level swing is weighted 60-40 toward presidential results.&lt;/p&gt;
-&lt;p&gt;Here&amp;rsquo;s a cleaner plot showing the actual forecast values in potential 2024 battleground states:&lt;/p&gt;
+&lt;p&gt;Here&amp;rsquo;s a cleaner plot showing the actual forecast values in potential 2024 battleground states. It looks slightly worse for Biden than the map above might suggest:&lt;/p&gt;
 &lt;p&gt;
 
 
