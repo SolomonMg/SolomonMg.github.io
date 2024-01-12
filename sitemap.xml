@@ -10,11 +10,15 @@
     <lastmod>2030-06-01T13:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://solmessing.netlify.app/post/thoughts-on-election-2020/</loc>
-    <lastmod>2023-08-02T00:00:00+00:00</lastmod>
+    <loc>https://solmessing.netlify.app/post/election_projection_regularized_swing/</loc>
+    <lastmod>2024-01-11T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://solmessing.netlify.app/post/</loc>
+    <lastmod>2024-01-11T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://solmessing.netlify.app/post/thoughts-on-election-2020/</loc>
     <lastmod>2023-08-02T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
@@ -241,6 +245,9 @@
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://solmessing.netlify.app/disclosures/</loc>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://solmessing.netlify.app/mtbgearweather/</loc>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://solmessing.netlify.app/tags/</loc>

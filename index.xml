@@ -33,6 +33,134 @@
     </item>
     
     <item>
+      <title>An Early Election 2024 Forecast</title>
+      <link>https://solmessing.netlify.app/post/election_projection_regularized_swing/</link>
+      <pubDate>Thu, 11 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://solmessing.netlify.app/post/election_projection_regularized_swing/</guid>
+      <description>&lt;p&gt;Early projections for 2024 based on previous Presidential and House returns slighly favor Republicans. These projections are completely unrelated to Biden’s recent polling numbers.&lt;/p&gt;
+&lt;!-- ![](/img/Map_for_2024_JS_Swing.png &#34;A simple forecasted map for 2024. Created https://www.270towin.com/maps/WWE2B.&#34;) --&gt;
+&lt;p&gt;Here&amp;rsquo;s the story behind this approach: In early 2020, I ran battleground state election forecasts for Acronym. The results suggested Georgia would be extremely competitive—and Acronym spent more $ there than many other non-profit actors. After the election, we could see that those projections had much lower forecasting error than polling data &lt;a href=&#34;https://solomonmg.github.io/post/what-the-polls-got-wrong-in-2020/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://solomonmg.github.io/post/what-the-polls-got-wrong-in-2020/&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Because this approach does not use polling data, it&amp;rsquo;s not suspetible to any of the potential problems with polls I talk about in that post: undecided voters breaking late, low education non-response, bad likely voter modeling, partisan non-response, shy Trumpers, etc.&lt;/p&gt;
+&lt;p&gt;The core idea behind this approach is a fact not emphasized enough in most stats/ML courses: if you’re going to try to predict something, it’s very hard to do better than using the same variable at t - 1 if you can. And we can. This approach goes one step further and looks at the direction that variable has been moving and assume that things are likely to keep moving in that same direction.&lt;/p&gt;
+&lt;p&gt;What that means for presidential election forecasts: for each state, estimate the &amp;ldquo;swing&amp;rdquo; from 2016 to 2020 for president and 2018-2022 for the U.S. house; then simply add that to 2020 presidential returns. Then those estimates of state-level swing are regularized&amp;mdash;mathematically ``nudged&amp;rsquo;&amp;rsquo; toward national trends, which you’ll like if you believe “uniform swing” is particularly important. The projected state-level swing is weighted 60-40 toward presidential results.&lt;/p&gt;
+&lt;p&gt;Here&amp;rsquo;s a cleaner plot showing the actual forecast values in potential 2024 battleground states:&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-a-simple-forecast-for-2024-battleground-states&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://solmessing.netlify.app/img/EstStateDemVote.png&#34; alt=&#34;A simple forecast for 2024 battleground states.&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      A simple forecast for 2024 battleground states.
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;I should now point to a link to the data and code: &lt;a href=&#34;https://github.com/SolomonMg/election_projection_regularized_swing&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://github.com/SolomonMg/election_projection_regularized_swing&lt;/a&gt;, and thank the &lt;a href=&#34;https://electionlab.mit.edu&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;MIT Election Data + Science Lab&lt;/a&gt; for curating &lt;a href=&#34;https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/42MVDX&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;these&lt;/a&gt; &lt;a href=&#34;https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/IG0UN2&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;data&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;observation-polarization-and-accuracy&#34;&gt;Observation: Polarization and Accuracy&lt;/h3&gt;
+&lt;p&gt;These projections essentially assume party identification, demographic trends, and voting behavior will mostly continue in the same general direction as in the past. They should have a lot of appeal if you think polarization means most people have already made up their minds about who to vote for for President, that Presidential campaign effects are relatively small (in equilibrium at least), and/or that “demographics are destiny.” What&amp;rsquo;s more, the results are regularized toward national trends, which you’ll like if you believe that &lt;a href=&#34;https://press.uchicago.edu/ucp/books/book/chicago/I/bo27596045.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;local politics has been ``nationalized,&amp;rsquo;&amp;rsquo; as Dan Hopkins argues&lt;/a&gt; and thus that &lt;a href=&#34;https://projects.fivethirtyeight.com/2020-swing-states/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;“uniform swing” in the electorate is an increasingly important factor explaining state-level election results&lt;/a&gt;&amp;mdash;despite that Florida bucked the national trend in 2020.&lt;/p&gt;
+&lt;p&gt;In fact, over time, as polarization seems to worsen, this approach improves in accuracy:&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-backtested-forecasts-improve-in-accuracy-over-time-and-2020-was-far-easier-to-predict-than-past-elections&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://solmessing.netlify.app/img/Battleground_MAE_projections.png&#34; alt=&#34;Backtested forecasts improve in accuracy over time, and 2020 was far easier to predict than past elections.&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      Backtested forecasts improve in accuracy over time, and 2020 was far easier to predict than past elections.
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;However, these projections do not account for events since 2022. Older voters pass away and younger voters become eligible to vote changing the makeup of the electorate. Public opinion/sentiment may change related to economic conditions (inflation/income/unemployment/etc), policy developments e.g., related to abortion, international affairs like the Gaza conflict, or candidate-attributes like Biden’s age or Trumps legal troubles.&lt;/p&gt;
+&lt;h3 id=&#34;observation-patterns-in-us-elections&#34;&gt;Observation: Patterns in U.S. Elections&lt;/h3&gt;
+&lt;p&gt;These projections also do not explicitly model well-known voting patterns, instead relying on change from one cycle to another to get reasonable estimates. The most notable trend is that the president’s party almost always tends to lose seats in the house in midterm elections. &lt;a href=&#34;https://www.jstor.org/stable/2130810&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.jstor.org/stable/2130810&lt;/a&gt; &lt;a href=&#34;https://fivethirtyeight.com/features/why-the-presidents-party-almost-always-has-a-bad-midterm/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://fivethirtyeight.com/features/why-the-presidents-party-almost-always-has-a-bad-midterm/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Because the model only looks at the state-level the difference between the last two &lt;em&gt;midterm&lt;/em&gt; cycles, these projections are capturing how midterm returns &lt;em&gt;change&lt;/em&gt; in each state, which goes a ways toward correcting the consistent lower performance in midterms pattern, and in part may reflect changes in sentiment toward the president.&lt;/p&gt;
+&lt;p&gt;A less reliable trend that’s held since FDR’s time is that incumbent presidents have tended to get a higher percent of the popular vote in their election for a second term&amp;mdash;Obama in 2012 was a notable exception. &lt;a href=&#34;https://www.presidency.ucsb.edu/statistics/data/presidential-election-mandates&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.presidency.ucsb.edu/statistics/data/presidential-election-mandates&lt;/a&gt; What’s more, house midterm results seem to be particularly bad just before an incumbent is voted out of office. It&amp;rsquo;s not clear if this is a bug or a feature, or how reliably this would be picked up using this method, but it&amp;rsquo;s worthing pointing out.&lt;/p&gt;
+&lt;h3 id=&#34;observation-accuracy-over-previous-election-results&#34;&gt;Observation: Accuracy over Previous Election Results&lt;/h3&gt;
+&lt;p&gt;If it&amp;rsquo;s hard to do better than election returns at t - 1, does this approach actually do better? Yes, by a little. Including all states, these projections have lower mean absolute error (MAE). For some reason these projections miss badly in 2004, and excluding that earliest year I can compute these projections using the MIT data, shows they do in fact do quite a bit better than simply relying on previous presidential election results alone.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;bt_dat&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;%&amp;gt;%&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;group_by&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;proj_type&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;%&amp;gt;%&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;summarise&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;mean&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;mae&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# A tibble: 2 × 2&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;n&#34;&gt;proj_type&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;`mean&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;mae&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;`
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;  &amp;lt;chr&amp;gt;           &amp;lt;dbl&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;1 prev pres        3.11
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;2 proj             2.65
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;&amp;gt; bt_dat %&amp;gt;% filter(years != 2004) %&amp;gt;% group_by(proj_type) %&amp;gt;% summarise(mean(mae))
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;# A tibble: 2 × 2
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;  proj_type `&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;mean&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;mae&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;chr&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;           &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;dbl&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;prev&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;pres&lt;/span&gt;        &lt;span class=&#34;m&#34;&gt;3.36&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;m&#34;&gt;2&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;proj&lt;/span&gt;             &lt;span class=&#34;m&#34;&gt;2.51&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Results are more subtle if we restrict to battleground states:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;bt_dat&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;%&amp;gt;%&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;group_by&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;proj_type&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;%&amp;gt;%&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;summarise&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;mean&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;mae&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# A tibble: 2 × 2&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;n&#34;&gt;proj_type&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;`mean&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;mae&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;`
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;  &amp;lt;chr&amp;gt;           &amp;lt;dbl&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;1 prev pres        1.19
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;2 proj             1.16
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;&amp;gt; bt_dat %&amp;gt;% filter(years != 2004) %&amp;gt;% group_by(proj_type) %&amp;gt;% summarise(mean(mae))
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;# A tibble: 2 × 2
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;  proj_type `&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;mean&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;mae&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;chr&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;           &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;dbl&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;prev&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;pres&lt;/span&gt;       &lt;span class=&#34;m&#34;&gt;1.28&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;m&#34;&gt;2&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;proj&lt;/span&gt;            &lt;span class=&#34;m&#34;&gt;0.995&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;observation-regularization-toward-0-or-the-mean&#34;&gt;Observation: Regularization toward 0 or the Mean?&lt;/h3&gt;
+&lt;p&gt;Here’s the map with shrinkage toward 0, which will move the estimates toward the prior year&amp;rsquo;s election. Biden does worse in WI and slightly worse in AZ and PA, because the presidential swing estimates get pulled down toward zero instead of up toward the nation-wide state-level mean (3.5%). But he does better in NC, where the relatively good house results get pulled toward zero instead of down to the state-level average midterm swing (-11.5%).&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-a-simple-forecasted-map-for-2024-shrinkage-toward-zero-created-httpswww270towincommaps66rzw&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://solmessing.netlify.app/img/Map_for_2024_JS_0_Swing.png&#34; alt=&#34;A simple forecasted map for 2024, shrinkage toward zero. Created https://www.270towin.com/maps/66rZw.&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      A simple forecasted map for 2024, shrinkage toward zero. Created &lt;a href=&#34;https://www.270towin.com/maps/66rZw&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.270towin.com/maps/66rZw&lt;/a&gt;.
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;However, based on my updated backtesting, the MAE estimates are worse when you shrink toward zero, which is what I did back in 2020. This makes me feel good because the mathematical/statistical theory says that shrinking toward the group mean should produce high quality estimates, while there&amp;rsquo;s not much theory that suggests shrinking toward zero should improve estimation.&lt;/p&gt;
+&lt;h3 id=&#34;methological-details&#34;&gt;Methological Details&lt;/h3&gt;
+&lt;p&gt;For each state it estimates the &amp;ldquo;swing&amp;rdquo; from 2016 to 2020 for president and 2018-2022 for the U.S. house; then simply adds that to 2020 presidential returns. The projected state-level swing is weighted 60-40 toward presidential results.&lt;/p&gt;
+&lt;p&gt;Now, the tricky bit is I estimate “swing” using James-Stein-adjusted state-level slope. This method “shrinks” the slant of each slope toward 50-50 or toward the average slope. 50-50 is what I used in 2020 and but recent corrections I&amp;rsquo;ve made to my backtesting scrips reveals that has a slightly higher mean absolute error going back to the 2004 election.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;ve since updated the approach in a number of important ways, based on backtesting (looking at how well the method performs on past elections). I now regularize (or &amp;ldquo;shrink&amp;rdquo;) fewer quantities and do so toward the mean instead of toward zero. I should also note that the original code I used a few minor errors, which I&amp;rsquo;ve since fixed.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Disaggregating &#39;Ideological Segregation&#39;</title>
       <link>https://solmessing.netlify.app/post/thoughts-on-election-2020/</link>
       <pubDate>Wed, 02 Aug 2023 00:00:00 +0000</pubDate>
@@ -672,9 +800,11 @@ Venture capitalists and startups in Silicon Valley are always talking about “m
 &lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Uh, this code looks like it *only* relates to Twitter&amp;#39;s Spaces product. If so it is *not* used for down-ranking ordinary tweets in home timeline ranking. &lt;br&gt;&lt;br&gt;It&amp;#39;s called here with the other twitter Spaces spaces visibility models and labels: &lt;a href=&#34;https://t.co/7n8Tl7WVlJ&#34;&gt;https://t.co/7n8Tl7WVlJ&lt;/a&gt; &lt;a href=&#34;https://t.co/stSThUTvUe&#34;&gt;https://t.co/stSThUTvUe&lt;/a&gt;&lt;/p&gt;&amp;mdash; Sol Messing (@SolomonMg) &lt;a href=&#34;https://twitter.com/SolomonMg/status/1642560420392103936?ref_src=twsrc%5Etfw&#34;&gt;April 2, 2023&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 
+
 &lt;p&gt;&lt;strong&gt;Musk Metrics&lt;/strong&gt; One of the most interesting things we learned from the code is that Twitter created an entire suite of metrics about Elon Musk’s personal twitter experience. The code shows they fed those metrics to the experimentation platform (Duck Duck Goose, or DDG), which at least historically has been used to evaluate whether or not to ship products.&lt;/p&gt;
 &lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Twitter’s algorithm specifically labels whether the Tweet author is Elon Musk&lt;br&gt;&lt;br&gt;“author_is_elon”&lt;br&gt;&lt;br&gt;besides the Democrat, Republican and “Power User” labels&lt;a href=&#34;https://t.co/fhpBjdfifX&#34;&gt;https://t.co/fhpBjdfifX&lt;/a&gt; &lt;a href=&#34;https://t.co/orCPvfMTb9&#34;&gt;pic.twitter.com/orCPvfMTb9&lt;/a&gt;&lt;/p&gt;&amp;mdash; Jane Manchun Wong (@wongmjane) &lt;a href=&#34;https://twitter.com/wongmjane/status/1641884551189512192?ref_src=twsrc%5Etfw&#34;&gt;March 31, 2023&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+
 
 &lt;p&gt;This episode is consistent with reporting that engineers are very concerned about how any features they ship &lt;a href=&#34;https://www.theverge.com/2023/2/9/23593099/elon-musk-twitter-fires-engineer-declining-reach-ftc-concerns&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;affect the CEOs personal experience on Twitter&lt;/a&gt;. And other &lt;a href=&#34;https://arstechnica.com/tech-policy/2023/02/report-musk-had-twitter-engineers-boost-his-tweets-after-biden-got-more-views/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;reporting has suggested that there may have been a Musk centric boost feature&lt;/a&gt; that shipped, and you would want exactly this kind of instrumentation to understand how that worked in practice.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Republican, Democrat Metrics&lt;/strong&gt; We also learned that Twitter is logging similar metrics for lists of prominent Democrat and Republican accounts, &lt;a href=&#34;https://www.yahoo.com/entertainment/twitters-recommendation-algorithm-is-now-on-github-200511112.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ostensibly to understand&lt;/a&gt; whether any features that they ship affect those sets of accounts equally. Now we know that &lt;a href=&#34;https://www.nature.com/articles/s41467-022-34769-6&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;conservative accounts tend to share more misinformation than liberal accounts on both Twitter&lt;/a&gt; and &lt;a href=&#34;https://www.science.org/doi/full/10.1126/sciadv.aau4586&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;on Facebook&lt;/a&gt;. And, &lt;a href=&#34;https://www.washingtonpost.com/technology/2023/02/08/house-republicans-twitter-files-collusion/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Musk has alleged that Democrats and Big Tech are colluding&lt;/a&gt; to enforce policy violation unequally across parties.&lt;/p&gt;
@@ -683,9 +813,11 @@ Venture capitalists and startups in Silicon Valley are always talking about “m
 &lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;which specific user groups, you might wonder? &lt;a href=&#34;https://t.co/wYSsUKm1pA&#34;&gt;pic.twitter.com/wYSsUKm1pA&lt;/a&gt;&lt;/p&gt;&amp;mdash; Colin Fraser | @colin-fraser.net on bsky (@colin_fraser) &lt;a href=&#34;https://twitter.com/colin_fraser/status/1641960748233662464?ref_src=twsrc%5Etfw&#34;&gt;April 1, 2023&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 
+
 &lt;p&gt;&lt;strong&gt;Twitter Blue Boost&lt;/strong&gt; What’s more, we sorta knew that Twitter Blue users get a boost in feed ranking, but the code make it clear that it could double your score among people who don&amp;rsquo;t follow you, and quadruple it for those who do.&lt;/p&gt;
 &lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Not sure what I expected, but interesting that first pull request on newly open-sourced &lt;a href=&#34;https://twitter.com/twitter?ref_src=twsrc%5Etfw&#34;&gt;@Twitter&lt;/a&gt; algo (&lt;a href=&#34;https://t.co/kAVP0zdzki&#34;&gt;https://t.co/kAVP0zdzki&lt;/a&gt;) is to downweight verified user multipliers. &lt;a href=&#34;https://t.co/PfqIdVTDnk&#34;&gt;pic.twitter.com/PfqIdVTDnk&lt;/a&gt;&lt;/p&gt;&amp;mdash; Caitlin Hudon (@beeonaposy) &lt;a href=&#34;https://twitter.com/beeonaposy/status/1641878347557883910?ref_src=twsrc%5Etfw&#34;&gt;March 31, 2023&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+
 
 &lt;p&gt;As &lt;a href=&#34;https://twitter.com/jonathanstray/status/1642200687101501441&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Jonathan Stray pointed out&lt;/a&gt;, if this counts as a paid promotion, the FTC might require Twitter to label your tweets as ads. Now we kind of already knew this from Musks Twitter Blue announcement, but having evidence in the code might cross a different line for the FTC.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;So what about the ackshual algorithm? What does this say about feed ranking?&lt;/strong&gt;&lt;/p&gt;
@@ -694,12 +826,14 @@ Venture capitalists and startups in Silicon Valley are always talking about “m
 &lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;According to the Heavy Ranker readme, it looks like this is the &amp;quot;For you&amp;quot; feed ranking formula is&lt;br&gt;&lt;br&gt;Each &amp;quot;is_X&amp;quot; is a predicted probability the user will take that action on the Tweet.&lt;br&gt;&lt;br&gt;Replies are the most important signal. Very similar to MSI for FB.&lt;a href=&#34;https://t.co/Bmv7qg4voc&#34;&gt;https://t.co/Bmv7qg4voc&lt;/a&gt; &lt;a href=&#34;https://t.co/lWfaUboT6q&#34;&gt;pic.twitter.com/lWfaUboT6q&lt;/a&gt;&lt;/p&gt;&amp;mdash; Jeff Allen (@jeff4llen) &lt;a href=&#34;https://twitter.com/jeff4llen/status/1641901988047626241?ref_src=twsrc%5Etfw&#34;&gt;March 31, 2023&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 
+
 &lt;p&gt;Now it’s not quite that simple&amp;mdash;what about when a tweet is first posted and there’s no data? Twitter’s deep learning system (in the heavy ranker) will do some heavy lifting and predict the likelihood of each of these actions based on the tweet author, their network, any initial engagements, the tweet text, and thousands of signals and embeddings.&lt;/p&gt;
 &lt;p&gt;Of course, what happens in the first few minutes when a tweet is posted deeply shapes who sees and engages with it downstream in the future.&lt;/p&gt;
 &lt;p&gt;[And the way this is implemented in practice is that the model handles all cases, but as you get more and more real time data on a tweet, those real time features dominate everything else and push those probabilities close to 1, see &lt;a href=&#34;https://twitter.com/SolomonMg/status/1642154005588504577?s=20&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;discussion here&lt;/a&gt;.]&lt;/p&gt;
 &lt;p&gt;Now I should point out that there are some spammy accounts claiming to have found ranking parameters in the code. They’re wrong, those are used to &lt;a href=&#34;https://github.com/twitter/the-algorithm/blob/7f90d0ca342b928b479b512ec51ac2c3821f5922/src/java/com/twitter/search/README.md&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;retrieve tweets from your network for candidate generation only&lt;/a&gt;. &lt;a href=&#34;https://lucene.apache.org&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Lucene&lt;/a&gt; is an open source search tool.&lt;/p&gt;
 &lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Uh, this is for search query results, not home timeline ranking. &lt;br&gt;&lt;br&gt;See the thing that  says &amp;quot;luceneScoreParams&amp;quot;??&lt;br&gt;&lt;br&gt;Lucene is a search library: &lt;a href=&#34;https://t.co/993crKVHJi&#34;&gt;https://t.co/993crKVHJi&lt;/a&gt; &lt;a href=&#34;https://t.co/AdGtjCbOlx&#34;&gt;https://t.co/AdGtjCbOlx&lt;/a&gt;&lt;/p&gt;&amp;mdash; Sol Messing (@SolomonMg) &lt;a href=&#34;https://twitter.com/SolomonMg/status/1642563414970060800?ref_src=twsrc%5Etfw&#34;&gt;April 2, 2023&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+
 
 &lt;p&gt;I should point out however, that some of the ``Earlybird&amp;rsquo;&amp;rsquo; code was at one point used in timeline ranking, and it appears that &lt;a href=&#34;https://github.com/twitter/the-algorithm/blob/7f90d0ca342b928b479b512ec51ac2c3821f5922/cr-mixer/server/src/main/scala/com/twitter/cr_mixer/similarity_engine/EarlybirdTensorflowBasedSimilarityEngine.scala&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;it may be used in cr-mixer&lt;/a&gt;, which is used in candidate generation for &lt;a href=&#34;https://github.com/twitter/the-algorithm/blob/7f90d0ca342b928b479b512ec51ac2c3821f5922/cr-mixer/README.md&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;out-of-network tweets&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Interestingly, &lt;a href=&#34;https://github.com/twitter/the-algorithm/blob/main/home-mixer/server/src/main/scala/com/twitter/home_mixer/functional_component/filter/OutOfNetworkCompetitorURLFilter.scala&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Twitter appears to remove competitor URLs&lt;/a&gt;, perhaps only for tweets that are outside of network (you don&amp;rsquo;t follow the author).&lt;/p&gt;
@@ -742,13 +876,15 @@ Venture capitalists and startups in Silicon Valley are always talking about “m
 &lt;p&gt;In fact, this year we were better off using projections based on past vote history in each state to predict how things would go in battleground states, as I&amp;rsquo;ll show below.&lt;/p&gt;
 &lt;p&gt;But I also want to start to ask questions about what happened this time around. The polling from 2018 looked encouraging, convincing many pollsters that the post-2016 reckoning had fixed many issues called out in the &lt;a href=&#34;https://www.aapor.org/Education-Resources/Reports/An-Evaluation-of-2016-Election-Polls-in-the-U-S.aspx&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;2016 AAPOR report on election polling&lt;/a&gt;. After 2018, FiveThirtyEight wrote that the &lt;a href=&#34;https://fivethirtyeight.com/features/the-polls-are-all-right/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&amp;ldquo;Polls are Alright&amp;rdquo;&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;But the second Miami-Dade reported results from the 2020 election, we knew something was probably wrong with the 2020 polls.&lt;/p&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Here&amp;#39;s another chart of polls vs. returns that splits the data by how much the polls underestimated Trump. One place where the polls most underestimated Trump is Wisconsin (off by -9 points). Note returns are not yet verified and states are still finalizing their counts. &lt;a href=&#34;https://t.co/iM8mjqoAuK&#34;&gt;pic.twitter.com/iM8mjqoAuK&lt;/a&gt;&lt;/p&gt;&amp;mdash; it&amp;#39;s called Tw*tter FFS (@stefanjwojcik) &lt;a href=&#34;https://twitter.com/stefanjwojcik/status/1325786708022079488?ref_src=twsrc%5Etfw&#34;&gt;November 9, 2020&lt;/a&gt;&lt;/blockquote&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Here&amp;#39;s another chart of polls vs. returns that splits the data by how much the polls underestimated Trump. One place where the polls most underestimated Trump is Wisconsin (off by -9 points). Note returns are not yet verified and states are still finalizing their counts. &lt;a href=&#34;https://t.co/iM8mjqoAuK&#34;&gt;pic.twitter.com/iM8mjqoAuK&lt;/a&gt;&lt;/p&gt;&amp;mdash; Stefan (@stefanjwojcik) &lt;a href=&#34;https://twitter.com/stefanjwojcik/status/1325786708022079488?ref_src=twsrc%5Etfw&#34;&gt;November 9, 2020&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+
 
 &lt;p&gt;As Stefan notes (we worked together at Pew Research Center&amp;rsquo;s Data Labs), the error seems slightly lower in key battleground states, though the polls missed big in WI, perhaps in part due to its horrifically bad voter file data.&lt;/p&gt;
 &lt;p&gt;Unlike 2016, both state and national polls appeared to underestimate Trump&amp;rsquo;s support, as this early (Nov 7) analysis from &lt;a href=&#34;https://twitter.com/thomasjwood&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Tom Wood&lt;/a&gt; shows:&lt;/p&gt;
 &lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Current as to the afternoon on the 7th, and with Senate results too. &lt;a href=&#34;https://t.co/EGZGarRPNj&#34;&gt;pic.twitter.com/EGZGarRPNj&lt;/a&gt;&lt;/p&gt;&amp;mdash; Tom Wood (@thomasjwood) &lt;a href=&#34;https://twitter.com/thomasjwood/status/1325199348553162752?ref_src=twsrc%5Etfw&#34;&gt;November 7, 2020&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+
 
 &lt;!-- [![normal](/img/TWpollingerror.jpeg)](https://twitter.com/thomasjwood/status/1325199348553162752) --&gt;
 &lt;h2 id=&#34;polling-versus-past-votes&#34;&gt;Polling versus past votes&lt;/h2&gt;
@@ -781,10 +917,12 @@ Venture capitalists and startups in Silicon Valley are always talking about “m
 &lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;This paper from &lt;a href=&#34;https://twitter.com/SimonJackman?ref_src=twsrc%5Etfw&#34;&gt;@SimonJackman&lt;/a&gt;  also deserves a big hat tip &lt;a href=&#34;https://t.co/CTTpYDPwl2&#34;&gt;https://t.co/CTTpYDPwl2&lt;/a&gt;&lt;/p&gt;&amp;mdash; Sol Messing (@SolomonMg) &lt;a href=&#34;https://twitter.com/SolomonMg/status/1325564912798752773?ref_src=twsrc%5Etfw&#34;&gt;November 8, 2020&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 
+
 &lt;p&gt;I should note that this may only have worked because of something peculiar about this election cycle&amp;ndash;I haven&amp;rsquo;t gone an back-tested this approach or anything like that.&lt;/p&gt;
 &lt;p&gt;Seems I was not the only one who noticed this kind of pattern:&lt;/p&gt;
 &lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;A similar observation from &lt;a href=&#34;https://twitter.com/gelliottmorris?ref_src=twsrc%5Etfw&#34;&gt;@gelliottmorris&lt;/a&gt; &lt;a href=&#34;https://t.co/XSUAhGBZfb&#34;&gt;https://t.co/XSUAhGBZfb&lt;/a&gt;&lt;/p&gt;&amp;mdash; Sol Messing (@SolomonMg) &lt;a href=&#34;https://twitter.com/SolomonMg/status/1325522770890027008?ref_src=twsrc%5Etfw&#34;&gt;November 8, 2020&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+
 
 &lt;h2 id=&#34;what-went-wrong-the-usual-suspects&#34;&gt;What went wrong: The Usual Suspects&lt;/h2&gt;
 &lt;p&gt;Humble-brag aside, it&amp;rsquo;s worth asking what might have gone wrong with polling in 2020?&lt;/p&gt;
@@ -800,9 +938,11 @@ Venture capitalists and startups in Silicon Valley are always talking about “m
 &lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Easily. An &amp;quot;unlikely&amp;quot; voter (by some screen) on the Dem side that has already voted gets counted; his/her exact counterpart on the GOP side that votes on election day doesn&amp;#39;t. &lt;br&gt;I commented before the election on the possibility that polls would skew Dem because of this.&lt;/p&gt;&amp;mdash; Peter Suzman (@Biomaven) &lt;a href=&#34;https://twitter.com/Biomaven/status/1325545770230161408?ref_src=twsrc%5Etfw&#34;&gt;November 8, 2020&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 
+
 &lt;p&gt;However, that would only explain error in likely voter models, not polling based on registered voters, which also seemed to miss big this cycle, as I pointed out:&lt;/p&gt;
 &lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Still interesting but an issue w this explanation is that while it could interact with likely voter models, it’s unlikely to explain the error in registered voter samples which rely on the voter file over likely voter question batteries. (HT an old friend) &lt;a href=&#34;https://t.co/F2xciDV7vr&#34;&gt;https://t.co/F2xciDV7vr&lt;/a&gt;&lt;/p&gt;&amp;mdash; Sol Messing (@SolomonMg) &lt;a href=&#34;https://twitter.com/SolomonMg/status/1325605403636486146?ref_src=twsrc%5Etfw&#34;&gt;November 9, 2020&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+
 
 &lt;p&gt;&lt;strong&gt;COVID-19&lt;/strong&gt;: I wrote about &lt;a href=&#34;https://solomonmg.github.io/post/trumps-chances-are-better-than-they-look/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;this back in June&lt;/a&gt;. It&amp;rsquo;s possible that COVID-19 made lines long and kept people home in urban areas and non-white communities. Yes we had record turnout but all it takes is a few percent of people who encounter a bit of voting friction, who fail to register in person, don’t get in person canvassing/gotv contact, don’t vote by mail early, and/or don’t vote in vote in person.&lt;/p&gt;
 &lt;p&gt;At the same time, &lt;a href=&#34;https://www.nytimes.com/2020/11/10/upshot/polls-what-went-wrong.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;David Shor points out&lt;/a&gt; in a piece by Nate Cohn at the New York Times, that &amp;ldquo;&amp;hellip;after lockdown, Democrats just started taking surveys, because they were locked at home and didn’t have anything else to do.&amp;rdquo;&lt;/p&gt;
@@ -831,6 +971,7 @@ Venture capitalists and startups in Silicon Valley are always talking about “m
 &lt;p&gt;And indeed the data show just that. &lt;a href=&#34;https://www.npr.org/sections/health-shots/2020/11/06/930897912/many-places-hard-hit-by-covid-19-leaned-more-toward-trump-in-2020-than-2016&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;NPR has a nice visualization of this&lt;/a&gt;:&lt;/p&gt;
 &lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;One potential explanation for Trump&amp;#39;s higher performance in areas hit hard by COVID is that by staying home, Dems didn&amp;#39;t do the usual in-person registration drives, organizing, canvassing, etc. NPR has a nice visualization of this &lt;a href=&#34;https://t.co/a8DeO27giE&#34;&gt;https://t.co/a8DeO27giE&lt;/a&gt; &lt;a href=&#34;https://t.co/1Kc9qNE4jJ&#34;&gt;pic.twitter.com/1Kc9qNE4jJ&lt;/a&gt;&lt;/p&gt;&amp;mdash; Sol Messing (@SolomonMg) &lt;a href=&#34;https://twitter.com/SolomonMg/status/1326348370869415937?ref_src=twsrc%5Etfw&#34;&gt;November 11, 2020&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+
 
 &lt;p&gt;Another possibility is that shutdowns, school closings, and job losses stoked anger &amp;amp; resentment in centrist &amp;amp; right-leaning voters. I remember watching a local FB group quickly organize around the issue of school-openings and eventually morph into a hub for protests.&lt;/p&gt;
 &lt;p&gt;EDIT: I took a look at his performance by the urbanicity and racial makeup of those counties and here&amp;rsquo;s what I found:&lt;/p&gt;
@@ -881,6 +1022,7 @@ Venture capitalists and startups in Silicon Valley are always talking about “m
 &lt;p&gt;&lt;strong&gt;Shy Trump voters&lt;/strong&gt;: There&amp;rsquo;s a hypothesis out there that people are embarrassed to admit that they would vote for Trump. The evidence for this is limited&amp;ndash;Kyle Dropp and co at Morning Consult did some experimental work on this and found that people were slightly more likely &lt;a href=&#34;https://morningconsult.com/form/shy-trump-2020/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;in the 2016 primaries (but NOT the General and not in 2020)&lt;/a&gt; to say that they would vote for Trump when answering via online survey compared with speaking with a live pollster over the phone. But they&amp;rsquo;ve done many follow-on surveys since and the pattern doesn&amp;rsquo;t persist.&lt;/p&gt;
 &lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;One reason &amp;quot;shy Trump voters&amp;quot; doesn&amp;#39;t make as much sense as you&amp;#39;d think as an explanation for polling errors this year is that Republican candidates for Congress generally outperformed their polls by more than Trump did.&lt;/p&gt;&amp;mdash; Nate Silver (@NateSilver538) &lt;a href=&#34;https://twitter.com/NateSilver538/status/1324948324718436352?ref_src=twsrc%5Etfw&#34;&gt;November 7, 2020&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+
 
 &lt;p&gt;I am skeptical that this could be as much of a factor as some on social media seem to be claiming, but it&amp;rsquo;s hard to get good data to answer this question and acknowledge that absence of evidence is not evidence of absence. A number of commentators have claimed that since the polls underestimated support for all Republicans, this is an unlikely explanation.&lt;/p&gt;
 &lt;p&gt;That sounds pretty air-tight at first glance but it&amp;rsquo;s possible that some undecideds, perhaps embarrassed about having Trump as a figurehead of the Republican party, refused to say with certainty who they would actually vote for. Nevertheless, based on the pattern of results we&amp;rsquo;ve seen so far, this really can&amp;rsquo;t explain very much of the polling error this time around.&lt;/p&gt;
@@ -4461,6 +4603,23 @@ assets/Here&amp;rsquo;s the &lt;a href=&#34;https://solmessing.netlify.app/img/
 &lt;li&gt;SM is an inventor on patents assigned to Twitter and Law-on-line.&lt;/li&gt;
 &lt;li&gt;SM&amp;rsquo;s travel to or lodging at conferences has been supported by universities and past employers, including Pew Research Center (2015-2018), Facebook (2012-2020), Twitter (2021-2022).&lt;/li&gt;
 &lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>MTB Gear</title>
+      <link>https://solmessing.netlify.app/mtbgearweather/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://solmessing.netlify.app/mtbgearweather/</guid>
+      <description>&lt;p&gt;You need to dress approriately for mountainbiking/fat tire cycling in the colder temperatures of the upper midwest. Here&amp;rsquo;s what has worked for me after two winters outside of the Twin Cities in Minnesota:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;55-65: padded shorts, MTB shorts, knee pads, elbow pads. Alt: enduro shirt or long sleeve undershirt. Shoe covers. Full face helmet or skullcap.&lt;/li&gt;
+&lt;li&gt;45-55: padded shorts, bike pants, long sleeve undershirt, short sleeve shirt, padded jacket or fleece mid layer. Vest or puffy jacket for nicer warmup. Shoe covers. Full face helmet or skullcap. Ski goggles.&lt;/li&gt;
+&lt;li&gt;35-45: padded shorts, bike pants, long sleeve undershirt, padded jacket or fleece mid layer. Light outer layer w underarm zips. Shoe covers and toe caps, or legit boots. Ski/snowboard helmet + goggles. Warm gloves.&lt;/li&gt;
+&lt;li&gt;25-35: padded shorts, bike pants, long sleeve undershirt, padded jacket or fleece mid layer. Light outer layer w underarm zips. Legit winter boots. Ski/snowboard helmet + goggles. Face mask. Handlebar mitts.&lt;/li&gt;
+&lt;li&gt;15-25: padded shorts, ski pants, long sleeve undershirt, padded jacket or fleece mid layer. Light outer layer w underarm zips. Legit winter boots. Ski/snowboard helmet + goggles. Face mask. Handlebar mitts.&lt;/li&gt;
+&lt;li&gt;Under 15: padded shorts, ski pants, long sleeve undershirt, padded jacket or fleece mid layer. Light outer layer w underarm zips. Cold weather winter boots (e.g., 45 NRTH Wolfgar), consider toe warmers. Ski/snowboard helmet + goggles. Face mask. Handlebar mitts w/ warm gloves.&lt;/li&gt;
+&lt;/ol&gt;
 </description>
     </item>
     
