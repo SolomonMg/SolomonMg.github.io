@@ -1041,7 +1041,7 @@ Here&rsquo;s the story behind this approach: In early 2020, I ran battleground s
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    6 min read
+    7 min read
   </span>
   
 
@@ -1082,30 +1082,6 @@ Here&rsquo;s the story behind this approach: In early 2020, I ran battleground s
 <p>Because this approach does not use polling data, it&rsquo;s not suspetible to any of the potential problems with polls I talk about in that post: undecided voters breaking late, low education non-response, bad likely voter modeling, partisan non-response, shy Trumpers, etc.</p>
 <p>The core idea behind this approach is a fact not emphasized enough in most stats/ML courses: if you’re going to try to predict something, it’s very hard to do better than using the same variable at t - 1 if you can. And we can. This approach goes one step further and looks at the direction that variable has been moving and assume that things are likely to keep moving in that same direction.</p>
 <p>What that means for presidential election forecasts: for each state, estimate the &ldquo;swing&rdquo; from 2016 to 2020 for president and 2018-2022 for the U.S. house; then simply add that to 2020 presidential returns. Then those estimates of state-level swing are regularized&mdash;mathematically ``nudged&rsquo;&rsquo; toward national trends, which you’ll like if you believe “uniform swing” is particularly important. The projected state-level swing is weighted 60-40 toward presidential results.</p>
-<p>If you call anything lower than a 2 point margin either way a &ldquo;tossup,&rdquo; here&rsquo;s what the electoral map looks like:</p>
-<p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<figure  id="figure-a-simple-forecasted-map-for-2024-created-httpswww270towincommapswwe2b">
-  <div class="d-flex justify-content-center">
-    <div class="w-100" ><img src="/img/Map_for_2024_JS_Swing.png" alt="A simple forecasted map for 2024. Created https://www.270towin.com/maps/WWE2B." loading="lazy" data-zoomable /></div>
-  </div><figcaption>
-      A simple forecasted map for 2024. Created <a href="https://www.270towin.com/maps/WWE2B" target="_blank" rel="noopener">https://www.270towin.com/maps/WWE2B</a>.
-    </figcaption></figure>
-</p>
 <p>Here&rsquo;s a cleaner plot showing the actual forecast values in potential 2024 battleground states:</p>
 <p>
 
@@ -1131,6 +1107,56 @@ Here&rsquo;s the story behind this approach: In early 2020, I ran battleground s
     </figcaption></figure>
 </p>
 <p>I should now point to a link to the data and code: <a href="https://github.com/SolomonMg/election_projection_regularized_swing" target="_blank" rel="noopener">https://github.com/SolomonMg/election_projection_regularized_swing</a>, and thank the <a href="https://electionlab.mit.edu" target="_blank" rel="noopener">MIT Election Data + Science Lab</a> for curating <a href="https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/42MVDX" target="_blank" rel="noopener">these</a> <a href="https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/IG0UN2" target="_blank" rel="noopener">data</a>.</p>
+<h3 id="electoral-math">Electoral Math:</h3>
+<p>I&rsquo;m going to rely on <a href="https://www.270towin.com" target="_blank" rel="noopener">www.270towin.com</a> to translate these projections into an electoral map. A better way to do this might be to come up with conservative estimates of error and simulate a few thousand elections, but I&rsquo;m not estimating an extremely rigorous Bayesian model nor including enough extant data to really justify a FiveThirtyEight style forecast.</p>
+<p>If you call anything lower than a 3 point margin either way a &ldquo;tossup,&rdquo; here&rsquo;s what the electoral map looks like:</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  id="figure-elecotral-map-for-2024-lower-than-a-3-margin-is-a-tossup-created-httpswww270towincommapswwe2b">
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="/img/Map_for_2024_JS_Swing.png" alt="Elecotral map for 2024, lower than a 3% margin is a tossup. Created https://www.270towin.com/maps/WWE2B." loading="lazy" data-zoomable /></div>
+  </div><figcaption>
+      Elecotral map for 2024, lower than a 3% margin is a tossup. Created <a href="https://www.270towin.com/maps/WWE2B" target="_blank" rel="noopener">https://www.270towin.com/maps/WWE2B</a>.
+    </figcaption></figure>
+</p>
+<p>That looks OK for Biden, but if you really trust this approach, you might want to say anything lower than 2% is a tossup. Then the electoral math looks very bad for Biden:</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  id="figure-elecotral-map-for-2024-lower-than-a-2-margin-is-a-tossup-created-httpswww270towincommapswwexg">
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="/img/Map_for_2024_JS_margin2Swing.png" alt="Elecotral map for 2024, lower than a 2% margin is a tossup. Created https://www.270towin.com/maps/WWExg." loading="lazy" data-zoomable /></div>
+  </div><figcaption>
+      Elecotral map for 2024, lower than a 2% margin is a tossup. Created <a href="https://www.270towin.com/maps/WWExg" target="_blank" rel="noopener">https://www.270towin.com/maps/WWExg</a>.
+    </figcaption></figure>
+</p>
 <h3 id="observation-polarization-and-accuracy">Observation: Polarization and Accuracy</h3>
 <p>These projections essentially assume party identification, demographic trends, and voting behavior will mostly continue in the same general direction as in the past. They should have a lot of appeal if you think polarization means most people have already made up their minds about who to vote for for President, that Presidential campaign effects are relatively small (in equilibrium at least), and/or that “demographics are destiny.” What&rsquo;s more, the results are regularized toward national trends, which you’ll like if you believe that <a href="https://press.uchicago.edu/ucp/books/book/chicago/I/bo27596045.html" target="_blank" rel="noopener">local politics has been ``nationalized,&rsquo;&rsquo; as Dan Hopkins argues</a> and thus that <a href="https://projects.fivethirtyeight.com/2020-swing-states/" target="_blank" rel="noopener">“uniform swing” in the electorate is an increasingly important factor explaining state-level election results</a>&mdash;despite that Florida bucked the national trend in 2020.</p>
 <p>In fact, over time, as polarization seems to worsen, this approach improves in accuracy:</p>
