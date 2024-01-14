@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- This site was created with Wowchemy. https://www.wowchemy.com -->
-<!-- Last Published: January 12, 2024 --><html lang="en-us" >
+<!-- Last Published: January 14, 2024 --><html lang="en-us" >
 
 
 <head>
@@ -1064,10 +1064,10 @@ Here&rsquo;s the story behind this approach: In early 2020, I ran battleground s
 </div>
 
 
-<div class="article-header article-container featured-image-wrapper mt-4 mb-4" style="max-width: 720px; max-height: 574px;">
+<div class="article-header article-container featured-image-wrapper mt-4 mb-4" style="max-width: 720px; max-height: 417px;">
   <div style="position: relative">
-    <img src="/post/election_projection_regularized_swing/featured_hud301e82de5c9183ae9532d94fdc58c0c_131419_720x2500_fit_q75_h2_lanczos_3.webp" width="720" height="574" alt="" class="featured-image">
-    <span class="article-header-caption">A simple forecasted map for 2024. Created <a href="https://www.270towin.com/maps/WWE2B" target="_blank" rel="noopener">https://www.270towin.com/maps/WWE2B</a>.</span>
+    <img src="/post/election_projection_regularized_swing/featured_huf8c3b53caecd5dd1957783b53ab62bd0_323515_720x2500_fit_q75_h2_lanczos_3.webp" width="720" height="417" alt="" class="featured-image">
+    <span class="article-header-caption">Battleground Projections for 2024.</span>
   </div>
 </div>
 
@@ -1082,7 +1082,7 @@ Here&rsquo;s the story behind this approach: In early 2020, I ran battleground s
 <p>Because this approach does not use polling data, it&rsquo;s not suspetible to any of the potential problems with polls I talk about in that post: undecided voters breaking late, low education non-response, bad likely voter modeling, partisan non-response, shy Trumpers, etc.</p>
 <p>The core idea behind this approach is a fact not emphasized enough in most stats/ML courses: if you’re going to try to predict something, it’s very hard to do better than using the same variable at t - 1 if you can. And we can. This approach goes one step further and looks at the direction that variable has been moving and assume that things are likely to keep moving in that same direction.</p>
 <p>What that means for presidential election forecasts: for each state, estimate the &ldquo;swing&rdquo; from 2016 to 2020 for president and 2018-2022 for the U.S. house; then simply add that to 2020 presidential returns. Then those estimates of state-level swing are regularized&mdash;mathematically ``nudged&rsquo;&rsquo; toward national trends, which you’ll like if you believe “uniform swing” is particularly important. The projected state-level swing is weighted 60-40 toward presidential results.</p>
-<p>Here&rsquo;s a cleaner plot showing the actual forecast values in potential 2024 battleground states. It looks slightly worse for Biden than the map above might suggest:</p>
+<p>If you call anything lower than a 2 point margin either way a &ldquo;tossup,&rdquo; here&rsquo;s what the electoral map looks like:</p>
 <p>
 
 
@@ -1099,11 +1099,35 @@ Here&rsquo;s the story behind this approach: In early 2020, I ran battleground s
 
 
 
-<figure  id="figure-a-simple-forecast-for-2024-battleground-states-hat-tip-to-tom-cunninghamhttpstecunninghamgithubio-who-introduced-me-to-this-plot-design">
+<figure  id="figure-a-simple-forecasted-map-for-2024-created-httpswww270towincommapswwe2b">
   <div class="d-flex justify-content-center">
-    <div class="w-100" ><img src="/img/EstStateDemVote.png" alt="A simple forecast for 2024 battleground states. Hat tip to [Tom Cunningham](https://tecunningham.github.io) who introduced me to this plot design." loading="lazy" data-zoomable /></div>
+    <div class="w-100" ><img src="/img/Map_for_2024_JS_Swing.png" alt="A simple forecasted map for 2024. Created https://www.270towin.com/maps/WWE2B." loading="lazy" data-zoomable /></div>
   </div><figcaption>
-      A simple forecast for 2024 battleground states. Hat tip to <a href="https://tecunningham.github.io" target="_blank" rel="noopener">Tom Cunningham</a> who introduced me to this plot design.
+      A simple forecasted map for 2024. Created <a href="https://www.270towin.com/maps/WWE2B" target="_blank" rel="noopener">https://www.270towin.com/maps/WWE2B</a>.
+    </figcaption></figure>
+</p>
+<p>Here&rsquo;s a cleaner plot showing the actual forecast values in potential 2024 battleground states:</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  id="figure-a-simple-forecast-for-2024-battleground-states-hat-tip-to-tom-cunninghamhttpstecunninghamgithubio-who-suggested-this-plot-design">
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="/img/EstStateDemVote.png" alt="A simple forecast for 2024 battleground states. Hat tip to [Tom Cunningham](https://tecunningham.github.io) who suggested this plot design." loading="lazy" data-zoomable /></div>
+  </div><figcaption>
+      A simple forecast for 2024 battleground states. Hat tip to <a href="https://tecunningham.github.io" target="_blank" rel="noopener">Tom Cunningham</a> who suggested this plot design.
     </figcaption></figure>
 </p>
 <p>I should now point to a link to the data and code: <a href="https://github.com/SolomonMg/election_projection_regularized_swing" target="_blank" rel="noopener">https://github.com/SolomonMg/election_projection_regularized_swing</a>, and thank the <a href="https://electionlab.mit.edu" target="_blank" rel="noopener">MIT Election Data + Science Lab</a> for curating <a href="https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/42MVDX" target="_blank" rel="noopener">these</a> <a href="https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/IG0UN2" target="_blank" rel="noopener">data</a>.</p>
@@ -1140,6 +1164,29 @@ Here&rsquo;s the story behind this approach: In early 2020, I ran battleground s
 <p>A less reliable trend that’s held since FDR’s time is that incumbent presidents have tended to get a higher percent of the popular vote in their election for a second term&mdash;Obama in 2012 was a notable exception. <a href="https://www.presidency.ucsb.edu/statistics/data/presidential-election-mandates" target="_blank" rel="noopener">https://www.presidency.ucsb.edu/statistics/data/presidential-election-mandates</a> What’s more, house midterm results seem to be particularly bad just before an incumbent is voted out of office. It&rsquo;s not clear if this is a bug or a feature, or how reliably this would be picked up using this method, but it&rsquo;s worthing pointing out.</p>
 <h3 id="observation-accuracy-over-previous-election-results">Observation: Accuracy over Previous Election Results</h3>
 <p>If it&rsquo;s hard to do better than election returns at t - 1, does this approach actually do better? Yes, by a little. Including all states, these projections have lower mean absolute error (MAE). For some reason these projections miss badly in 2004, and excluding that earliest year I can compute these projections using the MIT data, shows they do in fact do quite a bit better than simply relying on previous presidential election results alone.</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  id="figure-accuracy-over-time-for-projections-compared-with-simply-using-the-previous-election">
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="/img/AllStates_MAE_projections.png" alt="Accuracy over time for projections compared with simply using the previous election. " loading="lazy" data-zoomable /></div>
+  </div><figcaption>
+      Accuracy over time for projections compared with simply using the previous election.
+    </figcaption></figure>
+</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="o">&gt;</span> <span class="n">bt_dat</span> <span class="o">%&gt;%</span> <span class="nf">group_by</span><span class="p">(</span><span class="n">proj_type</span><span class="p">)</span> <span class="o">%&gt;%</span> <span class="nf">summarise</span><span class="p">(</span><span class="nf">mean</span><span class="p">(</span><span class="n">mae</span><span class="p">))</span>
 </span></span><span class="line"><span class="cl"><span class="c1"># A tibble: 2 × 2</span>
 </span></span><span class="line"><span class="cl">  <span class="n">proj_type</span> <span class="nf">`mean</span><span class="p">(</span><span class="n">mae</span><span class="p">)</span><span class="n">`

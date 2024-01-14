@@ -43,7 +43,7 @@
 &lt;p&gt;Because this approach does not use polling data, it&amp;rsquo;s not suspetible to any of the potential problems with polls I talk about in that post: undecided voters breaking late, low education non-response, bad likely voter modeling, partisan non-response, shy Trumpers, etc.&lt;/p&gt;
 &lt;p&gt;The core idea behind this approach is a fact not emphasized enough in most stats/ML courses: if you’re going to try to predict something, it’s very hard to do better than using the same variable at t - 1 if you can. And we can. This approach goes one step further and looks at the direction that variable has been moving and assume that things are likely to keep moving in that same direction.&lt;/p&gt;
 &lt;p&gt;What that means for presidential election forecasts: for each state, estimate the &amp;ldquo;swing&amp;rdquo; from 2016 to 2020 for president and 2018-2022 for the U.S. house; then simply add that to 2020 presidential returns. Then those estimates of state-level swing are regularized&amp;mdash;mathematically ``nudged&amp;rsquo;&amp;rsquo; toward national trends, which you’ll like if you believe “uniform swing” is particularly important. The projected state-level swing is weighted 60-40 toward presidential results.&lt;/p&gt;
-&lt;p&gt;Here&amp;rsquo;s a cleaner plot showing the actual forecast values in potential 2024 battleground states. It looks slightly worse for Biden than the map above might suggest:&lt;/p&gt;
+&lt;p&gt;If you call anything lower than a 2 point margin either way a &amp;ldquo;tossup,&amp;rdquo; here&amp;rsquo;s what the electoral map looks like:&lt;/p&gt;
 &lt;p&gt;
 
 
@@ -60,11 +60,35 @@
 
 
 
-&lt;figure  id=&#34;figure-a-simple-forecast-for-2024-battleground-states-hat-tip-to-tom-cunninghamhttpstecunninghamgithubio-who-introduced-me-to-this-plot-design&#34;&gt;
+&lt;figure  id=&#34;figure-a-simple-forecasted-map-for-2024-created-httpswww270towincommapswwe2b&#34;&gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://solmessing.netlify.app/img/EstStateDemVote.png&#34; alt=&#34;A simple forecast for 2024 battleground states. Hat tip to [Tom Cunningham](https://tecunningham.github.io) who introduced me to this plot design.&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://solmessing.netlify.app/img/Map_for_2024_JS_Swing.png&#34; alt=&#34;A simple forecasted map for 2024. Created https://www.270towin.com/maps/WWE2B.&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;figcaption&gt;
-      A simple forecast for 2024 battleground states. Hat tip to &lt;a href=&#34;https://tecunningham.github.io&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Tom Cunningham&lt;/a&gt; who introduced me to this plot design.
+      A simple forecasted map for 2024. Created &lt;a href=&#34;https://www.270towin.com/maps/WWE2B&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.270towin.com/maps/WWE2B&lt;/a&gt;.
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;Here&amp;rsquo;s a cleaner plot showing the actual forecast values in potential 2024 battleground states:&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-a-simple-forecast-for-2024-battleground-states-hat-tip-to-tom-cunninghamhttpstecunninghamgithubio-who-suggested-this-plot-design&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://solmessing.netlify.app/img/EstStateDemVote.png&#34; alt=&#34;A simple forecast for 2024 battleground states. Hat tip to [Tom Cunningham](https://tecunningham.github.io) who suggested this plot design.&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      A simple forecast for 2024 battleground states. Hat tip to &lt;a href=&#34;https://tecunningham.github.io&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Tom Cunningham&lt;/a&gt; who suggested this plot design.
     &lt;/figcaption&gt;&lt;/figure&gt;
 &lt;/p&gt;
 &lt;p&gt;I should now point to a link to the data and code: &lt;a href=&#34;https://github.com/SolomonMg/election_projection_regularized_swing&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://github.com/SolomonMg/election_projection_regularized_swing&lt;/a&gt;, and thank the &lt;a href=&#34;https://electionlab.mit.edu&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;MIT Election Data + Science Lab&lt;/a&gt; for curating &lt;a href=&#34;https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/42MVDX&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;these&lt;/a&gt; &lt;a href=&#34;https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/IG0UN2&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;data&lt;/a&gt;.&lt;/p&gt;
@@ -101,6 +125,29 @@
 &lt;p&gt;A less reliable trend that’s held since FDR’s time is that incumbent presidents have tended to get a higher percent of the popular vote in their election for a second term&amp;mdash;Obama in 2012 was a notable exception. &lt;a href=&#34;https://www.presidency.ucsb.edu/statistics/data/presidential-election-mandates&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.presidency.ucsb.edu/statistics/data/presidential-election-mandates&lt;/a&gt; What’s more, house midterm results seem to be particularly bad just before an incumbent is voted out of office. It&amp;rsquo;s not clear if this is a bug or a feature, or how reliably this would be picked up using this method, but it&amp;rsquo;s worthing pointing out.&lt;/p&gt;
 &lt;h3 id=&#34;observation-accuracy-over-previous-election-results&#34;&gt;Observation: Accuracy over Previous Election Results&lt;/h3&gt;
 &lt;p&gt;If it&amp;rsquo;s hard to do better than election returns at t - 1, does this approach actually do better? Yes, by a little. Including all states, these projections have lower mean absolute error (MAE). For some reason these projections miss badly in 2004, and excluding that earliest year I can compute these projections using the MIT data, shows they do in fact do quite a bit better than simply relying on previous presidential election results alone.&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-accuracy-over-time-for-projections-compared-with-simply-using-the-previous-election&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://solmessing.netlify.app/img/AllStates_MAE_projections.png&#34; alt=&#34;Accuracy over time for projections compared with simply using the previous election. &#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      Accuracy over time for projections compared with simply using the previous election.
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;bt_dat&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;%&amp;gt;%&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;group_by&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;proj_type&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;%&amp;gt;%&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;summarise&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;mean&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;mae&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# A tibble: 2 × 2&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;n&#34;&gt;proj_type&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;`mean&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;mae&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;`
