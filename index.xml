@@ -949,10 +949,7 @@ Venture capitalists and startups in Silicon Valley are always talking about “m
 &lt;p&gt;In fact, this year we were better off using projections based on past vote history in each state to predict how things would go in battleground states, as I&amp;rsquo;ll show below.&lt;/p&gt;
 &lt;p&gt;But I also want to start to ask questions about what happened this time around. The polling from 2018 looked encouraging, convincing many pollsters that the post-2016 reckoning had fixed many issues called out in the &lt;a href=&#34;https://www.aapor.org/Education-Resources/Reports/An-Evaluation-of-2016-Election-Polls-in-the-U-S.aspx&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;2016 AAPOR report on election polling&lt;/a&gt;. After 2018, FiveThirtyEight wrote that the &lt;a href=&#34;https://fivethirtyeight.com/features/the-polls-are-all-right/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&amp;ldquo;Polls are Alright&amp;rdquo;&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;But the second Miami-Dade reported results from the 2020 election, we knew something was probably wrong with the 2020 polls.&lt;/p&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Here&amp;#39;s another chart of polls vs. returns that splits the data by how much the polls underestimated Trump. One place where the polls most underestimated Trump is Wisconsin (off by -9 points). Note returns are not yet verified and states are still finalizing their counts. &lt;a href=&#34;https://t.co/iM8mjqoAuK&#34;&gt;pic.twitter.com/iM8mjqoAuK&lt;/a&gt;&lt;/p&gt;&amp;mdash; Stefan (@stefanjwojcik) &lt;a href=&#34;https://twitter.com/stefanjwojcik/status/1325786708022079488?ref_src=twsrc%5Etfw&#34;&gt;November 9, 2020&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-
-
+&lt;!--  --&gt;
 &lt;p&gt;As Stefan notes (we worked together at Pew Research Center&amp;rsquo;s Data Labs), the error seems slightly lower in key battleground states, though the polls missed big in WI, perhaps in part due to its horrifically bad voter file data.&lt;/p&gt;
 &lt;p&gt;Unlike 2016, both state and national polls appeared to underestimate Trump&amp;rsquo;s support, as this early (Nov 7) analysis from &lt;a href=&#34;https://twitter.com/thomasjwood&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Tom Wood&lt;/a&gt; shows:&lt;/p&gt;
 &lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Current as to the afternoon on the 7th, and with Senate results too. &lt;a href=&#34;https://t.co/EGZGarRPNj&#34;&gt;pic.twitter.com/EGZGarRPNj&lt;/a&gt;&lt;/p&gt;&amp;mdash; Tom Wood (@thomasjwood) &lt;a href=&#34;https://twitter.com/thomasjwood/status/1325199348553162752?ref_src=twsrc%5Etfw&#34;&gt;November 7, 2020&lt;/a&gt;&lt;/blockquote&gt;
@@ -4686,12 +4683,24 @@ assets/Here&amp;rsquo;s the &lt;a href=&#34;https://solmessing.netlify.app/img/
       <guid>https://solmessing.netlify.app/mtbgearweather/</guid>
       <description>&lt;p&gt;You need to dress approriately for mountainbiking/fat tire cycling in the colder temperatures of the upper midwest. Here&amp;rsquo;s what has worked for me after two winters outside of the Twin Cities in Minnesota:&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;55-65: padded shorts, MTB shorts, knee pads, elbow pads. Alt: enduro shirt or long sleeve undershirt. Shoe covers. Full face helmet or skullcap.&lt;/li&gt;
-&lt;li&gt;45-55: padded shorts, bike pants, long sleeve undershirt, short sleeve shirt, padded jacket or fleece mid layer. Vest or puffy jacket for nicer warmup. Shoe covers. Full face helmet or skullcap. Ski goggles.&lt;/li&gt;
-&lt;li&gt;35-45: padded shorts, bike pants, long sleeve undershirt, padded jacket or fleece mid layer. Light outer layer w underarm zips. Shoe covers and toe caps, or legit boots. Ski/snowboard helmet + goggles. Warm gloves.&lt;/li&gt;
-&lt;li&gt;25-35: padded shorts, bike pants, long sleeve undershirt, padded jacket or fleece mid layer. Light outer layer w underarm zips. Legit winter boots. Ski/snowboard helmet + goggles. Face mask. Handlebar mitts.&lt;/li&gt;
-&lt;li&gt;15-25: padded shorts, ski pants, long sleeve undershirt, padded jacket or fleece mid layer. Light outer layer w underarm zips. Legit winter boots. Ski/snowboard helmet + goggles. Face mask. Handlebar mitts.&lt;/li&gt;
-&lt;li&gt;Under 15: padded shorts, ski pants, long sleeve undershirt, padded jacket or fleece mid layer. Light outer layer w underarm zips. Cold weather winter boots (e.g., 45 NRTH Wolfgar), consider toe warmers. Ski/snowboard helmet + goggles. Face mask. Handlebar mitts w/ warm gloves.&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;55-65: Normal gloves. Flats with light wool socks. MTB shorts (knee pads, elbow pads, body armor will add a bit of warmth). Alt: mtb pants and long sleeve undershirt. Full face helmet or skullcap.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;45-55: Heavy gloves. Flats, wool socks. MTB pants, long sleeve undershirt, short sleeve shirt, fleece mid layer. Removable vest or puffy jacket for nicer warmup. Full face helmet or skullcap, goggles optional.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;35-45: Warm gloves or bar mitts. Flats, wool socks, toe caps. MTB pants, long sleeve undershirt, fleece mid layer. Light shell w underarm zips. Full face or ski/snowboard helmet + goggles. heavy gloves.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;25-35: Bar mitts with MTB gloves. Five-Ten Impact Pro Mid (or warmer flat) + toe caps or winter cycling boots. Warm pants, long sleeve undershirt, fleece mid layer. Light shell w underarm zips. Full face with skullcap or ski/snowboard helmet. Goggles + neck warmer or face mask.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;15-25: Bar mitts with MTB or warm gloves. Five-Ten Impact Pro Mid (or warmer) + toe caps and foot warmers or 45 NRTH cycling boots. Warm or ski pants, long sleeve undershirt, fleece mid layer. Light shell w underarm zips. Ski/snowboard helmet, goggles, face mask.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Under 15: Bar mitts w/ warm gloves. 45 NRTH winter boots, consider toe warmers. Ski pants, long sleeve undershirt, fleece mid layer. Ski/snowboard outer layer w/ underarm zips. Ski/snowboard helmet, goggles, face mask.&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ol&gt;
 </description>
     </item>
