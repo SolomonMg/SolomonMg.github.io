@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.2.3)  6 MAR 2025 11:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.2.3)  1 APR 2025 11:30
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -515,10 +515,6 @@ Overfull \hbox (6.0pt too wide) in paragraph at lines 206--207
  []
 
 
-Package hyperref Warning: Suppressing link with empty target on input line 208.
-
-
-
 Package hyperref Warning: Suppressing link with empty target on input line 211.
 
 
@@ -598,10 +594,10 @@ live/2022/texmf-dist/fonts/type1/wadalab/dmj/dmjke.pfb></usr/local/texlive/2022
 st/fonts/type1/wadalab/dmj/dmjkg.pfb></usr/local/texlive/2022/texmf-dist/fonts/
 type1/wadalab/dmj/dmjkh.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/pub
 lic/cm-super/sfrm1095.pfb>
-Output written on CV.pdf (7 pages, 183117 bytes).
+Output written on CV.pdf (7 pages, 183220 bytes).
 PDF statistics:
- 214 PDF objects out of 1000 (max. 8388607)
- 166 compressed objects within 2 object streams
+ 215 PDF objects out of 1000 (max. 8388607)
+ 167 compressed objects within 2 object streams
  8 named destinations out of 1000 (max. 500000)
  29 words of extra memory for PDF output out of 10000 (max. 10000000)
 
