@@ -17,15 +17,11 @@
       <link>https://solmessing.netlify.app/talk/example-talk/</link>
       <pubDate>Sat, 01 Jun 2030 13:00:00 +0000</pubDate>
       <guid>https://solmessing.netlify.app/talk/example-talk/</guid>
-      <description>&lt;!-- 
-
-&lt;div class=&#34;alert alert-note&#34;&gt;
+      <description>&lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
     Click on the &lt;strong&gt;Slides&lt;/strong&gt; button above to view the built-in slides feature.
   &lt;/div&gt;
 &lt;/div&gt;
-
- --&gt;
 &lt;p&gt;Slides can be added in a few ways:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Create&lt;/strong&gt; slides using Wowchemy&amp;rsquo;s &lt;a href=&#34;https://wowchemy.com/docs/managing-content/#create-slides&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;em&gt;Slides&lt;/em&gt;&lt;/a&gt; feature and link using &lt;code&gt;slides&lt;/code&gt; parameter in the front matter of the talk file&lt;/li&gt;
@@ -4672,8 +4668,8 @@ assets/Here&amp;rsquo;s the &lt;a href=&#34;https://solmessing.netlify.app/img/
 &lt;li&gt;SM was previously an employee of Pew Research Center.&lt;/li&gt;
 &lt;li&gt;SM was previously an employee of Acronym, including during the implementation of experiments designed to assess ad effectiveness.&lt;/li&gt;
 &lt;li&gt;SM was previously a paid contractor for Morning Consult.&lt;/li&gt;
-&lt;li&gt;SM has actively managed investments which may include SFIs in Apple, AMD, Alfabet (Google), Amazon, Intel, Meta, Microsoft, NVIDIA, Salesforce. SM has sometimes sold (ordinary) Facebook/Meta stock to avoid the appearance of a potential conflict of interest when conducting research relevant to the platform.&lt;/li&gt;
-&lt;li&gt;SM has received scholarly funding from Google (now Alfabet).&lt;/li&gt;
+&lt;li&gt;SM has actively managed investments which may include SFIs in Apple, AMD, Alphabet (Google), Amazon, Intel, Meta, Microsoft, NVIDIA, Salesforce. SM has sometimes sold (ordinary) Facebook/Meta stock to avoid the appearance of a potential conflict of interest when conducting research relevant to the platform.&lt;/li&gt;
+&lt;li&gt;SM has received scholarly funding from Google (now Alphabet).&lt;/li&gt;
 &lt;li&gt;SM is an inventor on patents assigned to Twitter and Law-on-line.&lt;/li&gt;
 &lt;li&gt;SM&amp;rsquo;s travel to or lodging at conferences has been supported by universities and past employers, including Pew Research Center (2015-2018), Facebook (2012-2020), Twitter (2021-2022).&lt;/li&gt;
 &lt;/ul&gt;
