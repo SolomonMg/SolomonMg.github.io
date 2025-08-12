@@ -67,6 +67,9 @@
 
   
   
+    
+    <script src="/js/mathjax-config.js"></script>
+  
 
   
 
@@ -183,9 +186,9 @@
 
       
       
-        
-      
 
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
       
     
       
@@ -315,12 +318,12 @@
 
   
 
-<meta name="description" content="Differential privacy is an information theoretic constraint on algorithms and code. It provides quantification of privacy leakage and formal privacy guarantees that are currently considered the gold standard in privacy protections. In this paper we provide an initial set of &#34;best practices&#34; for developing differentially private platforms, techniques for unit testing that are specific to differential privacy, guidelines for checking if differential privacy is being applied correctly in an application, and recommendations for parameter settings. The genesis of this paper was an initiative by Facebook and Social Science One to provide social science researchers with programmatic access to a URL-shares dataset. In order to maximize the utility of the data for research while protecting privacy, researchers should access the data through an interactive platform that supports differential privacy. The intention of this paper is to provide guidelines and recommendations that can generally be re-used in a wide variety of systems. For this reason, no specific platforms will be named, except for systems whose details and theory appear in academic papers." />
+<meta name="description" content="How can one understand the spread of ideas across text data? This is a key measurement problem in sociological inquiry, from the study of how interest groups shape media discourse, to the spread of policy across institutions, to the diffusion of organizational structures and institution themselves. To study how ideas and narratives diffuse across text, we must first develop a method to identify whether texts share the same information and narratives, rather than the same broad themes or exact features. We propose a novel approach to measure this quantity of interest, which we call “narrative similarity,” by using large language models to distill texts to their core ideas and then compare the similarity of claims rather than of words, phrases, or sentences. The result is an estimand much closer to narrative similarity than what is possible with past relevant alternatives, including exact text reuse, which returns lexically similar documents; topic modeling, which returns topically similar documents; or an array of alternative approaches. We devise an approach to providing out-of-sample measures of performance (precision, recall, F1) and show that our approach outperforms relevant alternatives by a large margin. We apply our approach to an important case study: The spread of Russian claims about the development of a Ukrainian bioweapons program in U.S. mainstream and fringe news websites. While we focus on news in this application, our approach can be applied more broadly to the study of propaganda, misinformation, diffusion of policy and cultural objects, among other topics." />
 
 
 
-<link rel="alternate" hreflang="en-us" href="https://solmessing.netlify.app/publication/kifer-2020-guidelines/" />
-<link rel="canonical" href="https://solmessing.netlify.app/publication/kifer-2020-guidelines/" />
+<link rel="alternate" hreflang="en-us" href="https://solmessing.netlify.app/publication/waightmessing2025/" />
+<link rel="canonical" href="https://solmessing.netlify.app/publication/waightmessing2025/" />
 
 
 
@@ -356,18 +359,18 @@
   <meta property="twitter:creator" content="@SolomonMg" />
 <meta property="twitter:image" content="https://solmessing.netlify.app/media/icon_huedd5de82286bc1d0a1509b535f624c76_25974_512x512_fill_lanczos_center_3.png" />
 <meta property="og:site_name" content="Sol Messing" />
-<meta property="og:url" content="https://solmessing.netlify.app/publication/kifer-2020-guidelines/" />
-<meta property="og:title" content="Guidelines for Implementing and Auditing Differentially Private Systems | Sol Messing" />
-<meta property="og:description" content="Differential privacy is an information theoretic constraint on algorithms and code. It provides quantification of privacy leakage and formal privacy guarantees that are currently considered the gold standard in privacy protections. In this paper we provide an initial set of &#34;best practices&#34; for developing differentially private platforms, techniques for unit testing that are specific to differential privacy, guidelines for checking if differential privacy is being applied correctly in an application, and recommendations for parameter settings. The genesis of this paper was an initiative by Facebook and Social Science One to provide social science researchers with programmatic access to a URL-shares dataset. In order to maximize the utility of the data for research while protecting privacy, researchers should access the data through an interactive platform that supports differential privacy. The intention of this paper is to provide guidelines and recommendations that can generally be re-used in a wide variety of systems. For this reason, no specific platforms will be named, except for systems whose details and theory appear in academic papers." /><meta property="og:image" content="https://solmessing.netlify.app/media/icon_huedd5de82286bc1d0a1509b535f624c76_25974_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
+<meta property="og:url" content="https://solmessing.netlify.app/publication/waightmessing2025/" />
+<meta property="og:title" content="Quantifying Narrative Similarity Across Languages | Sol Messing" />
+<meta property="og:description" content="How can one understand the spread of ideas across text data? This is a key measurement problem in sociological inquiry, from the study of how interest groups shape media discourse, to the spread of policy across institutions, to the diffusion of organizational structures and institution themselves. To study how ideas and narratives diffuse across text, we must first develop a method to identify whether texts share the same information and narratives, rather than the same broad themes or exact features. We propose a novel approach to measure this quantity of interest, which we call “narrative similarity,” by using large language models to distill texts to their core ideas and then compare the similarity of claims rather than of words, phrases, or sentences. The result is an estimand much closer to narrative similarity than what is possible with past relevant alternatives, including exact text reuse, which returns lexically similar documents; topic modeling, which returns topically similar documents; or an array of alternative approaches. We devise an approach to providing out-of-sample measures of performance (precision, recall, F1) and show that our approach outperforms relevant alternatives by a large margin. We apply our approach to an important case study: The spread of Russian claims about the development of a Ukrainian bioweapons program in U.S. mainstream and fringe news websites. While we focus on news in this application, our approach can be applied more broadly to the study of propaganda, misinformation, diffusion of policy and cultural objects, among other topics." /><meta property="og:image" content="https://solmessing.netlify.app/media/icon_huedd5de82286bc1d0a1509b535f624c76_25974_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
 
   
     <meta
       property="article:published_time"
-      content="2020-06-02T02:04:47&#43;00:00"
+      content="2025-08-12T00:00:00&#43;00:00"
     />
   
   
-    <meta property="article:modified_time" content="2020-01-01T00:00:00&#43;00:00">
+    <meta property="article:modified_time" content="2025-01-01T00:00:00&#43;00:00">
   
 
 
@@ -391,16 +394,16 @@
   "@type": "Article",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://solmessing.netlify.app/publication/kifer-2020-guidelines/"
+    "@id": "https://solmessing.netlify.app/publication/waightmessing2025/"
   },
-  "headline": "Guidelines for Implementing and Auditing Differentially Private Systems",
+  "headline": "Quantifying Narrative Similarity Across Languages",
   
-  "datePublished": "2020-06-02T02:04:47Z",
-  "dateModified": "2020-01-01T00:00:00Z",
+  "datePublished": "2025-08-12T00:00:00Z",
+  "dateModified": "2025-01-01T00:00:00Z",
   
   "author": {
     "@type": "Person",
-    "name": "Daniel Kifer"
+    "name": "Hannah Waight"
   },
   
   "publisher": {
@@ -411,7 +414,7 @@
       "url": "https://solmessing.netlify.app/media/icon_huedd5de82286bc1d0a1509b535f624c76_25974_192x192_fill_lanczos_center_3.png"
     }
   },
-  "description": "Differential privacy is an information theoretic constraint on algorithms and code. It provides quantification of privacy leakage and formal privacy guarantees that are currently considered the gold standard in privacy protections. In this paper we provide an initial set of \"best practices\" for developing differentially private platforms, techniques for unit testing that are specific to differential privacy, guidelines for checking if differential privacy is being applied correctly in an application, and recommendations for parameter settings. The genesis of this paper was an initiative by Facebook and Social Science One to provide social science researchers with programmatic access to a URL-shares dataset. In order to maximize the utility of the data for research while protecting privacy, researchers should access the data through an interactive platform that supports differential privacy. The intention of this paper is to provide guidelines and recommendations that can generally be re-used in a wide variety of systems. For this reason, no specific platforms will be named, except for systems whose details and theory appear in academic papers."
+  "description": "How can one understand the spread of ideas across text data? This is a key measurement problem in sociological inquiry, from the study of how interest groups shape media discourse, to the spread of policy across institutions, to the diffusion of organizational structures and institution themselves. To study how ideas and narratives diffuse across text, we must first develop a method to identify whether texts share the same information and narratives, rather than the same broad themes or exact features. We propose a novel approach to measure this quantity of interest, which we call “narrative similarity,” by using large language models to distill texts to their core ideas and then compare the similarity of claims rather than of words, phrases, or sentences. The result is an estimand much closer to narrative similarity than what is possible with past relevant alternatives, including exact text reuse, which returns lexically similar documents; topic modeling, which returns topically similar documents; or an array of alternative approaches. We devise an approach to providing out-of-sample measures of performance (precision, recall, F1) and show that our approach outperforms relevant alternatives by a large margin. We apply our approach to an important case study: The spread of Russian claims about the development of a Ukrainian bioweapons program in U.S. mainstream and fringe news websites. While we focus on news in this application, our approach can be applied more broadly to the study of propaganda, misinformation, diffusion of policy and cultural objects, among other topics."
 }
 </script>
 
@@ -433,7 +436,7 @@
 
 
   
-  <title>Guidelines for Implementing and Auditing Differentially Private Systems | Sol Messing</title>
+  <title>Quantifying Narrative Similarity Across Languages | Sol Messing</title>
 
   
   
@@ -453,7 +456,7 @@
 </head>
 
 
-<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="8c7294b70c5b70c0f008671c7bfdca5a" >
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="6292f5e1d00b58ec09caa2863f045e5a" >
 
   
   
@@ -996,7 +999,7 @@
   
   
 <div class="article-container pt-3">
-  <h1>Guidelines for Implementing and Auditing Differentially Private Systems</h1>
+  <h1>Quantifying Narrative Similarity Across Languages</h1>
 
   
 
@@ -1014,11 +1017,15 @@
     
 
   <span >
-      Daniel Kifer</span>, <span >
+      Hannah Waight</span>, <span >
       Solomon Messing</span>, <span >
-      Aaron Roth</span>, <span >
-      Abhradeep Thakurta</span>, <span >
-      Danfeng Zhang</span>
+      Anton Shirikov</span>, <span >
+      Margaret E. Roberts</span>, <span >
+      Jonathan Nagler</span>, <span >
+      Jason Greenfield</span>, <span >
+      Megan A. Brown</span>, <span >
+      Kevin Aslett</span>, <span >
+      Joshua A. Tucker</span>
   </div>
   
   
@@ -1029,7 +1036,7 @@
     
       
     
-    January, 2020
+    January, 2025
   </span>
   
 
@@ -1064,13 +1071,19 @@
 
 
   
+    
+  
 
 
+
+<a class="btn btn-outline-primary btn-page-header" href="/pdf/Quantifying_Narrative_Similarity_Across_Languages.pdf" target="_blank" rel="noopener">
+  PDF
+</a>
 
 
 
 <a href="#" class="btn btn-outline-primary btn-page-header js-cite-modal"
-        data-filename="/publication/kifer-2020-guidelines/cite.bib">
+        data-filename="/publication/waightmessing2025/cite.bib">
   Cite
 </a>
 
@@ -1086,6 +1099,10 @@
 
 
 
+<a class="btn btn-outline-primary btn-page-header" href="https://doi.org/10.1177/00491241251340080" target="_blank" rel="noopener">
+  DOI
+</a>
+
 
 
 </div>
@@ -1100,7 +1117,7 @@
 
     
     <h3>Abstract</h3>
-    <p class="pub-abstract">Differential privacy is an information theoretic constraint on algorithms and code. It provides quantification of privacy leakage and formal privacy guarantees that are currently considered the gold standard in privacy protections. In this paper we provide an initial set of &ldquo;best practices&rdquo; for developing differentially private platforms, techniques for unit testing that are specific to differential privacy, guidelines for checking if differential privacy is being applied correctly in an application, and recommendations for parameter settings. The genesis of this paper was an initiative by Facebook and Social Science One to provide social science researchers with programmatic access to a URL-shares dataset. In order to maximize the utility of the data for research while protecting privacy, researchers should access the data through an interactive platform that supports differential privacy. The intention of this paper is to provide guidelines and recommendations that can generally be re-used in a wide variety of systems. For this reason, no specific platforms will be named, except for systems whose details and theory appear in academic papers.</p>
+    <p class="pub-abstract">How can one understand the spread of ideas across text data? This is a key measurement problem in sociological inquiry, from the study of how interest groups shape media discourse, to the spread of policy across institutions, to the diffusion of organizational structures and institution themselves. To study how ideas and narratives diffuse across text, we must first develop a method to identify whether texts share the same information and narratives, rather than the same broad themes or exact features. We propose a novel approach to measure this quantity of interest, which we call “narrative similarity,” by using large language models to distill texts to their core ideas and then compare the similarity of claims rather than of words, phrases, or sentences. The result is an estimand much closer to narrative similarity than what is possible with past relevant alternatives, including exact text reuse, which returns lexically similar documents; topic modeling, which returns topically similar documents; or an array of alternative approaches. We devise an approach to providing out-of-sample measures of performance (precision, recall, F1) and show that our approach outperforms relevant alternatives by a large margin. We apply our approach to an important case study: The spread of Russian claims about the development of a Ukrainian bioweapons program in U.S. mainstream and fringe news websites. While we focus on news in this application, our approach can be applied more broadly to the study of propaganda, misinformation, diffusion of policy and cultural objects, among other topics.</p>
     
 
     
@@ -1128,7 +1145,7 @@
       <div class="col-md-10">
         <div class="row">
           <div class="col-12 col-md-3 pub-row-heading">Publication</div>
-          <div class="col-12 col-md-9"><em>arXiv preprint arXiv:2002.04049</em></div>
+          <div class="col-12 col-md-9"><em>Sociological Methods &amp; Research</em></div>
         </div>
       </div>
       <div class="col-md-1"></div>
@@ -1138,7 +1155,10 @@
 
     <div class="space-below"></div>
 
-    <div class="article-style"></div>
+    <div class="article-style"><ul>
+<li><a href="https://doi.org/10.7910/DVN/AYFFPT" target="_blank" rel="noopener">Replication materials</a></li>
+</ul>
+</div>
 
     
 
@@ -1163,7 +1183,7 @@
       
       
       <li>
-        <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fsolmessing.netlify.app%2Fpublication%2Fkifer-2020-guidelines%2F&amp;text=Guidelines&#43;for&#43;Implementing&#43;and&#43;Auditing&#43;Differentially&#43;Private&#43;Systems" target="_blank" rel="noopener" class="share-btn-twitter" aria-label="twitter">
+        <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fsolmessing.netlify.app%2Fpublication%2Fwaightmessing2025%2F&amp;text=Quantifying&#43;Narrative&#43;Similarity&#43;Across&#43;Languages" target="_blank" rel="noopener" class="share-btn-twitter" aria-label="twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
@@ -1180,7 +1200,7 @@
       
       
       <li>
-        <a href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fsolmessing.netlify.app%2Fpublication%2Fkifer-2020-guidelines%2F&amp;t=Guidelines&#43;for&#43;Implementing&#43;and&#43;Auditing&#43;Differentially&#43;Private&#43;Systems" target="_blank" rel="noopener" class="share-btn-facebook" aria-label="facebook">
+        <a href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fsolmessing.netlify.app%2Fpublication%2Fwaightmessing2025%2F&amp;t=Quantifying&#43;Narrative&#43;Similarity&#43;Across&#43;Languages" target="_blank" rel="noopener" class="share-btn-facebook" aria-label="facebook">
           <i class="fab fa-facebook"></i>
         </a>
       </li>
@@ -1199,7 +1219,7 @@
         
       
       <li>
-        <a href="mailto:?subject=Guidelines%20for%20Implementing%20and%20Auditing%20Differentially%20Private%20Systems&amp;body=https%3A%2F%2Fsolmessing.netlify.app%2Fpublication%2Fkifer-2020-guidelines%2F" target="_blank" rel="noopener" class="share-btn-email" aria-label="envelope">
+        <a href="mailto:?subject=Quantifying%20Narrative%20Similarity%20Across%20Languages&amp;body=https%3A%2F%2Fsolmessing.netlify.app%2Fpublication%2Fwaightmessing2025%2F" target="_blank" rel="noopener" class="share-btn-email" aria-label="envelope">
           <i class="fas fa-envelope"></i>
         </a>
       </li>
@@ -1216,7 +1236,7 @@
       
       
       <li>
-        <a href="https://www.linkedin.com/shareArticle?url=https%3A%2F%2Fsolmessing.netlify.app%2Fpublication%2Fkifer-2020-guidelines%2F&amp;title=Guidelines&#43;for&#43;Implementing&#43;and&#43;Auditing&#43;Differentially&#43;Private&#43;Systems" target="_blank" rel="noopener" class="share-btn-linkedin" aria-label="linkedin-in">
+        <a href="https://www.linkedin.com/shareArticle?url=https%3A%2F%2Fsolmessing.netlify.app%2Fpublication%2Fwaightmessing2025%2F&amp;title=Quantifying&#43;Narrative&#43;Similarity&#43;Across&#43;Languages" target="_blank" rel="noopener" class="share-btn-linkedin" aria-label="linkedin-in">
           <i class="fab fa-linkedin-in"></i>
         </a>
       </li>
@@ -1233,7 +1253,7 @@
       
       
       <li>
-        <a href="whatsapp://send?text=Guidelines&#43;for&#43;Implementing&#43;and&#43;Auditing&#43;Differentially&#43;Private&#43;Systems%20https%3A%2F%2Fsolmessing.netlify.app%2Fpublication%2Fkifer-2020-guidelines%2F" target="_blank" rel="noopener" class="share-btn-whatsapp" aria-label="whatsapp">
+        <a href="whatsapp://send?text=Quantifying&#43;Narrative&#43;Similarity&#43;Across&#43;Languages%20https%3A%2F%2Fsolmessing.netlify.app%2Fpublication%2Fwaightmessing2025%2F" target="_blank" rel="noopener" class="share-btn-whatsapp" aria-label="whatsapp">
           <i class="fab fa-whatsapp"></i>
         </a>
       </li>
@@ -1250,7 +1270,7 @@
       
       
       <li>
-        <a href="https://service.weibo.com/share/share.php?url=https%3A%2F%2Fsolmessing.netlify.app%2Fpublication%2Fkifer-2020-guidelines%2F&amp;title=Guidelines&#43;for&#43;Implementing&#43;and&#43;Auditing&#43;Differentially&#43;Private&#43;Systems" target="_blank" rel="noopener" class="share-btn-weibo" aria-label="weibo">
+        <a href="https://service.weibo.com/share/share.php?url=https%3A%2F%2Fsolmessing.netlify.app%2Fpublication%2Fwaightmessing2025%2F&amp;title=Quantifying&#43;Narrative&#43;Similarity&#43;Across&#43;Languages" target="_blank" rel="noopener" class="share-btn-weibo" aria-label="weibo">
           <i class="fab fa-weibo"></i>
         </a>
       </li>
@@ -1269,6 +1289,30 @@
 
 
   
+  
+    
+
+
+
+
+  
+    
+
+
+
+
+  
+    
+
+
+
+
+  
+    
+
+
+
+
   
     
 

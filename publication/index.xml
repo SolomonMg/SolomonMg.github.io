@@ -5,12 +5,23 @@
     <link>https://solmessing.netlify.app/publication/</link>
       <atom:link href="https://solmessing.netlify.app/publication/index.xml" rel="self" type="application/rss+xml" />
     <description>Publications</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sun, 01 Jan 2023 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Wed, 01 Jan 2025 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://solmessing.netlify.app/media/icon_huedd5de82286bc1d0a1509b535f624c76_25974_512x512_fill_lanczos_center_3.png</url>
       <title>Publications</title>
       <link>https://solmessing.netlify.app/publication/</link>
     </image>
+    
+    <item>
+      <title>Quantifying Narrative Similarity Across Languages</title>
+      <link>https://solmessing.netlify.app/publication/waightmessing2025/</link>
+      <pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://solmessing.netlify.app/publication/waightmessing2025/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://doi.org/10.7910/DVN/AYFFPT&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Replication materials&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>A 2 million-person, campaign-wide field experiment shows how digital advertising affects voter turnout</title>
