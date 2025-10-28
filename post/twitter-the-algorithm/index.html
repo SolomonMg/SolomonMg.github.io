@@ -1,0 +1,1586 @@
+<!DOCTYPE html>
+<!-- This site was created with Hugo Blox. https://hugoblox.com -->
+<!-- Last Published: October 28, 2025 --><html lang="en-us" >
+
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  
+  
+    <meta name="generator" content="Hugo Blox Builder 5.9.7" />
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+
+  
+  
+  
+    
+      
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
+    
+  
+
+  
+  
+
+  
+  
+
+  
+
+  <link rel="stylesheet" href="/css/vendor-bundle.min.26c458e6907dc03073573976b7f4044e.css" media="print" onload="this.media='all'">
+
+  
+  
+  
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1.9.4/css/academicons.min.css" integrity="sha512-IW0nhlW5MgNydsXJO40En2EoCkTTjZhI3yuODrZIc8cQ4h1XcF53PsqDHa09NqnkXuIe0Oiyyj171BqZFwISBw==" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+    
+    
+    
+      
+      
+    
+    
+    
+
+    
+    
+    
+
+    
+
+    
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+        
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+  
+
+  
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.5adeb309104bf059bfce5194cee5d4d8.css" />
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+    
+    
+    <link rel="stylesheet" href="/css/libs/chroma/github-light.min.css" title="hl-light" media="print" onload="this.media='all'" >
+    <link rel="stylesheet" href="/css/libs/chroma/dracula.min.css" title="hl-dark" media="print" onload="this.media='all'" disabled>
+  
+
+  
+  
+
+
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9XTZZP2CJ8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url, target) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           if (target !== '_blank') {
+             document.location = url;
+           }
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target, event.target.getAttribute('target'));  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'G-9XTZZP2CJ8', {});
+  gtag('set', {'cookie_flags': 'SameSite=None;Secure'});
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+
+
+
+
+
+  <meta name="author" content="Sol Messing" />
+
+
+
+
+
+  
+
+<meta name="description" content="Last Friday (2023-03-31) Twitter released what it calls “the algorithm,” which appears to be a highly redacted, incomplete part of code that governs the “for you” home timeline ranking system. And I saw nothing to suggest the parts of the code they put in the GitHub repository wasn’t authentic.
+" />
+
+
+
+<link rel="alternate" hreflang="en-us" href="https://solmessing.netlify.app/post/twitter-the-algorithm/" />
+<link rel="canonical" href="https://solmessing.netlify.app/post/twitter-the-algorithm/" />
+
+
+
+  <link rel="manifest" href="/manifest.webmanifest" />
+
+
+
+<link rel="icon" type="image/png" href="/media/icon_hu_b6b141330a993e2f.png" />
+<link rel="apple-touch-icon" type="image/png" href="/media/icon_hu_bdf5fe8f122b026c.png" />
+
+<meta name="theme-color" content="#1565c0" />
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+<meta property="twitter:card" content="summary_large_image" />
+
+  <meta property="twitter:site" content="@SolomonMg" />
+  <meta property="twitter:creator" content="@SolomonMg" />
+<meta property="twitter:image" content="https://solmessing.netlify.app/post/twitter-the-algorithm/featured.png" />
+
+
+
+  
+
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="Sol Messing" />
+<meta property="og:url" content="https://solmessing.netlify.app/post/twitter-the-algorithm/" />
+<meta property="og:title" content="What can we learn from &#39;The Algorithm,&#39; Twitter&#39;s partial open-sourcing of it&#39;s feed-ranking recommendation system? | Sol Messing" />
+<meta property="og:description" content="Last Friday (2023-03-31) Twitter released what it calls “the algorithm,” which appears to be a highly redacted, incomplete part of code that governs the “for you” home timeline ranking system. And I saw nothing to suggest the parts of the code they put in the GitHub repository wasn’t authentic." /><meta property="og:image" content="https://solmessing.netlify.app/post/twitter-the-algorithm/featured.png" /><meta property="og:locale" content="en-us" />
+
+  
+    <meta
+      property="article:published_time"
+      content="2023-04-03T00:00:00&#43;00:00"
+    />
+  
+  
+    <meta property="article:modified_time" content="2023-04-03T00:00:00&#43;00:00">
+  
+
+
+
+
+
+
+    
+
+
+
+
+
+
+  
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://solmessing.netlify.app/post/twitter-the-algorithm/"
+  },
+  "headline": "What can we learn from 'The Algorithm,' Twitter's partial open-sourcing of it's feed-ranking recommendation system?",
+  
+  "image": [
+    "https://solmessing.netlify.app/post/twitter-the-algorithm/featured.png"
+  ],
+  
+  "datePublished": "2023-04-03T00:00:00Z",
+  "dateModified": "2023-04-03T00:00:00Z",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Sol Messing"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Sol Messing",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://solmessing.netlify.app/media/icon_hu_3baeddb697bfad35.png"
+    }
+  },
+  "description": "\u003cp\u003eLast Friday (2023-03-31) Twitter released what it calls “the algorithm,” which appears to be a highly redacted, incomplete part of code that governs the “for you” home timeline ranking system. And I saw nothing to suggest the parts of the code they put in the GitHub repository wasn’t authentic.\u003c/p\u003e"
+}
+</script>
+
+  
+
+  
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  
+
+
+  
+  <title>What can we learn from &#39;The Algorithm,&#39; Twitter&#39;s partial open-sourcing of it&#39;s feed-ranking recommendation system? | Sol Messing</title>
+
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="4bd208fd76dd88324c9169a96b532095" >
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.9e4214442a7711d35691acd58f6f6361.js"></script>
+
+  
+
+
+<aside class="search-modal" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
+        aria-label="Search...">
+        
+      </div>
+
+      
+      
+
+      
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+
+  <div class="page-header header--fixed">
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+    <div class="container-xl">
+
+      
+      <div class="d-none d-lg-inline-flex">
+        <a class="navbar-brand" href="/">Sol Messing</a>
+      </div>
+      
+
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+      <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+      
+      <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+        <a class="navbar-brand" href="/">Sol Messing</a>
+      </div>
+      
+
+      
+      
+      <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+        
+        <ul class="navbar-nav d-md-inline-flex">
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#about"><span>Home</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#featured"><span>Publications</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#posts"><span>Posts</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#projects"><span>Projects</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#media"><span>Media</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#mybio"><span>Bio</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/techsetup/"><span>Tech Stack</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/disclosures/"><span>Disclosures</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#contact"><span>Contact</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/pdf/CV/CV.pdf"><span>CV</span></a>
+          </li>
+
+          
+          
+
+        
+
+          
+        </ul>
+      </div>
+
+      <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+        
+        
+          
+        
+
+        
+        
+        
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
+
+        
+        
+        
+        <li class="nav-item dropdown theme-dropdown">
+          <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-label="Display preferences">
+            <i class="fas fa-moon" aria-hidden="true"></i>
+          </a>
+          <div class="dropdown-menu">
+            <a href="#" class="dropdown-item js-set-theme-light">
+              <span>Light</span>
+            </a>
+            <a href="#" class="dropdown-item js-set-theme-dark">
+              <span>Dark</span>
+            </a>
+            <a href="#" class="dropdown-item js-set-theme-auto">
+              <span>Automatic</span>
+            </a>
+          </div>
+        </li>
+        
+
+        
+        
+
+      </ul>
+
+    </div>
+  </nav>
+</header>
+
+
+  </div>
+
+  <div class="page-body">
+    
+    
+    
+
+    <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+<div class="article-container pt-3">
+  <h1>What can we learn from &#39;The Algorithm,&#39; Twitter&#39;s partial open-sourcing of it&#39;s feed-ranking recommendation system?</h1>
+
+  
+
+  
+
+
+<div class="article-metadata">
+
+  
+  
+  
+  
+  <div>
+    
+
+  <span >
+      Sol Messing</span>
+  </div>
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Apr 3, 2023
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    9 min read
+  </span>
+  
+
+  
+  
+  
+  
+
+  
+  
+
+</div>
+
+  
+
+
+
+
+<div class="btn-links mb-3">
+  
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+  
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+</div>
+
+
+<div class="article-header article-container featured-image-wrapper mt-4 mb-4" style="max-width: 720px; max-height: 451px;">
+  <div style="position: relative">
+    <img src="/post/twitter-the-algorithm/featured_hu_c877cfeb77d9b62.webp" width="720" height="451" alt="" class="featured-image">
+    <span class="article-header-caption">Twitter comically deleting code that tracks Musk, Democrats, Republicans in DDG. Credit Colin Fraser.</span>
+  </div>
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <p>Last Friday (2023-03-31) Twitter released what it calls “the algorithm,” which appears to be a highly redacted, incomplete part of code that governs the “for you” home timeline ranking system. And I saw nothing to suggest the parts of the code they put in the GitHub repository wasn’t authentic.</p>
+<p>It’s highly unusual for a tech company to open up a product at the core of its monetization strategy. The thinking is that the more engaging the content you show people right when they log in, the more likely they are to stick around. And the more you keep people logged in, the more they see ads. And the more data you can get to show them better ads!</p>
+<p><strong>Transparency, or a distraction from closing the API?</strong></p>
+<p>Is this a step forward for transparency as Musk and Twitter would claim? I am skeptical. You can’t learn much from this release in and of itself&mdash;you need the underlying model features, parameters, and data to really understand the algorithm. Those combine into a system that&rsquo;s effectively different for everyone! So even if you had all that, you&rsquo;d likely need to algorithmically audit the system to really get a handle on it.</p>
+<p>And Twitter made it <a href="https://www.wired.com/story/twitter-data-api-prices-out-nearly-everyone/" target="_blank" rel="noopener">prohibitively expensive</a> for external researchers to get that data through its API with the recent price updates ($500k/yr). So at the same time twitter is releasing this code, it’s made it incredibly difficult for research to <em>audit</em> this code</p>
+<p><strong>What&rsquo;s in the code? Gossip and Rumors</strong></p>
+<p><strong>Ukraine</strong> There were some <a href="https://twitter.com/SolomonMg/status/1642845123531751425?s=20" target="_blank" rel="noopener">initial reports</a> that Twitter was downranking tweets about Ukraine. I looked at the code and can tell you those claims are wrong&mdash;twitter has an audio-only <a href="https://www.clubhouse.com" target="_blank" rel="noopener">Clubhouse</a> clone called Spaces and that code is for that product, not ordinary tweets on hometimeline. What&rsquo;s more, this is likely a label related only to <strong>crisis misinformation</strong>, as per Twitter&rsquo;s <a href="https://help.twitter.com/en/rules-and-policies/crisis-misinformation" target="_blank" rel="noopener">Crisis Misinformation Policy</a>.</p>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Uh, this code looks like it *only* relates to Twitter&#39;s Spaces product. If so it is *not* used for down-ranking ordinary tweets in home timeline ranking. <br><br>It&#39;s called here with the other twitter Spaces spaces visibility models and labels: <a href="https://t.co/7n8Tl7WVlJ">https://t.co/7n8Tl7WVlJ</a> <a href="https://t.co/stSThUTvUe">https://t.co/stSThUTvUe</a></p>&mdash; Sol Messing (@SolomonMg) <a href="https://twitter.com/SolomonMg/status/1642560420392103936?ref_src=twsrc%5Etfw">April 2, 2023</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+<p><strong>Musk Metrics</strong> One of the most interesting things we learned from the code is that Twitter created an entire suite of metrics about Elon Musk’s personal twitter experience. The code shows they fed those metrics to the experimentation platform (Duck Duck Goose, or DDG), which at least historically has been used to evaluate whether or not to ship products.</p>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Twitter’s algorithm specifically labels whether the Tweet author is Elon Musk<br><br>“author_is_elon”<br><br>besides the Democrat, Republican and “Power User” labels<a href="https://t.co/fhpBjdfifX">https://t.co/fhpBjdfifX</a> <a href="https://t.co/orCPvfMTb9">pic.twitter.com/orCPvfMTb9</a></p>&mdash; Jane Manchun Wong (@wongmjane) <a href="https://twitter.com/wongmjane/status/1641884551189512192?ref_src=twsrc%5Etfw">March 31, 2023</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+<p>This episode is consistent with reporting that engineers are very concerned about how any features they ship <a href="https://www.theverge.com/2023/2/9/23593099/elon-musk-twitter-fires-engineer-declining-reach-ftc-concerns" target="_blank" rel="noopener">affect the CEOs personal experience on Twitter</a>. And other <a href="https://arstechnica.com/tech-policy/2023/02/report-musk-had-twitter-engineers-boost-his-tweets-after-biden-got-more-views/" target="_blank" rel="noopener">reporting has suggested that there may have been a Musk centric boost feature</a> that shipped, and you would want exactly this kind of instrumentation to understand how that worked in practice.</p>
+<p><strong>Republican, Democrat Metrics</strong> We also learned that Twitter is logging similar metrics for lists of prominent Democrat and Republican accounts, <a href="https://www.yahoo.com/entertainment/twitters-recommendation-algorithm-is-now-on-github-200511112.html" target="_blank" rel="noopener">ostensibly to understand</a> whether any features that they ship affect those sets of accounts equally. Now we know that <a href="https://www.nature.com/articles/s41467-022-34769-6" target="_blank" rel="noopener">conservative accounts tend to share more misinformation than liberal accounts on both Twitter</a> and <a href="https://www.science.org/doi/full/10.1126/sciadv.aau4586" target="_blank" rel="noopener">on Facebook</a>. And, <a href="https://www.washingtonpost.com/technology/2023/02/08/house-republicans-twitter-files-collusion/" target="_blank" rel="noopener">Musk has alleged that Democrats and Big Tech are colluding</a> to enforce policy violation unequally across parties.</p>
+<p>But if you have these ``partisan equality&rsquo;&rsquo; stats as part of your ship criteria, perhaps on equal footing with policy violation frequency, you can see how <strong>this could really affect the types of health and safety features that actually make it to the site in production</strong>.</p>
+<p>This code was then comically removed via pull requests from Twitter. Because once you delete something on GitHub, it just goes away. Right?</p>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">which specific user groups, you might wonder? <a href="https://t.co/wYSsUKm1pA">pic.twitter.com/wYSsUKm1pA</a></p>&mdash; Colin Fraser (@colin_fraser) <a href="https://twitter.com/colin_fraser/status/1641960748233662464?ref_src=twsrc%5Etfw">April 1, 2023</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+<p><strong>Twitter Blue Boost</strong> What’s more, we sorta knew that Twitter Blue users get a boost in feed ranking, but the code make it clear that it could double your score among people who don&rsquo;t follow you, and quadruple it for those who do.</p>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Not sure what I expected, but interesting that first pull request on newly open-sourced <a href="https://twitter.com/twitter?ref_src=twsrc%5Etfw">@Twitter</a> algo (<a href="https://t.co/kAVP0zdzki">https://t.co/kAVP0zdzki</a>) is to downweight verified user multipliers. <a href="https://t.co/PfqIdVTDnk">pic.twitter.com/PfqIdVTDnk</a></p>&mdash; Caitlin Hudon (@beeonaposy) <a href="https://twitter.com/beeonaposy/status/1641878347557883910?ref_src=twsrc%5Etfw">March 31, 2023</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+<p>As <a href="https://twitter.com/jonathanstray/status/1642200687101501441" target="_blank" rel="noopener">Jonathan Stray pointed out</a>, if this counts as a paid promotion, the FTC might require Twitter to label your tweets as ads. Now we kind of already knew this from Musks Twitter Blue announcement, but having evidence in the code might cross a different line for the FTC.</p>
+<p><strong>So what about the ackshual algorithm? What does this say about feed ranking?</strong></p>
+<p>The code itself is there but it’s missing specifics&mdash;key parameters, feature sets, and model weights are absent or abstracted. And obviously the data.</p>
+<p>The most critical thing we learned about Twitter’s ranking algorithm is probably from a readme file that former Facebook Data Scientist <a href="https://twitter.com/jeff4llen" target="_blank" rel="noopener">Jeff Allen</a> found. If we take that at face value, a fav (twitter like) is worth half a retweet. A reply is worth 27 retweets, and a reply with a response from a tweets author is worth a whopping 75 retweets!</p>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">According to the Heavy Ranker readme, it looks like this is the &quot;For you&quot; feed ranking formula is<br><br>Each &quot;is_X&quot; is a predicted probability the user will take that action on the Tweet.<br><br>Replies are the most important signal. Very similar to MSI for FB.<a href="https://t.co/Bmv7qg4voc">https://t.co/Bmv7qg4voc</a> <a href="https://t.co/lWfaUboT6q">pic.twitter.com/lWfaUboT6q</a></p>&mdash; Jeff Allen (@jeff4llen) <a href="https://twitter.com/jeff4llen/status/1641901988047626241?ref_src=twsrc%5Etfw">March 31, 2023</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+<p>Now it’s not quite that simple&mdash;what about when a tweet is first posted and there’s no data? Twitter’s deep learning system (in the heavy ranker) will do some heavy lifting and predict the likelihood of each of these actions based on the tweet author, their network, any initial engagements, the tweet text, and thousands of signals and embeddings.</p>
+<p>Of course, what happens in the first few minutes when a tweet is posted deeply shapes who sees and engages with it downstream in the future.</p>
+<p>[And the way this is implemented in practice is that the model handles all cases, but as you get more and more real time data on a tweet, those real time features dominate everything else and push those probabilities close to 1, see <a href="https://twitter.com/SolomonMg/status/1642154005588504577?s=20" target="_blank" rel="noopener">discussion here</a>.]</p>
+<p>Now I should point out that there are some spammy accounts claiming to have found ranking parameters in the code. They’re wrong, those are used to <a href="https://github.com/twitter/the-algorithm/blob/7f90d0ca342b928b479b512ec51ac2c3821f5922/src/java/com/twitter/search/README.md" target="_blank" rel="noopener">retrieve tweets from your network for candidate generation only</a>. <a href="https://lucene.apache.org" target="_blank" rel="noopener">Lucene</a> is an open source search tool.</p>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Uh, this is for search query results, not home timeline ranking. <br><br>See the thing that  says &quot;luceneScoreParams&quot;??<br><br>Lucene is a search library: <a href="https://t.co/993crKVHJi">https://t.co/993crKVHJi</a> <a href="https://t.co/AdGtjCbOlx">https://t.co/AdGtjCbOlx</a></p>&mdash; Sol Messing (@SolomonMg) <a href="https://twitter.com/SolomonMg/status/1642563414970060800?ref_src=twsrc%5Etfw">April 2, 2023</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+<p>I should point out however, that some of the ``Earlybird&rsquo;&rsquo; code was at one point used in timeline ranking, and it appears that <a href="https://github.com/twitter/the-algorithm/blob/7f90d0ca342b928b479b512ec51ac2c3821f5922/cr-mixer/server/src/main/scala/com/twitter/cr_mixer/similarity_engine/EarlybirdTensorflowBasedSimilarityEngine.scala" target="_blank" rel="noopener">it may be used in cr-mixer</a>, which is used in candidate generation for <a href="https://github.com/twitter/the-algorithm/blob/7f90d0ca342b928b479b512ec51ac2c3821f5922/cr-mixer/README.md" target="_blank" rel="noopener">out-of-network tweets</a>.</p>
+<p>Interestingly, <a href="https://github.com/twitter/the-algorithm/blob/main/home-mixer/server/src/main/scala/com/twitter/home_mixer/functional_component/filter/OutOfNetworkCompetitorURLFilter.scala" target="_blank" rel="noopener">Twitter appears to remove competitor URLs</a>, perhaps only for tweets that are outside of network (you don&rsquo;t follow the author).</p>
+<p><strong>What else goes into the ``the Algorithm?&rsquo;&rsquo;</strong></p>
+<p>What gets ranked in the first place? The other piece here is the ``TikTok&rsquo;&rsquo; part of the ranking algorithm, which is also incomplete without the models/data/parameters/etc. What I mean is the code that takes content from across the platform and says “I’m going to put this into your queue for the heavy ranker to sort out.”</p>
+<p>Now on Twitter often that historically meant tweets posted by or replied to by accounts you follow. But, Twitter realized it could find a lot more content for that heavy ranker magic.</p>
+<p>There’s a complex system that inserts tweets into your queue for ranking. This is called <strong>candidate generation</strong> in the “recommendation system” subfield of applied computing.</p>
+<p>If you follow a lot of people on twitter like me, about <strong>half</strong> of the candidate tweets in twitter’s ranked “for you” timeline at any given time are from people you follow.</p>
+<p>Now, if you don’t follow a ton of people, or if you have a new account, you can run out of these tweets, and then Twitter will try to find additional candidates so that you have ranked content. If so, means that this system is going to govern what in your home timeline feed like TikTok&mdash;gathering content it predicts you’ll like from across the platform.</p>
+<p>This takes place in <a href="https://github.com/twitter/the-algorithm/blob/7f90d0ca342b928b479b512ec51ac2c3821f5922/cr-mixer/README.md" target="_blank" rel="noopener">cr-mixer</a>, and although some of the <a href="https://github.com/twitter/the-algorithm/blob/7f90d0ca342b928b479b512ec51ac2c3821f5922/cr-mixer/server/src/main/scala/com/twitter/cr_mixer/candidate_generation/CandidateSourcesRouter.scala" target="_blank" rel="noopener">high level function calls are there</a>, much of the code and the models appear to be missing, and many files come with this warning at the top: ``This commit does not belong to any branch on this repository, and may belong to a fork outside of the repository.''</p>
+<p>Twitter seems to have made some of the systems public underlying candidate generation public, including its <a href="https://github.com/twitter/the-algorithm/tree/7f90d0ca342b928b479b512ec51ac2c3821f5922/src/scala/com/twitter/simclusters_v2" target="_blank" rel="noopener">SimCluster model</a>.</p>
+<p>BTW, I’d like to give a shout out to <a href="https://twitter.com/vboykis" target="_blank" rel="noopener">Vicki Boykis</a>, and <a href="https://twitter.com/igorbrigadir" target="_blank" rel="noopener">Igor Brigadir</a> who are <a href="https://github.com/igorbrigadir/awesome-twitter-algo" target="_blank" rel="noopener">doing amazing work to map out the codebase</a> and unearth exactly what’s missing and what’s not.</p>
+<p><strong>Trust and Safety</strong></p>
+<p>A lot of the code related to Trust and Safety is missing, presumably to prevent bad actors from learning too much and gaming those systems. However, there do seem to be some specifics about the kinds of things twitter considers borderline or violating that I don’t think were previously public.There are a bunch of safety parameters in the code, some of which are in Twitter’s policy documents, but some are not.</p>
+<p>There are entries like “HighCryptospamScore” that <a href="https://github.com/twitter/the-algorithm/blob/7f90d0ca342b928b479b512ec51ac2c3821f5922/visibilitylib/src/main/scala/com/twitter/visibility/rules/DownrankingRules.scala" target="_blank" rel="noopener">appear in the code</a>, which may give scammers hints about how to craft tweets to get around detection systems.  The same is true for <a href="https://github.com/twitter/the-algorithm/blob/7f90d0ca342b928b479b512ec51ac2c3821f5922/visibilitylib/src/main/scala/com/twitter/visibility/models/TweetSafetyLabel.scala#L115" target="_blank" rel="noopener">code that contains links</a> to “UntrustedUrl,” “TweetContainsHatefulConductSlur” for low, medium and high severity.</p>
+<p>There’s also a reference to a “Do Not Amplify” <a href="https://github.com/twitter/the-algorithm/blob/7f90d0ca342b928b479b512ec51ac2c3821f5922/visibilitylib/src/main/scala/com/twitter/visibility/models/SpaceSafetyLabelType.scala#L26" target="_blank" rel="noopener">parameter in the code</a>, which was discussed in the twitter files but seems not to be publicly documented in it’s policies. There are entries like “AgathaSpam,” which refers to a propriety embedding used across the codebase. Twitter also has a bunch of visibility rules hardcoded in Scala that might be useful to bad actors trying to game the system, outlining what rules are in play for all tweets, new users, user mentions, liked tweets, realtime spam detection, etc. Finally, some of the consequences for those violations are <a href="https://github.com/twitter/the-algorithm/blob/7f90d0ca342b928b479b512ec51ac2c3821f5922/visibilitylib/src/main/scala/com/twitter/visibility/rules/Action.scala" target="_blank" rel="noopener">spelled out in Scala</a> as well.</p>
+<p>Of course, it&rsquo;s really hard to know with certainty that any of this wasn&rsquo;t in public somehow before this release.</p>
+
+    </div>
+
+    
+
+
+
+
+
+
+
+<div class="share-box">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fsolmessing.netlify.app%2Fpost%2Ftwitter-the-algorithm%2F&amp;text=What&#43;can&#43;we&#43;learn&#43;from&#43;%27The&#43;Algorithm%2C%27&#43;Twitter%27s&#43;partial&#43;open-sourcing&#43;of&#43;it%27s&#43;feed-ranking&#43;recommendation&#43;system%3F" target="_blank" rel="noopener" class="share-btn-twitter" aria-label="twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fsolmessing.netlify.app%2Fpost%2Ftwitter-the-algorithm%2F&amp;t=What&#43;can&#43;we&#43;learn&#43;from&#43;%27The&#43;Algorithm%2C%27&#43;Twitter%27s&#43;partial&#43;open-sourcing&#43;of&#43;it%27s&#43;feed-ranking&#43;recommendation&#43;system%3F" target="_blank" rel="noopener" class="share-btn-facebook" aria-label="facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+        
+      
+      <li>
+        <a href="mailto:?subject=What%20can%20we%20learn%20from%20%27The%20Algorithm%2C%27%20Twitter%27s%20partial%20open-sourcing%20of%20it%27s%20feed-ranking%20recommendation%20system%3F&amp;body=https%3A%2F%2Fsolmessing.netlify.app%2Fpost%2Ftwitter-the-algorithm%2F" target="_blank" rel="noopener" class="share-btn-email" aria-label="envelope">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=https%3A%2F%2Fsolmessing.netlify.app%2Fpost%2Ftwitter-the-algorithm%2F&amp;title=What&#43;can&#43;we&#43;learn&#43;from&#43;%27The&#43;Algorithm%2C%27&#43;Twitter%27s&#43;partial&#43;open-sourcing&#43;of&#43;it%27s&#43;feed-ranking&#43;recommendation&#43;system%3F" target="_blank" rel="noopener" class="share-btn-linkedin" aria-label="linkedin-in">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="whatsapp://send?text=What&#43;can&#43;we&#43;learn&#43;from&#43;%27The&#43;Algorithm%2C%27&#43;Twitter%27s&#43;partial&#43;open-sourcing&#43;of&#43;it%27s&#43;feed-ranking&#43;recommendation&#43;system%3F%20https%3A%2F%2Fsolmessing.netlify.app%2Fpost%2Ftwitter-the-algorithm%2F" target="_blank" rel="noopener" class="share-btn-whatsapp" aria-label="whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=https%3A%2F%2Fsolmessing.netlify.app%2Fpost%2Ftwitter-the-algorithm%2F&amp;title=What&#43;can&#43;we&#43;learn&#43;from&#43;%27The&#43;Algorithm%2C%27&#43;Twitter%27s&#43;partial&#43;open-sourcing&#43;of&#43;it%27s&#43;feed-ranking&#43;recommendation&#43;system%3F" target="_blank" rel="noopener" class="share-btn-weibo" aria-label="weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+</article>
+  </div>
+
+  <div class="page-footer">
+    
+    
+    <div class="container">
+      <footer class="site-footer">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+    
+  
+  
+    
+  
+
+  
+
+  
+  <p class="powered-by copyright-license-text">
+    ©2023 Sol Messing. This work is licensed under XX
+  </p>
+  
+
+  <p class="powered-by footer-license-icons">
+    <a href="https://creativecommons.org/licenses/by-nc-nd/4.0" rel="noopener noreferrer" target="_blank" aria-label="Creative Commons">
+      <i class="fab fa-creative-commons fa-2x" aria-hidden="true"></i>
+      <i class="fab fa-creative-commons-by fa-2x" aria-hidden="true"></i>
+      
+        <i class="fab fa-creative-commons-nc fa-2x" aria-hidden="true"></i>
+      
+      
+        <i class="fab fa-creative-commons-nd fa-2x" aria-hidden="true"></i>
+      
+    </a>
+  </p>
+
+
+
+
+
+  <p class="powered-by">
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      Published with <a href="https://hugoblox.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Hugo Blox Builder</a> — the free, <a href="https://github.com/HugoBlox/hugo-blox-builder" target="_blank" rel="noopener">open source</a> website builder that empowers creators.
+    
+  </p>
+</footer>
+
+    </div>
+    
+  </div>
+
+  
+
+
+<script src="/js/vendor-bundle.min.d613345003d21781ec611233eea95b85.js"></script>
+
+
+
+
+  
+
+  
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script id="search-hit-fuse-template" type="text/x-template">
+    <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+    </div>
+  </script>
+  
+    <script src="https://cdn.jsdelivr.net/gh/krisk/Fuse@v3.2.1/dist/fuse.min.js" integrity="sha512-o38bmzBGX+hD3JHWUFCDA09btWaqrNmoJ3RXLlrysA7PP01Kgs4UlE4MhelE1v5dJR3+cxlR4qQlotsW7jKsnw==" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/gh/julmot/mark.js@8.11.1/dist/jquery.mark.min.js" integrity="sha512-mhbv5DqBMgrWL+32MmsDOt/OAvqr/cHimk6B8y/bx/xS88MVkYGPiVv2ixKVrkywF2qHplNRUvFsAHUdxZ3Krg==" crossorigin="anonymous"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script id="page-data" type="application/json">{"use_headroom":true}</script>
+
+
+  <script src="/js/wowchemy-headroom.b95a7e109243f29d04930ae8cb49a756.js" type="module"></script>
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+<script src="/en/js/wowchemy.min.69fc52a6dc16aaf1a452cfbb36466dac.js"></script>
+
+
+
+
+
+
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        
+        <pre><code></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <script src="/js/wowchemy-publication.9c0e895144aef5a693008b5c5d450147.js" type="module"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

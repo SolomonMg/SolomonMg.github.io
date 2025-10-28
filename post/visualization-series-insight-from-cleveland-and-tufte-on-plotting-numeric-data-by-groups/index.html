@@ -1,0 +1,1923 @@
+<!DOCTYPE html>
+<!-- This site was created with Hugo Blox. https://hugoblox.com -->
+<!-- Last Published: October 28, 2025 --><html lang="en-us" >
+
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  
+  
+    <meta name="generator" content="Hugo Blox Builder 5.9.7" />
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+
+  
+  
+  
+    
+      
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
+    
+  
+
+  
+  
+
+  
+  
+
+  
+
+  <link rel="stylesheet" href="/css/vendor-bundle.min.26c458e6907dc03073573976b7f4044e.css" media="print" onload="this.media='all'">
+
+  
+  
+  
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1.9.4/css/academicons.min.css" integrity="sha512-IW0nhlW5MgNydsXJO40En2EoCkTTjZhI3yuODrZIc8cQ4h1XcF53PsqDHa09NqnkXuIe0Oiyyj171BqZFwISBw==" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+    
+    
+    
+      
+      
+    
+    
+    
+
+    
+    
+    
+
+    
+
+    
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+        
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+  
+
+  
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.5adeb309104bf059bfce5194cee5d4d8.css" />
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+    
+    
+    <link rel="stylesheet" href="/css/libs/chroma/github-light.min.css" title="hl-light" media="print" onload="this.media='all'" >
+    <link rel="stylesheet" href="/css/libs/chroma/dracula.min.css" title="hl-dark" media="print" onload="this.media='all'" disabled>
+  
+
+  
+  
+
+
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9XTZZP2CJ8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url, target) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           if (target !== '_blank') {
+             document.location = url;
+           }
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target, event.target.getAttribute('target'));  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'G-9XTZZP2CJ8', {});
+  gtag('set', {'cookie_flags': 'SameSite=None;Secure'});
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+
+
+
+
+
+  <meta name="author" content="Sol Messing" />
+
+
+
+
+
+  
+
+<meta name="description" content="After my post on making dotplots with concise code using plyr and ggplot, I got an email from my dad who practices immigration law and runs a website with a variety of immigration resources and tools. He pointed out that the post was written for folks who already know that they want to make dot plots, and who already know about bootstrapped standard errors. That&rsquo;s not many people.
+" />
+
+
+
+<link rel="alternate" hreflang="en-us" href="https://solmessing.netlify.app/post/visualization-series-insight-from-cleveland-and-tufte-on-plotting-numeric-data-by-groups/" />
+<link rel="canonical" href="https://solmessing.netlify.app/post/visualization-series-insight-from-cleveland-and-tufte-on-plotting-numeric-data-by-groups/" />
+
+
+
+  <link rel="manifest" href="/manifest.webmanifest" />
+
+
+
+<link rel="icon" type="image/png" href="/media/icon_hu_b6b141330a993e2f.png" />
+<link rel="apple-touch-icon" type="image/png" href="/media/icon_hu_bdf5fe8f122b026c.png" />
+
+<meta name="theme-color" content="#1565c0" />
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+<meta property="twitter:card" content="summary_large_image" />
+
+  <meta property="twitter:site" content="@SolomonMg" />
+  <meta property="twitter:creator" content="@SolomonMg" />
+<meta property="twitter:image" content="https://solmessing.netlify.app/post/visualization-series-insight-from-cleveland-and-tufte-on-plotting-numeric-data-by-groups/featured.png" />
+
+
+
+  
+
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="Sol Messing" />
+<meta property="og:url" content="https://solmessing.netlify.app/post/visualization-series-insight-from-cleveland-and-tufte-on-plotting-numeric-data-by-groups/" />
+<meta property="og:title" content="Insight From Cleveland And Tufte On Plotting Numeric Data By Groups | Sol Messing" />
+<meta property="og:description" content="After my post on making dotplots with concise code using plyr and ggplot, I got an email from my dad who practices immigration law and runs a website with a variety of immigration resources and tools.  He pointed out that the post was written for folks who already know that they want to make dot plots, and who already know about bootstrapped standard errors.  That&rsquo;s not many people." /><meta property="og:image" content="https://solmessing.netlify.app/post/visualization-series-insight-from-cleveland-and-tufte-on-plotting-numeric-data-by-groups/featured.png" /><meta property="og:locale" content="en-us" />
+
+  
+    <meta
+      property="article:published_time"
+      content="2012-03-04T00:00:00&#43;00:00"
+    />
+  
+  
+    <meta property="article:modified_time" content="2017-03-05T00:00:00&#43;00:00">
+  
+
+
+
+
+
+
+    
+
+
+
+
+
+
+  
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://solmessing.netlify.app/post/visualization-series-insight-from-cleveland-and-tufte-on-plotting-numeric-data-by-groups/"
+  },
+  "headline": "Insight From Cleveland And Tufte On Plotting Numeric Data By Groups",
+  
+  "image": [
+    "https://solmessing.netlify.app/post/visualization-series-insight-from-cleveland-and-tufte-on-plotting-numeric-data-by-groups/featured.png"
+  ],
+  
+  "datePublished": "2012-03-04T00:00:00Z",
+  "dateModified": "2017-03-05T00:00:00Z",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Sol Messing"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Sol Messing",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://solmessing.netlify.app/media/icon_hu_3baeddb697bfad35.png"
+    }
+  },
+  "description": "\u003cp\u003eAfter my post on making \u003ca href=\"http://solomonmessing.wordpress.com/2011/11/26/putting-it-all-together-concise-code-to-make-dotplots-with-weighted-bootstrapped-standard-errors/\" target=\"_blank\" rel=\"noopener\"\u003edotplots with concise code using plyr and ggplot\u003c/a\u003e, I got an email from my dad who practices immigration law and runs a \u003ca href=\"http://www.messinglawoffices.com/default.aspx\" target=\"_blank\" rel=\"noopener\"\u003ewebsite with a variety of immigration resources and tools\u003c/a\u003e.  He pointed out that the post was written for folks who already know that they want to make dot plots, and who already know about bootstrapped standard errors.  That\u0026rsquo;s not many people.\u003c/p\u003e"
+}
+</script>
+
+  
+
+  
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  
+
+
+  
+  <title>Insight From Cleveland And Tufte On Plotting Numeric Data By Groups | Sol Messing</title>
+
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="ada9e4ddb3a338e86de34d9370723250" >
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.9e4214442a7711d35691acd58f6f6361.js"></script>
+
+  
+
+
+<aside class="search-modal" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
+        aria-label="Search...">
+        
+      </div>
+
+      
+      
+
+      
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+
+  <div class="page-header header--fixed">
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+    <div class="container-xl">
+
+      
+      <div class="d-none d-lg-inline-flex">
+        <a class="navbar-brand" href="/">Sol Messing</a>
+      </div>
+      
+
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+      <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+      
+      <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+        <a class="navbar-brand" href="/">Sol Messing</a>
+      </div>
+      
+
+      
+      
+      <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+        
+        <ul class="navbar-nav d-md-inline-flex">
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#about"><span>Home</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#featured"><span>Publications</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#posts"><span>Posts</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#projects"><span>Projects</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#media"><span>Media</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#mybio"><span>Bio</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/techsetup/"><span>Tech Stack</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/disclosures/"><span>Disclosures</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#contact"><span>Contact</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/pdf/CV/CV.pdf"><span>CV</span></a>
+          </li>
+
+          
+          
+
+        
+
+          
+        </ul>
+      </div>
+
+      <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+        
+        
+          
+        
+
+        
+        
+        
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
+
+        
+        
+        
+        <li class="nav-item dropdown theme-dropdown">
+          <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-label="Display preferences">
+            <i class="fas fa-moon" aria-hidden="true"></i>
+          </a>
+          <div class="dropdown-menu">
+            <a href="#" class="dropdown-item js-set-theme-light">
+              <span>Light</span>
+            </a>
+            <a href="#" class="dropdown-item js-set-theme-dark">
+              <span>Dark</span>
+            </a>
+            <a href="#" class="dropdown-item js-set-theme-auto">
+              <span>Automatic</span>
+            </a>
+          </div>
+        </li>
+        
+
+        
+        
+
+      </ul>
+
+    </div>
+  </nav>
+</header>
+
+
+  </div>
+
+  <div class="page-body">
+    
+    
+    
+
+    <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+<div class="article-container pt-3">
+  <h1>Insight From Cleveland And Tufte On Plotting Numeric Data By Groups</h1>
+
+  
+
+  
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+          Last updated on
+      
+    
+    Mar 5, 2017
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    13 min read
+  </span>
+  
+
+  
+  
+  
+  
+
+  
+  
+
+</div>
+
+  
+
+
+
+
+<div class="btn-links mb-3">
+  
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+  
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+</div>
+
+
+<div class="article-header article-container featured-image-wrapper mt-4 mb-4" style="max-width: 720px; max-height: 932px;">
+  <div style="position: relative">
+    <img src="/post/visualization-series-insight-from-cleveland-and-tufte-on-plotting-numeric-data-by-groups/featured_hu_c658b806121ca896.webp" width="720" height="932" alt="" class="featured-image">
+    <span class="article-header-caption">dotplot of story ratings from news reading experiment</span>
+  </div>
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <p>After my post on making <a href="http://solomonmessing.wordpress.com/2011/11/26/putting-it-all-together-concise-code-to-make-dotplots-with-weighted-bootstrapped-standard-errors/" target="_blank" rel="noopener">dotplots with concise code using plyr and ggplot</a>, I got an email from my dad who practices immigration law and runs a <a href="http://www.messinglawoffices.com/default.aspx" target="_blank" rel="noopener">website with a variety of immigration resources and tools</a>.  He pointed out that the post was written for folks who already know that they want to make dot plots, and who already know about bootstrapped standard errors.  That&rsquo;s not many people.</p>
+<p>In an attempt to appeal to a broader audience, I&rsquo;m starting a series in which I&rsquo;ll outline the key principles I use when developing a visualization.  In this post, I&rsquo;ll articulate these principles, which combine some of Tuft&rsquo;s aesthetic guidelines with Cleveland&rsquo;s scientific approach to visualization, which is based on the psychological processes involved in making sense of visualizations, and has been rigorously tested via randomized controlled experiments.  Based on these principles, I&rsquo;ll argue that dotplots and scatterplots are better than other types of plots (especially pie charts) in most situations.  In later posts, I&rsquo;ll demonstrate another innovation whose widespread use I&rsquo;ll credit to Cleveland and Tufte: the use of multiple panels (aka small multiples, trellis graphics, facets, generalized draftsman&rsquo;s displays, multivar charts) to clearly convey the same information embedded in more complex and difficult to read visualizations, including multiple line plots and mosaic plots. In future posts I&rsquo;ll also emphasize why it is important to provide some indication of the noise present in the underlying data using error bars or bands.  Along the way, I&rsquo;ll put you to the test&ndash;I&rsquo;ll present some visualizations of the same data using different visualization techniques and ask you to try to get as much information as you can in 2 seconds from each type of visualization.</p>
+<p>A good visualization conveys key information to those who may have trouble interpreting numbers and/or statistics, which can make your findings accessible to a wider audience (more on this below).  Visualizations also give your audience a break from lexical processing, which is especially useful when you are presenting your findings&ndash;people can listen to you and process the findings from a well-designed visual at the same time, but most people have trouble listening while reading your PowerPoint bullet points.  Visualizations also convey key information embedded in massive amounts of data, which can aid your own exploratory analysis of data, no matter how massive.</p>
+<p>Yet most visualizations are flawed, drawn using elements that make it unnecessarily difficult for the human visual system to make sense of things.  I see a lot of these visualizations attending research presentations, screening incoming draft manuscripts as the assistant editor for <a href="http://www.tandf.co.uk/journals/upcp" target="_blank" rel="noopener">Political Communication</a>, and as a consumer of media info-graphics (CNN is especially bad, have a look at <a href="http://tech.fortune.cnn.com/tag/pie-chart/" target="_blank" rel="noopener">this monstrosity</a>).  Kevin Fox has an <a href="http://fury.com/2010/03/why-3d-pie-charts-are-bad/" target="_blank" rel="noopener">especially compelling visual speaking to this here</a>. A big part of the problem is that Microsoft makes it easy to draw flashy but ultimately confusing visualizations in Excel.  If you are too busy to read this post in full, follow this short list of guidelines and you&rsquo;ll be on your way to producing elegant visualizations that impose a minimal cognitive burden on your audience:</p>
+<ol>
+<li>
+<p>Never represent something in 2 or <a href="http://www.psdgraphics.com/wp-content/uploads/2009/02/3d_pie_chart.jpg" target="_blank" rel="noopener">worse yet 3 dimensions</a> if it can be represented in one&mdash;NEVER use pie charts, 3-D pie charts, stacked bar charts, or 3-D bar charts.</p>
+</li>
+<li>
+<p>Remove as much chart junk as possible&ndash;unnecessary gridlines, shading, borders, etc.</p>
+</li>
+<li>
+<p>Give your audience a sense of the noise present in your data&ndash;draw error bars or confidence bands if you are plotting estimates.</p>
+</li>
+<li>
+<p>If you want to plot multiple types of groups on a single outcome (the visual analog of cross-tabulations/marginals), use <a href="http://solomonmessing.files.wordpress.com/2011/11/trtbypid2.png?w=640" target="_blank" rel="noopener">multi-paneled plots</a>. These can also help if <a href="http://www.bo.astro.it/~eps/buz10503/ff08.jpg" target="_blank" rel="noopener">overploting looks too cluttered</a>.</p>
+</li>
+<li>
+<p>Avoid mosaic plots. Instead use <a href="http://wiki.stdout.org/rcookbook/Graphs/Facets%20%28ggplot2%29?action=AttachFile&amp;do=get&amp;target=hp_sex_smoker_free_free.png" target="_blank" rel="noopener">paneled histograms</a>.</p>
+</li>
+<li>
+<p>Ditch the legend if you can (you almost always can).</p>
+</li>
+</ol>
+<p>The rest of the content in this series emphasizes why it makes sense to follow these guidelines. In this post I&rsquo;ll look at the first point in detail and touch on the sixth. These two guidelines are most relevant when you want to look at a quantitative variable (e.g., earnings, vote-share, temperature, etc.) across different qualitative groupings (e.g., industry segment, candidate, party, racial group, season, etc.).  This is one of the most common visualization tasks in business, media, and social science, and for this task people often use pie charts and/or bar charts, and occasionally dot plots.</p>
+<p><strong>The science of graphical perception</strong></p>
+<p>When most people think about visualization, they think first of <a href="http://www.edwardtufte.com/tufte/" target="_blank" rel="noopener">Edward Tufte</a>.  Tufte emphasizes integrity to the data, showing relationships between phenomena, and above all else aesthetic minimalism.  I appreciate his ruthless crusade against <a href="http://chartjun%20k.karmanaut.com/" target="_blank" rel="noopener">chart junk</a> and <a href="http://jakeporway.com/2011/08/data-without-borders-logo-contest/" target="_blank" rel="noopener">pie charts (nice quote from Data without Borders)</a>. We share an affinity for multipanel plotting approaches, which he calls &ldquo;small multiples,&rdquo; (thanks to <a href="http://www.stanford.edu/~rjweiss/" target="_blank" rel="noopener">Rebecca Weiss</a> for pointing this out) though I think people give Tufte too much credit for their invention&mdash;both <a href="http://www.juiceanalytics.com/writing/better-know-visualization-small-multiples/" target="_blank" rel="noopener">juiceanalytics</a> and <a href="http://www.infovis-wiki.net/index.php/Small_Multiples" target="_blank" rel="noopener">infovis-wiki</a> write that Cleveland introduced the concept/principle. However, both Cleveland and Tufte published books in 1983 discussing the use of multipanel displays; <a href="http://blog.revolutionanalytics.com/2011/11/small-multiples-of-the-sky.html" target="_blank" rel="noopener">David Smith over at Revolutions</a> writes that &ldquo;the &ldquo;small-multiples&rdquo; principle of data visualization [was] pioneered by Cleveland and popularized in Tufte&rsquo;s first book&rdquo;; and the earliest reference to a work containing multipanel displays I could find was published *long* before Tufte&rsquo;s 1983 work&ndash;Seder, Leonard (1950), &ldquo;Diagnosis with Diagrams—Part I&rdquo;, Industrial Quality Control (New York, New York: American Society for Quality Control) 7 (1): 11–19.</p>
+<iframe src="https://giphy.com/embed/11JbaLzOXsg6Fq" width="200" frameBorder="0" class="giphy-embed" align="right"></iframe>
+I'm less sure about Tufte's advice to always show axes starting at zero, which can make comparison between two groups difficult, and to "show causality," which can end up misleading your readers.  Of course, the visualizations on display in the glossy pages of Tufte's books are beautiful.  But while his books are full of general advice that we should all keep in mind when creating plots, he does not put forth a theory of what works and what doesn't when trying to visualize data. 
+<p>Cleveland (with Robert McGill) develops such a theory and subjects it to rigorous scientific testing. In my last post I linked to one of Cleveland&rsquo;s studies showing that <a href="https://www.cs.ubc.ca/~tmm/courses/cpsc533c-04-spr/readings/cleveland.pdf" target="_blank" rel="noopener">dots (or bars) aligned on the same scale are indeed the best visualization to convey a series of numerical estimates</a>.  In this work, Cleveland examined how accurately our visual system can process visual elements or &ldquo;perceptual units&rdquo; representing underlying data.  These elements include markers aligned on the same scale (e.g., dot plots, scatterplots, ordinary bar charts), the length of lines that are not aligned on the same scale (e.g., stacked bar plots), area (pie charts and mosaic plots), angles (also pie charts), shading/color, volume, curvature, and direction.</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  id="figure-graphical-elements-cleveland">
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="/img/graphicalelementscleveland.png" alt="Graphical Elements (Cleveland)" loading="lazy" data-zoomable /></div>
+  </div><figcaption>
+      Graphical Elements (Cleveland)
+    </figcaption></figure>
+</p>
+<p>He runs two experiments: the first compares judgements about relative position (grouped bar charts) to judgements based only on length (stacked bar charts); the second compares judgements about relative position (ordinary bar charts) to judgements about angles/area (pie charts).  Here are the materials he uses, courtesy of the <a href="http://graphics.stanford.edu/" target="_blank" rel="noopener">Stanford Computer Graphics Lab</a>:</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  id="figure-graphical-perception-experiments">
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="/img/slide012.png" alt="Graphical perception experiments" loading="lazy" data-zoomable /></div>
+  </div><figcaption>
+      Graphical perception experiments
+    </figcaption></figure>
+</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  id="figure-graphical-perception-experiments">
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="/img/slide013.png" alt="Graphical perception experiments" loading="lazy" data-zoomable /></div>
+  </div><figcaption>
+      Graphical perception experiments
+    </figcaption></figure>
+</p>
+<p>The results are resoundingly clear&mdash;judgements about position relative to a baseline are dramatically more accurate than judgements about angles, area, or length (with no baseline).  Hence, he suggests that we replace pie charts with bar charts or dot plots and that we substitute stacked bar charts for grouped bar charts.</p>
+<p>A striking and often overlooked finding in this work is the fact that the group of participants without technical training, &ldquo;mostly ordinary housewives&rdquo; as Cleveland describes them, performed <em>just as well</em> as the group of mostly men with substantial technical training and experience.   This finding provides evidence for something that I&rsquo;ve long suspected: that visualizations make it easier for people lacking quantitative experience to understand your results, serving to level the playing field.  If you want your findings to be broadly accessible, it&rsquo;s probably better to present a visualization rather than a bunch of numbers.  It also suggests that if someone is having trouble interpreting your visualizations, it&rsquo;s probably your fault.</p>
+<p><strong>Dotplots versus pie charts and stacked barplots</strong></p>
+<p>Now let&rsquo;s put this to the test.  Take a look at each visualization below for two seconds, looking for the percent of the vote that Mitt Romney, Ron Paul, and Jon Huntsman got.</p>
+<p><a href="/img/primarydot2.png">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  id="figure-primarydot">
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="/img/primarydot2.png" alt="primaryDot" loading="lazy" data-zoomable /></div>
+  </div><figcaption>
+      primaryDot
+    </figcaption></figure>
+</a><a href="/img/primarypie1.png">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  id="figure-primarypie">
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="/img/primarypie1.png" alt="primaryPie" loading="lazy" data-zoomable /></div>
+  </div><figcaption>
+      primaryPie
+    </figcaption></figure>
+</a><a href="/img/primarystacked.png">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  id="figure-primarystacked">
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="/img/primarystacked.png" alt="primaryStacked" loading="lazy" data-zoomable /></div>
+  </div><figcaption>
+      primaryStacked
+    </figcaption></figure>
+</a></p>
+<p>Which is easiest to read? Which conveys information most accurately? Let&rsquo;s first take a look at the most critical information&ndash;the order in which the candidates placed.  In all plots, the candidates are arrayed in order from highest to least vote share, and it&rsquo;s easy to see that Mitt won.  But once we start looking at who came in second, third, and so on, differences emerge.  It&rsquo;s slightly harder to process order in the pie chart because your eye has to go around the plot rather than up and down in a straight line.  In the stacked bar chart, we need to look up which color corresponds to which candidate&rsquo;s in the legend (as Tufte told us not to use), adding a layer of cognitive processing.</p>
+<p>Second, which conveys estimates most accurately? The dot plot is the clear winner here.  We can quickly see that Romney got about 37%, Paul got about 24%, and Huntsman got about 16%, just by looking at dots relative to the axis.  When we look at the pie chart, it&rsquo;s really tough to estimate the exact percent each candidate got.  Same with the stacked bar chart. We could add numbers to the pie and bar charts, which would even things out to some extent, but then why not just display a table with exact percents?</p>
+<p>One argument I used to hear all the time when I worked in industry is that pie charts &ldquo;convey a sense of proportion.&rdquo;  Well, sure, I guess I can kind of guestimate that Ron Paul&rsquo;s vote share is about 1/4.  What about Jon Huntsman? Hmm, it looks like about 15 percent, which is 3/20.  But wait, why do I want to convert things into fractions anyway? I don&rsquo;t think in terms of fractions, I think in terms of percents.  And if I really care about proportion, I suppose I could extend the axis from 0 to 100.</p>
+<p>Suppose I want to plot results for the top 15 candidates, not just the top 6?  Here&rsquo;s what happens:</p>
+<p><a href="/img/primarydot15.png">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  id="figure-primarydot15">
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="/img/primarydot15.png" alt="primaryDot15" loading="lazy" data-zoomable /></div>
+  </div><figcaption>
+      primaryDot15
+    </figcaption></figure>
+</a><a href="/img/primarypie15.png">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  id="figure-primarypie15">
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="/img/primarypie15.png" alt="primaryPie15" loading="lazy" data-zoomable /></div>
+  </div><figcaption>
+      primaryPie15
+    </figcaption></figure>
+</a></p>
+<p>No contest, the pie chart fails completely.  We&rsquo;d need to add a legend with colors for each candidate, which adds another layer of cognitive processing&ndash;we&rsquo;d need to look up each color in the lengend as we go.  And even after adding the legend, you wouldn&rsquo;t be able to distinguish the lower performing candidates from say write-in votes because the pie slices would be too small.  The stacked bar chart will fail for the same reasons, so I&rsquo;ve excluded it in the interest of brevity.  Note that we don&rsquo;t need to add colors to the dotplot to convey the same information, which saves an extra plotting element that we can use to represent something else (say candidate&rsquo;s campaign funds or total assets).  And, on top of it all, the dot plot takes up less screen/page real estate!</p>
+<p>Why do I use dot plots instead of ordinary bar charts? A <a href="http://www.perceptualedge.com/articles/b-eye/encoding_values_in_graph.pdf" target="_blank" rel="noopener">nice visualization guide from perceptualedge.com</a> points out that often we want to only visualize differences between groups in a narrow range (they use an example wherein monthly expenses vary from $4,250-$5,500). But the length of a bar is supposed to facilitate accurate comparisons between values, so when you use a bar plot starting from $4,250, the length between bars dramatically exaggerates the actual differences. Dot plots do not have this problem because dot encode values using only location, so one must reference the axis to interpret the value.</p>
+<p>A related points is that bars are often used to convey counts&ndash;we use them in histograms to represent frequency and track say counts of dollars earned/raised in bar charts.  In fact, a team of doctors I work with at the med school recently sent in a manuscript to Radiology containing a bar chart plotting mean values between groups; they got back the following comment from the statistical reviewer: &ldquo;the y-axis is quantitative but the data are represented using bars as if the data were counts.&rdquo;  People often use bar plots to convey estimates of means (and <a href="http://www.stanford.edu/~messing/APSAPoster.pdf" target="_blank" rel="noopener">I&rsquo;ve certainly done this</a>), which can serve to exaggerate differences in means and hence effect sizes if you do not plot the bars from zero.</p>
+<p>In addition, dot plots have aesthetic advantages.  They convey the numerical estimate in question with a single one-dimensional point, rather than a two dimensional bar.  There&rsquo;s simply less that the eye needs to process.  Accordingly, if a pattern across qualitative groupings exists, it&rsquo;s often easier to see with a dot plot.  For example, below I plot the average user ratings for each article to which <a href="http://www.stanford.edu/~seanjw/" target="_blank" rel="noopener">Sean Westwood</a> and I exposed subjects in a news reading experiment.  The pattern that emerges is an &ldquo;S&rdquo; curve in which one or two stories dominate the ratings, most are sort of average, and a few are uniformly terrible. Note that you&rsquo;d probably want to use something like this more for yourself than to communicate your results to others as it might overload your audience with too much information&ndash;you&rsquo;d do better to select a subset of these articles or remove some of the ones in the middle (thanks to Yph Lelkes for making this point).</p>
+<p><a href="/img/dotplot-story-rating.png">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  id="figure-dotplot-story-rating">
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="/img/dotplot-story-rating.png" alt="dotplot-story-rating" loading="lazy" data-zoomable /></div>
+  </div><figcaption>
+      dotplot-story-rating
+    </figcaption></figure>
+</a></p>
+<p>One question that remains is if pie charts are so bad, why are they so common? Perhaps we like them because we find them comforting just as we find pies and pizza? Well if so we&rsquo;d expect pie charts to be less common in places like Japan and China where people grow up eating different food.  Consider info-graphics in newspapers: I haven&rsquo;t yet done a systematic content analysis, but I was unable to find a single pie chart in Japan&rsquo;s Yomimuri Shimbun nor the Asahi Shimbun; nor in China&rsquo;s Beijing Daily nor Sing Tao Daily.  I did see plenty of maps, however, which I suppose one could argue are reminiscent of noodles.</p>
+<p><strong>Implementation</strong></p>
+<p>The most efficient way to produce solid visualizations with the ability to implement multiple panels, proper standard error estimates, and dot plots is probably in R using the ggplot2 package.  If you do not have time to learn R and remain tied to MS-Excel stick to ordinary barplots to visualize quantitative variables among multiple groups (not recommended).</p>
+<p>Otherwise, if you don&rsquo;t already use it, <a href="http://cran.r-project.org/" target="_blank" rel="noopener">download R</a> and a decent editor like <a href="http://rstudio.org/" target="_blank" rel="noopener">Rstudio</a>.  Then get started with ggplot2 and dot plots by running the following code chunk which will replicate the election figure above:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">pres</span> <span class="o">&lt;-</span> <span class="nf">read.csv</span><span class="p">(</span><span class="s">&#34;https://SolomonMg.github.io/img/primaryres.csv&#34;</span><span class="p">,</span> <span class="n">as.is</span><span class="o">=</span><span class="bp">T</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># sort data in order of percent of vote:</span>
+</span></span><span class="line"><span class="cl"><span class="n">pres</span> <span class="o">&lt;-</span> <span class="n">pres</span><span class="nf">[order</span><span class="p">(</span><span class="n">pres</span><span class="o">$</span><span class="n">Percentage</span><span class="p">,</span> <span class="n">decreasing</span><span class="o">=</span><span class="bp">T</span><span class="p">),</span> <span class="n">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># only show top 15 candidates:</span>
+</span></span><span class="line"><span class="cl"><span class="n">pres</span> <span class="o">&lt;-</span> <span class="n">pres[1</span><span class="o">:</span><span class="m">15</span><span class="p">,</span><span class="n">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># create a precentage variable</span>
+</span></span><span class="line"><span class="cl"><span class="n">pres</span><span class="o">$</span><span class="n">Percentage</span> <span class="o">&lt;-</span> <span class="n">pres</span><span class="o">$</span><span class="n">Percentage</span><span class="o">*</span><span class="m">100</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># reorder the Candidate factor by percentage for plotting purposes:</span>
+</span></span><span class="line"><span class="cl"><span class="n">pres</span><span class="o">$</span><span class="n">Candidate</span> <span class="o">&lt;-</span> <span class="nf">reorder</span><span class="p">(</span><span class="n">pres</span><span class="o">$</span><span class="n">Candidate</span><span class="p">,</span> <span class="n">pres</span><span class="o">$</span><span class="n">Percentage</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># To install ggplot2, run the following line after deleting the #</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#install.packages(&#34;ggplot2&#34;)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">ggplot2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">ggplot</span><span class="p">(</span><span class="n">pres</span><span class="p">,</span> <span class="nf">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">Percentage</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="nf">factor</span><span class="p">(</span><span class="n">Candidate</span><span class="p">)</span> <span class="p">))</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl"><span class="nf">geom_point</span><span class="p">()</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl"><span class="nf">theme_bw</span><span class="p">()</span> <span class="o">+</span> <span class="nf">xlab</span><span class="p">(</span><span class="s">&#34;Percent of Vote&#34;</span><span class="p">)</span> <span class="o">+</span> <span class="nf">ylab</span><span class="p">(</span><span class="s">&#34;Candidate&#34;</span><span class="p">)</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl"><span class="nf">ggtitle</span><span class="p">(</span><span class="s">&#34;New Hampshire Primary 2012&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><p>After loading our data and running a few preliminary data processing operations, we pass ggplot our data set, &ldquo;pres,&rdquo; then we tell it what aesthetic elements we want to use, in this case that x is going to be our &ldquo;Percentage&rdquo; variable and y is going to be our &ldquo;Candidate&rdquo; variable. We tell ggplot that we want to display points for every xy pair. We also tell it to use the black and white theme, and pass some obscure axis options that ensures the axis plot correctly. Then we tell it what to label the x and y axis, and give it a title.</p>
+<p>We can also reproduce the article ratings by story plot above using ggplot2 (even though I originally produced the plot using the lattice package).</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1"># To install ggplot2, run the following line after deleting the #</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#install.packages(&#34;ggplot2&#34;)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">ggplot2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">load</span><span class="p">(</span><span class="nf">file</span><span class="p">(</span><span class="s">&#34;https://SolomonMg.github.io/img/db.Rda&#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># if you haven&#39;t installed dplyr, delete the # and run this line:</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># install.packages(&#34;dplyr&#34;)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">dplyr</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">table</span><span class="p">(</span><span class="n">db</span><span class="o">$</span><span class="n">story</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># first we use plyr to calculate the mean rating and SE for each story</span>
+</span></span><span class="line"><span class="cl"><span class="n">ratingdat</span> <span class="o">&lt;-</span> <span class="n">db</span> <span class="o">%&gt;%</span> <span class="nf">group_by</span><span class="p">(</span><span class="n">story</span><span class="p">)</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl"><span class="nf">summarise</span><span class="p">(</span><span class="n">M</span> <span class="o">=</span> <span class="nf">mean</span><span class="p">(</span><span class="n">rating</span><span class="p">,</span> <span class="n">na.rm</span><span class="o">=</span><span class="bp">T</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl"><span class="n">SE</span> <span class="o">=</span> <span class="nf">sd</span><span class="p">(</span><span class="n">rating</span><span class="p">,</span> <span class="n">na.rm</span><span class="o">=</span><span class="bp">T</span><span class="p">)</span><span class="o">/</span><span class="nf">sqrt</span><span class="p">(</span><span class="nf">length</span><span class="p">(</span><span class="nf">na.omit</span><span class="p">(</span><span class="n">rating</span><span class="p">))),</span>
+</span></span><span class="line"><span class="cl"><span class="n">N</span> <span class="o">=</span> <span class="nf">length</span><span class="p">(</span><span class="nf">na.omit</span><span class="p">(</span><span class="n">rating</span><span class="p">)))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># make story into an ordered factor, ordering by mean rating:</span>
+</span></span><span class="line"><span class="cl"><span class="n">ratingdat</span><span class="o">$</span><span class="n">story</span> <span class="o">&lt;-</span> <span class="nf">factor</span><span class="p">(</span><span class="n">ratingdat</span><span class="o">$</span><span class="n">story</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">ratingdat</span><span class="o">$</span><span class="n">story</span> <span class="o">&lt;-</span> <span class="nf">reorder</span><span class="p">(</span><span class="n">ratingdat</span><span class="o">$</span><span class="n">story</span><span class="p">,</span> <span class="n">ratingdat</span><span class="o">$</span><span class="n">M</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># take a look at our handiwork:</span>
+</span></span><span class="line"><span class="cl"><span class="nf">ggplot</span><span class="p">(</span><span class="n">ratingdat</span><span class="p">,</span> <span class="nf">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">M</span><span class="p">,</span> <span class="n">xmin</span> <span class="o">=</span> <span class="n">M</span><span class="o">-</span><span class="n">SE</span><span class="p">,</span> <span class="n">xmax</span> <span class="o">=</span> <span class="n">M</span><span class="o">+</span><span class="n">SE</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">story</span> <span class="p">))</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl"><span class="nf">geom_point</span><span class="p">()</span> <span class="o">+</span> <span class="nf">geom_segment</span><span class="p">(</span> <span class="nf">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">M</span><span class="o">-</span><span class="n">SE</span><span class="p">,</span> <span class="n">xend</span> <span class="o">=</span> <span class="n">M</span><span class="o">+</span><span class="n">SE</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="n">y</span> <span class="o">=</span> <span class="n">story</span><span class="p">,</span> <span class="n">yend</span><span class="o">=</span><span class="n">story</span><span class="p">))</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl"><span class="nf">theme_bw</span><span class="p">()</span> <span class="o">+</span> <span class="nf">xlab</span><span class="p">(</span><span class="s">&#34;Mean rating&#34;</span><span class="p">)</span> <span class="o">+</span> <span class="nf">ylab</span><span class="p">(</span><span class="s">&#34;Story&#34;</span><span class="p">)</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl"><span class="nf">ggtitle</span><span class="p">(</span><span class="s">&#34;Rating article by Story, with SE&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Now save</span>
+</span></span><span class="line"><span class="cl"><span class="nf">ggsave</span><span class="p">(</span><span class="n">file</span><span class="o">=</span><span class="s">&#34;plots/dotplot-story-rating.pdf&#34;</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="m">14</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="m">8.5</span><span class="p">)</span>
+</span></span></code></pre></div>
+    </div>
+
+    
+
+
+
+
+
+
+
+<div class="share-box">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fsolmessing.netlify.app%2Fpost%2Fvisualization-series-insight-from-cleveland-and-tufte-on-plotting-numeric-data-by-groups%2F&amp;text=Insight&#43;From&#43;Cleveland&#43;And&#43;Tufte&#43;On&#43;Plotting&#43;Numeric&#43;Data&#43;By&#43;Groups" target="_blank" rel="noopener" class="share-btn-twitter" aria-label="twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fsolmessing.netlify.app%2Fpost%2Fvisualization-series-insight-from-cleveland-and-tufte-on-plotting-numeric-data-by-groups%2F&amp;t=Insight&#43;From&#43;Cleveland&#43;And&#43;Tufte&#43;On&#43;Plotting&#43;Numeric&#43;Data&#43;By&#43;Groups" target="_blank" rel="noopener" class="share-btn-facebook" aria-label="facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+        
+      
+      <li>
+        <a href="mailto:?subject=Insight%20From%20Cleveland%20And%20Tufte%20On%20Plotting%20Numeric%20Data%20By%20Groups&amp;body=https%3A%2F%2Fsolmessing.netlify.app%2Fpost%2Fvisualization-series-insight-from-cleveland-and-tufte-on-plotting-numeric-data-by-groups%2F" target="_blank" rel="noopener" class="share-btn-email" aria-label="envelope">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=https%3A%2F%2Fsolmessing.netlify.app%2Fpost%2Fvisualization-series-insight-from-cleveland-and-tufte-on-plotting-numeric-data-by-groups%2F&amp;title=Insight&#43;From&#43;Cleveland&#43;And&#43;Tufte&#43;On&#43;Plotting&#43;Numeric&#43;Data&#43;By&#43;Groups" target="_blank" rel="noopener" class="share-btn-linkedin" aria-label="linkedin-in">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="whatsapp://send?text=Insight&#43;From&#43;Cleveland&#43;And&#43;Tufte&#43;On&#43;Plotting&#43;Numeric&#43;Data&#43;By&#43;Groups%20https%3A%2F%2Fsolmessing.netlify.app%2Fpost%2Fvisualization-series-insight-from-cleveland-and-tufte-on-plotting-numeric-data-by-groups%2F" target="_blank" rel="noopener" class="share-btn-whatsapp" aria-label="whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=https%3A%2F%2Fsolmessing.netlify.app%2Fpost%2Fvisualization-series-insight-from-cleveland-and-tufte-on-plotting-numeric-data-by-groups%2F&amp;title=Insight&#43;From&#43;Cleveland&#43;And&#43;Tufte&#43;On&#43;Plotting&#43;Numeric&#43;Data&#43;By&#43;Groups" target="_blank" rel="noopener" class="share-btn-weibo" aria-label="weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+  
+  
+    
+  
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+      
+      <a href="https://solmessing.netlify.app/"><img class="avatar mr-3 avatar-circle" src="/authors/admin/avatar_hu_f80f7a070f1bfe14.jpeg" alt="Sol Messing"></a>
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="https://solmessing.netlify.app/">Sol Messing</a></h5>
+      <h6 class="card-subtitle">Research Associate Professor</h6>
+      <p class="card-text">Sol Messing is Research Associate Professor at New York University</p>
+      <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="/#contact" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://twitter.com/SolomonMg" target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://scholar.google.com/citations?user=to63kiAAAAAJ&amp;hl=en" target="_blank" rel="noopener">
+        <i class="ai ai-google-scholar"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="http://github.com/solomonmg" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="/pdf/CV/CV.pdf" >
+        <i class="ai ai-cv"></i>
+      </a>
+    </li>
+  
+</ul>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+</article>
+  </div>
+
+  <div class="page-footer">
+    
+    
+    <div class="container">
+      <footer class="site-footer">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+    
+  
+  
+    
+  
+
+  
+
+  
+  <p class="powered-by copyright-license-text">
+    ©2023 Sol Messing. This work is licensed under XX
+  </p>
+  
+
+  <p class="powered-by footer-license-icons">
+    <a href="https://creativecommons.org/licenses/by-nc-nd/4.0" rel="noopener noreferrer" target="_blank" aria-label="Creative Commons">
+      <i class="fab fa-creative-commons fa-2x" aria-hidden="true"></i>
+      <i class="fab fa-creative-commons-by fa-2x" aria-hidden="true"></i>
+      
+        <i class="fab fa-creative-commons-nc fa-2x" aria-hidden="true"></i>
+      
+      
+        <i class="fab fa-creative-commons-nd fa-2x" aria-hidden="true"></i>
+      
+    </a>
+  </p>
+
+
+
+
+
+  <p class="powered-by">
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      Published with <a href="https://hugoblox.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Hugo Blox Builder</a> — the free, <a href="https://github.com/HugoBlox/hugo-blox-builder" target="_blank" rel="noopener">open source</a> website builder that empowers creators.
+    
+  </p>
+</footer>
+
+    </div>
+    
+  </div>
+
+  
+
+
+<script src="/js/vendor-bundle.min.d613345003d21781ec611233eea95b85.js"></script>
+
+
+
+
+  
+
+  
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script id="search-hit-fuse-template" type="text/x-template">
+    <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+    </div>
+  </script>
+  
+    <script src="https://cdn.jsdelivr.net/gh/krisk/Fuse@v3.2.1/dist/fuse.min.js" integrity="sha512-o38bmzBGX+hD3JHWUFCDA09btWaqrNmoJ3RXLlrysA7PP01Kgs4UlE4MhelE1v5dJR3+cxlR4qQlotsW7jKsnw==" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/gh/julmot/mark.js@8.11.1/dist/jquery.mark.min.js" integrity="sha512-mhbv5DqBMgrWL+32MmsDOt/OAvqr/cHimk6B8y/bx/xS88MVkYGPiVv2ixKVrkywF2qHplNRUvFsAHUdxZ3Krg==" crossorigin="anonymous"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script id="page-data" type="application/json">{"use_headroom":true}</script>
+
+
+  <script src="/js/wowchemy-headroom.b95a7e109243f29d04930ae8cb49a756.js" type="module"></script>
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+<script src="/en/js/wowchemy.min.69fc52a6dc16aaf1a452cfbb36466dac.js"></script>
+
+
+
+
+
+
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        
+        <pre><code></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <script src="/js/wowchemy-publication.9c0e895144aef5a693008b5c5d450147.js" type="module"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

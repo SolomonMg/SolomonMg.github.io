@@ -1,0 +1,1683 @@
+<!DOCTYPE html>
+<!-- This site was created with Hugo Blox. https://hugoblox.com -->
+<!-- Last Published: October 28, 2025 --><html lang="en-us" >
+
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  
+  
+    <meta name="generator" content="Hugo Blox Builder 5.9.7" />
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+
+  
+  
+  
+    
+      
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
+    
+  
+
+  
+  
+
+  
+  
+
+  
+
+  <link rel="stylesheet" href="/css/vendor-bundle.min.26c458e6907dc03073573976b7f4044e.css" media="print" onload="this.media='all'">
+
+  
+  
+  
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1.9.4/css/academicons.min.css" integrity="sha512-IW0nhlW5MgNydsXJO40En2EoCkTTjZhI3yuODrZIc8cQ4h1XcF53PsqDHa09NqnkXuIe0Oiyyj171BqZFwISBw==" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+    
+    
+    
+      
+      
+    
+    
+    
+
+    
+    
+    
+
+    
+
+    
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+        
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+  
+
+  
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.5adeb309104bf059bfce5194cee5d4d8.css" />
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+    
+    
+    <link rel="stylesheet" href="/css/libs/chroma/github-light.min.css" title="hl-light" media="print" onload="this.media='all'" >
+    <link rel="stylesheet" href="/css/libs/chroma/dracula.min.css" title="hl-dark" media="print" onload="this.media='all'" disabled>
+  
+
+  
+  
+
+
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9XTZZP2CJ8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url, target) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           if (target !== '_blank') {
+             document.location = url;
+           }
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target, event.target.getAttribute('target'));  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'G-9XTZZP2CJ8', {});
+  gtag('set', {'cookie_flags': 'SameSite=None;Secure'});
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+
+
+
+
+
+  <meta name="author" content="Sol Messing" />
+
+
+
+
+
+  
+
+<meta name="description" content="Early projections for 2024 based on previous Presidential and House returns slighly favor Republicans. These projections are completely unrelated to Biden’s recent polling numbers.
+" />
+
+
+
+<link rel="alternate" hreflang="en-us" href="https://solmessing.netlify.app/post/election_projection_regularized_swing/" />
+<link rel="canonical" href="https://solmessing.netlify.app/post/election_projection_regularized_swing/" />
+
+
+
+  <link rel="manifest" href="/manifest.webmanifest" />
+
+
+
+<link rel="icon" type="image/png" href="/media/icon_hu_b6b141330a993e2f.png" />
+<link rel="apple-touch-icon" type="image/png" href="/media/icon_hu_bdf5fe8f122b026c.png" />
+
+<meta name="theme-color" content="#1565c0" />
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+<meta property="twitter:card" content="summary_large_image" />
+
+  <meta property="twitter:site" content="@SolomonMg" />
+  <meta property="twitter:creator" content="@SolomonMg" />
+<meta property="twitter:image" content="https://solmessing.netlify.app/post/election_projection_regularized_swing/featured.png" />
+
+
+
+  
+
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="Sol Messing" />
+<meta property="og:url" content="https://solmessing.netlify.app/post/election_projection_regularized_swing/" />
+<meta property="og:title" content="An Early Election 2024 Forecast | Sol Messing" />
+<meta property="og:description" content="Early projections for 2024 based on previous Presidential and House returns slighly favor Republicans. These projections are completely unrelated to Biden’s recent polling numbers." /><meta property="og:image" content="https://solmessing.netlify.app/post/election_projection_regularized_swing/featured.png" /><meta property="og:locale" content="en-us" />
+
+  
+    <meta
+      property="article:published_time"
+      content="2024-01-11T00:00:00&#43;00:00"
+    />
+  
+  
+    <meta property="article:modified_time" content="2024-01-11T00:00:00&#43;00:00">
+  
+
+
+
+
+
+
+    
+
+
+
+
+
+
+  
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://solmessing.netlify.app/post/election_projection_regularized_swing/"
+  },
+  "headline": "An Early Election 2024 Forecast",
+  
+  "image": [
+    "https://solmessing.netlify.app/post/election_projection_regularized_swing/featured.png"
+  ],
+  
+  "datePublished": "2024-01-11T00:00:00Z",
+  "dateModified": "2024-01-11T00:00:00Z",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Sol Messing"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Sol Messing",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://solmessing.netlify.app/media/icon_hu_3baeddb697bfad35.png"
+    }
+  },
+  "description": "\u003cp\u003eEarly projections for 2024 based on previous Presidential and House returns slighly favor Republicans. These projections are completely unrelated to Biden’s recent polling numbers.\u003c/p\u003e"
+}
+</script>
+
+  
+
+  
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  
+
+
+  
+  <title>An Early Election 2024 Forecast | Sol Messing</title>
+
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="a55f0372b4733a5f6a46df8ad7524dfb" >
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.9e4214442a7711d35691acd58f6f6361.js"></script>
+
+  
+
+
+<aside class="search-modal" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
+        aria-label="Search...">
+        
+      </div>
+
+      
+      
+
+      
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+
+  <div class="page-header header--fixed">
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+    <div class="container-xl">
+
+      
+      <div class="d-none d-lg-inline-flex">
+        <a class="navbar-brand" href="/">Sol Messing</a>
+      </div>
+      
+
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+      <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+      
+      <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+        <a class="navbar-brand" href="/">Sol Messing</a>
+      </div>
+      
+
+      
+      
+      <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+        
+        <ul class="navbar-nav d-md-inline-flex">
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#about"><span>Home</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#featured"><span>Publications</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#posts"><span>Posts</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#projects"><span>Projects</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#media"><span>Media</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#mybio"><span>Bio</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/techsetup/"><span>Tech Stack</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/disclosures/"><span>Disclosures</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#contact"><span>Contact</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/pdf/CV/CV.pdf"><span>CV</span></a>
+          </li>
+
+          
+          
+
+        
+
+          
+        </ul>
+      </div>
+
+      <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+        
+        
+          
+        
+
+        
+        
+        
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
+
+        
+        
+        
+        <li class="nav-item dropdown theme-dropdown">
+          <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-label="Display preferences">
+            <i class="fas fa-moon" aria-hidden="true"></i>
+          </a>
+          <div class="dropdown-menu">
+            <a href="#" class="dropdown-item js-set-theme-light">
+              <span>Light</span>
+            </a>
+            <a href="#" class="dropdown-item js-set-theme-dark">
+              <span>Dark</span>
+            </a>
+            <a href="#" class="dropdown-item js-set-theme-auto">
+              <span>Automatic</span>
+            </a>
+          </div>
+        </li>
+        
+
+        
+        
+
+      </ul>
+
+    </div>
+  </nav>
+</header>
+
+
+  </div>
+
+  <div class="page-body">
+    
+    
+    
+
+    <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+<div class="article-container pt-3">
+  <h1>An Early Election 2024 Forecast</h1>
+
+  
+  <p class="page-subtitle">Estimating State-Level Swing with Shrinkage Beat the Polls in 2020. Here&rsquo;s the Forecast for Election 2024.</p>
+  
+
+  
+
+
+<div class="article-metadata">
+
+  
+  
+  
+  
+  <div>
+    
+
+  <span >
+      Sol Messing</span>
+  </div>
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Jan 11, 2024
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    7 min read
+  </span>
+  
+
+  
+  
+  
+  
+
+  
+  
+
+</div>
+
+  
+
+
+
+
+
+</div>
+
+
+<div class="article-header article-container featured-image-wrapper mt-4 mb-4" style="max-width: 720px; max-height: 417px;">
+  <div style="position: relative">
+    <img src="/post/election_projection_regularized_swing/featured_hu_e47718cc3689eaa5.webp" width="720" height="417" alt="" class="featured-image">
+    <span class="article-header-caption">Battleground Projections for 2024.</span>
+  </div>
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <p>Early projections for 2024 based on previous Presidential and House returns slighly favor Republicans. These projections are completely unrelated to Biden’s recent polling numbers.</p>
+<!-- ![](/img/Map_for_2024_JS_Swing.png "A simple forecasted map for 2024. Created https://www.270towin.com/maps/WWE2B.") -->
+<p>Here&rsquo;s the story behind this approach: In early 2020, I ran battleground state election forecasts for Acronym. The results suggested Georgia would be extremely competitive—and Acronym spent more $ there than many other non-profit actors. After the election, we could see that those projections had much lower forecasting error than polling data <a href="https://solomonmg.github.io/post/what-the-polls-got-wrong-in-2020/" target="_blank" rel="noopener">https://solomonmg.github.io/post/what-the-polls-got-wrong-in-2020/</a>.</p>
+<p>Because this approach does not use polling data, it&rsquo;s not suspetible to any of the potential problems with polls I talk about in that post: undecided voters breaking late, low education non-response, bad likely voter modeling, partisan non-response, shy Trumpers, etc.</p>
+<p>The core idea behind this approach is a fact not emphasized enough in most stats/ML courses: if you’re going to try to predict something, it’s very hard to do better than using the same variable at t - 1 if you can. And we can. This approach goes one step further and looks at the direction that variable has been moving and assume that things are likely to keep moving in that same direction.</p>
+<p>What that means for presidential election forecasts: for each state, estimate the &ldquo;swing&rdquo; from 2016 to 2020 for president and 2018-2022 for the U.S. house; then simply add that to 2020 presidential returns. Then those estimates of state-level swing are regularized&mdash;mathematically ``nudged&rsquo;&rsquo; toward national trends, which you’ll like if you believe “uniform swing” is particularly important. The projected state-level swing is weighted 60-40 toward presidential results.</p>
+<p>Here&rsquo;s a cleaner plot showing the actual forecast values in potential 2024 battleground states:</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  id="figure-a-simple-forecast-for-2024-battleground-states-hat-tip-to-tom-cunninghamhttpstecunninghamgithubio-who-suggested-this-plot-design">
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="/img/EstStateDemVote.png" alt="A simple forecast for 2024 battleground states. Hat tip to [Tom Cunningham](https://tecunningham.github.io) who suggested this plot design." loading="lazy" data-zoomable /></div>
+  </div><figcaption>
+      A simple forecast for 2024 battleground states. Hat tip to <a href="https://tecunningham.github.io" target="_blank" rel="noopener">Tom Cunningham</a> who suggested this plot design.
+    </figcaption></figure>
+</p>
+<p>I should now point to a link to the data and code: <a href="https://github.com/SolomonMg/election_projection_regularized_swing" target="_blank" rel="noopener">https://github.com/SolomonMg/election_projection_regularized_swing</a>, and thank the <a href="https://electionlab.mit.edu" target="_blank" rel="noopener">MIT Election Data + Science Lab</a> for curating <a href="https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/42MVDX" target="_blank" rel="noopener">these</a> <a href="https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/IG0UN2" target="_blank" rel="noopener">data</a>.</p>
+<h3 id="electoral-math">Electoral Math:</h3>
+<p>I&rsquo;m going to rely on <a href="https://www.270towin.com" target="_blank" rel="noopener">www.270towin.com</a> to translate these projections into an electoral map. A better way to do this might be to come up with conservative estimates of error and simulate a few thousand elections, but I&rsquo;m not estimating an extremely rigorous Bayesian model nor including enough extant data to really justify a FiveThirtyEight style forecast.</p>
+<p>If you call anything lower than a 3 point margin either way a &ldquo;tossup,&rdquo; here&rsquo;s what the electoral map looks like:</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  id="figure-elecotral-map-for-2024-lower-than-a-3-margin-is-a-tossup-created-httpswww270towincommapswwe2b">
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="/img/Map_for_2024_JS_Swing.png" alt="Elecotral map for 2024, lower than a 3% margin is a tossup. Created https://www.270towin.com/maps/WWE2B." loading="lazy" data-zoomable /></div>
+  </div><figcaption>
+      Elecotral map for 2024, lower than a 3% margin is a tossup. Created <a href="https://www.270towin.com/maps/WWE2B" target="_blank" rel="noopener">https://www.270towin.com/maps/WWE2B</a>.
+    </figcaption></figure>
+</p>
+<p>That looks OK for Biden, but if you really trust this approach, you might want to say anything lower than 2% is a tossup. Then the electoral math looks very bad for Biden:</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  id="figure-elecotral-map-for-2024-lower-than-a-2-margin-is-a-tossup-created-httpswww270towincommapswwexg">
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="/img/Map_for_2024_JS_margin2Swing.png" alt="Elecotral map for 2024, lower than a 2% margin is a tossup. Created https://www.270towin.com/maps/WWExg." loading="lazy" data-zoomable /></div>
+  </div><figcaption>
+      Elecotral map for 2024, lower than a 2% margin is a tossup. Created <a href="https://www.270towin.com/maps/WWExg" target="_blank" rel="noopener">https://www.270towin.com/maps/WWExg</a>.
+    </figcaption></figure>
+</p>
+<h3 id="observation-polarization-and-accuracy">Observation: Polarization and Accuracy</h3>
+<p>These projections essentially assume party identification, demographic trends, and voting behavior will mostly continue in the same general direction as in the past. They should have a lot of appeal if you think polarization means most people have already made up their minds about who to vote for for President, that Presidential campaign effects are relatively small (in equilibrium at least), and/or that “demographics are destiny.” What&rsquo;s more, the results are regularized toward national trends, which you’ll like if you believe that <a href="https://press.uchicago.edu/ucp/books/book/chicago/I/bo27596045.html" target="_blank" rel="noopener">local politics has been ``nationalized,&rsquo;&rsquo; as Dan Hopkins argues</a> and thus that <a href="https://projects.fivethirtyeight.com/2020-swing-states/" target="_blank" rel="noopener">“uniform swing” in the electorate is an increasingly important factor explaining state-level election results</a>&mdash;despite that Florida bucked the national trend in 2020.</p>
+<p>In fact, over time, as polarization seems to worsen, this approach improves in accuracy:</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  id="figure-backtested-forecasts-improve-in-accuracy-over-time-and-2020-was-far-easier-to-predict-than-past-elections">
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="/img/Battleground_MAE_projections.png" alt="Backtested forecasts improve in accuracy over time, and 2020 was far easier to predict than past elections." loading="lazy" data-zoomable /></div>
+  </div><figcaption>
+      Backtested forecasts improve in accuracy over time, and 2020 was far easier to predict than past elections.
+    </figcaption></figure>
+</p>
+<p>However, these projections do not account for events since 2022. Older voters pass away and younger voters become eligible to vote changing the makeup of the electorate. Public opinion/sentiment may change related to economic conditions (inflation/income/unemployment/etc), policy developments e.g., related to abortion, international affairs like the Gaza conflict, or candidate-attributes like Biden’s age or Trumps legal troubles.</p>
+<h3 id="observation-patterns-in-us-elections">Observation: Patterns in U.S. Elections</h3>
+<p>These projections also do not explicitly model well-known voting patterns, instead relying on change from one cycle to another to get reasonable estimates. The most notable trend is that the president’s party almost always tends to lose seats in the house in midterm elections. <a href="https://www.jstor.org/stable/2130810" target="_blank" rel="noopener">https://www.jstor.org/stable/2130810</a> <a href="https://fivethirtyeight.com/features/why-the-presidents-party-almost-always-has-a-bad-midterm/" target="_blank" rel="noopener">https://fivethirtyeight.com/features/why-the-presidents-party-almost-always-has-a-bad-midterm/</a></p>
+<p>Because the model only looks at the state-level the difference between the last two <em>midterm</em> cycles, these projections are capturing how midterm returns <em>change</em> in each state, which goes a ways toward correcting the consistent lower performance in midterms pattern, and in part may reflect changes in sentiment toward the president.</p>
+<p>A less reliable trend that’s held since FDR’s time is that incumbent presidents have tended to get a higher percent of the popular vote in their election for a second term&mdash;Obama in 2012 was a notable exception. <a href="https://www.presidency.ucsb.edu/statistics/data/presidential-election-mandates" target="_blank" rel="noopener">https://www.presidency.ucsb.edu/statistics/data/presidential-election-mandates</a> What’s more, house midterm results seem to be particularly bad just before an incumbent is voted out of office. It&rsquo;s not clear if this is a bug or a feature, or how reliably this would be picked up using this method, but it&rsquo;s worthing pointing out.</p>
+<h3 id="observation-accuracy-over-previous-election-results">Observation: Accuracy over Previous Election Results</h3>
+<p>If it&rsquo;s hard to do better than election returns at t - 1, does this approach actually do better? Yes, by a little. Including all states, these projections have lower mean absolute error (MAE). For some reason these projections miss badly in 2004, and excluding that earliest year I can compute these projections using the MIT data, shows they do in fact do quite a bit better than simply relying on previous presidential election results alone.</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  id="figure-accuracy-over-time-for-projections-compared-with-simply-using-the-previous-election">
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="/img/AllStates_MAE_projections.png" alt="Accuracy over time for projections compared with simply using the previous election. " loading="lazy" data-zoomable /></div>
+  </div><figcaption>
+      Accuracy over time for projections compared with simply using the previous election.
+    </figcaption></figure>
+</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="o">&gt;</span> <span class="n">bt_dat</span> <span class="o">%&gt;%</span> <span class="nf">group_by</span><span class="p">(</span><span class="n">proj_type</span><span class="p">)</span> <span class="o">%&gt;%</span> <span class="nf">summarise</span><span class="p">(</span><span class="nf">mean</span><span class="p">(</span><span class="n">mae</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># A tibble: 2 × 2</span>
+</span></span><span class="line"><span class="cl">  <span class="n">proj_type</span> <span class="nf">`mean</span><span class="p">(</span><span class="n">mae</span><span class="p">)</span><span class="n">`
+</span></span></span><span class="line"><span class="cl"><span class="n">  &lt;chr&gt;           &lt;dbl&gt;
+</span></span></span><span class="line"><span class="cl"><span class="n">1 prev pres        3.11
+</span></span></span><span class="line"><span class="cl"><span class="n">2 proj             2.65
+</span></span></span><span class="line"><span class="cl"><span class="n">
+</span></span></span><span class="line"><span class="cl"><span class="n">&gt; bt_dat %&gt;% filter(years != 2004) %&gt;% group_by(proj_type) %&gt;% summarise(mean(mae))
+</span></span></span><span class="line"><span class="cl"><span class="n"># A tibble: 2 × 2
+</span></span></span><span class="line"><span class="cl"><span class="n">  proj_type `</span><span class="nf">mean</span><span class="p">(</span><span class="n">mae</span><span class="p">)</span><span class="n">`</span>
+</span></span><span class="line"><span class="cl">  <span class="o">&lt;</span><span class="n">chr</span><span class="o">&gt;</span>           <span class="o">&lt;</span><span class="n">dbl</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="m">1</span> <span class="n">prev</span> <span class="n">pres</span>        <span class="m">3.36</span>
+</span></span><span class="line"><span class="cl"><span class="m">2</span> <span class="n">proj</span>             <span class="m">2.51</span>
+</span></span></code></pre></div><p>Results are more subtle if we restrict to battleground states:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="o">&gt;</span> <span class="n">bt_dat</span> <span class="o">%&gt;%</span> <span class="nf">group_by</span><span class="p">(</span><span class="n">proj_type</span><span class="p">)</span> <span class="o">%&gt;%</span> <span class="nf">summarise</span><span class="p">(</span><span class="nf">mean</span><span class="p">(</span><span class="n">mae</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># A tibble: 2 × 2</span>
+</span></span><span class="line"><span class="cl">  <span class="n">proj_type</span> <span class="nf">`mean</span><span class="p">(</span><span class="n">mae</span><span class="p">)</span><span class="n">`
+</span></span></span><span class="line"><span class="cl"><span class="n">  &lt;chr&gt;           &lt;dbl&gt;
+</span></span></span><span class="line"><span class="cl"><span class="n">1 prev pres        1.19
+</span></span></span><span class="line"><span class="cl"><span class="n">2 proj             1.16
+</span></span></span><span class="line"><span class="cl"><span class="n">&gt; bt_dat %&gt;% filter(years != 2004) %&gt;% group_by(proj_type) %&gt;% summarise(mean(mae))
+</span></span></span><span class="line"><span class="cl"><span class="n"># A tibble: 2 × 2
+</span></span></span><span class="line"><span class="cl"><span class="n">  proj_type `</span><span class="nf">mean</span><span class="p">(</span><span class="n">mae</span><span class="p">)</span><span class="n">`</span>
+</span></span><span class="line"><span class="cl">  <span class="o">&lt;</span><span class="n">chr</span><span class="o">&gt;</span>           <span class="o">&lt;</span><span class="n">dbl</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="m">1</span> <span class="n">prev</span> <span class="n">pres</span>       <span class="m">1.28</span> 
+</span></span><span class="line"><span class="cl"><span class="m">2</span> <span class="n">proj</span>            <span class="m">0.995</span>
+</span></span></code></pre></div><h3 id="observation-regularization-toward-0-or-the-mean">Observation: Regularization toward 0 or the Mean?</h3>
+<p>Here’s the map with shrinkage toward 0, which will move the estimates toward the prior year&rsquo;s election. Biden does worse in WI and slightly worse in AZ and PA, because the presidential swing estimates get pulled down toward zero instead of up toward the nation-wide state-level mean (3.5%). But he does better in NC, where the relatively good house results get pulled toward zero instead of down to the state-level average midterm swing (-11.5%).</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  id="figure-a-simple-forecasted-map-for-2024-shrinkage-toward-zero-created-httpswww270towincommaps66rzw">
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="/img/Map_for_2024_JS_0_Swing.png" alt="A simple forecasted map for 2024, shrinkage toward zero. Created https://www.270towin.com/maps/66rZw." loading="lazy" data-zoomable /></div>
+  </div><figcaption>
+      A simple forecasted map for 2024, shrinkage toward zero. Created <a href="https://www.270towin.com/maps/66rZw" target="_blank" rel="noopener">https://www.270towin.com/maps/66rZw</a>.
+    </figcaption></figure>
+</p>
+<p>However, based on my updated backtesting, the MAE estimates are worse when you shrink toward zero, which is what I did back in 2020. This makes me feel good because the mathematical/statistical theory says that shrinking toward the group mean should produce high quality estimates, while there&rsquo;s not much theory that suggests shrinking toward zero should improve estimation.</p>
+<h3 id="methological-details">Methological Details</h3>
+<p>For each state it estimates the &ldquo;swing&rdquo; from 2016 to 2020 for president and 2018-2022 for the U.S. house; then simply adds that to 2020 presidential returns. The projected state-level swing is weighted 60-40 toward presidential results.</p>
+<p>Now, the tricky bit is I estimate “swing” using James-Stein-adjusted state-level slope. This method “shrinks” the slant of each slope toward 50-50 or toward the average slope. 50-50 is what I used in 2020 and but recent corrections I&rsquo;ve made to my backtesting scrips reveals that has a slightly higher mean absolute error going back to the 2004 election.</p>
+<p>I&rsquo;ve since updated the approach in a number of important ways, based on backtesting (looking at how well the method performs on past elections). I now regularize (or &ldquo;shrink&rdquo;) fewer quantities and do so toward the mean instead of toward zero. I should also note that the original code I used a few minor errors, which I&rsquo;ve since fixed.</p>
+
+    </div>
+
+    
+
+
+
+
+
+
+
+<div class="share-box">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fsolmessing.netlify.app%2Fpost%2Felection_projection_regularized_swing%2F&amp;text=An&#43;Early&#43;Election&#43;2024&#43;Forecast" target="_blank" rel="noopener" class="share-btn-twitter" aria-label="twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fsolmessing.netlify.app%2Fpost%2Felection_projection_regularized_swing%2F&amp;t=An&#43;Early&#43;Election&#43;2024&#43;Forecast" target="_blank" rel="noopener" class="share-btn-facebook" aria-label="facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+        
+      
+      <li>
+        <a href="mailto:?subject=An%20Early%20Election%202024%20Forecast&amp;body=https%3A%2F%2Fsolmessing.netlify.app%2Fpost%2Felection_projection_regularized_swing%2F" target="_blank" rel="noopener" class="share-btn-email" aria-label="envelope">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=https%3A%2F%2Fsolmessing.netlify.app%2Fpost%2Felection_projection_regularized_swing%2F&amp;title=An&#43;Early&#43;Election&#43;2024&#43;Forecast" target="_blank" rel="noopener" class="share-btn-linkedin" aria-label="linkedin-in">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="whatsapp://send?text=An&#43;Early&#43;Election&#43;2024&#43;Forecast%20https%3A%2F%2Fsolmessing.netlify.app%2Fpost%2Felection_projection_regularized_swing%2F" target="_blank" rel="noopener" class="share-btn-whatsapp" aria-label="whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=https%3A%2F%2Fsolmessing.netlify.app%2Fpost%2Felection_projection_regularized_swing%2F&amp;title=An&#43;Early&#43;Election&#43;2024&#43;Forecast" target="_blank" rel="noopener" class="share-btn-weibo" aria-label="weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+</article>
+  </div>
+
+  <div class="page-footer">
+    
+    
+    <div class="container">
+      <footer class="site-footer">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+    
+  
+  
+    
+  
+
+  
+
+  
+  <p class="powered-by copyright-license-text">
+    ©2023 Sol Messing. This work is licensed under XX
+  </p>
+  
+
+  <p class="powered-by footer-license-icons">
+    <a href="https://creativecommons.org/licenses/by-nc-nd/4.0" rel="noopener noreferrer" target="_blank" aria-label="Creative Commons">
+      <i class="fab fa-creative-commons fa-2x" aria-hidden="true"></i>
+      <i class="fab fa-creative-commons-by fa-2x" aria-hidden="true"></i>
+      
+        <i class="fab fa-creative-commons-nc fa-2x" aria-hidden="true"></i>
+      
+      
+        <i class="fab fa-creative-commons-nd fa-2x" aria-hidden="true"></i>
+      
+    </a>
+  </p>
+
+
+
+
+
+  <p class="powered-by">
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      Published with <a href="https://hugoblox.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Hugo Blox Builder</a> — the free, <a href="https://github.com/HugoBlox/hugo-blox-builder" target="_blank" rel="noopener">open source</a> website builder that empowers creators.
+    
+  </p>
+</footer>
+
+    </div>
+    
+  </div>
+
+  
+
+
+<script src="/js/vendor-bundle.min.d613345003d21781ec611233eea95b85.js"></script>
+
+
+
+
+  
+
+  
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script id="search-hit-fuse-template" type="text/x-template">
+    <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+    </div>
+  </script>
+  
+    <script src="https://cdn.jsdelivr.net/gh/krisk/Fuse@v3.2.1/dist/fuse.min.js" integrity="sha512-o38bmzBGX+hD3JHWUFCDA09btWaqrNmoJ3RXLlrysA7PP01Kgs4UlE4MhelE1v5dJR3+cxlR4qQlotsW7jKsnw==" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/gh/julmot/mark.js@8.11.1/dist/jquery.mark.min.js" integrity="sha512-mhbv5DqBMgrWL+32MmsDOt/OAvqr/cHimk6B8y/bx/xS88MVkYGPiVv2ixKVrkywF2qHplNRUvFsAHUdxZ3Krg==" crossorigin="anonymous"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script id="page-data" type="application/json">{"use_headroom":true}</script>
+
+
+  <script src="/js/wowchemy-headroom.b95a7e109243f29d04930ae8cb49a756.js" type="module"></script>
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+<script src="/en/js/wowchemy.min.69fc52a6dc16aaf1a452cfbb36466dac.js"></script>
+
+
+
+
+
+
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        
+        <pre><code></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <script src="/js/wowchemy-publication.9c0e895144aef5a693008b5c5d450147.js" type="module"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

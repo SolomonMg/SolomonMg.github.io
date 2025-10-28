@@ -1,0 +1,1687 @@
+<!DOCTYPE html>
+<!-- This site was created with Hugo Blox. https://hugoblox.com -->
+<!-- Last Published: October 28, 2025 --><html lang="en-us" >
+
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  
+  
+    <meta name="generator" content="Hugo Blox Builder 5.9.7" />
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+
+  
+  
+  
+    
+      
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
+    
+  
+
+  
+  
+
+  
+  
+    
+    <script src="/js/mathjax-config.js"></script>
+  
+
+  
+
+  <link rel="stylesheet" href="/css/vendor-bundle.min.26c458e6907dc03073573976b7f4044e.css" media="print" onload="this.media='all'">
+
+  
+  
+  
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1.9.4/css/academicons.min.css" integrity="sha512-IW0nhlW5MgNydsXJO40En2EoCkTTjZhI3yuODrZIc8cQ4h1XcF53PsqDHa09NqnkXuIe0Oiyyj171BqZFwISBw==" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+    
+    
+    
+      
+      
+    
+    
+    
+
+    
+    
+    
+
+    
+
+    
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+  
+
+  
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.5adeb309104bf059bfce5194cee5d4d8.css" />
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+    
+    
+    <link rel="stylesheet" href="/css/libs/chroma/github-light.min.css" title="hl-light" media="print" onload="this.media='all'" >
+    <link rel="stylesheet" href="/css/libs/chroma/dracula.min.css" title="hl-dark" media="print" onload="this.media='all'" disabled>
+  
+
+  
+  
+
+
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9XTZZP2CJ8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url, target) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           if (target !== '_blank') {
+             document.location = url;
+           }
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target, event.target.getAttribute('target'));  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'G-9XTZZP2CJ8', {});
+  gtag('set', {'cookie_flags': 'SameSite=None;Secure'});
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+
+
+
+
+
+  <meta name="author" content="Sol Messing" />
+
+
+
+
+
+  
+
+<meta name="description" content="It’s becoming clear that the 2020 polls underestimated Trump’s support by anywhere from a 4-8 point margin depending on your accounting&ndash;a significantly worse miss than in 2016, when state polls were off but the national polls did relatively well.
+" />
+
+
+
+<link rel="alternate" hreflang="en-us" href="https://solmessing.netlify.app/post/what-the-polls-got-wrong-in-2020/" />
+<link rel="canonical" href="https://solmessing.netlify.app/post/what-the-polls-got-wrong-in-2020/" />
+
+
+
+  <link rel="manifest" href="/manifest.webmanifest" />
+
+
+
+<link rel="icon" type="image/png" href="/media/icon_hu_b6b141330a993e2f.png" />
+<link rel="apple-touch-icon" type="image/png" href="/media/icon_hu_bdf5fe8f122b026c.png" />
+
+<meta name="theme-color" content="#1565c0" />
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+<meta property="twitter:card" content="summary_large_image" />
+
+  <meta property="twitter:site" content="@SolomonMg" />
+  <meta property="twitter:creator" content="@SolomonMg" />
+<meta property="twitter:image" content="https://solmessing.netlify.app/post/what-the-polls-got-wrong-in-2020/featured.png" />
+
+
+
+  
+
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="Sol Messing" />
+<meta property="og:url" content="https://solmessing.netlify.app/post/what-the-polls-got-wrong-in-2020/" />
+<meta property="og:title" content="Past vote data outperformed the polls. How did it go so wrong? | Sol Messing" />
+<meta property="og:description" content="It’s becoming clear that the 2020 polls underestimated Trump’s support by anywhere from a 4-8 point margin depending on your accounting&ndash;a significantly worse miss than in 2016, when state polls were off but the national polls did relatively well." /><meta property="og:image" content="https://solmessing.netlify.app/post/what-the-polls-got-wrong-in-2020/featured.png" /><meta property="og:locale" content="en-us" />
+
+  
+    <meta
+      property="article:published_time"
+      content="2020-11-08T00:00:00&#43;00:00"
+    />
+  
+  
+    <meta property="article:modified_time" content="2020-11-08T00:00:00&#43;00:00">
+  
+
+
+
+
+
+
+    
+
+
+
+
+
+
+  
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://solmessing.netlify.app/post/what-the-polls-got-wrong-in-2020/"
+  },
+  "headline": "Past vote data outperformed the polls. How did it go so wrong?",
+  
+  "image": [
+    "https://solmessing.netlify.app/post/what-the-polls-got-wrong-in-2020/featured.png"
+  ],
+  
+  "datePublished": "2020-11-08T00:00:00Z",
+  "dateModified": "2020-11-08T00:00:00Z",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Sol Messing"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Sol Messing",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://solmessing.netlify.app/media/icon_hu_3baeddb697bfad35.png"
+    }
+  },
+  "description": "\u003cp\u003eIt’s becoming clear that the 2020 polls underestimated Trump’s support by anywhere from a 4-8 point margin depending on your accounting\u0026ndash;a significantly worse miss than in 2016, when \u003ca href=\"https://fivethirtyeight.com/features/the-polls-are-all-right/\" target=\"_blank\" rel=\"noopener\"\u003estate polls were off but the national polls did relatively well\u003c/a\u003e.\u003c/p\u003e"
+}
+</script>
+
+  
+
+  
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  
+
+
+  
+  <title>Past vote data outperformed the polls. How did it go so wrong? | Sol Messing</title>
+
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="790c784c696b7c214cfb5c0ab22ebed6" >
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.9e4214442a7711d35691acd58f6f6361.js"></script>
+
+  
+
+
+<aside class="search-modal" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
+        aria-label="Search...">
+        
+      </div>
+
+      
+      
+
+      
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+
+  <div class="page-header header--fixed">
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+    <div class="container-xl">
+
+      
+      <div class="d-none d-lg-inline-flex">
+        <a class="navbar-brand" href="/">Sol Messing</a>
+      </div>
+      
+
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+      <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+      
+      <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+        <a class="navbar-brand" href="/">Sol Messing</a>
+      </div>
+      
+
+      
+      
+      <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+        
+        <ul class="navbar-nav d-md-inline-flex">
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#about"><span>Home</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#featured"><span>Publications</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#posts"><span>Posts</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#projects"><span>Projects</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#media"><span>Media</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#mybio"><span>Bio</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/techsetup/"><span>Tech Stack</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/disclosures/"><span>Disclosures</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#contact"><span>Contact</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/pdf/CV/CV.pdf"><span>CV</span></a>
+          </li>
+
+          
+          
+
+        
+
+          
+        </ul>
+      </div>
+
+      <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+        
+        
+          
+        
+
+        
+        
+        
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
+
+        
+        
+        
+        <li class="nav-item dropdown theme-dropdown">
+          <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-label="Display preferences">
+            <i class="fas fa-moon" aria-hidden="true"></i>
+          </a>
+          <div class="dropdown-menu">
+            <a href="#" class="dropdown-item js-set-theme-light">
+              <span>Light</span>
+            </a>
+            <a href="#" class="dropdown-item js-set-theme-dark">
+              <span>Dark</span>
+            </a>
+            <a href="#" class="dropdown-item js-set-theme-auto">
+              <span>Automatic</span>
+            </a>
+          </div>
+        </li>
+        
+
+        
+        
+
+      </ul>
+
+    </div>
+  </nav>
+</header>
+
+
+  </div>
+
+  <div class="page-body">
+    
+    
+    
+
+    <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+<div class="article-container pt-3">
+  <h1>Past vote data outperformed the polls. How did it go so wrong?</h1>
+
+  
+  <p class="page-subtitle">It&rsquo;s too early to say for sure, here are the questions to ask</p>
+  
+
+  
+
+
+<div class="article-metadata">
+
+  
+  
+  
+  
+  <div>
+    
+
+  <span >
+      Sol Messing</span>
+  </div>
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Nov 8, 2020
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    9 min read
+  </span>
+  
+
+  
+  
+  
+  
+
+  
+  
+
+</div>
+
+  
+
+
+
+
+<div class="btn-links mb-3">
+  
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+  
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+</div>
+
+
+<div class="article-header article-container featured-image-wrapper mt-4 mb-4" style="max-width: 677px; max-height: 492px;">
+  <div style="position: relative">
+    <img src="/post/what-the-polls-got-wrong-in-2020/featured_hu_ca901c9e8cde3a57.webp" width="677" height="492" alt="" class="featured-image">
+    
+  </div>
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <p>It’s becoming clear that the 2020 polls underestimated Trump’s support by anywhere from a 4-8 point margin depending on your accounting&ndash;a significantly worse miss than in 2016, when <a href="https://fivethirtyeight.com/features/the-polls-are-all-right/" target="_blank" rel="noopener">state polls were off but the national polls did relatively well</a>.</p>
+<p>In fact, this year we were better off using projections based on past vote history in each state to predict how things would go in battleground states, as I&rsquo;ll show below.</p>
+<p>But I also want to start to ask questions about what happened this time around. The polling from 2018 looked encouraging, convincing many pollsters that the post-2016 reckoning had fixed many issues called out in the <a href="https://www.aapor.org/Education-Resources/Reports/An-Evaluation-of-2016-Election-Polls-in-the-U-S.aspx" target="_blank" rel="noopener">2016 AAPOR report on election polling</a>. After 2018, FiveThirtyEight wrote that the <a href="https://fivethirtyeight.com/features/the-polls-are-all-right/" target="_blank" rel="noopener">&ldquo;Polls are Alright&rdquo;</a>.</p>
+<p>But the second Miami-Dade reported results from the 2020 election, we knew something was probably wrong with the 2020 polls.</p>
+<!--  -->
+<p>As Stefan notes (we worked together at Pew Research Center&rsquo;s Data Labs), the error seems slightly lower in key battleground states, though the polls missed big in WI, perhaps in part due to its horrifically bad voter file data.</p>
+<p>Unlike 2016, both state and national polls appeared to underestimate Trump&rsquo;s support, as this early (Nov 7) analysis from <a href="https://twitter.com/thomasjwood" target="_blank" rel="noopener">Tom Wood</a> shows:</p>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Current as to the afternoon on the 7th, and with Senate results too. <a href="https://t.co/EGZGarRPNj">pic.twitter.com/EGZGarRPNj</a></p>&mdash; Tom Wood (@thomasjwood) <a href="https://twitter.com/thomasjwood/status/1325199348553162752?ref_src=twsrc%5Etfw">November 7, 2020</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+<!-- [![normal](/img/TWpollingerror.jpeg)](https://twitter.com/thomasjwood/status/1325199348553162752) -->
+<h2 id="polling-versus-past-votes">Polling versus past votes</h2>
+<p>Perhaps what surprised me the most about polling this time around was when I went to evaluate some election projections I put together in April that we used internally at Acronym to help evaluate where we might want to spend. I pulled in the <a href="https://www.nytimes.com/live/2020/presidential-polls-trump-biden" target="_blank" rel="noopener">NYTimes polling averages</a> and compared them with the latest state-level presidential results from the AP. I then did the same for the April projections. Turns out the projections were significantly more accurate than the polling averages:</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="/img/PollingVSPastVoteProj.png" alt="normal" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
+<p>We used these projections, and other extant data (including the fact that there are two Senate races in play), when making what turned out to be a very lucky decision to start spending money in Georgia. We were one of the biggest and earliest spenders in that race.</p>
+<p>What are these projections? I simply took the last two state-level Presidential and U.S. House election totals, estimated each state&rsquo;s &ldquo;trajectory,&rdquo; and added that to each state&rsquo;s Democratic margin from the previous cycle.</p>
+<p>(Note that I also weighted 60-40 toward the Presidential results, and slightly regularized both the latest margin and the trajectory toward zero.)</p>
+<p>Informing this approach is work from <a href="https://catalist.us/yair-ghitza-phd/" target="_blank" rel="noopener">Yair Ghitza</a> describing what went wrong in 2016, which suggested polarization and other state-level trends would continue, in addition to national trends or &ldquo;uniform swing.&rdquo; </p>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">This paper from <a href="https://twitter.com/SimonJackman?ref_src=twsrc%5Etfw">@SimonJackman</a>  also deserves a big hat tip <a href="https://t.co/CTTpYDPwl2">https://t.co/CTTpYDPwl2</a></p>&mdash; Sol Messing (@SolomonMg) <a href="https://twitter.com/SolomonMg/status/1325564912798752773?ref_src=twsrc%5Etfw">November 8, 2020</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+<p>I should note that this may only have worked because of something peculiar about this election cycle&ndash;I haven&rsquo;t gone an back-tested this approach or anything like that.</p>
+<p>Seems I was not the only one who noticed this kind of pattern:</p>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">A similar observation from <a href="https://twitter.com/gelliottmorris?ref_src=twsrc%5Etfw">@gelliottmorris</a> <a href="https://t.co/XSUAhGBZfb">https://t.co/XSUAhGBZfb</a></p>&mdash; Sol Messing (@SolomonMg) <a href="https://twitter.com/SolomonMg/status/1325522770890027008?ref_src=twsrc%5Etfw">November 8, 2020</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+<h2 id="what-went-wrong-the-usual-suspects">What went wrong: The Usual Suspects</h2>
+<p>Humble-brag aside, it&rsquo;s worth asking what might have gone wrong with polling in 2020?</p>
+<p>The <a href="https://www.aapor.org/Education-Resources/Reports/An-Evaluation-of-2016-Election-Polls-in-the-U-S.aspx" target="_blank" rel="noopener">2016 AAPOR report on election polling</a> provides some guidance for how we might start to examine issues with the 2020 polls.</p>
+<p><strong>Undecided voters</strong>: Undecideds broke toward Trump late in the election in 2016&ndash;polls found as many as 13 percent of voters were <a href="https://fivethirtyeight.com/features/the-invisible-undecided-voter/" target="_blank" rel="noopener">undecided on election day or planned to vote for a third party</a>. According to Poynter, there were <a href="https://www.poynter.org/fact-checking/2020/2020-is-not-like-2016-heres-whats-different/" target="_blank" rel="noopener">half as many of these voters in 2020</a>, so this is unlikely to be as big a factor as in 2016.</p>
+<p><strong>Low education non-response &amp; adjustment</strong>: In 2016, individuals lower levels of education were much less likely to answer polls but still voted, and broke for Trump. The national polls adjusted for this but state level polls did not, which is partially why forecasting models that rely on state-level polls missed so hard.</p>
+<p>While many state-level pollsters did this in 2020, Pew Research Center still <a href="https://www.pewresearch.org/methods/2020/08/18/a-resource-for-state-preelection-polling/" target="_blank" rel="noopener">found problems with state level polling this time around</a>, for example failing to adjust for race and education simultaneously&ndash;non-college whites are far more likely to support Trump than non-college non-whites.</p>
+<p>What&rsquo;s more, pollsters adjusted only for college/non-college, which may not have been enough. They might need to use more fine grained adjustment&ndash;accounting for whether respondents have a high school degree and a college degree.  Also error/missing data when people complete education in a survey means trouble if you want to fully fix the issue.</p>
+<p><strong>Volunteerism &amp; civic engagement</strong>: Even if you adjust for low levels of non-response among individuals with lower education, pollsters still may have problems reaching <a href="https://www.pewresearch.org/fact-tank/2015/07/21/the-challenges-of-polling-when-fewer-people-are-available-to-be-polled/" target="_blank" rel="noopener">low civic engagement voters, a bias that seems to persist even after modeling/weighting adjustments</a>. In the past this hasn&rsquo;t mattered as much, but these folks may be showing up to the polls for Trump.</p>
+<h2 id="other-potential-factors">Other Potential Factors</h2>
+<p><strong>Likely voter models</strong>: This is difficult to fully unpack since each polling house does this slightly differently and not all publish their methods—some ask a battery of voter questions, some use models, some recruit off the voter file. But there’s only a weak relationship between who votes and who scores high on the likely voter battery. To make matters worse, 2020 was a very high-turnout election, which could have introduced even more instability into likely voter models.</p>
+<p>Another important point from Peter Suzman is that likely voter screens could have inflated estimates of Dem turnout if they asked if respondents had already voted&mdash;it was Democrats who voted early.</p>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Easily. An &quot;unlikely&quot; voter (by some screen) on the Dem side that has already voted gets counted; his/her exact counterpart on the GOP side that votes on election day doesn&#39;t. <br>I commented before the election on the possibility that polls would skew Dem because of this.</p>&mdash; Peter Suzman (@Biomaven) <a href="https://twitter.com/Biomaven/status/1325545770230161408?ref_src=twsrc%5Etfw">November 8, 2020</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+<p>However, that would only explain error in likely voter models, not polling based on registered voters, which also seemed to miss big this cycle, as I pointed out:</p>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Still interesting but an issue w this explanation is that while it could interact with likely voter models, it’s unlikely to explain the error in registered voter samples which rely on the voter file over likely voter question batteries. (HT an old friend) <a href="https://t.co/F2xciDV7vr">https://t.co/F2xciDV7vr</a></p>&mdash; Sol Messing (@SolomonMg) <a href="https://twitter.com/SolomonMg/status/1325605403636486146?ref_src=twsrc%5Etfw">November 9, 2020</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+<p><strong>COVID-19</strong>: I wrote about <a href="https://solomonmg.github.io/post/trumps-chances-are-better-than-they-look/" target="_blank" rel="noopener">this back in June</a>. It&rsquo;s possible that COVID-19 made lines long and kept people home in urban areas and non-white communities. Yes we had record turnout but all it takes is a few percent of people who encounter a bit of voting friction, who fail to register in person, don’t get in person canvassing/gotv contact, don’t vote by mail early, and/or don’t vote in vote in person.</p>
+<p>At the same time, <a href="https://www.nytimes.com/2020/11/10/upshot/polls-what-went-wrong.html" target="_blank" rel="noopener">David Shor points out</a> in a piece by Nate Cohn at the New York Times, that &ldquo;&hellip;after lockdown, Democrats just started taking surveys, because they were locked at home and didn’t have anything else to do.&rdquo;</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="/img/DavidShorOLNCNYT.png" alt="normal" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
+<p>Without Dems doing the usual in-person registration drives, organizing, canvassing, etc. plus long lines in the hardest hit areas, and with Democrats taking surveys at unusually high rates, we might expect to see Trump overperform in areas hit hardest by COVID-19.</p>
+<p>And indeed the data show just that. <a href="https://www.npr.org/sections/health-shots/2020/11/06/930897912/many-places-hard-hit-by-covid-19-leaned-more-toward-trump-in-2020-than-2016" target="_blank" rel="noopener">NPR has a nice visualization of this</a>:</p>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">One potential explanation for Trump&#39;s higher performance in areas hit hard by COVID is that by staying home, Dems didn&#39;t do the usual in-person registration drives, organizing, canvassing, etc. NPR has a nice visualization of this <a href="https://t.co/a8DeO27giE">https://t.co/a8DeO27giE</a> <a href="https://t.co/1Kc9qNE4jJ">pic.twitter.com/1Kc9qNE4jJ</a></p>&mdash; Sol Messing (@SolomonMg) <a href="https://twitter.com/SolomonMg/status/1326348370869415937?ref_src=twsrc%5Etfw">November 11, 2020</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+<p>Another possibility is that shutdowns, school closings, and job losses stoked anger &amp; resentment in centrist &amp; right-leaning voters. I remember watching a local FB group quickly organize around the issue of school-openings and eventually morph into a hub for protests.</p>
+<p>EDIT: I took a look at his performance by the urbanicity and racial makeup of those counties and here&rsquo;s what I found:</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="/img/share_over_2016_pct_nonwhite_covid_up_weighted.png" alt="normal" loading="lazy" data-zoomable /></div>
+  </div></figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="/img/share_over_2016_pct_urban_covid_up_weighted.png" alt="normal" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
+<p>Trump outperforms 2016 in non-white counties, and UNDER-performs in mostly-white counties. Same for more urban counties. That&rsquo;s consistent w/ covid hitting non-white counties much harder in terms of registration, long-lines, and lower VBM rates.</p>
+<p>That seems to stand in sharp contrast to speculation that Trump would be hit hardest in areas where people are most likely to know someone with COVID.</p>
+<p><strong>Shy Trump voters</strong>: There&rsquo;s a hypothesis out there that people are embarrassed to admit that they would vote for Trump. The evidence for this is limited&ndash;Kyle Dropp and co at Morning Consult did some experimental work on this and found that people were slightly more likely <a href="https://morningconsult.com/form/shy-trump-2020/" target="_blank" rel="noopener">in the 2016 primaries (but NOT the General and not in 2020)</a> to say that they would vote for Trump when answering via online survey compared with speaking with a live pollster over the phone. But they&rsquo;ve done many follow-on surveys since and the pattern doesn&rsquo;t persist.</p>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">One reason &quot;shy Trump voters&quot; doesn&#39;t make as much sense as you&#39;d think as an explanation for polling errors this year is that Republican candidates for Congress generally outperformed their polls by more than Trump did.</p>&mdash; Nate Silver (@NateSilver538) <a href="https://twitter.com/NateSilver538/status/1324948324718436352?ref_src=twsrc%5Etfw">November 7, 2020</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+<p>I am skeptical that this could be as much of a factor as some on social media seem to be claiming, but it&rsquo;s hard to get good data to answer this question and acknowledge that absence of evidence is not evidence of absence. A number of commentators have claimed that since the polls underestimated support for all Republicans, this is an unlikely explanation.</p>
+<p>That sounds pretty air-tight at first glance but it&rsquo;s possible that some undecideds, perhaps embarrassed about having Trump as a figurehead of the Republican party, refused to say with certainty who they would actually vote for. Nevertheless, based on the pattern of results we&rsquo;ve seen so far, this really can&rsquo;t explain very much of the polling error this time around.</p>
+<h2 id="the-role-of-election-forecasts">The Role of Election Forecasts</h2>
+<p>If you&rsquo;re a forecaster, it&rsquo;s very easy to look at all the polling data and come away with overconfident estimates of a candidate’s support. Many forecasters in 2016 did just that, failing to account for the fact that error between states and pollsters were likely correlated, and producing estimates that put Clinton’s chances above 95%.</p>
+<p>The Huffington Post famously <a href="https://www.huffpost.com/entry/nate-silver-election-forecast_n_581e1c33e4b0d9ce6fbc6f7f" target="_blank" rel="noopener">roasted FiveThirtyEight</a> for trying to adjust for this state-level polling error the day before the 2016 election.</p>
+<p>But even when forecasters get it right, forecasting can create firm expectations that one candidate will win, which in 2016 was complicated by destiny-narrative driven by media coverage of election forecasting.</p>
+<p>Sean Westwood, Yph Lelkes and I recently published a <a href="https://solomonmg.github.io/pdf/aggregator.pdf" target="_blank" rel="noopener">research paper</a> in the Journal of Politics showing just how much additional confidence forecasts give us, and wrote about the implications for the 2020 election in a recent <a href="https://www.usatoday.com/story/opinion/2020/10/01/election-forecasts-can-wrong-you-still-need-vote-column/5857993002/" target="_blank" rel="noopener">USA Today op ed</a>.</p>
+<p>I believe it was the sharp violation of expectations that was so disappointing to Clinton supporters and so invigorating for the MAGA crowd—the Washington elite had underestimated &ldquo;real Americans&rdquo; yet again.</p>
+
+    </div>
+
+    
+
+
+
+
+
+
+
+<div class="share-box">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fsolmessing.netlify.app%2Fpost%2Fwhat-the-polls-got-wrong-in-2020%2F&amp;text=Past&#43;vote&#43;data&#43;outperformed&#43;the&#43;polls.&#43;How&#43;did&#43;it&#43;go&#43;so&#43;wrong%3F" target="_blank" rel="noopener" class="share-btn-twitter" aria-label="twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fsolmessing.netlify.app%2Fpost%2Fwhat-the-polls-got-wrong-in-2020%2F&amp;t=Past&#43;vote&#43;data&#43;outperformed&#43;the&#43;polls.&#43;How&#43;did&#43;it&#43;go&#43;so&#43;wrong%3F" target="_blank" rel="noopener" class="share-btn-facebook" aria-label="facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+        
+      
+      <li>
+        <a href="mailto:?subject=Past%20vote%20data%20outperformed%20the%20polls.%20How%20did%20it%20go%20so%20wrong%3F&amp;body=https%3A%2F%2Fsolmessing.netlify.app%2Fpost%2Fwhat-the-polls-got-wrong-in-2020%2F" target="_blank" rel="noopener" class="share-btn-email" aria-label="envelope">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=https%3A%2F%2Fsolmessing.netlify.app%2Fpost%2Fwhat-the-polls-got-wrong-in-2020%2F&amp;title=Past&#43;vote&#43;data&#43;outperformed&#43;the&#43;polls.&#43;How&#43;did&#43;it&#43;go&#43;so&#43;wrong%3F" target="_blank" rel="noopener" class="share-btn-linkedin" aria-label="linkedin-in">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="whatsapp://send?text=Past&#43;vote&#43;data&#43;outperformed&#43;the&#43;polls.&#43;How&#43;did&#43;it&#43;go&#43;so&#43;wrong%3F%20https%3A%2F%2Fsolmessing.netlify.app%2Fpost%2Fwhat-the-polls-got-wrong-in-2020%2F" target="_blank" rel="noopener" class="share-btn-whatsapp" aria-label="whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=https%3A%2F%2Fsolmessing.netlify.app%2Fpost%2Fwhat-the-polls-got-wrong-in-2020%2F&amp;title=Past&#43;vote&#43;data&#43;outperformed&#43;the&#43;polls.&#43;How&#43;did&#43;it&#43;go&#43;so&#43;wrong%3F" target="_blank" rel="noopener" class="share-btn-weibo" aria-label="weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+</article>
+  </div>
+
+  <div class="page-footer">
+    
+    
+    <div class="container">
+      <footer class="site-footer">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+    
+  
+  
+    
+  
+
+  
+
+  
+  <p class="powered-by copyright-license-text">
+    ©2023 Sol Messing. This work is licensed under XX
+  </p>
+  
+
+  <p class="powered-by footer-license-icons">
+    <a href="https://creativecommons.org/licenses/by-nc-nd/4.0" rel="noopener noreferrer" target="_blank" aria-label="Creative Commons">
+      <i class="fab fa-creative-commons fa-2x" aria-hidden="true"></i>
+      <i class="fab fa-creative-commons-by fa-2x" aria-hidden="true"></i>
+      
+        <i class="fab fa-creative-commons-nc fa-2x" aria-hidden="true"></i>
+      
+      
+        <i class="fab fa-creative-commons-nd fa-2x" aria-hidden="true"></i>
+      
+    </a>
+  </p>
+
+
+
+
+
+  <p class="powered-by">
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      Published with <a href="https://hugoblox.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Hugo Blox Builder</a> — the free, <a href="https://github.com/HugoBlox/hugo-blox-builder" target="_blank" rel="noopener">open source</a> website builder that empowers creators.
+    
+  </p>
+</footer>
+
+    </div>
+    
+  </div>
+
+  
+
+
+<script src="/js/vendor-bundle.min.d613345003d21781ec611233eea95b85.js"></script>
+
+
+
+
+  
+
+  
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script id="search-hit-fuse-template" type="text/x-template">
+    <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+    </div>
+  </script>
+  
+    <script src="https://cdn.jsdelivr.net/gh/krisk/Fuse@v3.2.1/dist/fuse.min.js" integrity="sha512-o38bmzBGX+hD3JHWUFCDA09btWaqrNmoJ3RXLlrysA7PP01Kgs4UlE4MhelE1v5dJR3+cxlR4qQlotsW7jKsnw==" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/gh/julmot/mark.js@8.11.1/dist/jquery.mark.min.js" integrity="sha512-mhbv5DqBMgrWL+32MmsDOt/OAvqr/cHimk6B8y/bx/xS88MVkYGPiVv2ixKVrkywF2qHplNRUvFsAHUdxZ3Krg==" crossorigin="anonymous"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script id="page-data" type="application/json">{"use_headroom":true}</script>
+
+
+  <script src="/js/wowchemy-headroom.b95a7e109243f29d04930ae8cb49a756.js" type="module"></script>
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+<script src="/en/js/wowchemy.min.69fc52a6dc16aaf1a452cfbb36466dac.js"></script>
+
+
+
+
+
+
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        
+        <pre><code></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <script src="/js/wowchemy-publication.9c0e895144aef5a693008b5c5d450147.js" type="module"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,1679 @@
+<!DOCTYPE html>
+<!-- This site was created with Hugo Blox. https://hugoblox.com -->
+<!-- Last Published: October 28, 2025 --><html lang="en-us" >
+
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  
+  
+    <meta name="generator" content="Hugo Blox Builder 5.9.7" />
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+
+  
+  
+  
+    
+      
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
+    
+  
+
+  
+  
+
+  
+  
+
+  
+
+  <link rel="stylesheet" href="/css/vendor-bundle.min.26c458e6907dc03073573976b7f4044e.css" media="print" onload="this.media='all'">
+
+  
+  
+  
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1.9.4/css/academicons.min.css" integrity="sha512-IW0nhlW5MgNydsXJO40En2EoCkTTjZhI3yuODrZIc8cQ4h1XcF53PsqDHa09NqnkXuIe0Oiyyj171BqZFwISBw==" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+    
+    
+    
+      
+      
+    
+    
+    
+
+    
+    
+    
+
+    
+
+    
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+        
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+  
+
+  
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.5adeb309104bf059bfce5194cee5d4d8.css" />
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+    
+    
+    <link rel="stylesheet" href="/css/libs/chroma/github-light.min.css" title="hl-light" media="print" onload="this.media='all'" >
+    <link rel="stylesheet" href="/css/libs/chroma/dracula.min.css" title="hl-dark" media="print" onload="this.media='all'" disabled>
+  
+
+  
+  
+
+
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9XTZZP2CJ8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url, target) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           if (target !== '_blank') {
+             document.location = url;
+           }
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target, event.target.getAttribute('target'));  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'G-9XTZZP2CJ8', {});
+  gtag('set', {'cookie_flags': 'SameSite=None;Secure'});
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+
+
+
+
+
+  <meta name="author" content="Sol Messing" />
+
+
+
+
+
+  
+
+<meta name="description" content="Earlier this month, we published an early access version of our paper in ScienceExpress (Bakshy et al. 2015), &ldquo;Exposure to ideologically diverse news and opinion on Facebook.&rdquo; The paper constitutes the first attempt to quantify the extent to which ideologically cross-cutting hard news and opinion is shared by friends, appears in algorithmically ranked News Feeds, and is actually consumed (i.e., click through to read).
+" />
+
+
+
+<link rel="alternate" hreflang="en-us" href="https://solmessing.netlify.app/post/exposure-to-ideologically-diverse-response/" />
+<link rel="canonical" href="https://solmessing.netlify.app/post/exposure-to-ideologically-diverse-response/" />
+
+
+
+  <link rel="manifest" href="/manifest.webmanifest" />
+
+
+
+<link rel="icon" type="image/png" href="/media/icon_hu_b6b141330a993e2f.png" />
+<link rel="apple-touch-icon" type="image/png" href="/media/icon_hu_bdf5fe8f122b026c.png" />
+
+<meta name="theme-color" content="#1565c0" />
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+<meta property="twitter:card" content="summary_large_image" />
+
+  <meta property="twitter:site" content="@SolomonMg" />
+  <meta property="twitter:creator" content="@SolomonMg" />
+<meta property="twitter:image" content="https://solmessing.netlify.app/post/exposure-to-ideologically-diverse-response/featured.png" />
+
+
+
+  
+
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="Sol Messing" />
+<meta property="og:url" content="https://solmessing.netlify.app/post/exposure-to-ideologically-diverse-response/" />
+<meta property="og:title" content="Ideologically diverse news, an agenda for future research | Sol Messing" />
+<meta property="og:description" content="Earlier this month, we published an early access version of our paper in ScienceExpress (Bakshy et al. 2015), &ldquo;Exposure to ideologically diverse news and opinion on Facebook.&rdquo; The paper constitutes the first attempt to quantify the extent to which ideologically cross-cutting hard news and opinion is shared by friends, appears in algorithmically ranked News Feeds, and is actually consumed (i.e., click through to read)." /><meta property="og:image" content="https://solmessing.netlify.app/post/exposure-to-ideologically-diverse-response/featured.png" /><meta property="og:locale" content="en-us" />
+
+  
+    <meta
+      property="article:published_time"
+      content="2015-04-24T00:00:00&#43;00:00"
+    />
+  
+  
+    <meta property="article:modified_time" content="2015-04-24T00:00:00&#43;00:00">
+  
+
+
+
+
+
+
+    
+
+
+
+
+
+
+  
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://solmessing.netlify.app/post/exposure-to-ideologically-diverse-response/"
+  },
+  "headline": "Ideologically diverse news, an agenda for future research",
+  
+  "image": [
+    "https://solmessing.netlify.app/post/exposure-to-ideologically-diverse-response/featured.png"
+  ],
+  
+  "datePublished": "2015-04-24T00:00:00Z",
+  "dateModified": "2015-04-24T00:00:00Z",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Eytan Bakshy"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Sol Messing",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://solmessing.netlify.app/media/icon_hu_3baeddb697bfad35.png"
+    }
+  },
+  "description": "\u003cp\u003eEarlier this month, we published an early access version of our paper in ScienceExpress (\u003ca href=\"/pdf/Science-2015-Bakshy-1130-2.pdf\"\u003eBakshy et al. 2015\u003c/a\u003e), \u0026ldquo;Exposure to ideologically diverse news and opinion on Facebook.\u0026rdquo; The paper constitutes the first attempt to quantify the extent to which ideologically cross-cutting hard news and opinion is shared by friends, appears in algorithmically ranked News Feeds, and is actually consumed (i.e., click through to read).\u003c/p\u003e"
+}
+</script>
+
+  
+
+  
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  
+
+
+  
+  <title>Ideologically diverse news, an agenda for future research | Sol Messing</title>
+
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="0f268982a57d085d401a76516f7bd169" >
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.9e4214442a7711d35691acd58f6f6361.js"></script>
+
+  
+
+
+<aside class="search-modal" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
+        aria-label="Search...">
+        
+      </div>
+
+      
+      
+
+      
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+
+  <div class="page-header header--fixed">
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+    <div class="container-xl">
+
+      
+      <div class="d-none d-lg-inline-flex">
+        <a class="navbar-brand" href="/">Sol Messing</a>
+      </div>
+      
+
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+      <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+      
+      <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+        <a class="navbar-brand" href="/">Sol Messing</a>
+      </div>
+      
+
+      
+      
+      <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+        
+        <ul class="navbar-nav d-md-inline-flex">
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#about"><span>Home</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#featured"><span>Publications</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#posts"><span>Posts</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#projects"><span>Projects</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#media"><span>Media</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#mybio"><span>Bio</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/techsetup/"><span>Tech Stack</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/disclosures/"><span>Disclosures</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#contact"><span>Contact</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/pdf/CV/CV.pdf"><span>CV</span></a>
+          </li>
+
+          
+          
+
+        
+
+          
+        </ul>
+      </div>
+
+      <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+        
+        
+          
+        
+
+        
+        
+        
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
+
+        
+        
+        
+        <li class="nav-item dropdown theme-dropdown">
+          <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-label="Display preferences">
+            <i class="fas fa-moon" aria-hidden="true"></i>
+          </a>
+          <div class="dropdown-menu">
+            <a href="#" class="dropdown-item js-set-theme-light">
+              <span>Light</span>
+            </a>
+            <a href="#" class="dropdown-item js-set-theme-dark">
+              <span>Dark</span>
+            </a>
+            <a href="#" class="dropdown-item js-set-theme-auto">
+              <span>Automatic</span>
+            </a>
+          </div>
+        </li>
+        
+
+        
+        
+
+      </ul>
+
+    </div>
+  </nav>
+</header>
+
+
+  </div>
+
+  <div class="page-body">
+    
+    
+    
+
+    <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+<div class="article-container pt-3">
+  <h1>Ideologically diverse news, an agenda for future research</h1>
+
+  
+
+  
+
+
+<div class="article-metadata">
+
+  
+  
+  
+  
+  <div>
+    
+
+  <span >
+      Eytan Bakshy</span>, <span >
+      Sol Messing</span>
+  </div>
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Apr 24, 2015
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    11 min read
+  </span>
+  
+
+  
+  
+  
+  
+
+  
+  
+
+</div>
+
+  
+
+
+
+
+<div class="btn-links mb-3">
+  
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+  
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+</div>
+
+
+<div class="article-header article-container featured-image-wrapper mt-4 mb-4" style="max-width: 720px; max-height: 381px;">
+  <div style="position: relative">
+    <img src="/post/exposure-to-ideologically-diverse-response/featured_hu_aac76fd65abeb435.webp" width="720" height="381" alt="" class="featured-image">
+    
+  </div>
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <p>Earlier this month, we published an early access version of our paper in ScienceExpress (<a href="/pdf/Science-2015-Bakshy-1130-2.pdf">Bakshy et al. 2015</a>), &ldquo;Exposure to ideologically diverse news and opinion on Facebook.&rdquo; The paper constitutes the first attempt to quantify the extent to which ideologically cross-cutting hard news and opinion is shared by friends, appears in algorithmically ranked News Feeds, and is actually consumed (i.e., click through to read).</p>
+<p>We are grateful for the widespread interest this paper, which grew out of two threads of related research that we began nearly five years ago: Eytan and Lada's work on the role of social networks in information diffusion (<a href="http://arxiv.org/pdf/1201.4145v2.pdf" target="_blank" rel="noopener">Bakshy et al. 2012</a>) and Sean and Solomon's work on selective exposure in social media (<a href="http://crx.sagepub.com/content/41/8/1042" target="_blank" rel="noopener">Messing and Westwood 2012</a>).</p>
+<p>While <em>Science</em> papers are explicitly prohibited from suggesting future directions for research, we would like to shed additional light on our study and raise a few questions that we would be excited to see addressed in future work.</p>
+<p><strong>Tradeoffs when Selecting a Population</strong></p>
+<p>There were tradeoffs when deciding on who to include in this study. While we could have examined all U.S. adults on Facebook, we focused on people who identify as liberals or conservatives and encounter hard news, opinion, and other political content in social media regularly. We did so because many important questions around &ldquo;echo chambers&rdquo; and &ldquo;filter bubbles&quot;on Facebook relate to this subpopulation, and we used self-reported ideological preferences to define it.</p>
+<p>Using self-reported ideological preferences in online profiles is not the only a way to measure ideology or define the population of interest. Yet, people who publicly identify as liberals or conservatives in their Facebook profiles are an interesting and important subpopulation worthy of study for many reasons. As <a href="http://gking.harvard.edu/files/gking/files/words.pdf" target="_blank" rel="noopener">Hopkins and King 2010</a> have pointed out, studying the expression and behavior of those who are politically engaged online is of interest to political scientists studying activists (<a href="http://www.hup.harvard.edu/catalog.php?isbn=9780674942936" target="_blank" rel="noopener">Verba, Schlozman, and Brady 1995</a>), the media (<a href="http://195.130.87.21:8080/dspace/handle/123456789/979" target="_blank" rel="noopener">Drezner and Farrell 2004</a>), public opinion (<a href="https://scholar.google.com/scholar?cluster=15572370959137190849&amp;hl=en&amp;as_sdt=2005&amp;sciodt=0,5" target="_blank" rel="noopener">Gamson 1992</a>), social networks (<a href="http://dl.acm.org/citation.cfm?id=1134277" target="_blank" rel="noopener">Adamic and Glance 2005</a>; <a href="http://www.langtoninfo.co.uk/web_content/9780521542234_frontmatter.pdf" target="_blank" rel="noopener">Huckfeldt and Sprague 1995</a>), and elite influence (<a href="http://press.princeton.edu/titles/8425.html" target="_blank" rel="noopener">Grindle 2005</a>; <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.160.8347&amp;rep=rep1&amp;type=pdf" target="_blank" rel="noopener">Hindman, Tsioutsiouliklis, and Johnson 2003;</a> <a href="https://books.google.com/books?hl=en&amp;lr=&amp;id=83yNzu6toisC&amp;oi=fnd&amp;pg=PR8&amp;dq=The&#43;Nature&#43;and&#43;Origins&#43;of&#43;Mass&#43;Opinion&amp;ots=6oEwiBZtSM&amp;sig=ySnwRZUuVtOyTkC-3raaL88pYns#v=onepage&amp;q=The%20Nature%20and%20Origins%20of%20Mass%20Opinion&amp;f=false" target="_blank" rel="noopener">Zaller 1992</a>).</p>
+<p>This subpopulation has limitations and is not the only population of interest. The data are not appropriate for those who seek estimates of the entire U.S. public, people without strong opinions, or people not on Facebook (at least not without additional extrapolation, re-weighting, additional evidence, etc.). While our data <em>could plausibly</em> also provide good estimates of the population of people who are ideologically active and have clear preferences, we are not claiming that's necessarily the case---that remains to be determined in future work.</p>
+<p>We'd like to help other researchers looking to study other populations understand more about the population we've defined. An important question in this regard is what proportion of active U.S. adults actually report an identifiable left/right/center ideology in their profile. That number is 25%, or 10.1 million people.</p>
+<p>It's also informative to examine the proportion of those users who provide identifiable profile affiliations conditional on demographics and Facebook usage:</p>
+<table style="border-collapse:collapse;width:473px;height:512px;" border="0" width="174" cellspacing="0" cellpadding="0"><colgroup> <col style="width:65pt;" span="2" width="87" /> </colgroup>
+<tbody>
+<tr style="height:18pt;">
+<td class="xl63" style="height:18pt;width:65pt;" width="87" height="24"><strong>Age</strong></td>
+<td class="xl63" style="width:65pt;" width="87"><strong>Percent reporting ideological affiliation</strong></td>
+</tr>
+<tr style="height:18pt;">
+<td class="xl63" style="height:18pt;" height="24">18-24</td>
+<td class="xl64">21.60%</td>
+</tr>
+<tr style="height:18pt;">
+<td class="xl63" style="height:18pt;" height="24">25-44</td>
+<td class="xl64">28.50%</td>
+</tr>
+<tr style="height:18pt;">
+<td class="xl63" style="height:18pt;" height="24">45-64</td>
+<td class="xl64">24.30%</td>
+</tr>
+<tr style="height:18pt;">
+<td class="xl63" style="height:18pt;" height="24">65+</td>
+<td class="xl64">21.40%</td>
+</tr>
+<tr style="height:18pt;">
+<td class="xl63" style="height:18pt;" height="24"></td>
+<td class="xl63"></td>
+</tr>
+<tr style="height:18pt;">
+<td class="xl63" style="height:18pt;" height="24"><strong>Gender</strong></td>
+<td class="xl63"><strong>Percent reporting ideological affiliation</strong></td>
+</tr>
+<tr style="height:18pt;">
+<td class="xl63" style="height:18pt;" height="24">Female</td>
+<td class="xl64">21.90%</td>
+</tr>
+<tr style="height:18pt;">
+<td class="xl63" style="height:18pt;" height="24">Male</td>
+<td class="xl64">30.60%</td>
+</tr>
+<tr style="height:18pt;">
+<td class="xl63" style="height:18pt;" height="24"></td>
+<td class="xl63"></td>
+</tr>
+<tr style="height:18pt;">
+<td class="xl63" style="height:18pt;" height="24"><strong>Login Days</strong></td>
+<td class="xl63"><strong>Percent reporting ideological affiliation</strong></td>
+</tr>
+<tr style="height:18pt;">
+<td class="xl63" style="height:18pt;" height="24">105-140</td>
+<td class="xl64">18.90%</td>
+</tr>
+<tr style="height:18pt;">
+<td class="xl63" style="height:18pt;" height="24">140-185</td>
+<td class="xl64">26.70%</td>
+</tr>
+</tbody>
+</table>
+<p>Clearly those who report an ideology in their profile tend to be more active on Facebook. They are also more likely to be men, which is consistent with the well-documented gender gap in American politics (<a href="http://journals.cambridge.org/action/displayAbstract?fromPage=online&amp;aid=245226&amp;fileId=S0003055404001315" target="_blank" rel="noopener">Box-Steffensmeier 2004</a>).</p>
+<p>It's possible that these individuals differ from other Facebook users in other ways. It seems plausible to expect these people to have higher levels of political interest, a stronger sense of political ideology and political identity, and to be more likely to be active in politics than most others on Facebook. It's also possible that these individuals are more extroverted than the average user, especially in the somewhat taboo domain of politics. These possibilities also strike us as interesting questions for study in future work.</p>
+<p><strong>How to Measure Ideology</strong></p>
+<p>We hope others will replicate this work using other populations and ways of measuring ideology, which will provide a broader view of exposure to political media. Data on ideology could be collected by, for example, surveying users, imputing ideology based on user behavior, or joining data to the voter file. Each of these methods have advantages and potential challenges.</p>
+<p>Using surveys in future work would allow researchers to collect data on ideology in a way that can facilitate comparisons with much of the extant literature in political science, and allow researchers to sample from a less politically engaged population. Of course, this could be tricky because survey response rates might be affected by the phenomenon under study. In other words, the salience of political discussion from the right or left, and/or prior choices to consume content could make people more/less likely to respond to a survey asking about ideology, or affect the way they report the strength of their ideological preferences. This could confound measurement in a way that would be difficult to detect and correct. Yet it would be fascinating to see how survey results compare to the results in this study.</p>
+<p>We would also encourage the application of large-scale methods that impute individuals&rsquo; ideological leanings using social networks or revealed preferences. This would have the advantage of allowing researchers to estimate ideological preferences for a broader population, and could be applied to empirical contexts for which self-reported ideological affiliations are not present.</p>
+<p>However, these approaches present challenges. Imputing ideology based on social networks would make it difficult to estimate what proportion of people&rsquo;s networks contain individuals from the other side. <a href="http://journals.cambridge.org/action/displayAbstract?fromPage=online&amp;aid=9586211&amp;fileId=S0003055414000525" target="_blank" rel="noopener">Bond and Messing, 2015</a> and <a href="http://pan.oxfordjournals.org/content/23/1/76.full.pdf?keytype=ref&amp;ijkey=uMFPw4dsMHM7608" target="_blank" rel="noopener">Barberá 2014</a> discuss some of the challenges related to estimating ideology based on revealed preferences. Another challenge specific to the quantities estimated in our paper is that because behavior may be caused by the composition of individuals&rsquo; social networks, what their friends share, and how they engage with Facebook, using revealed preferences to select the population could introduce endogenous selection bias (<a href="http://www.annualreviews.org/doi/abs/10.1146/annurev-soc-071913-043455" target="_blank" rel="noopener">Elwert and Winship 2014</a>). A study that negotiates these issues would be a tremendously valuable contribution. Similar methods could also be used to obtain measures of ideological alignment of content.</p>
+<p>Lastly, researchers could use party registration from the voter file. This approach would yield millions of records, but have different selection problems&mdash;match rates may differ by region, state, age, gender, etc. Again, the advantage of approaches like this are that these studies compliment each other and provide a fuller picture of how exposure to viewpoints from the other side occur in social media.</p>
+<p>Future work should also examine how exposure varies in different subpopulations. For example, one hypothesis to test is whether those with weaker or less consistent ideological preferences have more cross cutting content shared by friends, rendered in social media streams, and selected for reading. Some preliminary analysis suggests that indeed, among the individuals in our study, those with a weaker stated ideological affiliation have on average more cross-cutting content at each stage in the exposure process.</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="/img/5a469dbbfb5b2916a87554ca4a247579da11e2b2.png" alt="" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
+<p><strong>Other Data Sources</strong></p>
+<p>There are many other important questions related to this paper that necessitate new data sources: Does encountering cross-cutting content increase or decrease attitude polarization? What about attitudes toward members of the other side? Does it change specific policy preferences? Are liberals and conservatives more or less likely to see content in News Feed <em>because</em> it was cross-cutting? Do they actively avoid cross-cutting political content <em>because</em> of expressions in the title or because of the fact that the media source is suggestive of a cross-cutting article? How do changes to ranking algorithms and user interfaces affect selective exposure? And how can we better understand actual discourse about politics in social media, rather than merely shared media content?</p>
+<p>Answering these questions necessitates collecting innovative data sets via online experimentation (<a href="http://pan.oxfordjournals.org/content/20/3/351.short" target="_blank" rel="noopener">Berinsky et al. 2012</a>), social media (<a href="http://scholar.harvard.edu/dtingley/files/fall2012.pdf" target="_blank" rel="noopener">Ryan and Broockman 2012</a>), crowdsourcing (<a href="http://papers.ssrn.com/sol3/papers.cfm?abstract_id=2526461" target="_blank" rel="noopener">Budak et al. 2014</a>), large scale field experimentation (<a href="http://gking.harvard.edu/publications/randomized-Experimental-Study-Censorship-China" target="_blank" rel="noopener">King et al. 2014</a>), observational social media data, clever ways to collect data about individual differences in ranking (<a href="http://www.lazerlab.net/sites/default/files/publications/Measuring%20Personalization%20of%20Web%20Search.pdf" target="_blank" rel="noopener">Hannak et al. 2013</a>), smart ways to combine behavioral and survey data (<a href="http://arxiv.org/pdf/1304.1837v3.pdf" target="_blank" rel="noopener">Chen et al. 2014</a>), and panel data (<a href="http://faculty-gsb.stanford.edu/athey/documents/localnews.pdf" target="_blank" rel="noopener">Athey and Mobius 2012</a>, <a href="https://5harad.com/papers/bubbles.pdf" target="_blank" rel="noopener">Flaxman et al. 2014</a>).</p>
+<p>Many of these are causal questions necessitating experimental and/or quasi experimental designs. For example, the extent to which people select content because it is cross-cutting could be investigated using experiments like this one (e.g., <a href="http://crx.sagepub.com/content/41/8/1042" target="_blank" rel="noopener">Messing and Westwood 2012</a>) or through identifying sources of natural exogenous variation. And while Diana Mutz and others have done ground-breaking research on the effects of encountering cross-cutting arguments on political attitudes (<a href="http://journals.cambridge.org/action/displayAbstract?fromPage=online&amp;aid=208463&amp;fileId=S0003055402004264" target="_blank" rel="noopener">Mutz 2002</a>b) and behavior (<a href="http://www.jstor.org/stable/3088437" target="_blank" rel="noopener">Mutz 2002</a>a), more research into how these effects play out in the long term (using approaches like <a href="http://faculty.wcas.northwestern.edu/~jnd260/pub/Druckman%20Fein%20Leeper%20APSR.pdf" target="_blank" rel="noopener">Druckman et al 2012</a>) would be of tremendous benefit to the literature. It is difficult to expose people to any sort of argument for a long period of time (say over the course of a U.S. national political campaign cycle), in a way that is not confounded with people's existing preferences and the social environment, though creative quasi-experimental work (<a href="http://web.stanford.edu/~ayurukog/cable_news.pdf" target="_blank" rel="noopener">Martin and Yurukoglu 2014</a>) is emerging in this area.</p>
+<p>Many of these questions necessitate that researchers identify the effects of cross-cutting arguments both on and off Facebook. To get a full picture of how cross-cutting arguments affect politics requires understanding the myriad of ways individuals get information, both on the Internet (<a href="https://5harad.com/papers/bubbles.pdf" target="_blank" rel="noopener">Flaxman et al. 2014</a>) and offline (<a href="http://journals.cambridge.org/action/displayAbstract?fromPage=online&amp;aid=208463&amp;fileId=S0003055402004264" target="_blank" rel="noopener">Mutz 2002</a>a), what kinds of information people discuss in offline contexts (<a href="http://dx.doi.org/10.1017/S0003055402004264" target="_blank" rel="noopener">Mutz 2002</a>b), and the relative influence of all of these factors on opinions.</p>
+<p>Finally, if individuals' online networks and choices do substantially impact the diversity of news in individuals' overall &ldquo;information diets,&rdquo; future research could examine the effects of connecting those with more disparate views (<a href="http://ajps.org/2015/03/11/partisanship-in-social-settings-when-democrats-and-republicans-meet/" target="_blank" rel="noopener">Klar 2014</a>), encouraging consumption of cross-cutting content (<a href="http://www.smunson.com/portfolio/projects/socnews_icwsm15.pdf" target="_blank" rel="noopener">Agapie and Munson 2015</a>), or simply encouraging individuals to read more diverse news by making individuals more aware of the balance of news they consume (<a href="http://www.smunson.com/portfolio/projects/aggdiversity/balancer-icwsm.pdf" target="_blank" rel="noopener">Munson et al. 2013</a>).</p>
+<p>These questions are especially important in light of the fact that there are substantial opportunities for people to read more news on Facebook. The plots below illustrate the average proportion of stories shared by friends, those that are seen in News Feed, and those clicked on for liberals and conservatives in the study. Clearly there is an opportunity to read more news from either side.</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="/img/ddb611f4a223213b3a653208e5bdd048d6b9cd94.png" alt="" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
+<p><strong>Dataverse</strong></p>
+<p>Finally, we believe that reproducing, replicating, and conducting additional analyses on extant data sets is extremely important and helps generate ideas for future work (<a href="http://gking.harvard.edu/files/abs/replication-Abs.shtml" target="_blank" rel="noopener">King 1995</a>, <a href="http://thomasleeper.com/2015/05/open-science-language/" target="_blank" rel="noopener">Leeper 2015</a>). In that spirit, we have created a <a href="https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/AAI7VA" target="_blank" rel="noopener">Dataverse archive</a>. The repository includes replication data, scripts, as well as some additional supplementary data and code for extending our work.</p>
+<p><strong>References</strong></p>
+<p>E. Bakshy, S. Messing, L.A. Adamic. 2015. Exposure to ideologically diverse news and opinion on Facebook. <em>Science</em>.</p>
+<p>E. Bakshy, I. Rosenn, C.A. Marlow, L.A. Adamic. 2012. The Role of Social Networks in Information Diffusion. <em>ACM WWW 2012.</em></p>
+<p>S. Messing and S.J. Westwood. 2012. Selective Exposure in the Age of Social Media: Endorsements Trump Partisan Source Affiliation When Selecting News Online. <em>Communication Research</em>.</p>
+<p>P. Barberá (2015). Birds of the same feather tweet together: Bayesian ideal point estimation using Twitter data. <em>Political Analysis</em>, <em>23</em>(1), 76-91.</p>
+<p>R. Bond, S. Messing, Quantifying Social Media&rsquo;s Political Space: Estimating Ideology from Publicly Revealed Preferences on Facebook. <em>American Political Science Review</em></p>
+<p>F. Elwert and C. Winship. 2014. Endogenous Selection Bias: The Problem of Conditioning on a Collider Variable. <em>Annual Review of Sociology.</em></p>
+<p>G. King, J. Pan, and M. E. Roberts. 2014. Reverse-Engineering Censorship in China: Randomized Experimentation and Participant Observation. <em>Science</em>.</p>
+<p>C. Budak, S. Goel, &amp; J. M. Rao. (2014). Fair and Balanced? Quantifying Media Bias Through Crowdsourced Content Analysis. <em>Quantifying Media Bias Through Crowdsourced Content Analysis (November 17, 2014)</em>.</p>
+<p>S. Athey, M. Mobius. The Impact of News Aggregators on Internet News Consumption: The Case of Localization. Working paper. <a href="http://faculty-gsb.stanford.edu/athey/documents/localnews.pdf" target="_blank" rel="noopener">http://faculty-gsb.stanford.edu/athey/documents/localnews.pdf</a></p>
+<p>A. Hannak, P. Sapiezynski, A. Molavi Kakhki, B. Krishnamurthy, D. Lazer, A. Mislove, C. Wilson. 2013. Measuring personalization of web search. <em>ACM WWW 2013</em>.</p>
+<p>A. Chen and A. Owen and M. Shi. Data Enriched Linear Regression. Working paper. <a href="http://arxiv.org/pdf/1304.1837v3.pdf" target="_blank" rel="noopener">http://arxiv.org/pdf/1304.1837v3.pdf</a></p>
+<p>G.J. Martin, A. Yurukoglu. Working paper. Bias in Cable News: Real Effects and Polarization. Working paper. <a href="http://web.stanford.edu/~ayurukog/cable_news.pdf" target="_blank" rel="noopener">http://web.stanford.edu/~ayurukog/cable_news.pdf</a></p>
+<p>S.R. Flaxman, S. Goel, J.M. Rao. Filter Bubbles, Echo Chambers, and Online News Consumption. Working paper. <a href="https://5harad.com/papers/bubbles.pdf" target="_blank" rel="noopener">https://5harad.com/papers/bubbles.pdf</a></p>
+<p>D.C. Mutz. 2002. The Consequences of Cross-Cutting Networks for Political Participation. <em>American Journal of Political Science</em>.</p>
+<p>D.C. Mutz. 2002. Cross-cutting Social Networks: Testing Democratic Theory in Practice. <em>American Political Science Review</em>.</p>
+<p>J. N. Druckman, J. Fein, &amp; T. Leeper. 2012. A source of bias in public opinion stability. <em>American Political Science Review</em>.</p>
+<p>E. Agapie, S.A. Munson. 2015. &ldquo;<a href="http://smunson.com/portfolio/projects/socnews_icwsm15.pdf" target="_blank" rel="noopener">Social Cues and Interest in Reading Political News Stories</a>.&rdquo; <em>AAAI ICWSM 2015</em>.</p>
+<p>S. Klar. 2014. Partisanship in a Social Setting. <em>American Journal of Political Science</em>.</p>
+<p>S.A. Munson, S.Y. Lee, P. Resnick. 2013. Encouraging Reading of Diverse Political Viewpoints with a Browser Widget. <em>AAAI ICWSM 2013</em>.</p>
+<p>G. King. 1995. &ldquo;Replication, Replication.&rdquo; <em>Political Science and Politics</em>. <a href="http://j.mp/1wP9Vqn" target="_blank" rel="noopener">http://j.mp/1wP9Vqn</a></p>
+<p>T. Leeper. 2015. What's in a Name? The Concepts and Language of Replication and Reproducibility. Blog post. <a href="http://thomasleeper.com/2015/05/open-science-language/" target="_blank" rel="noopener">http://thomasleeper.com/2015/05/open-science-language/</a></p>
+
+    </div>
+
+    
+
+
+
+
+
+
+
+<div class="share-box">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fsolmessing.netlify.app%2Fpost%2Fexposure-to-ideologically-diverse-response%2F&amp;text=Ideologically&#43;diverse&#43;news%2C&#43;an&#43;agenda&#43;for&#43;future&#43;research" target="_blank" rel="noopener" class="share-btn-twitter" aria-label="twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fsolmessing.netlify.app%2Fpost%2Fexposure-to-ideologically-diverse-response%2F&amp;t=Ideologically&#43;diverse&#43;news%2C&#43;an&#43;agenda&#43;for&#43;future&#43;research" target="_blank" rel="noopener" class="share-btn-facebook" aria-label="facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+        
+      
+      <li>
+        <a href="mailto:?subject=Ideologically%20diverse%20news%2C%20an%20agenda%20for%20future%20research&amp;body=https%3A%2F%2Fsolmessing.netlify.app%2Fpost%2Fexposure-to-ideologically-diverse-response%2F" target="_blank" rel="noopener" class="share-btn-email" aria-label="envelope">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=https%3A%2F%2Fsolmessing.netlify.app%2Fpost%2Fexposure-to-ideologically-diverse-response%2F&amp;title=Ideologically&#43;diverse&#43;news%2C&#43;an&#43;agenda&#43;for&#43;future&#43;research" target="_blank" rel="noopener" class="share-btn-linkedin" aria-label="linkedin-in">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="whatsapp://send?text=Ideologically&#43;diverse&#43;news%2C&#43;an&#43;agenda&#43;for&#43;future&#43;research%20https%3A%2F%2Fsolmessing.netlify.app%2Fpost%2Fexposure-to-ideologically-diverse-response%2F" target="_blank" rel="noopener" class="share-btn-whatsapp" aria-label="whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=https%3A%2F%2Fsolmessing.netlify.app%2Fpost%2Fexposure-to-ideologically-diverse-response%2F&amp;title=Ideologically&#43;diverse&#43;news%2C&#43;an&#43;agenda&#43;for&#43;future&#43;research" target="_blank" rel="noopener" class="share-btn-weibo" aria-label="weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+
+
+
+
+  
+    
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+</article>
+  </div>
+
+  <div class="page-footer">
+    
+    
+    <div class="container">
+      <footer class="site-footer">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+    
+  
+  
+    
+  
+
+  
+
+  
+  <p class="powered-by copyright-license-text">
+    ©2023 Sol Messing. This work is licensed under XX
+  </p>
+  
+
+  <p class="powered-by footer-license-icons">
+    <a href="https://creativecommons.org/licenses/by-nc-nd/4.0" rel="noopener noreferrer" target="_blank" aria-label="Creative Commons">
+      <i class="fab fa-creative-commons fa-2x" aria-hidden="true"></i>
+      <i class="fab fa-creative-commons-by fa-2x" aria-hidden="true"></i>
+      
+        <i class="fab fa-creative-commons-nc fa-2x" aria-hidden="true"></i>
+      
+      
+        <i class="fab fa-creative-commons-nd fa-2x" aria-hidden="true"></i>
+      
+    </a>
+  </p>
+
+
+
+
+
+  <p class="powered-by">
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      Published with <a href="https://hugoblox.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Hugo Blox Builder</a> — the free, <a href="https://github.com/HugoBlox/hugo-blox-builder" target="_blank" rel="noopener">open source</a> website builder that empowers creators.
+    
+  </p>
+</footer>
+
+    </div>
+    
+  </div>
+
+  
+
+
+<script src="/js/vendor-bundle.min.d613345003d21781ec611233eea95b85.js"></script>
+
+
+
+
+  
+
+  
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script id="search-hit-fuse-template" type="text/x-template">
+    <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+    </div>
+  </script>
+  
+    <script src="https://cdn.jsdelivr.net/gh/krisk/Fuse@v3.2.1/dist/fuse.min.js" integrity="sha512-o38bmzBGX+hD3JHWUFCDA09btWaqrNmoJ3RXLlrysA7PP01Kgs4UlE4MhelE1v5dJR3+cxlR4qQlotsW7jKsnw==" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/gh/julmot/mark.js@8.11.1/dist/jquery.mark.min.js" integrity="sha512-mhbv5DqBMgrWL+32MmsDOt/OAvqr/cHimk6B8y/bx/xS88MVkYGPiVv2ixKVrkywF2qHplNRUvFsAHUdxZ3Krg==" crossorigin="anonymous"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script id="page-data" type="application/json">{"use_headroom":true}</script>
+
+
+  <script src="/js/wowchemy-headroom.b95a7e109243f29d04930ae8cb49a756.js" type="module"></script>
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+<script src="/en/js/wowchemy.min.69fc52a6dc16aaf1a452cfbb36466dac.js"></script>
+
+
+
+
+
+
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        
+        <pre><code></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <script src="/js/wowchemy-publication.9c0e895144aef5a693008b5c5d450147.js" type="module"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
