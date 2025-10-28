@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>4 | Sol Messing</title>
+    <link>https://solmessing.netlify.app/publication-type/4/</link>
+      <atom:link href="https://solmessing.netlify.app/publication-type/4/index.xml" rel="self" type="application/rss+xml" />
+    <description>4</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Wed, 01 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://solmessing.netlify.app/media/icon_hu_f13f724df068ea4b.png</url>
+      <title>4</title>
+      <link>https://solmessing.netlify.app/publication-type/4/</link>
+    </image>
+    
+    <item>
+      <title>Facebook Privacy-Protected Full URLs Data Set</title>
+      <link>https://solmessing.netlify.app/publication/messing-2020/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>https://solmessing.netlify.app/publication/messing-2020/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;Largest ever social science data set released, protected using &lt;a href=&#34;https://arxiv.org/abs/2002.04049&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;action-level differential privacy&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;See also &lt;a href=&#34;socialscience.one/blog/update-social-science-one&#34;&gt;Social Science One&amp;rsquo;s annoucement&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Media coverage: &lt;a href=&#34;https://www.sciencemag.org/news/2020/02/researchers-finally-get-access-data-facebook-s-role-political-discourse&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Science&lt;/a&gt;, &lt;a href=&#34;https://www.nature.com/articles/d41586-019-02966-x&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Nature&lt;/a&gt;, &lt;a href=&#34;https://www.poynter.org/fact-checking/2019/what-can-researchers-find-among-the-32-million-urls-facebook-just-released-to-social-science-one/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Poynter&lt;/a&gt;, &lt;a href=&#34;https://www.wired.com/story/facebook-social-network-becomes-social-science-subject/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Wired&lt;/a&gt;, &lt;a href=&#34;https://www.ft.com/content/6133b90e-e23f-11e9-9743-db5a370481bc&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Financial Times&lt;/a&gt;, &lt;a href=&#34;https://techcrunch.com/2018/07/11/facebook-independent-research-commission-social-science-one-will-share-a-petabyte-of-user-data/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Tech Crunch&lt;/a&gt;,
+&lt;a href=&#34;https://www.theverge.com/2018/7/11/17561144/facebook-election-research-database-link-proposal&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;The Verge&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Measuring issue salience: Using supervised machine learning to generate data from free responses to the &#39;most important problem&#39; question</title>
+      <link>https://solmessing.netlify.app/publication/messing-2011-measuring/</link>
+      <pubDate>Sat, 01 Jan 2011 00:00:00 +0000</pubDate>
+      <guid>https://solmessing.netlify.app/publication/messing-2011-measuring/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

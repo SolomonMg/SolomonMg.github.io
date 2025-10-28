@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>7 | Sol Messing</title>
+    <link>https://solmessing.netlify.app/publication-type/7/</link>
+      <atom:link href="https://solmessing.netlify.app/publication-type/7/index.xml" rel="self" type="application/rss+xml" />
+    <description>7</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Tue, 01 Jan 2013 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://solmessing.netlify.app/media/icon_hu_f13f724df068ea4b.png</url>
+      <title>7</title>
+      <link>https://solmessing.netlify.app/publication-type/7/</link>
+    </image>
+    
+    <item>
+      <title>Friends that Matter: How Social News Shapes Political Knowledge, Attitudes, and Behavior</title>
+      <link>https://solmessing.netlify.app/publication/messing-2013-friends/</link>
+      <pubDate>Tue, 01 Jan 2013 00:00:00 +0000</pubDate>
+      <guid>https://solmessing.netlify.app/publication/messing-2013-friends/</guid>
+      <description>&lt;p&gt;/pdf/CH7brief.pdf&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

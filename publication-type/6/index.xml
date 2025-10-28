@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>6 | Sol Messing</title>
+    <link>https://solmessing.netlify.app/publication-type/6/</link>
+      <atom:link href="https://solmessing.netlify.app/publication-type/6/index.xml" rel="self" type="application/rss+xml" />
+    <description>6</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sat, 01 Jan 2011 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://solmessing.netlify.app/media/icon_hu_f13f724df068ea4b.png</url>
+      <title>6</title>
+      <link>https://solmessing.netlify.app/publication-type/6/</link>
+    </image>
+    
+    <item>
+      <title>Of course I wouldn&#39;t do that in real life: advancing the arguments for increasing realism in HCI experiments</title>
+      <link>https://solmessing.netlify.app/publication/lew-2011-course/</link>
+      <pubDate>Sat, 01 Jan 2011 00:00:00 +0000</pubDate>
+      <guid>https://solmessing.netlify.app/publication/lew-2011-course/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

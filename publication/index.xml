@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Publications | Sol Messing</title>
+    <link>https://solmessing.netlify.app/publication/</link>
+      <atom:link href="https://solmessing.netlify.app/publication/index.xml" rel="self" type="application/rss+xml" />
+    <description>Publications</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Wed, 01 Jan 2025 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://solmessing.netlify.app/media/icon_hu_f13f724df068ea4b.png</url>
+      <title>Publications</title>
+      <link>https://solmessing.netlify.app/publication/</link>
+    </image>
+    
+    <item>
+      <title>Quantifying Narrative Similarity Across Languages</title>
+      <link>https://solmessing.netlify.app/publication/waightmessing2025/</link>
+      <pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://solmessing.netlify.app/publication/waightmessing2025/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://doi.org/10.7910/DVN/AYFFPT&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Replication materials&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>A 2 million-person, campaign-wide field experiment shows how digital advertising affects voter turnout</title>
+      <link>https://solmessing.netlify.app/publication/aggarwal20232/</link>
+      <pubDate>Sun, 01 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>https://solmessing.netlify.app/publication/aggarwal20232/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;Supplimentary materials at end of manuscript&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/YMKVA1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Replication materials&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Media coverage: &lt;a href=&#34;https://www.nature.com/articles/d41586-023-00073-6&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Nature&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Facebook Privacy-Protected Full URLs Data Set</title>
+      <link>https://solmessing.netlify.app/publication/messing-2020/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>https://solmessing.netlify.app/publication/messing-2020/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;Largest ever social science data set released, protected using &lt;a href=&#34;https://arxiv.org/abs/2002.04049&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;action-level differential privacy&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;See also &lt;a href=&#34;socialscience.one/blog/update-social-science-one&#34;&gt;Social Science One&amp;rsquo;s annoucement&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Media coverage: &lt;a href=&#34;https://www.sciencemag.org/news/2020/02/researchers-finally-get-access-data-facebook-s-role-political-discourse&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Science&lt;/a&gt;, &lt;a href=&#34;https://www.nature.com/articles/d41586-019-02966-x&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Nature&lt;/a&gt;, &lt;a href=&#34;https://www.poynter.org/fact-checking/2019/what-can-researchers-find-among-the-32-million-urls-facebook-just-released-to-social-science-one/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Poynter&lt;/a&gt;, &lt;a href=&#34;https://www.wired.com/story/facebook-social-network-becomes-social-science-subject/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Wired&lt;/a&gt;, &lt;a href=&#34;https://www.ft.com/content/6133b90e-e23f-11e9-9743-db5a370481bc&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Financial Times&lt;/a&gt;, &lt;a href=&#34;https://techcrunch.com/2018/07/11/facebook-independent-research-commission-social-science-one-will-share-a-petabyte-of-user-data/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Tech Crunch&lt;/a&gt;,
+&lt;a href=&#34;https://www.theverge.com/2018/7/11/17561144/facebook-election-research-database-link-proposal&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;The Verge&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Guidelines for Implementing and Auditing Differentially Private Systems</title>
+      <link>https://solmessing.netlify.app/publication/kifer-2020-guidelines/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>https://solmessing.netlify.app/publication/kifer-2020-guidelines/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Projecting confidence: How the probabilistic horse race confuses and demobilizes the public</title>
+      <link>https://solmessing.netlify.app/publication/wlm-2019-projecting/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
+      <guid>https://solmessing.netlify.app/publication/wlm-2019-projecting/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;Supplimentary &lt;a href=&#34;https://solmessing.netlify.app/pdf/aggregatorSM.pdf&#34;&gt;materials&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Cited by &lt;a href=&#34;https://fivethirtyeight.com/features/politics-podcast-whats-so-wrong-with-nancy-pelosi/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;FiveThirthyEight&amp;rsquo;s Politics
+Podcast&lt;/a&gt;
+as influential in decision to change forecast presentation.&lt;/li&gt;
+&lt;li&gt;Media coverage: &lt;a href=&#34;https://www.washingtonpost.com/news/politics/wp/2018/02/06/clintons-achilles-heel-in-2016-may-have-been-overconfidence/?utm_term=.b71fb84da00f&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Washington
+Post&lt;/a&gt;,
+&lt;a href=&#34;http://nymag.com/daily/intelligencer/2018/02/americans-dont-understand-election-probabilities.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;New York
+Magazine&lt;/a&gt;,
+&lt;a href=&#34;https://politicalwire.com/2018/02/06/election-forecasts-lower-voter-turnout/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Political
+Wire&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Tumor formation of adult stem cell transplants in rodent arthritic joints</title>
+      <link>https://solmessing.netlify.app/publication/chapelin-2019-tumor/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
+      <guid>https://solmessing.netlify.app/publication/chapelin-2019-tumor/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Estimating heterogeneous treatment effects and the effects of heterogeneous treatments with ensemble methods</title>
+      <link>https://solmessing.netlify.app/publication/grimmer-2017-estimating/</link>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
+      <guid>https://solmessing.netlify.app/publication/grimmer-2017-estimating/</guid>
+      <description>&lt;pre&gt;&lt;code&gt;- [Replication materials](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/BQMLQW).
+- [Software implementation](https://github.com/SolomonMg/HetSL) (under development)
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Partisan Conflict and Congressional Outreach</title>
+      <link>https://solmessing.netlify.app/publication/solomon-2017-partisan/</link>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
+      <guid>https://solmessing.netlify.app/publication/solomon-2017-partisan/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Bias in the flesh: Skin complexion and stereotype consistency in political campaigns</title>
+      <link>https://solmessing.netlify.app/publication/messing-2016-bias/</link>
+      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+      <guid>https://solmessing.netlify.app/publication/messing-2016-bias/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Exposure to ideologically diverse news and opinion on Facebook</title>
+      <link>https://solmessing.netlify.app/publication/bakshy-2015-exposure/</link>
+      <pubDate>Thu, 01 Jan 2015 00:00:00 +0000</pubDate>
+      <guid>https://solmessing.netlify.app/publication/bakshy-2015-exposure/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://science.sciencemag.org/content/348/6239/1090&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Review by David Lazer&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://science.sciencemag.org/highwire/filestream/630053/field_highwire_adjunct_files/1/Bakshy-SM.revision.1.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Supplementary materials&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://dx.doi.org/10.7910/DVN/LDJ7MS&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Replication materials&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Media: &lt;a href=&#34;http://www.nytimes.com/2015/05/08/technology/facebook-study-disputes-theory-of-political-polarization-among-users.html?_r=0&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;New York Times&lt;/a&gt;,
+the &lt;a href=&#34;http://www.washingtonpost.com/news/energy-environment/wp/2015/05/07/facebook-study-says-its-mainly-your-fault-not-theirs-that-you-read-things-you-already-agree-with/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Washington Post&lt;/a&gt;, the &lt;a href=&#34;http://www.bbc.com/news/science-environment-32606724&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;BBC&lt;/a&gt;, &lt;a href=&#34;http://www.cbsnews.com/news/facebooks-news-feed-limits-your-world-view/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CBS&lt;/a&gt;, &lt;a href=&#34;http://www.huffingtonpost.com/2015/05/12/facebook-study-polarization_n_7245192.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Huffington Post&lt;/a&gt;, &lt;a href=&#34;http://arstechnica.com/science/2015/05/dont-just-blame-facebook-we-build-our-own-bubbles/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Ars Technica&lt;/a&gt;, &lt;a href=&#34;http://www.wired.co.uk/news/archive/2015-05/08/facebook-echo-chamber-study&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Wired
+UK&lt;/a&gt;,
+&lt;a href=&#34;http://www.theverge.com/2015/5/7/8564795/facebook-online-opinion-filter-bubble-news-feed-study&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;The Verge&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Quantifying social media&#39;s political space: Estimating ideology from publicly revealed preferences on Facebook</title>
+      <link>https://solmessing.netlify.app/publication/bond-2015-quantifying/</link>
+      <pubDate>Thu, 01 Jan 2015 00:00:00 +0000</pubDate>
+      <guid>https://solmessing.netlify.app/publication/bond-2015-quantifying/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Selective exposure in the age of social media: Endorsements trump partisan source affiliation when selecting news online</title>
+      <link>https://solmessing.netlify.app/publication/messing-2014-selective/</link>
+      <pubDate>Wed, 01 Jan 2014 00:00:00 +0000</pubDate>
+      <guid>https://solmessing.netlify.app/publication/messing-2014-selective/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>The Impression of Influence: Legislator Communication, Representation, and Democratic Accountability</title>
+      <link>https://solmessing.netlify.app/publication/gri-mes-wes-14/</link>
+      <pubDate>Wed, 01 Jan 2014 00:00:00 +0000</pubDate>
+      <guid>https://solmessing.netlify.app/publication/gri-mes-wes-14/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;Media: &lt;a href=&#34;http://www.mischiefsoffaction.com/2015/01/its-frequency-not-size-compromise.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Mischiefs of Faction&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Do attitudes about immigration predict willingness to admit individual immigrants? A cross-national test of the person-positivity bias</title>
+      <link>https://solmessing.netlify.app/publication/iyengar-2013-attitudes/</link>
+      <pubDate>Tue, 01 Jan 2013 00:00:00 +0000</pubDate>
+      <guid>https://solmessing.netlify.app/publication/iyengar-2013-attitudes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Evaluation of the novel USPIO GEH121333 for MR imaging of cancer immune responses</title>
+      <link>https://solmessing.netlify.app/publication/shi-2013-evaluation/</link>
+      <pubDate>Tue, 01 Jan 2013 00:00:00 +0000</pubDate>
+      <guid>https://solmessing.netlify.app/publication/shi-2013-evaluation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ferumoxytol: a new, clinically applicable label for stem-cell tracking in arthritic joints with MRI</title>
+      <link>https://solmessing.netlify.app/publication/khurana-2013-ferumoxytol/</link>
+      <pubDate>Tue, 01 Jan 2013 00:00:00 +0000</pubDate>
+      <guid>https://solmessing.netlify.app/publication/khurana-2013-ferumoxytol/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Friends that Matter: How Social News Shapes Political Knowledge, Attitudes, and Behavior</title>
+      <link>https://solmessing.netlify.app/publication/messing-2013-friends/</link>
+      <pubDate>Tue, 01 Jan 2013 00:00:00 +0000</pubDate>
+      <guid>https://solmessing.netlify.app/publication/messing-2013-friends/</guid>
+      <description>&lt;p&gt;/pdf/CH7brief.pdf&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Iron administration before stem cell harvest enables MR imaging tracking after transplantation</title>
+      <link>https://solmessing.netlify.app/publication/khurana-2013-iron/</link>
+      <pubDate>Tue, 01 Jan 2013 00:00:00 +0000</pubDate>
+      <guid>https://solmessing.netlify.app/publication/khurana-2013-iron/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Role of diffusion-weighted imaging in differentiating benign and malignant pediatric abdominal tumors</title>
+      <link>https://solmessing.netlify.app/publication/gawande-2013-role/</link>
+      <pubDate>Tue, 01 Jan 2013 00:00:00 +0000</pubDate>
+      <guid>https://solmessing.netlify.app/publication/gawande-2013-role/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Differentiation of Normal Thymus from Anterior Mediastinal Lymphoma and Lymphoma Recurrence at Pediatric PET/CT</title>
+      <link>https://solmessing.netlify.app/publication/gawande-2012-differentiation/</link>
+      <pubDate>Sun, 01 Jan 2012 00:00:00 +0000</pubDate>
+      <guid>https://solmessing.netlify.app/publication/gawande-2012-differentiation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>FDG PET/CT for the Evaluation of Normal Thymus, Lymphoma Recurrence, and Mediastinal Lymphoma in Pediatric Patients Response</title>
+      <link>https://solmessing.netlify.app/publication/gawande-2012-fdg/</link>
+      <pubDate>Sun, 01 Jan 2012 00:00:00 +0000</pubDate>
+      <guid>https://solmessing.netlify.app/publication/gawande-2012-fdg/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>How Words and Money Cultivate a Personal Vote: The Effect of Legislator Credit Claiming on Constituent Credit Allocation</title>
+      <link>https://solmessing.netlify.app/publication/grimmer-how-2012/</link>
+      <pubDate>Sun, 01 Jan 2012 00:00:00 +0000</pubDate>
+      <guid>https://solmessing.netlify.app/publication/grimmer-how-2012/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://solmessing.netlify.app/pdf/ccsup.pdf&#34;&gt;Supplementary Information&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Intravenous ferumoxytol allows noninvasive MR imaging monitoring of macrophage migration into stem cell transplants</title>
+      <link>https://solmessing.netlify.app/publication/khurana-2012-intravenous/</link>
+      <pubDate>Sun, 01 Jan 2012 00:00:00 +0000</pubDate>
+      <guid>https://solmessing.netlify.app/publication/khurana-2012-intravenous/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>The 2012 Election Day Through the Facebook Lens</title>
+      <link>https://solmessing.netlify.app/publication/messing-2012-ts/</link>
+      <pubDate>Sun, 01 Jan 2012 00:00:00 +0000</pubDate>
+      <guid>https://solmessing.netlify.app/publication/messing-2012-ts/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Who is a `deserving&#39;immigrant? An experimental study of Norwegian attitudes</title>
+      <link>https://solmessing.netlify.app/publication/aalberg-2012-deserving/</link>
+      <pubDate>Sun, 01 Jan 2012 00:00:00 +0000</pubDate>
+      <guid>https://solmessing.netlify.app/publication/aalberg-2012-deserving/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Measuring issue salience: Using supervised machine learning to generate data from free responses to the &#39;most important problem&#39; question</title>
+      <link>https://solmessing.netlify.app/publication/messing-2011-measuring/</link>
+      <pubDate>Sat, 01 Jan 2011 00:00:00 +0000</pubDate>
+      <guid>https://solmessing.netlify.app/publication/messing-2011-measuring/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Of course I wouldn&#39;t do that in real life: advancing the arguments for increasing realism in HCI experiments</title>
+      <link>https://solmessing.netlify.app/publication/lew-2011-course/</link>
+      <pubDate>Sat, 01 Jan 2011 00:00:00 +0000</pubDate>
+      <guid>https://solmessing.netlify.app/publication/lew-2011-course/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Do explicit racial cues influence candidate preference? The case of skin complexion in the 2008 campaign</title>
+      <link>https://solmessing.netlify.app/publication/iyengar-2008-explicit/</link>
+      <pubDate>Tue, 01 Jan 2008 00:00:00 +0000</pubDate>
+      <guid>https://solmessing.netlify.app/publication/iyengar-2008-explicit/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
