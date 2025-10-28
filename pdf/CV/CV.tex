@@ -1,0 +1,524 @@
+% resume.tex
+%
+% (c) 2002 Matthew Boedicker <mboedick@mboedick.org> (original author) http://mboedick.org
+% (c) 2003 David J. Grant <dgrant@ieee.org> http://www.davidgrant.ca
+% (c) 2007 Todd C. Miller <Todd.Miller@courtesan.com> http://www.courtesan.com/todd
+% Max Schmeiser, VP, Data Science and Engineering at Netflix, mschmeiser@netflix.com 
+% Danniel Ferrante, VP, Data Science at Meta, dferrante@meta.com 
+% Lisa Cohen, Head of Data Science, Google, lisa.cohen.h@gmail.com
+
+%
+%This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/1.0/ or send a letter to Creative Commons, 559 Nathan Abbott Way, Stanford, California 94305, USA.
+
+\documentclass[letterpaper,11pt]{article}
+
+%-----------------------------------------------------------
+\usepackage[empty]{fullpage}
+\usepackage{color}
+\usepackage{url}
+\usepackage{fontawesome}
+
+\renewcommand\UrlFont{\ttfamily\color{blue}}%
+
+% For Japanese
+\usepackage{CJKutf8}
+
+\usepackage[colorlinks = true,
+            linkcolor = blue,
+            urlcolor  = blue,
+            citecolor = blue,
+            anchorcolor = blue]{hyperref}
+
+\definecolor{mygrey}{gray}{0.80}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Adjust margins to 0.5in on all sides
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.0in}
+\addtolength{\topmargin}{-0.5in}
+\addtolength{\textheight}{1.0in}
+
+%-----------------------------------------------------------
+%Custom commands
+\newcommand{\resitem}[1]{\item #1 \vspace{-6pt}}
+\newcommand{\resheading}[1]{\vspace{4pt}{\large
+\colorbox{mygrey}{\begin{minipage}{\textwidth}{\textbf{#1
+\vphantom{p\^{E}}}}\end{minipage}}}\vspace{4pt}} 
+\newcommand{\ressubheading}[4]{\vspace{2pt}
+\begin{tabular*}{7.58in}{l@{\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+		\textit{#3} & \textit{#4} \\
+\end{tabular*}\vspace{-1pt}}
+\newcommand{\resoldtitle}[4]{
+\begin{tabular*}{7.58in}{l@{\extracolsep{\fill}}r}
+		\textit{#1} & \textit{#2} \\
+\end{tabular*}\vspace{-6pt}}
+%-----------------------------------------------------------
+
+
+\begin{document} 
+
+\begin{tabular*}{7.5in}{l@{\extracolsep{\fill}}r}
+\textbf{\large Sol Messing} &  \faLaptop \hspace{.5ex} \url{https://SolomonMg.github.io} \\
+\texttt{solomon DOT [lastname] AT gmail DOT com} & \faGithub \hspace{.5ex} \url{https://github.com/SolomonMg} \\ 
+\end{tabular*}
+\\
+
+\vspace{0.1in}
+
+
+\resheading{Summary}
+
+Research scientist. High impact publications on generative AI, experiments and machine learning methods, social media. Built and led technical/R\&D teams at Twitter, Acronym, Pew Research Center. Advised early stage startups including Morning Consult ($>$\$1bn valuation), Yobi. Experience in tech: LLMs, recommender systems/ML, complex experimentation/causal inference, ads experimentation, modeling, HCI, algorithm audits, differential privacy. Technical experience working with distributed computing platforms (Hive/Hadoop/GCP/K8/etc.), Keras/TensorFlow/Pytorch, Django, etc. 
+\vspace{0.1in}
+
+
+\resheading{Work History}
+
+%% NYU
+%% Twitter
+\ressubheading{NYU's Center for Social Media and Politics}{NYC/St. Paul, MN}{Research Associate Professor}{2023 - Present}
+	\begin{itemize}
+       	 	\resitem{Research on generative large language/multimodal models including advancements in image and text classification; fine-tuning to evaluating similarity of subjective and causal claims; pre-training and fine-tuning experiments on influence of foreign propaganda on LLMs.}
+		\resitem{Supervising data collection \& various research efforts for census of short form video platform.} 
+       	 	\resitem{External facing media communication about lab research.}
+	\end{itemize}
+
+%% Twitter
+\ressubheading{Twitter}{Washington, D.C./St. Paul, MN}{Head of Discovery Data Science Group}{2021 - 2023}
+	\begin{itemize}
+		\resitem{DS lead for Home Ranking, Experience, Relevance Platform, Search, \& Applied Sciences (40+ person org).} 
+       	 	\resitem{Built Applied Sciences team, working on some of the hardest problems at Twitter: (1) quantify the value people generate when they create content or connect with a contact; (2) how to tradeoff engagement and problematic discourse; (3) estimate long-term value with short-term experiments. Scaled team from 3 to 10 highly experienced PhD researchers \& engineers.}
+		\resitem{Supervising company-wide strategic shift in goaling emphasizing content production, ecosystem value.} 
+		\resitem{Led award-winning hackweek project: What Moves Metrics. ``Most impactful to the bottom line.''} 
+		\resitem{Supervised exploratory analysis of geolocation system and creation of prototype CNN that flexibly models 2-dimensional geographies using various signals. Ads application: 75 bps sustained causal revenue impact, \$300m projected impact (NPV); notifications application: over 140k additional daily active users.} 
+		\resitem{Supervised consumer lifetime value model allowing optimization across programs throughout the company, including customer acquisition.} 
+		\resitem{Driving effort to increase mutual following relationships among new users in critical first week using notifications and online model predicting mutual follow behavior; strong impact on connections, content production, retention.} 
+		%		\resitem{Supervising creation of technical roadmap for companywide investment/innovation in experimentation technologies.} 
+	\end{itemize}
+
+%% ACRONYM
+\ressubheading{ACRONYM/Lockwood}{Washington, DC}{Chief Scientist}{2020 - 2021}
+	\begin{itemize}
+       	 	\resitem{Shaped org-wide experiment-informed 2020 election strategy with executive team. Demonstrated effectiveness of ``boosted'' (promoted) news content over conventional advertising for persuasion, unlocking vast content sourcing \& cost-savings; Identified and modeled low-information audiences who were more responsive to ads and news; crafted battleground state projections that drove decision to spend in Georgia.}
+		\resitem{Led build-out of digital field experiment analysis system to identify most effective real-world messaging strategy; supervised design \& execution of hundreds of in-field messaging-track RCTs. Incremental improvements took turnaround time from 5-10 days to 2 hours via automation, APIs, scripting (R + Python).}
+		\resitem{Directed development of surrogacy metrics using machine learning system to map behavioral data to persuasive effects observed in RCTs.} 
+		\resitem{Supported technical effort to build dashboard \& daily budget reallocation systems using surrogacy metrics to allow clients to reallocate \& optimize budget \& audience for ads and other messaging tracks. Wide adoption in ecosystem.}
+		\resitem{Grew measurement org from 3 to 10 staff-level data scientists, software engineers, other staff.}
+	\end{itemize}
+
+%% FACEBOOK
+\ressubheading{Facebook, Core Data Science Team}{Menlo Park, CA}{Research Scientist - L6}{2012 - 2020}
+	\begin{itemize}
+       	 	\resitem{Partnered with PMs \& executives to lead data science for high-visibility external facing research on misinformation, elections, health and well-being.} 
+		\resitem{Led R\&D, application, launch of largest ever data sharing effort (reflecting $>$1 exabyte) to facilitate study of misinformation---global view- and interaction data on external content on Facebook since 2017. Groundwork w/ engineering teams on analysis platform. Implemented \& worked with SWEs to refactor \& open-source privacy-oriented \href{https://github.com/facebookresearch/URL-Sanitization}{URL-privacy framework}.}
+		\resitem{Evaluation of privacy solutions: reidentification risk metrics; implications for precise, global analytics; privacy-preserving analytics/ML (FLEX/Chorus + Spark) on secure data infrastructure; deep neural networks (PyTorch/differentially private SGD); external vendor solutions.}
+		\resitem{Complex experimentation frameworks: estimating heterogenous treatment effects in experiments while limiting false-positives (R); adaptive experimentation for online decision-making systems (contextual multi-armed bandits in Python).}
+		\resitem{Internal consultation/feedback on experimental design; simulation \& data driven power analysis (R).}
+		\resitem{Feature modeling for political campaigns using large scale, high dimensional network data (Python/Giraph); strong positive impacts on revenue, CTRs, client feedback. Groundwork for \href{https://www.facebook.com/townhall/}{Town Hall} constituent-communication features. Top tier \href{https://dl.dropboxusercontent.com/u/25710348/Science-2015-Bakshy-1130-2.pdf}{publications} with national media attention. }
+		\resitem{Managed \& mentored junior staff, taught DataCamp course on statistics \& large datasets, instructed joint \href{https://www.udacity.com/course/data-analysis-with-r--ud651}{Facebook-Udacity Exploratory Data Analysis} course.}
+	\end{itemize}
+
+%% PEW
+\ressubheading{Pew Research Center, Data Labs}{Washington, DC}{Managing Director (Founding)}{2015 - 2018}
+	\begin{itemize}
+		\resitem{Established \& led data science research group focused on machine learning for text (NLP) \& images (computer vision), complex experimental designs, R\&D, data science consulting for other teams. Worked with senior leadership to craft vision, get stakeholder buy-in, \& execute on hiring, infrastructure, research \& publication.}
+        \resitem{Hired \& managed team of data scientists, researchers, engineers, growing org from 2 to 20, including dotted-line reporting relationship. Cross functional work to create data science career track; recruit, evaluate, \& manage data science staff embedded in other teams.}
+        \resitem{Supervised development of R \& Python-oriented data science infrastructure with wide adoption: Linux-based AWS cloud servers; custom Django dashboards/labeling/harmonization tools; large scale scraping/API query data collection efforts; PostGreSQL, with S3, BigTable, Hive for larger data sets; ML infrastructure with SKLearn, PyTorch, Keras neural network architectures; Jupyter \& RStudio Server web interfaces for analysis; GitHub version control.}
+        \resitem{Led publication of collaborative data science-oriented projects with national media attention. See \url{http://www.pewresearch.org/topics/data-labs/}.}
+        \resitem{Served as public spokesperson for data science research, including interviews with national media \& television outlets, presentations to government officials.}
+		\resitem{Developed protocols for data science at Pew: machine learning standards, security, data management.}
+	\end{itemize}
+
+%% MORNING CONSULT
+%\ressubheading{Morning Consult}{Washington, DC}{Advisor}{2013 - Present}
+%	\begin{itemize}
+%		\resitem{Informal role as consultant for cofounders on overall strategy, data science, innovation in polling methodology as company grew from 2 people to digital media unicorn ($>$ billion dollar valuation).}
+%		\resitem{Formal advisory role as consultant for executive team \& CTO on data science, social media for research \& intelligence arms of the company.}	
+%    \end{itemize}
+
+%% STANFORD
+\ressubheading{Stanford University, Social Science Data \& Software (SSDS)}{Stanford, CA}{Consultant}{2011 - 2013}
+	\begin{itemize}
+		\resitem{Guided Stanford researchers through experimental \& observational study design, including web experiments, scraping, text analysis, network analysis, statistical modeling, visualization in R.}
+		\resitem{Led workshops introducing R, data visualization, scraping \& analysis of text data.} 
+	\end{itemize}
+
+\ressubheading{Science Applications International}{Washington, DC}{Media Analytics Team Lead}{2005 - 2011}
+\begin{itemize}
+\resitem{Early-stage word embeddings using Latent Semantic Analysis (LSA/LSI) with substantial NLP post processing \& ML for classification, entity resolution, sentiment.}
+\resitem{Qualitative research on misinformation, propaganda in Indonesia, Middle East using primary language internet sources, with readership across the U.S. diplomacy \& intelligence communities. More than 50 reports, citations, follow-up research requests from government officials including Undersecretary Hughes, Congressman Markey, \& then-Senator Clinton.}
+\resitem{Multi-language quantitative research: sentiment, attribution of responsibility, economic framing; GUI; database; visualizations.  Human-coder training, calibration/reliability, report production.}
+\end{itemize} 
+
+%\ressubheading{Department of State}{Johannesburg, South Africa; Jakarta, Indonesia}{Political Section Intern}
+%{2003 - 2004 (non-continuous)}
+%\begin{itemize}
+%\resitem{Wrote key parts of 2004 Indonesia Human Rights Report to U.S. Congress. Sourced data from Foreign Service Officers, Foreign Service Nationals, interviews with local Human Rights NGO leaders. Wrote cables on human rights accountability in Indonesia: East Timor and Tanjung Priok trials. Updated Embassy’s electronic registration and automated travel warning systems.}
+%\resitem{Wrote 2002 Foreign Labor Trends report, statistical source for U.S. officials and companies. Wrote cables summarizing interviews with skilled South Africans migrating to U.S., labor issues in the South African mining industry.}
+%\end{itemize}
+
+
+\ressubheading{Law-on-line, Inc.}{Tucson, AZ}{Software Engineer/Consultant}
+{1996 - 2005}
+\begin{itemize}
+\resitem{Developed \& helped bring to market multiple security software products for 
+applications related to digital signature technology. Java, PGP key infrastructure, web dev.}
+\end{itemize}
+
+\vspace{0.1in}
+
+
+
+
+\resheading{Education}
+	\ressubheading{Stanford University}{Stanford, CA}{Ph.D. Communication (2013), M.S. Statistics (2012)}{2008 - 2013}
+%	\begin{itemize} 
+%		\resitem{Dissertation: ``How Social Influence Shapes the Diffusion of Elite Discourse, Public Opinion, \& Participation.'' Shanto Iyengar (chair), Jeremy Bailenson, Justin Grimmer, Simon Jackman, Cliff Nass.}
+%		%\resitem{Research: machine/statistical learning, natural language processing, networks, visualization, analysis of images}
+%%		\resitem{CS/NLP/machine-learning: Course Assistant for PS 452: Texts as Data (Python/R); CS 124: From Languages to Information (Java); STATS 315A: Modern Applied Statistics: Learning (R); 
+%%		STATS 290: Paradigms for Computing with Data (R/C++/SQL); STATS 202: Data Mining (R); 
+%%		PS 354F: Applied Bayesian Analysis (R/BUGS/JAGS); STATS 305: Introduction to Statistical Modeling (R) }
+%	\end{itemize}
+\vspace{0.1in}
+	\ressubheading{University of California, San Diego}{La Jolla, CA}{Masters,
+	School of Global Policy \& Strategy (Int'l MBA-curriculum)}{2003 - 2005}
+%	\begin{itemize}
+%	\resitem{ Economics Coursework: IRCO 401: Managerial Economics, IRCO 421: Finance, IRCO 424: Corporate Finance, IRCO 453: Quantitative Methods: Decision Making \& Scenario Analysis, IRCO 454: Quantitative Methods: Decision Making under Uncertainty, IRGN 490: Economics in Southeast Asia, IRGN 463: Political Economy of Southeast Asia, IRGN 490: Risk Analysis in Southeast Asia, IRCO 461: Business \& Government in the Global Economy}
+%	\end{itemize}
+\vspace{0.1in}
+	\ressubheading{University of California, Santa Barbara}{Santa Barbara,
+	CA}{BA (Honors) in Political Science, Japanese minor, 2 yrs CS coursework}{}
+%	\begin{itemize} 
+%		\resitem{ CS coursework: CS 5JA: Introduction to programming in Java, CS 10: Introduction to programming (Java), CS 30: Introduction to Computer Systems (assembly)}
+%%		\resitem{ Econ courses: Econ 1: Microeconomics, Econ 130: International Economics, Econ 176: International Investment, PS 186: Introduction to International Political Economy}
+%	\end{itemize}
+\vspace{0.1in}
+	\ressubheading{Sophia University (\begin{CJK}{UTF8}{min} 上智大学, 市谷キャンパス \end{CJK})}{Tokyo, Japan}{Study abroad}{}
+
+\vspace{0.1in}
+
+
+\resheading{In Progress}
+\begin{description}
+
+
+\item[] \href{}{``Propaganda is already influencing large language models: evidence from training data, audits, and real-world usage.''}  Waight, Yang, Yuan, Messing, Roberts, Stewart, Tucker (\emph{R \& R, Nature}).\\ 
+
+\end{description}
+
+\resheading{Publications}
+\begin{description}
+
+\item[] \href{https://solomonmg.github.io/pdf/Quantifying_Narrative_Similarity_Across_Languages.pdf}{``Quantifying Narrative Similarity Across Languages.''}  Waight, Messing, Shirikov, Roberts, Nagler, Greenfield, Brown, Aslett, Tucker 
+\emph{Sociological Methods \& Research}. \\ 
+
+\item[] \href{https://ieeexplore.ieee.org/document/10825235}{``Concept-Guided Chain-of-Thought Prompting for Pairwise Comparison Scoring of Texts with Large Language Models.''} Wu, Nagler, Tucker, Messing
+\emph{IEEE International Conference on Big Data, 2024}. \\ 
+
+\item[] \href{https://arxiv.org/abs/2410.23432}{``Web Scraping for Research: Legal, Ethical, Institutional, and Scientific Considerations.''}   Brown, Gruen, Maldoff, Messing, Sanderson, Zimmer.
+\emph{Proceedings of the Eighteenth International AAAI Conference on Web and Social Media, 2024}. \\ 
+
+
+\item[] \href{https://journalqd.org/article/view/5891}{``Digital town square? Nextdoor's offline contexts and online discourse.''}   Brown, Sanderson, Graham, Kim, Tucker, Messing,
+\emph{Journal of Quantitative Description: Digital Media, 2024}. \\ 
+
+
+\item[] \href{https://solomonmg.github.io/pdf/science.adk1211.pdf}{``Algorithmic bias on Meta?''} Messing.
+%(joint-first-author). 
+\emph{Science, 2023}. \\ 
+
+
+
+\item[] \href{https://www.nature.com/articles/s41562-022-01487-4}{``A 2 Million Person, Campaign-wide Field Experiment Shows How Digital Advertising Affects Voter Turnout''}. Aggarwal, Allen, Coppock, Frankowski, Messing, Zhang, Barnes, Beasley, Hantman, \& Zheng.
+%(joint-first-author). 
+\emph{Nature Human Behavior, 2023}. \\ 
+- Nature Research Highlight writeup \href{https://www.nature.com/articles/d41586-023-00073-6}{Huge political advertising campaign had little effect on US voters}.\\
+
+
+\item[] \href{https://www.journals.uchicago.edu/doi/abs/10.1086/708682}{``Projecting Confidence: How the Probabilistic Horse Race Confuses \& Demobilizes the Public''}. Westwood, Messing \& Lelkes. 
+%(joint-first-author). 
+\emph{Journal of Politics, 2020}. \\ 
+- Cited by \href{https://fivethirtyeight.com/features/politics-podcast-whats-so-wrong-with-nancy-pelosi/}{FiveThirthyEight's Politics Podcast} as influential in decision to change forecast presentation.\\
+- Media coverage: \href{https://www.washingtonpost.com/news/politics/wp/2018/02/06/clintons-achilles-heel-in-2016-may-have-been-overconfidence/?utm_term=.b71fb84da00f}{Washington Post},  \href{http://nymag.com/daily/intelligencer/2018/02/americans-dont-understand-election-probabilities.html}{New York Magazine}, \href{https://politicalwire.com/2018/02/06/election-forecasts-lower-voter-turnout/}{Political Wire}.
+
+
+\item[] \href{https://pages.shanti.virginia.edu/PolMeth/files/2013/07/GrimmerMessingWestwood.pdf}{``Estimating Heterogeneous Treatment Effects \& the Effects of Heterogeneous Treatments with Ensemble Methods''} Grimmer, Messing, and Westwood.
+% (contributing author). 
+\emph{Political Analysis}, 2017. \\
+- \href{http://dx.doi.org/10.7910/DVN/BQMLQW}{Replication materials}. \\
+- Software implementation (under development): \url{https://github.com/SolomonMg/HetSL}
+
+
+\item[] \href{https://dl.dropboxusercontent.com/u/25710348/Science-2015-Bakshy-1130-2.pdf}{``Exposure to ideologically diverse news and opinion on Facebook''} Bakshy, Messing, \& Adamic.
+% (joint-first-author). 
+\emph{Science}, 2015.  \\
+- \href{http://science.sciencemag.org/content/348/6239/1090}{Review by David Lazer}. \\
+- \href{http://science.sciencemag.org/content/sci/suppl/2015/05/06/science.aaa1160.DC1/Bakshy-SM.revision.1.pdf}{Supplementary materials}. \\
+- \href{http://dx.doi.org/10.7910/DVN/LDJ7MS}{Replication materials}. \\
+- Media coverage: \href{http://www.nytimes.com/2015/05/08/technology/facebook-study-disputes-theory-of-political-polarization-among-users.html}{New York Times}, \href{http://www.washingtonpost.com/news/energy-environment/wp/2015/05/07/facebook-study-says-its-mainly-your-fault-not-theirs-that-you-read-things-you-already-agree-with/}{Washington Post}, \href{https://arstechnica.com/science/2015/05/dont-just-blame-facebook-we-build-our-own-bubbles/}{Ars Technica}, \href{http://www.bbc.com/news/science-environment-32606724}{BBC}, \href{http://www.cbsnews.com/news/facebooks-news-feed-limits-your-world-view/}{CBS News}.
+
+\item[] \href{https://www.dropbox.com/s/et4rnj2duzsuhiq/HSVmetricsCampaignsDarknessPOQFINAL.pdf?raw=true}{``Bias in the Flesh: Skin Complexion and Stereotype Consistency in Political Campaigns''} Messing, Plaut \& Jabon.
+ %(first author). 
+ \emph{Public Opinion Quarterly}, 2015. \\
+- \href{https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/F0NDJP}{Replication materials}. \\
+- Media coverage: \href{http://www.cbsnews.com/news/study-2008-mccain-attack-ads-darkened-obama-skin-tone/}{CBS News}, \href{https://www.washingtonpost.com/news/wonk/wp/2015/12/29/obamas-skin-looks-a-little-different-in-these-gop-campaign-ads/}{Washington Post}. 
+
+\item[] \href{https://dl.dropboxusercontent.com/u/25710348/EstimatingIdeologyFromFacebookPageLikes.pdf}{``Quantifying Social Media's Political Space: Estimating Ideology from Publicly Revealed Preferences on Facebook''} Bond \& Messing. 
+%(contributing author).  
+\emph{American Political Science Review}, 2015.
+
+%\item[] \href{http://www.stanford.edu/~seanjw/papers/deliberationKnowledgePolarizationPersuasion.pdf}{``The Role of Knowledge, Polarization and Persuasion in Deliberative Opinion Change''} with Sean Westwood.  \emph{Political Communication}, (R \& R).
+
+\item[] \href{https://www.dropbox.com/s/sl847m7z7uzonro/CH3.pdf}{``Selective Exposure in the Age of Social Media: Endorsements Trump Partisan Source Affiliation when Selecting News Online''} Messing \& Westwood. 
+% (joint-first-author). 
+\emph{Communication Research}, 2013.
+
+\item[] \href{https://www.ncbi.nlm.nih.gov/pubmed/23666206}{``Role of Diffusion Weighted Imaging in the Diagnosis of Pediatric Abdominal Tumors''} Gawande, Gonzalez, Messing, Khurana, \& Daldrup-Link. 
+% (contributing author). 
+\emph{Pediatric Radiology}, 2013.
+
+\item[] \href{http://stanford.edu/~jgrimmer/cc.pdf}{``How Words and Money Cultivate a Personal Vote: The Effect of Legislator Credit Claiming on Constituent Credit Allocation''} with Grimmer, Messing \& Westwood.
+% (joint-first-author). 
+\emph{American Political Science Review}, 2012.
+
+\item[] \href{http://radiology.rsna.org/content/264/3/803.full.pdf+html}{``Intravenous Ferumoxytol Allows Noninvasive MR Imaging of Stem Cell Transplants''} with Khurana, Gawande, Lin, Lee, Messing, Castaneda, Derugin, Pisani, Lue, \& Heike Daldrup-Link. 
+% (contributing author).  
+\emph{Radiology}, 2012.
+
+\item[] \href{http://poq.oxfordjournals.org/content/early/2013/09/14/poq.nft024.full.pdf?keytype=ref&ijkey=ynq4b9uNIrXJy3I}{``Do Attitudes about Immigration Predict Willingness to Admit Individual Immigrants? A Cross-National Test of the Person-Positivity Bias''} Iyengar, Jackman, Messing, Valentino, Aalberg, Duch, Hahn, Soroka, Harell, \& Kobayashi. 
+%(contributing author).  
+\emph{Public Opinion Quarterly}, 2012.
+
+\item[] \href{http://radiology.rsna.org/content/early/2011/12/11/radiol.11110715.long}{``Differentiation of the Normal Thymus from Anterior Mediastinal Lymphoma on Pediatric PET-CTs''} with Rakhee Gawande, Aman Khurana, Messing, Dong Zhang, Rosalinda Castaneda, Robert Goldsby, Randal Hawkins, Messing \& Heike Daldrup-Link. 
+% (contributing author).  
+\emph{Radiology}, 2011.
+
+\item[] \href{http://onlinelibrary.wiley.com/doi/10.1111/j.1467-9477.2011.00280.x/abstract}{``Who is a `Deserving' Immigrant? An Experimental Study of Norwegian Attitudes''} Aalberg, Iyengar, \& Messing. 
+% (contributing author).  
+\emph{Scandinavian Political Studies}, 2011.
+\end{description}
+
+
+
+\resheading{Books}
+\begin{description}
+
+\item[] \href{http://stanford.edu/~jgrimmer/BookProsp.pdf}{\emph{The Impression of Influence: Legislator Communication, Representation, \& Democratic Accountability}} Grimmer, Westwood \& Messing. 2014. \emph{Princeton University Press.}  \\ 
+- Reviewed in: \href{http://www.jstor.org/stable/10.1086/681889}{Journal of Politics}, \href{http://www.tandfonline.com/doi/abs/10.1080/07343469.2015.1034616}{Congress \& The Presidency}, \href{http://www.tandfonline.com/doi/abs/10.1080/10584609.2015.1083820}{Political Communication}, \href{http://onlinelibrary.wiley.com/doi/10.1002/polq.12415/abstract}{Political Science Quarterly}. \\
+- Subject of roundtable at Western Political Science Association, 2015.\\
+- Media coverage: \href{http://www.mischiefsoffaction.com/2015/01/its-frequency-not-size-compromise.html}{Vox (Mischiefs of Faction)}.
+
+%\item[] \href{https://www.dropbox.com/s/zfw1d9j60hqjil7/sudiss.pdf?raw=true}{\emph{Friends that Matter: How Social News Shapes Political Knowledge, Attitudes, and Behavior}} Messing.  2013. \emph{Stanford University.}  \\ 
+%- Cited by \href{https://science.sciencemag.org/content/365/6456/858}{Science Policy Forum} in ``Protecting elections from social media manipulation.''
+
+\end{description}
+
+
+\resheading{Reports \& Datasets}
+\begin{description}
+
+\item[] \href{https://www.brookings.edu/articles/misunderstood-mechanics-how-ai-tiktok-and-the-liars-dividend-might-affect-the-2024-elections/}{``Misunderstood mechanics: How AI, TikTok, and the liar's dividend might affect the 2024 elections''} Sanderson, Messing, Tucker.
+%(joint-first-author). 
+\emph{Brookings Institution}, 2022. 
+
+\item[] \href{https://arxiv.org/abs/2002.04049}{``Guidelines for implementing and auditing differentially private systems''} Kifer, Messing, Roth, Thakurta, Zhang.
+%(joint-first-author). 
+\emph{Arxiv}, 2020. 
+
+\item[] \href{https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/TDOAPG}{``Facebook Privacy-Protected Full URLs Data Set''} Messing, DeGregorio, Hillenbrand, King, Mahanti, Mukerjee, Nayak, Persily, State, Wilkins.
+%(joint-first-author). 
+\emph{Dataverse}, 2020.  \\
+- Among the largest social science data sets ever constructed, meant to facilitate research on misinformation from across the web, shared and spread on Facebook
+
+
+
+\item[] \href{http://www.pewinternet.org/2018/04/09/bots-in-the-twittersphere/}{``Bots in the Twittersphere: An estimated two-thirds of tweeted links to popular websites are posted by automated accounts – not human beings''} Wojcik, Messing, Smith, Rainie. 
+%(joint-first-author). 
+\emph{Pew Research Center}, 2018.  \\
+- Cited by California State Senator Robert Hertzberg in passage of SB 1001, making it illegal to create bots that misrepresent identity or otherwise deceive people in California. \\
+- Media coverage: \href{https://www.wired.com/story/twitter-bots-links/}{Wired}, \href{https://www.vox.com/technology/2018/4/9/17214720/pew-study-bots-generate-two-thirds-of-twitter-links}{Vox}, \href{https://www.usatoday.com/story/tech/news/2018/04/09/bots-rampant-twitter-study-says-network-tries-thwart-devious-tweets/492536002/}{USA Today}, \href{http://observer.com/2018/04/report-bots-promote-66-percent-twittersphere-links/}{Observer}, \href{http://www.niemanlab.org/2018/04/think-your-articles-are-getting-a-lot-of-attention-on-twitter-it-could-be-a-lot-of-posting-by-bots/}{NiemanLab}, \href{https://techcrunch.com/2018/04/09/bots-on-twitter-share-two-thirds-of-links-to-popular-websites-pew/}{TechCrunch}, \href{https://venturebeat.com/2018/04/09/pew-twitter-bots-are-behind-66-of-tweeted-links-for-most-popular-sites/}{VentureBeat}, \href{https://www.fastcompany.com/40556233/twitter-bots-are-getting-busy-making-sure-your-tweet-goes-viral}{FastCompany}.
+
+\item[] \href{https://www.pewresearch.org/fact-tank/2018/01/19/very-liberal-or-conservative-legislators-most-likely-to-share-news-on-facebook//}{``Very liberal or conservative legislators most likely to share news on Facebook''} Messing. 
+%(joint-first-author). 
+\emph{Pew Research Center}, 2018.  \\
+
+\item[] \href{https://www.people-press.org/2017/12/18/sharing-the-news-in-a-polarized-congress/}{``Sharing the News in a Polarized Congress''} Messing, van Kessel, Hughes. 
+%(joint-first-author). 
+\emph{Pew Research Center}, 2017.  \\
+- Media coverage: \href{https://www.politico.com/story/2017/12/18/pew-study-social-media-political-polarization-302252}{Politico}, \href{https://www.washingtonpost.com/news/politics/wp/2017/12/18/how-politicians-use-of-social-media-is-reinforcing-a-partisan-media-divide/}{Washington Post}, \href{https://www.axios.com/democrats-are-angrier-than-republicans-on-facebook-1515110686-ba65f9e2-10c3-4b06-b31f-4588fbca9573.html}{Axios}, \href{https://qz.com/1161816/facebook-and-politics-reactions-to-posts-by-democrats-got-a-lot-angrier-after-trump-was-elected/}{Quartz}.
+
+\item[] \href{http://www.people-press.org/2017/02/23/partisan-conflict-and-congressional-outreach/}{``Partisan Conflict and Congressional Outreach''} Messing, van Kessel, Hughes, Judd, Blum. 
+%(joint-first-author). 
+\emph{Pew Research Center}, 2017.  \\
+- Media coverage: \href{https://www.washingtonpost.com/news/wonk/wp/2017/02/23/republican-lawmakers-go-negative-more-often-than-democrats-according-to-a-first-of-its-kind-analysis/}{Washington Post}, \href{http://www.motherjones.com/kevin-drum/2017/02/pew-republicans-disagree-and-they-disagree-indignantly/}{Mother Jones}.
+
+\end{description}
+
+\resheading{Software}
+ 
+\begin{description}
+
+\item[\large{\textbf{\texttt{URL-Sanitization}}}] with Runchao Jiang \& Da Li. Algorithms to make URL data privacy-safe. Removes query parameters unrelated to content navigation and removes query parameters often related to user PII by using string matching and modeling. Part of privacy-first data sharing launch of \href{https://solomonmg.github.io/pdf/Facebook_DP_URLs_Dataset.pdf}{Facebook Privacy-Protected Full URLs Data Set}. Live version at \url{https://github.com/facebookresearch/URL-Sanitization}.
+
+\item[\large{\textbf{\texttt{HetEffects}}}] with Justin Grimmer. R package utilizing ensemble machine learning methods to estimate high-dimensional causal effects that vary by treatment-group combination. Development version at \url{https://github.com/SolomonMg/HetSL}. See \href{http://stanford.edu/~jgrimmer/het.pdf}{Estimating Heterogeneous Treatment Effects and the Effects of Heterogeneous Treatments with Ensemble Methods}.
+
+\item[\large{\textbf{\texttt{ImageMetrics}}}] R package to facilitate the analysis of image data,
+designed to facilitate analysis described in ``Bias in the flesh'' (see above). See \url{https://github.com/SolomonMg/ImageMetrics}.
+
+% \item[\large{\textbf{\texttt{wvioplot}}}] R package to produce density overlay plots and violin plots with weighted
+% data, which allows the visualization of the distribution of a quantitative variable along with its quartiles and a
+% measure of central tendency. 
+
+\item[\large{\textbf{\texttt{NetCluster, triads, NetData}}}] with Mike Nowak, Sean Westwood \& Dan McFarland. R packages to determine node-level triad type membership for the 16 types of triads that occur in a directed network, facilitate network clustering and evaluation of cluster configurations, and provide example data.  Examples in \href{http://sna.stanford.edu/rlabs.php}{``Social network analysis labs in R.''} 
+
+%\item[\large{\textbf{\texttt{triads}}}] with Sean Westwood, Mike Nowak \& Dan McFarland. R package to determine
+%node-level triad type membership for the 16 types of triads that occur in a directed network. Based on SAS code
+%developed by James Moody.
+%
+%\item[\large{\textbf{\texttt{NetData}}}] Provides demo data for ``Social network analysis labs in R.''
+
+%\item[\large{\textbf{\texttt{Open IAT/bIAT}}}] with Sean Westwood.  Web application that implements the Implicit
+%Associations Test and brief Implicit Associations Test, based on JavaScript, PHP, and MySQL.  Builds on the ``Open and
+%Online IAT.''  Available here: \url{http://pclresearch.stanford.edu/iat/}
+\end{description}
+
+\resheading{Computing}
+\begin{description}
+\item[R Statistical Programming Language] Data visualization, conventional statistical analysis/econometrics, Bayesian statistics, text-as-data, image, GIS, and network data, including authoring multiple software packages.
+\item[Python] Data analysis (Pandas, NumPy, SciPy), Machine Learning (SciKit Learn, Gensim), parsing data from the web, computer vision, text-as-data, deep-learning (text data), data management.
+\item[SQL] Experience utilizing Hive (HQL) with petabyte scale data sets, PostGreSQL, database design with MySQL, SQLite.
+\item[Java] Undergraduate \& natural language processing courses taken; some instrustry coding experience.
+\item[Web Dev] Working knowledge of JavaScript, PHP, JSON, RegEx, HTTP, Linux shell scripts, C-sharp/.NET. 
+\end{description}
+
+
+
+\vspace{0.1in}
+
+\resheading{Invited Talks and Workshops}
+\begin{description}
+%\item[] Independent Side Weekly Research Open Mic, hosted by Michael Podhorzer, Washington DC, Washington DC, April - December 2020. 
+\item[] NULab for Texts, Maps, and Networks, Northeastern University, \href{https://web.northeastern.edu/nulab/event/election-2020/}{What do the data tell us about election 2020?}, Dec 11, 2020
+\item[] CODE@MIT, Fireside Panel, \href{https://www.youtube.com/watch?v=LW05yRGrwfQ}{Technology in Political Campaigns and Activism}, Nov 19, 2020.
+\item[] Analyst Institute, Meeting the Moment, Washington DC, Oct 14, 2020. 
+\item[] Analyst Institute, Approaches to Message Testing, Washington DC, Jun 16, 2020.
+\item[] Georgetown Massive Data Institute, Effects of Election Forecasting, Washington, DC, Nov 18, 2019.  
+\item[] UVA Data Science Institute, Differential Privacy \& Corporate Data, Charlottesville, VA, Sep 6, 2019. 
+\item[] University of Amsterdam International Conference on Computational Social Science, Amsterdam, NL, Jul 18, 2019. 
+\item[] Catalist, Election forecasting, Washington, DC, Apr 10, 2018. 
+\item[] Social Media and Political Participation Global Conference, Shang Hai, Mar 11, 2018. 
+\item[] Congressional Management Foundation, Facebook and the U.S. Congress, Washington, DC, Jan 17, 2018. 
+\item[] USC, Media Exposure and Opinion Formation workshop, Los Angeles, Nov 9, 2017. 
+\item[] Social Media and Political Participation Global Conference, New York, Nov 3, 2017. 
+\item[] World Bank, Big Data in Government, Washington, May 16, 2017. 
+\item[] Data and Society, New York, Mar 31, 2017. 
+\item[] Social Media and Political Participation Global Conference, Abu Dhabi, Feb 9, 2017. 
+\item[] Analyst Institute Social Networks Roundtable, Mar 9, 2016. 
+\item[] GAO CG Forum on 21st Century Data and Analytics, Jan 28, 2016. 
+\item[] Duke Network Analysis Center (DNAC), Oct 20, 2015. 
+\item[] Hewlett Foundation, News Funders Conference, Jun 19, 2015. 
+\item[] Spatial Computational Social Science at Stanford, Oct 20, 2014.
+\item[] UCLA Institute for Politics in Math, Apr 22, 2014.
+\item[] Stanford Political Science American Politics Workshop, Apr 22, 2013.
+\item[] Stanford Computational Social Science, Analyzing large data sets, Sep 20, 2012.
+\item[] Stanford Political Science Methods Workshop, May 2, 2012.
+\end{description}
+
+
+\resheading{Honors and Awards}
+\begin{description}
+\item[2010] \$60,000 Google Research Award (with Sean Westwood, supervised by Dan McFarland \& Jeremy Bailenson) ``Harnessing the social graph: Social cues and reliability in content selection and evaluation''
+\item[2010] \$1,000 A-REP Research Grant (with Sean Westwood), ``The impact of social news ratings on media consumption heuristics and agenda setting''
+\item[2008] Department of Communication Fellowship
+\item[2007] Annual Achievement Award for Excellence in Science and Technology - Technical Collaboration, Science Applications International
+\item[2007] Selected for Future Leaders program, Science Applications International
+\item[2004--2005] Dean's Fellow, University of California, San Diego IR/PS 
+\item[2001] Phi Beta Kappa, University of California, Santa Barbara
+\item[2000] Golden Key, University of California, Santa Barbara
+\end{description}
+
+
+%\resheading{Conference Presentations}
+%\begin{description}
+%
+%\item[] ``Social News in Black and White: How Ethnic and Socioeconomic Attributes Shape the Way We Consume and Evaluate Social Media.'' Paper presented at the \emph{American Political Science Association} annual conference, Washington, DC, 2014.
+%
+%\item[] ``Social Influence and Participation: How Socially Shared Content Boosts Civic Participation'' with Eytan Bakshy and Andrew Fiore.  Paper presented at the \emph{Midwest Political Science Association} annual conference, Chicago, IL, 2014.
+%
+%\item[] ``How Words and Money Cultivate a Personal Vote'' with Justin Grimmer and Sean Westwood.  Paper presented at the \emph{Midwest Political Science Association} annual conference, Chicago, IL, 2012, and the West Coast Experiments conference, Berkeley, CA, 2012. 
+%
+%\item[] ``How Social Distance Structures Exposure and Evaluation of Content in Social Media'' with Sean Westwood. Paper presented at the \emph{Midwest Political Science Association} annual conference, Chicago, IL, 2012; \emph{International Communication Association} annual conference, 2013.
+%
+%\item[] ``Economic and Cultural Threat as Antecedents of Opposition to Immigration'' with Shanto Iyengar, Nicholas Valentino, Ray Duch, Kyu Hahn, Tetsuro Kobayashi.  Paper presented at the \emph{Midwest Political Science Association} annual conference, Chicago, IL, 2012
+%
+%\item[] ``Explicit and Implicit Racial Attitudes: A Test of Convergent and Predictive Validity'' with Shanto Iyengar, Kyu Hahn, Mahzarin Banaji \& Christopher Dial.  Paper presented at the \emph{American Political Science Association} annual conference, Seattle, WA, 2012. 
+%
+%\item[] ``Selective Exposure in the Age of Social Media'' with Sean Westwood.  Paper presented at the \emph{Midwest Political Science Association} annual conference, Chicago, IL, 2011
+%
+%\item[] ``Opinion change in deliberation: The role of peer influence and persuasion'' with Sean Westwood. Paper presented at the \emph{Midwest Political Science Association} annual conference in Chicago, IL, 2011.
+%
+%\item[] ``Does skin complexion influence candidate preference? The case of the 2008 campaign'' with Shanto Iyengar, Kyu
+%Hahn, \& Jeremy Bailenson. Paper presented at the \emph{American Political Science Association}
+%annual conference, Washington, DC, 2010. 
+%
+%\item[] ``Bias in the flesh: Attack ads and the effects of visual cues in the 2008 presidential campaign'' with Ethan Plaut \& Maria Jabon. Paper presented at the \emph{International Communication Association} annual conference, Singapore, 2010.
+%
+%\item[] ``Flesh-tone pixel comparison: A method to test for bias in images of political candidates.'' Paper presented at the \emph{International Association of Media and Communication Research} annual conference, Mexico City, 2009.
+%\end{description}
+
+%\resheading{Projects \& Working Papers}
+%\begin{description}
+%
+%\item[News, political knowledge, and cross-cutting exposure in Social Media] Develops political media ideal point estimate (with Will Fithian) that leverages users' news sharing behavior to generate ideological score for users and content.  Combines this data with self-reported political affiliation to investigate the question of the extent to which users maintain relationships and engage with other partisans (homophily) versus maintaining friendships that cut across ideological boundaries.  Examines inter-religious, inter-gender, and inter-racial ties and interaction for comparison.  Analyzes a massive quasi-experiment designed to estimate effect of exposure to news in social media on political knowledge and participation.
+
+%\item[Cross-cutting exposure to News in Social Media] Develops political media ideal point estimate (with Will Fithian) that leverages users' news sharing behavior to generate ideological score for users and content in various social media platforms.  Investigates the question of the extent to which users maintain relationships and engage with other partisans (homophily) versus maintaining friendships that cut across ideological boundaries.  
+%
+%
+%\item[Representation \& constituent communication in social media] with Justin Grimmer.  Examines representative-constituent communication that takes place in social media: position-taking, credit-claiming, negative portrayals of the opposing party.  Also examines how the media shape these issues.  
+%
+%\item[Bias in the flesh: Skin complexion, attack ads, and minority elections]  Presents a method to analyze skin complexion in political advertisements by utilizing hue, saturation, and value (HSV) data encoded in digital images; documents correlations between negative advertisements and irregular skin complexion in presidential campaign advertisements; examines affective responses to such photographic alterations in a national sample of U.S. citizens.  Shows that the measure is strongly correlated with electoral victory among 2010 minority candidates for national and state-level offices; that presenting participants with darker images of a minority candidate decreases feelings of warmth and the probability of voting for the candidate in online experiments (with Shanto Iyengar).
+%
+%\item[``Social network analysis labs in R''] with Sean Westwood, Mike Nowak \& Dan McFarland. Provides a complete
+%introduction to social network analysis using the R statistical programming language, along with demonstration data.
+%Labs available at \url{http://sna.stanford.edu/rlabs.php}.
+%
+%\end{description}
+
+
+
+\resheading{Journal Service}
+\begin{description}
+\item[] Reviewer, \emph{Science}
+\item[] Reviewer, \emph{American Political Science Review}
+\item[] Reviewer, \emph{American Journal of Political Science}
+\item[] Reviewer, \emph{Political Analysis}
+\item[] Reviewer, \emph{Public Opinion Quarterly}
+\item[] Reviewer, \emph{Political Behavior}
+\item[] Assistant Editor, Reviewer, \emph{Political Communication}
+\item[] Founding Editor, Reviewer, \emph{Journal of International Policy Solutions}
+\item[] Guest Editor, Reviewer, \emph{Journal of Public and International Affairs}
+\end{description}
+
+%\resheading{Professional Societies}
+%\begin{description}
+%\item[American Political Science Association (APSA),] member
+%\item[Midwest Political Science Association (MPSA),] member
+%\item[International Communication Association (ICA),] member
+%\item[United States-Indonesia Society (USINDO),] member
+%\end{description}
+
+\resheading{Languages}
+\begin{description}
+\item[Indonesian/Malay Bahasa] 2 years professional experience as
+Indonesian analyst/linguist; 2 years intensive Indonesian graduate study; Certified 3/2
+Written/Spoken on the Interagency Language Roundtable (ILR) scale used by the
+U.S. Foreign Service.
+\item[Japanese] 3 years undergraduate language study, 1 year study abroad in Tokyo, Japan. 
+\item[Arabic] Digital courses taken; introductory-level translation experience.
+\end{description}
+
+\end{document}
