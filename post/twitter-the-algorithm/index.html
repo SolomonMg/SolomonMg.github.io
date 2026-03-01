@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- This site was created with Hugo Blox. https://hugoblox.com -->
-<!-- Last Published: February 18, 2026 --><html lang="en-us" >
+<!-- Last Published: February 28, 2026 --><html lang="en-us" >
 
 
 <head>
@@ -212,7 +212,7 @@
   
   
   
-  <link rel="stylesheet" href="/css/wowchemy.5adeb309104bf059bfce5194cee5d4d8.css" />
+  <link rel="stylesheet" href="/css/wowchemy.f6689966c0a10712f95f034011917db0.css" />
 
   
   
@@ -316,8 +316,7 @@
 
   
 
-<meta name="description" content="Last Friday (2023-03-31) Twitter released what it calls “the algorithm,” which appears to be a highly redacted, incomplete part of code that governs the “for you” home timeline ranking system. And I saw nothing to suggest the parts of the code they put in the GitHub repository wasn’t authentic.
-" />
+<meta name="description" content="Last Friday (2023-03-31) Twitter released what it calls “the algorithm,” which appears to be a highly redacted, incomplete part of code that governs the “for you” home timeline ranking system." />
 
 
 
@@ -330,8 +329,8 @@
 
 
 
-<link rel="icon" type="image/png" href="/media/icon_hu_b6b141330a993e2f.png" />
-<link rel="apple-touch-icon" type="image/png" href="/media/icon_hu_bdf5fe8f122b026c.png" />
+<link rel="icon" type="image/png" href="/media/icon_huedd5de82286bc1d0a1509b535f624c76_25974_32x32_fill_lanczos_center_3.png" />
+<link rel="apple-touch-icon" type="image/png" href="/media/icon_huedd5de82286bc1d0a1509b535f624c76_25974_180x180_fill_lanczos_center_3.png" />
 
 <meta name="theme-color" content="#1565c0" />
 
@@ -365,7 +364,7 @@
 <meta property="og:site_name" content="Sol Messing" />
 <meta property="og:url" content="https://solmessing.netlify.app/post/twitter-the-algorithm/" />
 <meta property="og:title" content="What can we learn from &#39;The Algorithm,&#39; Twitter&#39;s partial open-sourcing of it&#39;s feed-ranking recommendation system? | Sol Messing" />
-<meta property="og:description" content="Last Friday (2023-03-31) Twitter released what it calls “the algorithm,” which appears to be a highly redacted, incomplete part of code that governs the “for you” home timeline ranking system. And I saw nothing to suggest the parts of the code they put in the GitHub repository wasn’t authentic." /><meta property="og:image" content="https://solmessing.netlify.app/post/twitter-the-algorithm/featured.png" /><meta property="og:locale" content="en-us" />
+<meta property="og:description" content="Last Friday (2023-03-31) Twitter released what it calls “the algorithm,” which appears to be a highly redacted, incomplete part of code that governs the “for you” home timeline ranking system." /><meta property="og:image" content="https://solmessing.netlify.app/post/twitter-the-algorithm/featured.png" /><meta property="og:locale" content="en-us" />
 
   
     <meta
@@ -421,10 +420,10 @@
     "name": "Sol Messing",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://solmessing.netlify.app/media/icon_hu_3baeddb697bfad35.png"
+      "url": "https://solmessing.netlify.app/media/icon_huedd5de82286bc1d0a1509b535f624c76_25974_192x192_fill_lanczos_center_3.png"
     }
   },
-  "description": "\u003cp\u003eLast Friday (2023-03-31) Twitter released what it calls “the algorithm,” which appears to be a highly redacted, incomplete part of code that governs the “for you” home timeline ranking system. And I saw nothing to suggest the parts of the code they put in the GitHub repository wasn’t authentic.\u003c/p\u003e"
+  "description": "Last Friday (2023-03-31) Twitter released what it calls “the algorithm,” which appears to be a highly redacted, incomplete part of code that governs the “for you” home timeline ranking system."
 }
 </script>
 
@@ -1046,7 +1045,7 @@
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    9 min read
+    8 min read
   </span>
   
 
@@ -1108,7 +1107,7 @@
 
 <div class="article-header article-container featured-image-wrapper mt-4 mb-4" style="max-width: 720px; max-height: 451px;">
   <div style="position: relative">
-    <img src="/post/twitter-the-algorithm/featured_hu_c877cfeb77d9b62.webp" width="720" height="451" alt="" class="featured-image">
+    <img src="/post/twitter-the-algorithm/featured_hu1ea2fa6a96f9135d0b3ef16031d3ab18_1341809_250e2201ba34c095195514b5b51eebc1.webp" width="720" height="451" alt="" class="featured-image">
     <span class="article-header-caption">Twitter comically deleting code that tracks Musk, Democrats, Republicans in DDG. Credit Colin Fraser.</span>
   </div>
 </div>
@@ -1125,43 +1124,61 @@
 <p>And Twitter made it <a href="https://www.wired.com/story/twitter-data-api-prices-out-nearly-everyone/" target="_blank" rel="noopener">prohibitively expensive</a> for external researchers to get that data through its API with the recent price updates ($500k/yr). So at the same time twitter is releasing this code, it’s made it incredibly difficult for research to <em>audit</em> this code</p>
 <p><strong>What&rsquo;s in the code? Gossip and Rumors</strong></p>
 <p><strong>Ukraine</strong> There were some <a href="https://twitter.com/SolomonMg/status/1642845123531751425?s=20" target="_blank" rel="noopener">initial reports</a> that Twitter was downranking tweets about Ukraine. I looked at the code and can tell you those claims are wrong&mdash;twitter has an audio-only <a href="https://www.clubhouse.com" target="_blank" rel="noopener">Clubhouse</a> clone called Spaces and that code is for that product, not ordinary tweets on hometimeline. What&rsquo;s more, this is likely a label related only to <strong>crisis misinformation</strong>, as per Twitter&rsquo;s <a href="https://help.twitter.com/en/rules-and-policies/crisis-misinformation" target="_blank" rel="noopener">Crisis Misinformation Policy</a>.</p>
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Uh, this code looks like it *only* relates to Twitter&#39;s Spaces product. If so it is *not* used for down-ranking ordinary tweets in home timeline ranking. <br><br>It&#39;s called here with the other twitter Spaces spaces visibility models and labels: <a href="https://t.co/7n8Tl7WVlJ">https://t.co/7n8Tl7WVlJ</a> <a href="https://t.co/stSThUTvUe">https://t.co/stSThUTvUe</a></p>&mdash; Sol Messing (@SolomonMg) <a href="https://twitter.com/SolomonMg/status/1642560420392103936?ref_src=twsrc%5Etfw">April 2, 2023</a></blockquote>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
+
+<blockquote class="twitter-tweet">
+  <a href="https://twitter.com/SolomonMg/status/1642560420392103936"></a>
+</blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 <p><strong>Musk Metrics</strong> One of the most interesting things we learned from the code is that Twitter created an entire suite of metrics about Elon Musk’s personal twitter experience. The code shows they fed those metrics to the experimentation platform (Duck Duck Goose, or DDG), which at least historically has been used to evaluate whether or not to ship products.</p>
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Twitter’s algorithm specifically labels whether the Tweet author is Elon Musk<br><br>“author_is_elon”<br><br>besides the Democrat, Republican and “Power User” labels<a href="https://t.co/fhpBjdfifX">https://t.co/fhpBjdfifX</a> <a href="https://t.co/orCPvfMTb9">pic.twitter.com/orCPvfMTb9</a></p>&mdash; Jane Manchun Wong (@wongmjane) <a href="https://twitter.com/wongmjane/status/1641884551189512192?ref_src=twsrc%5Etfw">March 31, 2023</a></blockquote>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
+
+<blockquote class="twitter-tweet">
+  <a href="https://twitter.com/wongmjane/status/1641884551189512192"></a>
+</blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 <p>This episode is consistent with reporting that engineers are very concerned about how any features they ship <a href="https://www.theverge.com/2023/2/9/23593099/elon-musk-twitter-fires-engineer-declining-reach-ftc-concerns" target="_blank" rel="noopener">affect the CEOs personal experience on Twitter</a>. And other <a href="https://arstechnica.com/tech-policy/2023/02/report-musk-had-twitter-engineers-boost-his-tweets-after-biden-got-more-views/" target="_blank" rel="noopener">reporting has suggested that there may have been a Musk centric boost feature</a> that shipped, and you would want exactly this kind of instrumentation to understand how that worked in practice.</p>
 <p><strong>Republican, Democrat Metrics</strong> We also learned that Twitter is logging similar metrics for lists of prominent Democrat and Republican accounts, <a href="https://www.yahoo.com/entertainment/twitters-recommendation-algorithm-is-now-on-github-200511112.html" target="_blank" rel="noopener">ostensibly to understand</a> whether any features that they ship affect those sets of accounts equally. Now we know that <a href="https://www.nature.com/articles/s41467-022-34769-6" target="_blank" rel="noopener">conservative accounts tend to share more misinformation than liberal accounts on both Twitter</a> and <a href="https://www.science.org/doi/full/10.1126/sciadv.aau4586" target="_blank" rel="noopener">on Facebook</a>. And, <a href="https://www.washingtonpost.com/technology/2023/02/08/house-republicans-twitter-files-collusion/" target="_blank" rel="noopener">Musk has alleged that Democrats and Big Tech are colluding</a> to enforce policy violation unequally across parties.</p>
 <p>But if you have these ``partisan equality&rsquo;&rsquo; stats as part of your ship criteria, perhaps on equal footing with policy violation frequency, you can see how <strong>this could really affect the types of health and safety features that actually make it to the site in production</strong>.</p>
 <p>This code was then comically removed via pull requests from Twitter. Because once you delete something on GitHub, it just goes away. Right?</p>
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">which specific user groups, you might wonder? <a href="https://t.co/wYSsUKm1pA">pic.twitter.com/wYSsUKm1pA</a></p>&mdash; Colin Fraser (@colin_fraser) <a href="https://twitter.com/colin_fraser/status/1641960748233662464?ref_src=twsrc%5Etfw">April 1, 2023</a></blockquote>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
+
+<blockquote class="twitter-tweet">
+  <a href="https://twitter.com/colin_fraser/status/1641960748233662464"></a>
+</blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 <p><strong>Twitter Blue Boost</strong> What’s more, we sorta knew that Twitter Blue users get a boost in feed ranking, but the code make it clear that it could double your score among people who don&rsquo;t follow you, and quadruple it for those who do.</p>
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Not sure what I expected, but interesting that first pull request on newly open-sourced <a href="https://twitter.com/twitter?ref_src=twsrc%5Etfw">@Twitter</a> algo (<a href="https://t.co/kAVP0zdzki">https://t.co/kAVP0zdzki</a>) is to downweight verified user multipliers. <a href="https://t.co/PfqIdVTDnk">pic.twitter.com/PfqIdVTDnk</a></p>&mdash; Caitlin Hudon (@beeonaposy) <a href="https://twitter.com/beeonaposy/status/1641878347557883910?ref_src=twsrc%5Etfw">March 31, 2023</a></blockquote>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
+
+<blockquote class="twitter-tweet">
+  <a href="https://twitter.com/beeonaposy/status/1641878347557883910"></a>
+</blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 <p>As <a href="https://twitter.com/jonathanstray/status/1642200687101501441" target="_blank" rel="noopener">Jonathan Stray pointed out</a>, if this counts as a paid promotion, the FTC might require Twitter to label your tweets as ads. Now we kind of already knew this from Musks Twitter Blue announcement, but having evidence in the code might cross a different line for the FTC.</p>
 <p><strong>So what about the ackshual algorithm? What does this say about feed ranking?</strong></p>
 <p>The code itself is there but it’s missing specifics&mdash;key parameters, feature sets, and model weights are absent or abstracted. And obviously the data.</p>
 <p>The most critical thing we learned about Twitter’s ranking algorithm is probably from a readme file that former Facebook Data Scientist <a href="https://twitter.com/jeff4llen" target="_blank" rel="noopener">Jeff Allen</a> found. If we take that at face value, a fav (twitter like) is worth half a retweet. A reply is worth 27 retweets, and a reply with a response from a tweets author is worth a whopping 75 retweets!</p>
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">According to the Heavy Ranker readme, it looks like this is the &quot;For you&quot; feed ranking formula is<br><br>Each &quot;is_X&quot; is a predicted probability the user will take that action on the Tweet.<br><br>Replies are the most important signal. Very similar to MSI for FB.<a href="https://t.co/Bmv7qg4voc">https://t.co/Bmv7qg4voc</a> <a href="https://t.co/lWfaUboT6q">pic.twitter.com/lWfaUboT6q</a></p>&mdash; Jeff Allen (@jeff4llen) <a href="https://twitter.com/jeff4llen/status/1641901988047626241?ref_src=twsrc%5Etfw">March 31, 2023</a></blockquote>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
+
+<blockquote class="twitter-tweet">
+  <a href="https://twitter.com/jeff4llen/status/1641901988047626241"></a>
+</blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 <p>Now it’s not quite that simple&mdash;what about when a tweet is first posted and there’s no data? Twitter’s deep learning system (in the heavy ranker) will do some heavy lifting and predict the likelihood of each of these actions based on the tweet author, their network, any initial engagements, the tweet text, and thousands of signals and embeddings.</p>
 <p>Of course, what happens in the first few minutes when a tweet is posted deeply shapes who sees and engages with it downstream in the future.</p>
 <p>[And the way this is implemented in practice is that the model handles all cases, but as you get more and more real time data on a tweet, those real time features dominate everything else and push those probabilities close to 1, see <a href="https://twitter.com/SolomonMg/status/1642154005588504577?s=20" target="_blank" rel="noopener">discussion here</a>.]</p>
 <p>Now I should point out that there are some spammy accounts claiming to have found ranking parameters in the code. They’re wrong, those are used to <a href="https://github.com/twitter/the-algorithm/blob/7f90d0ca342b928b479b512ec51ac2c3821f5922/src/java/com/twitter/search/README.md" target="_blank" rel="noopener">retrieve tweets from your network for candidate generation only</a>. <a href="https://lucene.apache.org" target="_blank" rel="noopener">Lucene</a> is an open source search tool.</p>
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Uh, this is for search query results, not home timeline ranking. <br><br>See the thing that  says &quot;luceneScoreParams&quot;??<br><br>Lucene is a search library: <a href="https://t.co/993crKVHJi">https://t.co/993crKVHJi</a> <a href="https://t.co/AdGtjCbOlx">https://t.co/AdGtjCbOlx</a></p>&mdash; Sol Messing (@SolomonMg) <a href="https://twitter.com/SolomonMg/status/1642563414970060800?ref_src=twsrc%5Etfw">April 2, 2023</a></blockquote>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
+
+<blockquote class="twitter-tweet">
+  <a href="https://twitter.com/SolomonMg/status/1642563414970060800"></a>
+</blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 <p>I should point out however, that some of the ``Earlybird&rsquo;&rsquo; code was at one point used in timeline ranking, and it appears that <a href="https://github.com/twitter/the-algorithm/blob/7f90d0ca342b928b479b512ec51ac2c3821f5922/cr-mixer/server/src/main/scala/com/twitter/cr_mixer/similarity_engine/EarlybirdTensorflowBasedSimilarityEngine.scala" target="_blank" rel="noopener">it may be used in cr-mixer</a>, which is used in candidate generation for <a href="https://github.com/twitter/the-algorithm/blob/7f90d0ca342b928b479b512ec51ac2c3821f5922/cr-mixer/README.md" target="_blank" rel="noopener">out-of-network tweets</a>.</p>
 <p>Interestingly, <a href="https://github.com/twitter/the-algorithm/blob/main/home-mixer/server/src/main/scala/com/twitter/home_mixer/functional_component/filter/OutOfNetworkCompetitorURLFilter.scala" target="_blank" rel="noopener">Twitter appears to remove competitor URLs</a>, perhaps only for tweets that are outside of network (you don&rsquo;t follow the author).</p>
@@ -1434,7 +1451,7 @@
   
 
 
-<script src="/js/vendor-bundle.min.d613345003d21781ec611233eea95b85.js"></script>
+<script src="/js/vendor-bundle.min.36925ff7588fbf71ae347b80bbb6669b.js"></script>
 
 
 
@@ -1513,7 +1530,7 @@
 <script id="page-data" type="application/json">{"use_headroom":true}</script>
 
 
-  <script src="/js/wowchemy-headroom.b95a7e109243f29d04930ae8cb49a756.js" type="module"></script>
+  <script src="/js/wowchemy-headroom.db4755770454eb63685f8de785c0a172.js" type="module"></script>
 
 
 
@@ -1527,7 +1544,7 @@
   
 
 
-<script src="/en/js/wowchemy.min.69fc52a6dc16aaf1a452cfbb36466dac.js"></script>
+<script src="/en/js/wowchemy.min.82f8dceb21fd87c6f7d2fbaedd526c57.js"></script>
 
 
 
