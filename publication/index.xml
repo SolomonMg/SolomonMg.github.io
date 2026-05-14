@@ -5,12 +5,24 @@
     <link>https://solmessing.netlify.app/publication/</link>
       <atom:link href="https://solmessing.netlify.app/publication/index.xml" rel="self" type="application/rss+xml" />
     <description>Publications</description>
-    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Wed, 01 Jan 2025 00:00:00 +0000</lastBuildDate>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Thu, 01 Jan 2026 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://solmessing.netlify.app/media/icon_huedd5de82286bc1d0a1509b535f624c76_25974_512x512_fill_lanczos_center_3.png</url>
       <title>Publications</title>
       <link>https://solmessing.netlify.app/publication/</link>
     </image>
+    
+    <item>
+      <title>State Media Control Influences Large Language Models</title>
+      <link>https://solmessing.netlify.app/publication/waight-2026-state/</link>
+      <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://solmessing.netlify.app/publication/waight-2026-state/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://state-media-influence-llm.github.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Interactive companion site&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doi.org/10.7910/DVN/NECR2K&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Replication archive&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>Quantifying Narrative Similarity Across Languages</title>
