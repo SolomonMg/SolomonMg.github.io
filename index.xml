@@ -33,6 +33,69 @@
     </item>
     
     <item>
+      <title>Interactive Web Replication &amp; Update of State Media Influence on LLMs</title>
+      <link>https://solmessing.netlify.app/project/state_media_llm/</link>
+      <pubDate>Sun, 24 May 2026 00:00:00 +0000</pubDate>
+      <guid>https://solmessing.netlify.app/project/state_media_llm/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://hannahwaight.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Hannah Waight&lt;/a&gt;, &lt;a href=&#34;https://eddieyang.net&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Eddie Yang&lt;/a&gt;, Yin Yuan, &lt;a href=&#34;https://polisci.ucsd.edu/people/faculty/faculty-directory/currently-active-faculty/roberts-profile.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Molly Roberts&lt;/a&gt;, &lt;a href=&#34;https://scholar.princeton.edu/bstewart&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Brandon Stewart&lt;/a&gt;, &lt;a href=&#34;https://wp.nyu.edu/joshuatucker/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Josh Tucker&lt;/a&gt; and I &lt;a href=&#34;https://doi.org/10.1038/s41586-026-10506-7&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;published a paper in Nature (2026)&lt;/a&gt; showing that state-controlled media in LLM training data influences how those models talk about politics.&lt;/p&gt;
+&lt;!-- The paper shows (1) state-coordinated Chinese media are in open training corpora; (2) pretraining on that content moves a model&#39;s outputs in a pro-government direction, especialy in the regime&#39;s langauge; and (3) commercial models answer political prompts more favorably toward the regime in that language. --&gt;
+&lt;p&gt;But we ran those audits in 2023-2024&amp;ndash;it took a long time to get the paper published!&lt;/p&gt;
+&lt;p&gt;We wanted to know what happens with the current generation of models, especially re how models memorize state media talking points, and I&amp;rsquo;d seen a lot of criticism of LLM papers that relied on legacy generation models recently on Twitter. I also wanted to show what being more pro-regime looks like in the actual text.&lt;/p&gt;
+&lt;p&gt;And you don&amp;rsquo;t land a &lt;em&gt;Nature&lt;/em&gt; paper every day!&lt;/p&gt;
+&lt;p&gt;Now in the past, this is the kind of thing that I would get excited about but never actually execute because there&amp;rsquo;s a lot of slow and boring scaffolding work outside my expertise required to set this up. But I started using Claude Code late last year and of course CLI-AI tools are great for stuff like this.&lt;/p&gt;
+&lt;p&gt;In fact, Josh and I recently wrote a &lt;a href=&#34;https://www.brookings.edu/articles/the-train-has-left-the-station-agentic-ai-and-the-future-of-social-science-research/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;piece in Brookings&lt;/a&gt; about how agentic AI might make it possible to do more public outreach like this.&lt;/p&gt;
+&lt;p&gt;So I built an &lt;a href=&#34;https://state-media-influence-llm.github.io&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;interactive companion site&lt;/a&gt; that replicates the core studies from the paper on current-generation models. The whole team gave feedback and what came out was pretty cool. It looked great and a few new and important findings emerged from the effort.&lt;/p&gt;
+&lt;p&gt;By and large, &lt;a href=&#34;https://state-media-influence-llm.github.io/global.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;the core findings hold&lt;/a&gt;. In 38 countries, where more than 70% of langauge speakers reside, there&amp;rsquo;s a strong negative correlation between press freedom and pro-government LLM valence (-0.89) relative to English in current-generation models. Every current-generation model still produces more pro-government answers in Chinese than in English about Chinese leaders and institutions. Memorization rates for state-coordinated media phrases continue to be at or above rates for general web text.&lt;/p&gt;
+&lt;p&gt;Two years of capability improvements and safety work have not changed the underlying issue.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;The highlights&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://state-media-influence-llm.github.io/memorization.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Memorization effects are far larger for new models&lt;/a&gt;.&lt;/strong&gt; As expected, newer larger models memorize state media-aligned text a &lt;em&gt;much&lt;/em&gt; higher rates than do the models we tested in the paper. We prompted models with the first half of 2,000 distinctive phrases and measured how often each model completes the second half of the phrase nearly perfectly. Half of the phrases are from Chinese state media talking points (red) and half from general Chinese web text (green/blue).&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Memorization rates across paper-era and current-generation LLMs. State-coordinated media phrases in red, general CulturaX web text in green. Newer models complete the held-out half of each phrase at substantially higher rates than the paper-era models.&#34; srcset=&#34;
+               /project/state_media_llm/memorization_rates_hu2cbf3b6ba34d1971870b196d0345fc10_105071_db2785e469782d36f887d765b586aef7.webp 400w,
+               /project/state_media_llm/memorization_rates_hu2cbf3b6ba34d1971870b196d0345fc10_105071_12544e0e9045da25d6c1d746def9f5ee.webp 760w,
+               /project/state_media_llm/memorization_rates_hu2cbf3b6ba34d1971870b196d0345fc10_105071_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://solmessing.netlify.app/project/state_media_llm/memorization_rates_hu2cbf3b6ba34d1971870b196d0345fc10_105071_db2785e469782d36f887d765b586aef7.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;652&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://state-media-influence-llm.github.io/audit.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Newer models tend to be even more positive toward China in Chinese&lt;/a&gt;.&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://state-media-influence-llm.github.io/cross_model_audit.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;DeepSeek V4 Pro overwhelmingly pro-China&lt;/a&gt;.&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;DeepSeek V4 Pro is overwhelmingly pro-China in both languages. Spot-checking suggests it&amp;rsquo;s spouting state media talking points in English: &amp;ldquo;principles of socialism with Chinese characteristics&amp;rdquo; and &amp;ldquo;whole-process people&amp;rsquo;s democracy.&amp;rdquo; To examine DeepSeek&amp;rsquo;s pro-China valence relative to other models, I ran pairwise llm-as-judge comparisons across nine current-generation models holding language constant and fit a Bradley-Terry model. DeepSeek V4 Pro ranks first on China-favorability in both English &lt;em&gt;and&lt;/em&gt; Chinese.&lt;/p&gt;
+&lt;!-- 828 politically sensitive prompts about leaders, countries, and institutions across six countries — once in English, once in Chinese. A six-judge LLM panel (GPT-OSS-120B, GPT-5.2, Claude Opus 4.6, Grok 4, Gemini 3.1 Pro, DeepSeek V3.2) scores which language produces the more pro-government response. I depart from the paper on one methodological choice: prompts where the model refuses in either language are excluded, since refusals predictably lose to substantive responses on the other side and confound the underlying valence question (DeepSeek V4 Pro and Gemini 3.1 Pro each refuse about a quarter of the prompts in at least one language). --&gt;
+&lt;p&gt;&lt;strong&gt;Code and data:&lt;/strong&gt; &lt;a href=&#34;https://github.com/state-media-influence-llm/replication&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;github.com/state-media-influence-llm/replication&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Paper:&lt;/strong&gt; &lt;a href=&#34;https://doi.org/10.1038/s41586-026-10506-7&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Waight et al. 2026, &lt;em&gt;Nature&lt;/em&gt;&lt;/a&gt; (&lt;a href=&#34;https://rdcu.be/fiyrF&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;complimentary copy&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Companion site:&lt;/strong&gt; &lt;a href=&#34;https://state-media-influence-llm.github.io&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;state-media-influence-llm.github.io&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>State Media Control Influences Large Language Models</title>
       <link>https://solmessing.netlify.app/publication/waight-2026-state/</link>
       <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
