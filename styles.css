@@ -134,6 +134,8 @@ a {
 @media (max-width: 600px) {
   .home-hero { flex-direction: column; align-items: flex-start; gap: 1.1rem; }
   .home-avatar { flex-basis: 100px; width: 100px; height: 100px; }
+  /* Narrow crop: keep the mountain biker (~70% across the image) centered in view */
+  .home-banner { background-position: 80% 45%; }
 }
 
 /* ===================== SECTION HEADINGS ===================== */

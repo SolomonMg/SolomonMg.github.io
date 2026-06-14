@@ -20,7 +20,7 @@ listing:
     <div class="home-affil">
       <div>Research Scientist, <a href="https://deepmind.google">Google DeepMind</a></div>
       <div>Research Associate Professor, <a href="https://csmapnyu.org/">New York University</a></div>
-      <div><a href="https://mlcommons.org">ML Commons</a></div>
+      <div>Affiliate, <a href="https://mlcommons.org">ML Commons</a></div>
     </div>
     <p class="home-tagline">Working on evaluation science and the socioeconomic impacts of AI systems.</p>
     <nav class="home-links">
