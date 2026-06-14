@@ -1,0 +1,31 @@
+---
+title: State Media Control Influences Large Language Models
+date: '2026-01-01'
+author:
+- Hannah Waight
+- Eddie Yang
+- Yin Yuan
+- Solomon Messing
+- Margaret E. Roberts
+- Brandon M. Stewart
+- Joshua A. Tucker
+categories:
+- Journal article
+- Featured
+description: Nature, 2026
+aliases:
+- /publication/waight-2026-state/
+---
+
+Hannah Waight, Eddie Yang, Yin Yuan, **Solomon Messing**, Margaret E. Roberts, Brandon M. Stewart, Joshua A. Tucker (2026). State Media Control Influences Large Language Models. *Nature*. doi:[10.1038/s41586-026-10506-7](https://doi.org/10.1038/s41586-026-10506-7)
+
+[PDF](https://rdcu.be/fiyrF){.btn-paper} [DOI](https://doi.org/10.1038/s41586-026-10506-7){.btn-paper}
+
+## Abstract
+
+Millions of people around the world query large language models for information. While several studies have compellingly documented the persuasive potential of these models, there is limited evidence of who or what influences the models themselves, leading to a flurry of concerns about which companies and governments build and regulate the models. We show through six studies that government control of the media across the world *already* influences the output of large language models (LLMs) via their training data. We use a cross-national audit to show that LLMs exhibit a stronger pro-government valence in the languages of countries with lower media freedom than those with higher media freedom. This result is correlational so to triangulate the specific mechanism of how state media control can influence LLMs, we develop a multi-part case study on China's media. We demonstrate that media scripted and curated by the Chinese state appears in large language model training datasets. To evaluate the plausible effect of this inclusion, we use an open-weight model to show that additional pretraining on Chinese state-coordinated media generates more positive answers to prompts about Chinese political institutions and leaders. We link this phenomenon to commercial models through two audit studies demonstrating that prompting models in Chinese generates more positive responses about China's institutions and leaders than do the same queries in English. The combination of influence and persuasive potential across languages suggests the troubling conclusion that states and powerful institutions have increased strategic incentives to leverage media control in the hopes of shaping large language model output.
+
+## More
+
+- [Interactive companion site](https://state-media-influence-llm.github.io/)
+- [Replication archive](https://doi.org/10.7910/DVN/NECR2K)

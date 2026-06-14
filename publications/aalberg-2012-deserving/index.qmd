@@ -1,0 +1,15 @@
+---
+title: Who is a `deserving'immigrant? An experimental study of Norwegian attitudes
+date: '2012-01-01'
+author:
+- Toril Aalberg
+- Shanto Iyengar
+- Solomon Messing
+categories:
+- Journal article
+description: Scandinavian Political Studies, 2012
+aliases:
+- /publication/aalberg-2012-deserving/
+---
+
+Toril Aalberg, Shanto Iyengar, **Solomon Messing** (2012). Who is a `deserving'immigrant? An experimental study of Norwegian attitudes. *Scandinavian Political Studies*.

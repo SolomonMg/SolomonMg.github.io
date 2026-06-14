@@ -1,0 +1,50 @@
+/*-- scss:defaults --*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+// Match the state-media site: serif body (Charter), sans headings (Inter)
+$font-family-sans-serif: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !default;
+$font-family-serif:      "Charter", "Georgia", "Noto Serif SC", "Songti SC", serif !default;
+$font-family-base:       $font-family-serif !default;
+$headings-font-family:   $font-family-sans-serif !default;
+
+$green:    #396b3f;
+$green-2:  #2d5532;
+$ink:      #2c2c2c;
+$heading:  #1a1a1a;
+$muted:    #6a6a6a;
+$border:   #e8e8e8;
+$card-bd:  #e5e5e5;
+
+$body-bg:    #ffffff;
+$body-color: $ink;
+$headings-color: $heading;
+$headings-font-weight: 600;
+$primary:    $green;
+$link-color: $green;
+$link-hover-color: $green-2;
+
+$font-size-root: 17px;
+$line-height-base: 1.7;
+$border-radius: 0.25rem;
+
+$navbar-bg: #fafafa;
+$navbar-fg: #333333;
+
+/*-- scss:rules --*/
+
+:root {
+  --paper: #ffffff;
+  --ink: #{$ink};
+  --heading: #{$heading};
+  --accent: #{$green};
+  --accent-2: #{$green-2};
+  --muted: #{$muted};
+  --border: #{$border};
+  --card: #ffffff;
+  --card-border: #{$card-bd};
+  --display: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  --body: "Charter", "Georgia", "Noto Serif SC", serif;
+  --shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.04);
+}

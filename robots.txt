@@ -1,5 +1,0 @@
-User-agent: *
-Allow: /
-Disallow: /pdf/NarrativeDiffusion.pdf
-
-Sitemap: https://solomonmg.github.io/sitemap.xml

@@ -1,0 +1,17 @@
+---
+title: Partisan Conflict and Congressional Outreach
+date: '2017-01-01'
+author:
+- Patrick van Kessel, Adam G Hughes, Nick Judd, Rachel Blum, Brian Broderick Solomon Messing
+categories:
+- Journal article
+description: Pew Research Center, 2017
+aliases:
+- /publication/solomon-2017-partisan/
+---
+
+Patrick van Kessel, Adam G Hughes, Nick Judd, Rachel Blum, Brian Broderick Solomon Messing (2017). Partisan Conflict and Congressional Outreach. *Pew Research Center*.
+
+## Abstract
+
+Partisan criticism generates most engagement in social media; most liberal and conservative legislators, party leadership more likely to `go negative'

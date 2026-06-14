@@ -1,0 +1,15 @@
+---
+title: 'Measuring issue salience: Using supervised machine learning to generate data from free responses to the ''most important problem'' question'
+date: '2011-01-01'
+author:
+- Solomon Messing
+categories:
+- Report
+description: '2011'
+aliases:
+- /publication/messing-2011-measuring/
+---
+
+**Solomon Messing** (2011). Measuring issue salience: Using supervised machine learning to generate data from free responses to the 'most important problem' question.
+
+[PDF](/pdf/Measuring_issue_salience_Using_supervise.pdf){.btn-paper}

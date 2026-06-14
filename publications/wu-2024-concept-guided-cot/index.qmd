@@ -1,0 +1,22 @@
+---
+title: Concept-Guided Chain-of-Thought Prompting for Pairwise Comparison Scoring of Texts with Large Language Models
+date: '2024-12-15'
+author:
+- Patrick Y. Wu
+- Jonathan Nagler
+- Joshua A. Tucker
+- Solomon Messing
+categories:
+- Conference paper
+description: 2024 IEEE International Conference on Big Data (BigData), 2024
+aliases:
+- /publication/wu-2024-concept-guided-cot/
+---
+
+Patrick Y. Wu, Jonathan Nagler, Joshua A. Tucker, **Solomon Messing** (2024). Concept-Guided Chain-of-Thought Prompting for Pairwise Comparison Scoring of Texts with Large Language Models. *2024 IEEE International Conference on Big Data (BigData)*.
+
+[PDF](https://arxiv.org/pdf/2310.12049){.btn-paper}
+
+## Abstract
+
+Existing text scoring methods require a large corpus, struggle with short texts, or require hand-labeled data. We develop a text scoring framework that leverages generative large language models (LLMs) to (1) set texts against the backdrop of information from the near-totality of the web and digitized media, and (2) effectively transform pairwise text comparisons from a reasoning problem to a pattern recognition task. Our approach, concept-guided chain-of-thought (CGCoT), utilizes a chain of researcher-designed prompts with an LLM to generate a concept-specific breakdown for each text, akin to guidance provided to human coders. We then pairwise compare breakdowns using an LLM and aggregate answers into a score using a probability model. We apply this approach to better understand speech reflecting aversion to specific political parties on Twitter. We achieve stronger correlations with human judgments than widely used unsupervised text scoring methods like Wordfish. In a supervised setting, besides a small pilot dataset to develop CGCoT prompts, our measures require no additional hand-labeled data and produce predictions on par with RoBERTa-Large fine-tuned on thousands of hand-labeled tweets. This project showcases the potential of combining human expertise and LLMs.

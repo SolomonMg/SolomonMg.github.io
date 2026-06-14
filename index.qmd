@@ -1,0 +1,57 @@
+---
+pagetitle: "Sol Messing — Research Scientist"
+description: "Sol Messing — Research Scientist at Google DeepMind and Research Associate Professor at NYU. AI & democracy, LLM evaluation, computational social science."
+listing:
+  - id: all-posts
+    contents: blog
+    type: default
+    sort: "date desc"
+    fields: [image, date, title, description]
+---
+
+```{=html}
+<a class="home-banner-link" href="https://www.instagram.com/dr_sol_mtb/" target="_blank" rel="noopener" title="MTB videos on Instagram (@dr_sol_mtb)" aria-label="Mountain biking videos on Instagram (@dr_sol_mtb)">
+  <div class="home-banner" role="img" aria-label="Sol Messing mountain biking in the Dolomites" style="background-image:url('img/banner.jpg')"></div>
+</a>
+<header class="home-hero home-hero--banner">
+  <img class="home-avatar" src="images/profile.jpg" alt="Sol Messing">
+  <div class="home-id">
+    <div class="home-name" role="heading" aria-level="1">Sol Messing</div>
+    <div class="home-affil">
+      <div>Research Scientist, <a href="https://deepmind.google">Google DeepMind</a></div>
+      <div>Research Associate Professor, <a href="https://csmapnyu.org/">New York University</a></div>
+      <div><a href="https://mlcommons.org">ML Commons</a></div>
+    </div>
+    <p class="home-tagline">Working on evaluation science and the socioeconomic impacts of AI systems.</p>
+    <nav class="home-links">
+      <a href="contact.html"><i class="bi bi-envelope"></i> Email</a>
+      <a href="https://scholar.google.com/citations?user=to63kiAAAAAJ&hl=en"><i class="bi bi-mortarboard-fill"></i> Scholar</a>
+      <a href="https://github.com/solomonmg"><i class="bi bi-github"></i> GitHub</a>
+      <a href="https://twitter.com/SolomonMg"><i class="bi bi-twitter-x"></i> X</a>
+      <a href="pdf/CV/CV.pdf"><i class="bi bi-file-earmark-text"></i> CV</a>
+      <a href="bio.html"><i class="bi bi-person"></i> Full bio</a>
+    </nav>
+  </div>
+</header>
+```
+
+```{=html}
+<div class="home-section"><h2>Current work</h2></div>
+```
+
+- **Measurement** — hidden [error in LLM evals &amp; benchmarks](https://arxiv.org/abs/2604.11581) and how to reduce it. Measuring the [spread of ideas across languages](/publications/waightmessing2025/) with fine-tuned LLMs; estimating [ideology](https://arxiv.org/abs/2303.12057) via forced-choice LLM-as-judge.
+- **AI &amp; Democracy** — what LLMs refuse and the political consequences. How [state media in training data shapes model output](https://state-media-influence-llm.github.io). Alignment choices and democratic outcomes.
+- **Economic impacts** — simulating real-world economic tasks to understand [model capabilities and labor-market impacts](https://deepmind.google/blog/deepening-our-partnership-with-the-uk-ai-security-institute/).
+
+```{=html}
+<div class="home-section"><h2>Featured Publications</h2><a class="more" href="publications.html">All publications →</a></div>
+```
+
+{{< include _includes/featured_pubs.md >}}
+
+```{=html}
+<div class="home-section"><h2>Writing</h2><a class="more" href="blog.html">Browse &amp; filter →</a></div>
+```
+
+:::{#all-posts}
+:::

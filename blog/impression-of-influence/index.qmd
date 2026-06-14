@@ -1,0 +1,18 @@
+---
+title: Impression of Influence
+date: '2020-05-17'
+author:
+- Sol Messing
+description: A book on how Members of Congress use Credit Claiming
+aliases:
+- /project/Impression_of_influence/
+- /projects/Impression_of_influence/
+image: featured.png
+---
+
+[PDF](/pdf/GrimmerWestwoodMessingBook.pdf){.btn-paper} [Follow](https://twitter.com/SolomonMg){.btn-paper}
+
+[**The Impression of Influence: Legislator Communication, Representation, and Democratic Accountability**](/pdf/GrimmerWestwoodMessingBook.pdf)
+**Princeton University Press, 2015**. With Justin Grimmer and Sean
+Westwood 
+- Media: [Mischiefs of Faction](http://www.mischiefsoffaction.com/2015/01/its-frequency-not-size-compromise.html).

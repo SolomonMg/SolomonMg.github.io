@@ -1,0 +1,23 @@
+---
+title: Intravenous ferumoxytol allows noninvasive MR imaging monitoring of macrophage migration into stem cell transplants
+date: '2012-01-01'
+author:
+- Aman Khurana
+- Hossein Nejadnik
+- Rakhee Gawande
+- Guiting Lin
+- Sungmin Lee
+- Solomon Messing
+- Rosalinda Castaneda
+- Nikita Derugin
+- Laura Pisani
+- Tom F Lue
+- ' others'
+categories:
+- Journal article
+description: Radiology, 2012
+aliases:
+- /publication/khurana-2012-intravenous/
+---
+
+Aman Khurana, Hossein Nejadnik, Rakhee Gawande, Guiting Lin, Sungmin Lee, **Solomon Messing**, Rosalinda Castaneda, Nikita Derugin, Laura Pisani, Tom F Lue, others (2012). Intravenous ferumoxytol allows noninvasive MR imaging monitoring of macrophage migration into stem cell transplants. *Radiology*.

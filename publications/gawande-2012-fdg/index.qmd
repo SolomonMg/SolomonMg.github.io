@@ -1,0 +1,18 @@
+---
+title: FDG PET/CT for the Evaluation of Normal Thymus, Lymphoma Recurrence, and Mediastinal Lymphoma in Pediatric Patients Response
+date: '2012-01-01'
+author:
+- Rakhee S Gawande
+- Spencer Behr
+- Solomon Messing
+- Robert E Goldsby
+- Randall A Hawkins
+- Heike E Daldrup-Link
+categories:
+- Journal article
+description: RADIOLOGY, 2012
+aliases:
+- /publication/gawande-2012-fdg/
+---
+
+Rakhee S Gawande, Spencer Behr, **Solomon Messing**, Robert E Goldsby, Randall A Hawkins, Heike E Daldrup-Link (2012). FDG PET/CT for the Evaluation of Normal Thymus, Lymphoma Recurrence, and Mediastinal Lymphoma in Pediatric Patients Response. *RADIOLOGY*.

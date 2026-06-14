@@ -1,0 +1,26 @@
+---
+title: "Contact"
+---
+
+Reach me via the form below, or at firstname.lastname at gmail dot com. You can also [DM me on X](https://twitter.com/SolomonMg).
+
+```{=html}
+<form action="https://formspree.io/f/xnqgdkod" method="POST" class="contact-form" style="max-width:560px;">
+  <div style="margin-bottom:0.75rem;">
+    <label for="name" style="display:block;font-weight:500;margin-bottom:0.25rem;">Name</label>
+    <input type="text" name="name" id="name" required
+           style="width:100%;padding:0.5rem;border:1px solid #ccc;border-radius:6px;">
+  </div>
+  <div style="margin-bottom:0.75rem;">
+    <label for="email" style="display:block;font-weight:500;margin-bottom:0.25rem;">Email</label>
+    <input type="email" name="email" id="email" required
+           style="width:100%;padding:0.5rem;border:1px solid #ccc;border-radius:6px;">
+  </div>
+  <div style="margin-bottom:0.75rem;">
+    <label for="message" style="display:block;font-weight:500;margin-bottom:0.25rem;">Message</label>
+    <textarea name="message" id="message" rows="5" required
+              style="width:100%;padding:0.5rem;border:1px solid #ccc;border-radius:6px;"></textarea>
+  </div>
+  <button type="submit" class="btn-paper" style="cursor:pointer;">Send</button>
+</form>
+```

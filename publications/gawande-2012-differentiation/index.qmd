@@ -1,0 +1,20 @@
+---
+title: Differentiation of Normal Thymus from Anterior Mediastinal Lymphoma and Lymphoma Recurrence at Pediatric PET/CT
+date: '2012-01-01'
+author:
+- Rakhee S Gawande
+- Aman Khurana
+- Solomon Messing
+- Dong Zhang
+- Rosalinda T Castañeda
+- Robert E Goldsby
+- Randall A Hawkins
+- Heike E Daldrup-Link
+categories:
+- Journal article
+description: Radiology, 2012
+aliases:
+- /publication/gawande-2012-differentiation/
+---
+
+Rakhee S Gawande, Aman Khurana, **Solomon Messing**, Dong Zhang, Rosalinda T Castañeda, Robert E Goldsby, Randall A Hawkins, Heike E Daldrup-Link (2012). Differentiation of Normal Thymus from Anterior Mediastinal Lymphoma and Lymphoma Recurrence at Pediatric PET/CT. *Radiology*.

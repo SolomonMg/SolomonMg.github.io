@@ -1,0 +1,16 @@
+---
+title: 'Of course I wouldn''t do that in real life: advancing the arguments for increasing realism in HCI experiments'
+date: '2011-01-01'
+author:
+- Letitia Lew
+- Truc Nguyen
+- Solomon Messing
+- Sean Westwood
+categories:
+- Book chapter
+description: CHI'11 Extended Abstracts on Human Factors in Computing Systems, 2011
+aliases:
+- /publication/lew-2011-course/
+---
+
+Letitia Lew, Truc Nguyen, **Solomon Messing**, Sean Westwood (2011). Of course I wouldn't do that in real life: advancing the arguments for increasing realism in HCI experiments. *CHI'11 Extended Abstracts on Human Factors in Computing Systems*.

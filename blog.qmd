@@ -1,0 +1,14 @@
+---
+title: "Blog"
+description: "Projects and notes on data visualization, elections, social media, AI, and statistics."
+listing:
+  contents: blog
+  type: default
+  sort: "date desc"
+  categories: true
+  sort-ui: false
+  filter-ui: true
+  feed: true
+  fields: [image, date, title, description, categories]
+page-layout: full
+---

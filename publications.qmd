@@ -1,0 +1,260 @@
+---
+title: "Publications"
+description: "Peer-reviewed articles, books, and working papers."
+toc: true
+toc-location: right
+---
+
+See also my [Google Scholar profile](https://scholar.google.com/citations?user=to63kiAAAAAJ&hl=en).
+
+
+<h2 class="pub-year">2026</h2>
+
+::: {.pub-item}
+**[State Media Control Influences Large Language Models](/publications/waight-2026-state/)**  
+<span class="pub-authors">Hannah Waight, Eddie Yang, Yin Yuan, **Solomon Messing**, Margaret E. Roberts, Brandon M. Stewart, Joshua A. Tucker</span>  
+<span class="pub-venue">*Nature*, 2026</span>.  
+[PDF](https://rdcu.be/fiyrF){.btn-paper} [DOI](https://doi.org/10.1038/s41586-026-10506-7){.btn-paper}
+:::
+
+
+<h2 class="pub-year">2025</h2>
+
+::: {.pub-item}
+**[Web scraping for research: Legal, ethical, institutional, and scientific considerations](/publications/brown-2025-web-scraping/)**  
+<span class="pub-authors">Megan A. Brown, Andrew Gruen, Gabe Maldoff, **Solomon Messing**, Zeve Sanderson, Michael Zimmer</span>  
+<span class="pub-venue">*Big Data & Society*, 2025</span>.  
+[PDF](https://journals.sagepub.com/doi/pdf/10.1177/20539517251381686){.btn-paper} [DOI](https://doi.org/10.1177/20539517251381686){.btn-paper}
+:::
+
+::: {.pub-item}
+**[Quantifying Narrative Similarity Across Languages](/publications/waightmessing2025/)**  
+<span class="pub-authors">Hannah Waight, **Solomon Messing**, Anton Shirikov, Margaret E. Roberts, Jonathan Nagler, Jason Greenfield, Megan A. Brown, Kevin Aslett, Joshua A. Tucker</span>  
+<span class="pub-venue">*Sociological Methods & Research*, 2025</span>.  
+[PDF](/pdf/Quantifying_Narrative_Similarity_Across_Languages.pdf){.btn-paper} [DOI](https://doi.org/10.1177/00491241251340080){.btn-paper}
+:::
+
+
+<h2 class="pub-year">2024</h2>
+
+::: {.pub-item}
+**[Concept-Guided Chain-of-Thought Prompting for Pairwise Comparison Scoring of Texts with Large Language Models](/publications/wu-2024-concept-guided-cot/)**  
+<span class="pub-authors">Patrick Y. Wu, Jonathan Nagler, Joshua A. Tucker, **Solomon Messing**</span>  
+<span class="pub-venue">*2024 IEEE International Conference on Big Data (BigData)*, 2024</span>.  
+[PDF](https://arxiv.org/pdf/2310.12049){.btn-paper}
+:::
+
+::: {.pub-item}
+**[Digital town square? Nextdoor's offline contexts and online discourse](/publications/brown-2024-nextdoor/)**  
+<span class="pub-authors">Megan A. Brown, Zeve Sanderson, Sarah Graham, Minjoo Kim, Joshua A. Tucker, **Solomon Messing**</span>  
+<span class="pub-venue">*Journal of Quantitative Description: Digital Media*, 2024</span>.  
+[PDF](https://journalqd.org/article/download/5891/4518){.btn-paper}
+:::
+
+
+<h2 class="pub-year">2023</h2>
+
+::: {.pub-item}
+**[A 2 million-person, campaign-wide field experiment shows how digital advertising affects voter turnout](/publications/aggarwal-2023-2-million-experiment/)**  
+<span class="pub-authors">Minali Aggarwal, Jennifer Allen, Alexander Coppock, Dan Frankowski, **Solomon Messing**, Kelly Zhang, James Barnes, Andrew Beasley, Harry Hantman, Sylvan Zheng</span>  
+<span class="pub-venue">*Nature Human Behaviour*, 2023</span>.  
+[PDF](/pdf/acronymNHB.pdf){.btn-paper}
+:::
+
+
+<h2 class="pub-year">2020</h2>
+
+::: {.pub-item}
+**[Guidelines for Implementing and Auditing Differentially Private Systems](/publications/kifer-2020-guidelines/)**  
+<span class="pub-authors">Daniel Kifer, **Solomon Messing**, Aaron Roth, Abhradeep Thakurta, Danfeng Zhang</span>  
+<span class="pub-venue">*arXiv preprint arXiv:2002.04049*, 2020</span>.
+:::
+
+::: {.pub-item}
+**[Facebook Privacy-Protected Full URLs Data Set](/publications/messing-2020/)**  
+<span class="pub-authors">**Solomon Messing**, Christina DeGregorio, Bennett Hillenbrand, Gary King, Saurav Mahanti, Chaya Nayak, Nate Persily</span>  
+<span class="pub-venue">2020</span>.  
+[PDF](/pdf/Facebook_DP_URLs_Dataset.pdf){.btn-paper}
+:::
+
+
+<h2 class="pub-year">2019</h2>
+
+::: {.pub-item}
+**[Tumor formation of adult stem cell transplants in rodent arthritic joints](/publications/chapelin-2019-tumor/)**  
+<span class="pub-authors">Fanny Chapelin, Aman Khurana, Mohammad Moneeb, Florette K Gray Hazard, Chun Fai Ray Chan, Hossein Nejadnik, Dita Gratzinger, **Solomon Messing**, Jason Erdmann, Amitabh Gaur, others</span>  
+<span class="pub-venue">*Molecular Imaging and Biology*, 2019</span>.
+:::
+
+::: {.pub-item}
+**[Projecting confidence: How the probabilistic horse race confuses and demobilizes the public](/publications/wlm-2019-projecting/)**  
+<span class="pub-authors">Sean Westwood, **Solomon Messing**, Yphtach Lelkes</span>  
+<span class="pub-venue">*Journal of Politics*, 2019</span>.  
+[PDF](/pdf/aggregator.pdf){.btn-paper}
+:::
+
+
+<h2 class="pub-year">2017</h2>
+
+::: {.pub-item}
+**[Partisan Conflict and Congressional Outreach](/publications/solomon-2017-partisan/)**  
+<span class="pub-authors">Patrick van Kessel, Adam G Hughes, Nick Judd, Rachel Blum, Brian Broderick Solomon Messing</span>  
+<span class="pub-venue">*Pew Research Center*, 2017</span>.
+:::
+
+::: {.pub-item}
+**[Estimating heterogeneous treatment effects and the effects of heterogeneous treatments with ensemble methods](/publications/grimmer-2017-estimating/)**  
+<span class="pub-authors">Justin Grimmer, **Solomon Messing**, Sean J Westwood</span>  
+<span class="pub-venue">*Political Analysis*, 2017</span>.  
+[PDF](/pdf/het.pdf){.btn-paper}
+:::
+
+
+<h2 class="pub-year">2016</h2>
+
+::: {.pub-item}
+**[Bias in the flesh: Skin complexion and stereotype consistency in political campaigns](/publications/messing-2016-bias/)**  
+<span class="pub-authors">**Solomon Messing**, Maria Jabon, Ethan Plaut</span>  
+<span class="pub-venue">*Public opinion quarterly*, 2016</span>.  
+[PDF](/pdf/HSVmetricsCampaignsDarknessPOQFINAL.pdf){.btn-paper}
+:::
+
+
+<h2 class="pub-year">2015</h2>
+
+::: {.pub-item}
+**[Quantifying social media's political space: Estimating ideology from publicly revealed preferences on Facebook](/publications/bond-2015-quantifying/)**  
+<span class="pub-authors">Robert Bond, **Solomon Messing**</span>  
+<span class="pub-venue">*American Political Science Review*, 2015</span>.  
+[PDF](/pdf/EstimatingIdeologyFromFacebookPageLikes.pdf){.btn-paper}
+:::
+
+::: {.pub-item}
+**[Exposure to ideologically diverse news and opinion on Facebook](/publications/bakshy-2015-exposure/)**  
+<span class="pub-authors">Eytan Bakshy, **Solomon Messing**, Lada A Adamic</span>  
+<span class="pub-venue">*Science*, 2015</span>.  
+[PDF](/pdf/Science-2015-Bakshy-1130-2.pdf){.btn-paper}
+:::
+
+
+<h2 class="pub-year">2014</h2>
+
+::: {.pub-item}
+**[The Impression of Influence: Legislator Communication, Representation, and Democratic Accountability](/publications/gri-mes-wes-14/)**  
+<span class="pub-authors">Justin Grimmer, Sean J. Westwood, **Solomon Messing**</span>  
+<span class="pub-venue">*Princeton University Press*, 2014</span>.
+:::
+
+::: {.pub-item}
+**[Selective exposure in the age of social media: Endorsements trump partisan source affiliation when selecting news online](/publications/messing-2014-selective/)**  
+<span class="pub-authors">**Solomon Messing**, Sean J Westwood</span>  
+<span class="pub-venue">*Communication research*, 2014</span>.  
+[PDF](/pdf/SocialNewsCommRes.pdf){.btn-paper}
+:::
+
+
+<h2 class="pub-year">2013</h2>
+
+::: {.pub-item}
+**[Role of diffusion-weighted imaging in differentiating benign and malignant pediatric abdominal tumors](/publications/gawande-2013-role/)**  
+<span class="pub-authors">Rakhee S Gawande, Gabriel Gonzalez, **Solomon Messing**, Aman Khurana, Heike E Daldrup-Link</span>  
+<span class="pub-venue">*Pediatric radiology*, 2013</span>.
+:::
+
+::: {.pub-item}
+**[Iron administration before stem cell harvest enables MR imaging tracking after transplantation](/publications/khurana-2013-iron/)**  
+<span class="pub-authors">Aman Khurana, Fanny Chapelin, Graham Beck, Olga D Lenkov, Jessica Donig, Hossein Nejadnik, **Solomon Messing**, Nikita Derugin, Ray Chun-Fai Chan, Amitabh Gaur, others</span>  
+<span class="pub-venue">*Radiology*, 2013</span>.
+:::
+
+::: {.pub-item}
+**[Friends that Matter: How Social News Shapes Political Knowledge, Attitudes, and Behavior](/publications/messing-2013-friends/)**  
+<span class="pub-authors">**Solomon Messing**</span>  
+<span class="pub-venue">2013</span>.  
+[PDF](/pdf/CH7brief.pdf){.btn-paper}
+:::
+
+::: {.pub-item}
+**[Ferumoxytol: a new, clinically applicable label for stem-cell tracking in arthritic joints with MRI](/publications/khurana-2013-ferumoxytol/)**  
+<span class="pub-authors">Aman Khurana, Hossein Nejadnik, Fanny Chapelin, Olga Lenkov, Rakhee Gawande, Sungmin Lee, Sandeep N Gupta, Nooshin Aflakian, Nikita Derugin, **Solomon Messing**, others</span>  
+<span class="pub-venue">*Nanomedicine*, 2013</span>.
+:::
+
+::: {.pub-item}
+**[Evaluation of the novel USPIO GEH121333 for MR imaging of cancer immune responses](/publications/shi-2013-evaluation/)**  
+<span class="pub-authors">Qiaoyun Shi, Laura J Pisani, Yauk K Lee, **Solomon Messing**, Celina Ansari, Srabani Bhaumik, Lisa Lowery, Brian D Lee, Dan E Meyer, Heike E Daldrup-Link</span>  
+<span class="pub-venue">*Contrast media & molecular imaging*, 2013</span>.
+:::
+
+::: {.pub-item}
+**[Do attitudes about immigration predict willingness to admit individual immigrants? A cross-national test of the person-positivity bias](/publications/iyengar-2013-attitudes/)**  
+<span class="pub-authors">Shanto Iyengar, Simon Jackman, **Solomon Messing**, Nicholas Valentino, Toril Aalberg, Raymond Duch, Kyu S Hahn, Stuart Soroka, Allison Harell, Tetsuro Kobayashi</span>  
+<span class="pub-venue">*Public opinion quarterly*, 2013</span>.
+:::
+
+
+<h2 class="pub-year">2012</h2>
+
+::: {.pub-item}
+**[Who is a `deserving'immigrant? An experimental study of Norwegian attitudes](/publications/aalberg-2012-deserving/)**  
+<span class="pub-authors">Toril Aalberg, Shanto Iyengar, **Solomon Messing**</span>  
+<span class="pub-venue">*Scandinavian Political Studies*, 2012</span>.
+:::
+
+::: {.pub-item}
+**[The 2012 Election Day Through the Facebook Lens](/publications/messing-2012-ts/)**  
+<span class="pub-authors">**Solomon Messing**, Cameron Marlow, Eytan Bakshy</span>  
+<span class="pub-venue">2012</span>.  
+[PDF](http://on.fb.me/Vmkovb){.btn-paper}
+:::
+
+::: {.pub-item}
+**[Intravenous ferumoxytol allows noninvasive MR imaging monitoring of macrophage migration into stem cell transplants](/publications/khurana-2012-intravenous/)**  
+<span class="pub-authors">Aman Khurana, Hossein Nejadnik, Rakhee Gawande, Guiting Lin, Sungmin Lee, **Solomon Messing**, Rosalinda Castaneda, Nikita Derugin, Laura Pisani, Tom F Lue, others</span>  
+<span class="pub-venue">*Radiology*, 2012</span>.
+:::
+
+::: {.pub-item}
+**[How Words and Money Cultivate a Personal Vote: The Effect of Legislator Credit Claiming on Constituent Credit Allocation](/publications/grimmer-how-2012/)**  
+<span class="pub-authors">Justin Grimmer, **Solomon Messing**, Sean J. Westwood</span>  
+<span class="pub-venue">*American Political Science Review*, 2012</span>.  
+[PDF](http://bit.ly/XOuZi1){.btn-paper} [DOI](https://doi.org/10.1017/S0003055412000457){.btn-paper}
+:::
+
+::: {.pub-item}
+**[FDG PET/CT for the Evaluation of Normal Thymus, Lymphoma Recurrence, and Mediastinal Lymphoma in Pediatric Patients Response](/publications/gawande-2012-fdg/)**  
+<span class="pub-authors">Rakhee S Gawande, Spencer Behr, **Solomon Messing**, Robert E Goldsby, Randall A Hawkins, Heike E Daldrup-Link</span>  
+<span class="pub-venue">*RADIOLOGY*, 2012</span>.
+:::
+
+::: {.pub-item}
+**[Differentiation of Normal Thymus from Anterior Mediastinal Lymphoma and Lymphoma Recurrence at Pediatric PET/CT](/publications/gawande-2012-differentiation/)**  
+<span class="pub-authors">Rakhee S Gawande, Aman Khurana, **Solomon Messing**, Dong Zhang, Rosalinda T Castañeda, Robert E Goldsby, Randall A Hawkins, Heike E Daldrup-Link</span>  
+<span class="pub-venue">*Radiology*, 2012</span>.
+:::
+
+
+<h2 class="pub-year">2011</h2>
+
+::: {.pub-item}
+**[Of course I wouldn't do that in real life: advancing the arguments for increasing realism in HCI experiments](/publications/lew-2011-course/)**  
+<span class="pub-authors">Letitia Lew, Truc Nguyen, **Solomon Messing**, Sean Westwood</span>  
+<span class="pub-venue">*CHI'11 Extended Abstracts on Human Factors in Computing Systems*, 2011</span>.
+:::
+
+::: {.pub-item}
+**[Measuring issue salience: Using supervised machine learning to generate data from free responses to the 'most important problem' question](/publications/messing-2011-measuring/)**  
+<span class="pub-authors">**Solomon Messing**</span>  
+<span class="pub-venue">2011</span>.  
+[PDF](/pdf/Measuring_issue_salience_Using_supervise.pdf){.btn-paper}
+:::
+
+
+<h2 class="pub-year">2008</h2>
+
+::: {.pub-item}
+**[Do explicit racial cues influence candidate preference? The case of skin complexion in the 2008 campaign](/publications/iyengar-2008-explicit/)**  
+<span class="pub-authors">Shanto Iyengar, Kyu S Hahn, **Solomon Messing**, Jeremy N Bailenson</span>  
+<span class="pub-venue">*The Case of Skin Complexion in the*, 2008</span>.
+:::
+

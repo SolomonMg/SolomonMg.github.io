@@ -1,0 +1,24 @@
+---
+title: Digital town square? Nextdoor's offline contexts and online discourse
+date: '2024-06-01'
+author:
+- Megan A. Brown
+- Zeve Sanderson
+- Sarah Graham
+- Minjoo Kim
+- Joshua A. Tucker
+- Solomon Messing
+categories:
+- Journal article
+description: 'Journal of Quantitative Description: Digital Media, 2024'
+aliases:
+- /publication/brown-2024-nextdoor/
+---
+
+Megan A. Brown, Zeve Sanderson, Sarah Graham, Minjoo Kim, Joshua A. Tucker, **Solomon Messing** (2024). Digital town square? Nextdoor's offline contexts and online discourse. *Journal of Quantitative Description: Digital Media*.
+
+[PDF](https://journalqd.org/article/download/5891/4518){.btn-paper}
+
+## Abstract
+
+item abstract"> Abstract There is scant quantitative research describing Nextdoor, the world's largest and most important hyperlocal social media network. Due to its localized structure, Nextdoor data are notoriously difficult to collect and work with. We build multiple datasets that allow us to generate descriptive analyses of the platform's offline contexts and online content. We first create a comprehensive dataset of all Nextdoor neighborhoods joined with U.S. Census data, which we analyze at the community-level (block-group). Our findings suggests that Nextdoor is primarily used in communities where the populations are whiter, more educated, more likely to own a home, and with higher levels of average income, potentially impacting the platform's ability to create new opportunities for social capital formation and citizen engagement. At the same time, Nextdoor neighborhoods are more likely to have active government agency accounts---and law enforcement agencies in particular---where offline communities are more urban, have larger nonwhite populations, greater income inequality, and higher average home values. We then build a convenience sample of 30 Nextdoor neighborhoods, for which we collect daily posts and comments appearing in the feed (115,716 posts and 163,903 comments), as well as associated metadata. Among the accounts for which we collected posts and comments, posts seeking or offering services were the most frequent, while those reporting potentially suspicious people or activities received the highest average number of comments. Taken together, our study describes the ecosystem of and discussion on Nextdoor, as well as introduces data for quantitatively studying the platform.

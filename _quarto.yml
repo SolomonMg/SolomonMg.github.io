@@ -1,0 +1,86 @@
+project:
+  type: website
+  output-dir: _site
+  resources:
+    - img/
+    - images/
+    - pdf/
+    - uploads/
+  # Explicit render list so Quarto never tries to render the archived Hugo `content/`.
+  render:
+    - "index.qmd"
+    - "publications.qmd"
+    - "blog.qmd"
+    - "media.qmd"
+    - "bio.qmd"
+    - "contact.qmd"
+    - "disclosures.qmd"
+    - "techsetup.qmd"
+    - "publications/*/index.qmd"
+    - "blog/*/index.qmd"
+
+website:
+  title: "Sol Messing"
+  description: "Sol Messing — Research Scientist at Google DeepMind and Research Associate Professor at NYU. AI & democracy, LLM evaluation, computational social science."
+  site-url: "https://solomonmg.github.io/"
+  google-analytics: "G-9XTZZP2CJ8"
+  favicon: images/profile.jpg
+  open-graph: true
+  twitter-card:
+    creator: "@SolomonMg"
+  navbar:
+    pinned: true
+    logo: ""
+    left:
+      - text: "Home"
+        href: index.qmd
+      - text: "Publications"
+        href: publications.qmd
+      - text: "Blog"
+        href: blog.qmd
+      - text: "Media"
+        href: media.qmd
+      - text: "Bio"
+        href: bio.qmd
+    right:
+      - text: "CV"
+        href: pdf/CV/CV.pdf
+        target: _blank
+      - icon: envelope
+        href: contact.qmd
+        aria-label: Contact
+      - icon: github
+        href: https://github.com/solomonmg
+        target: _blank
+        aria-label: GitHub
+      - icon: twitter-x
+        href: https://twitter.com/SolomonMg
+        target: _blank
+        aria-label: X
+      - icon: mortarboard-fill
+        href: https://scholar.google.com/citations?user=to63kiAAAAAJ&hl=en
+        target: _blank
+        aria-label: Google Scholar
+  page-footer:
+    border: true
+    left: "© 2026 Sol Messing"
+    right:
+      - text: "Disclosures"
+        href: disclosures.qmd
+      - text: "Tech Stack"
+        href: techsetup.qmd
+
+format:
+  html:
+    theme:
+      light: [cosmo, theme-light.scss]
+      dark: [darkly, theme-dark.scss]
+    css: styles.css
+    toc: false
+    grid:
+      body-width: 900px
+    link-external-newwindow: true
+    link-external-icon: false
+    smooth-scroll: true
+    code-copy: false
+    anchor-sections: true

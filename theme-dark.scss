@@ -1,0 +1,50 @@
+/*-- scss:defaults --*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+$font-family-sans-serif: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !default;
+$font-family-serif:      "Charter", "Georgia", "Noto Serif SC", "Songti SC", serif !default;
+$font-family-base:       $font-family-serif !default;
+$headings-font-family:   $font-family-sans-serif !default;
+
+// Clean dark variant of the same green-accent palette
+$green:    #7fb487;
+$green-2:  #a3cfa9;
+$ink:      #d7d5cf;
+$heading:  #f0eee8;
+$muted:    #9a978f;
+$border:   #2a2c29;
+$card-bd:  #2f322e;
+
+$body-bg:    #16181a;
+$body-color: $ink;
+$headings-color: $heading;
+$headings-font-weight: 600;
+$primary:    $green;
+$link-color: $green;
+$link-hover-color: $green-2;
+
+$font-size-root: 17px;
+$line-height-base: 1.7;
+$border-radius: 0.25rem;
+
+$navbar-bg: #121416;
+$navbar-fg: #c7c5bf;
+
+/*-- scss:rules --*/
+
+:root {
+  --paper: #16181a;
+  --ink: #{$ink};
+  --heading: #{$heading};
+  --accent: #{$green};
+  --accent-2: #{$green-2};
+  --muted: #{$muted};
+  --border: #{$border};
+  --card: #1d1f21;
+  --card-border: #{$card-bd};
+  --display: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  --body: "Charter", "Georgia", "Noto Serif SC", serif;
+  --shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
