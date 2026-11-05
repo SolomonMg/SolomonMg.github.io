@@ -1,0 +1,341 @@
+\documentclass[]{beamer}
+% Class options include: notes, notesonly, handout, trans,
+%                        hidesubsections, shadesubsections,
+%                        inrow, blue, red, grey, brown
+
+\usetheme{Frankfurt}
+\usepackage{booktabs}
+\renewcommand{\arraystretch}{1.2}
+
+\usepackage{url}
+\renewcommand\UrlFont{\ttfamily\color{blue}}%
+\usepackage{hyperref}
+\renewcommand{\arraystretch}{1}
+ 
+% Other themes include: beamerthemebars, beamerthemelined, 
+%                       beamerthemetree, beamerthemetreebars  
+
+\title{Part II: Analyzing Text as Data}    % Enter your title between curly braces
+
+\author{Solomon Messing}                 % Enter your name between curly braces
+\author[]{Solomon Messing}
+\institute{Department of Communication, Statistics\\ Stanford Social Science Data and Software (SSDS)}%\\ Facebook Data Science}
+\date{\today}                    % Enter the date or \today between curly braces
+
+\begin{document}
+
+% Creates title page of slide show using above information
+\begin{frame}
+  \titlepage
+\end{frame}
+
+%\section[Outline]{Outline}
+%\begin{frame}
+%  \tableofcontents
+%\end{frame}
+
+\section{Text to Data}
+\setcounter{subsection}{1}
+
+\begin{frame}
+  \frametitle{What can we do with all this text?}   % Insert frame title between curly braces
+  \begin{itemize}
+  \item Interpret meaning
+    \begin{itemize}
+    \item Edge: humans
+    \item But natural language understanding is getting better (IBM Watson)
+    \end{itemize}
+  \item Classify, detect, compare
+    \begin{itemize}
+    \item Edge: machines
+    \item Why?
+    \end{itemize}  
+  \item Combine with temporal, behavioral, locational, other data sets
+  \end{itemize}
+~\\ \footnotesize For more see Grimmer's Text as Data Course \url{http://stanford.edu/~jgrimmer/tc1.pdf}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Text is complicated!}   % Insert frame title between curly braces
+``I believe that I interpret the will of the Congress and of the people when I assert that we will not only defend ourselves to the uttermost, but will make it very certain that this form of treachery shall never again endanger us.''\\
+-FDR
+  \begin{itemize}
+  \item How many features do we need to capture everything that is happening?  
+  \item Can we define rules that capture what each word means in context?
+  \item How is a machine going to know \emph{who} has committed this treachery (i.e., the Japanese)? 
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Text is complicated!}   % Insert frame title between curly braces
+Other problems:  
+\begin{itemize}
+  \item Verbal Irony - ``as pleasant and relaxed as a coiled rattlesnake'' (quote from Vonnegut)
+  \item Subtle negation - ``They have not succeeded, and will never succeed, in
+breaking the will of this valiant people'' (Janyce Wiebe)
+  \item Order Dependence - ``Peace, no more war'' v ``War, no more peace'' (Arthur Spirling)
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Features}   % Insert frame title between curly braces
+  \begin{itemize}
+  \item Let's scope the problem: delineate a unit of text (sentence, paragraph, or ``document'')
+  \item Define a feature that records the presence or absence of something (word, words, grammar, entity, etc.).
+  \item Still $\leadsto$ high-dimensionality (too many variables)
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Features: lowering dimensionality}   % Insert frame title between curly braces
+  We can collapse variables that are basically the same and remove others.  Some meaning is lost, but the problem becomes more tractable.  
+  \begin{itemize}
+  \item `congress' \& `Congress' $\leadsto$ remove capitalization, punctuation.
+  \item Do we need words like `a,' `the,' `and'?   $\leadsto$ remove stop-words. NB you'll often get better performance in short texts (e.g., Tweets) without removing these...
+  \item `sleep' \& `sleeping' - $\leadsto$ stem to remove endings.
+  \item Discard non-discriminating words (now stems).  
+    \begin{itemize}
+    \item Rarely occurring stems, $<$  1\%
+    \item Commonly occurring stems, $>$  99\% (or $>$  99.9\%)
+  \end{itemize}
+  \item Or re-weight words to emphasize discriminating words (e.g., \href{http://nlp.stanford.edu/IR-book/html/htmledition/tf-idf-weighting-1.html}{\color{blue} TF-IDF weighting}).
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Features: Bag of words assumption}   % Insert frame title between curly braces
+Discard word order. \\~\\
+``Now we are engaged in a great civil war, testing whether
+that nation, or any nation''\\
+-Lincoln\footnote{This example is from Grimmer's Text as Data course: \url{http://stanford.edu/~jgrimmer/tc2.pdf}}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Features: Bag of words assumption}   % Insert frame title between curly braces
+\small Unigram counts of words:
+\begin{tabular}{lc}
+Unigram&Count \\ \hline
+a&1 \\
+any&1 \\
+are&1 \\
+civil&1 \\
+engaged&1 \\
+great&1 \\
+in&1 \\
+nation&2 \\
+now&1 \\
+or&1 \\
+testing&1 \\
+that&1 \\
+war&1 \\
+we&1 \\
+whether&1
+\end{tabular}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Features: Bag of words assumption}   % Insert frame title between curly braces
+\small Bigram counts of words:
+\begin{tabular}{lc}
+bigram & count\\ \hline
+now we & 1 \\ 
+we are & 1 \\ 
+are engaged & 1 \\ 
+engaged in & 1 \\ 
+in a & 1 \\ 
+a great & 1 \\ 
+great civil & 1 \\ 
+civil war & 1 \\ 
+war testing & 1 \\ 
+testing whether & 1 \\ 
+whether that & 1 \\ 
+that nation & 1 \\ 
+nation or & 1 \\ 
+or any & 1 \\ 
+any nation & 1
+\end{tabular}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Features: Bag of words assumption}   % Insert frame title between curly braces
+  We've stripped out most of what makes this speech great, defiling arguably the nation's most sacred text.  Can doing this possibly predict anything we care about?  Yes, at least sometimes. 
+  \begin{itemize}
+  \item Words alone can tell us about the \emph{topic} of text, if not the sentiment.
+  \item Subtle negation is less common that you'd think---and substantial performance increases with simple rules, e.g., simply transforming ``not good'' to ``not\_good'' (Pang \& Lee).
+  \item Order dependence is rare enough that it doesn't always kill us.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Features: Parts of speech}   % Insert frame title between curly braces
+  OK, we've got word counts.  But what about polysemy: ``this situation is grave'' versus ``this situation is going to put me in an early grave?''
+  \begin{itemize}
+  \item We can use a probabilistic POS tagger to tell us how a word is being used. 
+  \item Uses Viterbi Algorithm (HMM or dynamic programming), see \url{http://en.wikipedia.org/wiki/Part-of-speech_tagging}
+  \item Does this fully solve our problem?  What does the second expression really mean?
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Features: Entites}   % Insert frame title between curly braces
+  We might also want to know something specific about proper nouns mentioned in text---does sentiment toward Egypt differ by Democrats and Republicans?
+  \begin{itemize}
+  \item We can use regex to define our own entity features and/or use wordlists.  Here's \href{http://www.r-bloggers.com/tracking-us-sentiments-over-time-in-wikileaks/}{\color{blue} one example implemented in R}.
+  \item Or we can use probabilistic named entity recognition (NER)---not implemented in R (yet), but see \href{http://nlp.stanford.edu/software/CRF-NER.shtml}{\color{blue} Stanford's named entity tagger}, the same at \href{http://cogcomp.cs.illinois.edu/page/software_view/4}{\color{blue} Illinois}, and check out \href{http://developer.yahoo.com/contentanalysis/}{\color{blue} Yahoo's API} which has very complex entity tagger.
+  \item Then use in other analyses (e.g., Tweets that mentioned Eygpt to Republican representatives tended to be about about violence while those to Democratic representatives tended to be about good governance).  
+  \end{itemize}
+\end{frame}
+
+\section{Analysis}
+\setcounter{subsection}{1}
+
+\begin{frame}
+  \frametitle{OK, now what?}   % Insert frame title between curly braces
+We have text- and possibly other features that we want to use to learn something general about the content.
+  \begin{itemize}
+  \item Supervised learning - train a model to classify documents based on labels.
+  \item How do we get these labels?  
+    \begin{itemize}
+    \item \href{http://academic.csuohio.edu/kneuendorf/content/}{Human coder content analysis}.  If the task is extremely simple, you may wish to use \href{https://www.mturk.com/}{\color{blue} Mechanical Turk}, if not, the \href{http://cat.ucsur.pitt.edu/}{\color{blue} Coding Analysis Toolkit} has a nice interface. 
+    \item Or use a label that is already available (party of speaker, hashtag, emoticon, etc.). 
+  \end{itemize}
+  \item Unsupervised learning - cluster this data to create new labels, with \href{http://www.law.berkeley.edu/files/TopicModel.pdf}{\color{blue} minimal assumptions}.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Supervised Learning}   % Insert frame title between curly braces
+  \begin{itemize}
+  \item We have a matrix of textual units x features (often called a document-term matrix).  So we can use our friend, linear regression, to model it right?
+  \item Well no, the curse of dimensionality gets us, despite the fact that we reduced it above.  
+  \item What is a dimension? 
+  \item What is this \href{http://www.quora.com/What-is-the-curse-of-dimensionality}{\color{blue} curse}? 
+  \item Sampling density $\propto N^{\frac{1}{p}}$ $\leadsto$ variance of our predictions will increase with each new feature (while bias will decrease).
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Supervised Learning}   % Insert frame title between curly braces
+   How do we deal with the curse of dimensionality?
+  \begin{itemize}
+  \item Increase bias in favor of lowering variance.  This isn't a 1:1 relationship; we can often do much better with a little bit of bias. 
+  \end{itemize}
+  \begin{center}
+    \includegraphics[height=2.3in]{images/biasvar.pdf}
+  \end{center}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Supervised Learning}   % Insert frame title between curly braces
+   How do we deal with the curse of dimensionality?
+  \begin{itemize}
+  \item A little bias can go a long way.
+  \item Ridge to shrink large values of one coefficient toward another with which it's correlated.
+  \item LASSO to zero out $\beta$s that perhaps shouldn't be in the model.
+  \item Elastic Net to combine these approaches (see \texttt{glmnet}).
+  \item Many many other approaches (Na\"ive Bayes, SVM, Decision Trees, Boosting, Bagging, etc.), most also increase bias in favor of lowering variance.
+  \item Cross-validation necessary when evaluating results to avoid selecting a model that is overfit to the data.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Supervised Learning: Cross-validation}   % Insert frame title between curly braces
+  \begin{itemize}
+  \item Fit a model to a \emph{training set} (bigger subset of labeled data).
+  \item Evaluate model performance a held out \emph{test set} (smaller subset of labeled data) using MSE, Accuracy, Precision, Recall, F, AUC or something else.  
+  \item Choose different subsets and repeat.
+  \item Compute mean and 95\% CI for test statistic(s).
+  \item Repeat for different tuning parameters (e.g., $\lambda$)
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Supervised Learning: Classification}   % Insert frame title between curly braces
+  \begin{itemize}
+  \item We now have a model of the alleged relationship between our features and our outcome
+  \item Apply the model to new text data, and get your predictions.  Time to go home right?
+  \item No. Validate, validate, validate, even if only with (randomly selected) anecdotal examinations of machine-labeled/machine-scored documents.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Lab 3}   % Insert frame title between curly braces
+	\href{https://dl.dropbox.com/u/25710348/CSSscraping/scripts/Text2Data.R}{\color{blue} Lab 3: Analyzing text as data}.
+\end{frame}
+
+\section{Other Resources}
+\setcounter{subsection}{1}
+\begin{frame}
+  \frametitle{Other Resources}   % Insert frame title between curly braces
+  \begin{itemize}
+  \item This was only a taste. 
+  \item Justin Grimmer's \href{http://www.justingrimmer.org/teaching.html}{\color{blue} Text as Data course}, forthcoming \href{http://stanford.edu/~jgrimmer/tad2.pdf}{\color{blue} Political Analysis paper on Text as Data} and \href{http://gking.harvard.edu/gking/files/201018067_online_1.pdf}{\color{blue} PNAS paper on computer-assisted clustering}.  Excellent treatment of these and other methods for analyzing text, especially unsupervised techniques which are not covered here.  
+  \item \href{http://www.stanford.edu/class/cs124/}{\color{blue} CS 124} for more on Natural Language Processing.
+  \item Hastie, Tibshirani, \& Friedman's \href{http://www-stat.stanford.edu/~tibs/ElemStatLearn/}{\color{blue} The Elements of Statistical Learning}, an excellent book on ML which they have generously made available online without cost.
+  \item The \href{https://github.com/johnmyleswhite/ML_for_Hackers}{\color{blue} Machine Learning for Hackers Codebase} for more examples of text analysis in R.
+  \end{itemize}
+\end{frame}
+
+
+%\begin{frame}
+%  \frametitle{Unsupervised Learning: Distance}   % Insert frame title between curly braces
+%  \begin{itemize}
+%  \item Each document is a vector of words $\leadsto$ we can compute the distance between vectors.
+%  \item Oh crap, what about the fact that documents are not the same length?
+%  \item Cosine similarity $cos~\theta = \frac{a}{||a||} * \frac{b}{||b||}$
+%  \item Use other distance metrics as appropriate.
+%  \end{itemize}
+%\end{frame}
+%
+%\begin{frame}
+%  \frametitle{Unsupervised Learning: Clustering}   % Insert frame title between curly braces
+%  \begin{itemize}
+%  \item With some assumption about the distance between docs, we can cluster.
+%  \item Define input (domain) and output (range) of function, then optimize.
+%  \end{itemize}
+%\end{frame}
+%
+%\begin{frame}
+%  \frametitle{Unsupervised Learning: K-Means}   % Insert frame title between curly braces
+%  \begin{itemize}
+%  \item Minimize squared distance between a cluster center and surrounding points, given K.
+%  \item Start out w/ random points, uses EM until a threshold is reached, 
+%  \item Visual insight: \url{http://www.youtube.com/watch?v=74rv4snLl70}.
+%  \item But how to choose K? Check out Cluster Quality (Grimmer and King 2011).
+%  \end{itemize}
+%\end{frame}
+%
+%\begin{frame}
+%  \frametitle{Unsupervised Learning: Generally speaking}   % Insert frame title between curly braces
+% (Grimmer, Shorey, Wallach, \& Zlotnik)
+%  \begin{itemize}
+%  \item Human judgment is necessary to make a final model selection decisions.
+%  \item Experimental methods to elicit subject expert evaluations of the models.
+%  \item Compare similarity from documents within same cluster and not.
+%  \end{itemize}
+%\end{frame}
+
+ \end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

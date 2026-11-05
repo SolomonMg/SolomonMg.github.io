@@ -1,0 +1,288 @@
+/* ============================================================
+   Sol Messing — styled to match the state-media companion site
+   (serif Charter body, Inter headings, forest-green accent)
+   Tokens come from theme-light.scss / theme-dark.scss
+   ============================================================ */
+
+body {
+  font-family: var(--body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  letter-spacing: -0.003em;
+}
+
+/* Headings: Inter sans, like the state-media site */
+h1, h2, h3, h4, h5, .display, .home-name {
+  font-family: var(--display);
+  color: var(--heading);
+}
+h1, .h1 { font-weight: 700; letter-spacing: -0.02em; line-height: 1.2; }
+h2, .h2 { font-weight: 600; letter-spacing: -0.01em; }
+h3, .h3 { font-weight: 600; }
+
+p { margin-bottom: 1.15em; }
+
+/* Links: no underline, border-bottom on hover (their signature) */
+a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: color .15s ease, border-color .15s ease;
+}
+.content a:not(.nav-link):not(.home-links a):not(.more):not(.btn-paper):hover {
+  border-bottom-color: currentColor;
+}
+
+/* Navbar -------------------------------------------------------- */
+.navbar {
+  border-bottom: 1px solid var(--border);
+  box-shadow: none;
+  font-family: var(--display);
+  font-size: 0.9rem;
+  letter-spacing: 0.01em;
+  padding: 0.7rem 0;
+}
+.navbar-title { font-family: var(--display); font-weight: 600; font-size: 1.02rem; color: var(--heading); }
+.navbar .nav-link { color: var(--muted); font-weight: 500; }
+.navbar .nav-link:hover, .navbar .nav-link.active { color: var(--heading); }
+
+/* ===================== LANDING HERO ===================== */
+.home-banner {
+  width: 100%;
+  height: 210px;
+  background-size: cover;
+  background-position: center 42%;
+  border-radius: 10px;
+  margin-top: 0.4rem;
+  box-shadow: var(--shadow-sm);
+  transition: filter .18s ease;
+}
+.home-banner-link { display: block; text-decoration: none; border-bottom: none; }
+.home-banner-link:hover .home-banner { filter: brightness(1.04) saturate(1.04); }
+.home-hero {
+  display: flex;
+  align-items: flex-start;
+  gap: 2.1rem;
+  margin: 1.6rem 0 2.4rem;
+  padding-bottom: 2.1rem;
+  border-bottom: 1px solid var(--border);
+}
+/* Banner variant: avatar overlaps up into the banner (Twitter-style) */
+.home-hero--banner { margin-top: 0; }
+.home-hero--banner .home-avatar {
+  margin-top: -64px;
+  border: 4px solid var(--paper);
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 2;
+}
+.home-hero--banner .home-id { padding-top: 0.35rem; }
+.home-avatar {
+  flex: 0 0 128px;
+  width: 128px;
+  height: 128px;
+  margin-top: 0.3rem;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  box-shadow: var(--shadow);
+}
+.home-id { flex: 1 1 auto; min-width: 0; }
+.home-name {
+  font-size: clamp(2.3rem, 4.6vw, 3rem);
+  font-weight: 700;
+  line-height: 1.02;
+  margin: 0 0 0.5rem;
+  letter-spacing: -0.025em;
+}
+.home-affil {
+  font-family: var(--body);
+  font-size: 1.02rem;
+  color: var(--muted);
+  margin: 0 0 0.7rem;
+  line-height: 1.45;
+}
+.home-affil > div { display: block; }
+.home-affil a { color: var(--ink); border-bottom: 1px solid var(--border); }
+.home-affil a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+.home-tagline {
+  font-family: var(--body);
+  font-size: 1.18rem;
+  line-height: 1.5;
+  color: var(--ink);
+  margin: 0 0 0.85rem;
+  max-width: 48ch;
+}
+.home-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1.2rem;
+  font-family: var(--display);
+  font-size: 0.92rem;
+}
+.home-links a {
+  color: var(--ink);
+  border-bottom: none;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+.home-links a:hover { color: var(--accent); }
+.home-links i { font-size: 1.05em; color: var(--accent); }
+
+@media (max-width: 600px) {
+  .home-hero { flex-direction: column; align-items: flex-start; gap: 1.1rem; }
+  .home-avatar { flex-basis: 100px; width: 100px; height: 100px; }
+  /* Narrow crop: keep the mountain biker (~70% across the image) centered in view */
+  .home-banner { background-position: 80% 45%; }
+}
+
+/* ===================== SECTION HEADINGS ===================== */
+.home-section {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 2.6rem 0 1.15rem;
+  padding-bottom: 0.45rem;
+  border-bottom: 1px solid var(--border);
+}
+.home-section h2 { margin: 0; font-size: 1.4rem; }
+.home-section .more {
+  font-family: var(--display);
+  font-size: 0.9rem;
+  font-weight: 500;
+  white-space: nowrap;
+  color: var(--accent);
+  border-bottom: none;
+}
+.home-section .more:hover { color: var(--accent-2); }
+
+/* ===================== FOCUS / CURRENT PROJECTS GRID ===================== */
+.focus-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin: 1.6rem 0 0.5rem;
+}
+.focus-card {
+  border: 1px solid var(--card-border);
+  border-radius: 0.25rem;
+  padding: 1.1rem 1.15rem;
+  background: var(--card);
+  box-shadow: var(--shadow-sm);
+}
+.focus-card h4 {
+  font-size: 1.0rem;
+  margin: 0 0 0.45rem;
+  color: var(--accent);
+  font-weight: 600;
+}
+.focus-card p { margin: 0; font-size: 0.96rem; line-height: 1.55; color: var(--ink); }
+.focus-card a { color: var(--ink); border-bottom: 1px solid var(--border); }
+.focus-card a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+@media (max-width: 760px) { .focus-grid { grid-template-columns: 1fr; } }
+
+/* ===================== PUBLICATION CITATIONS ===================== */
+.pub-year {
+  font-family: var(--display);
+  font-size: 1.05rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  margin: 2.1rem 0 0.5rem;
+  display: block;
+}
+.pub-item {
+  padding: 0.8rem 0;
+  border-bottom: 1px solid var(--border);
+}
+.pub-item:last-child { border-bottom: none; }
+.pub-item a:first-child, .pub-item strong a {
+  font-family: var(--body);
+  font-weight: 600;
+  color: var(--heading);
+  border-bottom: none;
+}
+.pub-item a:first-child:hover, .pub-item strong a:hover { color: var(--accent); }
+.pub-authors { color: var(--muted); font-size: 0.96rem; }
+.pub-venue { font-style: italic; color: var(--ink); }
+
+/* Understated PDF / DOI / Code links */
+a.btn-paper {
+  font-family: var(--display);
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent);
+  border-bottom: none;
+  margin-right: 0.9rem;
+  padding: 0;
+  background: none;
+}
+a.btn-paper:hover { color: var(--accent-2); }
+
+/* ===================== LISTING CARDS ===================== */
+.quarto-listing { margin-top: 0.5rem; }
+.card.quarto-grid-item {
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-radius: 0.25rem;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow .18s ease, transform .18s ease, border-color .18s ease;
+}
+.card.quarto-grid-item:hover {
+  box-shadow: var(--shadow);
+  transform: translateY(-2px);
+  border-color: var(--accent);
+}
+.quarto-grid-item .card-img-top, .quarto-grid-item .thumbnail-image {
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+.listing-title, .card .card-title { font-family: var(--display); font-weight: 600; }
+.card .card-title a, .listing-title a { color: var(--heading); border-bottom: none; }
+.card .card-title a:hover, .listing-title a:hover { color: var(--accent); }
+
+/* Default (blog) listing rows */
+.quarto-post { border-bottom: 1px solid var(--border); padding: 1.3rem 0; }
+.quarto-post .listing-title { font-size: 1.22rem; }
+.quarto-post .listing-description { color: var(--muted); font-family: var(--body); }
+.quarto-listing-category .category, .listing-category .category {
+  font-family: var(--display);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.06rem 0.6rem;
+  font-size: 0.76rem;
+  color: var(--muted);
+  background: transparent;
+}
+.quarto-listing-category .category:hover { color: var(--accent); border-color: var(--accent); }
+
+/* ===================== MEDIA + MISC ===================== */
+.media-list ul { line-height: 1.8; }
+.twitter-tweet { margin: 1rem auto !important; }
+
+/* Footer -------------------------------------------------------- */
+.nav-footer {
+  border-top: 1px solid var(--border);
+  font-family: var(--display);
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+.nav-footer a { color: var(--muted); border-bottom: none; }
+.nav-footer a:hover { color: var(--accent); }
+
+/* Interior page titles (Publications, Blog, Bio, …) */
+#title-block-header .title { font-size: 2rem; }
+#title-block-header .subtitle {
+  font-family: var(--body);
+  font-style: normal;
+  color: var(--muted);
+  font-size: 1.15rem;
+}

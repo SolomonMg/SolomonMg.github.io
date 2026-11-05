@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.11.9">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Sol Messing">
+<meta name="dcterms.date" content="2023-04-03">
+<meta name="description" content="BlueSky is a half-decentralized social network designed to replace Twitter. Will it keep its luster as it scales up?">
+
+<title>On BlueSky – Sol Messing</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../images/profile.jpg" rel="icon" type="image/jpeg">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/scrollable-regions/scrollable-regions.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-447e42e69aaa9833c0ba1b986f430b20.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-ea2d8d2231bb95995fde255e649124d6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-d583868ff9e29055d584e47a9ca08b98.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-ea2d8d2231bb95995fde255e649124d6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-9XTZZP2CJ8"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-9XTZZP2CJ8', { 'anonymize_ip': true});
+</script>
+<style>html{ scroll-behavior: smooth; }</style>
+
+
+<link rel="stylesheet" href="../../styles.css">
+<meta property="og:title" content="On BlueSky – Sol Messing">
+<meta property="og:description" content="BlueSky is a half-decentralized social network designed to replace Twitter. Will it keep its luster as it scales up?">
+<meta property="og:image" content="https://solomonmg.github.io/blog/bluesky-quasi-decentralized-social-network/featured.jpg">
+<meta property="og:site_name" content="Sol Messing">
+<meta property="og:image:height" content="715">
+<meta property="og:image:width" content="1236">
+<meta name="twitter:title" content="On BlueSky – Sol Messing">
+<meta name="twitter:description" content="BlueSky is a half-decentralized social network designed to replace Twitter. Will it keep its luster as it scales up?">
+<meta name="twitter:image" content="https://solomonmg.github.io/blog/bluesky-quasi-decentralized-social-network/featured.jpg">
+<meta name="twitter:creator" content="@SolomonMg">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="nav-fixed fullcontent quarto-light"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Skip to main content</a><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          toggle.setAttribute("aria-checked", alternate ? "true" : "false");
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455).
+    // Not run on load: stylesheets are set before first paint there, and
+    // scrolling would undo the scroll to a URL fragment (#14973).
+    // The one pixel nudge keeps the reader where they were.
+    const refreshSafariScrollbar = () => {
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        const scrollY = window.scrollY;
+        window.scrollTo(0, scrollY > 0 ? scrollY - 1 : 1);
+        setTimeout(() => {
+          window.scrollTo(0, scrollY);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      refreshSafariScrollbar();
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark" aria-label="Site">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Sol Messing</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../publications.html"> 
+<span class="menu-text">Publications</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../blog.html"> 
+<span class="menu-text">Blog</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../media.html"> 
+<span class="menu-text">Media</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../bio.html"> 
+<span class="menu-text">Bio</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../pdf/CV/CV.pdf" target="_blank"> 
+<span class="menu-text">CV</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../contact.html"> <i class="bi bi-envelope" role="img" aria-label="Contact">
+</i> 
+<span class="menu-text">Contact</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/solomonmg" target="_blank"> <i class="bi bi-github" role="img" aria-label="GitHub">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/SolomonMg" target="_blank"> <i class="bi bi-twitter-x" role="img" aria-label="X">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://solmessing.substack.com" target="_blank"> <i class="bi bi-substack" role="img" aria-label="Substack">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://scholar.google.com/citations?user=to63kiAAAAAJ&amp;hl=en" target="_blank"> <i class="bi bi-mortarboard-fill" role="img" aria-label="Google Scholar">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <button type="button" role="switch" aria-checked="false" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode" aria-label="Toggle dark mode"><i class="bi"></i></button>
+</div>
+            <div id="quarto-search" class="" title="Search"></div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content" id="quarto-document-content" tabindex="-1">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">On BlueSky</h1>
+</div>
+
+<div>
+  <div class="description">
+    BlueSky is a half-decentralized social network designed to replace Twitter. Will it keep its luster as it scales up?
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Sol Messing </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">April 3, 2023</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>TL/DR Summary</p>
+<ol type="1">
+<li>BlueSky has a chance to dethrone twitter right now, but that path is narrow.&nbsp;</li>
+<li>Its exclusive invite only model means its user base is now small, elite, and homogenous with few bad actors. Almost everyone likes it. But the real test will be when it opens to the public.&nbsp;</li>
+<li>It is designed for true account portability and in theory should prevent a single company from owning the entire network as it scales up.&nbsp;</li>
+<li>However, it’s unclear if an ecosystem of small companies can do the job of content moderation in the same ways that centralized social networks do. The same is true of running modern feed-ranking and follow-recommendation systems.&nbsp;</li>
+<li>There will be growing pressure to make money using ads to cover costs as the network scales up, which will incentivize centralizing key data and resources, undermining the original model.</li>
+<li>Future possibilities include: (1) BlueSky remains de-facto centralized, “in beta” until it can get composable moderation right, which turns out to be the foreseeable future; (2) big players (Google, Facebook) join the party and dominate the ecosystem; (3) small, unmoderated, ad-free apps proliferate and the network becomes overrun with spam, NSFW, hate, scams and gifts that come with a lack of moderation.</li>
+</ol>
+<hr>
+<p>Pretty much everyone at Twitter—and especially Jack Dorsey—has long known that BlueSky could replace Twitter. When I joined Twitter in 2021, I soon learned our CEO was terribly unpopular internally, sporting a job approval rating under 40 percent, by far the lowest of any executive at the company.</p>
+<p>In fact, Jack was obsessed with decentralization, he seemed convinced that it was a mistake to have Twitter organized as a corporation, and he would rant about this on company-wide calls, which he seemed to be taking from caves in South Asia. This is when everyone else at the company was desperately trying to increase revenues to save the company from implosion.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../img/JackDorseyInCaveCreditTwitter.jpg" title="This photo of Jack Dorsey captures his general aspect on many all-hands calls." class="img-fluid figure-img"></p>
+<figcaption>A photo of young Jack Dorsey in a cave.</figcaption>
+</figure>
+</div>
+<p>Enter BlueSky, which would decentralize Twitter. Jack launched the initiative in 2019, and his plan was to migrate Twitter to this new protocol. It puts user data including posts and follow lists on open, public portable data servers (PDSs) that mean true account portability. Any business or organization could index the those servers, or what I will call the “BlueSkyVerse” (technically the <a href="https://blueskyweb.xyz/blog/10-18-2022-the-at-protocol">AT Protocol</a>), rank posts, and create a front end interface.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../img/BlueSkyVerse-illustration.jpg" title="The BlueSky App reads posts and the follow graph from Portable Data Servers, centralizing them in an index, ranking, and dislaying them for users." class="img-fluid figure-img"></p>
+<figcaption>A node labelled as BlueSky or App sits atop various Portable Data Server (PDS) nodes, with arrows (edges) pointing to them. A caption to the right of the App node reads “indexing, ranking, moderation, UX” and a caption to the right of the PDS nodes reads “Open AT protocol: user posts, likes, follow graph.”</figcaption>
+</figure>
+</div>
+<p>But wait a minute! Remember during Elon Musk’s acquisition how everyone said that the value of twitter isn’t the tech, but rather the network of creators and the communities that exist there? If you decouple that network from the platform you give up your most valuable asset—Google, Meta, others can index the network, develop a user interface, create some algorithms, show ads, and eat your lunch.</p>
+<p>And yet, Jack was about to do just that, filling Twitter’s moat by turning its most valuable asset into a protocol. Of course, this did not go over well with employees who weren’t independently wealthy, nor the board, who eventually pushed him out.</p>
+<p>BlueSky nicely captures the essence of Jack’s reign as half-time CEO: how little he cared about Twitter as a business and how much he cared about Twitter as an ecosystem.</p>
+<p>But back to the question everyone cares about right now: will this new system lead to a better social network, or set of networks? Is this finally the Twitter alternative we’re looking for?</p>
+<p>Make no mistake about it—BlueSky was designed by Twitter to replace Twitter. This makes it very different from the other new social media protocols, apps, etc. that we’ve seen come on the scene of late. As <a href="https://mastodon.social/@gruber/110314523447694321">John Gruber put it</a>, “If you hated Twitter, you’ll like Mastodon. If you liked Twitter, you’ll love BlueSky.”</p>
+<p>So it’s a contender, despite how hard it is to start a social network from scratch. And don’t get any funny ideas about a post-surveillance-capitalism social network—if BlueSky takes off, it will most likely devolve into a less-moderated, less-profitable version of Twitter, Inc (aka Twitter 1.0). It will indeed encourage competition for front-end interfaces to explore the BlueSkyVerse. But the biggest challenges that social networks have to face—content moderation, discoverability, and monetization—require big technical and infrastructural investments to do well. They may only be viable for well-capitalized companies that generate big profits.</p>
+<p>But of course, I would be very nervous if I still worked at Twitter.</p>
+<p><strong>Will it work?</strong></p>
+<p>Now is a unique opportunity for a Twitter rival. Twitter CEO Elon Musk tends to say <a href="https://www.cnn.com/2022/10/30/business/musk-tweet-pelosi-conspiracy/index.html">all manner of nutty things</a>, he has <a href="https://techcrunch.com/2022/11/21/elon-musk-twitter-netzdg-test/">decimated Twitter’s trust and safety org</a>, and cut staffing by more than 80%. And the company slashed infrastructure budgets needed for automated content moderation—internal sources say the company has cut 3bn since peak spending prior to the recession, while external accounts say <a href="https://www.reuters.com/technology/musk-orders-twitter-cut-infrastructure-costs-by-1-bln-sources-2022-11-03/">Musk ordered a 1bn cut himself</a>.</p>
+<p>It shows: in the wake of the Allen massacre on Saturday, <a href="https://www.dallasnews.com/news/2023/05/11/gore-conspiracies-spread-on-elon-musks-loosely-moderated-twitter-after-allen-shooting/">graphic videos and misinformation spread across the platform</a>. Advertisers don’t want to risk putting their brands next to that kind of content and <a href="https://www.cnbc.com/2022/11/01/ad-giant-ipg-advises-brands-to-pause-twitter-spending.html">many have suspended advertising</a> on the platform.</p>
+<p>We’ve all wondered which alternative social media system might replace Twitter. Could it be Mastodon, Spoutible, Post News, maybe Substack Notes? Or perhaps Truth Social or Gab or Gettr?!</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../img/NoAdsonGab.jpg" title="The only ads I saw on Gab.com were ads for advertising on Gab.com." class="img-fluid figure-img"></p>
+<figcaption>A screenshot from Gab.com, with a post showing a flag of the UN with the text: “Need to burn a flag? Make it this one.”</figcaption>
+</figure>
+</div>
+<p>I’m guessing it’s not going to be those other networks. The new centralized social network entrants—Spoutible, Post News, and Substack Notes—feel sterile and inauthentic when you first get started, partially because they are built around conventional media outlets, partially because they didn’t pay enough attention to discoverability in onboarding. Gettr/gab/truth social have libertarian-borderline-right-wing moderation setups, and the vast majority of people on Twitter have little interest in a right-wing echo chamber where there’s no one to troll.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../img/SpoutableBlankTimeline.jpg" title="You can get the best designers and engineers on the planet but if you show people a blank timeline and recommendations to follow a bunch of people they've never heard of, no one is going to use your platform." class="img-fluid figure-img"></p>
+<figcaption>A screenshot from Spoutible showing a blank timeline.</figcaption>
+</figure>
+</div>
+<p>Mastodon is losing steam for many reasons—onboarding is terribly confusing, it’s broken into communal servers that are all very different but that all seem uptight. Moderation there has been characterized as “<a href="https://mastodon.social/@gruber/110328355532624579">petulant nannyism</a>.”</p>
+<p>Like Twitter, and <a href="https://werd.io/2023/the-fediverse-and-the-at-protocol">unlike Mastodon</a>, BlueSky can surface content from this entire web of activity across the BlueSkyVerse and delight you with memes and witticisms, many of which were about <a href="https://faineg.substack.com/p/how-i-accidentally-ruined-bluesky">”Sexy” ALF (yes, the 80s TV star)</a> when I signed up.</p>
+<p>Many beta users say BlueSky feels like a breath of fresh air, like a throwback to early Twitter. For now, BlueSky is invite-only and so missing are the scammers, crypto bros, right-wing nuts, and tone policing randos looking for followers you find on Twitter. It feels more communal and less exhausting. Unclear how long that will last.</p>
+<p>So maybe BlueSky has a legit claim to the Throne of Discourse, post-Twitter.</p>
+<p><strong>Content Moderation</strong></p>
+<p>First of all, content moderation is not just a “nice-to-have” thing that keeps the press happy. Facebook and others have found that content moderation <a href="http://tecunningham.github.io/2023-04-28-ranking-by-engagement.html">increases retention</a>. And look at the flip side: most people don’t want to hang out at what Mike Masnick calls “<a href="https://www.techdirt.com/2023/05/04/on-social-media-nazi-bars-tradeoffs-and-the-impossibility-of-content-moderation-at-scale/">Nazi bars</a>,” which is what platforms with permissive moderation policies will often become known for, whether they are actually Nazis or just radical free-speech advocates. Once that happens, kiss a lot of your core user base and ad revenue goodbye—which is what seems to be happening at Twitter.</p>
+<p>Of course, content moderation is the bane of the modern social media network. It’s expensive, <a href="https://www.techdirt.com/2019/11/20/masnicks-impossibility-theorem-content-moderation-scale-is-impossible-to-do-well/">it will always be wrong</a>, it can easily create a PR dumpster file, and its benefits are extremely difficult to measure. This new protocol was designed with content moderation in mind so let me break that down before talking about the problems that will surely come up.</p>
+<p>On BlueSky, speech happens on your PDS, but reach happens on the centralized app—Bluesky for now. And they <a href="https://blueskyweb.xyz/blog/4-13-2023-moderation">are in fact moderating</a>, so if they find a post that violates policy, they may take it off their app. It’s still up on the PDSs, it’s just not indexed in BlueSky. So great, it allows for a slightly truer form of “freedom of speech but not reach.”</p>
+<p>How does this actually work? The BlueSky team wants to create a “<a href="https://blueskyweb.xyz/blog/4-13-2023-moderation">moderation ecosystem</a>,” in which labels (“spam”, “nsfw”) can be created by anyone, and apps like BlueSky can then choose what labels to act upon. Right now, it’s completely centralized at BlueSky, and they have an automated layer and decisions are made by “server administrators.” Eventually though, there will be other label sources, other apps besides BlueSky and many servers beyond bsky.social. They’re proposing a “choose your own moderation” approach.</p>
+<p>OK what are the downsides?</p>
+<p>First, there are key parts of moderation that raise questions under this framework. If you doxx someone’s home address for targeted harassment, post a bunch of Child Sexual Abuse Material (CSAM) or non-consensual sexual imagery, it feels insufficient to merely de-index those posts. There are cases where it <a href="https://www.nytimes.com/2023/05/03/technology/dorsey-musk-twitter-bluesky-nostr.html">may not be legally sufficient</a> under the Digital Services Act, NetzDG, or U.S. Copyright Law.</p>
+<p>The spam-detection arms race is another example—the more you are open with how it works, the faster the spammers get around your detection systems. Somewhat relatedly, the fact that blocklists are public on BlueSky due to the BlueSkyVerse architecture, is <a href="https://twitter.com/MattBinder/status/1652142389165797377?s=20">already stirring controversy</a>.</p>
+<p>Finally, a big part of a healthy information ecosystem is keeping bad actors off your platform in the first place. In centralized networks, that’s often done by IP screening, cell phone/text message screening, email validation, and/or by using other private data. But a PDS hosts public data, so the centralized app would need to create parallel user accounts to collect and maintain that data.</p>
+<p>All that means it’s difficult to see an alternative to a world where BlueSky and other AT apps need to start collecting private user data, even if it’s inconsistent with the clean decentralized, portable data model illustrated above. The line between PDS and user account will get very fuzzy very fast.</p>
+<p>And, once apps do this for content moderation, wouldn’t they also wish to do it for advertising as well? Content moderation isn’t free.</p>
+<p>Right now, signups are based on invites, which helps keep out bad actors. But eventually BlueSky will need to open up fully once it’s out of beta.</p>
+<p>When that happens, the job of content moderation will be far more complex than in a place like Mastodon, because the BlueSky architecture is meant to enable “scale and global discoverability.” With Mastodon/the Fediverse, each server has its own policies, norms, and content moderation, which is far simpler in its small, federated worlds. In the BlueSkyVerse, you have no choice but to scale up moderation.</p>
+<p><strong>Recommender systems in the BlueSkyVerse</strong></p>
+<p>Will BlueSky be incentivized to build a feed-ranking system into their product and start logging the vast scope of data that inspired the phrase “surveillance capitalism?” They have already started down that path—in fact they’ve built the BlueSkyVerse to facilitate global discovery—large scale indexing and ranking across all PDSs in the network.</p>
+<p>Right now, the “What’s Hot” feed does global discovery, but in a way that is pretty basic—it’s showing popular stuff from the last 30 minutes. For now this is fine, <a href="http://tecunningham.github.io/2023-04-28-ranking-by-engagement.html">it’s the core of most modern recommender systems</a> in social media websites.</p>
+<p>Contrast this with Mastodon, where you can technically follow people from another server but the system isn’t designed so servers index each other and form one network. This is an important reason I think BlueSky could have legs, but Mastodon will probably not replace Twitter.</p>
+<p>Setting aside any monetary pressures facing BlueSky for a minute, I suspect they will be driven toward increased data collection and deployment, simply because you need to do that to move the metrics that tell you your product is improving. This may be further cemented by the culture of modern engineering organizations—where engineering leaders and PMs ruthlessly focus on moving a “north star” metric, which is almost alway some variant of time spent. “Time spent, daily active users, session counts, these are measures of whether you’re making your product better—the fact that they are all highly correlated with potential ad revenue is coincidental.</p>
+<p>Of course, to do anything like what Twitter and Facebook do with their recommender systems—for both follow recommendations and for feed-ranking—will require a lot more resources. For the follow graph, that entails predicting which users are likely to form mutual follow relationships or satisfactory follow-only relationships, which can be done with shortcuts but is ultimately a difficult (graph machine learning) problem. For feed-ranking, that requires predicting what users are likely to interact with what content, which both Twitter and Facebook had entire divisions of engineers and data scientists working on.</p>
+<p><strong>Pressures to centralize and monetize the BlueSkyVerse</strong> Venture capitalists and startups in Silicon Valley are always talking about “moats.” If you invest a great deal of resources to build a technology or a new marketplace, what’s to stop a competitor from drinking your milkshake?</p>
+<p>There’s an influential idea among “Web 3.0” circles, which is that Facebook, Instagram, and Twitter are the landlords of castles you can’t leave. That’s not supposed to happen this time—the BlueSkyVerse was designed around account portability and front-end/algorithmic competition. The hope is this will create an ecosystem of small companies doing bits and pieces of what big social media companies do today.</p>
+<p>At the same time, everything I’ve seen so far suggests that large investments are going be required to even start playing in the BlueSkyVerse—there are barriers to entry on data processing to even index it as users grow, to create a legit feed and UX, and to do content moderation at that kind of scale. Jack has given billions to the BlueSky team to get the system to where it is today.</p>
+<p>So what happens if the BlueSkyVerse really takes off? We might indeed see real competition for front-end apps that do custom algorithmic ranking and figure out innovative ways to moderate content. We might see further media fragmentation—perhaps front-end providers will try to differentiate themselves by topic or political orientation like television channels do.</p>
+<p>But running a modern social media website is expensive. If it grows as big as Twitter, indexing the BlueSkyVerse will become a challenge, same for running modern recommender systems. And if you want ad revenue you need content moderation, which you can’t solve with AI alone—you need humans in the loop, which means you don’t get the kind of economies of scale you’d see with automated systems. What’s more, you often need sensitive user data to do these things well, and you need bespoke solutions to new adversarial tactics you find. So it’s hard to fully rely on an external company for these solutions, as the creators of BlueSky seemed to envision.</p>
+<p><strong>The future of the network</strong></p>
+<p>I see a few possibilities if BlueSky gets really big: the first is that BlueSky the app simply dominates this system—they moved first, they understand the system, they can do content moderation, they figure out how to scale up, and they may decide to sell ads. At the same time if BlueSky does become “Twitter 3.0,” there have to be consequences to the fact that I can simply take my posts and follow-graph to a competing service and still be on the same network.</p>
+<p>Or maybe not. Maybe they will realize that the challenges of content moderation favor keeping the network as is, and the BlueSkyVerse will remain closed for a long time. Perhaps forever.</p>
+<p>But if it does really launch and open up, it seems likely that established tech starts to play—Google jumps in, dedicates a small fraction of the resources it used to fund Google+, indexes the BlueSkyVerse in a day, and boom… has a competitor to Facebook. Maybe Facebook jumps in too, but that’s a tricky proposition because once part of Facebook/Instagram has true account portability what happens to the rest of the company?</p>
+<p>Of course, another outcome that seems likely is a conservative social media front-end provider. Maybe Truth Social integrates with the BlueSkyVerse. It won’t make much money because many in that demographic seem happy with Twitter for now, and there will be substantial brand risk for potential advertisers.</p>
+<p>Finally, we might see pure anarchy. In this “race to the bottom” scenario, a set of small, unmoderated, ad-free apps proliferate. Since people don’t like ads, they use these apps. The network becomes overrun with spam, NSFW, hate, scams and gifts that come with a lack of moderation. Of course, it’s unclear these apps would be tolerated by the app stores, but this is one direction things might generally go.</p>
+
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const toggle = window.document.createElement('button');
+      toggle.type = "button";
+      toggle.setAttribute("role", "switch");
+      toggle.setAttribute("aria-checked", "false");
+      toggle.classList.add('top-right');
+      toggle.classList.add('quarto-color-scheme-toggle');
+      toggle.setAttribute("aria-label", "Toggle dark mode");
+      toggle.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      toggle.appendChild(i);
+      // Put the toggle in a landmark of its own, so that landmark navigation
+      // can reach it.
+      //
+      // The container is always a fresh direct child of body, and the toggle is
+      // never moved into page furniture that the theme or the author controls.
+      // The toggle is positioned against the page, so any ancestor that
+      // establishes a containing block captures it: a positioned element or a
+      // grid for position: absolute, and transform, filter, will-change or
+      // contain for position: fixed. A direct child of body has none of these
+      // to inherit, and the shift when one appears is silent and visual.
+      //
+      // ARIA says a document should have at most one banner, and axe reports a
+      // duplicate whether or not the banners carry distinct labels. So use a
+      // header when the page has no banner yet, and a named region otherwise.
+      //
+      // A header is a banner wherever it sits, unless it is inside sectioning
+      // content, so this cannot just look at the children of body: a custom
+      // page layout wraps the title block header in a plain div. An explicit
+      // role="banner" always counts.
+      const sectioning = 'article, aside, main, nav, section, [role="article"], [role="complementary"], [role="main"], [role="navigation"], [role="region"]';
+      const hasBanner = Array.from(
+        window.document.querySelectorAll('header:not([role]), [role="banner"]')
+      ).some(function(el) {
+        return el.hasAttribute("role") || el.closest(sectioning) === null;
+      });
+      const container = window.document.createElement(hasBanner ? "div" : "header");
+      if (hasBanner) {
+        container.setAttribute("role", "region");
+        container.setAttribute("aria-label", "Toggle dark mode");
+      }
+      container.classList.add('quarto-color-scheme-toggle-container');
+      container.appendChild(toggle);
+      window.document.body.appendChild(container);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/solomonmg\.github\.io\/");
+      const newWindowLabel = "(opens in a new tab)";
+      const newWindowNoteId = "quarto-ext-newwindow-label";
+      // Links reference one hidden label through aria-describedby, so the
+      // announcement never changes their accessible name.
+      var describeNewWindow = (link) => {
+        if (!window.document.getElementById(newWindowNoteId)) {
+          var newWindowNote = window.document.createElement("span");
+          newWindowNote.id = newWindowNoteId;
+          newWindowNote.hidden = true;
+          newWindowNote.textContent = newWindowLabel;
+          window.document.body.appendChild(newWindowNote);
+        }
+        var describedBy = (link.getAttribute("aria-describedby") || "").split(/\s+/).filter(Boolean);
+        if (!describedBy.includes(newWindowNoteId)) {
+          describedBy.push(newWindowNoteId);
+          link.setAttribute("aria-describedby", describedBy.join(" "));
+        }
+      }
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+      window.quartoDecorateExternalLinks = function (root) {
+     var links = (root || window.document).querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+            describeNewWindow(link);
+          if (!link.classList.contains('no-external-icon')) {
+          }
+        }
+      }
+      };
+      window.quartoDecorateExternalLinks(window.document);
+    // Esc closes the popup (WCAG 1.4.13) and focus leaving both trigger and
+    // popup closes it (WCAG 2.4.11); tippy handles neither for interactive popups.
+    const hideOnEscAndFocusOut = {
+      name: 'hideOnEscAndFocusOut',
+      defaultValue: true,
+      fn(instance) {
+        const dismiss = () => {
+          // A show scheduled by the trigger delay would otherwise reopen it
+          instance.clearDelayTimeouts();
+          instance.hide();
+        };
+        const onKeyDown = (event) => {
+          if (event.key !== 'Escape') {
+            return;
+          }
+          // Keep Esc from also reaching page handlers (e.g. reveal.js overview),
+          // except an open reveal.js slide menu, which Esc should close too.
+          // The menu handles keys only when its keyboard option is on.
+          const menuHandlesEsc = window.Reveal?.getPlugin?.('menu')?.isOpen() &&
+            window.Reveal.getConfig().menu?.keyboard !== false;
+          if (!menuHandlesEsc) {
+            event.stopPropagation();
+          }
+          if (instance.popper.contains(window.document.activeElement)) {
+            // Disabled while refocusing so the focus trigger does not reopen it
+            instance.disable();
+            instance.reference.focus();
+            instance.enable();
+          }
+          dismiss();
+        };
+        const onFocusOut = (event) => {
+          const target = event.relatedTarget;
+          if (target && !instance.reference.contains(target) &&
+              !instance.popper.contains(target)) {
+            dismiss();
+          }
+        };
+        // On the trigger too: a click trigger (code-annotations: select) has no
+        // blur handling. Attached for the instance's lifetime so leaving the
+        // trigger also cancels a show still pending on the trigger delay.
+        instance.reference.addEventListener('focusout', onFocusOut);
+        return {
+          onShow() {
+            window.document.addEventListener('keydown', onKeyDown, true);
+            instance.popper.addEventListener('focusout', onFocusOut);
+          },
+          onHide() {
+            window.document.removeEventListener('keydown', onKeyDown, true);
+            instance.popper.removeEventListener('focusout', onFocusOut);
+          },
+          onDestroy() {
+            instance.reference.removeEventListener('focusout', onFocusOut);
+          },
+        };
+      },
+    };
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+        plugins: [hideOnEscAndFocusOut],
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          // Each band is positioned against its own containing block, which is
+          // not the offsetParent of the lines, so place it from client rects.
+          const placeBand = (band, firstEl, lastEl, codeBlock) => {
+            const container = band.offsetParent;
+            if (container === null) {
+              return;
+            }
+            const containerRect = container.getBoundingClientRect();
+            // Reveal.js scales slides with a transform, so convert client
+            // pixels back to the CSS pixels of the container.
+            const scale = containerRect.height / container.offsetHeight || 1;
+            const firstRect = firstEl.getBoundingClientRect();
+            const lastRect = lastEl.getBoundingClientRect();
+            const top = (firstRect.top - containerRect.top) / scale - container.clientTop + container.scrollTop;
+            const height = (lastRect.bottom - firstRect.top) / scale;
+            band.style.top = top - 2 + "px";
+            band.style.height = height + 4 + "px";
+            if (codeBlock) {
+              // Without the copy button wrapper, the containing block is wider
+              // than the code block, so span the code block explicitly.
+              const blockRect = codeBlock.getBoundingClientRect();
+              band.style.left = (blockRect.left - containerRect.left) / scale - container.clientLeft + container.scrollLeft + "px";
+              band.style.width = blockRect.width / scale + "px";
+            }
+          };
+          if (lineIds.length > 0) {
+            const el = window.document.getElementById(lineIds[0]);
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const parent = el.parentElement.parentElement;
+            // cook up a div (if necessary) and position it
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            placeBand(div, el, lastEl, parent.closest("div.sourceCode") || parent);
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            placeBand(gutterDiv, el, lastEl);
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+  <script type="application/javascript">
+  window.quartoScrollableRegionsLabels = {"code":"Scrollable code","output":"Scrollable output"};
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© 2026 Sol Messing</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="../../disclosures.html">
+<p>Disclosures</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="../../techsetup.html">
+<p>Tech Stack</p>
+</a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+
+<script src="../../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

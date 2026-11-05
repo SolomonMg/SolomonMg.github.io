@@ -1,0 +1,1159 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.11.9">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Sol Messing">
+<meta name="dcterms.date" content="2023-08-02">
+<meta name="description" content="Domain-level analysis in a new Science paper greatly overstates the influence of algorithmic feed ranking on segregation, aka the ‘Filter Bubble’">
+
+<title>Disaggregating ‘Ideological Segregation’ – Sol Messing</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../images/profile.jpg" rel="icon" type="image/jpeg">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/scrollable-regions/scrollable-regions.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-447e42e69aaa9833c0ba1b986f430b20.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-ea2d8d2231bb95995fde255e649124d6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-d583868ff9e29055d584e47a9ca08b98.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-ea2d8d2231bb95995fde255e649124d6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-9XTZZP2CJ8"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-9XTZZP2CJ8', { 'anonymize_ip': true});
+</script>
+<style>html{ scroll-behavior: smooth; }</style>
+
+
+<link rel="stylesheet" href="../../styles.css">
+<meta property="og:title" content="Disaggregating ‘Ideological Segregation’ – Sol Messing">
+<meta property="og:description" content="Domain-level analysis in a new Science paper greatly overstates the influence of algorithmic feed ranking on segregation, aka the ‘Filter Bubble’">
+<meta property="og:image" content="https://solomonmg.github.io/blog/thoughts-on-election-2020/featured.jpeg">
+<meta property="og:site_name" content="Sol Messing">
+<meta property="og:image:height" content="655">
+<meta property="og:image:width" content="1173">
+<meta name="twitter:title" content="Disaggregating ‘Ideological Segregation’ – Sol Messing">
+<meta name="twitter:description" content="Domain-level analysis in a new Science paper greatly overstates the influence of algorithmic feed ranking on segregation, aka the ‘Filter Bubble’">
+<meta name="twitter:image" content="https://solomonmg.github.io/blog/thoughts-on-election-2020/featured.jpeg">
+<meta name="twitter:creator" content="@SolomonMg">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="nav-fixed fullcontent quarto-light"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Skip to main content</a><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          toggle.setAttribute("aria-checked", alternate ? "true" : "false");
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455).
+    // Not run on load: stylesheets are set before first paint there, and
+    // scrolling would undo the scroll to a URL fragment (#14973).
+    // The one pixel nudge keeps the reader where they were.
+    const refreshSafariScrollbar = () => {
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        const scrollY = window.scrollY;
+        window.scrollTo(0, scrollY > 0 ? scrollY - 1 : 1);
+        setTimeout(() => {
+          window.scrollTo(0, scrollY);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      refreshSafariScrollbar();
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark" aria-label="Site">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Sol Messing</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../publications.html"> 
+<span class="menu-text">Publications</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../blog.html"> 
+<span class="menu-text">Blog</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../media.html"> 
+<span class="menu-text">Media</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../bio.html"> 
+<span class="menu-text">Bio</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../pdf/CV/CV.pdf" target="_blank"> 
+<span class="menu-text">CV</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../contact.html"> <i class="bi bi-envelope" role="img" aria-label="Contact">
+</i> 
+<span class="menu-text">Contact</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/solomonmg" target="_blank"> <i class="bi bi-github" role="img" aria-label="GitHub">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/SolomonMg" target="_blank"> <i class="bi bi-twitter-x" role="img" aria-label="X">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://solmessing.substack.com" target="_blank"> <i class="bi bi-substack" role="img" aria-label="Substack">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://scholar.google.com/citations?user=to63kiAAAAAJ&amp;hl=en" target="_blank"> <i class="bi bi-mortarboard-fill" role="img" aria-label="Google Scholar">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <button type="button" role="switch" aria-checked="false" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode" aria-label="Toggle dark mode"><i class="bi"></i></button>
+</div>
+            <div id="quarto-search" class="" title="Search"></div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content" id="quarto-document-content" tabindex="-1">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Disaggregating ‘Ideological Segregation’</h1>
+</div>
+
+<div>
+  <div class="description">
+    Domain-level analysis in a new <em>Science</em> paper greatly overstates the influence of algorithmic feed ranking on segregation, aka the ‘Filter Bubble’
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Sol Messing </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">August 2, 2023</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="tldr" class="level3">
+<h3 class="anchored" data-anchor-id="tldr">TLDR:</h3>
+<ol type="1">
+<li>[UPDATED SEPT 30] Yesterday, Science <a href="../../pdf/science.adk1211.pdf">published a letter I wrote</a> arguing that there is little evidence of algorithmic bias in Facebook’s feed ranking system that would serve to increase ideological segregation, also known as <a href="https://books.google.com/books/about/The_Filter_Bubble.html?id=Qn2ZnjzCE3gC">the “Filter Bubble” hypothesis</a>.</li>
+<li>This contradicts claims in <a href="https://www.science.org/doi/full/10.1126/science.ade7138">González-Bailón et al 2023</a> that Newsfeed ranking increases ideological segregation. This claim was the main piece of evidence in the Science <a href="https://www.science.org/toc/science/381/6656">Special Issue on Meta</a> that might support the controversial cover that suggested that Meta’s algorithms are “Wired to Split.”</li>
+<li>The issue is that while domain-level analysis suggests feed-ranking increases ideological segregation, URL-level analysis shows <em>no difference</em> in ideological segregation before and after feed-ranking.</li>
+<li>And we should strongly prefer their URL-level analysis. Domain-level analysis <em>effectively mislabels highly partisan content</em> as “moderate/mixed,” especially on websites like YouTube, Reddit, and Twitter (<a href="https://ori.hhs.gov/education/products/niu_authorship/mistakes/09mistake-a.htm">aggregation bias/ecological fallacy</a>).</li>
+<li>Interestingly, the authors seem to agree—the discussion section points out problems with domain-level analysis.</li>
+<li>Another <em>Science</em> paper from the same issue, <a href="https://www.science.org/doi/10.1126/science.abp9364">Guess et al 2023</a> shows (in the SM) that Newsfeed ranking actually <em>decreases</em> exposure to <em>political content</em> from like-minded sources compared with reverse-chronological feedranking.</li>
+<li>The evidence in the 4 recent papers is not consistent with a meaningful Filter Bubble effect in 2020; nor does it support the notion that Meta’s algorithms are “Wired to Split.”</li>
+<li>Furthermore, domain-level aggregation bias is a big issue in a great deal of past research on ideological segregation, because domain-level analysis <em>understates</em> media polarization. Because <a href="https://www.science.org/doi/full/10.1126/science.ade7138">González-Bailón et al 2023</a> gives both URL- and domain-level estimates, we can see the magnitude of aggregation bias. It’s huge.</li>
+<li>I make a number of other observations about what we know about whether social media is polarizing and discuss implications for the controversial Science cover and Meta’s flawed claims that this research is exculpatory. <!-- 6. None of this is the last word on social media algorithms---as [González-Bailón et al 2023](https://www.science.org/doi/full/10.1126/science.ade7138) point out, we need additional research on friend/page/group/etc recommender systems, which may polarize the graph itself.  --></li>
+</ol>
+</section>
+<section id="introicymi" class="level3">
+<h3 class="anchored" data-anchor-id="introicymi">Intro/ICYMI</h3>
+<details>
+<summary>
+Click to expand
+</summary>
+<p>Last week saw the release of a series of <a href="https://www.science.org/toc/science/381/6656">excellent papers in <em>Science</em></a>. I was particularly interested in <a href="https://www.science.org/doi/full/10.1126/science.ade7138">González-Bailón et al 2023</a>, which measures “ideological segregation.” This concept is based on <a href="https://web.stanford.edu/~gentzkow/research/echo_chambers.pdf">Matt Gentzkow and Jesse Shapiro’s 2011 work</a>. As they note, “The index ranges from 0 (all conservative and liberal visits are to the same outlet) to 1 (conservatives only visit 100% conservative outlets and liberals only visit 100% liberal outlets).”</p>
+<p>This paper also replicates and extends my own work with Eytan Bakshy and Lada Adamic, also published in <a href="https://solomonmg.github.io/pdf/Science-2015-Bakshy-1130-2.pdf"><em>Science</em> in 2015</a>.</p>
+<p>To be clear <a href="https://www.science.org/doi/full/10.1126/science.ade7138">González-Bailón et al 2023</a> goes a lot further, examining how these factors vary over-time, investigating clusters of isolated partisan media organizations, and patterns in the consumption of misinformation. They find (1) ideological segregation is high; (2) ideological segregation “increases after algorithmic curation” consistent with the “Filter Bubble” hypothesis; (3) there is a substantial right wing “echo chamber” in which conservatives are essentially siloed from the rest of the site (4) where misinformation thrives.</p>
+<p>I’ve had many years to think about issues related to these questions, after working with similar data from 2012 in my dissertation, and co-authoring a <a href="https://solomonmg.github.io/pdf/Science-2015-Bakshy-1130-2.pdf">Science paper</a> while working at Facebook using 2014 data. I also saw the design (but not results) presented at the <a href="https://www.ssrc.org/programs/digital-platforms-initiative/2023-ssrc-workshop-on-the-economics-of-social-media/">2023 SSRC Workshop on the Economics of Social Media</a>, though I did not notice these issues until I saw the final paper.</p>
+<p>I put together these thoughts after discussion and feedback from Dean Eckles and Tom Cunningham, former colleagues at Stanford, Facebook, and Twitter.</p>
+<!-- [Click here to read the backstory on Echo Chambers, Filter Bubbles, and Selective Exposure, including where my own past work fits in](#a-brief-history-of-echo-chambers-filter-bubbles-and-selective-exposure) -->
+</details>
+</section>
+<section id="a-brief-history-of-echo-chambers-filter-bubbles-and-selective-exposure" class="level3">
+<h3 class="anchored" data-anchor-id="a-brief-history-of-echo-chambers-filter-bubbles-and-selective-exposure">A Brief History of Echo Chambers, Filter Bubbles, and Selective Exposure</h3>
+<details>
+<summary>
+Click to expand
+</summary>
+<!-- 20 years ago I worked as a foreign media analyst and I noticed that a great deal of misinformation circulating in news websites in Indonesia and the Middle East came from Alex Jones' InfoWars (yes he's been around for a long time). I became fascinated with the question of how people get their media and how technology changes that.  -->
+<p>The conventional academic wisdom when I started my PhD was that we shouldn’t expect to see much in the way of media effects (<a href="https://books.google.com/books/about/The_Effects_of_Mass_Communication.html?id=CzcGAQAAIAAJ">Klapper 1960</a>) because people tended to “select into” content that reinforced their views (<a href="https://www.jstor.org/stable/2747198">Sears and Freedman 1967</a>).</p>
+<p>In 2007, Cass Sunstein wrote <a href="https://www.jstor.org/stable/j.ctt7tbsw">“Republic.com 2.0”</a>, which warned that the internet could allow us to even more easily isolate ourselves into “information cocoons” and “echo chambers.” Technology allows us to “filter” exactly what we want to see, and design our own programming. Cass also suggested this could lead to polarization.</p>
+<!-- What's more, new media should be expected to further strengthen this "minimal effects" hypothesis ([Bennett and Iyengar 2008](https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=a2fcebd37ba1e919f662a287841b0356603cd0a4)).  -->
+<p>In 2009-2010, Sean Westwood and I ran a series of studies suggesting that <a href="https://journals.sagepub.com/doi/10.1177/0093650212466406">popularity and social cues</a> in news aggregators and social media websites might be a way out of selective news consumption—we might be <em>more</em> exposed to cross-cutting views on platforms that feature a social component, and furthermore, this social component seemed to be more important that media “source” label. That was great in the abstract, but what happens on actual websites that people use?</p>
+<p>The extent to which widely used social media platforms might allow us to exit “echo chambers” depended on the extent of cross-partisan friendships and interactions on platforms like Facebook. I did a PhD internship at Facebook to look into that, and the question of whether encountering <a href="https://www.dropbox.com/s/nu39148ukbab34r/CH7brief.pdf?raw=true">political news on social media was ideologically polarizing</a> (note that the results are as not well powered as I would like). That work evolved into dissertation chapters and eventually our <a href="https://solomonmg.github.io/pdf/Science-2015-Bakshy-1130-2.pdf">Science paper</a></p>
+<p>Now <a href="https://en.wikipedia.org/wiki/Eli_Pariser">Eli Parsner</a> had just published a book on “<a href="https://books.google.com/books/about/The_Filter_Bubble.html?id=Qn2ZnjzCE3gC">Filter Bubbles</a>” suggesting that media technologies like Google Search and Facebook NewsFeed not only allowed us to ignore the “other side,” but actively filtering out search results and friends posts with perspectives from the other side.</p>
+<p>What’s more, a lot of people in the Human Computer Interaction (HCI) world were very interested in how one might examine this empirically, and I started collecting data with Eytan Bakshy that would do just that. The paper would allow us to quantify echo chambers created by our network of contacts, filter bubbles, and partisan selective exposure in social media by looking at exposure to <a href="https://www.jstor.org/stable/3117813">ideologically “cross-cutting” content</a>.</p>
+<p>We defined a few key components:</p>
+<p><strong>Random</strong> - The set of content (external URLs) shared on Facebook writ large.</p>
+<p><strong>Potential</strong> - The set of content shared by one’s friends</p>
+<p><strong>Exposed</strong> - The set of content appearing in one’s Newsfeed.</p>
+<p><strong>Selected</strong> - The set of content one clicks on.</p>
+<p><strong>Endorsed</strong> - The set of content one ‘likes’.</p>
+<p><img src="../../img/Ch6Fig6.5.jpg" title="Figure 6 from Messing 2013: Our original analysis of the distribution of ideologically-aligned content on Facebook using data from 2012." class="img-fluid"></p>
+<p><img src="../../img/ScienceBakshyFig3B.jpg" title="Figure 3B from Bakshy et al 2015: Data from 2014 quantifying cross-cutting content on Facebook." class="img-fluid"></p>
+<p>Unlike when I started to study social media in 2009 and no one was interested, in 2014, people understood that social media was an important force that was reshaping at least media if not society more broadly. And Science was particularly interested in the role of algorithms played in this environment.</p>
+<p>We published our results in <a href="https://solomonmg.github.io/pdf/Science-2015-Bakshy-1130-2.pdf">Science</a>, and the response from many was “well this is smaller than expected,” including a piece in <em>Wired</em> from <a href="https://www.wired.com/2015/05/did-facebooks-big-study-kill-my-filter-bubble-thesis/">Eli Parisner himself</a>. David Lazer, one of the lead authors of <a href="https://www.science.org/doi/full/10.1126/science.ade7138">González-Bailón et al 2023</a>, also <a href="https://education.biu.ac.il/sites/education/files/shared/science-2015-lazer-1090-1.pdf">wrote a perspective in <em>Science</em></a>.</p>
+<p>However, the piece immediately drew a great deal of criticism. This is in part because I wrote that exposure was driven more by individual choices than algorithms, which ignored the potential influence of friend recommendation systems and, more broadly, swept aside the extent to which interfaces structure interactions on websites, which my own dissertation work had shown was quite substantial.</p>
+<p>The study also had important limitations, many of which I addressed in a post suggesting how <a href="https://solomonmg.github.io/post/exposure-to-ideologically-diverse-response/">future work could provide a more robust picture</a>.</p>
+<p>I was (much later) tech lead for Social Science One (2018-2020), which gave external researchers access to data (the <a href="../../pdf/Facebook_DP_URLs_Dataset.pdf">‘Condor’ URLs data set</a>) via differential privacy. My goal was to enable the kind of work research done <a href="https://www.science.org/doi/full/10.1126/science.ade7138">González-Bailón et al 2023</a>. However, it soon became clear that Social Science One’s data sharing model and differential privacy in particular was not suitable for ground-breaking research.</p>
+<p>I personally advocated (with Facebook Researcher and longtime colleague <a href="https://twitter.com/anniefranco">Annie Franco</a>) for the collaboration model used in the Election 2020 project, wherein external researchers would collaborate with Facebook researchers. That model would have to shield the research from any interference from Facebook’s Communications and Policy arm, which might attempt to interfere with the inturpretation or publication of any resulting papers, which would create ethical conflicts.</p>
+<p>I advocated for pre-registration to accomplish this, not merely to ensure scientific rigor but to protect against conflicts of interest and selective reporting of results. However, I left Facebook in January of 2020 and have not been deeply involved in the project since.</p>
+<p><a href="https://www.science.org/doi/full/10.1126/science.ade7138">González-Bailón et al 2023</a> does in fact accomplish most if not all of what I recommended future research do and goes much further than our original study, and the authors should be applauded for it. The paper shows that on Facebook (1) ideological segregation is high (in fact it’s arguably higher than implied in the paper); (2) there is a substantial right wing “echo chamber” in which conservatives are siloed from the rest of the site (3) where misinformation thrives. When they start to talk about the filter bubble though, things get more complicated.</p>
+</details>
+</section>
+<section id="is-there-a-filter-bubble-on-facebook" class="level3">
+<h3 class="anchored" data-anchor-id="is-there-a-filter-bubble-on-facebook">Is there a Filter Bubble on Facebook</h3>
+<p>Are Facebook’s algorithms “Wired to split” the public? This question is at the core of the recent <em>Science</em> issue, it’s hotly debated in the field of algorithmic bias. A suspicion that the answer is “yes” has motivated a number of policy and regulatory actions. Armed with unprecendented data, <a href="https://www.science.org/doi/full/10.1126/science.ade7138">González-Bailón et al 2023</a> seeks to answer this and other related questions.</p>
+<p>There are three relevant claims that answer this question in the text: (1) “ideological segregation is high and increases as we shift from potential exposure to actual exposure to engagement” in the abstract, (2) “The algorithmic promotion of compatible content from this inventory is positively associated with an increase in the observed segregation as we move from potential to exposed audiences” in the discussion section, and (3) “Segregation scores drawn from exposed audiences are higher than those based on potential audiences … (the difference between potential and engaged audiences is only visible at the domain level),” in the caption of Figure 2.</p>
+<p>These statements are generally confirmatory of algorithmic segregation, aka the <a href="https://books.google.com/books/about/The_Filter_Bubble.html?id=Qn2ZnjzCE3gC">Filter Bubble hypothesis</a>.</p>
+<p>But look at Figure 2, on which these claims seem to be based. Figure 2B shows an increase in observed segregation as you move from potential to exposed audiences. BUT Figure 2C—describing the same phenomena—does <em>not</em> (as noted in the caption).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../img/BailonFig2BC.jpeg" title="When viewed at the level of the URL (2C), the study is consistent with a negligible Filter Bubble effect" class="img-fluid figure-img"></p>
+<figcaption>Figure 2 (B &amp; C) from González-Bailón et al 2023: When viewed at the level of the URL (2C), the study is consistent with a <em>negligible</em> Filter Bubble effect</figcaption>
+</figure>
+</div>
+</section>
+<section id="so-which-is-it" class="level3">
+<h3 class="anchored" data-anchor-id="so-which-is-it">So which is it?</h3>
+<p>First, what’s the difference between these two figures? 2B aggregates things at the domain level (e.g., www.yahoo.com) while 2C aggregates things at the URL level (e.g., https://www.yahoo.com/news/pence-trumps-indictment-anyone-puts-002049678.html). That means 2B treats all shares from yahoo.com the same, while 2B looks at each story separately.</p>
+<p>If you’re like me, when you think of political news, you have in mind domains like FoxNews.com or MSNBC.com, where it’s likely that the website itself has a distinct partisan flavor.</p>
+<p>But YouTube.com and Twitter.com both appear in the “Top 100 Domains by Views” in the study’s SM, which obviously host a ton of both far left and far right or “mixed” content. And indeed, Figure S10 below shows that there are an array of domains that host some far right content and some far left content.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../img/BailonFigS10.jpeg" title="Some domains host some far right content (URLs) and some far left content." class="img-fluid figure-img"></p>
+<figcaption>Figure S10 from González-Bailón et al 2023: Some domains host some far right content and some far left content.</figcaption>
+</figure>
+</div>
+<!-- There's also just something about content that makes an argument that we seem to want to share, as suggested by analysis in my [dissertation](https://www.dropbox.com/s/zfw1d9j60hqjil7/sudiss.pdf?raw=true), which shows that NYT editorials are more likely than content from other sections to be shared (via email). Consider two OpEds at the NYT---one by conservative columnist Bret Stevens, the other by well-known liberal Nicholas Kristof. The former is going to be shared more by conservatives, the latter more by liberals.  -->
+<p>But even if we’re talking about NYTimes.com it’s not hard to see that for example, conservatives might be more likely to share conservative Op Eds from Bret Stevens, while liberals may be more likely to share Op Eds from Nicholas Kristof.</p>
+<p>If you aggregate your analysis to the domain level, you’ll miss this aspect of media polarization.</p>
+</section>
+<section id="domains-or-urls" class="level3">
+<h3 class="anchored" data-anchor-id="domains-or-urls">Domains or URLs</h3>
+<p>So which is right? <a href="https://www.science.org/doi/full/10.1126/science.ade7138">González-Bailón et al 2023</a> suggests that we should prefer the URL-level analysis. Here’s the passage in the discussion section, which describes why analyzing media polarization at the level of the domain is problematic:</p>
+<p>“As a result of social curation, exposure to URLs is systematically more segregated than exposure to domains… <em>A focus on domains rather than URLs will likely understate, perhaps substantially, the degree of segregation in news consumption online.</em>” (Emphasis added)</p>
+<p>What’s more, past work (co-authored by one of the lead authors) shows that <a href="https://osf.io/vbwer">domain-level analysis can indeed mask “curation bubbles”</a> in which “specific stories attract different partisan audiences than is typical for the outlets that produced them.”</p>
+<p>You can see this in the data clear as day—let’s go back to Figure 2A, which shows a massive increase in estimated segregation when using URLs rather than domains:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../img/BailonFig2.jpg" title="Figure 2A shows much higher levels of audience segregation when you look at the URL level rather than the domain level" class="img-fluid figure-img"></p>
+<figcaption>Figure 2 from González-Bailón et al 2023: There are much higher levels of audience segregation when you look at the URL level rather than the domain level</figcaption>
+</figure>
+</div>
+<p>Returning to Figures 2B and 2C, it seems that the potential audience at domain level is <em>artificially less segregated</em>, due to the aggregation at the level of the domain.</p>
+</section>
+<section id="what-explains-the-filter-bubble-discrepency" class="level3">
+<h3 class="anchored" data-anchor-id="what-explains-the-filter-bubble-discrepency">What explains the ‘Filter Bubble discrepency’?</h3>
+<p>One possibility is that posts linking to content from “mixed” domains like YouTube, Reddit, Twitter, Yahoo, etc. do not score as well in feed-ranking. It’s possible that partisan content on these domains is more likely to be downranked as misinformation or spam, or maybe Facebook-native videos (which render faster/better) have an edge over YouTube, or perhaps there are domain-level features in feed ranking, or maybe there is some other reason that content from ‘non-mixed’ domains just performs better in the rather complex recommendation system that powers Newsfeed ranking.</p>
+<p>Regardless, that would explain the results in Figure 2—making the potential audience look artificially broader than the actual audience, when you analyze content at the domain level.</p>
+</section>
+<section id="what-about-the-reverse-chron-experiment" class="level3">
+<h3 class="anchored" data-anchor-id="what-about-the-reverse-chron-experiment">What about the Reverse-Chron experiment?!</h3>
+<p>Surely we can paint a fuller picture of the impact of algorithmic ranking on media polarization with that other excellent recent <em>Science</em> paper which looked at the <em>causal</em> effect of turning off Newsfeed ranking. Maybe we can cross-reference that paper and get a clearer picture of what’s happening.</p>
+<p><a href="https://www.science.org/doi/10.1126/science.abp9364">Guess et al 2023</a> shows that Newsfeed induces proportionally <em>more</em> exposure cross-cutting sources but also more exposure to like-minded sources. It reduces exposure to moderate or mixed sources. Importantly, this is not just news that news sources link to, it’s all content that everyone posts, including life updates, pictures, videos, etc.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../img/GuessFig.jpg" class="img-fluid figure-img"></p>
+<figcaption>Figure 2 from Guess et al 2023: Compared to a reverse chronologically-ranked feed, FB’s ranking system induces a proportionally more exposure to “like-minded” sources but also more to cross-cutting sources, defined at the level of the entity posting.</figcaption>
+</figure>
+</div>
+<p>Ok, but what about political content? In the supplimentary materials, we see that when it comes to <em>political content</em>, Newsfeed ranking actually <em>decreases</em> exposure to political content from like-minded sources.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../img/GuessChronScienceTabS20.jpg" class="img-fluid figure-img"></p>
+<figcaption>Figure S20 from Guess et al 2023: A reverse chronologically-ranked Newsfeed induces a proportionally less exposure to “like-minded” sources but also less to cross-cutting sources, defined at the level of the entity posting.</figcaption>
+</figure>
+</div>
+<p>What about exposure to political content posted by cross-cutting sources? The SM doesn’t provide that, but it does provide a paragraph noting that Newsfeed <em>decreased</em> exposure to political news from partisan sources relative to reverse-chron!</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../img/GuessChronScienceS3.3.jpg" class="img-fluid figure-img"></p>
+<figcaption>S3.3 in Guess et al 2023: A reverse chronologically-ranked Newsfeed induces a proportionally less exposure to “like-minded” sources but also less to cross-cutting sources, defined at the level of the entity posting.</figcaption>
+</figure>
+</div>
+<p>Now a big caveat here is that it’s clear from the main results that political content is not doing well in Newsfeed ranking. Note that there are <a href="https://www.wsj.com/articles/facebook-politics-controls-zuckerberg-meta-11672929976">reports that the company decided to downrank political and news content in 2021</a>.</p>
+<p>Regardless, the results in the SM are not at all suggestive of a filter bubble, at least during the 2020 election—the experimental results suggest that if anything feedranking is showing us <em>less</em> polarizing content than we would see with reverse-chron.</p>
+</section>
+<section id="how-fb-groups-impact-estimates-of-algorithmic-segregation" class="level3">
+<h3 class="anchored" data-anchor-id="how-fb-groups-impact-estimates-of-algorithmic-segregation">How FB Groups impact estimates of algorithmic segregation</h3>
+<p>I sent a much earlier draft of this to <a href="https://www.asc.upenn.edu/people/faculty/sandra-gonzalez-bailon-phd">Sandra González-Bailón</a> and <a href="https://cssh.northeastern.edu/faculty/david-lazer/">David Lazer</a>, lead authors for <a href="https://www.science.org/doi/full/10.1126/science.ade7138">González-Bailón et al 2023</a>. Sandra pointed me to Figure S14, which does show a slight increase in segregation post-ranking for URLs shared by users and pages, but shows the <em>opposite</em> for content shared in those often-contentious Facebook groups.</p>
+<!-- People may be especially likely to come across "persons dissimilar to themselves, and with modes of thought and action unlike those with which they are familiar" [(Mill cited in Mutz and Mondak, 2006)](https://www.polisci.upenn.edu/sites/default/files/mutz_mondak_2006.pdf). And it seems likely based on the plot below that group posts are treated differently from page posts and friend posts in Facebook feedranking.  -->
+<p>So it’s really <em>not</em> that there’s no difference at all pre- and post- ranking, just that the difference is on average zero once you include groups. Of course, the population of people who see content from groups and/or pages in Newsfeed may be unusual, and future work should dig into this variation.</p>
+<p>I should also note that this small but real difference seems more or less consistent with what we <a href="https://www.science.org/doi/10.1126/science.aaa1160">found in past work</a>, which only examined news shared by users (excluding pages and groups).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../img/BailonFigS14.jpg" class="img-fluid figure-img"></p>
+<figcaption>Figure S14 from González-Bailón et al 2023: There is a modest filter bubble effect among users and pages, and a “reverse filter bubble” for content shared in groups.</figcaption>
+</figure>
+</div>
+</section>
+<section id="the-algorithm-and-the-most-politically-engaged" class="level3">
+<h3 class="anchored" data-anchor-id="the-algorithm-and-the-most-politically-engaged">The algorithm and the most politically engaged</h3>
+<p>There is also a hint of an increase in segregation post-ranking among the most politically engaged 10% of Facebook users. However, the paper notes that this trend “is only clear for domain-level data,” which we’ve already established should not be used here. (Note that they define high political interest users as those in the “top 10% of engagement… (comments, likes, reactions, reshares) with content classified as political on Facebook…)”).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../img/BailonFigS19.jpg" class="img-fluid figure-img"></p>
+<figcaption>Figure S19 shows a modest filter bubble effect among the most engaged users at the peak of the 2020 election.</figcaption>
+</figure>
+</div>
+<p>A similar pattern holds for the top 1% of users (Figure S23 in the SM).</p>
+</section>
+<section id="algorithmic-segregation-and-ideology" class="level3">
+<h3 class="anchored" data-anchor-id="algorithmic-segregation-and-ideology">Algorithmic segregation and ideology</h3>
+<p>Feed ranking seems to expose both conservatives and liberals to more liberal content. This is consistent with my priors that conservative content is more likely to violate policy and be taken down or subject to “soft actioning” (e.g., downranking) for borderline violations.</p>
+<p>So now things get messy—should we really say liberals are in a filter bubble (and conservatives aren’t) if misinformation is included in that calculation?</p>
+<!-- exposure to cross cutting content was thought to [reduce political participation](https://www.jstor.org/stable/3088437). -->
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../img/BailonTabS8.jpeg" title="Feedranking exposes you to slightly more liberal content." class="img-fluid figure-img"></p>
+<figcaption>Feedranking exposes you to slightly more liberal content, presumably due to misinformation actioning.</figcaption>
+</figure>
+</div>
+<p>We can see a similar pattern when we look at exposure to cross-cutting content, which is the measure our 2015 Science paper used. Conservatives see more liberal content in feed than their friends share.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../img/BailonFigS11.jpg" title="Replication of Bakshy et al 2015" class="img-fluid figure-img"></p>
+<figcaption>Replication of Bakshy et al 2015, showing little effect of feed-ranking among content shared by friends. However, when including page and group content, feed-ranking plays a more important role—exposing liberals to proportionally less cross-cutting content and conservatives to comparatively more.</figcaption>
+</figure>
+</div>
+<p>We can also see that things have changed a lot since we wrote our original Science piece in 2015. Liberals seem to see <em>far</em> more cross-cutting content, conservatives less.</p>
+<!-- What about how this compares to others ways we get media on the internet? The evidence is not great here, but [Flaxman et al 2016](https://academic.oup.com/poq/article/80/S1/298/2223402) show that ideological segregation is higher for search than for social media websites, but lower for news aggregators and direct navigation to news websites.  -->
+</section>
+<section id="brevity-is-a-double-edged-sword" class="level3">
+<h3 class="anchored" data-anchor-id="brevity-is-a-double-edged-sword">Brevity is a double-edged sword</h3>
+<p>Science gives authors only limited space and it would have been difficult to dig into everything I’ve written about in 2 pages. I also know better than almost anyone just how much work went into these papers (I would bet thousands of hours for each of several authors), and how difficult it can be explain everything perfectly when you’re pulling off such a big lift. I should also point out that these papers are very nuanced, well-caveated, and careful not to overstate their results regarding the filter bubble or algorithmic polarization.</p>
+<p>Still, I do wish this work had squarely focused on URL-level analyses.</p>
+</section>
+<section id="what-this-means-for-other-studies" class="level3">
+<h3 class="anchored" data-anchor-id="what-this-means-for-other-studies">What this means for other studies</h3>
+<p>This also means that past estimates of ideological segregation based domain-level analysis probably <em>understate</em> media polarization in a big way. This includes those based on <a href="https://journalqd.org/article/view/2586/2683">Facebook data</a>, <a href="https://onlinelibrary.wiley.com/doi/epdf/10.1111/ajps.12589">browser data</a>, on data describing various <a href="https://academic.oup.com/poq/article/80/S1/298/2223402">platforms</a>) or simply websites across the <a href="https://web.stanford.edu/~gentzkow/research/echo_chambers.pdf">internet</a>. I have said this for a long time but I did not think the magnitude was as strong as shown in <a href="https://www.science.org/doi/full/10.1126/science.ade7138">González-Bailón et al 2023</a>.</p>
+</section>
+<section id="so-is-facebook-polarizing" class="level3">
+<h3 class="anchored" data-anchor-id="so-is-facebook-polarizing">So, is Facebook polarizing?</h3>
+<p>It’s very hard to give a good answer to this question. In “The Paradox of Minimal Effects,” Stephen Ansolabehere points out that re-election depends overwhelmingly on whether the country is prosperous and at peace, not what happens with media politics. This is thought to be because people selectively consume media, which serves mainly to reinforce their beliefs; while at the same time, the sum total of people’s private lived experiences correponds reasonably well to aggregated economic data.</p>
+<p>There’s an argument that social media exists somewhere in between the conventional media and one’s lived experiences. And what about evidence? As Sean Westwood and I have shown, partisan selectivity is far less severe when you <a href="https://journals.sagepub.com/doi/10.1177/0093650212466406">add a social element to news consumption</a>. What’s more, field-experimental work I did shows that <a href="https://www.dropbox.com/s/nu39148ukbab34r/CH7brief.pdf?raw=true">increasing the prominence of political news in Facebook’s Newsfeed</a> shifted issue positions toward the majority of news encountered (left-leaning), particularly among political moderates.</p>
+<p>Tom Cunningham recently wrote a nice <a href="https://tecunningham.github.io/posts/2023-07-27-meta-2020-elections-experiments.html#other-evidence-on-media-and-polarization">summary of some of the evidence related to the question of whether any kind of media might increase affective polarization</a>, which we discussed at length.</p>
+<p>The evidence suggests any effect is likely small. First, we see that while social media is a global phenomenon, affective polarization is not—the <a href="https://direct.mit.edu/rest/article-abstract/doi/10.1162/rest_a_01160/109262/Cross-Country-Trends-in-Affective-Polarization?redirectedFrom=fulltext">UK, Japan, and Germany have seen affective depolarization</a>.</p>
+<p>Second, perhaps the highest quality experimental study on this question I’ve seen is <a href="https://osf.io/jrw26/">Broockman and Kalla (2022)</a>, which finds that paying heavy Fox News viewers to watch CNN has generally depolarizing effects, though as Tom points out, finds null effects on traditional measures of affective polarization.</p>
+<p>Third, Tom and I have also discussed an excellent experimental study attempting to shed light on this: “<a href="https://www.aeaweb.org/articles?id=10.1257/aer.20190658">Welfare Effects of Social Media</a>,” which concludes that Facebook is likely polarizing. They find that “deactivating Facebook for the four weeks before the 2018 US midterm election… makes people less informed, it also makes them less polarized by at least some measures, consistent with the concern that social media have played some role in the recent rise of polarization in the United States.”</p>
+<p>The study defines political polarization in an unusual way—including congenial media exposure—how much news you see from your own side—in its polarization index. Most political scientists would consider congenial media exposure as <em>the thing that might cause polarization</em>, but not an aspect of polarization in and of itself.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../img/AlcottetalFigure3.jpg" title="Allcott et al 2020 Figure 3 demonstrates the biggest effect is on a measure of media exposure" class="img-fluid figure-img"></p>
+<figcaption>Allcott et al 2020 Figure 3</figcaption>
+</figure>
+</div>
+<p>They do explain that their effects on affective polarization are not significant and they don’t try to hide what’s going into the measure. But you have to read beyond the abstract and the media headlines to really understand this point.</p>
+<!-- They make the following claim in a footnote: "Online Appendix Table A16 shows that the effect on the political polarization index is *robust to excluding each of the seven individual component variables in turn*, although the point estimate moves toward zero and the unadjusted p-value rises to 0.09 when omitting congenial news exposure."  -->
+<p>Notably, in a robustness test in the appendix, the effect on the polarization loses statistical significance when you exclude this variable.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../img/AlcottetalFigureA16.jpg" title="Allcott et al 2020 Figure A16 shows that the effect on polarization is not significant at P<0.05 if you exclude congenial media exposure." class="img-fluid figure-img"></p>
+<figcaption>Allcott et al 2020 Figure A16</figcaption>
+</figure>
+</div>
+<p>That means the folks who didn’t deactivate Facebook had higher levels of political knowledge and higher levels of issue polarization. This makes sense because if a person doesn’t know where the parties stand on an issue, she is less likely to be sure about where she ought to stand.</p>
+</section>
+<section id="implications-for-how-this-was-publicized" class="level3">
+<h3 class="anchored" data-anchor-id="implications-for-how-this-was-publicized">Implications for how this was publicized</h3>
+<p>All of this is relevant in light of the controversial Science Cover, which suggests Facebook’s <em>algorithms</em> are “Wired to Split” us. It may be true, but the evidence across all 4 <em>Science</em> and <em>Nature</em> papers is not decisive on this question.</p>
+<p>None of the experiments published so far show an impact on affective or ideological polarization. What’s more, the proper URL-level analyses in <a href="https://www.science.org/doi/full/10.1126/science.ade7138">González-Bailón et al 2023</a> show only a modest ‘Filter Bubble’ for certain subsets of the data, and when it comes to political news, and the reverse-chronological feed ranking experiment shows Newsfeed ranking feeds us <em>less</em> polarized political content than would see in a reverse-chron Newsfeed.</p>
+<p>Of course, the spin from the Meta Comms team that these <a href="https://www.wsj.com/articles/does-facebook-polarize-users-meta-disagrees-with-partners-over-research-conclusions-24fde67a">results are exculpretory</a> is also highly problematic. This claim is not only wrong but amatuerish and self-defeating from a strategic perspective, and I was surprised to read about it.</p>
+<p>For all the amazing work done to produce the experimental results, the data are too noisy to detect small but potentially compounding effects on polarization as suggested in <a href="https://statmodeling.stat.columbia.edu/author/dean/">a post-publication review from Dean Eckles</a> and <a href="https://tecunningham.github.io/posts/2023-07-27-meta-2020-elections-experiments.html">Tom Cunningham</a>.</p>
+<p>What’s more, even the excellent work done here in <a href="https://www.science.org/doi/full/10.1126/science.ade7138">González-Bailón et al 2023</a> does not speak to the question of effects on polarization that other key recommender systems at Facebook may have: the People You May Know (PYMK) algorithm, which facilitates network connections on the website, along with the Pages You Might Like (PYML) and Groups You Might Like (GYML). The authors make a similar point in the Supplementary Materials, S3.2—pointing out that inventory, or the “potential audience,” “results from another curation process determining the structure and composition of the Facebook graph, which itself results from social and algorithmic dynamics.”</p>
+<p>This means that we should <em>not</em> necessarily conclude that exposure is all about individual choices and not algorithms based on the sum total of evidence we have (a point I should have better emphasized <a href="https://solomonmg.github.io/pdf/Science-2015-Bakshy-1130-2.pdf">in past work</a>)—algorithms may play an important role and as usual, more research is needed.</p>
+<p>It would seem to me that both Science and Meta Comms are both going beyond the data here.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../img/ScienceCoverWiredtoSplit.jpeg" title="Wired to Split" class="img-fluid figure-img"></p>
+<figcaption>The Science Cover suggests Facebook’s algorithms are “Wired to Split” us.</figcaption>
+</figure>
+</div>
+</section>
+<section id="disclosures" class="level3">
+<h3 class="anchored" data-anchor-id="disclosures">Disclosures</h3>
+<p>As noted above, from 2018-2020, I was tech lead for Social Science One, which gave external researchers <em>direct</em> access to data (the <a href="../../pdf/Facebook_DP_URLs_Dataset.pdf">‘Condor’ URLs data set</a>) via differential privacy. However, that project has not yielded much research output for a number of organizational and operational reasons, including the fact that differential privacy is not yet suitable for such a complex project.</p>
+<p>While at Facebook, I personally advocated (with Annie Franco) for the collaboration model used in the Election 2020 project, wherein external researchers would collaborate with Facebook researchers. That model would have to shield the research from any interference from Facebook’s Communications and Policy arm, which would violate scientific ethics. It would involve pre-registration, not merely to ensure scientific rigor but to protect against conflicts of interest and selective reporting of results. However, I left Facebook in January of 2020 and have not been deeply involved in the project since.</p>
+<p>I recently left Twitter (requesting to be in the first rounds of layoffs after Elon Musk took over) and started a job at NYU’s CSMaP lab when my employment with Twitter ended. There are authors who are affiliated with my lab on the paper, including one of the PIs, Josh Tucker. My graduate school Advisor, Shanto Iyengar is also on the paper, and I consider the majority of the authors to be my colleagues and friends.</p>
+<p>See also my <a href="../../disclosures/">disclosures page</a>.</p>
+<!-- I do wish the samples and timeframes for the ranking experiments were bigger so we could understand potentially smaller effects, which may be very important.  -->
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const toggle = window.document.createElement('button');
+      toggle.type = "button";
+      toggle.setAttribute("role", "switch");
+      toggle.setAttribute("aria-checked", "false");
+      toggle.classList.add('top-right');
+      toggle.classList.add('quarto-color-scheme-toggle');
+      toggle.setAttribute("aria-label", "Toggle dark mode");
+      toggle.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      toggle.appendChild(i);
+      // Put the toggle in a landmark of its own, so that landmark navigation
+      // can reach it.
+      //
+      // The container is always a fresh direct child of body, and the toggle is
+      // never moved into page furniture that the theme or the author controls.
+      // The toggle is positioned against the page, so any ancestor that
+      // establishes a containing block captures it: a positioned element or a
+      // grid for position: absolute, and transform, filter, will-change or
+      // contain for position: fixed. A direct child of body has none of these
+      // to inherit, and the shift when one appears is silent and visual.
+      //
+      // ARIA says a document should have at most one banner, and axe reports a
+      // duplicate whether or not the banners carry distinct labels. So use a
+      // header when the page has no banner yet, and a named region otherwise.
+      //
+      // A header is a banner wherever it sits, unless it is inside sectioning
+      // content, so this cannot just look at the children of body: a custom
+      // page layout wraps the title block header in a plain div. An explicit
+      // role="banner" always counts.
+      const sectioning = 'article, aside, main, nav, section, [role="article"], [role="complementary"], [role="main"], [role="navigation"], [role="region"]';
+      const hasBanner = Array.from(
+        window.document.querySelectorAll('header:not([role]), [role="banner"]')
+      ).some(function(el) {
+        return el.hasAttribute("role") || el.closest(sectioning) === null;
+      });
+      const container = window.document.createElement(hasBanner ? "div" : "header");
+      if (hasBanner) {
+        container.setAttribute("role", "region");
+        container.setAttribute("aria-label", "Toggle dark mode");
+      }
+      container.classList.add('quarto-color-scheme-toggle-container');
+      container.appendChild(toggle);
+      window.document.body.appendChild(container);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/solomonmg\.github\.io\/");
+      const newWindowLabel = "(opens in a new tab)";
+      const newWindowNoteId = "quarto-ext-newwindow-label";
+      // Links reference one hidden label through aria-describedby, so the
+      // announcement never changes their accessible name.
+      var describeNewWindow = (link) => {
+        if (!window.document.getElementById(newWindowNoteId)) {
+          var newWindowNote = window.document.createElement("span");
+          newWindowNote.id = newWindowNoteId;
+          newWindowNote.hidden = true;
+          newWindowNote.textContent = newWindowLabel;
+          window.document.body.appendChild(newWindowNote);
+        }
+        var describedBy = (link.getAttribute("aria-describedby") || "").split(/\s+/).filter(Boolean);
+        if (!describedBy.includes(newWindowNoteId)) {
+          describedBy.push(newWindowNoteId);
+          link.setAttribute("aria-describedby", describedBy.join(" "));
+        }
+      }
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+      window.quartoDecorateExternalLinks = function (root) {
+     var links = (root || window.document).querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+            describeNewWindow(link);
+          if (!link.classList.contains('no-external-icon')) {
+          }
+        }
+      }
+      };
+      window.quartoDecorateExternalLinks(window.document);
+    // Esc closes the popup (WCAG 1.4.13) and focus leaving both trigger and
+    // popup closes it (WCAG 2.4.11); tippy handles neither for interactive popups.
+    const hideOnEscAndFocusOut = {
+      name: 'hideOnEscAndFocusOut',
+      defaultValue: true,
+      fn(instance) {
+        const dismiss = () => {
+          // A show scheduled by the trigger delay would otherwise reopen it
+          instance.clearDelayTimeouts();
+          instance.hide();
+        };
+        const onKeyDown = (event) => {
+          if (event.key !== 'Escape') {
+            return;
+          }
+          // Keep Esc from also reaching page handlers (e.g. reveal.js overview),
+          // except an open reveal.js slide menu, which Esc should close too.
+          // The menu handles keys only when its keyboard option is on.
+          const menuHandlesEsc = window.Reveal?.getPlugin?.('menu')?.isOpen() &&
+            window.Reveal.getConfig().menu?.keyboard !== false;
+          if (!menuHandlesEsc) {
+            event.stopPropagation();
+          }
+          if (instance.popper.contains(window.document.activeElement)) {
+            // Disabled while refocusing so the focus trigger does not reopen it
+            instance.disable();
+            instance.reference.focus();
+            instance.enable();
+          }
+          dismiss();
+        };
+        const onFocusOut = (event) => {
+          const target = event.relatedTarget;
+          if (target && !instance.reference.contains(target) &&
+              !instance.popper.contains(target)) {
+            dismiss();
+          }
+        };
+        // On the trigger too: a click trigger (code-annotations: select) has no
+        // blur handling. Attached for the instance's lifetime so leaving the
+        // trigger also cancels a show still pending on the trigger delay.
+        instance.reference.addEventListener('focusout', onFocusOut);
+        return {
+          onShow() {
+            window.document.addEventListener('keydown', onKeyDown, true);
+            instance.popper.addEventListener('focusout', onFocusOut);
+          },
+          onHide() {
+            window.document.removeEventListener('keydown', onKeyDown, true);
+            instance.popper.removeEventListener('focusout', onFocusOut);
+          },
+          onDestroy() {
+            instance.reference.removeEventListener('focusout', onFocusOut);
+          },
+        };
+      },
+    };
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+        plugins: [hideOnEscAndFocusOut],
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          // Each band is positioned against its own containing block, which is
+          // not the offsetParent of the lines, so place it from client rects.
+          const placeBand = (band, firstEl, lastEl, codeBlock) => {
+            const container = band.offsetParent;
+            if (container === null) {
+              return;
+            }
+            const containerRect = container.getBoundingClientRect();
+            // Reveal.js scales slides with a transform, so convert client
+            // pixels back to the CSS pixels of the container.
+            const scale = containerRect.height / container.offsetHeight || 1;
+            const firstRect = firstEl.getBoundingClientRect();
+            const lastRect = lastEl.getBoundingClientRect();
+            const top = (firstRect.top - containerRect.top) / scale - container.clientTop + container.scrollTop;
+            const height = (lastRect.bottom - firstRect.top) / scale;
+            band.style.top = top - 2 + "px";
+            band.style.height = height + 4 + "px";
+            if (codeBlock) {
+              // Without the copy button wrapper, the containing block is wider
+              // than the code block, so span the code block explicitly.
+              const blockRect = codeBlock.getBoundingClientRect();
+              band.style.left = (blockRect.left - containerRect.left) / scale - container.clientLeft + container.scrollLeft + "px";
+              band.style.width = blockRect.width / scale + "px";
+            }
+          };
+          if (lineIds.length > 0) {
+            const el = window.document.getElementById(lineIds[0]);
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const parent = el.parentElement.parentElement;
+            // cook up a div (if necessary) and position it
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            placeBand(div, el, lastEl, parent.closest("div.sourceCode") || parent);
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            placeBand(gutterDiv, el, lastEl);
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+  <script type="application/javascript">
+  window.quartoScrollableRegionsLabels = {"code":"Scrollable code","output":"Scrollable output"};
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© 2026 Sol Messing</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="../../disclosures.html">
+<p>Disclosures</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="../../techsetup.html">
+<p>Tech Stack</p>
+</a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+
+<script src="../../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

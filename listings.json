@@ -1,0 +1,48 @@
+[
+  {
+    "listing": "/index.html",
+    "items": [
+      "/blog/state-media-llm/index.html",
+      "/blog/election-projection-regularized-swing/index.html",
+      "/blog/thoughts-on-election-2020/index.html",
+      "/blog/bluesky-quasi-decentralized-social-network/index.html",
+      "/blog/twitter-the-algorithm/index.html",
+      "/blog/what-the-polls-got-wrong-in-2020/index.html",
+      "/blog/trumps-chances-are-better-than-they-look/index.html",
+      "/blog/condor-data-release/index.html",
+      "/blog/projecting-confidence/index.html",
+      "/blog/impression-of-influence/index.html",
+      "/blog/response-to-fivethirtyeights-podcast-about-our-paper-projecting-confidence/index.html",
+      "/blog/visualization-series-scatterplot-understanding-the-diamond-market/index.html",
+      "/blog/how-to-break-regression/index.html",
+      "/blog/replication-of-bias-in-the-flesh/index.html",
+      "/blog/exposure-to-ideologically-diverse-response/index.html",
+      "/blog/when-to-use-stacked-barcharts/index.html",
+      "/blog/visualization-series-insight-from-cleveland-and-tufte-on-plotting-numeric-data-by-groups/index.html",
+      "/blog/working-with-bipartite-affiliation-network-data-in-r/index.html"
+    ]
+  },
+  {
+    "listing": "/blog.html",
+    "items": [
+      "/blog/state-media-llm/index.html",
+      "/blog/election-projection-regularized-swing/index.html",
+      "/blog/thoughts-on-election-2020/index.html",
+      "/blog/bluesky-quasi-decentralized-social-network/index.html",
+      "/blog/twitter-the-algorithm/index.html",
+      "/blog/what-the-polls-got-wrong-in-2020/index.html",
+      "/blog/trumps-chances-are-better-than-they-look/index.html",
+      "/blog/condor-data-release/index.html",
+      "/blog/projecting-confidence/index.html",
+      "/blog/impression-of-influence/index.html",
+      "/blog/response-to-fivethirtyeights-podcast-about-our-paper-projecting-confidence/index.html",
+      "/blog/visualization-series-scatterplot-understanding-the-diamond-market/index.html",
+      "/blog/how-to-break-regression/index.html",
+      "/blog/replication-of-bias-in-the-flesh/index.html",
+      "/blog/exposure-to-ideologically-diverse-response/index.html",
+      "/blog/when-to-use-stacked-barcharts/index.html",
+      "/blog/visualization-series-insight-from-cleveland-and-tufte-on-plotting-numeric-data-by-groups/index.html",
+      "/blog/working-with-bipartite-affiliation-network-data-in-r/index.html"
+    ]
+  }
+]
