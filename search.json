@@ -203,193 +203,235 @@
     "text": "Abstract\nPartisan criticism generates most engagement in social media; most liberal and conservative legislators, party leadership more likely to `go negative’"
   },
   {
-    "objectID": "publications/messing-2020/index.html",
-    "href": "publications/messing-2020/index.html",
-    "title": "Facebook Privacy-Protected Full URLs Data Set",
+    "objectID": "publications/messing-2026-hidden/index.html",
+    "href": "publications/messing-2026-hidden/index.html",
+    "title": "Hidden Measurement Error in LLM Pipelines Distorts Annotation, Evaluation, and Benchmarking",
     "section": "",
-    "text": "Solomon Messing, Christina DeGregorio, Bennett Hillenbrand, Gary King, Saurav Mahanti, Chaya Nayak, Nate Persily (2020). Facebook Privacy-Protected Full URLs Data Set.\nPDF"
+    "text": "Solomon Messing (2026). Hidden Measurement Error in LLM Pipelines Distorts Annotation, Evaluation, and Benchmarking. Advances in Neural Information Processing Systems (NeurIPS).\nPDF SI Appendix arXiv"
   },
   {
-    "objectID": "publications/messing-2020/index.html#abstract",
-    "href": "publications/messing-2020/index.html#abstract",
-    "title": "Facebook Privacy-Protected Full URLs Data Set",
+    "objectID": "publications/messing-2026-hidden/index.html#abstract",
+    "href": "publications/messing-2026-hidden/index.html#abstract",
+    "title": "Hidden Measurement Error in LLM Pipelines Distorts Annotation, Evaluation, and Benchmarking",
     "section": "Abstract",
-    "text": "Abstract\nOne of the largest social science data sets ever constructed, meant to facilitate research on misinformation from across the web, shared and spread on Facebook. It contains exposure data describing external links that billions of users saw and read while using the site. The data set goes beyond URL-level data, breaking down exposure and interactions by month, country, age, gender, and in the U.S., political page affinity (see Barbera et al 2015)."
+    "text": "Abstract\nLLM evaluations drive model deployment, safety standards, research conclusions, and future projections, for example, about AI’s impact on the labor market. Yet the way we often estimate noise from autoraters (LLM-as-judge) ignores variability from factors like judge model choice and prompt phrasing, which means we’re underestimating error in a way that worsens with more data. This unmeasured variance can affect results enough to reverse conclusions. And judge-pipelines that fail to average this variation are more vulnerable to “benchmark hacking”. This paper introduces a framework we call “total evaluation error (TEE),” which decomposes LLM pipeline uncertainty and uses design-study projections to reduce total error. In our safety and ideology applications, naive standard errors are 53-70% smaller than the corrected SE under our TEE framework. Using Chatbot Arena data, we show naive 95% CI coverage drops as n grows, while TEE-corrected coverage holds at 95%, and TEE-guided pipelines restrict the potential range of benchmark gaming by roughly 43%. We show further that a small pilot allows for the estimation of proper CIs, with the added benefit of projecting which design changes most improve precision. Using those projections to allocate API calls cut MMLU estimation error roughly in half against the answer key at the same budget, and increased per-match agreement with human voters on Chatbot Arena by 7.9 percentage points."
   },
   {
-    "objectID": "publications/messing-2020/index.html#more",
-    "href": "publications/messing-2020/index.html#more",
-    "title": "Facebook Privacy-Protected Full URLs Data Set",
+    "objectID": "publications/messing-2016-bias/index.html",
+    "href": "publications/messing-2016-bias/index.html",
+    "title": "Bias in the flesh: Skin complexion and stereotype consistency in political campaigns",
+    "section": "",
+    "text": "Solomon Messing, Maria Jabon, Ethan Plaut (2016). Bias in the flesh: Skin complexion and stereotype consistency in political campaigns. Public opinion quarterly.\nPDF"
+  },
+  {
+    "objectID": "publications/messing-2016-bias/index.html#abstract",
+    "href": "publications/messing-2016-bias/index.html#abstract",
+    "title": "Bias in the flesh: Skin complexion and stereotype consistency in political campaigns",
+    "section": "Abstract",
+    "text": "Abstract\nThere is strong evidence linking skin complexion to negative stereotypes and adverse real-world outcomes. We extend these findings to political ad campaigns, in which skin complexion can be easily manipulated in ways that are difficult to detect. Devising a method to measure how dark a candidate appears in an image, this paper examines how complexion varied with ad content during the 2008 presidential election campaign (study 1). Findings show that darker images were more frequent in negative ads—especially those linking Obama to crime—which aired more frequently as Election Day approached. We then conduct an experiment to document how these darker images can activate stereotypes, and show that a subtle darkness manipulation is sufficient to activate the most negative stereotypes about Blacks—even when the candidate is a famous counter-stereotypical exemplar—Barack Obama (study 2). Further evidence of an evaluative penalty for darker skin comes from an observational study measuring affective responses to depictions of Obama with varying skin complexion, presented via the Affect Misattribution Procedure in the 2008 American National Election Study (study 3). This study demonstrates that darker images are used in a way that complements ad content, and shows that doing so can negatively affect how individuals evaluate candidates and think about politics."
+  },
+  {
+    "objectID": "publications/messing-2013-friends/index.html",
+    "href": "publications/messing-2013-friends/index.html",
+    "title": "Friends that Matter: How Social News Shapes Political Knowledge, Attitudes, and Behavior",
+    "section": "",
+    "text": "Solomon Messing (2013). Friends that Matter: How Social News Shapes Political Knowledge, Attitudes, and Behavior.\nPDF"
+  },
+  {
+    "objectID": "publications/messing-2013-friends/index.html#abstract",
+    "href": "publications/messing-2013-friends/index.html#abstract",
+    "title": "Friends that Matter: How Social News Shapes Political Knowledge, Attitudes, and Behavior",
+    "section": "Abstract",
+    "text": "Abstract\nThis chapter describes the first known research on how socially-shared news affects political interest, policy preferences, and self reported voter turnout. It relies on a feed-ranking AB test on Facebook during the 2012 election to instrument exposure to content, and a large survey launched after election day. The chapter first examines the correlation between exposure to socially-shared public affairs content, or “hard news,” and civic engagement, in the setting of social media. It then analyzes the effect of the feed-ranking AB test, finding the following small but notable effects—additional exposure to socially shared political content caused small increases in self reported turnout, and caused respondents to report slightly more liberal policy preferences, particularly among independents."
+  },
+  {
+    "objectID": "publications/messing-2011-measuring/index.html",
+    "href": "publications/messing-2011-measuring/index.html",
+    "title": "Measuring issue salience: Using supervised machine learning to generate data from free responses to the ‘most important problem’ question",
+    "section": "",
+    "text": "Solomon Messing (2011). Measuring issue salience: Using supervised machine learning to generate data from free responses to the ‘most important problem’ question.\nPDF"
+  },
+  {
+    "objectID": "publications/kifer-2020-guidelines/index.html",
+    "href": "publications/kifer-2020-guidelines/index.html",
+    "title": "Guidelines for Implementing and Auditing Differentially Private Systems",
+    "section": "",
+    "text": "Daniel Kifer, Solomon Messing, Aaron Roth, Abhradeep Thakurta, Danfeng Zhang (2020). Guidelines for Implementing and Auditing Differentially Private Systems. arXiv preprint arXiv:2002.04049."
+  },
+  {
+    "objectID": "publications/kifer-2020-guidelines/index.html#abstract",
+    "href": "publications/kifer-2020-guidelines/index.html#abstract",
+    "title": "Guidelines for Implementing and Auditing Differentially Private Systems",
+    "section": "Abstract",
+    "text": "Abstract\nDifferential privacy is an information theoretic constraint on algorithms and code. It provides quantification of privacy leakage and formal privacy guarantees that are currently considered the gold standard in privacy protections. In this paper we provide an initial set of “best practices” for developing differentially private platforms, techniques for unit testing that are specific to differential privacy, guidelines for checking if differential privacy is being applied correctly in an application, and recommendations for parameter settings. The genesis of this paper was an initiative by Facebook and Social Science One to provide social science researchers with programmatic access to a URL-shares dataset. In order to maximize the utility of the data for research while protecting privacy, researchers should access the data through an interactive platform that supports differential privacy. The intention of this paper is to provide guidelines and recommendations that can generally be re-used in a wide variety of systems. For this reason, no specific platforms will be named, except for systems whose details and theory appear in academic papers."
+  },
+  {
+    "objectID": "publications/khurana-2013-ferumoxytol/index.html",
+    "href": "publications/khurana-2013-ferumoxytol/index.html",
+    "title": "Ferumoxytol: a new, clinically applicable label for stem-cell tracking in arthritic joints with MRI",
+    "section": "",
+    "text": "Aman Khurana, Hossein Nejadnik, Fanny Chapelin, Olga Lenkov, Rakhee Gawande, Sungmin Lee, Sandeep N Gupta, Nooshin Aflakian, Nikita Derugin, Solomon Messing, others (2013). Ferumoxytol: a new, clinically applicable label for stem-cell tracking in arthritic joints with MRI. Nanomedicine."
+  },
+  {
+    "objectID": "publications/khurana-2013-ferumoxytol/index.html#abstract",
+    "href": "publications/khurana-2013-ferumoxytol/index.html#abstract",
+    "title": "Ferumoxytol: a new, clinically applicable label for stem-cell tracking in arthritic joints with MRI",
+    "section": "Abstract",
+    "text": "Abstract\nAim To develop a clinically applicable MRI technique for tracking stem cells in matrix-associated stem-cell implants, using the US FDA-approved iron supplement ferumoxytol. Materials & methods Ferumoxytol-labeling of adipose-derived stem cells (ADSCs) was optimized in vitro. A total of 11 rats with osteochondral defects of both femurs were implanted with ferumoxytol- or ferumoxides-labeled or unlabeled ADSCs, and underwent MRI up to 4 weeks post matrix-associated stem-cell implant. The signal-to-noise ratio of different matrix-associated stem-cell implant was compared with t-tests and correlated with histopathology. Results An incubation concentration of 500 µg iron/ml ferumoxytol and 10 µg/ml protamine sulfate led to significant cellular iron uptake, T2 signal effects and unimpaired ADSC viability. In vivo, ferumoxytol-and ferumoxides-labeled ADSCs demonstrated significantly lower signal-to-noise ratio values compared with unlabeled controls (p &lt; 0.01). Histopathology confirmed engraftment of labeled ADSCs, with slow dilution of the iron label over time. Conclusion Ferumoxytol can be used for in vivo tracking of stem cells with MRI."
+  },
+  {
+    "objectID": "publications/iyengar-2013-attitudes/index.html",
+    "href": "publications/iyengar-2013-attitudes/index.html",
+    "title": "Do attitudes about immigration predict willingness to admit individual immigrants? A cross-national test of the person-positivity bias",
+    "section": "",
+    "text": "Shanto Iyengar, Simon Jackman, Solomon Messing, Nicholas Valentino, Toril Aalberg, Raymond Duch, Kyu S Hahn, Stuart Soroka, Allison Harell, Tetsuro Kobayashi (2013). Do attitudes about immigration predict willingness to admit individual immigrants? A cross-national test of the person-positivity bias. Public opinion quarterly."
+  },
+  {
+    "objectID": "publications/iyengar-2013-attitudes/index.html#abstract",
+    "href": "publications/iyengar-2013-attitudes/index.html#abstract",
+    "title": "Do attitudes about immigration predict willingness to admit individual immigrants? A cross-national test of the person-positivity bias",
+    "section": "Abstract",
+    "text": "Abstract\nThis paper demonstrates that citizens in seven advanced industrialized democracies generally oppose more open immigration policies, but stand ready to admit individual immigrants. Using an experimental design, we demonstrate the applicability of the “person-positivity bias” to immigration and investigate the effects of economic and cultural “deservingness” on evaluations of individual immigrants. Our results show that immigrants from professional backgrounds elicit higher levels of support than unskilled workers. The bias against unskilled workers is enlarged among immigrants accompanied by families. In comparison with occupational status and the number of family dependents, the target immigrant’s cultural attributes—as measured by Middle Eastern nationality and Afrocentric appearance—prove relatively inconsequential as criteria for evaluating immigrants."
+  },
+  {
+    "objectID": "publications/grimmer-how-2012/index.html",
+    "href": "publications/grimmer-how-2012/index.html",
+    "title": "How Words and Money Cultivate a Personal Vote: The Effect of Legislator Credit Claiming on Constituent Credit Allocation",
+    "section": "",
+    "text": "Justin Grimmer, Solomon Messing, Sean J. Westwood (2012). How Words and Money Cultivate a Personal Vote: The Effect of Legislator Credit Claiming on Constituent Credit Allocation. American Political Science Review. doi:10.1017/S0003055412000457\nPDF DOI"
+  },
+  {
+    "objectID": "publications/grimmer-how-2012/index.html#abstract",
+    "href": "publications/grimmer-how-2012/index.html#abstract",
+    "title": "How Words and Money Cultivate a Personal Vote: The Effect of Legislator Credit Claiming on Constituent Credit Allocation",
+    "section": "Abstract",
+    "text": "Abstract\nParticularistic spending, a large literature argues, builds support for incumbents. This literature equates money spent in the district with the credit constituents allocate. Yet, constituents lack the necessary information and motivation to allocate credit in this way. We use extensive observational and experimental evidence to show how legislators’ credit claiming messages—and not just money spent in the district—affect how constituents allocate credit. Legislators use credit claiming messages to influence the expenditures they receive credit for and to affect how closely they are associated with spending in the district. Constituents are responsive to credit claiming messages—they build more support than other nonpartisan messages. But contrary to expectations from other studies, constituents are more responsive to the total number of messages sent rather than the amount claimed. Our results have broad implications for political representation, the personal vote, and the study of U.S. Congressional elections."
+  },
+  {
+    "objectID": "publications/grimmer-how-2012/index.html#more",
+    "href": "publications/grimmer-how-2012/index.html#more",
+    "title": "How Words and Money Cultivate a Personal Vote: The Effect of Legislator Credit Claiming on Constituent Credit Allocation",
     "section": "More",
-    "text": "More\n\nLargest ever social science data set released, protected using action-level differential privacy.\nSee also Social Science One’s annoucement.\nMedia coverage: Science, Nature, Poynter, Wired, Financial Times, Tech Crunch, The Verge."
+    "text": "More\n\nSupplementary Information"
   },
   {
-    "objectID": "publications/messing-2014-selective/index.html",
-    "href": "publications/messing-2014-selective/index.html",
-    "title": "Selective exposure in the age of social media: Endorsements trump partisan source affiliation when selecting news online",
+    "objectID": "publications/gri-mes-wes-14/index.html",
+    "href": "publications/gri-mes-wes-14/index.html",
+    "title": "The Impression of Influence: Legislator Communication, Representation, and Democratic Accountability",
     "section": "",
-    "text": "Solomon Messing, Sean J Westwood (2014). Selective exposure in the age of social media: Endorsements trump partisan source affiliation when selecting news online. Communication research.\nPDF"
+    "text": "Justin Grimmer, Sean J. Westwood, Solomon Messing (2014). The Impression of Influence: Legislator Communication, Representation, and Democratic Accountability. Princeton University Press."
   },
   {
-    "objectID": "publications/messing-2014-selective/index.html#abstract",
-    "href": "publications/messing-2014-selective/index.html#abstract",
-    "title": "Selective exposure in the age of social media: Endorsements trump partisan source affiliation when selecting news online",
+    "objectID": "publications/gri-mes-wes-14/index.html#abstract",
+    "href": "publications/gri-mes-wes-14/index.html#abstract",
+    "title": "The Impression of Influence: Legislator Communication, Representation, and Democratic Accountability",
     "section": "Abstract",
-    "text": "Abstract\nMuch of the literature on polarization and selective exposure presumes that the internet exacerbates the fragmentation of the media and the citizenry. Yet this ignores how the widespread use of social media changes news consumption. Social media provide readers a choice of stories from different sources that come recommended from politically heterogeneous individuals, in a context that emphasizes social value over partisan affiliation. Building on existing models of news selectivity to emphasize information utility, we hypothesize that social media’s distinctive feature, social endorsements, trigger several decision heuristics that suggest utility. In two experiments, we demonstrate that stronger social endorsements increase the probability that people select content and that their presence reduces partisan selective exposure to levels indistinguishable from chance."
+    "text": "Abstract\nConstituents often fail to hold their representatives accountable for federal spending decisions―even though those very choices have a pervasive influence on American life. Why does this happen? Breaking new ground in the study of representation, The Impression of Influence demonstrates how legislators skillfully inform constituents with strategic communication and how this facilitates or undermines accountability. Using a massive collection of Congressional texts and innovative experiments and methods, the book shows how legislators create an impression of influence through credit claiming messages. Anticipating constituents’ reactions, legislators claim credit for programs that elicit a positive response, making constituents believe their legislator is effectively representing their district. This spurs legislators to create and defend projects popular with their constituents. Yet legislators claim credit for much more―they announce projects long before they begin, deceptively imply they deserve credit for expenditures they had little role in securing, and boast about minuscule projects. Unfortunately, legislators get away with seeking credit broadly because constituents evaluate the actions that are reported, rather than the size of the expenditures. The Impression of Influence raises critical questions about how citizens hold their political representatives accountable and when deception is allowable in a democracy."
   },
   {
-    "objectID": "publications/messing-2012-ts/index.html",
-    "href": "publications/messing-2012-ts/index.html",
-    "title": "The 2012 Election Day Through the Facebook Lens",
-    "section": "",
-    "text": "Solomon Messing, Cameron Marlow, Eytan Bakshy (2012). The 2012 Election Day Through the Facebook Lens.\nPDF"
-  },
-  {
-    "objectID": "publications/lew-2011-course/index.html",
-    "href": "publications/lew-2011-course/index.html",
-    "title": "Of course I wouldn’t do that in real life: advancing the arguments for increasing realism in HCI experiments",
-    "section": "",
-    "text": "Letitia Lew, Truc Nguyen, Solomon Messing, Sean Westwood (2011). Of course I wouldn’t do that in real life: advancing the arguments for increasing realism in HCI experiments. CHI’11 Extended Abstracts on Human Factors in Computing Systems."
-  },
-  {
-    "objectID": "publications/khurana-2013-iron/index.html",
-    "href": "publications/khurana-2013-iron/index.html",
-    "title": "Iron administration before stem cell harvest enables MR imaging tracking after transplantation",
-    "section": "",
-    "text": "Aman Khurana, Fanny Chapelin, Graham Beck, Olga D Lenkov, Jessica Donig, Hossein Nejadnik, Solomon Messing, Nikita Derugin, Ray Chun-Fai Chan, Amitabh Gaur, others (2013). Iron administration before stem cell harvest enables MR imaging tracking after transplantation. Radiology."
-  },
-  {
-    "objectID": "publications/khurana-2013-iron/index.html#abstract",
-    "href": "publications/khurana-2013-iron/index.html#abstract",
-    "title": "Iron administration before stem cell harvest enables MR imaging tracking after transplantation",
-    "section": "Abstract",
-    "text": "Abstract\nIn vivo–labeled MSCs demonstrated significantly higher ferumoxytol uptake compared with ex vivo–labeled cells. With electron microscopy, iron oxide nanoparticles were localized in secondary lysosomes. In vivo–labeled cells demonstrated significant T2 shortening effects in vitro and in vivo when they were compared with unlabeled control cells (T2 in vivo, 15.4 vs 24.4 msec; P &lt; .05) and could be tracked in osteochondral defects for 4 weeks. Histologic examination confirmed the presence of iron in labeled transplants and defect remodeling. Conclusion: Intravenous ferumoxytol can be used to effectively label MSCs in vivo and can be used for tracking of stem cell transplants with MR imaging. This method eliminates risks of contamination and biologic alteration of MSCs associated with ex vivo–labeling procedures."
-  },
-  {
-    "objectID": "publications/khurana-2012-intravenous/index.html",
-    "href": "publications/khurana-2012-intravenous/index.html",
-    "title": "Intravenous ferumoxytol allows noninvasive MR imaging monitoring of macrophage migration into stem cell transplants",
-    "section": "",
-    "text": "Aman Khurana, Hossein Nejadnik, Rakhee Gawande, Guiting Lin, Sungmin Lee, Solomon Messing, Rosalinda Castaneda, Nikita Derugin, Laura Pisani, Tom F Lue, others (2012). Intravenous ferumoxytol allows noninvasive MR imaging monitoring of macrophage migration into stem cell transplants. Radiology."
-  },
-  {
-    "objectID": "publications/iyengar-2008-explicit/index.html",
-    "href": "publications/iyengar-2008-explicit/index.html",
-    "title": "Do explicit racial cues influence candidate preference? The case of skin complexion in the 2008 campaign",
-    "section": "",
-    "text": "Shanto Iyengar, Kyu S Hahn, Solomon Messing, Jeremy N Bailenson (2008). Do explicit racial cues influence candidate preference? The case of skin complexion in the 2008 campaign. The Case of Skin Complexion in the."
-  },
-  {
-    "objectID": "publications/iyengar-2008-explicit/index.html#abstract",
-    "href": "publications/iyengar-2008-explicit/index.html#abstract",
-    "title": "Do explicit racial cues influence candidate preference? The case of skin complexion in the 2008 campaign",
-    "section": "Abstract",
-    "text": "Abstract\nSkin color is an explicit racial cue. Although there is strong evidence linking darker skin complexion to the activation of racial stereotypes and adverse societal outcomes, little is known about the extent to which this effect is in play during political campaigns. If white voters make use of this skin complexion cue, we would expect exposure to darker images of a minority candidate to result in a “dark-skin penalty” at the ballot box. We investigate the impact of skin complexion on support for Barack Obama at two different stages of the 2008 campaign: Study 1 occurred during the primary campaign and Study 2 during the closing stages of the general election. Our findings suggest that when citizens are still learning about a minority candidate’s personal background, subtle changes in skin complexion can have an effect on evaluations of that candidate and that citizens with higher levels of implicit racial bias are less likely to prefer a darker-skinned minority candidate."
-  },
-  {
-    "objectID": "publications/grimmer-2017-estimating/index.html",
-    "href": "publications/grimmer-2017-estimating/index.html",
-    "title": "Estimating heterogeneous treatment effects and the effects of heterogeneous treatments with ensemble methods",
-    "section": "",
-    "text": "Justin Grimmer, Solomon Messing, Sean J Westwood (2017). Estimating heterogeneous treatment effects and the effects of heterogeneous treatments with ensemble methods. Political Analysis.\nPDF"
-  },
-  {
-    "objectID": "publications/grimmer-2017-estimating/index.html#abstract",
-    "href": "publications/grimmer-2017-estimating/index.html#abstract",
-    "title": "Estimating heterogeneous treatment effects and the effects of heterogeneous treatments with ensemble methods",
-    "section": "Abstract",
-    "text": "Abstract\nRandomized experiments are increasingly used to study political phenomena because they can credibly estimate the average effect of a treatment on a population of interest. But political scientists are often interested in how effects vary across subpopulations—heterogeneous treatment effects—and how differences in the content of the treatment affects responses—the response to heterogeneous treatments. Several new methods have been introduced to estimate heterogeneous effects, but it is difficult to know if a method will perform well for a particular data set. Rather than using only one method, we show how an ensemble of methods—weighted averages of estimates from individual models increasingly used in machine learning—accurately measure heterogeneous effects. Building on a large literature on ensemble methods, we show how the weighting of methods can contribute to accurate estimation of heterogeneous treatment effects and demonstrate how pooling models lead to superior performance to individual methods across diverse problems. We apply the ensemble method to two experiments, illuminating how the ensemble method for heterogeneous treatment effects facilitates exploratory analysis of treatment effects."
-  },
-  {
-    "objectID": "publications/grimmer-2017-estimating/index.html#more",
-    "href": "publications/grimmer-2017-estimating/index.html#more",
-    "title": "Estimating heterogeneous treatment effects and the effects of heterogeneous treatments with ensemble methods",
+    "objectID": "publications/gri-mes-wes-14/index.html#more",
+    "href": "publications/gri-mes-wes-14/index.html#more",
+    "title": "The Impression of Influence: Legislator Communication, Representation, and Democratic Accountability",
     "section": "More",
-    "text": "More\n\nReplication materials.\n\nSoftware implementation (under development)"
+    "text": "More\n\nMedia: Mischiefs of Faction."
   },
   {
-    "objectID": "publications/gawande-2013-role/index.html",
-    "href": "publications/gawande-2013-role/index.html",
-    "title": "Role of diffusion-weighted imaging in differentiating benign and malignant pediatric abdominal tumors",
+    "objectID": "publications/gawande-2012-fdg/index.html",
+    "href": "publications/gawande-2012-fdg/index.html",
+    "title": "FDG PET/CT for the Evaluation of Normal Thymus, Lymphoma Recurrence, and Mediastinal Lymphoma in Pediatric Patients Response",
     "section": "",
-    "text": "Rakhee S Gawande, Gabriel Gonzalez, Solomon Messing, Aman Khurana, Heike E Daldrup-Link (2013). Role of diffusion-weighted imaging in differentiating benign and malignant pediatric abdominal tumors. Pediatric radiology."
+    "text": "Rakhee S Gawande, Spencer Behr, Solomon Messing, Robert E Goldsby, Randall A Hawkins, Heike E Daldrup-Link (2012). FDG PET/CT for the Evaluation of Normal Thymus, Lymphoma Recurrence, and Mediastinal Lymphoma in Pediatric Patients Response. RADIOLOGY."
   },
   {
-    "objectID": "publications/gawande-2013-role/index.html#abstract",
-    "href": "publications/gawande-2013-role/index.html#abstract",
-    "title": "Role of diffusion-weighted imaging in differentiating benign and malignant pediatric abdominal tumors",
+    "objectID": "publications/chapelin-2019-tumor/index.html",
+    "href": "publications/chapelin-2019-tumor/index.html",
+    "title": "Tumor formation of adult stem cell transplants in rodent arthritic joints",
+    "section": "",
+    "text": "Fanny Chapelin, Aman Khurana, Mohammad Moneeb, Florette K Gray Hazard, Chun Fai Ray Chan, Hossein Nejadnik, Dita Gratzinger, Solomon Messing, Jason Erdmann, Amitabh Gaur, others (2019). Tumor formation of adult stem cell transplants in rodent arthritic joints. Molecular Imaging and Biology."
+  },
+  {
+    "objectID": "publications/chapelin-2019-tumor/index.html#abstract",
+    "href": "publications/chapelin-2019-tumor/index.html#abstract",
+    "title": "Tumor formation of adult stem cell transplants in rodent arthritic joints",
     "section": "Abstract",
-    "text": "Abstract\nWe retrospectively analyzed DWI scans of 68 consecutive children with 39 benign and 34 malignant abdominal masses. To calculate the apparent diffusion coefficient (ADC) maps and ADC values, we used 1.5-T sequences at TR/TE/b-value of 5,250–7,500/54–64/b = 0, 500 and 3-T sequences at 3,500–4,000/66–73/b = 0, 500, 800. ADC values were compared between benign and malignant and between data derived at 1.5 tesla (T) and at 3 tesla magnetic field strength, using the Mann-Whitney-Wilcoxon test, ANOVA and a receiver operating curve (ROC) analysis. Results There was no significant difference in ADC values obtained at 1.5 T and 3 T (P = 0.962). Mean ADC values (× 10−3 mm2/s) were 1.07 for solid malignant tumors, 1.6 for solid benign tumors, 2.9 for necrotic portions of malignant tumors and 3.1 for cystic benign lesions. The differences between malignant and benign solid tumors were statistically significant (P = 0.000025). ROC analysis revealed an optimal cut-off ADC value for differentiating malignant and benign solid tumors as 1.29 with excellent inter-observer reliability (alpha score 0.88). Conclusion DWI scans and ADC values can contribute to distinguishing between benign and malignant pediatric abdominal tumors."
+    "text": "Abstract\nPurpose: While imaging matrix-associated stem cell transplants aimed for cartilage repair in a rodent arthritis model, we noticed that some transplants formed locally destructive tumors. The purpose of this study was to determine the cause for this tumor formation in order to avoid this complication for future transplants. Procedures: Adipose-derived stem cells (ADSC) isolated from subcutaneous adipose tissue were implanted into 24 osteochondral defects of the distal femur in ten athymic rats and two immunocompetent control rats. All transplants underwent serial magnetic resonance imaging (MRI) up to 6 weeks post-transplantation to monitor joint defect repair. Nine transplants showed an increasing size over time that caused local bone destruction (group 1), while 11 transplants in athymic rats (group 2) and 4 transplants in immunocompetent rats did not. We compared the ADSC implant size and growth rate on MR images, macroscopic features, histopathologic features, surface markers, and karyotypes of these presumed neoplastic transplants with non-neoplastic ADSC transplants. Results: Implants in group 1 showed a significantly increased two-dimensional area at week 2 (p = 0.0092), 4 (p = 0.003), and 6 (p = 0.0205) compared to week 0, as determined by MRI. Histopathological correlations confirmed neoplastic features in group 1 with significantly increased size, cellularity, mitoses, and cytological atypia compared to group 2. Six transplants in group 1 were identified as malignant chondrosarcomas and three transplants as fibromyxoid sarcomas. Transplants in group 2 and immunocompetent controls exhibited normal cartilage features. Both groups showed a normal ADSC phenotype; however, neoplastic ADSC demonstrated a mixed population of diploid and tetraploid cells without genetic imbalance. Conclusions: ADSC transplants can form tumors in vivo. Preventive actions to avoid in vivo tumor formations may include karyotyping of culture-expanded ADSC before transplantation. In addition, serial imaging of ADSC transplants in vivo may enable early detection of abnormally proliferating cell transplants."
   },
   {
-    "objectID": "publications/gawande-2012-differentiation/index.html",
-    "href": "publications/gawande-2012-differentiation/index.html",
-    "title": "Differentiation of Normal Thymus from Anterior Mediastinal Lymphoma and Lymphoma Recurrence at Pediatric PET/CT",
+    "objectID": "publications/brown-2024-nextdoor/index.html",
+    "href": "publications/brown-2024-nextdoor/index.html",
+    "title": "Digital town square? Nextdoor’s offline contexts and online discourse",
     "section": "",
-    "text": "Rakhee S Gawande, Aman Khurana, Solomon Messing, Dong Zhang, Rosalinda T Castañeda, Robert E Goldsby, Randall A Hawkins, Heike E Daldrup-Link (2012). Differentiation of Normal Thymus from Anterior Mediastinal Lymphoma and Lymphoma Recurrence at Pediatric PET/CT. Radiology."
+    "text": "Megan A. Brown, Zeve Sanderson, Sarah Graham, Minjoo Kim, Joshua A. Tucker, Solomon Messing (2024). Digital town square? Nextdoor’s offline contexts and online discourse. Journal of Quantitative Description: Digital Media.\nPDF"
   },
   {
-    "objectID": "publications/brown-2025-web-scraping/index.html",
-    "href": "publications/brown-2025-web-scraping/index.html",
-    "title": "Web scraping for research: Legal, ethical, institutional, and scientific considerations",
-    "section": "",
-    "text": "Megan A. Brown, Andrew Gruen, Gabe Maldoff, Solomon Messing, Zeve Sanderson, Michael Zimmer (2025). Web scraping for research: Legal, ethical, institutional, and scientific considerations. Big Data & Society. doi:10.1177/20539517251381686\nPDF DOI"
-  },
-  {
-    "objectID": "publications/brown-2025-web-scraping/index.html#abstract",
-    "href": "publications/brown-2025-web-scraping/index.html#abstract",
-    "title": "Web scraping for research: Legal, ethical, institutional, and scientific considerations",
+    "objectID": "publications/brown-2024-nextdoor/index.html#abstract",
+    "href": "publications/brown-2024-nextdoor/index.html#abstract",
+    "title": "Digital town square? Nextdoor’s offline contexts and online discourse",
     "section": "Abstract",
-    "text": "Abstract\nScientists across disciplines often use data from the internet to conduct research, generating valuable insights about human behavior. However, as generative artificial intelligence relying on massive text corpora becomes increasingly valuable, platforms have greatly restricted access to data through official channels. As a result, researchers will likely engage in more web scraping to collect data, introducing new challenges and concerns for researchers. This paper proposes a comprehensive framework for web scraping in social science research for U.S.-based researchers, examining the legal, ethical, institutional, and scientific factors that we recommend researchers consider when scraping the web. We present an overview of the current regulatory environment impacting when and how researchers can access, collect, store, and share data via scraping. We then provide researchers with recommendations to conduct scraping in a scientifically legitimate and ethical manner. We aim to equip researchers with the relevant information to mitigate risks and maximize the impact of their research amid this evolving data access landscape."
+    "text": "Abstract\nitem abstract”&gt; Abstract There is scant quantitative research describing Nextdoor, the world’s largest and most important hyperlocal social media network. Due to its localized structure, Nextdoor data are notoriously difficult to collect and work with. We build multiple datasets that allow us to generate descriptive analyses of the platform’s offline contexts and online content. We first create a comprehensive dataset of all Nextdoor neighborhoods joined with U.S. Census data, which we analyze at the community-level (block-group). Our findings suggests that Nextdoor is primarily used in communities where the populations are whiter, more educated, more likely to own a home, and with higher levels of average income, potentially impacting the platform’s ability to create new opportunities for social capital formation and citizen engagement. At the same time, Nextdoor neighborhoods are more likely to have active government agency accounts—and law enforcement agencies in particular—where offline communities are more urban, have larger nonwhite populations, greater income inequality, and higher average home values. We then build a convenience sample of 30 Nextdoor neighborhoods, for which we collect daily posts and comments appearing in the feed (115,716 posts and 163,903 comments), as well as associated metadata. Among the accounts for which we collected posts and comments, posts seeking or offering services were the most frequent, while those reporting potentially suspicious people or activities received the highest average number of comments. Taken together, our study describes the ecosystem of and discussion on Nextdoor, as well as introduces data for quantitatively studying the platform."
   },
   {
-    "objectID": "publications/bond-2015-quantifying/index.html",
-    "href": "publications/bond-2015-quantifying/index.html",
-    "title": "Quantifying social media’s political space: Estimating ideology from publicly revealed preferences on Facebook",
+    "objectID": "publications/bakshy-2015-exposure/index.html",
+    "href": "publications/bakshy-2015-exposure/index.html",
+    "title": "Exposure to ideologically diverse news and opinion on Facebook",
     "section": "",
-    "text": "Robert Bond, Solomon Messing (2015). Quantifying social media’s political space: Estimating ideology from publicly revealed preferences on Facebook. American Political Science Review.\nPDF"
+    "text": "Eytan Bakshy, Solomon Messing, Lada A Adamic (2015). Exposure to ideologically diverse news and opinion on Facebook. Science.\nPDF"
   },
   {
-    "objectID": "publications/bond-2015-quantifying/index.html#abstract",
-    "href": "publications/bond-2015-quantifying/index.html#abstract",
-    "title": "Quantifying social media’s political space: Estimating ideology from publicly revealed preferences on Facebook",
+    "objectID": "publications/bakshy-2015-exposure/index.html#abstract",
+    "href": "publications/bakshy-2015-exposure/index.html#abstract",
+    "title": "Exposure to ideologically diverse news and opinion on Facebook",
     "section": "Abstract",
-    "text": "Abstract\nWe demonstrate that social media data represent a useful resource for testing models of legislative and individual-level political behavior and attitudes. First, we develop a model to estimate the ideology of politicians and their supporters using social media data on individual citizens’ endorsements of political figures. Our measure allows us to place politicians and more than 6 million citizens who are active in social media on the same metric. We validate the ideological estimates that result from the scaling process by showing they correlate highly with existing measures of ideology from Congress, and with individual-level self-reported political views. Finally, we use these measures to study the relationship between ideology and age, social relationships and ideology, and the relationship between friend ideology and turnout."
+    "text": "Abstract\nExposure to news, opinion, and civic information increasingly occurs through social media. How do these online networks influence exposure to perspectives that cut across ideological lines? Using deidentified data, we examined how 10.1 million U.S. Facebook users interact with socially shared news. We directly measured ideological homophily in friend networks and examined the extent to which heterogeneous friends could potentially expose individuals to cross-cutting content. We then quantified the extent to which individuals encounter comparatively more or less diverse content while interacting via Facebook’s algorithmically ranked News Feed and further studied users’ choices to click through to ideologically discordant content. Compared with algorithmic ranking, individuals’ choices played a stronger role in limiting exposure to cross-cutting content."
   },
   {
-    "objectID": "publications/aggarwal-2023-2-million-experiment/index.html",
-    "href": "publications/aggarwal-2023-2-million-experiment/index.html",
-    "title": "A 2 million-person, campaign-wide field experiment shows how digital advertising affects voter turnout",
-    "section": "",
-    "text": "Minali Aggarwal, Jennifer Allen, Alexander Coppock, Dan Frankowski, Solomon Messing, Kelly Zhang, James Barnes, Andrew Beasley, Harry Hantman, Sylvan Zheng (2023). A 2 million-person, campaign-wide field experiment shows how digital advertising affects voter turnout. Nature Human Behaviour.\nPDF"
-  },
-  {
-    "objectID": "publications/aggarwal-2023-2-million-experiment/index.html#abstract",
-    "href": "publications/aggarwal-2023-2-million-experiment/index.html#abstract",
-    "title": "A 2 million-person, campaign-wide field experiment shows how digital advertising affects voter turnout",
-    "section": "Abstract",
-    "text": "Abstract\nWe present the results of a massive, $8.9 million campaign-wide field experiment, conducted among 2 million moderate and low-information “persuadable” voters in five battleground states during the 2020 US Presidential election. Treatment group subjects were exposed to an eight-month-long advertising program delivered via social media, designed to persuade people to vote against Donald Trump and for Joe Biden. On average, the program neither increased or decreased turnout. We find evidence of differential turnout effects by modeled level of Trump support: the campaign increased voting among Biden leaners by 0.4 percentage points (SE: 0.2pp) and decreased voting among Trump leaners by 0.3 percentage points (SE: 0.3pp), for a difference-in-CATES of 0.7 points t(1035571) = -2.09, p = 0.036, DIC = 0.7 points, 95% CI = [-0.014, -0.00]). An important but exploratory finding is that the strongest differential effects appear in early voting data, which may inform future work on early campaigning in a post-COVID electoral environment. Our results indicate that differential mobilization effects of even large digital advertising campaigns in presidential elections are likely to be modest."
-  },
-  {
-    "objectID": "publications/aggarwal-2023-2-million-experiment/index.html#more",
-    "href": "publications/aggarwal-2023-2-million-experiment/index.html#more",
-    "title": "A 2 million-person, campaign-wide field experiment shows how digital advertising affects voter turnout",
+    "objectID": "publications/bakshy-2015-exposure/index.html#more",
+    "href": "publications/bakshy-2015-exposure/index.html#more",
+    "title": "Exposure to ideologically diverse news and opinion on Facebook",
     "section": "More",
-    "text": "More\n\nSupplimentary materials at end of manuscript\nReplication materials\nMedia coverage: Nature"
+    "text": "More\n\nReview by David Lazer\nSupplementary materials\nReplication materials\nMedia: New York Times, the Washington Post, the BBC, CBS, Huffington Post, Ars Technica, Wired UK, The Verge."
   },
   {
-    "objectID": "techsetup.html",
-    "href": "techsetup.html",
-    "title": "Tech Stack",
+    "objectID": "publications/aalberg-2012-deserving/index.html",
+    "href": "publications/aalberg-2012-deserving/index.html",
+    "title": "Who is a `deserving’immigrant? An experimental study of Norwegian attitudes",
     "section": "",
-    "text": "Best terminal (iterm 2) setup I’ve found yet\nFix annoying error messages in RStudio\nStatET, an R plugin for Eclipse. Why not just RStudio? StatET has the best object browser available if you’re doing anything with JSON or lists of lists, and will not crash when R crashes, unlike RStudio. It also plays well with cloud instances. Though, yes, I find myself using RStudio on new machines because setting up StatET can be a challenge.\nQuickly snap windows side-by-side with shortcut keys on Mac using Rectangle.\nHow to setup shortcut keys in gmail.\nConda on Singularity (needed for NYU HPC)\nHow to launch Singularity container remotely in VSCode\nThis site is built with Quarto and deployed to GitHub Pages."
+    "text": "Toril Aalberg, Shanto Iyengar, Solomon Messing (2012). Who is a `deserving’immigrant? An experimental study of Norwegian attitudes. Scandinavian Political Studies."
   },
   {
-    "objectID": "contact.html",
-    "href": "contact.html",
-    "title": "Contact",
+    "objectID": "disclosures.html",
+    "href": "disclosures.html",
+    "title": "Disclosures",
     "section": "",
-    "text": "Reach me via the form below, or at firstname.lastname at gmail dot com. You can also DM me on X.\n\n  \n    Name\n    \n  \n  \n    Email\n    \n  \n  \n    Message\n    \n  \n  Send"
+    "text": "SM is currently an employee of New York University.\nSM contracts for 501c6 non-profit ML Commons, which releases AI benchmarks.\nSM was previously an employee of Twitter and held a significant financial interest (SFI, defined as holding more than $5,000 in stock). SM’s employee equity was converted to cash following the conclusion of Twitter’s sale to Elon Musk. SM was against the company’s acquisition and asked to be included in the first round of layoffs. SM declined to accept X’s initially offered severance compensation and did not sign the proposed severance agreement, which included a restrictive non-disparagement clause. SM was party to a lawsuit against X related to it’s initial failure to deliver employee severence according to pre-existing Twitter policies.\nSM was previously an employee of Facebook (now Meta) and at various points in time held a SFI in the company. SM sold all employee equity grants (RSUs) shortly after leaving the company in both 2015 and 2020.\nSM was previously an employee of Science Applications International Corporation and in the past held a SFI in the company.\nSM was previously an employee of Pew Research Center.\nSM was previously an employee of Acronym, including during the implementation of experiments designed to assess ad effectiveness.\nSM was previously a paid contractor for Morning Consult.\nSM has actively managed investments which may include SFIs in Apple, AMD, Alphabet (Google), Amazon, Intel, Meta, Microsoft, NVIDIA, Salesforce.\nSM has received scholarly funding from Google (now Alphabet).\nSM is an inventor on patents assigned to Twitter and Law-on-line.\nSM’s travel to or lodging at conferences has been supported by universities and past employers, including Pew Research Center (2015-2018), Facebook (2012-2020), Twitter (2021-2022)."
+  },
+  {
+    "objectID": "bio.html",
+    "href": "bio.html",
+    "title": "Bio",
+    "section": "",
+    "text": "Sol Messing is a Research Scientist at Google DeepMind and Research Associate Professor at New York University, with the Center for Social Media, AI, and Politics. Prior to joining NYU, Messing founded data science research teams at Pew Research Center, Acronym, and Twitter. He has industry experience working on recommender systems, complex experimentation, feature engineering/discovery, algorithm audits, and differential privacy.\nMessing’s published work on politics and digital media spans advertising, elections, social media, and Congressional communication. His most widely cited work shows how ranking and social signals dominate ideological signals in digital media, and how the networks we form more powerfully govern exposure to ideologically diverse content than algorithmic bias or individual preference. His research on Congress consists of numerous works on inter-party criticism and conflict among members on social media, as well as journal articles and a co-authored book, The Impression of Influence (Princeton University Press, 2014) about the impacts of credit-claiming on the voting public. He has also published work on the consequences of election forecasts and digital alterations to candidate images in advertising. Messing’s most recent work quantifies the impact of an entire digital Presidential advertising campaign in the 2020 election, in what is likely the largest digital advertising field experiments in politics.\nDuring the 2020 election cycle, Messing was Chief Scientist at ACRONYM, where his team drove investment by (correctly) modeling the electoral importance of Georgia, oversaw a meta-analytic ML system to generate estimates of persuasive messaging impact leveraging hundreds of past experiments and online behavioral data, and conducted the largest ever digital advertising field experiment in politics.\nAt Facebook, Messing led the technical effort to release a differentially private data set reflecting more than an exabyte of media data, helped to found the Civic Integrity and FORT groups, and worked on prototypes that blend ML and experimentation (heterogeneous effect estimation and contextual bandits).\nMessing founded the Data Lab at Pew Research Center, where his team conducted algorithmic audits of Google Image searches and news photos on Facebook, used ML to study inauthentic and automated behavior on Twitter, and used NLP to understand the role of ideology and power structures embedded in how members of congress use social media to communicate.\nMessing received his PhD in Communication from Stanford University in 2013, earning a Masters of Science in Statistics. He has served on the advisory board of Journal of Quantitative Description, served as the Assistant Editor of Political Communication, and founded the Journal of International Policy Solutions."
+  },
+  {
+    "objectID": "blog.html",
+    "href": "blog.html",
+    "title": "Blog",
+    "section": "",
+    "text": "Interactive Web Replication & Update of State Media Influence on LLMs\n\n\n\nIncreasing research accessibility/reach with updated models and analyses, text interactives and new analyses.\n\n\n\n\n\n\nMay 24, 2026\n\n\n\n\n\n\n\n\n\n\n\n\nAn Early Election 2024 Forecast\n\n\n\nEstimating State-Level Swing with Shrinkage Beat the Polls in 2020. Here’s the Forecast for Election 2024.\n\n\n\n\n\n\nJan 11, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nDisaggregating ‘Ideological Segregation’\n\n\n\nDomain-level analysis in a new Science paper greatly overstates the influence of algorithmic feed ranking on segregation, aka the ‘Filter Bubble’\n\n\n\n\n\n\nAug 2, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nOn BlueSky\n\n\n\nBlueSky is a half-decentralized social network designed to replace Twitter. Will it keep its luster as it scales up?\n\n\n\n\n\n\nApr 3, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nWhat can we learn from ‘The Algorithm,’ Twitter’s partial open-sourcing of its feed-ranking recommendation system?\n\n\n\n\n\n\n\n\n\n\nApr 3, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nPast vote data outperformed the polls. How did it go so wrong?\n\n\n\nIt’s too early to say for sure, here are the questions to ask\n\n\n\n\n\n\nNov 8, 2020\n\n\n\n\n\n\n\n\n\n\n\n\nTrump’s chances are better than they look\n\n\n\nDon’t get too comfortable\n\n\n\n\n\n\nJun 20, 2020\n\n\n\n\n\n\n\n\n\n\n\n\nFacebook Condor URLs Data Release\n\n\n\nLargest ever social science data set, released under differential privacy\n\n\n\n\n\n\nMay 18, 2020\n\n\n\n\n\n\n\n\n\n\n\n\nProjecting Confidence\n\n\n\nHow the Probabilistic Horse Race Demobilizes the Public\n\n\n\n\n\n\nMay 18, 2020\n\n\n\n\n\n\n\n\n\n\n\n\nImpression of Influence\n\n\n\nA book on how Members of Congress use Credit Claiming\n\n\n\n\n\n\nMay 17, 2020\n\n\n\n\n\n\n\n\n\n\n\n\nWhy Election Forecasting Matters\n\n\n\nA Response to FiveThirtyEight\n\n\n\n\n\n\nApr 26, 2020\n\n\n\n\n\n\n\n\n\n\n\n\nKnow your data - Pricing diamonds using scatterplots and predictive models\n\n\n\nSecond post in my data visualization series on scatterplots and regression analysis\n\n\n\n\n\n\nFeb 2, 2020\n\n\n\n\n\n\n\n\n\n\n\n\nHow to break regression\n\n\n\n\n\n\n\n\n\n\nJun 13, 2018\n\n\n\n\n\n\n\n\n\n\n\n\nReplication of ‘Bias in the Flesh’\n\n\n\nReplication of Study 2 in “Bias in the Flesh: Skin Complexion and Stereotype Consistency in Political Campaigns”\n\n\n\n\n\n\nOct 16, 2017\n\n\n\n\n\n\n\n\n\n\n\n\nIdeologically diverse news, an agenda for future research\n\n\n\n\n\n\n\n\n\n\nApr 24, 2015\n\n\n\n\n\n\n\n\n\n\n\n\nWhen to Use Stacked Barcharts?\n\n\n\n\n\n\n\n\n\n\nOct 11, 2014\n\n\n\n\n\n\n\n\n\n\n\n\nInsight From Cleveland And Tufte On Plotting Numeric Data By Groups\n\n\n\n\n\n\n\n\n\n\nMar 4, 2012\n\n\n\n\n\n\n\n\n\n\n\n\nWorking with Bipartite/Affiliation Network Data in R\n\n\n\n\n\n\n\n\n\n\nMar 4, 2012\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Sol Messing",
+    "section": "",
+    "text": "Sol Messing\n    \n      Research Scientist, Google DeepMind\n      Research Associate Professor, New York University\n      Affiliate, ML Commons\n    \n    Working on evaluation science and the socioeconomic impacts of AI systems.\n    \n       Email\n       Scholar\n       GitHub\n       X\n       CV\n       Full bio\n    \n  \n\nCurrent work\n\nMeasurement — hidden error in LLM evals & benchmarks and how to reduce it. Measuring the spread of ideas across languages with fine-tuned LLMs; estimating ideology via forced-choice LLM-as-judge.\nAI & Democracy — what LLMs refuse and the political consequences. How state media in training data shapes model output. Alignment choices and democratic outcomes.\nEconomic impacts — simulating real-world economic tasks to understand model capabilities and labor-market impacts.\n\nFeatured PublicationsAll publications →\n\nState Media Control Influences Large Language Models\nHannah Waight, Eddie Yang, Yin Yuan, Solomon Messing, Margaret E. Roberts, Brandon M. Stewart, Joshua A. Tucker\nNature, 2026.\nPDF DOI\n\n\nQuantifying Narrative Similarity Across Languages\nHannah Waight, Solomon Messing, Anton Shirikov, Margaret E. Roberts, Jonathan Nagler, Jason Greenfield, Megan A. Brown, Kevin Aslett, Joshua A. Tucker\nSociological Methods & Research, 2025.\nPDF DOI\n\n\nA 2 million-person, campaign-wide field experiment shows how digital advertising affects voter turnout\nMinali Aggarwal, Jennifer Allen, Alexander Coppock, Dan Frankowski, Solomon Messing, Kelly Zhang, James Barnes, Andrew Beasley, Harry Hantman, Sylvan Zheng\nNature Human Behaviour, 2023.\nPDF\n\n\nProjecting confidence: How the probabilistic horse race confuses and demobilizes the public\nSean Westwood, Solomon Messing, Yphtach Lelkes\nJournal of Politics, 2019.\nPDF\n\nWritingBrowse & filter →\n\n\n\n\n\n\n\n\n\n\nInteractive Web Replication & Update of State Media Influence on LLMs\n\n\n\nIncreasing research accessibility/reach with updated models and analyses, text interactives and new analyses.\n\n\n\n\n\n\nMay 24, 2026\n\n\n\n\n\n\n\n\n\n\n\n\nAn Early Election 2024 Forecast\n\n\n\nEstimating State-Level Swing with Shrinkage Beat the Polls in 2020. Here’s the Forecast for Election 2024.\n\n\n\n\n\n\nJan 11, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nDisaggregating ‘Ideological Segregation’\n\n\n\nDomain-level analysis in a new Science paper greatly overstates the influence of algorithmic feed ranking on segregation, aka the ‘Filter Bubble’\n\n\n\n\n\n\nAug 2, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nOn BlueSky\n\n\n\nBlueSky is a half-decentralized social network designed to replace Twitter. Will it keep its luster as it scales up?\n\n\n\n\n\n\nApr 3, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nWhat can we learn from ‘The Algorithm,’ Twitter’s partial open-sourcing of its feed-ranking recommendation system?\n\n\n\n\n\n\n\n\n\n\nApr 3, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nPast vote data outperformed the polls. How did it go so wrong?\n\n\n\nIt’s too early to say for sure, here are the questions to ask\n\n\n\n\n\n\nNov 8, 2020\n\n\n\n\n\n\n\n\n\n\n\n\nTrump’s chances are better than they look\n\n\n\nDon’t get too comfortable\n\n\n\n\n\n\nJun 20, 2020\n\n\n\n\n\n\n\n\n\n\n\n\nFacebook Condor URLs Data Release\n\n\n\nLargest ever social science data set, released under differential privacy\n\n\n\n\n\n\nMay 18, 2020\n\n\n\n\n\n\n\n\n\n\n\n\nProjecting Confidence\n\n\n\nHow the Probabilistic Horse Race Demobilizes the Public\n\n\n\n\n\n\nMay 18, 2020\n\n\n\n\n\n\n\n\n\n\n\n\nImpression of Influence\n\n\n\nA book on how Members of Congress use Credit Claiming\n\n\n\n\n\n\nMay 17, 2020\n\n\n\n\n\n\n\n\n\n\n\n\nWhy Election Forecasting Matters\n\n\n\nA Response to FiveThirtyEight\n\n\n\n\n\n\nApr 26, 2020\n\n\n\n\n\n\n\n\n\n\n\n\nKnow your data - Pricing diamonds using scatterplots and predictive models\n\n\n\nSecond post in my data visualization series on scatterplots and regression analysis\n\n\n\n\n\n\nFeb 2, 2020\n\n\n\n\n\n\n\n\n\n\n\n\nHow to break regression\n\n\n\n\n\n\n\n\n\n\nJun 13, 2018\n\n\n\n\n\n\n\n\n\n\n\n\nReplication of ‘Bias in the Flesh’\n\n\n\nReplication of Study 2 in “Bias in the Flesh: Skin Complexion and Stereotype Consistency in Political Campaigns”\n\n\n\n\n\n\nOct 16, 2017\n\n\n\n\n\n\n\n\n\n\n\n\nIdeologically diverse news, an agenda for future research\n\n\n\n\n\n\n\n\n\n\nApr 24, 2015\n\n\n\n\n\n\n\n\n\n\n\n\nWhen to Use Stacked Barcharts?\n\n\n\n\n\n\n\n\n\n\nOct 11, 2014\n\n\n\n\n\n\n\n\n\n\n\n\nInsight From Cleveland And Tufte On Plotting Numeric Data By Groups\n\n\n\n\n\n\n\n\n\n\nMar 4, 2012\n\n\n\n\n\n\n\n\n\n\n\n\nWorking with Bipartite/Affiliation Network Data in R\n\n\n\n\n\n\n\n\n\n\nMar 4, 2012\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "publications.html",
+    "href": "publications.html",
+    "title": "Publications",
+    "section": "",
+    "text": "See also my Google Scholar profile.\n\n2026\n\n\nHidden Measurement Error in LLM Pipelines Distorts Annotation, Evaluation, and Benchmarking\nSolomon Messing\nAdvances in Neural Information Processing Systems (NeurIPS), 2026.\nPDF SI Appendix arXiv\n\n\nState Media Control Influences Large Language Models\nHannah Waight, Eddie Yang, Yin Yuan, Solomon Messing, Margaret E. Roberts, Brandon M. Stewart, Joshua A. Tucker\nNature, 2026.\nPDF DOI\n\n\n2025\n\n\nWeb scraping for research: Legal, ethical, institutional, and scientific considerations\nMegan A. Brown, Andrew Gruen, Gabe Maldoff, Solomon Messing, Zeve Sanderson, Michael Zimmer\nBig Data & Society, 2025.\nPDF DOI\n\n\nQuantifying Narrative Similarity Across Languages\nHannah Waight, Solomon Messing, Anton Shirikov, Margaret E. Roberts, Jonathan Nagler, Jason Greenfield, Megan A. Brown, Kevin Aslett, Joshua A. Tucker\nSociological Methods & Research, 2025.\nPDF DOI\n\n\n2024\n\n\nConcept-Guided Chain-of-Thought Prompting for Pairwise Comparison Scoring of Texts with Large Language Models\nPatrick Y. Wu, Jonathan Nagler, Joshua A. Tucker, Solomon Messing\n2024 IEEE International Conference on Big Data (BigData), 2024.\nPDF\n\n\nDigital town square? Nextdoor’s offline contexts and online discourse\nMegan A. Brown, Zeve Sanderson, Sarah Graham, Minjoo Kim, Joshua A. Tucker, Solomon Messing\nJournal of Quantitative Description: Digital Media, 2024.\nPDF\n\n\n2023\n\n\nA 2 million-person, campaign-wide field experiment shows how digital advertising affects voter turnout\nMinali Aggarwal, Jennifer Allen, Alexander Coppock, Dan Frankowski, Solomon Messing, Kelly Zhang, James Barnes, Andrew Beasley, Harry Hantman, Sylvan Zheng\nNature Human Behaviour, 2023.\nPDF\n\n\n2020\n\n\nGuidelines for Implementing and Auditing Differentially Private Systems\nDaniel Kifer, Solomon Messing, Aaron Roth, Abhradeep Thakurta, Danfeng Zhang\narXiv preprint arXiv:2002.04049, 2020.\n\n\nFacebook Privacy-Protected Full URLs Data Set\nSolomon Messing, Christina DeGregorio, Bennett Hillenbrand, Gary King, Saurav Mahanti, Chaya Nayak, Nate Persily\n2020.\nPDF\n\n\n2019\n\n\nTumor formation of adult stem cell transplants in rodent arthritic joints\nFanny Chapelin, Aman Khurana, Mohammad Moneeb, Florette K Gray Hazard, Chun Fai Ray Chan, Hossein Nejadnik, Dita Gratzinger, Solomon Messing, Jason Erdmann, Amitabh Gaur, others\nMolecular Imaging and Biology, 2019.\n\n\nProjecting confidence: How the probabilistic horse race confuses and demobilizes the public\nSean Westwood, Solomon Messing, Yphtach Lelkes\nJournal of Politics, 2019.\nPDF\n\n\n2017\n\n\nPartisan Conflict and Congressional Outreach\nPatrick van Kessel, Adam G Hughes, Nick Judd, Rachel Blum, Brian Broderick Solomon Messing\nPew Research Center, 2017.\n\n\nEstimating heterogeneous treatment effects and the effects of heterogeneous treatments with ensemble methods\nJustin Grimmer, Solomon Messing, Sean J Westwood\nPolitical Analysis, 2017.\nPDF\n\n\n2016\n\n\nBias in the flesh: Skin complexion and stereotype consistency in political campaigns\nSolomon Messing, Maria Jabon, Ethan Plaut\nPublic opinion quarterly, 2016.\nPDF\n\n\n2015\n\n\nQuantifying social media’s political space: Estimating ideology from publicly revealed preferences on Facebook\nRobert Bond, Solomon Messing\nAmerican Political Science Review, 2015.\nPDF\n\n\nExposure to ideologically diverse news and opinion on Facebook\nEytan Bakshy, Solomon Messing, Lada A Adamic\nScience, 2015.\nPDF\n\n\n2014\n\n\nThe Impression of Influence: Legislator Communication, Representation, and Democratic Accountability\nJustin Grimmer, Sean J. Westwood, Solomon Messing\nPrinceton University Press, 2014.\n\n\nSelective exposure in the age of social media: Endorsements trump partisan source affiliation when selecting news online\nSolomon Messing, Sean J Westwood\nCommunication research, 2014.\nPDF\n\n\n2013\n\n\nRole of diffusion-weighted imaging in differentiating benign and malignant pediatric abdominal tumors\nRakhee S Gawande, Gabriel Gonzalez, Solomon Messing, Aman Khurana, Heike E Daldrup-Link\nPediatric radiology, 2013.\n\n\nIron administration before stem cell harvest enables MR imaging tracking after transplantation\nAman Khurana, Fanny Chapelin, Graham Beck, Olga D Lenkov, Jessica Donig, Hossein Nejadnik, Solomon Messing, Nikita Derugin, Ray Chun-Fai Chan, Amitabh Gaur, others\nRadiology, 2013.\n\n\nFriends that Matter: How Social News Shapes Political Knowledge, Attitudes, and Behavior\nSolomon Messing\n2013.\nPDF\n\n\nFerumoxytol: a new, clinically applicable label for stem-cell tracking in arthritic joints with MRI\nAman Khurana, Hossein Nejadnik, Fanny Chapelin, Olga Lenkov, Rakhee Gawande, Sungmin Lee, Sandeep N Gupta, Nooshin Aflakian, Nikita Derugin, Solomon Messing, others\nNanomedicine, 2013.\n\n\nEvaluation of the novel USPIO GEH121333 for MR imaging of cancer immune responses\nQiaoyun Shi, Laura J Pisani, Yauk K Lee, Solomon Messing, Celina Ansari, Srabani Bhaumik, Lisa Lowery, Brian D Lee, Dan E Meyer, Heike E Daldrup-Link\nContrast media & molecular imaging, 2013.\n\n\nDo attitudes about immigration predict willingness to admit individual immigrants? A cross-national test of the person-positivity bias\nShanto Iyengar, Simon Jackman, Solomon Messing, Nicholas Valentino, Toril Aalberg, Raymond Duch, Kyu S Hahn, Stuart Soroka, Allison Harell, Tetsuro Kobayashi\nPublic opinion quarterly, 2013.\n\n\n2012\n\n\nWho is a `deserving’immigrant? An experimental study of Norwegian attitudes\nToril Aalberg, Shanto Iyengar, Solomon Messing\nScandinavian Political Studies, 2012.\n\n\nThe 2012 Election Day Through the Facebook Lens\nSolomon Messing, Cameron Marlow, Eytan Bakshy\n2012.\nPDF\n\n\nIntravenous ferumoxytol allows noninvasive MR imaging monitoring of macrophage migration into stem cell transplants\nAman Khurana, Hossein Nejadnik, Rakhee Gawande, Guiting Lin, Sungmin Lee, Solomon Messing, Rosalinda Castaneda, Nikita Derugin, Laura Pisani, Tom F Lue, others\nRadiology, 2012.\n\n\nHow Words and Money Cultivate a Personal Vote: The Effect of Legislator Credit Claiming on Constituent Credit Allocation\nJustin Grimmer, Solomon Messing, Sean J. Westwood\nAmerican Political Science Review, 2012.\nPDF DOI\n\n\nFDG PET/CT for the Evaluation of Normal Thymus, Lymphoma Recurrence, and Mediastinal Lymphoma in Pediatric Patients Response\nRakhee S Gawande, Spencer Behr, Solomon Messing, Robert E Goldsby, Randall A Hawkins, Heike E Daldrup-Link\nRADIOLOGY, 2012.\n\n\nDifferentiation of Normal Thymus from Anterior Mediastinal Lymphoma and Lymphoma Recurrence at Pediatric PET/CT\nRakhee S Gawande, Aman Khurana, Solomon Messing, Dong Zhang, Rosalinda T Castañeda, Robert E Goldsby, Randall A Hawkins, Heike E Daldrup-Link\nRadiology, 2012.\n\n\n2011\n\n\nOf course I wouldn’t do that in real life: advancing the arguments for increasing realism in HCI experiments\nLetitia Lew, Truc Nguyen, Solomon Messing, Sean Westwood\nCHI’11 Extended Abstracts on Human Factors in Computing Systems, 2011.\n\n\nMeasuring issue salience: Using supervised machine learning to generate data from free responses to the ‘most important problem’ question\nSolomon Messing\n2011.\nPDF\n\n\n2008\n\n\nDo explicit racial cues influence candidate preference? The case of skin complexion in the 2008 campaign\nShanto Iyengar, Kyu S Hahn, Solomon Messing, Jeremy N Bailenson\nThe Case of Skin Complexion in the, 2008."
   },
   {
     "objectID": "media.html",
@@ -420,221 +462,193 @@
     "text": "Governments May Shape What AI Chatbots Say by Shaping the Data They Learn From. NYU News\nState media control shapes LLM behaviour by influencing training data. Nature (News & Views)\nThe Impact of Government-Controlled Media on LLMs. Princeton School of Public and International Affairs\nThe ICE Shooter’s Face Was Everywhere Online Within Hours. There’s Just One Problem.. HuffPost\nThis Video Trend Is Everywhere On Social Media — And You Should Be Terrified. HuffPost\nWhat did Twitter’s ‘open source’ algorithm actually reveal? Not a lot.. Engadget\nFrom emergency alerts to Taylor Swift lyrics: Twitter risks alienating developers. NBC News\nTwitter users say they haven’t paid for their blue checks but still have them. NPR News\nMore Academics Take Flight From Twitter as Restrictions, Alternatives Grow. Inside Higher Ed\nBluesky, championed by Jack Dorsey, was supposed to be Twitter 2.0. Can it succeed?. ABC News\nTwitter curbs researcher access, sparking backlash in Washington. Washington Post\nHow a Digital Ad Strategy That Helped Trump Is Being Used Against Him. New York Times\nSince Facebook helped elect Trump, some former employees are using similar digital tricks to give Democrats an edge in 2020. Vanity Fair\nDid Trump win in 2016 because people are bad at probability? Washington Post\nThis is how FiveThirtyEight is trying to build the right amount of uncertainty into its 2020 election data analysis. NiemanLab\nAmericans Don’t Understand Probabilities – and It Could Affect Election Turnout. New York Magazine\nStudy Finds Election Forecasts Lower Voter Turnout. Political Wire\nKobe Bryant’s ‘light-skinned’ remark hints at NBA’s peculiar racial politics. The Guardian\nStudy: 2008 McCain attack ads depicted Obama with darker skin tone. CBS News\nObama’s skin looks a little different in these GOP campaign ads. Washington Post\nStudy: Campaign Ads with Dark-Skinned Black People Appeal to White Racism. Atlanta Black Star\nWhat can researchers find among the 32 million URLs Facebook just released to Social Science One? Poynter\nDoes Facebook drive political polarization? Data science and research. Harvard Shorenstein Center\nMaybe the Internet Isn’t Tearing Us Apart After All. Wired\nTwo-thirds of links on Twitter come from bots. The good news? They’re mostly bland. Vox\nMost Links to Popular Sites on Twitter Come From Bots. Wired\nTwitter bots are getting busy making sure your tweet goes viral. FastCompany\nBots on Twitter share two-thirds of links to popular websites. TechCrunch\nTwitter bots are behind 66% of tweeted links for most popular sites. VentureBeat\nTwitter bots rampant in news, porn and sports links. USA Today\nReport: Bots Promote 66 Percent of Twittersphere Links. Observer\nThink your articles are getting a lot of attention on Twitter? It could be a lot of posting by bots. NiemanLab\nNew study finds 66% of shared links on Twitter came from bots. Yahoo News\nFiveThirtyEight Politics Podcast. FiveThirtyEight\nClinton’s Achilles’ heel in 2016 may have been overconfidence. Washington Post\nFacebook reactions to posts by Democrats got a lot angrier after Trump was elected. Quartz\nDemocrats are angrier than Republicans on Facebook. Axios\nHow politicians’ use of social media is reinforcing a partisan media divide. Washington Post\nLawmakers’ Facebook news feeds reflect political polarization. Politico\nRepublican lawmakers ‘go negative’ more often than Democrats, according to a first-of-its-kind analysis. Washington Post\nRepublicans Disagree With You, and They Disagree Indignantly. Mother Jones\nQ&A with Solomon Messing of Pew Research Center’s Data Labs. Pew Research Center\nInvestigating the network: The top 10 articles from the year in digital news and social media research. NiemanLab\nFacebook Use Polarizing? Site Begs to Differ. New York Times\nDoes Facebook’s News Feed control your world view?. CBS News\nFacebook tips news balance ‘less than users do’. BBC News\nDon’t (just) blame Facebook: We build our own bubbles. Ars Technica\nIt’s mainly your fault that you click on things you already agree with. Washington Post\nIt’s The Frequency, Not The Size: Compromise & Credit Claiming in Congress. Mischiefs of Faction (Vox)\nWhen it comes to policy, moderate politicians keep their mouths shut. Stanford News"
   },
   {
-    "objectID": "publications.html",
-    "href": "publications.html",
-    "title": "Publications",
+    "objectID": "contact.html",
+    "href": "contact.html",
+    "title": "Contact",
     "section": "",
-    "text": "See also my Google Scholar profile.\n\n2026\n\n\nState Media Control Influences Large Language Models\nHannah Waight, Eddie Yang, Yin Yuan, Solomon Messing, Margaret E. Roberts, Brandon M. Stewart, Joshua A. Tucker\nNature, 2026.\nPDF DOI\n\n\n2025\n\n\nWeb scraping for research: Legal, ethical, institutional, and scientific considerations\nMegan A. Brown, Andrew Gruen, Gabe Maldoff, Solomon Messing, Zeve Sanderson, Michael Zimmer\nBig Data & Society, 2025.\nPDF DOI\n\n\nQuantifying Narrative Similarity Across Languages\nHannah Waight, Solomon Messing, Anton Shirikov, Margaret E. Roberts, Jonathan Nagler, Jason Greenfield, Megan A. Brown, Kevin Aslett, Joshua A. Tucker\nSociological Methods & Research, 2025.\nPDF DOI\n\n\n2024\n\n\nConcept-Guided Chain-of-Thought Prompting for Pairwise Comparison Scoring of Texts with Large Language Models\nPatrick Y. Wu, Jonathan Nagler, Joshua A. Tucker, Solomon Messing\n2024 IEEE International Conference on Big Data (BigData), 2024.\nPDF\n\n\nDigital town square? Nextdoor’s offline contexts and online discourse\nMegan A. Brown, Zeve Sanderson, Sarah Graham, Minjoo Kim, Joshua A. Tucker, Solomon Messing\nJournal of Quantitative Description: Digital Media, 2024.\nPDF\n\n\n2023\n\n\nA 2 million-person, campaign-wide field experiment shows how digital advertising affects voter turnout\nMinali Aggarwal, Jennifer Allen, Alexander Coppock, Dan Frankowski, Solomon Messing, Kelly Zhang, James Barnes, Andrew Beasley, Harry Hantman, Sylvan Zheng\nNature Human Behaviour, 2023.\nPDF\n\n\n2020\n\n\nGuidelines for Implementing and Auditing Differentially Private Systems\nDaniel Kifer, Solomon Messing, Aaron Roth, Abhradeep Thakurta, Danfeng Zhang\narXiv preprint arXiv:2002.04049, 2020.\n\n\nFacebook Privacy-Protected Full URLs Data Set\nSolomon Messing, Christina DeGregorio, Bennett Hillenbrand, Gary King, Saurav Mahanti, Chaya Nayak, Nate Persily\n2020.\nPDF\n\n\n2019\n\n\nTumor formation of adult stem cell transplants in rodent arthritic joints\nFanny Chapelin, Aman Khurana, Mohammad Moneeb, Florette K Gray Hazard, Chun Fai Ray Chan, Hossein Nejadnik, Dita Gratzinger, Solomon Messing, Jason Erdmann, Amitabh Gaur, others\nMolecular Imaging and Biology, 2019.\n\n\nProjecting confidence: How the probabilistic horse race confuses and demobilizes the public\nSean Westwood, Solomon Messing, Yphtach Lelkes\nJournal of Politics, 2019.\nPDF\n\n\n2017\n\n\nPartisan Conflict and Congressional Outreach\nPatrick van Kessel, Adam G Hughes, Nick Judd, Rachel Blum, Brian Broderick Solomon Messing\nPew Research Center, 2017.\n\n\nEstimating heterogeneous treatment effects and the effects of heterogeneous treatments with ensemble methods\nJustin Grimmer, Solomon Messing, Sean J Westwood\nPolitical Analysis, 2017.\nPDF\n\n\n2016\n\n\nBias in the flesh: Skin complexion and stereotype consistency in political campaigns\nSolomon Messing, Maria Jabon, Ethan Plaut\nPublic opinion quarterly, 2016.\nPDF\n\n\n2015\n\n\nQuantifying social media’s political space: Estimating ideology from publicly revealed preferences on Facebook\nRobert Bond, Solomon Messing\nAmerican Political Science Review, 2015.\nPDF\n\n\nExposure to ideologically diverse news and opinion on Facebook\nEytan Bakshy, Solomon Messing, Lada A Adamic\nScience, 2015.\nPDF\n\n\n2014\n\n\nThe Impression of Influence: Legislator Communication, Representation, and Democratic Accountability\nJustin Grimmer, Sean J. Westwood, Solomon Messing\nPrinceton University Press, 2014.\n\n\nSelective exposure in the age of social media: Endorsements trump partisan source affiliation when selecting news online\nSolomon Messing, Sean J Westwood\nCommunication research, 2014.\nPDF\n\n\n2013\n\n\nRole of diffusion-weighted imaging in differentiating benign and malignant pediatric abdominal tumors\nRakhee S Gawande, Gabriel Gonzalez, Solomon Messing, Aman Khurana, Heike E Daldrup-Link\nPediatric radiology, 2013.\n\n\nIron administration before stem cell harvest enables MR imaging tracking after transplantation\nAman Khurana, Fanny Chapelin, Graham Beck, Olga D Lenkov, Jessica Donig, Hossein Nejadnik, Solomon Messing, Nikita Derugin, Ray Chun-Fai Chan, Amitabh Gaur, others\nRadiology, 2013.\n\n\nFriends that Matter: How Social News Shapes Political Knowledge, Attitudes, and Behavior\nSolomon Messing\n2013.\nPDF\n\n\nFerumoxytol: a new, clinically applicable label for stem-cell tracking in arthritic joints with MRI\nAman Khurana, Hossein Nejadnik, Fanny Chapelin, Olga Lenkov, Rakhee Gawande, Sungmin Lee, Sandeep N Gupta, Nooshin Aflakian, Nikita Derugin, Solomon Messing, others\nNanomedicine, 2013.\n\n\nEvaluation of the novel USPIO GEH121333 for MR imaging of cancer immune responses\nQiaoyun Shi, Laura J Pisani, Yauk K Lee, Solomon Messing, Celina Ansari, Srabani Bhaumik, Lisa Lowery, Brian D Lee, Dan E Meyer, Heike E Daldrup-Link\nContrast media & molecular imaging, 2013.\n\n\nDo attitudes about immigration predict willingness to admit individual immigrants? A cross-national test of the person-positivity bias\nShanto Iyengar, Simon Jackman, Solomon Messing, Nicholas Valentino, Toril Aalberg, Raymond Duch, Kyu S Hahn, Stuart Soroka, Allison Harell, Tetsuro Kobayashi\nPublic opinion quarterly, 2013.\n\n\n2012\n\n\nWho is a `deserving’immigrant? An experimental study of Norwegian attitudes\nToril Aalberg, Shanto Iyengar, Solomon Messing\nScandinavian Political Studies, 2012.\n\n\nThe 2012 Election Day Through the Facebook Lens\nSolomon Messing, Cameron Marlow, Eytan Bakshy\n2012.\nPDF\n\n\nIntravenous ferumoxytol allows noninvasive MR imaging monitoring of macrophage migration into stem cell transplants\nAman Khurana, Hossein Nejadnik, Rakhee Gawande, Guiting Lin, Sungmin Lee, Solomon Messing, Rosalinda Castaneda, Nikita Derugin, Laura Pisani, Tom F Lue, others\nRadiology, 2012.\n\n\nHow Words and Money Cultivate a Personal Vote: The Effect of Legislator Credit Claiming on Constituent Credit Allocation\nJustin Grimmer, Solomon Messing, Sean J. Westwood\nAmerican Political Science Review, 2012.\nPDF DOI\n\n\nFDG PET/CT for the Evaluation of Normal Thymus, Lymphoma Recurrence, and Mediastinal Lymphoma in Pediatric Patients Response\nRakhee S Gawande, Spencer Behr, Solomon Messing, Robert E Goldsby, Randall A Hawkins, Heike E Daldrup-Link\nRADIOLOGY, 2012.\n\n\nDifferentiation of Normal Thymus from Anterior Mediastinal Lymphoma and Lymphoma Recurrence at Pediatric PET/CT\nRakhee S Gawande, Aman Khurana, Solomon Messing, Dong Zhang, Rosalinda T Castañeda, Robert E Goldsby, Randall A Hawkins, Heike E Daldrup-Link\nRadiology, 2012.\n\n\n2011\n\n\nOf course I wouldn’t do that in real life: advancing the arguments for increasing realism in HCI experiments\nLetitia Lew, Truc Nguyen, Solomon Messing, Sean Westwood\nCHI’11 Extended Abstracts on Human Factors in Computing Systems, 2011.\n\n\nMeasuring issue salience: Using supervised machine learning to generate data from free responses to the ‘most important problem’ question\nSolomon Messing\n2011.\nPDF\n\n\n2008\n\n\nDo explicit racial cues influence candidate preference? The case of skin complexion in the 2008 campaign\nShanto Iyengar, Kyu S Hahn, Solomon Messing, Jeremy N Bailenson\nThe Case of Skin Complexion in the, 2008."
+    "text": "Reach me via the form below, or at firstname.lastname at gmail dot com. You can also DM me on X.\n\n  \n    Name\n    \n  \n  \n    Email\n    \n  \n  \n    Message\n    \n  \n  Send"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Sol Messing",
+    "objectID": "techsetup.html",
+    "href": "techsetup.html",
+    "title": "Tech Stack",
     "section": "",
-    "text": "Sol Messing\n    \n      Research Scientist, Google DeepMind\n      Research Associate Professor, New York University\n      Affiliate, ML Commons\n    \n    Working on evaluation science and the socioeconomic impacts of AI systems.\n    \n       Email\n       Scholar\n       GitHub\n       X\n       CV\n       Full bio\n    \n  \n\nCurrent work\n\nMeasurement — hidden error in LLM evals & benchmarks and how to reduce it. Measuring the spread of ideas across languages with fine-tuned LLMs; estimating ideology via forced-choice LLM-as-judge.\nAI & Democracy — what LLMs refuse and the political consequences. How state media in training data shapes model output. Alignment choices and democratic outcomes.\nEconomic impacts — simulating real-world economic tasks to understand model capabilities and labor-market impacts.\n\nFeatured PublicationsAll publications →\n\nState Media Control Influences Large Language Models\nHannah Waight, Eddie Yang, Yin Yuan, Solomon Messing, Margaret E. Roberts, Brandon M. Stewart, Joshua A. Tucker\nNature, 2026.\nPDF DOI\n\n\nQuantifying Narrative Similarity Across Languages\nHannah Waight, Solomon Messing, Anton Shirikov, Margaret E. Roberts, Jonathan Nagler, Jason Greenfield, Megan A. Brown, Kevin Aslett, Joshua A. Tucker\nSociological Methods & Research, 2025.\nPDF DOI\n\n\nA 2 million-person, campaign-wide field experiment shows how digital advertising affects voter turnout\nMinali Aggarwal, Jennifer Allen, Alexander Coppock, Dan Frankowski, Solomon Messing, Kelly Zhang, James Barnes, Andrew Beasley, Harry Hantman, Sylvan Zheng\nNature Human Behaviour, 2023.\nPDF\n\n\nProjecting confidence: How the probabilistic horse race confuses and demobilizes the public\nSean Westwood, Solomon Messing, Yphtach Lelkes\nJournal of Politics, 2019.\nPDF\n\nWritingBrowse & filter →\n\n\n\n\n\n\n\n\n\n\nInteractive Web Replication & Update of State Media Influence on LLMs\n\n\n\nIncreasing research accessibility/reach with updated models and analyses, text interactives and new analyses.\n\n\n\n\n\n\nMay 24, 2026\n\n\n\n\n\n\n\n\n\n\n\n\nAn Early Election 2024 Forecast\n\n\n\nEstimating State-Level Swing with Shrinkage Beat the Polls in 2020. Here’s the Forecast for Election 2024.\n\n\n\n\n\n\nJan 11, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nDisaggregating ‘Ideological Segregation’\n\n\n\nDomain-level analysis in a new Science paper greatly overstates the influence of algorithmic feed ranking on segregation, aka the ‘Filter Bubble’\n\n\n\n\n\n\nAug 2, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nOn BlueSky\n\n\n\nBlueSky is a half-decentralized social network designed to replace Twitter. Will it keep its luster as it scales up?\n\n\n\n\n\n\nApr 3, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nWhat can we learn from ‘The Algorithm,’ Twitter’s partial open-sourcing of its feed-ranking recommendation system?\n\n\n\n\n\n\n\n\n\n\nApr 3, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nPast vote data outperformed the polls. How did it go so wrong?\n\n\n\nIt’s too early to say for sure, here are the questions to ask\n\n\n\n\n\n\nNov 8, 2020\n\n\n\n\n\n\n\n\n\n\n\n\nTrump’s chances are better than they look\n\n\n\nDon’t get too comfortable\n\n\n\n\n\n\nJun 20, 2020\n\n\n\n\n\n\n\n\n\n\n\n\nFacebook Condor URLs Data Release\n\n\n\nLargest ever social science data set, released under differential privacy\n\n\n\n\n\n\nMay 18, 2020\n\n\n\n\n\n\n\n\n\n\n\n\nProjecting Confidence\n\n\n\nHow the Probabilistic Horse Race Demobilizes the Public\n\n\n\n\n\n\nMay 18, 2020\n\n\n\n\n\n\n\n\n\n\n\n\nImpression of Influence\n\n\n\nA book on how Members of Congress use Credit Claiming\n\n\n\n\n\n\nMay 17, 2020\n\n\n\n\n\n\n\n\n\n\n\n\nWhy Election Forecasting Matters\n\n\n\nA Response to FiveThirtyEight\n\n\n\n\n\n\nApr 26, 2020\n\n\n\n\n\n\n\n\n\n\n\n\nKnow your data - Pricing diamonds using scatterplots and predictive models\n\n\n\nSecond post in my data visualization series on scatterplots and regression analysis\n\n\n\n\n\n\nFeb 2, 2020\n\n\n\n\n\n\n\n\n\n\n\n\nHow to break regression\n\n\n\n\n\n\n\n\n\n\nJun 13, 2018\n\n\n\n\n\n\n\n\n\n\n\n\nReplication of ‘Bias in the Flesh’\n\n\n\nReplication of Study 2 in “Bias in the Flesh: Skin Complexion and Stereotype Consistency in Political Campaigns”\n\n\n\n\n\n\nOct 16, 2017\n\n\n\n\n\n\n\n\n\n\n\n\nIdeologically diverse news, an agenda for future research\n\n\n\n\n\n\n\n\n\n\nApr 24, 2015\n\n\n\n\n\n\n\n\n\n\n\n\nWhen to Use Stacked Barcharts?\n\n\n\n\n\n\n\n\n\n\nOct 11, 2014\n\n\n\n\n\n\n\n\n\n\n\n\nInsight From Cleveland And Tufte On Plotting Numeric Data By Groups\n\n\n\n\n\n\n\n\n\n\nMar 4, 2012\n\n\n\n\n\n\n\n\n\n\n\n\nWorking with Bipartite/Affiliation Network Data in R\n\n\n\n\n\n\n\n\n\n\nMar 4, 2012\n\n\n\n\n\nNo matching items"
+    "text": "Best terminal (iterm 2) setup I’ve found yet\nFix annoying error messages in RStudio\nStatET, an R plugin for Eclipse. Why not just RStudio? StatET has the best object browser available if you’re doing anything with JSON or lists of lists, and will not crash when R crashes, unlike RStudio. It also plays well with cloud instances. Though, yes, I find myself using RStudio on new machines because setting up StatET can be a challenge.\nQuickly snap windows side-by-side with shortcut keys on Mac using Rectangle.\nHow to setup shortcut keys in gmail.\nConda on Singularity (needed for NYU HPC)\nHow to launch Singularity container remotely in VSCode\nThis site is built with Quarto and deployed to GitHub Pages."
   },
   {
-    "objectID": "blog.html",
-    "href": "blog.html",
-    "title": "Blog",
+    "objectID": "publications/aggarwal-2023-2-million-experiment/index.html",
+    "href": "publications/aggarwal-2023-2-million-experiment/index.html",
+    "title": "A 2 million-person, campaign-wide field experiment shows how digital advertising affects voter turnout",
     "section": "",
-    "text": "Interactive Web Replication & Update of State Media Influence on LLMs\n\n\n\nIncreasing research accessibility/reach with updated models and analyses, text interactives and new analyses.\n\n\n\n\n\n\nMay 24, 2026\n\n\n\n\n\n\n\n\n\n\n\n\nAn Early Election 2024 Forecast\n\n\n\nEstimating State-Level Swing with Shrinkage Beat the Polls in 2020. Here’s the Forecast for Election 2024.\n\n\n\n\n\n\nJan 11, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nDisaggregating ‘Ideological Segregation’\n\n\n\nDomain-level analysis in a new Science paper greatly overstates the influence of algorithmic feed ranking on segregation, aka the ‘Filter Bubble’\n\n\n\n\n\n\nAug 2, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nOn BlueSky\n\n\n\nBlueSky is a half-decentralized social network designed to replace Twitter. Will it keep its luster as it scales up?\n\n\n\n\n\n\nApr 3, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nWhat can we learn from ‘The Algorithm,’ Twitter’s partial open-sourcing of its feed-ranking recommendation system?\n\n\n\n\n\n\n\n\n\n\nApr 3, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nPast vote data outperformed the polls. How did it go so wrong?\n\n\n\nIt’s too early to say for sure, here are the questions to ask\n\n\n\n\n\n\nNov 8, 2020\n\n\n\n\n\n\n\n\n\n\n\n\nTrump’s chances are better than they look\n\n\n\nDon’t get too comfortable\n\n\n\n\n\n\nJun 20, 2020\n\n\n\n\n\n\n\n\n\n\n\n\nFacebook Condor URLs Data Release\n\n\n\nLargest ever social science data set, released under differential privacy\n\n\n\n\n\n\nMay 18, 2020\n\n\n\n\n\n\n\n\n\n\n\n\nProjecting Confidence\n\n\n\nHow the Probabilistic Horse Race Demobilizes the Public\n\n\n\n\n\n\nMay 18, 2020\n\n\n\n\n\n\n\n\n\n\n\n\nImpression of Influence\n\n\n\nA book on how Members of Congress use Credit Claiming\n\n\n\n\n\n\nMay 17, 2020\n\n\n\n\n\n\n\n\n\n\n\n\nWhy Election Forecasting Matters\n\n\n\nA Response to FiveThirtyEight\n\n\n\n\n\n\nApr 26, 2020\n\n\n\n\n\n\n\n\n\n\n\n\nKnow your data - Pricing diamonds using scatterplots and predictive models\n\n\n\nSecond post in my data visualization series on scatterplots and regression analysis\n\n\n\n\n\n\nFeb 2, 2020\n\n\n\n\n\n\n\n\n\n\n\n\nHow to break regression\n\n\n\n\n\n\n\n\n\n\nJun 13, 2018\n\n\n\n\n\n\n\n\n\n\n\n\nReplication of ‘Bias in the Flesh’\n\n\n\nReplication of Study 2 in “Bias in the Flesh: Skin Complexion and Stereotype Consistency in Political Campaigns”\n\n\n\n\n\n\nOct 16, 2017\n\n\n\n\n\n\n\n\n\n\n\n\nIdeologically diverse news, an agenda for future research\n\n\n\n\n\n\n\n\n\n\nApr 24, 2015\n\n\n\n\n\n\n\n\n\n\n\n\nWhen to Use Stacked Barcharts?\n\n\n\n\n\n\n\n\n\n\nOct 11, 2014\n\n\n\n\n\n\n\n\n\n\n\n\nInsight From Cleveland And Tufte On Plotting Numeric Data By Groups\n\n\n\n\n\n\n\n\n\n\nMar 4, 2012\n\n\n\n\n\n\n\n\n\n\n\n\nWorking with Bipartite/Affiliation Network Data in R\n\n\n\n\n\n\n\n\n\n\nMar 4, 2012\n\n\n\n\n\nNo matching items"
+    "text": "Minali Aggarwal, Jennifer Allen, Alexander Coppock, Dan Frankowski, Solomon Messing, Kelly Zhang, James Barnes, Andrew Beasley, Harry Hantman, Sylvan Zheng (2023). A 2 million-person, campaign-wide field experiment shows how digital advertising affects voter turnout. Nature Human Behaviour.\nPDF"
   },
   {
-    "objectID": "bio.html",
-    "href": "bio.html",
-    "title": "Bio",
-    "section": "",
-    "text": "Sol Messing is a Research Scientist at Google DeepMind and Research Associate Professor at New York University, with the Center for Social Media, AI, and Politics. Prior to joining NYU, Messing founded data science research teams at Pew Research Center, Acronym, and Twitter. He has industry experience working on recommender systems, complex experimentation, feature engineering/discovery, algorithm audits, and differential privacy.\nMessing’s published work on politics and digital media spans advertising, elections, social media, and Congressional communication. His most widely cited work shows how ranking and social signals dominate ideological signals in digital media, and how the networks we form more powerfully govern exposure to ideologically diverse content than algorithmic bias or individual preference. His research on Congress consists of numerous works on inter-party criticism and conflict among members on social media, as well as journal articles and a co-authored book, The Impression of Influence (Princeton University Press, 2014) about the impacts of credit-claiming on the voting public. He has also published work on the consequences of election forecasts and digital alterations to candidate images in advertising. Messing’s most recent work quantifies the impact of an entire digital Presidential advertising campaign in the 2020 election, in what is likely the largest digital advertising field experiments in politics.\nDuring the 2020 election cycle, Messing was Chief Scientist at ACRONYM, where his team drove investment by (correctly) modeling the electoral importance of Georgia, oversaw a meta-analytic ML system to generate estimates of persuasive messaging impact leveraging hundreds of past experiments and online behavioral data, and conducted the largest ever digital advertising field experiment in politics.\nAt Facebook, Messing led the technical effort to release a differentially private data set reflecting more than an exabyte of media data, helped to found the Civic Integrity and FORT groups, and worked on prototypes that blend ML and experimentation (heterogeneous effect estimation and contextual bandits).\nMessing founded the Data Lab at Pew Research Center, where his team conducted algorithmic audits of Google Image searches and news photos on Facebook, used ML to study inauthentic and automated behavior on Twitter, and used NLP to understand the role of ideology and power structures embedded in how members of congress use social media to communicate.\nMessing received his PhD in Communication from Stanford University in 2013, earning a Masters of Science in Statistics. He has served on the advisory board of Journal of Quantitative Description, served as the Assistant Editor of Political Communication, and founded the Journal of International Policy Solutions."
-  },
-  {
-    "objectID": "disclosures.html",
-    "href": "disclosures.html",
-    "title": "Disclosures",
-    "section": "",
-    "text": "SM is currently an employee of New York University.\nSM contracts for 501c6 non-profit ML Commons, which releases AI benchmarks.\nSM was previously an employee of Twitter and held a significant financial interest (SFI, defined as holding more than $5,000 in stock). SM’s employee equity was converted to cash following the conclusion of Twitter’s sale to Elon Musk. SM was against the company’s acquisition and asked to be included in the first round of layoffs. SM declined to accept X’s initially offered severance compensation and did not sign the proposed severance agreement, which included a restrictive non-disparagement clause. SM was party to a lawsuit against X related to it’s initial failure to deliver employee severence according to pre-existing Twitter policies.\nSM was previously an employee of Facebook (now Meta) and at various points in time held a SFI in the company. SM sold all employee equity grants (RSUs) shortly after leaving the company in both 2015 and 2020.\nSM was previously an employee of Science Applications International Corporation and in the past held a SFI in the company.\nSM was previously an employee of Pew Research Center.\nSM was previously an employee of Acronym, including during the implementation of experiments designed to assess ad effectiveness.\nSM was previously a paid contractor for Morning Consult.\nSM has actively managed investments which may include SFIs in Apple, AMD, Alphabet (Google), Amazon, Intel, Meta, Microsoft, NVIDIA, Salesforce.\nSM has received scholarly funding from Google (now Alphabet).\nSM is an inventor on patents assigned to Twitter and Law-on-line.\nSM’s travel to or lodging at conferences has been supported by universities and past employers, including Pew Research Center (2015-2018), Facebook (2012-2020), Twitter (2021-2022)."
-  },
-  {
-    "objectID": "publications/aalberg-2012-deserving/index.html",
-    "href": "publications/aalberg-2012-deserving/index.html",
-    "title": "Who is a `deserving’immigrant? An experimental study of Norwegian attitudes",
-    "section": "",
-    "text": "Toril Aalberg, Shanto Iyengar, Solomon Messing (2012). Who is a `deserving’immigrant? An experimental study of Norwegian attitudes. Scandinavian Political Studies."
-  },
-  {
-    "objectID": "publications/bakshy-2015-exposure/index.html",
-    "href": "publications/bakshy-2015-exposure/index.html",
-    "title": "Exposure to ideologically diverse news and opinion on Facebook",
-    "section": "",
-    "text": "Eytan Bakshy, Solomon Messing, Lada A Adamic (2015). Exposure to ideologically diverse news and opinion on Facebook. Science.\nPDF"
-  },
-  {
-    "objectID": "publications/bakshy-2015-exposure/index.html#abstract",
-    "href": "publications/bakshy-2015-exposure/index.html#abstract",
-    "title": "Exposure to ideologically diverse news and opinion on Facebook",
+    "objectID": "publications/aggarwal-2023-2-million-experiment/index.html#abstract",
+    "href": "publications/aggarwal-2023-2-million-experiment/index.html#abstract",
+    "title": "A 2 million-person, campaign-wide field experiment shows how digital advertising affects voter turnout",
     "section": "Abstract",
-    "text": "Abstract\nExposure to news, opinion, and civic information increasingly occurs through social media. How do these online networks influence exposure to perspectives that cut across ideological lines? Using deidentified data, we examined how 10.1 million U.S. Facebook users interact with socially shared news. We directly measured ideological homophily in friend networks and examined the extent to which heterogeneous friends could potentially expose individuals to cross-cutting content. We then quantified the extent to which individuals encounter comparatively more or less diverse content while interacting via Facebook’s algorithmically ranked News Feed and further studied users’ choices to click through to ideologically discordant content. Compared with algorithmic ranking, individuals’ choices played a stronger role in limiting exposure to cross-cutting content."
+    "text": "Abstract\nWe present the results of a massive, $8.9 million campaign-wide field experiment, conducted among 2 million moderate and low-information “persuadable” voters in five battleground states during the 2020 US Presidential election. Treatment group subjects were exposed to an eight-month-long advertising program delivered via social media, designed to persuade people to vote against Donald Trump and for Joe Biden. On average, the program neither increased or decreased turnout. We find evidence of differential turnout effects by modeled level of Trump support: the campaign increased voting among Biden leaners by 0.4 percentage points (SE: 0.2pp) and decreased voting among Trump leaners by 0.3 percentage points (SE: 0.3pp), for a difference-in-CATES of 0.7 points t(1035571) = -2.09, p = 0.036, DIC = 0.7 points, 95% CI = [-0.014, -0.00]). An important but exploratory finding is that the strongest differential effects appear in early voting data, which may inform future work on early campaigning in a post-COVID electoral environment. Our results indicate that differential mobilization effects of even large digital advertising campaigns in presidential elections are likely to be modest."
   },
   {
-    "objectID": "publications/bakshy-2015-exposure/index.html#more",
-    "href": "publications/bakshy-2015-exposure/index.html#more",
-    "title": "Exposure to ideologically diverse news and opinion on Facebook",
+    "objectID": "publications/aggarwal-2023-2-million-experiment/index.html#more",
+    "href": "publications/aggarwal-2023-2-million-experiment/index.html#more",
+    "title": "A 2 million-person, campaign-wide field experiment shows how digital advertising affects voter turnout",
     "section": "More",
-    "text": "More\n\nReview by David Lazer\nSupplementary materials\nReplication materials\nMedia: New York Times, the Washington Post, the BBC, CBS, Huffington Post, Ars Technica, Wired UK, The Verge."
+    "text": "More\n\nSupplimentary materials at end of manuscript\nReplication materials\nMedia coverage: Nature"
   },
   {
-    "objectID": "publications/brown-2024-nextdoor/index.html",
-    "href": "publications/brown-2024-nextdoor/index.html",
-    "title": "Digital town square? Nextdoor’s offline contexts and online discourse",
+    "objectID": "publications/bond-2015-quantifying/index.html",
+    "href": "publications/bond-2015-quantifying/index.html",
+    "title": "Quantifying social media’s political space: Estimating ideology from publicly revealed preferences on Facebook",
     "section": "",
-    "text": "Megan A. Brown, Zeve Sanderson, Sarah Graham, Minjoo Kim, Joshua A. Tucker, Solomon Messing (2024). Digital town square? Nextdoor’s offline contexts and online discourse. Journal of Quantitative Description: Digital Media.\nPDF"
+    "text": "Robert Bond, Solomon Messing (2015). Quantifying social media’s political space: Estimating ideology from publicly revealed preferences on Facebook. American Political Science Review.\nPDF"
   },
   {
-    "objectID": "publications/brown-2024-nextdoor/index.html#abstract",
-    "href": "publications/brown-2024-nextdoor/index.html#abstract",
-    "title": "Digital town square? Nextdoor’s offline contexts and online discourse",
+    "objectID": "publications/bond-2015-quantifying/index.html#abstract",
+    "href": "publications/bond-2015-quantifying/index.html#abstract",
+    "title": "Quantifying social media’s political space: Estimating ideology from publicly revealed preferences on Facebook",
     "section": "Abstract",
-    "text": "Abstract\nitem abstract”&gt; Abstract There is scant quantitative research describing Nextdoor, the world’s largest and most important hyperlocal social media network. Due to its localized structure, Nextdoor data are notoriously difficult to collect and work with. We build multiple datasets that allow us to generate descriptive analyses of the platform’s offline contexts and online content. We first create a comprehensive dataset of all Nextdoor neighborhoods joined with U.S. Census data, which we analyze at the community-level (block-group). Our findings suggests that Nextdoor is primarily used in communities where the populations are whiter, more educated, more likely to own a home, and with higher levels of average income, potentially impacting the platform’s ability to create new opportunities for social capital formation and citizen engagement. At the same time, Nextdoor neighborhoods are more likely to have active government agency accounts—and law enforcement agencies in particular—where offline communities are more urban, have larger nonwhite populations, greater income inequality, and higher average home values. We then build a convenience sample of 30 Nextdoor neighborhoods, for which we collect daily posts and comments appearing in the feed (115,716 posts and 163,903 comments), as well as associated metadata. Among the accounts for which we collected posts and comments, posts seeking or offering services were the most frequent, while those reporting potentially suspicious people or activities received the highest average number of comments. Taken together, our study describes the ecosystem of and discussion on Nextdoor, as well as introduces data for quantitatively studying the platform."
+    "text": "Abstract\nWe demonstrate that social media data represent a useful resource for testing models of legislative and individual-level political behavior and attitudes. First, we develop a model to estimate the ideology of politicians and their supporters using social media data on individual citizens’ endorsements of political figures. Our measure allows us to place politicians and more than 6 million citizens who are active in social media on the same metric. We validate the ideological estimates that result from the scaling process by showing they correlate highly with existing measures of ideology from Congress, and with individual-level self-reported political views. Finally, we use these measures to study the relationship between ideology and age, social relationships and ideology, and the relationship between friend ideology and turnout."
   },
   {
-    "objectID": "publications/chapelin-2019-tumor/index.html",
-    "href": "publications/chapelin-2019-tumor/index.html",
-    "title": "Tumor formation of adult stem cell transplants in rodent arthritic joints",
+    "objectID": "publications/brown-2025-web-scraping/index.html",
+    "href": "publications/brown-2025-web-scraping/index.html",
+    "title": "Web scraping for research: Legal, ethical, institutional, and scientific considerations",
     "section": "",
-    "text": "Fanny Chapelin, Aman Khurana, Mohammad Moneeb, Florette K Gray Hazard, Chun Fai Ray Chan, Hossein Nejadnik, Dita Gratzinger, Solomon Messing, Jason Erdmann, Amitabh Gaur, others (2019). Tumor formation of adult stem cell transplants in rodent arthritic joints. Molecular Imaging and Biology."
+    "text": "Megan A. Brown, Andrew Gruen, Gabe Maldoff, Solomon Messing, Zeve Sanderson, Michael Zimmer (2025). Web scraping for research: Legal, ethical, institutional, and scientific considerations. Big Data & Society. doi:10.1177/20539517251381686\nPDF DOI"
   },
   {
-    "objectID": "publications/chapelin-2019-tumor/index.html#abstract",
-    "href": "publications/chapelin-2019-tumor/index.html#abstract",
-    "title": "Tumor formation of adult stem cell transplants in rodent arthritic joints",
+    "objectID": "publications/brown-2025-web-scraping/index.html#abstract",
+    "href": "publications/brown-2025-web-scraping/index.html#abstract",
+    "title": "Web scraping for research: Legal, ethical, institutional, and scientific considerations",
     "section": "Abstract",
-    "text": "Abstract\nPurpose: While imaging matrix-associated stem cell transplants aimed for cartilage repair in a rodent arthritis model, we noticed that some transplants formed locally destructive tumors. The purpose of this study was to determine the cause for this tumor formation in order to avoid this complication for future transplants. Procedures: Adipose-derived stem cells (ADSC) isolated from subcutaneous adipose tissue were implanted into 24 osteochondral defects of the distal femur in ten athymic rats and two immunocompetent control rats. All transplants underwent serial magnetic resonance imaging (MRI) up to 6 weeks post-transplantation to monitor joint defect repair. Nine transplants showed an increasing size over time that caused local bone destruction (group 1), while 11 transplants in athymic rats (group 2) and 4 transplants in immunocompetent rats did not. We compared the ADSC implant size and growth rate on MR images, macroscopic features, histopathologic features, surface markers, and karyotypes of these presumed neoplastic transplants with non-neoplastic ADSC transplants. Results: Implants in group 1 showed a significantly increased two-dimensional area at week 2 (p = 0.0092), 4 (p = 0.003), and 6 (p = 0.0205) compared to week 0, as determined by MRI. Histopathological correlations confirmed neoplastic features in group 1 with significantly increased size, cellularity, mitoses, and cytological atypia compared to group 2. Six transplants in group 1 were identified as malignant chondrosarcomas and three transplants as fibromyxoid sarcomas. Transplants in group 2 and immunocompetent controls exhibited normal cartilage features. Both groups showed a normal ADSC phenotype; however, neoplastic ADSC demonstrated a mixed population of diploid and tetraploid cells without genetic imbalance. Conclusions: ADSC transplants can form tumors in vivo. Preventive actions to avoid in vivo tumor formations may include karyotyping of culture-expanded ADSC before transplantation. In addition, serial imaging of ADSC transplants in vivo may enable early detection of abnormally proliferating cell transplants."
+    "text": "Abstract\nScientists across disciplines often use data from the internet to conduct research, generating valuable insights about human behavior. However, as generative artificial intelligence relying on massive text corpora becomes increasingly valuable, platforms have greatly restricted access to data through official channels. As a result, researchers will likely engage in more web scraping to collect data, introducing new challenges and concerns for researchers. This paper proposes a comprehensive framework for web scraping in social science research for U.S.-based researchers, examining the legal, ethical, institutional, and scientific factors that we recommend researchers consider when scraping the web. We present an overview of the current regulatory environment impacting when and how researchers can access, collect, store, and share data via scraping. We then provide researchers with recommendations to conduct scraping in a scientifically legitimate and ethical manner. We aim to equip researchers with the relevant information to mitigate risks and maximize the impact of their research amid this evolving data access landscape."
   },
   {
-    "objectID": "publications/gawande-2012-fdg/index.html",
-    "href": "publications/gawande-2012-fdg/index.html",
-    "title": "FDG PET/CT for the Evaluation of Normal Thymus, Lymphoma Recurrence, and Mediastinal Lymphoma in Pediatric Patients Response",
+    "objectID": "publications/gawande-2012-differentiation/index.html",
+    "href": "publications/gawande-2012-differentiation/index.html",
+    "title": "Differentiation of Normal Thymus from Anterior Mediastinal Lymphoma and Lymphoma Recurrence at Pediatric PET/CT",
     "section": "",
-    "text": "Rakhee S Gawande, Spencer Behr, Solomon Messing, Robert E Goldsby, Randall A Hawkins, Heike E Daldrup-Link (2012). FDG PET/CT for the Evaluation of Normal Thymus, Lymphoma Recurrence, and Mediastinal Lymphoma in Pediatric Patients Response. RADIOLOGY."
+    "text": "Rakhee S Gawande, Aman Khurana, Solomon Messing, Dong Zhang, Rosalinda T Castañeda, Robert E Goldsby, Randall A Hawkins, Heike E Daldrup-Link (2012). Differentiation of Normal Thymus from Anterior Mediastinal Lymphoma and Lymphoma Recurrence at Pediatric PET/CT. Radiology."
   },
   {
-    "objectID": "publications/gri-mes-wes-14/index.html",
-    "href": "publications/gri-mes-wes-14/index.html",
-    "title": "The Impression of Influence: Legislator Communication, Representation, and Democratic Accountability",
+    "objectID": "publications/gawande-2013-role/index.html",
+    "href": "publications/gawande-2013-role/index.html",
+    "title": "Role of diffusion-weighted imaging in differentiating benign and malignant pediatric abdominal tumors",
     "section": "",
-    "text": "Justin Grimmer, Sean J. Westwood, Solomon Messing (2014). The Impression of Influence: Legislator Communication, Representation, and Democratic Accountability. Princeton University Press."
+    "text": "Rakhee S Gawande, Gabriel Gonzalez, Solomon Messing, Aman Khurana, Heike E Daldrup-Link (2013). Role of diffusion-weighted imaging in differentiating benign and malignant pediatric abdominal tumors. Pediatric radiology."
   },
   {
-    "objectID": "publications/gri-mes-wes-14/index.html#abstract",
-    "href": "publications/gri-mes-wes-14/index.html#abstract",
-    "title": "The Impression of Influence: Legislator Communication, Representation, and Democratic Accountability",
+    "objectID": "publications/gawande-2013-role/index.html#abstract",
+    "href": "publications/gawande-2013-role/index.html#abstract",
+    "title": "Role of diffusion-weighted imaging in differentiating benign and malignant pediatric abdominal tumors",
     "section": "Abstract",
-    "text": "Abstract\nConstituents often fail to hold their representatives accountable for federal spending decisions―even though those very choices have a pervasive influence on American life. Why does this happen? Breaking new ground in the study of representation, The Impression of Influence demonstrates how legislators skillfully inform constituents with strategic communication and how this facilitates or undermines accountability. Using a massive collection of Congressional texts and innovative experiments and methods, the book shows how legislators create an impression of influence through credit claiming messages. Anticipating constituents’ reactions, legislators claim credit for programs that elicit a positive response, making constituents believe their legislator is effectively representing their district. This spurs legislators to create and defend projects popular with their constituents. Yet legislators claim credit for much more―they announce projects long before they begin, deceptively imply they deserve credit for expenditures they had little role in securing, and boast about minuscule projects. Unfortunately, legislators get away with seeking credit broadly because constituents evaluate the actions that are reported, rather than the size of the expenditures. The Impression of Influence raises critical questions about how citizens hold their political representatives accountable and when deception is allowable in a democracy."
+    "text": "Abstract\nWe retrospectively analyzed DWI scans of 68 consecutive children with 39 benign and 34 malignant abdominal masses. To calculate the apparent diffusion coefficient (ADC) maps and ADC values, we used 1.5-T sequences at TR/TE/b-value of 5,250–7,500/54–64/b = 0, 500 and 3-T sequences at 3,500–4,000/66–73/b = 0, 500, 800. ADC values were compared between benign and malignant and between data derived at 1.5 tesla (T) and at 3 tesla magnetic field strength, using the Mann-Whitney-Wilcoxon test, ANOVA and a receiver operating curve (ROC) analysis. Results There was no significant difference in ADC values obtained at 1.5 T and 3 T (P = 0.962). Mean ADC values (× 10−3 mm2/s) were 1.07 for solid malignant tumors, 1.6 for solid benign tumors, 2.9 for necrotic portions of malignant tumors and 3.1 for cystic benign lesions. The differences between malignant and benign solid tumors were statistically significant (P = 0.000025). ROC analysis revealed an optimal cut-off ADC value for differentiating malignant and benign solid tumors as 1.29 with excellent inter-observer reliability (alpha score 0.88). Conclusion DWI scans and ADC values can contribute to distinguishing between benign and malignant pediatric abdominal tumors."
   },
   {
-    "objectID": "publications/gri-mes-wes-14/index.html#more",
-    "href": "publications/gri-mes-wes-14/index.html#more",
-    "title": "The Impression of Influence: Legislator Communication, Representation, and Democratic Accountability",
+    "objectID": "publications/grimmer-2017-estimating/index.html",
+    "href": "publications/grimmer-2017-estimating/index.html",
+    "title": "Estimating heterogeneous treatment effects and the effects of heterogeneous treatments with ensemble methods",
+    "section": "",
+    "text": "Justin Grimmer, Solomon Messing, Sean J Westwood (2017). Estimating heterogeneous treatment effects and the effects of heterogeneous treatments with ensemble methods. Political Analysis.\nPDF"
+  },
+  {
+    "objectID": "publications/grimmer-2017-estimating/index.html#abstract",
+    "href": "publications/grimmer-2017-estimating/index.html#abstract",
+    "title": "Estimating heterogeneous treatment effects and the effects of heterogeneous treatments with ensemble methods",
+    "section": "Abstract",
+    "text": "Abstract\nRandomized experiments are increasingly used to study political phenomena because they can credibly estimate the average effect of a treatment on a population of interest. But political scientists are often interested in how effects vary across subpopulations—heterogeneous treatment effects—and how differences in the content of the treatment affects responses—the response to heterogeneous treatments. Several new methods have been introduced to estimate heterogeneous effects, but it is difficult to know if a method will perform well for a particular data set. Rather than using only one method, we show how an ensemble of methods—weighted averages of estimates from individual models increasingly used in machine learning—accurately measure heterogeneous effects. Building on a large literature on ensemble methods, we show how the weighting of methods can contribute to accurate estimation of heterogeneous treatment effects and demonstrate how pooling models lead to superior performance to individual methods across diverse problems. We apply the ensemble method to two experiments, illuminating how the ensemble method for heterogeneous treatment effects facilitates exploratory analysis of treatment effects."
+  },
+  {
+    "objectID": "publications/grimmer-2017-estimating/index.html#more",
+    "href": "publications/grimmer-2017-estimating/index.html#more",
+    "title": "Estimating heterogeneous treatment effects and the effects of heterogeneous treatments with ensemble methods",
     "section": "More",
-    "text": "More\n\nMedia: Mischiefs of Faction."
+    "text": "More\n\nReplication materials.\n\nSoftware implementation (under development)"
   },
   {
-    "objectID": "publications/grimmer-how-2012/index.html",
-    "href": "publications/grimmer-how-2012/index.html",
-    "title": "How Words and Money Cultivate a Personal Vote: The Effect of Legislator Credit Claiming on Constituent Credit Allocation",
+    "objectID": "publications/iyengar-2008-explicit/index.html",
+    "href": "publications/iyengar-2008-explicit/index.html",
+    "title": "Do explicit racial cues influence candidate preference? The case of skin complexion in the 2008 campaign",
     "section": "",
-    "text": "Justin Grimmer, Solomon Messing, Sean J. Westwood (2012). How Words and Money Cultivate a Personal Vote: The Effect of Legislator Credit Claiming on Constituent Credit Allocation. American Political Science Review. doi:10.1017/S0003055412000457\nPDF DOI"
+    "text": "Shanto Iyengar, Kyu S Hahn, Solomon Messing, Jeremy N Bailenson (2008). Do explicit racial cues influence candidate preference? The case of skin complexion in the 2008 campaign. The Case of Skin Complexion in the."
   },
   {
-    "objectID": "publications/grimmer-how-2012/index.html#abstract",
-    "href": "publications/grimmer-how-2012/index.html#abstract",
-    "title": "How Words and Money Cultivate a Personal Vote: The Effect of Legislator Credit Claiming on Constituent Credit Allocation",
+    "objectID": "publications/iyengar-2008-explicit/index.html#abstract",
+    "href": "publications/iyengar-2008-explicit/index.html#abstract",
+    "title": "Do explicit racial cues influence candidate preference? The case of skin complexion in the 2008 campaign",
     "section": "Abstract",
-    "text": "Abstract\nParticularistic spending, a large literature argues, builds support for incumbents. This literature equates money spent in the district with the credit constituents allocate. Yet, constituents lack the necessary information and motivation to allocate credit in this way. We use extensive observational and experimental evidence to show how legislators’ credit claiming messages—and not just money spent in the district—affect how constituents allocate credit. Legislators use credit claiming messages to influence the expenditures they receive credit for and to affect how closely they are associated with spending in the district. Constituents are responsive to credit claiming messages—they build more support than other nonpartisan messages. But contrary to expectations from other studies, constituents are more responsive to the total number of messages sent rather than the amount claimed. Our results have broad implications for political representation, the personal vote, and the study of U.S. Congressional elections."
+    "text": "Abstract\nSkin color is an explicit racial cue. Although there is strong evidence linking darker skin complexion to the activation of racial stereotypes and adverse societal outcomes, little is known about the extent to which this effect is in play during political campaigns. If white voters make use of this skin complexion cue, we would expect exposure to darker images of a minority candidate to result in a “dark-skin penalty” at the ballot box. We investigate the impact of skin complexion on support for Barack Obama at two different stages of the 2008 campaign: Study 1 occurred during the primary campaign and Study 2 during the closing stages of the general election. Our findings suggest that when citizens are still learning about a minority candidate’s personal background, subtle changes in skin complexion can have an effect on evaluations of that candidate and that citizens with higher levels of implicit racial bias are less likely to prefer a darker-skinned minority candidate."
   },
   {
-    "objectID": "publications/grimmer-how-2012/index.html#more",
-    "href": "publications/grimmer-how-2012/index.html#more",
-    "title": "How Words and Money Cultivate a Personal Vote: The Effect of Legislator Credit Claiming on Constituent Credit Allocation",
+    "objectID": "publications/khurana-2012-intravenous/index.html",
+    "href": "publications/khurana-2012-intravenous/index.html",
+    "title": "Intravenous ferumoxytol allows noninvasive MR imaging monitoring of macrophage migration into stem cell transplants",
+    "section": "",
+    "text": "Aman Khurana, Hossein Nejadnik, Rakhee Gawande, Guiting Lin, Sungmin Lee, Solomon Messing, Rosalinda Castaneda, Nikita Derugin, Laura Pisani, Tom F Lue, others (2012). Intravenous ferumoxytol allows noninvasive MR imaging monitoring of macrophage migration into stem cell transplants. Radiology."
+  },
+  {
+    "objectID": "publications/khurana-2013-iron/index.html",
+    "href": "publications/khurana-2013-iron/index.html",
+    "title": "Iron administration before stem cell harvest enables MR imaging tracking after transplantation",
+    "section": "",
+    "text": "Aman Khurana, Fanny Chapelin, Graham Beck, Olga D Lenkov, Jessica Donig, Hossein Nejadnik, Solomon Messing, Nikita Derugin, Ray Chun-Fai Chan, Amitabh Gaur, others (2013). Iron administration before stem cell harvest enables MR imaging tracking after transplantation. Radiology."
+  },
+  {
+    "objectID": "publications/khurana-2013-iron/index.html#abstract",
+    "href": "publications/khurana-2013-iron/index.html#abstract",
+    "title": "Iron administration before stem cell harvest enables MR imaging tracking after transplantation",
+    "section": "Abstract",
+    "text": "Abstract\nIn vivo–labeled MSCs demonstrated significantly higher ferumoxytol uptake compared with ex vivo–labeled cells. With electron microscopy, iron oxide nanoparticles were localized in secondary lysosomes. In vivo–labeled cells demonstrated significant T2 shortening effects in vitro and in vivo when they were compared with unlabeled control cells (T2 in vivo, 15.4 vs 24.4 msec; P &lt; .05) and could be tracked in osteochondral defects for 4 weeks. Histologic examination confirmed the presence of iron in labeled transplants and defect remodeling. Conclusion: Intravenous ferumoxytol can be used to effectively label MSCs in vivo and can be used for tracking of stem cell transplants with MR imaging. This method eliminates risks of contamination and biologic alteration of MSCs associated with ex vivo–labeling procedures."
+  },
+  {
+    "objectID": "publications/lew-2011-course/index.html",
+    "href": "publications/lew-2011-course/index.html",
+    "title": "Of course I wouldn’t do that in real life: advancing the arguments for increasing realism in HCI experiments",
+    "section": "",
+    "text": "Letitia Lew, Truc Nguyen, Solomon Messing, Sean Westwood (2011). Of course I wouldn’t do that in real life: advancing the arguments for increasing realism in HCI experiments. CHI’11 Extended Abstracts on Human Factors in Computing Systems."
+  },
+  {
+    "objectID": "publications/messing-2012-ts/index.html",
+    "href": "publications/messing-2012-ts/index.html",
+    "title": "The 2012 Election Day Through the Facebook Lens",
+    "section": "",
+    "text": "Solomon Messing, Cameron Marlow, Eytan Bakshy (2012). The 2012 Election Day Through the Facebook Lens.\nPDF"
+  },
+  {
+    "objectID": "publications/messing-2014-selective/index.html",
+    "href": "publications/messing-2014-selective/index.html",
+    "title": "Selective exposure in the age of social media: Endorsements trump partisan source affiliation when selecting news online",
+    "section": "",
+    "text": "Solomon Messing, Sean J Westwood (2014). Selective exposure in the age of social media: Endorsements trump partisan source affiliation when selecting news online. Communication research.\nPDF"
+  },
+  {
+    "objectID": "publications/messing-2014-selective/index.html#abstract",
+    "href": "publications/messing-2014-selective/index.html#abstract",
+    "title": "Selective exposure in the age of social media: Endorsements trump partisan source affiliation when selecting news online",
+    "section": "Abstract",
+    "text": "Abstract\nMuch of the literature on polarization and selective exposure presumes that the internet exacerbates the fragmentation of the media and the citizenry. Yet this ignores how the widespread use of social media changes news consumption. Social media provide readers a choice of stories from different sources that come recommended from politically heterogeneous individuals, in a context that emphasizes social value over partisan affiliation. Building on existing models of news selectivity to emphasize information utility, we hypothesize that social media’s distinctive feature, social endorsements, trigger several decision heuristics that suggest utility. In two experiments, we demonstrate that stronger social endorsements increase the probability that people select content and that their presence reduces partisan selective exposure to levels indistinguishable from chance."
+  },
+  {
+    "objectID": "publications/messing-2020/index.html",
+    "href": "publications/messing-2020/index.html",
+    "title": "Facebook Privacy-Protected Full URLs Data Set",
+    "section": "",
+    "text": "Solomon Messing, Christina DeGregorio, Bennett Hillenbrand, Gary King, Saurav Mahanti, Chaya Nayak, Nate Persily (2020). Facebook Privacy-Protected Full URLs Data Set.\nPDF"
+  },
+  {
+    "objectID": "publications/messing-2020/index.html#abstract",
+    "href": "publications/messing-2020/index.html#abstract",
+    "title": "Facebook Privacy-Protected Full URLs Data Set",
+    "section": "Abstract",
+    "text": "Abstract\nOne of the largest social science data sets ever constructed, meant to facilitate research on misinformation from across the web, shared and spread on Facebook. It contains exposure data describing external links that billions of users saw and read while using the site. The data set goes beyond URL-level data, breaking down exposure and interactions by month, country, age, gender, and in the U.S., political page affinity (see Barbera et al 2015)."
+  },
+  {
+    "objectID": "publications/messing-2020/index.html#more",
+    "href": "publications/messing-2020/index.html#more",
+    "title": "Facebook Privacy-Protected Full URLs Data Set",
     "section": "More",
-    "text": "More\n\nSupplementary Information"
-  },
-  {
-    "objectID": "publications/iyengar-2013-attitudes/index.html",
-    "href": "publications/iyengar-2013-attitudes/index.html",
-    "title": "Do attitudes about immigration predict willingness to admit individual immigrants? A cross-national test of the person-positivity bias",
-    "section": "",
-    "text": "Shanto Iyengar, Simon Jackman, Solomon Messing, Nicholas Valentino, Toril Aalberg, Raymond Duch, Kyu S Hahn, Stuart Soroka, Allison Harell, Tetsuro Kobayashi (2013). Do attitudes about immigration predict willingness to admit individual immigrants? A cross-national test of the person-positivity bias. Public opinion quarterly."
-  },
-  {
-    "objectID": "publications/iyengar-2013-attitudes/index.html#abstract",
-    "href": "publications/iyengar-2013-attitudes/index.html#abstract",
-    "title": "Do attitudes about immigration predict willingness to admit individual immigrants? A cross-national test of the person-positivity bias",
-    "section": "Abstract",
-    "text": "Abstract\nThis paper demonstrates that citizens in seven advanced industrialized democracies generally oppose more open immigration policies, but stand ready to admit individual immigrants. Using an experimental design, we demonstrate the applicability of the “person-positivity bias” to immigration and investigate the effects of economic and cultural “deservingness” on evaluations of individual immigrants. Our results show that immigrants from professional backgrounds elicit higher levels of support than unskilled workers. The bias against unskilled workers is enlarged among immigrants accompanied by families. In comparison with occupational status and the number of family dependents, the target immigrant’s cultural attributes—as measured by Middle Eastern nationality and Afrocentric appearance—prove relatively inconsequential as criteria for evaluating immigrants."
-  },
-  {
-    "objectID": "publications/khurana-2013-ferumoxytol/index.html",
-    "href": "publications/khurana-2013-ferumoxytol/index.html",
-    "title": "Ferumoxytol: a new, clinically applicable label for stem-cell tracking in arthritic joints with MRI",
-    "section": "",
-    "text": "Aman Khurana, Hossein Nejadnik, Fanny Chapelin, Olga Lenkov, Rakhee Gawande, Sungmin Lee, Sandeep N Gupta, Nooshin Aflakian, Nikita Derugin, Solomon Messing, others (2013). Ferumoxytol: a new, clinically applicable label for stem-cell tracking in arthritic joints with MRI. Nanomedicine."
-  },
-  {
-    "objectID": "publications/khurana-2013-ferumoxytol/index.html#abstract",
-    "href": "publications/khurana-2013-ferumoxytol/index.html#abstract",
-    "title": "Ferumoxytol: a new, clinically applicable label for stem-cell tracking in arthritic joints with MRI",
-    "section": "Abstract",
-    "text": "Abstract\nAim To develop a clinically applicable MRI technique for tracking stem cells in matrix-associated stem-cell implants, using the US FDA-approved iron supplement ferumoxytol. Materials & methods Ferumoxytol-labeling of adipose-derived stem cells (ADSCs) was optimized in vitro. A total of 11 rats with osteochondral defects of both femurs were implanted with ferumoxytol- or ferumoxides-labeled or unlabeled ADSCs, and underwent MRI up to 4 weeks post matrix-associated stem-cell implant. The signal-to-noise ratio of different matrix-associated stem-cell implant was compared with t-tests and correlated with histopathology. Results An incubation concentration of 500 µg iron/ml ferumoxytol and 10 µg/ml protamine sulfate led to significant cellular iron uptake, T2 signal effects and unimpaired ADSC viability. In vivo, ferumoxytol-and ferumoxides-labeled ADSCs demonstrated significantly lower signal-to-noise ratio values compared with unlabeled controls (p &lt; 0.01). Histopathology confirmed engraftment of labeled ADSCs, with slow dilution of the iron label over time. Conclusion Ferumoxytol can be used for in vivo tracking of stem cells with MRI."
-  },
-  {
-    "objectID": "publications/kifer-2020-guidelines/index.html",
-    "href": "publications/kifer-2020-guidelines/index.html",
-    "title": "Guidelines for Implementing and Auditing Differentially Private Systems",
-    "section": "",
-    "text": "Daniel Kifer, Solomon Messing, Aaron Roth, Abhradeep Thakurta, Danfeng Zhang (2020). Guidelines for Implementing and Auditing Differentially Private Systems. arXiv preprint arXiv:2002.04049."
-  },
-  {
-    "objectID": "publications/kifer-2020-guidelines/index.html#abstract",
-    "href": "publications/kifer-2020-guidelines/index.html#abstract",
-    "title": "Guidelines for Implementing and Auditing Differentially Private Systems",
-    "section": "Abstract",
-    "text": "Abstract\nDifferential privacy is an information theoretic constraint on algorithms and code. It provides quantification of privacy leakage and formal privacy guarantees that are currently considered the gold standard in privacy protections. In this paper we provide an initial set of “best practices” for developing differentially private platforms, techniques for unit testing that are specific to differential privacy, guidelines for checking if differential privacy is being applied correctly in an application, and recommendations for parameter settings. The genesis of this paper was an initiative by Facebook and Social Science One to provide social science researchers with programmatic access to a URL-shares dataset. In order to maximize the utility of the data for research while protecting privacy, researchers should access the data through an interactive platform that supports differential privacy. The intention of this paper is to provide guidelines and recommendations that can generally be re-used in a wide variety of systems. For this reason, no specific platforms will be named, except for systems whose details and theory appear in academic papers."
-  },
-  {
-    "objectID": "publications/messing-2011-measuring/index.html",
-    "href": "publications/messing-2011-measuring/index.html",
-    "title": "Measuring issue salience: Using supervised machine learning to generate data from free responses to the ‘most important problem’ question",
-    "section": "",
-    "text": "Solomon Messing (2011). Measuring issue salience: Using supervised machine learning to generate data from free responses to the ‘most important problem’ question.\nPDF"
-  },
-  {
-    "objectID": "publications/messing-2013-friends/index.html",
-    "href": "publications/messing-2013-friends/index.html",
-    "title": "Friends that Matter: How Social News Shapes Political Knowledge, Attitudes, and Behavior",
-    "section": "",
-    "text": "Solomon Messing (2013). Friends that Matter: How Social News Shapes Political Knowledge, Attitudes, and Behavior.\nPDF"
-  },
-  {
-    "objectID": "publications/messing-2013-friends/index.html#abstract",
-    "href": "publications/messing-2013-friends/index.html#abstract",
-    "title": "Friends that Matter: How Social News Shapes Political Knowledge, Attitudes, and Behavior",
-    "section": "Abstract",
-    "text": "Abstract\nThis chapter describes the first known research on how socially-shared news affects political interest, policy preferences, and self reported voter turnout. It relies on a feed-ranking AB test on Facebook during the 2012 election to instrument exposure to content, and a large survey launched after election day. The chapter first examines the correlation between exposure to socially-shared public affairs content, or “hard news,” and civic engagement, in the setting of social media. It then analyzes the effect of the feed-ranking AB test, finding the following small but notable effects—additional exposure to socially shared political content caused small increases in self reported turnout, and caused respondents to report slightly more liberal policy preferences, particularly among independents."
-  },
-  {
-    "objectID": "publications/messing-2016-bias/index.html",
-    "href": "publications/messing-2016-bias/index.html",
-    "title": "Bias in the flesh: Skin complexion and stereotype consistency in political campaigns",
-    "section": "",
-    "text": "Solomon Messing, Maria Jabon, Ethan Plaut (2016). Bias in the flesh: Skin complexion and stereotype consistency in political campaigns. Public opinion quarterly.\nPDF"
-  },
-  {
-    "objectID": "publications/messing-2016-bias/index.html#abstract",
-    "href": "publications/messing-2016-bias/index.html#abstract",
-    "title": "Bias in the flesh: Skin complexion and stereotype consistency in political campaigns",
-    "section": "Abstract",
-    "text": "Abstract\nThere is strong evidence linking skin complexion to negative stereotypes and adverse real-world outcomes. We extend these findings to political ad campaigns, in which skin complexion can be easily manipulated in ways that are difficult to detect. Devising a method to measure how dark a candidate appears in an image, this paper examines how complexion varied with ad content during the 2008 presidential election campaign (study 1). Findings show that darker images were more frequent in negative ads—especially those linking Obama to crime—which aired more frequently as Election Day approached. We then conduct an experiment to document how these darker images can activate stereotypes, and show that a subtle darkness manipulation is sufficient to activate the most negative stereotypes about Blacks—even when the candidate is a famous counter-stereotypical exemplar—Barack Obama (study 2). Further evidence of an evaluative penalty for darker skin comes from an observational study measuring affective responses to depictions of Obama with varying skin complexion, presented via the Affect Misattribution Procedure in the 2008 American National Election Study (study 3). This study demonstrates that darker images are used in a way that complements ad content, and shows that doing so can negatively affect how individuals evaluate candidates and think about politics."
+    "text": "More\n\nLargest ever social science data set released, protected using action-level differential privacy.\nSee also Social Science One’s annoucement.\nMedia coverage: Science, Nature, Poynter, Wired, Financial Times, Tech Crunch, The Verge."
   },
   {
     "objectID": "publications/shi-2013-evaluation/index.html",

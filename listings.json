@@ -1,6 +1,6 @@
 [
   {
-    "listing": "/index.html",
+    "listing": "/blog.html",
     "items": [
       "/blog/state-media-llm/index.html",
       "/blog/election-projection-regularized-swing/index.html",
@@ -23,7 +23,7 @@
     ]
   },
   {
-    "listing": "/blog.html",
+    "listing": "/index.html",
     "items": [
       "/blog/state-media-llm/index.html",
       "/blog/election-projection-regularized-swing/index.html",
