@@ -8,9 +8,9 @@
 
 <meta name="author" content="Sol Messing">
 <meta name="dcterms.date" content="2026-11-17">
-<meta name="description" content="LLM evals and annotations ignore noise sources, so CIs have poor coverage and benchmark hacking is easier. My NeurIPS paper introduces the Total Evaluation Error (TEE) framework to properly measure and reduce this noise.">
+<meta name="description" content="LLM evals and annotations ignore noise sources, making benchmark hacking easier and leading to undercoverage. The Total Evaluation Error (TEE) framework helps us better measure and reduce this noise.">
 
-<title>LLM Evals Are Less Certain Than They Look – Sol Messing</title>
+<title>Hidden error in LLM pipelines leads to benchmark hacking and undercoverage – Sol Messing</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -94,14 +94,14 @@ gtag('config', 'G-9XTZZP2CJ8', { 'anonymize_ip': true});
 
 
 <link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="LLM Evals Are Less Certain Than They Look – Sol Messing">
-<meta property="og:description" content="LLM evals and annotations ignore noise sources, so CIs have poor coverage and benchmark hacking is easier. My NeurIPS paper introduces the Total Evaluation Error (TEE) framework to properly measure and reduce this noise.">
+<meta property="og:title" content="Hidden error in LLM pipelines leads to benchmark hacking and undercoverage – Sol Messing">
+<meta property="og:description" content="LLM evals and annotations ignore noise sources, making benchmark hacking easier and leading to undercoverage. The Total Evaluation Error (TEE) framework helps us better measure and reduce this noise.">
 <meta property="og:image" content="https://solomonmg.github.io/blog/hidden-measurement-error-llm-evals/featured.png">
 <meta property="og:site_name" content="Sol Messing">
 <meta property="og:image:height" content="1549">
 <meta property="og:image:width" content="2049">
-<meta name="twitter:title" content="LLM Evals Are Less Certain Than They Look – Sol Messing">
-<meta name="twitter:description" content="LLM evals and annotations ignore noise sources, so CIs have poor coverage and benchmark hacking is easier. My NeurIPS paper introduces the Total Evaluation Error (TEE) framework to properly measure and reduce this noise.">
+<meta name="twitter:title" content="Hidden error in LLM pipelines leads to benchmark hacking and undercoverage – Sol Messing">
+<meta name="twitter:description" content="LLM evals and annotations ignore noise sources, making benchmark hacking easier and leading to undercoverage. The Total Evaluation Error (TEE) framework helps us better measure and reduce this noise.">
 <meta name="twitter:image" content="https://solomonmg.github.io/blog/hidden-measurement-error-llm-evals/featured.png">
 <meta name="twitter:creator" content="@SolomonMg">
 <meta name="twitter:card" content="summary_large_image">
@@ -364,12 +364,12 @@ gtag('config', 'G-9XTZZP2CJ8', { 'anonymize_ip': true});
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">LLM Evals Are Less Certain Than They Look</h1>
+<h1 class="title">Hidden error in LLM pipelines leads to benchmark hacking and undercoverage</h1>
 </div>
 
 <div>
   <div class="description">
-    LLM evals and annotations ignore noise sources, so CIs have poor coverage and benchmark hacking is easier. My NeurIPS paper introduces the Total Evaluation Error (TEE) framework to properly measure and reduce this noise.
+    LLM evals and annotations ignore noise sources, making benchmark hacking easier and leading to undercoverage. The Total Evaluation Error (TEE) framework helps us better measure and reduce this noise.
   </div>
 </div>
 
