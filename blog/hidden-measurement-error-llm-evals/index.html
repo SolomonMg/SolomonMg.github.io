@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.11.9">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Sol Messing">
+<meta name="dcterms.date" content="2026-11-17">
+<meta name="description" content="LLM evals and annotations ignore noise sources, so CIs have poor coverage and benchmark hacking is easier. My NeurIPS paper introduces the Total Evaluation Error (TEE) framework to properly measure and reduce this noise.">
+
+<title>LLM Evals Are Less Certain Than They Look – Sol Messing</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../images/profile.jpg" rel="icon" type="image/jpeg">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/scrollable-regions/scrollable-regions.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-447e42e69aaa9833c0ba1b986f430b20.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-ea2d8d2231bb95995fde255e649124d6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-d583868ff9e29055d584e47a9ca08b98.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-ea2d8d2231bb95995fde255e649124d6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-9XTZZP2CJ8"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-9XTZZP2CJ8', { 'anonymize_ip': true});
+</script>
+<style>html{ scroll-behavior: smooth; }</style>
+
+
+<link rel="stylesheet" href="../../styles.css">
+<meta property="og:title" content="LLM Evals Are Less Certain Than They Look – Sol Messing">
+<meta property="og:description" content="LLM evals and annotations ignore noise sources, so CIs have poor coverage and benchmark hacking is easier. My NeurIPS paper introduces the Total Evaluation Error (TEE) framework to properly measure and reduce this noise.">
+<meta property="og:image" content="https://solomonmg.github.io/blog/hidden-measurement-error-llm-evals/featured.png">
+<meta property="og:site_name" content="Sol Messing">
+<meta property="og:image:height" content="1549">
+<meta property="og:image:width" content="2049">
+<meta name="twitter:title" content="LLM Evals Are Less Certain Than They Look – Sol Messing">
+<meta name="twitter:description" content="LLM evals and annotations ignore noise sources, so CIs have poor coverage and benchmark hacking is easier. My NeurIPS paper introduces the Total Evaluation Error (TEE) framework to properly measure and reduce this noise.">
+<meta name="twitter:image" content="https://solomonmg.github.io/blog/hidden-measurement-error-llm-evals/featured.png">
+<meta name="twitter:creator" content="@SolomonMg">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="nav-fixed fullcontent quarto-light"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Skip to main content</a><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          toggle.setAttribute("aria-checked", alternate ? "true" : "false");
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455).
+    // Not run on load: stylesheets are set before first paint there, and
+    // scrolling would undo the scroll to a URL fragment (#14973).
+    // The one pixel nudge keeps the reader where they were.
+    const refreshSafariScrollbar = () => {
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        const scrollY = window.scrollY;
+        window.scrollTo(0, scrollY > 0 ? scrollY - 1 : 1);
+        setTimeout(() => {
+          window.scrollTo(0, scrollY);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      refreshSafariScrollbar();
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark" aria-label="Site">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Sol Messing</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../publications.html"> 
+<span class="menu-text">Publications</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../blog.html"> 
+<span class="menu-text">Blog</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../media.html"> 
+<span class="menu-text">Media</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../bio.html"> 
+<span class="menu-text">Bio</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../pdf/CV/CV.pdf" target="_blank"> 
+<span class="menu-text">CV</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../contact.html"> <i class="bi bi-envelope" role="img" aria-label="Contact">
+</i> 
+<span class="menu-text">Contact</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/solomonmg" target="_blank"> <i class="bi bi-github" role="img" aria-label="GitHub">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/SolomonMg" target="_blank"> <i class="bi bi-twitter-x" role="img" aria-label="X">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://solmessing.substack.com" target="_blank"> <i class="bi bi-substack" role="img" aria-label="Substack">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://scholar.google.com/citations?user=to63kiAAAAAJ&amp;hl=en" target="_blank"> <i class="bi bi-mortarboard-fill" role="img" aria-label="Google Scholar">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <button type="button" role="switch" aria-checked="false" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode" aria-label="Toggle dark mode"><i class="bi"></i></button>
+</div>
+            <div id="quarto-search" class="" title="Search"></div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content" id="quarto-document-content" tabindex="-1">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">LLM Evals Are Less Certain Than They Look</h1>
+</div>
+
+<div>
+  <div class="description">
+    LLM evals and annotations ignore noise sources, so CIs have poor coverage and benchmark hacking is easier. My NeurIPS paper introduces the Total Evaluation Error (TEE) framework to properly measure and reduce this noise.
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Sol Messing </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">November 17, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<style>
+/* Figures are sized as a share of the text column; on phones use the full width. */
+@media (max-width: 600px) { .quarto-figure img.figure-img { width: 100% !important; } }
+</style>
+<p><a href="https://arxiv.org/abs/2604.11581" class="btn-paper">Paper</a> <a href="../../pdf/totalevalerror_si.pdf" class="btn-paper">SI Appendix</a> <a href="https://github.com/SolomonMg/totalevalerror" class="btn-paper">R package</a> <a href="https://github.com/SolomonMg/totalevalerror-replication" class="btn-paper">Replication</a> <a href="https://twitter.com/SolomonMg" class="btn-paper">Follow</a></p>
+<p>LLM evaluations drive model deployment, safety standards, and research. Yet we ignore noise from the prompt, the judge, the agent harness, and so on. So we underestimate error in benchmarking and in annotation, and the problem gets worse with more data.</p>
+<p>So I argue in <a href="https://arxiv.org/abs/2604.11581">Hidden Measurement Error in LLM Pipelines Distorts Annotation, Evaluation, and Benchmarking</a>. I’ll get to what this means for confidence intervals and how to fix it. But first, let’s talk about how this makes benchmark hacking easier.</p>
+<p><strong>Benchmark hacking</strong></p>
+<p>Benchmark hacking (like p-hacking) is where you test many versions of a model with slightly different setups and only publish the best score. It depicts noise as signal.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="anim_hacking_setups_avg.gif" class="img-fluid figure-img" style="width:85.0%"></p>
+<figcaption>A simulated lab tries one model under 15 setups, and publishes the best. The orange interval averages all 15 setups and properly estimates noise (TEE, below).</figcaption>
+</figure>
+</div>
+<p>Are labs doing this? If so, on the most prized benchmarks we should see higher scores on their own runs than from independent evaluators. Indeed, on SWE-bench Verified, labs’ launch scores beat independent runs by 4 to 5 points on average. Unique harness and other settings likely drive much of the difference. Anthropic’s <a href="https://www.anthropic.com/news/claude-sonnet-4-5">Sonnet 4.5</a> and <a href="https://www.anthropic.com/news/claude-haiku-4-5">Haiku 4.5</a> scores, for example, used a “minor prompt addition” telling the model to “use tools as much as possible, ideally more than 100 times” and to write its own tests first. Sonnet 4.5’s 77.2% sits 5.9 points above Epoch’s run. Anthropic disclosed this, and its later launches report prompt-modified scores separately. (This analysis and the next are meant to tie this to the real world and are not in the paper.)</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="featured.png" class="img-fluid figure-img" style="width:75.0%"></p>
+<figcaption>On SWE-bench Verified, labs consistently score their own model higher than do independent evaluators.</figcaption>
+</figure>
+</div>
+<p>How does this happen? We can get a sense from Terminal-Bench 2.0 data, another high-value benchmark. When labs used a different agent harness and settings, like Codex or Claude Code, they reported scores 7 to 19 points above the same model on the benchmark’s default harness, Terminus 2. That’s for the six models with a Terminus 2 run on the leaderboard. Note also that in <a href="https://arxiv.org/abs/2603.00729">runs that Alibaba’s Qwen team published</a> of other labs’ models, tool-call format moved scores by up to 11 points, and which format did better depended on the model.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="tbench2_lab_vs_lb.png" class="img-fluid figure-img" style="width:75.0%" alt="Developers who used a different harness reported Terminal-Bench 2.0 scores 7 to 19 points above the leaderboard's run of the same model."></p>
+<figcaption>Terminal-Bench 2.0 scores are generally higher for developers who ran their own or an alternate harness (bottom panel) than those who used Terminus 2, the leaderboard’s harness.</figcaption>
+</figure>
+</div>
+<p>Is using a better harness really “noise?” Well, scores depend on the harness, and different harnesses help different models. So if we’re trying to measure capability and we ignore the harness there’s hidden variability.</p>
+<p>Benchmark hacking is a different problem from “benchmaxxing,” which mostly means post-training on tasks that mimic a benchmark.</p>
+<details>
+<summary>
+More about benchmarks and benchmaxxing
+</summary>
+<p>Evaluators do try to combat other problems, such as test items leaking into training data or agents gaming the grader. To deal with test items in the training data, <a href="https://scale.com/blog/swe-bench-pro">SWE-Bench Pro</a> holds back 858 of its tasks and takes 276 more from private company codebases, and <a href="https://swe-rebench.com">SWE-rebench</a> keeps scoring models on recent GitHub tasks and labels results that may be contaminated.</p>
+<p>Other countermeasures focus on actions agents take during an eval run. For example, on SWE-bench, agents fix real GitHub issues. In the past, sometimes the very GitHub repo contained the bug fix, which agents promptly copied (<a href="https://github.com/SWE-bench/SWE-bench/issues/465">SWE-bench issue #465</a>). <a href="https://labs.scale.com/blog/swe-bench-pro-v2">SWE-bench Pro V2</a> builds its evals without these answers. The benchmark sandbox also generally blocks internet access so the agent can’t look it up online either. In <a href="https://www.tbench.ai/news/terminal-bench-4-1">Terminal-Bench 4.1</a>, they took measures to prevent reward hacking, and the leaderboard’s <a href="https://www.tbench.ai/news/leaderboard-integrity-update">integrity rules</a> call for an agent judge to review every trial an agent passes.</p>
+<p>To help prevent benchmark contamination, <a href="https://arcprize.org/policy">ARC Prize</a> tests models on its own semi-private eval set and reports every run so the lab can’t simply pick the best. ARC calls the set semi-private because its tasks pass through APIs, which our <a href="https://deepmind.google/blog/piloting-the-worlds-first-double-blind-ai-evaluations/">double-blind evaluation system</a> will go a long way toward solving. Epoch AI, Vals.ai, and the SWE-bench and Terminal-Bench teams also rerun models under their own setups, but that usually comes after the lab has published its benchmark number. Before launch, there’s little to stop a lab from trying many harnesses, prompts, or compute settings and reporting the best.</p>
+</details>
+<p>Research using LLM judges for annotation (autoraters) has the same problem. <a href="https://arxiv.org/abs/2509.08825">Baumann, Röttger, and colleagues (2025)</a> re-evaluated 37 LLM annotation tasks from 21 studies. They found that 31% of hypothesis tests on LLM-labeled data reached wrong conclusions under other models and prompts, and that adversarial choices could flip the sign of 68% of significant effects.</p>
+<p><strong>Why naive error bars get worse with more data</strong></p>
+<p>Current practice is to report confidence intervals (CIs) that treat items as a sample but fix the prompt, judge, and harness. We should expect under-coverage to worsen with more items, because omitted variance from prompt and judge choices does not shrink with N.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="anim_coverage_vs_n.gif" class="img-fluid figure-img" style="width:85.0%" alt="As items grow, 20 simulated teams' one-judge intervals (grey) narrow and most miss the true score, while 19 of 20 TEE intervals (orange) still cover it."></p>
+<figcaption>Simulation with the paper’s AILuminate variance estimates: 20 teams score the same model. Grey intervals use one judge and one prompt; orange intervals use TEE with 3 judges and 5 prompts.</figcaption>
+</figure>
+</div>
+<p>In the paper’s simulation, as we add items, the usual interval (A) contains the truth less often: 42% of the time at 25 items and 11% at 400. Once we add the omitted prompt, judge, and temperature variance, coverage is back above 95%.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="fig_underestimation_slide_v2.png" class="img-fluid figure-img" style="width:85.0%" alt="The naive 95% interval covers the truth less often as items increase, and adding prompt, judge, and temperature variance brings coverage back above 95%."></p>
+<figcaption>Simulated 95% CI coverage as the number of items N grows. Scenario A is the naive interval. Scenarios B-F add prompt, judge, and temperature variance and their interactions, estimated with the framework below.</figcaption>
+</figure>
+</div>
+<p>By the way, sometimes you hear “Just set the temperature to zero,” which does NOT fix this. Doing so picks the single most likely token at each step (greedy decoding), which simply further <em>hides</em> the variation that sampling would have shown. Note that infrastructure nondeterminism alone has produced standard deviations of up to nine percentage points in task accuracy at temperature zero (Yuan et al.&nbsp;2025).</p>
+<p><strong>What undercoverage looks like on a leaderboard</strong></p>
+<p>We see this play out on Terminal-Bench 4.0, where I found data for Vals.ai and the official board runs on the same 66 tasks on the same 39 models. The tasks are the same so the difference between a model’s scores on the two runs comes from rerun noise plus differences in how each evaluator ran the model. Both boards’ error bars count only reruns. If they captured all the noise, about 5% of pairs would differ by more than their 95% intervals allow. 21% do (8 of 39). This analysis is also not in the paper.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="fig_tbench4_vals_check.png" class="img-fluid figure-img" style="width:55.0%" alt="Terminal-Bench 4.0 scores from Vals.ai and the official board for 39 models, with the 8 that differ by more than the boards' intervals allow in red."></p>
+<figcaption>Official and Vals.ai scores on Terminal-Bench 4.0 for the 39 models on both boards. Red marks the 8 models whose two scores differ by more than the boards’ intervals allow.</figcaption>
+</figure>
+</div>
+<p>Once we put reasonable CIs on benchmarks, we can see how silly it is when we fight about a 2-point lead. This is the top of Vals.ai’s Terminal-Bench 4.0 board. Grey are CIs based on rerun noise, which is what the leaderboard reports. Red also accounts for which tasks were picked and who runs the model. That’s not ideal, but it’s better. Under the better intervals, fully 10 models tie with the leader!</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="tbench4_vals_scores_2ci_crop.png" class="img-fluid figure-img" style="width:85.0%" alt="The top 16 models on Vals.ai's Terminal-Bench 4.0 board, where 10 tie with the leader under the wider red intervals."></p>
+<figcaption>The top 16 models on Vals.ai’s Terminal-Bench 4.0 leaderboard, with two 95% intervals for each score. Opus 5.5 has no grey bar because Vals.ai reports an SE of 0 across its 3 runs.</figcaption>
+</figure>
+</div>
+<p>These intervals do not account for everything. They leave out each harness’s average shift (one harness runs every model on Vals.ai’s board, so it leaves the ranks unchanged), the checker version (Terminal-Bench 4.1’s fixed checkers moved official scores by -1.2 to +2.7 points, and Vals.ai’s board is 4.0), and rewording of each task’s instructions.</p>
+<p>The paper finds the same on Terminal-Bench 2.0. Its authors ran 17 models across six harnesses, about 5 trials per task, so we can estimate how much a model’s score depends on the harness beyond rerun noise: 3.5 points (SD). Of the 16 neighboring pairs of models run under Terminus 2, the published intervals separate 4. Once harness variance is added, none separate.</p>
+<p>Many leaderboards fall short of even the naive interval. SWE-bench and τ-bench report no interval at all. MLE-bench, PaperBench, Vals.ai, and Terminal-Bench report intervals from reruns alone, which hold the tasks fixed. OpenAI’s system cards say their own resampling approach “can lead to overly tight confidence intervals.”</p>
+<p>If you run a leaderboard, show the red bars. These intervals account for which tasks were picked and how each model was run, along with reruns. To pilot, run a few models under 2-3 harnesses or prompts.</p>
+<p><strong>Total Evaluation Error</strong></p>
+<p>To get reasonable estimates of noise, we introduce Total Evaluation Error (TEE). The name follows total survey error, which treats every stage of a measurement pipeline as a source of error. TEE uses a mixed model to split the variance among items, prompts, judges, temperatures, reruns, and their interactions. It builds on generalizability theory and uses its standard estimators. For agents, the harness sets the system prompt, the tools, and the agent loop, so different harnesses count as different prompt variants.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="pipeline.png" class="img-fluid figure-img" style="width:80.0%" alt="Diagram of an LLM evaluation pipeline from items to final score, with the noise each stage adds and the matching design choice."></p>
+<figcaption>Each stage of an LLM evaluation pipeline adds a source of noise (left) that comes with a design choice (right).</figcaption>
+</figure>
+</div>
+<p><strong>What we found</strong></p>
+<p><em>Judges dominate safety ratings.</em> On AILuminate v1.0 safety prompts from MLCommons, scored by a panel of three LLM judges, judge-related terms account for 73% of the variance, and 68 - 83% after dropping any one judge. In our safety and ideology applications, naive standard errors are 53 - 70% smaller than the corrected SE.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="fig_intro_safety_decomposition.png" class="img-fluid figure-img" style="width:65.0%" alt="Variance components for AILuminate, where judge-related terms account for 73% of the variance."></p>
+<figcaption>Variance decomposition for AILuminate. Judge-related terms account for most of the variance.</figcaption>
+</figure>
+</div>
+<p><em>Averaging lowers the error itself.</em> A small pilot shows where error comes from, and hence what to average over. On AILuminate, scoring with 3 prompts and 3 judges instead of one reduces the score’s error by about half, for 9× the API calls. Running the full factorial design takes 120× the calls, for only an extra 5% reduction. In the paper’s SI, a small pilot recovers the qualitative design guidance of a full run 8 times larger.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="fig_cost_efficiency.png" class="img-fluid figure-img" style="width:70.0%" alt="Projected standard error against API calls for 360 AILuminate designs, where 3 prompts and 3 judges about halve the error for 9 times the calls."></p>
+<figcaption>Projected standard error against API calls for 360 candidate AILuminate designs (grey), with the lowest-error design at each cost traced in blue.</figcaption>
+</figure>
+</div>
+<p><em>More data, worse coverage.</em> On Chatbot Arena matches scored by LLM judges, naive 95% CIs from one judge and one prompt cover the 3-judge × 5-prompt average reasonably well at 100 matches, but only 78% of the time at 2,000, while TEE’s stay at or above 95%. More data narrows the interval around one configuration’s average, so coverage gets worse.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="fig_arena_coverage.png" class="img-fluid figure-img" style="width:85.0%" alt="On Chatbot Arena, naive interval coverage falls as matches increase, while TEE coverage stays at or above 95%."></p>
+<figcaption>Coverage (a) and half-width (b) of naive and TEE 95% CIs on Chatbot Arena as the number of matches grows.</figcaption>
+</figure>
+</div>
+<p><em>Scores get closer to ground truth.</em> On MMLU, when we spend the same API budget where TEE says, scores at larger budgets end up about half as far from true accuracy as with the standard approach. On Chatbot Arena, 3 judges and 5 prompts matched the human vote 72.5% of the time, versus 67.0% for one of each (each picking a winner in the same number of matches).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="fig_budget_allocation_stacked.png" class="img-fluid figure-img" style="width:60.0%" alt="MMLU estimation error and coverage by API budget, where TEE-guided allocation has the lowest error at large budgets."></p>
+<figcaption>MMLU estimation error (top) and 95% CI coverage (bottom) by API call budget for naive, standard, and TEE-guided allocations.</figcaption>
+</figure>
+</div>
+<p><strong>What to do about it</strong></p>
+<p>So what should you do? In our applications, whenever a pipeline has an LLM judge, averaging across multiple judges reduces error more than any other single change. Don’t rest results on one judge model or prompt template. For agent leaderboards, run models under more than one harness. To help ensure generalizability, once you have variation over judge and prompt/harness, you can sample more items. And run a small pilot first – I suggest at least 30 items, 3 prompts, 2 judges, and 3 replications, or about 540 API calls in the paper. The <a href="https://github.com/SolomonMg/totalevalerror">R package</a> fits a decomposition from pilot data, projects standard errors under other designs, and recommends budget allocations.</p>
+<p><strong>What TEE can’t tell you</strong></p>
+<p>TEE focuses on reliability. You need gold standard data to understand how often a judge is correct, whether you have a valid construct, and whether the items actually cover that construct. If you don’t have coded hate speech (dog whistles), your toxicity benchmark will give precise but incomplete estimates. The framework also doesn’t account for variance from reasoning traces, and my demonstrations are English-only with models served via API.</p>
+<p><strong>How this paper came about</strong></p>
+<p>This work started with our <a href="https://doi.org/10.1038/s41586-026-10506-7">Nature paper on state media and LLMs</a>, see also (<a href="https://state-media-influence-llm.github.io">project site</a>), with Hannah Waight, Eddie Yang, Yin Yuan, Molly Roberts, Brandon Stewart, and Josh Tucker. I looked for a framework like this but couldn’t find one. The confidence intervals in that work do not use TEE, though the website already uses multiple judges as TEE recommends, and I’ll update the website soon.</p>
+<p>Peter Mattson at MLCommons asked me to think about this and try to figure out a framework for AI benchmarks, starting with their safety benchmark AILuminate, which became the paper’s first example. Thanks to MLCommons for supporting this work, along with NYU’s Center for Social Media, AI, and Politics, particularly Josh Tucker and Jonathan Nagler. Thanks also to participants at the 2026 CSMAP conference for helpful feedback. And thanks for the feedback and early conversations that shaped this paper to Chris Barrie, Ben Guinaudeau, Aaron Kaufman, Brandon Stewart, Kylan Rutherford, Bennett Hillenbrand, Andrew Gruen, Rebecca Weiss, Hannah Waight, Molly Roberts, Eddie Yang, Melina Much, Joe Higton, and Jennifer Allen.</p>
+<p><strong>On using AI</strong></p>
+<p>This work would not have happened without Claude Code (Claude Opus 4.6, 4.7, 5, and 5.5) to help:</p>
+<ul>
+<li>massively expand the literature search</li>
+<li>multiple round of critical review on initial drafts of the paper, suggesting improvements</li>
+<li>thinking through additional sources of potential variation in LLM pipelines</li>
+<li>search for and collect extant data that helps demonstrate the problem in the real world, including the leaderboard data in this post</li>
+<li>draft and recheck the code for data collection, analysis, simulations, figures, and the R package</li>
+<li>check every number in the paper against code output multiple times</li>
+<li>fact-check claims against primary sources</li>
+<li>cleanly move the content between journal/venue formats, including Neurips poster and slides</li>
+<li>draft the 55-page SI Appendix, TiKZ diagrams, LaTeX math, etc.</li>
+</ul>
+<p><strong>Paper:</strong> <a href="https://arxiv.org/abs/2604.11581">arXiv 2604.11581</a> (<a href="../../pdf/totalevalerror_si.pdf">SI Appendix</a>)</p>
+<p><strong>R package:</strong> <a href="https://github.com/SolomonMg/totalevalerror">github.com/SolomonMg/totalevalerror</a></p>
+<p><strong>Replication files:</strong> <a href="https://github.com/SolomonMg/totalevalerror-replication">github.com/SolomonMg/totalevalerror-replication</a></p>
+<p>Come see the poster in Sydney: Wednesday, December 9, 10 AM - 1 PM AEDT, Hall 1-4.</p>
+
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const toggle = window.document.createElement('button');
+      toggle.type = "button";
+      toggle.setAttribute("role", "switch");
+      toggle.setAttribute("aria-checked", "false");
+      toggle.classList.add('top-right');
+      toggle.classList.add('quarto-color-scheme-toggle');
+      toggle.setAttribute("aria-label", "Toggle dark mode");
+      toggle.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      toggle.appendChild(i);
+      // Put the toggle in a landmark of its own, so that landmark navigation
+      // can reach it.
+      //
+      // The container is always a fresh direct child of body, and the toggle is
+      // never moved into page furniture that the theme or the author controls.
+      // The toggle is positioned against the page, so any ancestor that
+      // establishes a containing block captures it: a positioned element or a
+      // grid for position: absolute, and transform, filter, will-change or
+      // contain for position: fixed. A direct child of body has none of these
+      // to inherit, and the shift when one appears is silent and visual.
+      //
+      // ARIA says a document should have at most one banner, and axe reports a
+      // duplicate whether or not the banners carry distinct labels. So use a
+      // header when the page has no banner yet, and a named region otherwise.
+      //
+      // A header is a banner wherever it sits, unless it is inside sectioning
+      // content, so this cannot just look at the children of body: a custom
+      // page layout wraps the title block header in a plain div. An explicit
+      // role="banner" always counts.
+      const sectioning = 'article, aside, main, nav, section, [role="article"], [role="complementary"], [role="main"], [role="navigation"], [role="region"]';
+      const hasBanner = Array.from(
+        window.document.querySelectorAll('header:not([role]), [role="banner"]')
+      ).some(function(el) {
+        return el.hasAttribute("role") || el.closest(sectioning) === null;
+      });
+      const container = window.document.createElement(hasBanner ? "div" : "header");
+      if (hasBanner) {
+        container.setAttribute("role", "region");
+        container.setAttribute("aria-label", "Toggle dark mode");
+      }
+      container.classList.add('quarto-color-scheme-toggle-container');
+      container.appendChild(toggle);
+      window.document.body.appendChild(container);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/solomonmg\.github\.io\/");
+      const newWindowLabel = "(opens in a new tab)";
+      const newWindowNoteId = "quarto-ext-newwindow-label";
+      // Links reference one hidden label through aria-describedby, so the
+      // announcement never changes their accessible name.
+      var describeNewWindow = (link) => {
+        if (!window.document.getElementById(newWindowNoteId)) {
+          var newWindowNote = window.document.createElement("span");
+          newWindowNote.id = newWindowNoteId;
+          newWindowNote.hidden = true;
+          newWindowNote.textContent = newWindowLabel;
+          window.document.body.appendChild(newWindowNote);
+        }
+        var describedBy = (link.getAttribute("aria-describedby") || "").split(/\s+/).filter(Boolean);
+        if (!describedBy.includes(newWindowNoteId)) {
+          describedBy.push(newWindowNoteId);
+          link.setAttribute("aria-describedby", describedBy.join(" "));
+        }
+      }
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+      window.quartoDecorateExternalLinks = function (root) {
+     var links = (root || window.document).querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+            describeNewWindow(link);
+          if (!link.classList.contains('no-external-icon')) {
+          }
+        }
+      }
+      };
+      window.quartoDecorateExternalLinks(window.document);
+    // Esc closes the popup (WCAG 1.4.13) and focus leaving both trigger and
+    // popup closes it (WCAG 2.4.11); tippy handles neither for interactive popups.
+    const hideOnEscAndFocusOut = {
+      name: 'hideOnEscAndFocusOut',
+      defaultValue: true,
+      fn(instance) {
+        const dismiss = () => {
+          // A show scheduled by the trigger delay would otherwise reopen it
+          instance.clearDelayTimeouts();
+          instance.hide();
+        };
+        const onKeyDown = (event) => {
+          if (event.key !== 'Escape') {
+            return;
+          }
+          // Keep Esc from also reaching page handlers (e.g. reveal.js overview),
+          // except an open reveal.js slide menu, which Esc should close too.
+          // The menu handles keys only when its keyboard option is on.
+          const menuHandlesEsc = window.Reveal?.getPlugin?.('menu')?.isOpen() &&
+            window.Reveal.getConfig().menu?.keyboard !== false;
+          if (!menuHandlesEsc) {
+            event.stopPropagation();
+          }
+          if (instance.popper.contains(window.document.activeElement)) {
+            // Disabled while refocusing so the focus trigger does not reopen it
+            instance.disable();
+            instance.reference.focus();
+            instance.enable();
+          }
+          dismiss();
+        };
+        const onFocusOut = (event) => {
+          const target = event.relatedTarget;
+          if (target && !instance.reference.contains(target) &&
+              !instance.popper.contains(target)) {
+            dismiss();
+          }
+        };
+        // On the trigger too: a click trigger (code-annotations: select) has no
+        // blur handling. Attached for the instance's lifetime so leaving the
+        // trigger also cancels a show still pending on the trigger delay.
+        instance.reference.addEventListener('focusout', onFocusOut);
+        return {
+          onShow() {
+            window.document.addEventListener('keydown', onKeyDown, true);
+            instance.popper.addEventListener('focusout', onFocusOut);
+          },
+          onHide() {
+            window.document.removeEventListener('keydown', onKeyDown, true);
+            instance.popper.removeEventListener('focusout', onFocusOut);
+          },
+          onDestroy() {
+            instance.reference.removeEventListener('focusout', onFocusOut);
+          },
+        };
+      },
+    };
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+        plugins: [hideOnEscAndFocusOut],
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          // Each band is positioned against its own containing block, which is
+          // not the offsetParent of the lines, so place it from client rects.
+          const placeBand = (band, firstEl, lastEl, codeBlock) => {
+            const container = band.offsetParent;
+            if (container === null) {
+              return;
+            }
+            const containerRect = container.getBoundingClientRect();
+            // Reveal.js scales slides with a transform, so convert client
+            // pixels back to the CSS pixels of the container.
+            const scale = containerRect.height / container.offsetHeight || 1;
+            const firstRect = firstEl.getBoundingClientRect();
+            const lastRect = lastEl.getBoundingClientRect();
+            const top = (firstRect.top - containerRect.top) / scale - container.clientTop + container.scrollTop;
+            const height = (lastRect.bottom - firstRect.top) / scale;
+            band.style.top = top - 2 + "px";
+            band.style.height = height + 4 + "px";
+            if (codeBlock) {
+              // Without the copy button wrapper, the containing block is wider
+              // than the code block, so span the code block explicitly.
+              const blockRect = codeBlock.getBoundingClientRect();
+              band.style.left = (blockRect.left - containerRect.left) / scale - container.clientLeft + container.scrollLeft + "px";
+              band.style.width = blockRect.width / scale + "px";
+            }
+          };
+          if (lineIds.length > 0) {
+            const el = window.document.getElementById(lineIds[0]);
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const parent = el.parentElement.parentElement;
+            // cook up a div (if necessary) and position it
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            placeBand(div, el, lastEl, parent.closest("div.sourceCode") || parent);
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            placeBand(gutterDiv, el, lastEl);
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+  <script type="application/javascript">
+  window.quartoScrollableRegionsLabels = {"code":"Scrollable code","output":"Scrollable output"};
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© 2026 Sol Messing</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="../../disclosures.html">
+<p>Disclosures</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="../../techsetup.html">
+<p>Tech Stack</p>
+</a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+
+<script src="../../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>
